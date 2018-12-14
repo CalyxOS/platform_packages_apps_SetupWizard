@@ -35,18 +35,10 @@ import android.util.Log
 import android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL
 import android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY
 import com.google.android.setupcompat.util.ResultCodes.RESULT_SKIP
-import java.io.File
-import lineageos.hardware.LineageHardwareManager
-import lineageos.providers.LineageSettings
 import org.json.JSONObject
-import org.lineageos.internal.util.DeviceKeysConstants.KEY_MASK_APP_SWITCH
-import org.lineageos.setupwizard.DISABLE_NAV_KEYS
-import org.lineageos.setupwizard.ENABLE_RECOVERY_UPDATE
-import org.lineageos.setupwizard.KEY_SEND_METRICS
 import org.lineageos.setupwizard.LOGV
 import org.lineageos.setupwizard.NAVIGATION_OPTION_KEY
 import org.lineageos.setupwizard.SetupWizardApp
-import org.lineageos.setupwizard.UPDATE_RECOVERY_PROP
 import org.lineageos.setupwizard.base.BaseSetupWizardActivity
 
 object SetupWizardUtils {
@@ -65,8 +57,6 @@ object SetupWizardUtils {
     private const val GMS_TV_SUW_PACKAGE = "com.google.android.tungsten.setupwraith"
     private const val UPDATER_PACKAGE = "org.lineageos.updater"
 
-    private const val UPDATE_RECOVERY_EXEC = "/vendor/bin/install-recovery.sh"
-    private const val CONFIG_HIDE_RECOVERY_UPDATE = "config_hideRecoveryUpdate"
     private const val PROP_BUILD_DATE = "ro.build.date.utc"
 
     fun getPrefs(context: Context): SharedPreferences =
@@ -77,26 +67,6 @@ object SetupWizardUtils {
 
     fun hasTelephony(context: Context): Boolean =
         context.packageManager.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)
-
-    fun hasRecoveryUpdater(context: Context): Boolean {
-        if (!File(UPDATE_RECOVERY_EXEC).exists()) {
-            return false
-        }
-        val featureHidden =
-            runCatching {
-                    val updaterResources =
-                        context.packageManager.getResourcesForApplication(UPDATER_PACKAGE)
-                    val res =
-                        updaterResources.getIdentifier(
-                            CONFIG_HIDE_RECOVERY_UPDATE,
-                            "bool",
-                            UPDATER_PACKAGE,
-                        )
-                    updaterResources.getBoolean(res)
-                }
-                .getOrDefault(false)
-        return !featureHidden
-    }
 
     fun isOwner(): Boolean = UserHandle.myUserId() == 0
 
@@ -150,13 +120,6 @@ object SetupWizardUtils {
             return
         }
         if (!isPackageInstalled(context, NAV_BAR_MODE_GESTURAL_OVERLAY)) {
-            return
-        }
-        val deviceKeys =
-            context.resources.getInteger(
-                org.lineageos.platform.internal.R.integer.config_deviceHardwareKeys
-            )
-        if ((deviceKeys and KEY_MASK_APP_SWITCH) != 0) {
             return
         }
         val navigationMode =
@@ -220,9 +183,6 @@ object SetupWizardUtils {
             Settings.Secure.putInt(contentResolver, Settings.Secure.TV_USER_SETUP_COMPLETE, 1)
         }
 
-        handleEnableMetrics(context)
-        handleNavKeys(context)
-        handleRecoveryUpdate()
         handleNavigationOption()
         WallpaperManager.getInstance(context).forgetLoadedWallpaper()
         disableHome(context)
@@ -309,32 +269,6 @@ object SetupWizardUtils {
         )
     }
 
-    private fun handleEnableMetrics(context: Context) {
-        val privacyData = SetupWizardApp.settingsBundle
-        if (privacyData.containsKey(KEY_SEND_METRICS)) {
-            LineageSettings.Secure.putInt(
-                context.contentResolver,
-                LineageSettings.Secure.STATS_COLLECTION,
-                if (privacyData.getBoolean(KEY_SEND_METRICS)) 1 else 0,
-            )
-        }
-    }
-
-    private fun handleNavKeys(context: Context) {
-        val settingsBundle = SetupWizardApp.settingsBundle
-        if (settingsBundle.containsKey(DISABLE_NAV_KEYS)) {
-            writeDisableNavkeysOption(context, settingsBundle.getBoolean(DISABLE_NAV_KEYS))
-        }
-    }
-
-    private fun handleRecoveryUpdate() {
-        val settingsBundle = SetupWizardApp.settingsBundle
-        if (settingsBundle.containsKey(ENABLE_RECOVERY_UPDATE)) {
-            val update = settingsBundle.getBoolean(ENABLE_RECOVERY_UPDATE)
-            SystemProperties.set(UPDATE_RECOVERY_PROP, update.toString())
-        }
-    }
-
     private fun handleNavigationOption() {
         val settingsBundle = SetupWizardApp.settingsBundle
         if (settingsBundle.containsKey(NAVIGATION_OPTION_KEY)) {
@@ -347,26 +281,6 @@ object SetupWizardUtils {
                     UserHandle.USER_CURRENT,
                 )
             }
-        }
-    }
-
-    private fun writeDisableNavkeysOption(context: Context, enabled: Boolean) {
-        val virtualKeysEnabled =
-            LineageSettings.System.getIntForUser(
-                context.contentResolver,
-                LineageSettings.System.FORCE_SHOW_NAVBAR,
-                0,
-                UserHandle.USER_CURRENT,
-            ) != 0
-        if (enabled != virtualKeysEnabled) {
-            LineageSettings.System.putIntForUser(
-                context.contentResolver,
-                LineageSettings.System.FORCE_SHOW_NAVBAR,
-                if (enabled) 1 else 0,
-                UserHandle.USER_CURRENT,
-            )
-            val hardware = LineageHardwareManager.getInstance(context)
-            hardware.set(LineageHardwareManager.FEATURE_KEY_DISABLE, enabled)
         }
     }
 
