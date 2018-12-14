@@ -44,11 +44,6 @@ public class SetupWizardApp extends Application {
     public static final String EXTRA_PREFS_SET_BACK_TEXT = "extra_prefs_set_back_text";
     public static final String EXTRA_ENABLE_NEXT_ON_CONNECT = "wifi_enable_next_on_connect";
 
-    public static final String KEY_SEND_METRICS = "send_metrics";
-    public static final String DISABLE_NAV_KEYS = "disable_nav_keys";
-    public static final String ENABLE_RECOVERY_UPDATE = "enable_recovery_update";
-    public static final String UPDATE_RECOVERY_PROP = "persist.vendor.recovery_update";
-
     public static final String NAVIGATION_OPTION_KEY = "navigation_option";
 
     public static final int RADIO_READY_TIMEOUT = 10 * 1000;
