@@ -32,10 +32,6 @@ const val EXTRA_PREFS_SHOW_SKIP_TV = "extra_show_skip_network"
 const val EXTRA_PREFS_SET_BACK_TEXT = "extra_prefs_set_back_text"
 const val EXTRA_ENABLE_NEXT_ON_CONNECT = "wifi_enable_next_on_connect"
 
-const val KEY_SEND_METRICS = "send_metrics"
-const val DISABLE_NAV_KEYS = "disable_nav_keys"
-const val ENABLE_RECOVERY_UPDATE = "enable_recovery_update"
-const val UPDATE_RECOVERY_PROP = "persist.vendor.recovery_update"
 const val IGNORE_SIM_LOCALE_PROP = "ro.setupwizard.ignore_sim_locale"
 
 const val NAVIGATION_OPTION_KEY = "navigation_option"
