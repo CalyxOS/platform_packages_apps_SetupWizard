@@ -5,7 +5,9 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    <color name="lineage_accent">#167C80</color>
+    <color name="calyx_logo_primary">#2d1e2f</color>
+    <color name="calyx_logo_secondary">#0ead69</color>
+    <color name="calyx_logo_accent">#99cc00</color>
 
     <color name="button_bar_text_enabled">#ff1e1e1e</color>
     <color name="button_bar_text_disabled">#321e1e1e</color>
@@ -20,7 +22,7 @@
     <color name="materialColorPrimary">@*android:color/system_primary_light</color>
     <color name="materialColorOnPrimary">@*android:color/system_on_primary_light</color>
 
-    <color name="finish_swipe_arrow">#82D5C7</color>
+    <color name="finish_swipe_arrow">@color/calyx_logo_secondary</color>
 
     <!-- TV -->
     <color name="tv_background">#000000</color>
