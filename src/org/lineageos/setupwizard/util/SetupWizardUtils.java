@@ -35,11 +35,11 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.ComponentInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ServiceInfo;
-import android.content.res.Resources;
 import android.hardware.face.FaceManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.net.ConnectivityManager;
@@ -52,7 +52,6 @@ import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import org.lineageos.internal.util.PackageManagerUtils;
 import org.lineageos.setupwizard.BiometricActivity;
 import org.lineageos.setupwizard.BluetoothSetupActivity;
 import org.lineageos.setupwizard.NetworkSetupActivity;
@@ -60,7 +59,6 @@ import org.lineageos.setupwizard.SetupWizardApp;
 import org.lineageos.setupwizard.SimMissingActivity;
 import org.lineageos.setupwizard.wizardmanager.WizardManager;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,10 +69,7 @@ public class SetupWizardUtils {
     private static final String GMS_PACKAGE = "com.google.android.gms";
     private static final String GMS_SUW_PACKAGE = "com.google.android.setupwizard";
     private static final String GMS_TV_SUW_PACKAGE = "com.google.android.tungsten.setupwraith";
-    private static final String UPDATER_PACKAGE = "org.lineageos.updater";
 
-    private static final String UPDATE_RECOVERY_EXEC = "/vendor/bin/install-recovery.sh";
-    private static final String CONFIG_HIDE_RECOVERY_UPDATE = "config_hideRecoveryUpdate";
     private static final String PROP_BUILD_DATE = "ro.build.date.utc";
 
     private SetupWizardUtils() {
@@ -116,24 +111,6 @@ public class SetupWizardUtils {
     public static boolean hasTelephony(Context context) {
         PackageManager packageManager = context.getPackageManager();
         return packageManager.hasSystemFeature(PackageManager.FEATURE_TELEPHONY);
-    }
-
-    public static boolean hasRecoveryUpdater(Context context) {
-        boolean fileExists = new File(UPDATE_RECOVERY_EXEC).exists();
-        if (!fileExists) {
-            return false;
-        }
-
-        boolean featureHidden = false;
-        try {
-            PackageManager pm = context.getPackageManager();
-            Resources updaterResources = pm.getResourcesForApplication(UPDATER_PACKAGE);
-            int res = updaterResources.getIdentifier(
-                    CONFIG_HIDE_RECOVERY_UPDATE, "bool", UPDATER_PACKAGE);
-            featureHidden = updaterResources.getBoolean(res);
-        } catch (PackageManager.NameNotFoundException | Resources.NotFoundException ignored) {
-        }
-        return !featureHidden;
     }
 
     public static boolean isRadioReady(Context context, ServiceState state) {
@@ -194,8 +171,8 @@ public class SetupWizardUtils {
     public static boolean hasGMS(Context context) {
         String gmsSuwPackage = hasLeanback(context) ? GMS_TV_SUW_PACKAGE : GMS_SUW_PACKAGE;
 
-        if (PackageManagerUtils.isAppInstalled(context, GMS_PACKAGE) &&
-                PackageManagerUtils.isAppInstalled(context, gmsSuwPackage)) {
+        if (isAppInstalled(context, GMS_PACKAGE) &&
+                isAppInstalled(context, gmsSuwPackage)) {
             PackageManager packageManager = context.getPackageManager();
             if (LOGV) {
                 Log.v(TAG, GMS_SUW_PACKAGE + " state = " +
@@ -401,5 +378,36 @@ public class SetupWizardUtils {
 
     public static long getBuildDateTimestamp() {
         return SystemProperties.getLong(PROP_BUILD_DATE, 0);
+    }
+
+    /**
+     * Checks whether a given package exists
+     *
+     * @param context
+     * @param packageName
+     * @return true if the package exists
+     */
+    public static boolean isAppInstalled(final Context context, final String packageName) {
+        return getApplicationInfo(context, packageName, 0) != null;
+    }
+
+    /**
+     * Get the ApplicationInfo of a package
+     *
+     * @param context
+     * @param packageName
+     * @param flags
+     * @return null if the package cannot be found or the ApplicationInfo is null
+     */
+    public static ApplicationInfo getApplicationInfo(final Context context,
+                                                     final String packageName, final int flags) {
+        final PackageManager packageManager = context.getPackageManager();
+        ApplicationInfo info;
+        try {
+            info = packageManager.getApplicationInfo(packageName, flags);
+        } catch (PackageManager.NameNotFoundException e) {
+            info = null;
+        }
+        return info;
     }
 }

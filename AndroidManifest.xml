@@ -39,12 +39,9 @@
     <uses-permission android:name="android.permission.MANAGE_USERS" />
     <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
-    <uses-permission android:name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS" />
     <uses-permission android:name="android.permission.BACKUP" />
     <uses-permission android:name="android.permission.NETWORK_SETTINGS" />
     <uses-permission android:name="lineageos.permission.FINISH_SETUP" />
-    <uses-permission android:name="lineageos.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="lineageos.permission.WRITE_SECURE_SETTINGS" />
 
     <permission
         android:name="lineageos.permission.FINISH_SETUP"
@@ -198,44 +195,6 @@
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="org.lineageos.setupwizard.LINEAGE_LOCATION_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".UpdateRecoveryActivity"
-                  android:label="@string/activity_label_empty"
-                  android:excludeFromRecents="true"
-                  android:configChanges="mcc|mnc"
-                  android:immersive="true"
-                  android:exported="true"
-                  android:windowSoftInputMode="stateAlwaysHidden">
-            <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_RECOVERY_UPDATE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".DeviceSpecificActivity"
-                  android:label="@string/activity_label_empty"
-                  android:excludeFromRecents="true"
-                  android:immersive="true"
-                  android:exported="true"
-                  android:windowSoftInputMode="stateAlwaysHidden">
-            <intent-filter>
-                <action android:name="org.lineageos.setupwizard.DEVICE_SPECIFIC"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".LineageSettingsActivity"
-                  android:label="@string/activity_label_empty"
-                  android:excludeFromRecents="true"
-                  android:configChanges="mcc|mnc"
-                  android:immersive="true"
-                  android:exported="true"
-                  android:windowSoftInputMode="stateAlwaysHidden">
-            <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
