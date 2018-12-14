@@ -43,8 +43,6 @@
     <uses-permission android:name="android.permission.BACKUP" />
     <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS" />
     <uses-permission android:name="lineageos.permission.FINISH_SETUP" />
-    <uses-permission android:name="lineageos.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="lineageos.permission.WRITE_SECURE_SETTINGS" />
 
     <permission
         android:name="lineageos.permission.FINISH_SETUP"
@@ -219,18 +217,6 @@
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="org.lineageos.setupwizard.LINEAGE_LOCATION_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".LineageSettingsActivity"
-                  android:label="@string/activity_label_empty"
-                  android:excludeFromRecents="true"
-                  android:configChanges="mcc|mnc"
-                  android:immersive="true"
-                  android:windowSoftInputMode="stateAlwaysHidden">
-            <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
