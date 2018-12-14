@@ -34,7 +34,7 @@
             android:layout_weight="1"
             android:gravity="center">
 
-            <org.lineageos.setupwizard.widget.LocalePicker
+            <org.calyxos.setupwizard.widget.LocalePicker
                 android:id="@+id/locale_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
 
         </RelativeLayout>
 
-        <org.lineageos.setupwizard.NavigationLayout
+        <org.calyxos.setupwizard.NavigationLayout
             android:id="@+id/navigation_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
