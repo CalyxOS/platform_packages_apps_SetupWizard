@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2016 The CyanogenMod Project
-     Copyright (C) 2017-2021 The LineageOS Project
+     Copyright (C) 2017 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        style="@style/SudContentFrame">
+        android:background="@color/primary">
 
         <ImageView
             android:id="@+id/brand_logo"
@@ -59,18 +59,12 @@
             android:layout_gravity="top"
             android:visibility="gone"/>
 
-        <org.lineageos.setupwizard.NavigationLayout
+        <com.google.android.setupdesign.view.NavigationBar
             android:id="@+id/navigation_bar"
+            style="@style/SudNavBarTheme"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="@dimen/sud_navbar_height" />
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/reveal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/reveal"
-        android:visibility="invisible"/>
 
 </org.lineageos.setupwizard.widget.ScrimInsetsFrameLayout>
