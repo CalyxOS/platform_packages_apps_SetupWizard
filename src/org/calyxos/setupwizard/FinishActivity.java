@@ -17,9 +17,6 @@
 
 package org.calyxos.setupwizard;
 
-import static org.calyxos.setupwizard.SetupWizardApp.ACTION_SETUP_COMPLETE;
-import static org.calyxos.setupwizard.SetupWizardApp.LOGV;
-
 import android.animation.Animator;
 import android.app.Activity;
 import android.app.WallpaperManager;
@@ -32,13 +29,13 @@ import android.os.Handler;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.widget.ImageView;
-
 import com.google.android.setupcompat.util.WizardManagerHelper;
-
 import org.calyxos.setupwizard.util.EnableAccessibilityController;
 
 import static android.os.Binder.getCallingUserHandle;
 import static org.calyxos.setupwizard.Manifest.permission.FINISH_SETUP;
+import static org.calyxos.setupwizard.SetupWizardApp.ACTION_SETUP_COMPLETE;
+import static org.calyxos.setupwizard.SetupWizardApp.LOGV;
 
 public class FinishActivity extends BaseSetupWizardActivity {
 
@@ -54,7 +51,6 @@ public class FinishActivity extends BaseSetupWizardActivity {
 
     private volatile boolean mIsFinishing = false;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +58,7 @@ public class FinishActivity extends BaseSetupWizardActivity {
             logActivityState("onCreate savedInstanceState=" + savedInstanceState);
         }
         mSetupWizardApp = (SetupWizardApp) getApplication();
-        mReveal = (ImageView) findViewById(R.id.reveal);
+        mReveal = findViewById(R.id.reveal);
         mEnableAccessibilityController =
                 EnableAccessibilityController.getInstance(getApplicationContext());
         setNextText(R.string.start);
