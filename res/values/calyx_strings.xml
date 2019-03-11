@@ -15,6 +15,13 @@
      limitations under the License.
 -->
 <resources>
+    <!-- App install -->
+    <string name="calyx_fdroid_repo_location" translatable="false">/product/fdroid/repo</string>
+    <string name="install_apps_title">Additional apps</string>
+    <string name="install_apps_subtitle"><b>Review additional apps.</b> You can install them later as well.</string>
+    <string name="install_apps_select_all">All of the following apps</string>
+    <string name="waiting_for_apps">Please wait while we finish setting up your device.</string>
+
     <!-- Backup Restore -->
     <string name="calyx_intro_restore_subtitle">If you have a backup from your last Calyx phone, you can restore it here.</string>
 </resources>
