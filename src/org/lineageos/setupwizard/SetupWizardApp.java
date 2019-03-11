@@ -39,6 +39,7 @@ public class SetupWizardApp extends Application {
             "org.lineageos.setupwizard.LINEAGE_SETUP_COMPLETE";
     public static final String ACTION_FINISHED = "org.lineageos.setupwizard.SETUP_FINISHED";
     public static final String ACTION_SETUP_NETWORK = "android.settings.NETWORK_PROVIDER_SETUP";
+    public static final String ACTION_APPS_INSTALLED = "org.lineageos.setupwizard.LINEAGE_APPS_INSTALLED";
     public static final String ACTION_SETUP_BIOMETRIC = "android.settings.BIOMETRIC_ENROLL";
     public static final String ACTION_SETUP_LOCKSCREEN = "com.android.settings.SETUP_LOCK_SCREEN";
     public static final String ACTION_RESTORE_FROM_BACKUP =
@@ -60,6 +61,10 @@ public class SetupWizardApp extends Application {
     public static final String EXTRA_ENABLE_NEXT_ON_CONNECT = "wifi_enable_next_on_connect";
 
     public static final String KEY_DETECT_CAPTIVE_PORTAL = "captive_portal_detection_enabled";
+
+    public static final String FDROID_CATEGORY_DEFAULT = "Default";
+    public static final String FDROID_CATEGORY_DEFAULT_BACKEND = "DefaultBackend";
+    public static final String PACKAGENAMES = "packageNames";
 
     public static final int REQUEST_CODE_SETUP_NETWORK = 0;
     public static final int REQUEST_CODE_SETUP_CAPTIVE_PORTAL = 4;
