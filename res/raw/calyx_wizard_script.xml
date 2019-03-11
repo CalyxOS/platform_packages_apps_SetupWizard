@@ -62,6 +62,14 @@
     </WizardAction>
 
     <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_LOCKSCREEN_SETTINGS;end" id="lockscreen_settings">
+        <result wizard:action="install_apps" />
+    </WizardAction>
+
+    <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_INSTALL_APPS;end" id="install_apps">
+        <result wizard:action="wait_install_apps" />
+    </WizardAction>
+
+    <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_WAIT_INSTALL_APPS;end" id="wait_install_apps">
         <result wizard:action="restore" />
     </WizardAction>
 
@@ -72,6 +80,7 @@
     <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_SETUP_COMPLETE;end" id="finish">
         <result wizard:action="exit" />
     </WizardAction>
+
     <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.EXIT;end" id="exit" />
 
 </WizardScript>
