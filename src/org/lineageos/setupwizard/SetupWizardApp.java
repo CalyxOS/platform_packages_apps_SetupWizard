@@ -30,6 +30,7 @@ public class SetupWizardApp extends Application {
     public static final String ACTION_SETUP_NETWORK = "android.settings.NETWORK_PROVIDER_SETUP";
     public static final String ACTION_SETUP_BIOMETRIC = "android.settings.BIOMETRIC_ENROLL";
     public static final String ACTION_SETUP_LOCKSCREEN = "com.android.settings.SETUP_LOCK_SCREEN";
+    public static final String ACTION_SETUP_INSTALL = "org.calyxos.lupin.INSTALL";
     public static final String ACTION_RESTORE_FROM_BACKUP =
             "com.stevesoltys.seedvault.RESTORE_BACKUP";
     public static final String ACTION_EMERGENCY_DIAL = "com.android.phone.EmergencyDialer.DIAL";
