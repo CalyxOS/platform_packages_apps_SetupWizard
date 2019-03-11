@@ -36,6 +36,7 @@
     <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
     <uses-permission android:name="android.permission.MANAGE_USERS" />
     <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
@@ -52,6 +53,9 @@
 
     <protected-broadcast android:name="org.lineageos.setupwizard.SETUP_FINISHED"
                          android:permission="lineageos.permission.FINISH_SETUP"/>
+
+    <protected-broadcast android:name="org.lineageos.setupwizard.LINEAGE_APPS_INSTALLED"
+                         android:permission="calyxos.permission.FINISH_SETUP"/>
 
     <application android:label="@string/app_name"
                  android:icon="@mipmap/ic_launcher"
@@ -238,6 +242,32 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".apps.InstallAppsActivity"
+                  android:label="@string/activity_label_empty"
+                  android:excludeFromRecents="true"
+                  android:configChanges="mcc|mnc"
+                  android:immersive="true"
+                  android:exported="false"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="org.lineageos.setupwizard.LINEAGE_INSTALL_APPS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".apps.WaitInstallAppsActivity"
+                  android:label="@string/activity_label_empty"
+                  android:excludeFromRecents="true"
+                  android:configChanges="mcc|mnc"
+                  android:immersive="true"
+                  android:exported="false"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="org.lineageos.setupwizard.LINEAGE_WAIT_INSTALL_APPS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".backup.RestoreIntroActivity"
                   android:label="@string/activity_label_empty"
                   android:excludeFromRecents="true"
@@ -296,5 +326,9 @@
 
         <service android:name=".SetupWizardExitService"
                  android:exported="false"/>
+
+        <service android:name=".apps.AppInstallerService"
+                 android:exported="false"/>
+
     </application>
 </manifest>
