@@ -17,7 +17,6 @@
 
 package org.calyxos.setupwizard;
 
-
 import android.app.Application;
 import android.os.Bundle;
 import android.os.Handler;
@@ -37,6 +36,7 @@ public class SetupWizardApp extends Application {
 
     public static final String ACTION_SETUP_COMPLETE = "org.calyxos.setupwizard.CALYX_SETUP_COMPLETE";
     public static final String ACTION_FINISHED = "org.calyxos.setupwizard.SETUP_FINISHED";
+    public static final String ACTION_APPS_INSTALLED = "org.calyxos.setupwizard.CALYX_APPS_INSTALLED";
     public static final String ACTION_SETUP_WIFI = "android.net.wifi.PICK_WIFI_NETWORK";
     public static final String ACTION_SETUP_BIOMETRIC = "android.settings.BIOMETRIC_ENROLL";
     public static final String ACTION_SETUP_LOCKSCREEN = "com.android.settings.SETUP_LOCK_SCREEN";
@@ -44,7 +44,6 @@ public class SetupWizardApp extends Application {
     public static final String ACTION_EMERGENCY_DIAL = "com.android.phone.EmergencyDialer.DIAL";
     public static final String ACTION_NEXT = "com.android.wizard.NEXT";
     public static final String ACTION_LOAD = "com.android.wizard.LOAD";
-
 
     public static final String EXTRA_FIRST_RUN = "firstRun";
     public static final String EXTRA_ALLOW_SKIP = "allowSkip";
@@ -63,6 +62,10 @@ public class SetupWizardApp extends Application {
     public static final String EXTRA_IS_SETUP_FLOW = "isSetupFlow";
 
     public static final String KEY_DETECT_CAPTIVE_PORTAL = "captive_portal_detection_enabled";
+
+    public static final String FDROID_CATEGORY_DEFAULT = "Default";
+    public static final String FDROID_CATEGORY_DEFAULT_BACKEND = "DefaultBackend";
+    public static final String PACKAGENAMES = "packageNames";
 
     public static final int REQUEST_CODE_SETUP_WIFI = 0;
     public static final int REQUEST_CODE_SETUP_CAPTIVE_PORTAL= 4;
