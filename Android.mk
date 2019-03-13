@@ -18,9 +18,9 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-support-v4 \
     android-support-v7-appcompat \
     android-support-v7-preference \
-    android-support-v7-recyclerview \
     android-support-v13 \
-    android-support-v14-preference
+    android-support-v14-preference \
+    androidx.recyclerview_recyclerview
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
     libphonenumber
