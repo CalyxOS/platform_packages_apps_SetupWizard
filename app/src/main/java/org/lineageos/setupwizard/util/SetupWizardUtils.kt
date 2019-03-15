@@ -63,7 +63,7 @@ object SetupWizardUtils {
     private const val COLOR_SOURCE_PRESET = "preset"
     private const val COLOR_SOURCE_HOME = "home_wallpaper"
 
-    private const val GMS_PACKAGE = "com.google.android.gms"
+    const val GMS_PACKAGE = "com.google.android.gms"
     private const val GMS_SUW_PACKAGE = "com.google.android.setupwizard"
     private const val GMS_TV_SUW_PACKAGE = "com.google.android.tungsten.setupwraith"
     private const val UPDATER_PACKAGE = "org.lineageos.updater"
