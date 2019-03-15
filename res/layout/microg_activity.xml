@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:orientation="vertical"
+    tools:context=".apps.MicroGActivity">
+
+    <include layout="@layout/header_condensed" />
+
+    <FrameLayout android:id="@+id/page"
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_weight="1">
+
+        <ScrollView android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/page_view"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/PageContent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/page_title_height"
+                    android:paddingLeft="@dimen/content_margin_left"
+                    android:paddingRight="@dimen/content_margin_right"
+                    android:src="@drawable/microg_logo"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/content_margin_left"
+                    android:paddingRight="@dimen/content_margin_right"
+                    android:paddingBottom="@dimen/summary_margin_bottom"
+                    android:text="@string/microg_description"
+                    android:textSize="15sp"
+                    style="@style/PageSummaryText" />
+
+                <include layout="@layout/divider" />
+
+                <LinearLayout
+                    android:id="@+id/switchLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="@dimen/content_margin_left"
+                    android:paddingRight="@dimen/data_switch_margin_right">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/microg_switch_label"
+                        android:textSize="15sp" />
+
+                    <Switch
+                        android:id="@+id/enableSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingLeft="@dimen/content_margin_left"
+                    android:paddingRight="@dimen/content_margin_right"
+                    android:text="@string/microg_warning"
+                    android:layout_weight="1"
+                    android:textSize="15sp" />
+
+                <include layout="@layout/divider" />
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <com.google.android.setupdesign.view.NavigationBar
+        android:id="@+id/navigation_bar"
+        style="@style/SudNavBarTheme"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sud_navbar_height" />
+
+</LinearLayout>
