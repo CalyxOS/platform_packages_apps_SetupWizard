@@ -5,6 +5,7 @@
 -->
 <resources>
     <color name="calyx_logo_accent">#FFFFFF</color>
+    <color name="microg_logo_accent">#ffffff</color>
 
     <color name="divider">#40ffffff</color>
 </resources>

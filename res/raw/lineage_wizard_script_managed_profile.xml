@@ -23,6 +23,12 @@
     <WizardAction
         wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_LOCATION_SETTINGS;end"
         id="location_settings">
+        <result wizard:action="microg" />
+    </WizardAction>
+
+    <WizardAction
+        wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_MICROG;end"
+        id="microg">
         <result wizard:action="finish" />
     </WizardAction>
 

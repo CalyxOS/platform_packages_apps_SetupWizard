@@ -6,6 +6,7 @@
 -->
 <resources>
     <color name="calyx_logo_accent">#231F20</color>
+    <color name="microg_logo_accent">#000000</color>
 
     <color name="button_bar_text_enabled">#ff1e1e1e</color>
     <color name="button_bar_text_disabled">#321e1e1e</color>
