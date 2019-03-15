@@ -32,6 +32,7 @@
     <uses-permission android:name="android.permission.BACKUP" />
     <uses-permission android:name="android.permission.NETWORK_SETTINGS" />
     <uses-permission android:name="lineageos.permission.FINISH_SETUP" />
+    <uses-permission android:name="org.microg.gms.PROVISION" />
 
     <permission
         android:name="lineageos.permission.FINISH_SETUP"
@@ -239,6 +240,20 @@
             android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="org.lineageos.setupwizard.LINEAGE_RESTORE_BACKUP" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".apps.MicroGActivity"
+            android:label="@string/activity_label_empty"
+            android:excludeFromRecents="true"
+            android:configChanges="mcc|mnc"
+            android:immersive="true"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="org.lineageos.setupwizard.LINEAGE_MICROG" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

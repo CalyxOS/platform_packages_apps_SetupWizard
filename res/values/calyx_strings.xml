@@ -4,4 +4,13 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- MicroG setup -->
+    <string name="microg_title">Google Services</string>
+    <string name="microg_description2">microG is a open source replacement for <b>Google Play Services</b> (and related software), but it only includes the useful parts. Unlike Play Services, microG does not have any advertising or location tracking, for example.</string>
+    <string name="microg_switch_label2">Google Services Compatibility</string>
+    <string name="microg_description">This allows apps such as <b>Google Maps, Youtube and ride sharing services</b> to run on CalyxOS. Disable this if you don\'t plan on running apps that require Google services. You will not be able to enable it later.</string>
+    <string name="microg_defaults_switch_label">Push notification support</string>
+    <string name="microg_defaults_summary">Allow apps to register for push notifications with Google. This registers your device to Google services, without any device-specific unique identifiers. This can be enabled later from microG Settings, however any apps setup earlier will need to be re-installed to work properly.</string>
+    <string name="microg_location_switch_label">Network location</string>
+    <string name="microg_location_summary">Improve location services by querying MLS (Mozilla Location Services) with nearby Wi-Fi and cellular networks, using Nominatim for address lookups, and remembering GPS coordinates of nearby networks. You can customize these options more granularly in microG Settings later.</string>
 </resources>
