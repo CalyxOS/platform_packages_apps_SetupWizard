@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The Calyx Institute
+     SPDX-License-Identifier: Apache-2.0
+-->
+<ItemGroup xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchItem
+        android:id="@+id/gms_compatibility"
+        android:icon="@drawable/ic_playstore"
+        android:layout="@layout/setup_items_switch"
+        android:summary="@string/microg_summary"
+        android:title="@string/microg_switch_label2"
+        android:checked="true" />
+
+    <SwitchItem
+        android:id="@+id/push_notifications"
+        android:icon="@drawable/ic_notification"
+        android:layout="@layout/setup_items_switch"
+        android:summary="@string/microg_defaults_summary"
+        android:title="@string/microg_defaults_switch_label"
+        android:checked="true" />
+
+    <SwitchItem
+        android:id="@+id/network_location"
+        android:icon="@drawable/ic_location"
+        android:layout="@layout/setup_items_switch"
+        android:summary="@string/microg_location_summary2"
+        android:title="@string/microg_location_switch_label"
+        android:checked="true" />
+
+</ItemGroup>
