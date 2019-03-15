@@ -74,7 +74,7 @@ public class SetupWizardApp extends Application {
     public static final int RADIO_READY_TIMEOUT = 10 * 1000;
 
     private boolean mIsRadioReady = false;
-    private boolean mIgnoreSimLocale = false;
+    private boolean mIgnoreSimLocale = true;
 
     private final Bundle mSettingsBundle = new Bundle();
     private final Handler mHandler = new Handler();
