@@ -58,12 +58,19 @@
     <WizardAction
         wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_LOCKSCREEN_SETTINGS;end"
         id="lockscreen_settings">
+        <result wizard:action="microg" wizard:name="skip" wizard:resultCode="11" />
         <result wizard:action="biometric_settings" />
     </WizardAction>
 
     <WizardAction
         wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_BIOMETRIC_SETTINGS;end"
         id="biometric_settings">
+        <result wizard:action="microg" />
+    </WizardAction>
+
+    <WizardAction
+        wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_MICROG;end"
+        id="microg">
         <result wizard:action="theme_settings" />
     </WizardAction>
 
