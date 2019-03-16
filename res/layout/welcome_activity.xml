@@ -33,7 +33,7 @@
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         android:gravity="center"
-        android:padding="48dp"/>
+        android:padding="108dp"/>
 
 
     <fragment android:name="com.android.setupwizard.navigationbar.SetupWizardNavBar"
