@@ -42,7 +42,6 @@
             android:gravity="center"
             android:padding="108dp"/>
 
-
         <fragment android:name="com.android.setupwizard.navigationbar.SetupWizardNavBar"
                   android:id="@+id/navigation_bar"
                   style="@style/setup_wizard_navbar_style" />
