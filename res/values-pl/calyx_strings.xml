@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calyx_intro_restore_subtitle">Jeśli masz kopię zapasową z wcześniejszego telefonu Calyx, możesz ją przywrócić tutaj.</string>
+    <string name="microg_warning">Uwaga: Jeśli włączysz to teraz, Twój telefon zostanie skonfigurowany do wysyłania danych do Google. Możesz to zmienić później w ustawieniach microG.</string>
+    <string name="microg_switch_label">Włącz kompatybilność z usługami Google</string>
+    <string name="microg_description">Dzięki temu aplikacje takie jak <b> Mapy Google, YouTube i usługi udostępniania pojazdów (np. Uber) </b> mogą działać na CalyxOS. Wyłącz tę opcję, jeśli nie planujesz uruchamiania aplikacji wymagających usług Google. Nie będzie można ich później włączyć.</string>
+    <string name="microg_title">Usługi Google</string>
+    <string name="waiting_for_apps">Proszę czekać na zakończenie konfiguracji Twojego urządzenia.</string>
+    <string name="install_apps_select_all">Wszystkie z następujących aplikacji</string>
+    <string name="install_apps_subtitle"><b>Przejrzyj dodatkowe aplikacje.</b> Możesz je zainstalować również później.</string>
+    <string name="install_apps_title">Dodatkowe aplikacje</string>
+</resources>
