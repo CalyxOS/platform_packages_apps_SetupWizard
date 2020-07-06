@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="microg_description">Tämä sallii sovelluksien kuten <b>Google Maps, Youtube ja sijainnin jakamispalvelut</b> toimimisen CalyxOS:ssä. Poista tämä käytöstä, jos et aio käyttää Google-palveluja vaativia sovelluksia. Et voi ottaa sitä käyttöön myöhemmin.</string>
+    <string name="microg_title">Google palvelut</string>
+    <string name="setup_euicc">Määritä eSIM</string>
+    <string name="euicc_summary">Voit myös lisätä eSIM:n laitteeseesi.</string>
+</resources>

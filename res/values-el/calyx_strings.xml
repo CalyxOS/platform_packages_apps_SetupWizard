@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="microg_description">Αυτό επιτρέπει σε εφαρμογές όπως <b>Χάρτες Google, Youtube και υπηρεσίες κοινής χρήσης διαδρομών</b> να εκτελούνται στο CalyxOS. Απενεργοποιήστε το εάν δεν σκοπεύετε να εκτελέσετε εφαρμογές που απαιτούν υπηρεσίες Google. Δεν θα μπορείτε να το ενεργοποιήσετε αργότερα.</string>
+    <string name="microg_title">Υπηρεσίες Google</string>
+    <string name="euicc_summary">Μπορείτε επίσης να προσθέσετε μια eSIM στη συσκευή σας.</string>
+    <string name="setup_euicc">Ρύθμιση eSIM</string>
+    <string name="bootloader_warning_summary">Το bootloader αυτής της συσκευής είναι προς το παρόν ξεκλείδωτο. Παρακαλώ κλειδώστε το bootloader από έναν υπολογιστή. Επισκεφθείτε το <a href="https://calyxos.org/lock">calyxos.org/lock</a> για περισσότερες πληροφορίες.</string>
+    <string name="reboot">Επανεκκίνηση</string>
+    <string name="bootloader_warning_title">Προειδοποίηση κλειδώματος bootloader</string>
+    <string name="microg_defaults_summary">Επιτρέψτε στις εφαρμογές να εγγραφούν για ειδοποιήσεις push στην Google. Αυτό καταχωρεί τη συσκευή σας στις υπηρεσίες της Google, χωρίς μοναδικά αναγνωριστικά που αφορούν τη συσκευή. Αυτό μπορεί να ενεργοποιηθεί αργότερα από τις Ρυθμίσεις microG, ωστόσο τυχόν εφαρμογές που έχουν ρυθμιστεί νωρίτερα θα πρέπει να επανεγκατασταθούν για να λειτουργήσουν σωστά.</string>
+    <string name="microg_defaults_switch_label">Υποστήριξη ειδοποιήσεων push</string>
+    <string name="microg_description2">Το microG είναι ένας αντικαταστάτης ανοιχτού κώδικα για τις <b>Υπηρεσίες Google Play</b> (και το σχετικό λογισμικό), αλλά περιλαμβάνει μόνο τα χρήσιμα μέρη. Σε αντίθεση με τις Υπηρεσίες Play, το microG δεν διαθέτει, για παράδειγμα, καμία διαφήμιση ή παρακολούθηση τοποθεσίας.</string>
+    <string name="microg_switch_label2">Συμβατότητα Υπηρεσιών Google</string>
+    <string name="setup_managed_profile_welcome_message">Ρύθμιση του προφίλ εργασίας σας</string>
+    <string name="microg_location_switch_label">Τοποθεσία δικτύου</string>
+    <string name="microg_location_summary">Βελτιώστε τις υπηρεσίες τοποθεσίας χρησιμοποιώντας τις MLS (Υπηρεσίες τοποθεσίας Mozilla) με βάση τα κοντινά δίκτυα Wi-Fi και κινητής τηλεφωνίας, χρησιμοποιώντας το Nominatim για αναζήτηση διευθύνσεων και απομνημόνευση συντεταγμένων GPS κοντινών δικτύων. Μπορείτε να προσαρμόσετε αυτές τις επιλογές πιο αναλυτικά στις Ρυθμίσεις microG αργότερα.</string>
+</resources>

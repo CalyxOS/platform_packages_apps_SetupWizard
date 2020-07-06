@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="microg_description">Isso permite que apps como <b>Google Maps, Youtube e serviços de compartilhamento de passeios</b> funcionem no CalyxOS. Desative esta opção se não planea executar apps que requerem os serviços do Google.</string>
+    <string name="microg_title">Serviços Google</string>
+    <string name="setup_euicc">Configuração do eSIM</string>
+    <string name="euicc_summary">Também pode adicionar um eSIM ao seu aparelho.</string>
+</resources>

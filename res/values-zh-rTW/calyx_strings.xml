@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="microg_description">這允許應用程式，如<b>Google 地圖，Youtube和乘坐共享服務</b>在 CalyxOS 上執行。如果您不打算運行需要 Google 服務的應用程式，請禁用此功能。稍後將無法啟用它。</string>
+    <string name="microg_title">Google服務</string>
+</resources>

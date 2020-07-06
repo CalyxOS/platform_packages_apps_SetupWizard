@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="microg_description">Isso permite que aplicativos como <b>Google Maps, Youtube e serviços de compartilhamento de passeios</b> funcionem no CalyxOS. Desative esta opção se você não planeja executar aplicativos que requerem os serviços do Google.</string>
+    <string name="microg_title">Serviços Google</string>
+    <string name="setup_euicc">Configuração do eSIM</string>
+    <string name="euicc_summary">Você também pode adicionar um eSIM para o seu dispositivo.</string>
+    <string name="bootloader_warning_title">Aviso de bloqueio do bootloader</string>
+    <string name="bootloader_warning_summary">O bootloader deste dispositivo está desbloqueado no momento. Por favor, bloqueie o bootloader de um computador. Visite <a href="https://calyxos.org/lock">calyxos.org/lock</a> para mais informações.</string>
+    <string name="reboot">Reiniciar</string>
+    <string name="setup_managed_profile_welcome_message">Configure seu perfil de trabalho</string>
+    <string name="microg_switch_label2">Compatibilidade com serviços Google</string>
+    <string name="microg_defaults_switch_label">Suporte a notificações push</string>
+    <string name="microg_description2">O microG é uma alternativa de código aberto ao <b>Google Play Services</b> (e software relacionado), mas inclui somente as partes úteis. Diferentemente do Play Services, o microG não tem nenhum tipo de rastreamento de anúncios ou localização, por exemplo.</string>
+    <string name="microg_defaults_summary">Permite apps registrassem para notificações push com o Google. Isso registra seu dispositivo a serviços Google, mas sem nenhum identificador único ao dispositivo. Isso pode ser ativado depois pelas configurações do microG, mas qualquer app configurado antes precisarão serem reinstalados para funcionar corretamente.</string>
+    <string name="microg_location_switch_label">Localização por rede</string>
+    <string name="microg_location_summary">Melhore os serviços de localização consultando o MLS (serviços de localização da Mozilla) com redes Wi-Fi e torres celulares próximas, e lembrando as cordenadas de GPS de redes próximas. Você pode configurar essas opções com mais precisão nas configurações do microG depois.</string>
+</resources>

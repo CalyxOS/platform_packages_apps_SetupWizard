@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="microg_description">Dette tillater programmer som <b>Google Maps, YouTube og kjøretøydeling</b> å kjøre på CalyxOS. Skru dette av hvis du ikke har tenkt til å kjøre programmer som krever Google-tjenester. Du vil ikke kunne skru det på senere.</string>
+    <string name="microg_title">Google-tjenester</string>
+    <string name="reboot">Omstart</string>
+    <string name="setup_euicc">Sett opp eSIM</string>
+    <string name="euicc_summary">Du kan også legge til en eSIM på din enhet.</string>
+    <string name="bootloader_warning_title">Advarsel om oppstartslasterlås</string>
+    <string name="bootloader_warning_summary">Enhetens oppstartslaster er opplåst. Lås oppstartslasteren fra en datamaskin. Besøk <a href="https://calyxos.org/lock">calyxos.org/lock</a> for mer info.</string>
+    <string name="microg_defaults_summary">Tillat apper å registrere seg for push-varsler hos Google. Dette registrerer enheten din til Google-tjenester, uten noen enhetsspesifikke unike identifikatorer. Dette kan aktiveres senere fra microG-innstillinger, men alle apper som er konfigurert tidligere, må installeres på nytt for å fungere ordentlig.</string>
+    <string name="microg_description2">microG er en åpen kildekode-erstatning for <b>Google Play Services</b> (og relatert programvare), men den inkluderer bare de nyttige delene. I motsetning til Play Services har microG for eksempel ingen reklame eller plasseringssporing.</string>
+    <string name="microg_switch_label2">Kompatibilitet med Google-tjenester</string>
+    <string name="microg_defaults_switch_label">Støtte for pushvarsling</string>
+</resources>

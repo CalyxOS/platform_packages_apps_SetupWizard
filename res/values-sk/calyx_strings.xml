@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="euicc_summary">Do svojho zariadenia môžete pridať aj eSIM.</string>
+    <string name="microg_description">Toto umožňuje aplikáciam ako <b>Google Mapy, Youtube a podobným</b> fungovať na CalyxOS. Vypnite to ak neplánujete používať aplikácie ktoré vyžaduje služby Google. Neskôr to už nebudete môcť povoliť.</string>
+    <string name="microg_title">Služby Google</string>
+    <string name="setup_euicc">Nastavenie eSIM</string>
+</resources>

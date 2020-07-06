@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="microg_title">Layanan Google</string>
+    <string name="microg_description">Hal ini memungkinkan aplikasi seperti <b> Google Maps, Youtube dan layanan perjalanan </b> untuk berjalan di CalyxOS. Anda bisa menonaktifkannya jika tidak berencana menjalankan aplikasi yang memerlukan layanan Google. Anda tidak akan dapat mengaktifkannya nanti.</string>
+    <string name="setup_euicc">Siapkan eSIM</string>
+    <string name="euicc_summary">Anda juga dapat menambahkan eSIM ke perangkat.</string>
+</resources>

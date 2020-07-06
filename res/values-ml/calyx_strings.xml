@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setup_euicc">eSIM ക്രമീകരിക്കുക</string>
+    <string name="euicc_summary">നിങ്ങളുടെ ഉപകരണത്തിലേക്ക് ഒരു ഇ-സിം ചേർക്കാനും കഴിയും.</string>
+    <string name="microg_description">ഇത് <b> Google മാപ്സ്, യൂട്യൂബ്, റൈഡ് ഷെയറിംഗ് സേവനങ്ങൾ </b> പോലുള്ള ആപ്പുകൾ CalyxOS- ൽ പ്രവർത്തിപ്പിക്കാൻ അനുവദിക്കുന്നു. Google സേവനങ്ങൾ ആവശ്യമുള്ള ആപ്പുകൾ പ്രവർത്തിപ്പിക്കാൻ നിങ്ങൾ പദ്ധതിയിടുന്നില്ലെങ്കിൽ ഇത് പ്രവർത്തനരഹിതമാക്കുക. നിങ്ങൾക്ക് ഇത് പിന്നീട് പ്രവർത്തനക്ഷമമാക്കാൻ കഴിയില്ല.</string>
+    <string name="microg_title">Google സേവനങ്ങൾ</string>
+    <string name="microg_switch_label2">ഗൂഗിൾ സേവനങ്ങളുടെ അനുയോജ്യത</string>
+</resources>

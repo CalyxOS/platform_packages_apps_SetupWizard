@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="microg_title">Google服务</string>
+    <string name="microg_description">这能让您在 CalyxOS 上安装 <b>Google 地图、Youtube 及其他需要谷歌框架的应用</b>。之后将无法启用此选项。</string>
+    <string name="setup_euicc">设置 eSIM</string>
+    <string name="euicc_summary">您还可以将 eSIM 添加到您的设备。</string>
+    <string name="bootloader_warning_summary">该设备的 Bootloader 目前是解锁的。请从计算机锁定它。访问 <a href="https://calyxos.org/lock">calyxos.org/lock</a>获取更多信息。</string>
+    <string name="reboot">重启</string>
+    <string name="bootloader_warning_title">Bootloader 锁定警告</string>
+    <string name="microg_switch_label2">Google 服务兼容性</string>
+    <string name="microg_defaults_switch_label">推送通知支持</string>
+    <string name="microg_description2">microG 是 <b>Google Play Services</b> (以及相关软件) 的开源替代，只包含有用部分。 和 Play Services 不同，microG 不含任何广告或位置跟踪。</string>
+    <string name="microg_defaults_summary">允许应用注册 Google 推送通知。这会将你的设备注册到 Google 服务，不包含特定于设备的唯一标识符。可以稍后在 microG 设置中启用它，但是之前安装的任何应用都需要重新安装才能正常工作。</string>
+    <string name="setup_managed_profile_welcome_message">设置工作配置文件</string>
+    <string name="microg_location_switch_label">网络位置</string>
+    <string name="microg_location_summary">通过查询 MLS（Mozilla 位置服务）获取附近的 WiFi 和蜂窝网络位置，使用 Nominatim 进行地址查询并记住附近网络的 GPS 坐标来改进位置服务。稍后你可以在 microG 设置中更精细地定制这些选项。</string>
+</resources>
