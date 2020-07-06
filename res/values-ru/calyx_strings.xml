@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="microg_description">Это позволяет запускать такие приложения, как <b>Google Карты, Youtube и службы обмена</b> на CalyxOS. Отключите это, если вы не планируете запускать приложения, требующие сервисы Google для работы. Вы не сможете включить это позже.</string>
+    <string name="microg_title">Сервисы Google</string>
+    <string name="setup_euicc">Настройка eSIM</string>
+    <string name="euicc_summary">Также вы можете добавить eSIM в свое устройство.</string>
+    <string name="bootloader_warning_title">Предупреждение о блокировке загрузчика</string>
+    <string name="reboot">Перезагрузка</string>
+    <string name="bootloader_warning_summary">Загрузчик этого устройства разблокирован. Пожалуйста, заблокируйте загрузчик через компьютер. Посетите <a href="https://calyxos.org/lock">calyxos.org/lock</a> для получения дополнительной информации.</string>
+    <string name="microg_description2">microG — это замена <b>Сервисов Google Play</b> (и связанного с ними программного обеспечения) с открытым исходным кодом, но содержащая только полезные части. Например, в отличие от Play Services, в microG нет рекламы или отслеживания местоположения.</string>
+    <string name="microg_defaults_switch_label">Поддержка push-уведомлений</string>
+    <string name="microg_defaults_summary">Разрешить приложениям регистрироваться для получения push-уведомлений в Google. Это регистрирует ваше устройство в службах Google без каких-либо уникальных идентификаторов устройства. Это можно включить позже в настройках microG, однако для правильной работы любые установленные ранее приложения необходимо будет переустановить.</string>
+    <string name="microg_switch_label2">Совместимость с сервисами Google</string>
+    <string name="setup_managed_profile_welcome_message">Настройка рабочего профиля</string>
+</resources>

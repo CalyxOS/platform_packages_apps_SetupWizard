@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="setup_euicc">„eSIM“ sąranka</string>
+    <string name="euicc_summary">Prie savo prietaiso taip pat galite pridėti „eSIM“.</string>
+    <string name="microg_description">Tai leidžia tokias programėles kaip <b> „Google“ žemėlapiai, „Youtube“ ir pavežėjų dalijimosi paslaugos </b> naudoti „CalyxOS“. Išjunkite tai, jei neplanuojate naudoti programėlių, kurioms reikia „Google“ paslaugų. Vėliau to įjungti negalėsite.</string>
+    <string name="microg_title">„Google“ paslaugos</string>
+    <string name="reboot">Perkrauti</string>
+    <string name="bootloader_warning_title">„Bootloader” užrakto įspėjimas</string>
+    <string name="bootloader_warning_summary">Šio įrenginio „Bootloader” šiuo metu atrakintas. Užrakinkite „Bootloader” iš kompiuterio. Norėdami gauti daugiau informacijos, apsilankykite <a href="https://calyxos.org/lock">calyxos.org/lock</a>.</string>
+    <string name="microg_description2">„microG“ yra atvirojo kodo <b>„Google Play Services“</b> (ir susijusios programinės įrangos) pakaitalas, tačiau į jį įtrauktos tik naudingos dalys. Skirtingai nei „Play Services“, „microG“ neturi, pavyzdžiui, jokios reklamos ar vietos stebėjimo.</string>
+    <string name="microg_switch_label2">„Google“ paslaugų suderinamumas</string>
+    <string name="microg_defaults_summary">Leisti programoms registruotis gauti tiesioginius pranešimus sistemoje „Google“. Taip jūsų įrenginys užregistruojamas „Google“ paslaugose be jokių konkrečiam įrenginiui būdingų unikalių identifikatorių. Tai gali būti įgalinta ir vėliau iš „microG“ nustatymų, tačiau visas anksčiau nustatytas programėles reikės iš naujo įdiegti, kad jos tinkamai veiktų.</string>
+    <string name="microg_defaults_switch_label">Tiesioginių pranešimų palaikymas</string>
+</resources>
