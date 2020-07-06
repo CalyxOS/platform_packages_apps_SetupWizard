@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="install_apps_title">Aanvullende apps</string>
+    <string name="setup_euicc">Stel eSIM in</string>
+    <string name="install_apps_select_all">Alle volgende apps</string>
+    <string name="microg_description">Dit staat apps als &lt;b&gt; Google Maps, Youtube en apps om uw (auto)rit te delen &lt;b&gt; toe om uitgevoerd te worden op CalyxOS. Schakel deze optie uit als u niet van plan bent om apps te gebruiken die Google-services vereisen. U kunt dit later niet meer inschakelen.</string>
+    <string name="microg_switch_label">schakel Google-services compatibiliteit in</string>
+    <string name="install_apps_subtitle"><b>Controleer aanvullende apps. </b> u kunt deze later ook installeren.</string>
+    <string name="waiting_for_apps">Uw apparaat wordt nu ingesteld. Wacht a.u.b. tot dit afgerond is.</string>
+    <string name="microg_title">Google-services</string>
+    <string name="calyx_intro_restore_subtitle">Als u een backup van uw laatste Calyx telefoon heeft, kunt u deze hier herstellen.</string>
+    <string name="euicc_summary">U kunt ook een eSIM toevoegen aan uw apparaat.</string>
+    <string name="microg_warning">Note: als u dit nu inschakeld, wordt uw telefoon ingesteld om informatie naar Google te sturen. U kunt dit later aanpassen in de MicroG instellingen.</string>
+</resources>

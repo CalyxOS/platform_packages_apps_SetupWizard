@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calyx_intro_restore_subtitle">Son Calyx telefonunuzdan bir yedeklemeniz varsa, onu buradan geri yükleyebilirsiniz.</string>
+    <string name="microg_warning">Not: Bunu şimdi etkinleştirirseniz, telefonunuz Google\'a veri gönderecek şekilde ayarlanacaktır. Bunu daha sonra microG ayarlarında değiştirebilirsiniz.</string>
+    <string name="microg_switch_label">Google Hizmetleri Uyumluluğunu Etkinleştir</string>
+    <string name="microg_description">Bu, <b>Google Haritalar, Youtube ve sürüş paylaşım hizmetleri</b> gibi uygulamaların CalyxOS üzerinde çalışmasını sağlar. Google hizmetleri gerektiren uygulamaları çalıştırmayı düşünmüyorsanız bunu devre dışı bırakın. Daha sonra etkinleştirme imkanınız olmayacak.</string>
+    <string name="microg_title">Google Hizmetleri</string>
+    <string name="waiting_for_apps">Lütfen aygıtınızın kurulumunu bitirirken bekleyin.</string>
+    <string name="install_apps_select_all">Aşağıdaki uygulamaların tümü</string>
+    <string name="install_apps_subtitle"><b>Ek uygulamaları inceleyin.</b> Bunları daha sonra da kurabilirsiniz.</string>
+    <string name="install_apps_title">Ek uygulamalar</string>
+    <string name="setup_euicc">eSIM kur</string>
+    <string name="euicc_summary">Ayrıca aygıtınıza bir eSIM ekleyebilirsiniz.</string>
+</resources>

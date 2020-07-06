@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calyx_intro_restore_subtitle">Jos sinulla on varmuuskopio edellisestä Calyx-puhelimestasi, voit palauttaa sen täällä.</string>
+    <string name="microg_warning">Huomaa: Jos otat tämän käyttöön nyt, puhelimesi asetetaan lähettämään tietoja Googlelle. Voit muuttaa tätä myöhemmin microG-asetuksissa.</string>
+    <string name="microg_switch_label">Ota Google Palvelujen yhteensopivuus käyttöön</string>
+    <string name="microg_description">Tämä sallii sovelluksien kuten <b>Google Maps, Youtube ja sijainnin jakamispalvelut</b> toimimisen CalyxOS:ssä. Poista tämä käytöstä, jos et aio käyttää Google-palveluja vaativia sovelluksia. Et voi ottaa sitä käyttöön myöhemmin.</string>
+    <string name="microg_title">Google palvelut</string>
+    <string name="waiting_for_apps">Odota asennuksen päättymistä.</string>
+    <string name="install_apps_select_all">Kaikki seuraavat sovellukset</string>
+    <string name="install_apps_subtitle"><b>Tarkista lisäsovellukset.</b> Voit asentaa ne myös myöhemmin.</string>
+    <string name="install_apps_title">Lisäsovellukset</string>
+    <string name="setup_euicc">Määritä eSIM</string>
+    <string name="euicc_summary">Voit myös lisätä eSIM:n laitteeseesi.</string>
+</resources>

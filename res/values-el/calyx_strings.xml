@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calyx_intro_restore_subtitle">Εάν έχετε αντίγραφο ασφαλείας από το τελευταίο σας τηλέφωνο Calyx, μπορείτε να το επαναφέρετε εδώ.</string>
+    <string name="microg_description">Αυτό επιτρέπει σε εφαρμογές όπως <b>Χάρτες Google, Youtube και υπηρεσίες κοινής χρήσης διαδρομών</b> να εκτελούνται στο CalyxOS. Απενεργοποιήστε το εάν δεν σκοπεύετε να εκτελέσετε εφαρμογές που απαιτούν υπηρεσίες Google. Δεν θα μπορείτε να το ενεργοποιήσετε αργότερα.</string>
+    <string name="microg_warning">Σημείωση: Εάν το ενεργοποιήσετε τώρα, το τηλέφωνό σας θα ρυθμιστεί για αποστολή δεδομένων στην Google. Μπορείτε να το αλλάξετε αργότερα στις ρυθμίσεις microG.</string>
+    <string name="microg_switch_label">Ενεργοποίηση συμβατότητας υπηρεσιών Google</string>
+    <string name="microg_title">Υπηρεσίες Google</string>
+    <string name="waiting_for_apps">Περιμένετε μέχρι να ολοκληρώσουμε τη ρύθμιση της συσκευής σας.</string>
+    <string name="install_apps_select_all">Όλες οι ακόλουθες εφαρμογές</string>
+    <string name="install_apps_subtitle"><b>Έλεγχος πρόσθετων εφαρμογών.</b> Μπορείτε επίσης να τις εγκαταστήσετε αργότερα.</string>
+    <string name="install_apps_title">Πρόσθετες εφαρμογές</string>
+</resources>

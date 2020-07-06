@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="install_apps_subtitle"><b>అదనపు అప్లికేషన్స్ ని సమీక్షించండి. </b>మీరు వాటిని తరువాత కూడా ఇన్‌స్టాల్ చేయవచ్చు.</string>
+    <string name="install_apps_title">అదనపు అప్లికేషన్స్</string>
+    <string name="install_apps_select_all">ఈ క్రింద ఉన్న అన్ని అప్లికేషన్స్</string>
+    <string name="waiting_for_apps">దయచేసి మేము మీ చరవాణి సెటప్ చేయడం పూర్తయ్యే వరకు వేచి ఉండండి.</string>
+    <string name="microg_warning">గమనిక: మీరు దీన్ని ఇప్పుడే ప్రారంభిస్తే, గూగుల్ కి మీ సమాచారం పంపడానికి మీ చరవాణి సెటప్ చేయబడుతుంది. మీరు దీన్ని మైక్రోజి సెట్టింగులలో తరువాత మార్చవచ్చు.</string>
+    <string name="microg_switch_label">గూగుల్ సేవల అనుకూలతను ప్రారంభించండి</string>
+    <string name="microg_title">గూగుల్ సేవలు</string>
+    <string name="calyx_intro_restore_subtitle">మీ వద్ద పాత కాలిక్స్ చరవాణి యొక్క బ్యాక్ అప్ కావలసినచో , ఇచట పుసరుద్ధరించుకోగలరు.</string>
+    <string name="microg_description">ఇది గూగుల్ మ్యాప్స్ , యూట్యూబ్ మరియు రైడ్ షేరింగ్ సేవలు మొదలగు యాప్స్ కాలిక్స్ ఓఎస్ నందు పనిచేయుటకు అనుమతిస్తుంది. గూగుల్ సర్వీసెస్ అవసరమయ్యే యాప్స్ వాడని యెడల దీనిని నిలిపివేయొచ్చు. మీరు దీనిని మరల ప్రారంభించలేరు.</string>
+</resources>

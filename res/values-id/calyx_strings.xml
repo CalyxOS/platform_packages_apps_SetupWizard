@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calyx_intro_restore_subtitle">Jika Anda memiliki cadangan dari ponsel Calyx sebelumnya, Anda dapat memulihkannya di sini.</string>
+    <string name="install_apps_title">Aplikasi tambahan</string>
+    <string name="install_apps_subtitle"><b>Tinjau aplikasi tambahan.</b> Anda juga dapat menginstalnya nanti.</string>
+    <string name="install_apps_select_all">Semua aplikasi berikut</string>
+    <string name="waiting_for_apps">Harap tunggu sementara kami selesai menyiapkan perangkat Anda.</string>
+    <string name="microg_title">Layanan Google</string>
+    <string name="microg_description">Hal ini memungkinkan aplikasi seperti <b> Google Maps, Youtube dan layanan perjalanan </b> untuk berjalan di CalyxOS. Anda bisa menonaktifkannya jika tidak berencana menjalankan aplikasi yang memerlukan layanan Google. Anda tidak akan dapat mengaktifkannya nanti.</string>
+    <string name="microg_switch_label">Aktifkan Kompatibilitas Layanan Google</string>
+    <string name="setup_euicc">Siapkan eSIM</string>
+    <string name="microg_warning">Catatan: Jika Anda mengaktifkan ini sekarang, ponsel Anda akan disiapkan untuk mengirim data ke Google. Anda dapat mengubahnya nanti di pengaturan microG.</string>
+    <string name="euicc_summary">Anda juga dapat menambahkan eSIM ke perangkat.</string>
+</resources>
