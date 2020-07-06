@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="microg_title">Serveis de Google</string>
+    <string name="microg_description">Això permet que aplicacions com <b>Google Maps, Youtube i ride sharing services</b> s\'executin a CalyxOS. Desactiva això si no tens previst executar aplicacions que requereixen serveis de Google. No podràs activar-ho més tard.</string>
+    <string name="euicc_summary">També pots afegir un eSIM al teu dispositiu.</string>
+    <string name="setup_euicc">Configuració eSIM</string>
+    <string name="bootloader_warning_title">Avís de bloqueig del carregador d\'arrencada</string>
+    <string name="bootloader_warning_summary">El carregador d\'arrencada d\'aquest dispositiu està desbloquejat. Bloqueja el carregador d\'arrencada des d\'un ordinador. Visiteu <a href="https://calyxos.org/lock">calyxos.org/lock</a> per a més informació.</string>
+    <string name="reboot">Reiniciar</string>
+    <string name="microg_description2">microG és una alternativa de codi obert a <b>Google Play Services</b> (i programari relacionat), però només inclou les parts útils. A diferència dels Serveis de Jugador, el microG no té cap publicitat o seguiment d\'ubicació, per exemple.</string>
+    <string name="microg_defaults_summary">Permet que les aplicacions es registrin per a les notificacions emergents amb Google. Això registra el dispositiu als serveis de Google, sense cap identificador únic específic del dispositiu. Això es pot activar més tard des de la configuració de microG, però qualsevol configuració d\'aplicacions anterior s\'haurà de reinstal·lar per funcionar correctament.</string>
+    <string name="microg_switch_label2">Compatibilitat amb Google Services</string>
+    <string name="microg_defaults_switch_label">Suport per a notificacions push</string>
+</resources>

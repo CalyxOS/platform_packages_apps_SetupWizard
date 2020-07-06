@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="microg_title">Services Google</string>
+    <string name="reboot">Redémarrage</string>
+    <string name="bootloader_warning_title">Avertissement de verrouillage du bootloader</string>
+    <string name="microg_description2">microG est un remplacement open source des <b>services Google Play</b> (et des logiciels associés), mais n\'inclut que les parties nécessaires au bon fonctionnement. Contrairement au services Play, microG n\'a pas, notamment, de publicité ou de suivi de localisation.</string>
+    <string name="microg_description">Cela permet à des applications telles que <b>Google Maps, Youtube et les services de covoiturage</b> de s\'exécuter sur CalyxOS. Désactivez cette option si vous ne prévoyez pas d\'exécuter des applications nécessitant des services Google. Vous ne pourrez pas l\'activer plus tard.</string>
+    <string name="bootloader_warning_summary">Le bootloader de cet appareil est actuellement déverrouillé. Veuillez verrouiller le bootloader à partir d\'un ordinateur. Visitez <a href="https://calyxos.org/lock">calyxos.org/lock</a> pour plus d\'informations.</string>
+    <string name="setup_euicc">Configurer l\'eSIM</string>
+    <string name="microg_switch_label2">Compatibilité des services Google</string>
+    <string name="microg_defaults_switch_label">Prise en charge des notifications push</string>
+    <string name="microg_defaults_summary">Autoriser les applications à s\'inscrire aux notifications push avec Google. Cela enregistre votre appareil auprès des services Google, sans aucun identifiant unique spécifique à l\'appareil. Cela peut être activé ultérieurement à partir des paramètres microG, mais toute configuration d\'application antérieure devra être réinstallée pour fonctionner correctement.</string>
+    <string name="euicc_summary">Vous pouvez également ajouter une eSIM à votre appareil.</string>
+</resources>

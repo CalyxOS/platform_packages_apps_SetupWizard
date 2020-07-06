@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="microg_description">Þetta heimiliar öppum eins og <b>Google Maps, Youtube og ferðadeiliöppum</b> að keyra á CalyxOW. Ekki leyfa þetta ef þú ætlar ekki að nota öpp sem styðjast við Google þjónustur. Þá munt þú ekki geta leyft það síðar.</string>
+    <string name="microg_title">Þjónustur Google</string>
+</resources>

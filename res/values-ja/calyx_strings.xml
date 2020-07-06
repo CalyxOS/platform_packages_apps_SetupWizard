@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="microg_description">これにより、 <b>Google マップ、YouTube、ライドシェアリングサービス</b> などのアプリをCalyxOSで実行できるようになります。Google サービスを必要とするアプリを実行する予定がない場合は、これを無効にしてください。これは、後で変更することはできません。</string>
+    <string name="microg_title">Google サービス</string>
+    <string name="setup_euicc">eSIM のセットアップ</string>
+    <string name="euicc_summary">また、eSIM を追加することもできます。</string>
+    <string name="reboot">再起動</string>
+    <string name="bootloader_warning_title">ブートローダーロックの警告</string>
+    <string name="bootloader_warning_summary">このデバイスのブートローダーは現在ロック解除されています。コンピューターからブートローダーをロックしてください。 詳しくは <a href="https://calyxos.org/lock">calyxos.org/lock</a> をご覧ください。</string>
+</resources>
