@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="microg_warning">Napomena: Ako se ovo uključi, telefon će biti postavljen tako da šalje podatke Googleu. To se može kasnije promijeniti u postavkama microG-a.</string>
+    <string name="microg_switch_label">Uključi kompatibilnost Googleovih usluga</string>
+    <string name="microg_description">Ovo omogućuje pokretanje aplikacija kao što su <b>Google karte, Youtube i usluge dijeljenja vožnje</b> na CalyxOS-u. Isključi ako ne misliš pokretati aplikacije koje zahtijevaju Googleove usluge. Kasnije se ne može uključiti.</string>
+    <string name="microg_title">Google usluge</string>
+    <string name="waiting_for_apps">Pričekaj da završimo s postavljanjem uređaja.</string>
+    <string name="install_apps_select_all">Sve sljedeće aplikacije</string>
+    <string name="install_apps_subtitle"><b>Pregledaj dodatne aplikacije.</b> Mogu se instalirati i kasnije.</string>
+    <string name="install_apps_title">Dodatne aplikacije</string>
+    <string name="setup_euicc">Postavi eSIM</string>
+    <string name="euicc_summary">Tvom uređaju možeš dodati i eSIM.</string>
+</resources>

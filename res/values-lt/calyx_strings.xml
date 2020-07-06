@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setup_euicc">„eSIM“ sąranka</string>
+    <string name="euicc_summary">Prie savo prietaiso taip pat galite pridėti „eSIM“.</string>
+    <string name="microg_warning">Pastaba: jei tai įgalinsite dabar, jūsų telefonas bus nustatytas siųsti duomenis „Google“. Vėliau tai galite pakeisti „microG“ nustatymuose.</string>
+    <string name="microg_switch_label">Įgalinti „Google“ paslaugų suderinamumą</string>
+    <string name="microg_description">Tai leidžia tokias programėles kaip <b> „Google“ žemėlapiai, „Youtube“ ir pavežėjų dalijimosi paslaugos </b> naudoti „CalyxOS“. Išjunkite tai, jei neplanuojate naudoti programėlių, kurioms reikia „Google“ paslaugų. Vėliau to įjungti negalėsite.</string>
+    <string name="microg_title">„Google“ paslaugos</string>
+    <string name="waiting_for_apps">Palaukite, kol baigsime paruošti jūsų įrenginį.</string>
+    <string name="install_apps_select_all">Visas toliau nurodytas programėles</string>
+    <string name="install_apps_subtitle"><b>Peržiūrėkite papildomas programėles.</b> Jas galite įdiegti ir vėliau.</string>
+    <string name="install_apps_title">Papildomos programėlės</string>
+</resources>

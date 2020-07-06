@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="microg_warning">ATH: Ef þú leyfir þetta núna mun síminn þinn senda Google gögn. Þú getur breytt þessu síðar í microG stillingunum.</string>
+    <string name="microg_switch_label">Leyfa samþættingu við Google þjónustur</string>
+    <string name="microg_description">Þetta heimiliar öppum eins og <b>Google Maps, Youtube og ferðadeiliöppum</b> að keyra á CalyxOW. Ekki leyfa þetta ef þú ætlar ekki að nota öpp sem styðjast við Google þjónustur. Þá munt þú ekki geta leyft það síðar.</string>
+    <string name="microg_title">Þjónustur Google</string>
+    <string name="waiting_for_apps">vinsamega hinkraðu meðan á uppsetningu stendur.</string>
+    <string name="install_apps_select_all">Öll eftirfarandi öpp</string>
+    <string name="install_apps_subtitle"><b>Skoða viðbótaröpp.</b> Þú getur líka sett þau upp seinna.</string>
+    <string name="install_apps_title">Viðbótaröpp</string>
+</resources>

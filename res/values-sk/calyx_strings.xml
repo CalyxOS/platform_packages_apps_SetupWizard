@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="euicc_summary">Do svojho zariadenia môžete pridať aj eSIM.</string>
+    <string name="microg_warning">Poznámka: Ak povolíte kompatibilitu, Vaše zariadenie bude zasielať dáta Googlu. Toto je možné neskôr zmeniť v nastaveniach microG.</string>
+    <string name="microg_switch_label">Zapnúť kompatibilitu so službami Google</string>
+    <string name="microg_description">Toto umožňuje aplikáciam ako <b>Google Mapy, Youtube a podobným</b> fungovať na CalyxOS. Vypnite to ak neplánujete používať aplikácie ktoré vyžaduje služby Google. Neskôr to už nebudete môcť povoliť.</string>
+    <string name="microg_title">Služby Google</string>
+    <string name="waiting_for_apps">Počkajte prosím kým dokončíme prípravu Vášho zariadenia.</string>
+    <string name="install_apps_select_all">Všetky nasledujúce aplikácie</string>
+    <string name="install_apps_subtitle"><b>Prezrite si ďalšie aplikácie</b> Môžete si ich nainštalovať aj neskôr.</string>
+    <string name="install_apps_title">Ďalšie aplikácie</string>
+    <string name="setup_euicc">Nastavenie eSIM</string>
+</resources>
