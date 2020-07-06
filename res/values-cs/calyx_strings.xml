@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="microg_warning">Poznámka: Pokud kompatibilitu zapnete, váš telefon bude posílat data Googlu. Tohle je možné později změnit v nastavení microG.</string>
+    <string name="microg_switch_label">Zapnout kompatibilitu se Službami Google</string>
+    <string name="microg_description">Toto umožňuje aplikacím jako <b>Google mapy, Youtube a aplikacím ke společné jízdě</b> fungovat na CalyxOS. Tuto možnost vypněte, pokud nemáte v plánu používat aplikace vyžadující služby Google. Toto nastavení nebude později možné zapnout.</string>
+    <string name="microg_title">Služby Google</string>
+    <string name="waiting_for_apps">Prosím počkejte než dokončíme přípravu vašeho zařízení.</string>
+    <string name="install_apps_select_all">Všechny následující aplikace</string>
+    <string name="install_apps_subtitle"><b>Projděte si další aplikace</b> Můžete je nainstalovat i později.</string>
+    <string name="install_apps_title">Další aplikace</string>
+</resources>
