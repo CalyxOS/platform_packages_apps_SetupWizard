@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calyx_intro_restore_subtitle">Se hai un backup dal tuo ultimo telefono Calyx, puoi ripristinarlo qui.</string>
+    <string name="microg_title">Servizi Google</string>
+    <string name="waiting_for_apps">Attendi il completamento della configurazione del tuo dispositivo.</string>
+</resources>
