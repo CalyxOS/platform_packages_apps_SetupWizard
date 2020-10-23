@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="microg_description">הגדרה זו מאפשרת ליישומונים כגון <b>מפות Google,‏ YouTube ושירותי נסיעה שיתופית</b> לפעול על גבי CalyxOS. יש להשבית את האפשרות הזאת אם אין לך תכניות להריץ יישומונים שדורשים את שירותי Google. לא תהיה לך אפשרות להפעיל את זה בהמשך.</string>
+    <string name="intro_restore_title">שחזור יישומונים ונתונים</string>
+    <string name="microg_warning">הערה: אם התכונה הזאת תופעל כעת, הטלפון שלך יוגדר לשלוח נתונים ל־Google. ניתן לשנות זאת מאוחר יותר בהגדרות של microG.</string>
+    <string name="microg_switch_label">הפעלת תאימות לשירותי Google</string>
+    <string name="intro_restore_subtitle">אם יש לך גיבוי מהטלפון האחרון שלך עם Calyx, ניתן לשחזר אותו מכאן.</string>
+    <string name="intro_restore_button">שחזור מגיבוי</string>
+    <string name="microg_title">שירותי Google</string>
+    <string name="waiting_for_apps">נא להמתין בזמן שאנו מסיימים להגדיר את ההתקן שלך.</string>
+    <string name="install_apps_select_all">כל היישומונים הבאים</string>
+    <string name="install_apps_subtitle"><b>סקירת יישומונים נוספים.</b> ניתן להתקין אותם גם מאוחר יותר.</string>
+    <string name="install_apps_title">יישומונים נוספים</string>
+</resources>
