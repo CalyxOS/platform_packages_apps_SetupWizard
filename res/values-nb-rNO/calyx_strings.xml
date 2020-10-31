@@ -7,7 +7,7 @@
     <string name="intro_restore_subtitle">Hvis du har en sikkerhetskopi fra din siste Calyx-enhet, kan du gjenopprette den her.</string>
     <string name="intro_restore_button">Gjenopprett fra sikkerhetskopi</string>
     <string name="waiting_for_apps">Vent mens oppsettet av enheten din fullføres.</string>
-    <string name="install_apps_subtitle">&lt;b&gt;Gjennomse ytterligere programmer.&lt;/b&gt; Du kan installere dem senere også.<b>Review additional apps.</b> You can install them later as well.</string>
+    <string name="install_apps_subtitle"><b>Gjennomse ytterligere programmer.</b> Du kan installere dem senere også.</string>
     <string name="microg_title">Google-tjenester</string>
     <string name="install_apps_select_all">Alle følgende programmer</string>
     <string name="install_apps_title">Ytterligere programmer</string>
