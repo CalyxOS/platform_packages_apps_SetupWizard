@@ -47,7 +47,7 @@
                     android:textSize="16sp"
                     android:layout_marginBottom="@dimen/summary_margin_bottom"
                     android:paddingRight="@dimen/location_text_margin_right"
-                    android:text="@string/intro_restore_subtitle" />
+                    android:text="@string/calyx_intro_restore_subtitle" />
 
                 <Button
                     android:id="@+id/intro_restore_button"
