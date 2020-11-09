@@ -15,4 +15,6 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Backup Restore -->
+    <string name="calyx_intro_restore_subtitle">If you have a backup from your last Calyx phone, you can restore it here.</string>
 </resources>
