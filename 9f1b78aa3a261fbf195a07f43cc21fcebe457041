@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28c691_09805cd0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-11-19T12:48:20Z",
+      "side": 1,
+      "message": "This isn\u0027t as bad as it sounds, see https://github.com/CalyxOS/platform_packages_apps_SetupWizard/commit/928bca621c0d0f9d814b0305e2513f00cfee1478\n\nUsually for builds the F-Droid repo should be in place always, but if for whatever reason it isn\u0027t - then not crashing is definitely the better thing to do.",
+      "revId": "9f1b78aa3a261fbf195a07f43cc21fcebe457041",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "efd83454_00b0cf08",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-11-19T12:48:20Z",
+      "side": 1,
+      "message": "I think we can still keep this. I\u0027ve noticed people having to wait on the stock SetupWizard countless times, and also just being stuck due to some reason. This avoids that, and I think that\u0027s good.\n\nWe could maybe add a timeout instead (and not allow skipping right away on non debug) - this was considered in the past too.",
+      "revId": "9f1b78aa3a261fbf195a07f43cc21fcebe457041",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "34a473d0_2565a052",
+        "filename": "src/org/calyxos/setupwizard/apps/AppInstallerService.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-11-19T12:48:20Z",
+      "side": 1,
+      "message": "This is what needs revisiting.",
+      "revId": "9f1b78aa3a261fbf195a07f43cc21fcebe457041",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aae35697_8dcccd51",
+        "filename": "src/org/calyxos/setupwizard/apps/FDroidRepo.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-11-19T12:48:20Z",
+      "side": 1,
+      "message": "Once this is fixed, I think icon sizes should look ok on all devices.\n\nXML would be best once we figure out https://github.com/CalyxOS/vendor_calyx/blob/android11/scripts/fdroid-repo.sh#L20",
+      "revId": "9f1b78aa3a261fbf195a07f43cc21fcebe457041",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    }
+  ]
+}
