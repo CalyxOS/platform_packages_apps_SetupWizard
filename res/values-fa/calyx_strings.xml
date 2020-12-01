@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="intro_restore_button">بازگرداندن برنامه ها و داده ها</string>
+    <string name="intro_restore_subtitle">اگر از آخرین تلفن Calyx خود نسخه پشتیبان تهیه کرده اید، می توانید آن را در اینجا بازیابی کنید.</string>
+    <string name="intro_restore_title">بازگرداندن برنامه ها و داده ها</string>
+    <string name="microg_warning">توجه: اگر اکنون این مورد را فعال کنید ، تلفن شما برای ارسال داده به گوگل تنظیم می شود. بعداً می توانید در تنظیمات مایکروجی(microG) این مورد را تغییر دهید.</string>
+    <string name="microg_switch_label">سازگاری خدمات گوگل را فعال کنید</string>
+    <string name="microg_description">این اجازه می دهد تا برنامه های مانند <b> نقشه های گوگل، یوتیوب و خدمات به اشتراک گذاری سوار</b> بر روی کالیکس او اس اجرا شوند. اگر قصد ندارید برنامه هایی را که به سرویس های گوگل نیاز دارند، اجرا کنید این گزینه را غیرفعال کنید. بعداً نمی توانید آن را فعال کنید.</string>
+    <string name="microg_title">خدمات گوگل</string>
+    <string name="waiting_for_apps">لطفاً منتظر بمانید تا ما آماده سازی دستگاه شما را به پایان برسانیم.</string>
+    <string name="install_apps_select_all">همه برنامه های زیرین</string>
+    <string name="install_apps_subtitle"><b>برنامه های اضافی را مرور کنید.</b> همچنین می توانید بعداً آنها را نصب کنید.</string>
+    <string name="install_apps_title">برنامه های بیشتر</string>
+</resources>
