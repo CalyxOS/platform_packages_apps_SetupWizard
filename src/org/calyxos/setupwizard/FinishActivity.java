@@ -30,7 +30,9 @@ import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.widget.ImageView;
 import com.google.android.setupcompat.util.WizardManagerHelper;
+
 import org.calyxos.setupwizard.util.EnableAccessibilityController;
+import org.calyxos.setupwizard.util.SetupWizardUtils;
 
 import static android.os.Binder.getCallingUserHandle;
 import static org.calyxos.setupwizard.Manifest.permission.FINISH_SETUP;
