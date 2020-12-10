@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "acf1288b_ec36f4e7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-12-10T01:56:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e28c691_09805cd0",
+      "revId": "9f1b78aa3a261fbf195a07f43cc21fcebe457041",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "efd83454_00b0cf08",
         "filename": "/COMMIT_MSG",
         "patchSetId": 4
@@ -67,6 +85,24 @@
       "revId": "9f1b78aa3a261fbf195a07f43cc21fcebe457041",
       "serverId": "35266860-6252-469c-a67d-185064479fc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "455ebb92_089adddc",
+        "filename": "src/org/calyxos/setupwizard/apps/FDroidRepo.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-12-10T01:56:20Z",
+      "side": 1,
+      "message": "Finally! https://review.calyxos.org/c/CalyxOS/platform_packages_apps_SetupWizard/+/1504",
+      "parentUuid": "aae35697_8dcccd51",
+      "revId": "9f1b78aa3a261fbf195a07f43cc21fcebe457041",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": false
     }
   ]
 }
