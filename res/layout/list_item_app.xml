@@ -43,7 +43,7 @@
                 android:id="@+id/icon"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:scaleType="centerInside"
+                android:scaleType="fitCenter"
                 tools:ignore="ContentDescription"
                 tools:src="@drawable/ic_launcher_background" />
         </LinearLayout>

@@ -93,7 +93,6 @@ public class FDroidRepo {
             }
 
             String iconPath = app.getString("icon");
-            // TODO: Avoid using hardcoded density
             Drawable icon = Drawable.createFromPath(path + "/icons-640/" + iconPath);
             CharSequence name = app.getString("name");
             String packageName = app.getString("packageName");
