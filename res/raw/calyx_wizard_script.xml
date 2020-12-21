@@ -27,7 +27,16 @@
     <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_WELCOME;end" id="welcome">
         <result wizard:action="locale" />
     </WizardAction>
+
     <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_LOCALE;end" id="locale">
+        <result wizard:action="bootloader" />
+    </WizardAction>
+
+    <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_BOOTLOADER_WARNING;end" id="bootloader">
+        <result wizard:action="reboot" />
+    </WizardAction>
+
+    <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_REBOOT_BOOTLOADER;end" id="reboot">
         <result wizard:action="datetime" />
     </WizardAction>
 
