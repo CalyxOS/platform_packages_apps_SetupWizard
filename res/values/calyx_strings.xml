@@ -46,4 +46,9 @@
     <!-- eSIM setup -->
     <string name="euicc_summary">You can also add an eSIM to your device.</string>
     <string name="setup_euicc">Setup eSIM</string>
+
+    <!-- Bootloader Lock Status -->
+    <string name="bootloader_warning_title">Bootloader lock warning</string>
+    <string name="bootloader_warning_summary">This device\'s bootloader is currently unlocked. Please lock the bootloader from a computer. Visit https://calyxos.org/oemlock for more info.</string>
+    <string name="reboot">Reboot</string>
 </resources>

@@ -44,6 +44,7 @@ import android.hardware.face.FaceManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.net.ConnectivityManager;
 import android.os.Binder;
+import android.os.Build;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings;
@@ -55,6 +56,7 @@ import android.util.Log;
 
 import org.lineageos.setupwizard.BiometricActivity;
 import org.lineageos.setupwizard.BluetoothSetupActivity;
+import org.lineageos.setupwizard.BootloaderWarningActivity;
 import org.lineageos.setupwizard.NetworkSetupActivity;
 import org.lineageos.setupwizard.SetupWizardApp;
 import org.lineageos.setupwizard.SimMissingActivity;
@@ -296,6 +298,9 @@ public class SetupWizardUtils {
         }
         if ((!hasWifi(context) && !hasTelephony(context)) || isEthernetConnected(context)) {
             disableComponent(context, NetworkSetupActivity.class);
+        }
+        if (!isBootloaderUnlocked(context) || Build.IS_DEBUGGABLE) {
+            disableComponent(context, BootloaderWarningActivity.class);
         }
     }
 
