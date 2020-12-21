@@ -46,19 +46,23 @@ import android.content.pm.ServiceInfo;
 import android.hardware.face.FaceManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Binder;
+import android.os.Build;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.net.ConnectivityManager;
 import android.provider.Settings;
+import android.service.oemlock.OemLockManager;
 import android.telephony.ServiceState;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
 import org.calyxos.setupwizard.BluetoothSetupActivity;
+import org.calyxos.setupwizard.BootloaderWarningActivity;
 import org.calyxos.setupwizard.ChooseDataSimActivity;
 import org.calyxos.setupwizard.BiometricActivity;
 import org.calyxos.setupwizard.MobileDataActivity;
+import org.calyxos.setupwizard.RebootBootloaderActivity;
 import org.calyxos.setupwizard.SetupWizardApp;
 import org.calyxos.setupwizard.SimMissingActivity;
 import org.calyxos.setupwizard.WifiSetupActivity;
@@ -253,6 +257,11 @@ public class SetupWizardUtils {
         }
     }
 
+    public static boolean hasUnlockedBootloader(Context context) {
+        OemLockManager oemLockManager = context.getSystemService(OemLockManager.class);
+        return oemLockManager.isDeviceOemUnlocked();
+    }
+
     public static boolean simMissing() {
         return PhoneMonitor.getInstance().simMissing();
     }
@@ -278,6 +287,10 @@ public class SetupWizardUtils {
         if (!SetupWizardUtils.hasWifi(context) ||
             isEthernetConnected(context)) {
             disableComponent(context, WifiSetupActivity.class);
+        }
+        if (!hasUnlockedBootloader(context)) {
+            disableComponent(context, BootloaderWarningActivity.class);
+            disableComponent(context, RebootBootloaderActivity.class);
         }
     }
 

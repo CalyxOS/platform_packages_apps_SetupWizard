@@ -27,9 +27,16 @@
     <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_WELCOME;end" id="welcome">
         <result wizard:action="locale" />
     </WizardAction>
+
     <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_LOCALE;end" id="locale">
-        <result wizard:action="datetime" />
+        <result wizard:action="bootloader" />
     </WizardAction>
+
+    <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_BOOTLOADER_WARNING;end" id="bootloader">
+        <result wizard:action="reboot" />
+    </WizardAction>
+
+    <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_REBOOT_BOOTLOADER;end" id="reboot"/>
 
     <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_DATETIME;end" id="datetime">
         <result wizard:action="wifi_setup" />
