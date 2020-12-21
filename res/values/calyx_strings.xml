@@ -30,4 +30,10 @@
 
     <!-- Backup Restore -->
     <string name="calyx_intro_restore_subtitle">If you have a backup from your last Calyx phone, you can restore it here.</string>
+
+    <!-- Bootloader Lock Status -->
+    <string name="bootloader_warning_title">Bootloader warning</string>
+    <string name="bootloader_warning_summary">This device\'s bootloader is currently unlocked. Please lock the bootloader</string>
+
+    <string name="reboot">Reboot</string>
 </resources>

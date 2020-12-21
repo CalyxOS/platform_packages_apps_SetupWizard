@@ -50,12 +50,14 @@ import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.net.ConnectivityManager;
 import android.provider.Settings;
+import android.service.oemlock.OemLockManager;
 import android.telephony.ServiceState;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
 import org.calyxos.setupwizard.BluetoothSetupActivity;
+import org.calyxos.setupwizard.BootloaderWarningActivity;
 import org.calyxos.setupwizard.ChooseDataSimActivity;
 import org.calyxos.setupwizard.BiometricActivity;
 import org.calyxos.setupwizard.MobileDataActivity;
@@ -253,6 +255,11 @@ public class SetupWizardUtils {
         }
     }
 
+    public static boolean hasUnlockedBootloader(Context context) {
+        OemLockManager oemLockManager = context.getSystemService(OemLockManager.class);
+        return oemLockManager.isDeviceOemUnlocked();
+    }
+
     public static boolean simMissing() {
         return PhoneMonitor.getInstance().simMissing();
     }
@@ -277,6 +284,9 @@ public class SetupWizardUtils {
         if (!SetupWizardUtils.hasWifi(context) ||
             isEthernetConnected(context)) {
             disableComponent(context, WifiSetupActivity.class);
+        }
+        if (!hasUnlockedBootloader(context)) {
+            disableComponent(context, BootloaderWarningActivity.class);
         }
     }
 
