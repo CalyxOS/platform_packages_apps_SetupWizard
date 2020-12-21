@@ -55,6 +55,7 @@ import android.util.Log;
 
 import org.lineageos.setupwizard.BiometricActivity;
 import org.lineageos.setupwizard.BluetoothSetupActivity;
+import org.lineageos.setupwizard.BootloaderWarningActivity;
 import org.lineageos.setupwizard.NetworkSetupActivity;
 import org.lineageos.setupwizard.SetupWizardApp;
 import org.lineageos.setupwizard.SimMissingActivity;
@@ -289,6 +290,9 @@ public class SetupWizardUtils {
         }
         if ((!hasWifi(context) && !hasTelephony(context)) || isEthernetConnected(context)) {
             disableComponent(context, NetworkSetupActivity.class);
+        }
+        if (!isBootloaderUnlocked(context)) {
+            disableComponent(context, BootloaderWarningActivity.class);
         }
     }
 
