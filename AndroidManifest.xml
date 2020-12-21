@@ -43,6 +43,7 @@
     <uses-permission android:name="android.permission.BACKUP" />
     <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS" />
     <uses-permission android:name="android.permission.MASTER_CLEAR" />
+    <uses-permission android:name="android.permission.REBOOT" />
     <uses-permission android:name="calyxos.permission.FINISH_SETUP" />
 
     <permission
@@ -131,6 +132,18 @@
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="org.calyxos.setupwizard.CALYX_LOCALE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".BootloaderWarningActivity"
+                  android:label="@string/activity_label_empty"
+                  android:excludeFromRecents="true"
+                  android:configChanges="mcc|mnc"
+                  android:immersive="true"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="org.calyxos.setupwizard.CALYX_BOOTLOADER_WARNING" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
