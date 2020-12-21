@@ -46,4 +46,9 @@
     <string name="oemunlock_na" translatable="false">OEM Unlocking: Not Applicable</string>
     <string name="oemunlock_notallowed" translatable="false">OEM Unlocking: Not Allowed</string>
     <string name="factory_reset" translatable="false">Factory Reset and Power off</string>
+
+    <!-- Bootloader Lock Status -->
+    <string name="bootloader_warning_title">Bootloader warning</string>
+    <string name="bootloader_warning_summary">This device\'s bootloader is currently unlocked. Please lock the bootloader</string>
+    <string name="reboot">Reboot</string>
 </resources>

@@ -57,6 +57,7 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 
 import org.calyxos.setupwizard.BluetoothSetupActivity;
+import org.calyxos.setupwizard.BootloaderWarningActivity;
 import org.calyxos.setupwizard.ChooseDataSimActivity;
 import org.calyxos.setupwizard.BiometricActivity;
 import org.calyxos.setupwizard.MobileDataActivity;
@@ -290,6 +291,9 @@ public class SetupWizardUtils {
         if (!SetupWizardUtils.hasWifi(context) ||
             isEthernetConnected(context)) {
             disableComponent(context, WifiSetupActivity.class);
+        }
+        if (!isBootloaderUnlocked(context)) {
+            disableComponent(context, BootloaderWarningActivity.class);
         }
     }
 
