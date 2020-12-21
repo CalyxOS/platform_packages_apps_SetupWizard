@@ -12,9 +12,14 @@
     <string name="notallowed">Not Allowed</string>
     <string name="set">Set</string>
     <string name="unset">Unset</string>
+    <string name="reboot">Reboot</string>
 
     <!-- Device information -->
     <string name="device_info_bootloader">Bootloader</string>
     <string name="device_info_frp">Factory reset protection</string>
     <string name="device_info_oemunlock">OEM unlocking</string>
+
+    <!-- Bootloader Lock Status -->
+    <string name="bootloader_warning_title">Bootloader lock warning</string>
+    <string name="bootloader_warning_summary">This device\'s bootloader is currently unlocked. Please lock the bootloader from a computer. Visit <a href="https://calyxos.org/lock">calyxos.org/lock</a> for more info.</string>
 </resources>
