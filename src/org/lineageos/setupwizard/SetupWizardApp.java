@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.provider.Settings;
+import android.service.oemlock.OemLockManager;
 import android.util.Log;
 
 import org.lineageos.setupwizard.util.SetupWizardUtils;
@@ -71,6 +72,12 @@ public class SetupWizardApp extends Application {
         SetupWizardUtils.disableComponentsForMissingFeatures(this);
         sStatusBarManager = SetupWizardUtils.disableStatusBar(this);
         mHandler.postDelayed(mRadioTimeoutRunnable, SetupWizardApp.RADIO_READY_TIMEOUT);
+        // If the bootloader is locked, and OEM unlocking is allowed, turn it off
+        if (SetupWizardUtils.isOwner()
+                && !SetupWizardUtils.isBootloaderUnlocked(this)
+                && SetupWizardUtils.isOemunlockAllowed(this)) {
+            getSystemService(OemLockManager.class).setOemUnlockAllowedByUser(false);
+        }
         if (SetupWizardUtils.hasGMS(this)) {
             SetupWizardUtils.disableHome(this);
             if (SetupWizardUtils.isOwner()) {
