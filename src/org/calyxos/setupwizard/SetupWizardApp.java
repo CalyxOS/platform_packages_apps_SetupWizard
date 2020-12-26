@@ -24,6 +24,7 @@ import android.content.ComponentName;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
+import android.service.oemlock.OemLockManager;
 import android.util.Log;
 
 import org.calyxos.setupwizard.util.NetworkMonitor;
@@ -103,6 +104,9 @@ public class SetupWizardApp extends Application {
         SetupWizardUtils.disableComponentsForMissingFeatures(this);
         SetupWizardUtils.setMobileDataEnabled(this, false);
         mHandler.postDelayed(mRadioTimeoutRunnable, SetupWizardApp.RADIO_READY_TIMEOUT);
+        if (SetupWizardUtils.isOwner()) {
+            getSystemService(OemLockManager.class).setOemUnlockAllowedByUser(false);
+        }
     }
 
     public boolean isRadioReady() {
