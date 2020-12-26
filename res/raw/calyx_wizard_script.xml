@@ -33,6 +33,10 @@
     </WizardAction>
 
     <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_BOOTLOADER_WARNING;end" id="bootloader">
+        <result wizard:action="oem_lock" />
+    </WizardAction>
+
+    <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_OEM_LOCK;end" id="oem_lock">
         <result wizard:action="datetime" />
     </WizardAction>
 
