@@ -61,6 +61,7 @@ import org.calyxos.setupwizard.BootloaderWarningActivity;
 import org.calyxos.setupwizard.ChooseDataSimActivity;
 import org.calyxos.setupwizard.BiometricActivity;
 import org.calyxos.setupwizard.MobileDataActivity;
+import org.calyxos.setupwizard.OemLockActivity;
 import org.calyxos.setupwizard.SetupWizardApp;
 import org.calyxos.setupwizard.SimMissingActivity;
 import org.calyxos.setupwizard.WifiSetupActivity;
@@ -288,6 +289,8 @@ public class SetupWizardUtils {
         }
         if (!hasUnlockedBootloader(context)) {
             disableComponent(context, BootloaderWarningActivity.class);
+        } else {
+            disableComponent(context, OemLockActivity.class);
         }
     }
 
