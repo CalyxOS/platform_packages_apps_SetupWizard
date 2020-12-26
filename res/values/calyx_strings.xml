@@ -35,5 +35,9 @@
     <string name="bootloader_warning_title">Bootloader warning</string>
     <string name="bootloader_warning_summary">This device\'s bootloader is currently unlocked. Please lock the bootloader</string>
 
+    <!-- OEM Lock -->
+    <string name="oem_unlock_title">OEM Unlocking</string>
+    <string name="oem_unlock_summary">Allow the bootloader to be unlocked</string>
+
     <string name="reboot">Reboot</string>
 </resources>
