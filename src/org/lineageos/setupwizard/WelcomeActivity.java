@@ -160,6 +160,8 @@ public class WelcomeActivity extends BaseSetupWizardActivity {
             bootloaderStatus.setTextColor(Color.GREEN);
             if (oemunlockAllowed) {
                 // OEM Unlocking allowed, bad.
+                // Should never reach this since we now disable
+                // OEM Unlocking in SetupWizardApp.onCreate()
                 oemunlockStatus.setText(R.string.oemunlock_allowed);
                 oemunlockStatus.setTextColor(Color.RED);
             } else {
