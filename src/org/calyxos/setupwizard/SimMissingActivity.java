@@ -17,7 +17,12 @@
 
 package org.calyxos.setupwizard;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.service.euicc.EuiccService;
+import android.telephony.euicc.EuiccManager;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.google.android.setupcompat.util.ResultCodes;
@@ -25,7 +30,13 @@ import com.google.android.setupcompat.util.ResultCodes;
 import org.calyxos.setupwizard.util.PhoneMonitor;
 import org.calyxos.setupwizard.util.SetupWizardUtils;
 
-public class SimMissingActivity extends BaseSetupWizardActivity {
+import static android.service.euicc.EuiccService.ACTION_PROVISION_EMBEDDED_SUBSCRIPTION;
+import static android.telephony.euicc.EuiccManager.EXTRA_FORCE_PROVISION;
+import static com.google.android.setupcompat.util.WizardManagerHelper.EXTRA_IS_FIRST_RUN;
+import static com.google.android.setupcompat.util.WizardManagerHelper.EXTRA_IS_SETUP_FLOW;
+import static org.calyxos.setupwizard.SetupWizardApp.REQUEST_CODE_SETUP_EUICC;
+
+public class SimMissingActivity extends SubBaseActivity {
 
     public static final String TAG = SimMissingActivity.class.getSimpleName();
 
@@ -45,7 +56,7 @@ public class SimMissingActivity extends BaseSetupWizardActivity {
         setNextText(R.string.skip);
         final int simLocation = getResources().getInteger(
                 R.integer.sim_image_type);
-        ImageView simLogo = ((ImageView)findViewById(R.id.sim_slot_image));
+        ImageView simLogo = ((ImageView) findViewById(R.id.sim_slot_image));
         switch (simLocation) {
             case SIM_SIDE:
                 simLogo.setImageResource(R.drawable.sim_side);
@@ -56,6 +67,17 @@ public class SimMissingActivity extends BaseSetupWizardActivity {
             default:
                 simLogo.setImageResource(R.drawable.sim);
                 simLogo.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+        }
+    }
+
+    @Override
+    protected void onStartSubactivity() {
+        setNextAllowed(true);
+        EuiccManager euiccManager = (EuiccManager) getSystemService(Context.EUICC_SERVICE);
+        if (euiccManager.isEnabled()) {
+            findViewById(R.id.setup_euicc).setOnClickListener(v -> launchEuiccSetup());
+        } else {
+            findViewById(R.id.setup_euicc).setVisibility(View.GONE);
         }
     }
 
@@ -90,6 +112,19 @@ public class SimMissingActivity extends BaseSetupWizardActivity {
     @Override
     protected int getIconResId() {
         return R.drawable.ic_sim;
+    }
+
+    private void launchEuiccSetup() {
+        Intent intent = new Intent(ACTION_PROVISION_EMBEDDED_SUBSCRIPTION);
+        intent.putExtra(EXTRA_FORCE_PROVISION, true);
+        intent.putExtra(EXTRA_IS_FIRST_RUN, true);
+        intent.putExtra(EXTRA_IS_SETUP_FLOW, true);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startSubactivity(intent, REQUEST_CODE_SETUP_EUICC);
+        } else {
+            Log.d(TAG, "No activity available to handle " + intent.getAction());
+        }
+
     }
 
 }
