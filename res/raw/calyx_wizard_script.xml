@@ -45,6 +45,10 @@
     </WizardAction>
 
     <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_WIFI_SETUP;end" id="wifi_setup">
+        <result wizard:action="euicc_setup" />
+    </WizardAction>
+
+    <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_EUICC_SETUP;end" id="euicc_setup">
         <result wizard:action="sim_missing" />
     </WizardAction>
 
