@@ -40,4 +40,6 @@
     <string name="oem_unlock_summary">Allow the bootloader to be unlocked</string>
 
     <string name="reboot">Reboot</string>
+
+    <string name="setup_euicc">Setup eSIM</string>
 </resources>
