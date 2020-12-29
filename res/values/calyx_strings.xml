@@ -30,4 +30,8 @@
 
     <!-- Backup Restore -->
     <string name="calyx_intro_restore_subtitle">If you have a backup from your last Calyx phone, you can restore it here.</string>
+
+    <!-- eSIM setup -->
+    <string name="euicc_summary">You can also add an eSIM to your device.</string>
+    <string name="setup_euicc">Setup eSIM</string>
 </resources>
