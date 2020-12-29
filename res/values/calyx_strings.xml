@@ -42,4 +42,8 @@
     <string name="oemunlock_na" translatable="false">OEM unlocking: Not Applicable</string>
     <string name="oemunlock_notallowed" translatable="false">OEM unlocking: Not Allowed</string>
     <string name="factory_reset" translatable="false">Factory reset and power off</string>
+
+    <!-- eSIM setup -->
+    <string name="euicc_summary">You can also add an eSIM to your device.</string>
+    <string name="setup_euicc">Setup eSIM</string>
 </resources>
