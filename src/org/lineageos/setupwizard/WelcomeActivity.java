@@ -10,17 +10,24 @@ import static org.lineageos.setupwizard.SetupWizardApp.ACTION_ACCESSIBILITY_SETT
 import static org.lineageos.setupwizard.SetupWizardApp.ACTION_EMERGENCY_DIAL;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.setupcompat.template.FooterButtonStyleUtils;
 import com.google.android.setupcompat.util.SystemBarHelper;
+import com.google.android.setupdesign.gesture.ConsecutiveTapsGestureDetector;
 
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
+import java.util.concurrent.TimeUnit;
+
 public class WelcomeActivity extends SubBaseActivity {
+
+    private ConsecutiveTapsGestureDetector mConsecutiveTapsGestureDetector;
 
     @Override
     protected void onStartSubactivity() {
@@ -57,6 +64,27 @@ public class WelcomeActivity extends SubBaseActivity {
             welcomeTitle.setText(getString(R.string.setup_welcome_message,
                     getString(R.string.os_name)));
         }
+
+        if (Build.IS_DEBUGGABLE) {
+            mConsecutiveTapsGestureDetector = new ConsecutiveTapsGestureDetector(
+                    (ConsecutiveTapsGestureDetector.OnConsecutiveTapsListener)
+                            numOfConsecutiveTaps -> {
+                                if (numOfConsecutiveTaps == 4) {
+                                    Toast.makeText(WelcomeActivity.this, R.string.skip_setupwizard,
+                                            Toast.LENGTH_LONG).show();
+                                    SetupWizardUtils.finishSetupWizard(WelcomeActivity.this);
+                                }
+                            }, findViewById(R.id.setup_wizard_layout),
+                    (int) TimeUnit.SECONDS.toMillis(1));
+        }
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        if (Build.IS_DEBUGGABLE) {
+            mConsecutiveTapsGestureDetector.onTouchEvent(ev);
+        }
+        return super.dispatchTouchEvent(ev);
     }
 
     @Override
