@@ -17,17 +17,28 @@
 
 package org.lineageos.setupwizard;
 
+import android.graphics.Rect;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.setupcompat.util.SystemBarHelper;
+
+import org.lineageos.setupwizard.util.SetupWizardUtils;
+
+import java.util.concurrent.TimeUnit;
 
 public class WelcomeActivity extends BaseSetupWizardActivity {
 
     public static final String TAG = WelcomeActivity.class.getSimpleName();
 
     private View mRootView;
+    private GestureDetector mGestureDetector;
+    private MotionEvent previousTapEvent;
+    private int consecutiveTaps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +52,47 @@ public class WelcomeActivity extends BaseSetupWizardActivity {
                 .setOnClickListener(view -> startEmergencyDialer());
         findViewById(R.id.launch_accessibility)
                 .setOnClickListener(view -> startAccessibilitySettings());
+        mGestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
+            @Override
+            public boolean onDown(MotionEvent e) {
+                return true;
+            }
+
+            @Override
+            public boolean onSingleTapUp(MotionEvent e) {
+                Rect viewRect = new Rect();
+                int[] leftTop = new int[2];
+                mRootView.getLocationOnScreen(leftTop);
+                viewRect.set(
+                        leftTop[0], leftTop[1], leftTop[0] + mRootView.getWidth(), leftTop[1]
+                        + mRootView.getHeight());
+                if (viewRect.contains((int) e.getX(), (int) e.getY())) {
+                    if (isConsecutiveTap(e)) {
+                        consecutiveTaps++;
+                    } else {
+                        consecutiveTaps = 1;
+                    }
+                    if (consecutiveTaps == 4) {
+                        Toast.makeText(WelcomeActivity.this, R.string.skip_setupwizard,
+                                Toast.LENGTH_LONG).show();
+                        SetupWizardUtils.finishSetupWizard(WelcomeActivity.this);
+                    }
+                } else {
+                    // Touch outside the target view. Reset counter.
+                    consecutiveTaps = 0;
+                }
+
+                if (previousTapEvent != null) {
+                    previousTapEvent.recycle();
+                }
+                previousTapEvent = MotionEvent.obtain(e);
+                return false;
+            }
+        });
+        if (Build.IS_DEBUGGABLE) {
+            mRootView.setOnTouchListener((v, event) ->
+                    mGestureDetector.onTouchEvent(event));
+        }
     }
 
     @Override
@@ -50,5 +102,18 @@ public class WelcomeActivity extends BaseSetupWizardActivity {
     @Override
     protected int getLayoutResId() {
         return R.layout.welcome_activity;
+    }
+
+    private boolean isConsecutiveTap(MotionEvent currentTapEvent) {
+        if (previousTapEvent == null) {
+            return false;
+        }
+
+        double deltaX = previousTapEvent.getX() - currentTapEvent.getX();
+        double deltaY = previousTapEvent.getY() - currentTapEvent.getY();
+        long deltaTime = currentTapEvent.getEventTime() - previousTapEvent.getEventTime();
+        return (deltaX * deltaX + deltaY * deltaY >=
+                (mRootView.getWidth() * mRootView.getWidth()) / 2
+                && deltaTime < TimeUnit.SECONDS.toMillis(1));
     }
 }
