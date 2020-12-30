@@ -28,7 +28,7 @@ import org.lineageos.setupwizard.util.SetupWizardUtils
 class WelcomeActivity : SubBaseActivity() {
 
     private val isSkipAvailable: Boolean
-        get() = Build.TYPE == "eng"
+        get() = Build.IS_DEBUGGABLE
 
     override fun onStartSubactivity() {
         // no-op
