@@ -49,12 +49,15 @@ import static android.content.pm.PackageManager.INSTALL_FULL_APP;
 import static android.content.pm.PackageParser.PackageParserException;
 import static android.Manifest.permission.ACCESS_BACKGROUND_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.READ_PHONE_STATE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
 class PackageInstaller28 {
 
     private static final String TAG = PackageInstaller28.class.getSimpleName();
     private static final String PRIV_EXT_PACKAGE_ID = "org.fdroid.fdroid.privileged";
+    private static final String AURORA_STORE_PACKAGE_ID = "com.aurora.store";
     private static final String BROADCAST_ACTION = "com.android.packageinstaller.ACTION_INSTALL_COMMIT";
     private static final int BUFFER_SIZE = 1024 * 1024;
 
@@ -86,6 +89,12 @@ class PackageInstaller28 {
             params.setAppPackageName(pkg.packageName);
             params.setInstallLocation(pkg.installLocation);
             params.setSize(PackageHelper.calculateInstalledSize(pkg, false, params.abiOverride));
+            if (pkg.packageName.equals(AURORA_STORE_PACKAGE_ID)) {
+                Set<String> storagePermissions = new ArraySet<>();
+                storagePermissions.add(READ_EXTERNAL_STORAGE);
+                storagePermissions.add(WRITE_EXTERNAL_STORAGE);
+                params.setWhitelistedRestrictedPermissions(storagePermissions);
+            }
         } catch (PackageParserException e) {
             Log.e(TAG, "Cannot parse package " + packageFile + ". Assuming defaults.");
             Log.e(TAG, "Cannot calculate installed size " + packageFile + ". Try only apk size.");
