@@ -33,6 +33,7 @@ public class MicroGActivity extends BaseSetupWizardActivity {
     public static final String TAG = MicroGActivity.class.getSimpleName();
     private static final String[] MICROG_PACKAGES = new String[]{
             "com.google.android.gms",
+            "com.google.android.gsf",
             "com.android.vending",
             "org.fitchfamily.android.dejavu",
             "org.microg.nlp.backend.ichnaea",
