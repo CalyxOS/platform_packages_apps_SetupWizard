@@ -92,13 +92,18 @@ public class WaitInstallAppsActivity extends BaseSetupWizardActivity {
         return R.layout.wait_install_apps_activity;
     }
 
+    @Override
+    public void onNextPressed() {
+        getPackageManager().setDefaultBrowserPackageNameAsUser(DEFAULT_BROWSER, getUserId());
+        super.onNextPressed();
+    }
+
     private void afterAppsInstalled() {
         if (mProgressBar.isShown()) {
             mProgressBar.startAnimation(loadAnimation(this, R.anim.translucent_exit));
             mProgressBar.setVisibility(INVISIBLE);
             mWaitingForAppsText.setVisibility(INVISIBLE);
         }
-        getPackageManager().setDefaultBrowserPackageNameAsUser(DEFAULT_BROWSER, getUserId());
         onNextPressed();
     }
 
