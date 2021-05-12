@@ -27,6 +27,8 @@ import android.net.NetworkInfo;
 import android.os.Handler;
 import android.util.Log;
 
+import org.calyxos.setupwizard.SetupWizardApp;
+
 public class NetworkMonitor {
 
     public static final String TAG = NetworkMonitor.class.getSimpleName();
@@ -92,6 +94,8 @@ public class NetworkMonitor {
         }
         mNetworkConnected = true;
         mNetworkInfo = ni;
+
+        ((SetupWizardApp) mContext).scheduleIndexUpdateJob();
     }
 
     private void onNetworkDisconnected() {
