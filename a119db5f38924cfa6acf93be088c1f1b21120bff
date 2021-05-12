@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "10dea27a_c6b7fe5e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-05-12T18:40:23Z",
+      "side": 1,
+      "message": "The first line shouldn\u0027t be so long",
+      "revId": "a119db5f38924cfa6acf93be088c1f1b21120bff",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "18f2cd3e_2a043e78",
+        "filename": "src/org/calyxos/setupwizard/SetupWizardApp.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-05-12T18:40:23Z",
+      "side": 1,
+      "message": "This could be a constant with a comment to make it less of a magic number.",
+      "range": {
+        "startLine": 105,
+        "startChar": 83,
+        "endLine": 105,
+        "endChar": 91
+      },
+      "revId": "a119db5f38924cfa6acf93be088c1f1b21120bff",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    }
+  ]
+}
