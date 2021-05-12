@@ -85,6 +85,10 @@ public class SetupWizardApp extends Application {
     public static final List<String> PACKAGE_INSTALLERS =
             List.of(FDROID_PACKAGE, AURORA_STORE_PACKAGE);
 
+    public static final String FDROID_UPDATEJOBSERVICE_CLASS = "org.fdroid.fdroid.UpdateJobService";
+    // Must match F-Droid's UpdateService JOB_ID
+    public static final int FDROID_UPDATE_JOB_ID = 0xfedcba;
+
     public static final String NAVIGATION_OPTION_KEY = "navigation_option";
 
     public static final int REQUEST_CODE_SETUP_NETWORK = 0;
@@ -199,6 +203,20 @@ public class SetupWizardApp extends Application {
             } catch (Exception e) {
                 Log.e(TAG, "Failed to grant post notifications permission to " + packageName, e);
             }
+        }
+    }
+
+    public int scheduleIndexUpdateJob() {
+        Log.i(TAG, "Scheduling F-Droid index update...");
+        try {
+            return getSystemService(JobScheduler.class).scheduleAsPackage(new JobInfo.Builder(
+                    FDROID_UPDATE_JOB_ID,
+                    new ComponentName(FDROID_PACKAGE, FDROID_UPDATEJOBSERVICE_CLASS))
+                    .setOverrideDeadline(0)
+                    .build(), FDROID_PACKAGE, UserHandle.myUserId(), TAG);
+        } catch (IllegalArgumentException e) {
+            Log.w(TAG, "Could not schedule F-Droid index update (is it installed?)", e);
+            return -1;
         }
     }
 }
