@@ -18,9 +18,13 @@
 package org.lineageos.setupwizard;
 
 import android.app.Application;
+import android.app.job.JobInfo;
+import android.app.job.JobScheduler;
 import android.app.StatusBarManager;
+import android.content.ComponentName;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.UserHandle;
 import android.util.Log;
 
 import org.lineageos.setupwizard.util.NetworkMonitor;
@@ -63,8 +67,12 @@ public class SetupWizardApp extends Application {
 
     public static final String KEY_DETECT_CAPTIVE_PORTAL = "captive_portal_detection_enabled";
 
+    public static final String FDROID_PACKAGE = "org.fdroid.fdroid";
     public static final String FDROID_CATEGORY_DEFAULT = "Default";
     public static final String FDROID_CATEGORY_DEFAULT_BACKEND = "DefaultBackend";
+    public static final String FDROID_UPDATEJOBSERVICE_CLASS = ".UpdateJobService";
+    // Must match F-Droid's UpdateService JOB_ID
+    public static final int FDROID_UPDATE_JOB_ID = 0xfedcba;
     public static final String PACKAGENAMES = "packageNames";
 
     public static final int REQUEST_CODE_SETUP_NETWORK = 0;
@@ -98,6 +106,7 @@ public class SetupWizardApp extends Application {
         SetupWizardUtils.setMobileDataEnabled(this, false);
         sStatusBarManager = SetupWizardUtils.disableStatusBar(this);
         mHandler.postDelayed(mRadioTimeoutRunnable, SetupWizardApp.RADIO_READY_TIMEOUT);
+        scheduleIndexUpdateJob();
     }
 
     public static StatusBarManager getStatusBarManager() {
@@ -125,5 +134,13 @@ public class SetupWizardApp extends Application {
 
     public Bundle getSettingsBundle() {
         return mSettingsBundle;
+    }
+
+    public int scheduleIndexUpdateJob() {
+        return getSystemService(JobScheduler.class).scheduleAsPackage(new JobInfo.Builder(
+                FDROID_UPDATE_JOB_ID,
+                new ComponentName(FDROID_PACKAGE, FDROID_PACKAGE + FDROID_UPDATEJOBSERVICE_CLASS))
+                .setOverrideDeadline(0)
+                .build(), FDROID_PACKAGE, UserHandle.myUserId(), TAG);
     }
 }
