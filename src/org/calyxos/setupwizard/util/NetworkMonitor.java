@@ -18,13 +18,17 @@ package org.calyxos.setupwizard.util;
 
 import static org.calyxos.setupwizard.SetupWizardApp.LOGV;
 
+import android.app.job.JobInfo;
+import android.app.job.JobScheduler;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Handler;
+import android.os.UserHandle;
 import android.util.Log;
 
 public class NetworkMonitor {
@@ -92,6 +96,12 @@ public class NetworkMonitor {
         }
         mNetworkConnected = true;
         mNetworkInfo = ni;
+
+        mContext.getSystemService(JobScheduler.class).scheduleAsPackage(
+                new JobInfo.Builder(16702650,
+                        new ComponentName("org.fdroid.fdroid", "org.fdroid.fdroid.UpdateJobService"))
+                        .setOverrideDeadline(0)
+                        .build(), "org.fdroid.fdroid", UserHandle.myUserId(), TAG);
     }
 
     private void onNetworkDisconnected() {
