@@ -18,8 +18,12 @@
 package org.calyxos.setupwizard;
 
 import android.app.Application;
+import android.app.job.JobInfo;
+import android.app.job.JobScheduler;
+import android.content.ComponentName;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.UserHandle;
 import android.util.Log;
 
 import org.calyxos.setupwizard.util.NetworkMonitor;
@@ -63,8 +67,10 @@ public class SetupWizardApp extends Application {
 
     public static final String KEY_DETECT_CAPTIVE_PORTAL = "captive_portal_detection_enabled";
 
+    public static final String FDROID_PACKAGE = "org.fdroid.fdroid";
     public static final String FDROID_CATEGORY_DEFAULT = "Default";
     public static final String FDROID_CATEGORY_DEFAULT_BACKEND = "DefaultBackend";
+    public static final String FDROID_UPDATEJOBSERVICE_CLASS = ".UpdateJobService";
     public static final String PACKAGENAMES = "packageNames";
 
     public static final int REQUEST_CODE_SETUP_WIFI = 0;
@@ -95,6 +101,11 @@ public class SetupWizardApp extends Application {
         SetupWizardUtils.disableComponentsForMissingFeatures(this);
         SetupWizardUtils.setMobileDataEnabled(this, false);
         mHandler.postDelayed(mRadioTimeoutRunnable, SetupWizardApp.RADIO_READY_TIMEOUT);
+
+        getSystemService(JobScheduler.class).scheduleAsPackage(new JobInfo.Builder(16702650,
+                        new ComponentName(FDROID_PACKAGE, FDROID_PACKAGE + FDROID_UPDATEJOBSERVICE_CLASS))
+                        .setOverrideDeadline(0)
+                        .build(), FDROID_PACKAGE, UserHandle.myUserId(), TAG);
     }
 
     public boolean isRadioReady() {
