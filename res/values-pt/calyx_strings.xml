@@ -6,7 +6,7 @@
     <string name="microg_description">Isso permite que apps como <b>Google Maps, Youtube e serviços de compartilhamento de passeios</b> funcionem no CalyxOS. Desative esta opção se não planea executar apps que requerem os serviços do Google.</string>
     <string name="microg_title">Serviços Google</string>
     <string name="waiting_for_apps">Aguarde enquanto terminamos de configurar o seu aparelho.</string>
-    <string name="install_apps_select_all">Todos os seguintes apps</string>
+    <string name="install_apps_select_all">Todos as seguintes apps</string>
     <string name="install_apps_subtitle"><b>Avaliar as apps adicionais.</b> Também pode instalá-los mais tarde.</string>
     <string name="install_apps_title">Apps adicionais</string>
 </resources>
