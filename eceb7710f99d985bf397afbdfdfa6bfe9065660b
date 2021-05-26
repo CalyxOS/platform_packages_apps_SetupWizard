@@ -16,6 +16,29 @@
       "message": "This looks like a nice, clean solution!",
       "revId": "eceb7710f99d985bf397afbdfdfa6bfe9065660b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "167ad24e_319ae1f4",
+        "filename": "src/org/calyxos/setupwizard/SetupWizardApp.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2021-05-26T16:26:32Z",
+      "side": 1,
+      "message": "To make it easy to find the original value, this should use the same hex form, e.g.:\n\n    public static final int FDROID_UPDATE_JOB_ID \u003d 0xfedcba;\n\nI\u0027ll mark it in the fdroidclient source so that no one changes it.  Sucks that Android doesn\u0027t provide shared libs, ideally, SetupWizard could easily just read this value out of F-Droid.apk",
+      "range": {
+        "startLine": 75,
+        "startChar": 51,
+        "endLine": 75,
+        "endChar": 59
+      },
+      "revId": "eceb7710f99d985bf397afbdfdfa6bfe9065660b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
