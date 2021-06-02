@@ -39,6 +39,30 @@
       },
       "revId": "eceb7710f99d985bf397afbdfdfa6bfe9065660b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "001fd077_5f881d47",
+        "filename": "src/org/calyxos/setupwizard/SetupWizardApp.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-02T21:06:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "167ad24e_319ae1f4",
+      "range": {
+        "startLine": 75,
+        "startChar": 51,
+        "endLine": 75,
+        "endChar": 59
+      },
+      "revId": "eceb7710f99d985bf397afbdfdfa6bfe9065660b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
