@@ -205,6 +205,8 @@ public class SetupWizardUtils {
         disableComponentSets(context, GET_RECEIVERS | GET_SERVICES);
         // Note: The WizardManager component is disabled when the WizardManager exits,
         // which happens when FinishActivity calls nextAction while completing.
+
+        sendMicroGCheckInBroadcast(context);
     }
 
     public static boolean isSetupWizardComplete(Context context) {
@@ -346,6 +348,12 @@ public class SetupWizardUtils {
         } catch (PackageManager.NameNotFoundException ignored) {
         }
         return componentNames;
+    }
+
+    private static void sendMicroGCheckInBroadcast(Context context) {
+        Intent i = new Intent("android.server.checkin.CHECKIN");
+        i.setPackage(GMS_PACKAGE);
+        context.sendBroadcast(i);
     }
 
     public static final ComponentName sTvWifiSetupSettingsActivity =
