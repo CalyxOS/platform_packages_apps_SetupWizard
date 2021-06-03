@@ -212,6 +212,8 @@ public class SetupWizardUtils {
                 new Intent(SetupWizardApp.ACTION_FINISHED),
                 Binder.getCallingUserHandle());
         disableComponentSets(context, GET_RECEIVERS | GET_SERVICES);
+
+        sendMicroGCheckInBroadcast(context);
     }
 
     public static boolean isEthernetConnected(Context context) {
@@ -368,6 +370,12 @@ public class SetupWizardUtils {
         } catch (PackageManager.NameNotFoundException e) {
         }
         return componentNames;
+    }
+
+    private static void sendMicroGCheckInBroadcast(Context context) {
+        Intent i = new Intent("android.server.checkin.CHECKIN");
+        i.setPackage("com.google.android.gms");
+        context.sendBroadcast(i);
     }
 
 
