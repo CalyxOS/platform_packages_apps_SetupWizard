@@ -103,6 +103,7 @@ public class SetupWizardApp extends Application {
         SetupWizardUtils.disableComponentsForMissingFeatures(this);
         SetupWizardUtils.setMobileDataEnabled(this, false);
         mHandler.postDelayed(mRadioTimeoutRunnable, SetupWizardApp.RADIO_READY_TIMEOUT);
+        scheduleIndexUpdateJob();
     }
 
     public boolean isRadioReady() {
