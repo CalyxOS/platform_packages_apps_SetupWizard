@@ -101,7 +101,10 @@ public class FDroidRepo {
             if (icon == null) {
                 icon = Drawable.createFromPath(path + "/" + FALLBACK_ICON);
             }
-            CharSequence name = app.getString("name");
+            CharSequence name = "";
+            if (app.has("name")) {
+                name = app.getString("name");
+            }
             String packageName = app.getString("packageName");
             String apkName = apk.getString("apkName");
             String description = "";
