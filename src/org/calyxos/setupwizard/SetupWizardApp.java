@@ -67,7 +67,7 @@ public class SetupWizardApp extends Application {
 
     public static final String KEY_DETECT_CAPTIVE_PORTAL = "captive_portal_detection_enabled";
 
-    public static final String FDROID_PACKAGE = "org.fdroid.fdroid";
+    public static final String FDROID_PACKAGE = "org.calyxos.fdroid";
     public static final String FDROID_CATEGORY_DEFAULT = "Default";
     public static final String FDROID_CATEGORY_DEFAULT_BACKEND = "DefaultBackend";
     public static final String FDROID_UPDATEJOBSERVICE_CLASS = ".UpdateJobService";
