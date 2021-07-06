@@ -17,7 +17,27 @@
 -->
 
 <WizardScript xmlns:wizard="http://schemas.android.com/apk/res/com.google.android.setupwizard"
-              wizard:firstAction="finish">
+              wizard:firstAction="welcome">
+
+    <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_WELCOME;end" id="welcome">
+        <result wizard:action="microg" />
+    </WizardAction>
+
+    <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_MICROG;end" id="microg">
+        <result wizard:action="wifi_setup" />
+    </WizardAction>
+
+    <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_WIFI_SETUP;end" id="wifi_setup">
+        <result wizard:action="location_settings" />
+    </WizardAction>
+
+    <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_LOCATION_SETTINGS;end" id="location_settings">
+        <result wizard:action="restore" />
+    </WizardAction>
+
+    <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_RESTORE_BACKUP;end" id="restore">
+        <result wizard:action="finish" />
+    </WizardAction>
 
     <WizardAction wizard:uri="intent:#Intent;action=org.calyxos.setupwizard.CALYX_SETUP_COMPLETE;end" id="finish">
         <result wizard:action="exit" />
