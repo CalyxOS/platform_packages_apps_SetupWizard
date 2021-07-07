@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bcc32070_4c102e2d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-07T10:43:42Z",
+      "side": 1,
+      "message": "What would be nice here is if we can use a new _profile.\n\nSuW currently has an `isPrimaryUser()` that could be elaborated to have it respect profiles.",
+      "revId": "9e387eab22afb6eee38a472f765440eb45e4c3f0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
