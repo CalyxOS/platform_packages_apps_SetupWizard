@@ -24,6 +24,7 @@ import static org.calyxos.setupwizard.SetupWizardApp.LOGV;
 import android.annotation.Nullable;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.UserManager;
 import android.util.Log;
 
 import com.google.android.setupcompat.util.SystemBarHelper;
@@ -45,7 +46,9 @@ public class SetupWizardExitActivity extends BaseSetupWizardActivity {
         SetupWizardUtils.enableStatusBar(this);
         SetupWizardUtils.enableCaptivePortalDetection(this);
         PhoneMonitor.onSetupFinished();
-        launchHome();
+        if (!getSystemService(UserManager.class).isManagedProfile()) {
+            launchHome();
+        }
         finish();
         applyForwardTransition(TRANSITION_ID_FADE);
         Intent i = new Intent();
