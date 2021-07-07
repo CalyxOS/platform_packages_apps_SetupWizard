@@ -15,6 +15,10 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Managed profile -->
+    <string name="lineage_wizard_script_managed_profile_uri" translatable="false">android.resource://org.lineageos.setupwizard/raw/lineage_wizard_script_managed_profile</string>
+
+
     <!-- App install -->
     <string name="calyx_fdroid_repo_location" translatable="false">/product/fdroid/repo</string>
     <string name="install_apps_title">Additional apps</string>
