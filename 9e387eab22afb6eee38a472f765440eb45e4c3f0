@@ -34,6 +34,24 @@
       "parentUuid": "bcc32070_4c102e2d",
       "revId": "9e387eab22afb6eee38a472f765440eb45e4c3f0",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "db4db87e_f57b1af4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-07T12:19:17Z",
+      "side": 1,
+      "message": "Absolutely.\n\nEven if they\u0027re the same, it\u0027s good to have the separation if it\u0027s needed in the future.\n\nWe can set \"isProfile\" or something in _profile.xml and handle any code changes if needed for anything down the road.\n\nBesides, you saw my commit for _user, it enables install apps as well which didn\u0027t work here.",
+      "parentUuid": "1d062685_ff945f40",
+      "revId": "9e387eab22afb6eee38a472f765440eb45e4c3f0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
