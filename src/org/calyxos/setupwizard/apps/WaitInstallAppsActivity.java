@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -45,10 +46,19 @@ public class WaitInstallAppsActivity extends BaseSetupWizardActivity {
 
     private static final String DEFAULT_BROWSER = "com.duckduckgo.mobile.android";
 
+    private final Handler mHandler = new Handler();
+
     private ProgressBar mProgressBar;
     private TextView mWaitingForAppsText;
 
     private String path;
+
+    private final Runnable mDoneWaitingForApps = new Runnable() {
+        public void run() {
+            // Let's allow going next now
+            setNextAllowed(true);
+        }
+    };
 
     private final BroadcastReceiver packageReceiver = new BroadcastReceiver() {
         @Override
@@ -72,6 +82,7 @@ public class WaitInstallAppsActivity extends BaseSetupWizardActivity {
         if (!shouldWeWaitForApps()) {
             afterAppsInstalled();
         } else {
+            mHandler.postDelayed(mDoneWaitingForApps, 60 * 1000);
             // Wait for all apps to be installed before allowing the user to proceed
             setNextAllowed(false);
             setBackAllowed(false);
