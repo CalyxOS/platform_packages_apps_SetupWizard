@@ -72,6 +72,8 @@ public class WaitInstallAppsActivity extends BaseSetupWizardActivity {
         if (!shouldWeWaitForApps()) {
             afterAppsInstalled();
         } else {
+            // Wait for all apps to be installed before allowing the user to proceed
+            setNextAllowed(false);
             setBackAllowed(false);
             if (!mProgressBar.isShown()) {
                 mProgressBar.setVisibility(View.VISIBLE);
@@ -99,6 +101,7 @@ public class WaitInstallAppsActivity extends BaseSetupWizardActivity {
             mWaitingForAppsText.setVisibility(INVISIBLE);
         }
         getPackageManager().setDefaultBrowserPackageNameAsUser(DEFAULT_BROWSER, getUserId());
+        setNextAllowed(true);
         onNextPressed();
     }
 
