@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48509bd9_75f2378a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-14T23:11:45Z",
+      "side": 1,
+      "message": "Split for easier future merges.\n\nYou\u0027ll thank me later.",
+      "revId": "8343acd005d981d68d3f9a8cb62f3454d62b4870",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
