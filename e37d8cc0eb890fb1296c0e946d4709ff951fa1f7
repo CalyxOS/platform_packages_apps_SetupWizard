@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b66a280_91a22830",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-14T22:45:26Z",
+      "side": 1,
+      "message": "This isn\u0027t actually needed after topic:wait-install-apps , however it doesn\u0027t hurt either.",
+      "revId": "e37d8cc0eb890fb1296c0e946d4709ff951fa1f7",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
