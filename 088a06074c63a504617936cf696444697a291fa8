@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "527e2a82_79fd35b1",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 11
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-14T23:12:14Z",
+      "side": 1,
+      "message": "Perhaps we could mention that Wi-Fi is required for setup.",
+      "revId": "088a06074c63a504617936cf696444697a291fa8",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
