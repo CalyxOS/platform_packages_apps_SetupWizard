@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f97e4b95_921ecda8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-14T23:08:04Z",
+      "side": 1,
+      "message": "The reboot button is too close to skip.\n\nI\u0027ve hit it accidentally a bunch of times.\n\nBut I\u0027m not sure what would be better.",
+      "revId": "04571177ab5cc3ea9ebee4d749dec87328e282db",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
