@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e9e55c6_e3e4921c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-14T23:11:19Z",
+      "side": 1,
+      "message": "This should mostly be fine but I\u0027d still want to make sure this is absolutely ok in all cases.\n\nIf the device boots enough to finish setupwizard, it should be enough to re-enable oem locking from settings.\n\n",
+      "revId": "690272fb21d249bef89e2aca5de1987318645271",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
