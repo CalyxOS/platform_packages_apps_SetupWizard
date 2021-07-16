@@ -37,4 +37,12 @@
 
     <!-- Toast show on skipping Setupwizard -->
     <string name="skip_setupwizard">Skipping Setupwizard!</string>
+
+    <!-- Welcome: long press Brand Logo -->
+    <string name="bootloader_unlocked">Bootloader: Unlocked</string>
+    <string name="bootloader_locked">Bootloader: Locked</string>
+    <string name="oemunlock_allowed">OEM Unocking: Allowed</string>
+    <string name="oemunlock_na">OEM Unocking: Not Applicable</string>
+    <string name="oemunlock_notallowed">OEM Unocking: Not Allowed</string>
+    <string name="factory_reset">Factory Reset and Power off</string>
 </resources>
