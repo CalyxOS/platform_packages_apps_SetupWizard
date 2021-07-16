@@ -85,6 +85,56 @@
 
         </LinearLayout>
 
+        <FrameLayout android:id="@+id/page"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/content_margin_left"
+                    android:paddingEnd="@dimen/content_margin_left"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/bootloader_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/SudItemTitle.GlifDescription"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="@dimen/welcome_status_margin_bottom"
+                        android:paddingRight="@dimen/location_text_margin_right" />
+
+                    <TextView
+                        android:id="@+id/oemunlock_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/SudItemTitle.GlifDescription"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="@dimen/welcome_status_margin_bottom"
+                        android:paddingRight="@dimen/location_text_margin_right" />
+
+                    <Button
+                        android:id="@+id/factory_reset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="@string/factory_reset"
+                        style="@style/SudGlifButton.Primary" />
+
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+
         <LinearLayout
             style="@style/SudGlifButtonBar.Stackable"
             android:layout_width="fill_parent"

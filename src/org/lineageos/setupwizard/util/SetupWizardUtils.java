@@ -41,6 +41,7 @@ import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
+import android.service.oemlock.OemLockManager;
 import android.sysprop.TelephonyProperties;
 import android.telephony.ServiceState;
 import android.telephony.SubscriptionInfo;
@@ -251,6 +252,22 @@ public class SetupWizardUtils {
                     BiometricManager.BIOMETRIC_SUCCESS -> true;
             default -> false;
         };
+    }
+
+    public static boolean isBootloaderUnlocked(Context context) {
+        OemLockManager oemLockManager = context.getSystemService(OemLockManager.class);
+        if (oemLockManager != null) {
+            return oemLockManager.isDeviceOemUnlocked();
+        }
+        return true; // Default to unlocked
+    }
+
+    public static boolean isOemunlockAllowed(Context context) {
+        OemLockManager oemLockManager = context.getSystemService(OemLockManager.class);
+        if (oemLockManager != null) {
+            return oemLockManager.isOemUnlockAllowed();
+        }
+        return true; // Default to unlock allowed
     }
 
     public static void disableComponentsForMissingFeatures(Context context) {
