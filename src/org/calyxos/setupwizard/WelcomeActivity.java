@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import org.calyxos.setupwizard.util.EnableAccessibilityController;
 import org.calyxos.setupwizard.util.SetupWizardUtils;
@@ -67,6 +68,7 @@ public class WelcomeActivity extends BaseSetupWizardActivity {
                         consecutiveTaps = 1;
                     }
                     if (consecutiveTaps == 4) {
+                        Toast.makeText(WelcomeActivity.this, R.string.skip_setupwizard, Toast.LENGTH_LONG).show();
                         SetupWizardUtils.finishSetupWizard(WelcomeActivity.this);
                     }
                 } else {
