@@ -30,4 +30,13 @@
 
     <!-- Toast show on skipping SetupWizard -->
     <string name="skip_setupwizard" translatable="false">Skipping setup wizard</string>
+
+    <!-- Welcome: long press Brand Logo
+         No translations because this is shown before locale selection -->
+    <string name="bootloader_unlocked" translatable="false">Bootloader: Unlocked</string>
+    <string name="bootloader_locked" translatable="false">Bootloader: Locked</string>
+    <string name="oemunlock_allowed" translatable="false">OEM Unlocking: Allowed</string>
+    <string name="oemunlock_na" translatable="false">OEM Unlocking: Not Applicable</string>
+    <string name="oemunlock_notallowed" translatable="false">OEM Unlocking: Not Allowed</string>
+    <string name="factory_reset" translatable="false">Factory Reset and Power off</string>
 </resources>
