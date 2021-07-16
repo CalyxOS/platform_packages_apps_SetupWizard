@@ -50,6 +50,7 @@ import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.net.ConnectivityManager;
 import android.provider.Settings;
+import android.service.oemlock.OemLockManager;
 import android.telephony.ServiceState;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
@@ -257,6 +258,16 @@ public class SetupWizardUtils {
 
     public static boolean simMissing() {
         return PhoneMonitor.getInstance().simMissing();
+    }
+
+    public static boolean isBootloaderUnlocked(Context context) {
+        OemLockManager oemLockManager = context.getSystemService(OemLockManager.class);
+        return oemLockManager.isDeviceOemUnlocked();
+    }
+
+    public static boolean isOemunlockAllowed(Context context) {
+        OemLockManager oemLockManager = context.getSystemService(OemLockManager.class);
+        return oemLockManager.isOemUnlockAllowed();
     }
 
     public static void disableComponentsForMissingFeatures(Context context) {
