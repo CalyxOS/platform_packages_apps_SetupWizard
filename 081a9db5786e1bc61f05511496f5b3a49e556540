@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a5a08b1_f85c1325",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-16T13:04:38Z",
+      "side": 1,
+      "message": "This does work, shows icons for all apps now after we added them to our repo since some are missing in the index due to https://gitlab.com/fdroid/fdroidserver/-/issues/885",
+      "revId": "081a9db5786e1bc61f05511496f5b3a49e556540",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "990f3f43_c54504f8",
