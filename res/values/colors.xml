@@ -8,6 +8,10 @@
     <color name="calyx_logo_accent">#231F20</color>
     <color name="microg_logo_accent">#000000</color>
 
+    <color name="red">#a30000</color>
+    <color name="yellow">#c7a500</color>
+    <color name="green">#1faa00</color>
+
     <color name="button_bar_text_enabled">#ff1e1e1e</color>
     <color name="button_bar_text_disabled">#321e1e1e</color>
 

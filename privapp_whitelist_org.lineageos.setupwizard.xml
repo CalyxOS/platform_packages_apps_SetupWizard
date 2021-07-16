@@ -12,6 +12,7 @@
         <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED" />
         <permission name="android.permission.INTERACT_ACROSS_USERS" />
         <permission name="android.permission.MANAGE_USERS" />
+        <permission name="android.permission.MASTER_CLEAR" />
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
         <permission name="android.permission.SET_TIME" />
         <permission name="android.permission.SET_TIME_ZONE" />
@@ -26,6 +27,7 @@
         <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED" />
         <permission name="android.permission.INTERACT_ACROSS_USERS" />
         <permission name="android.permission.MANAGE_USERS" />
+        <permission name="android.permission.MASTER_CLEAR" />
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
         <permission name="android.permission.SET_TIME" />
         <permission name="android.permission.SET_TIME_ZONE" />
