@@ -4,4 +4,17 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--General -->
+    <string name="unlocked">Unlocked</string>
+    <string name="locked">Locked</string>
+    <string name="allowed">Allowed</string>
+    <string name="notapplicable">Not Applicable</string>
+    <string name="notallowed">Not Allowed</string>
+    <string name="set">Set</string>
+    <string name="unset">Unset</string>
+
+    <!-- Device information -->
+    <string name="device_info_bootloader">Bootloader</string>
+    <string name="device_info_frp">Factory reset protection</string>
+    <string name="device_info_oemunlock">OEM unlocking</string>
 </resources>

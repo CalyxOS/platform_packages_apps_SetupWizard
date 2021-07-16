@@ -28,6 +28,8 @@ import android.os.SystemProperties
 import android.os.UserHandle
 import android.os.UserManager
 import android.provider.Settings
+import android.service.oemlock.OemLockManager
+import android.service.persistentdata.PersistentDataBlockManager
 import android.telephony.SubscriptionManager
 import android.telephony.TelephonyManager
 import android.telephony.TelephonyManager.PHONE_TYPE_GSM
@@ -217,6 +219,22 @@ object SetupWizardUtils {
             else -> false
         }
     }
+
+    fun isBootloaderUnlocked(context: Context): Boolean =
+        runCatching { context.getSystemService(OemLockManager::class.java)?.isDeviceOemUnlocked }
+            .onFailure { e -> Log.e(TAG, "Failed to check if OEM unlock is allowed", e) }
+            .getOrNull() ?: true
+
+    fun isOemUnlockAllowed(context: Context): Boolean =
+        runCatching { context.getSystemService(OemLockManager::class.java)?.isOemUnlockAllowed }
+            .onFailure { e -> Log.e(TAG, "Failed to check if OEM unlock is allowed", e) }
+            .getOrNull() ?: true
+
+    fun isFactoryResetProtectionSet(context: Context): Boolean =
+        runCatching {
+                context.getSystemService(PersistentDataBlockManager::class.java)?.dataBlockSize != 0
+            }
+            .getOrElse { false }
 
     /** Disable the Home component, which is presumably SetupWizardActivity at this time. */
     fun disableHome(context: Context) {
