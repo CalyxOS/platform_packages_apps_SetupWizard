@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ef295ffa_48313a12",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-16T20:34:56Z",
+      "side": 1,
+      "message": "This could use some refinement, but apart from that I think this should be good to go.",
+      "revId": "8809ff25f877bf8a3a61c00866ccba58c9fbebf7",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
