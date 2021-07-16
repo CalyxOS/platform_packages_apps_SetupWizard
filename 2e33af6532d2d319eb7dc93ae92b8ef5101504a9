@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4294147e_5640fd30",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-16T18:09:54Z",
+      "side": 1,
+      "message": "Long length since short disappears before SetupWizard does.",
+      "revId": "2e33af6532d2d319eb7dc93ae92b8ef5101504a9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
