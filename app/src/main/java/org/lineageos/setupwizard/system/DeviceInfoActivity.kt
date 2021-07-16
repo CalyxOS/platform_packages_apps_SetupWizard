@@ -11,17 +11,38 @@ import android.telephony.TelephonyManager
 import android.telephony.euicc.EuiccManager
 import android.util.Log
 import com.google.android.setupdesign.items.ItemGroup
+import com.google.android.setupdesign.items.NonActionableItem
 import com.google.android.setupdesign.items.RecyclerItemAdapter
 import org.lineageos.setupwizard.R
 import org.lineageos.setupwizard.base.BaseSetupWizardActivity
+import org.lineageos.setupwizard.util.SetupWizardUtils
 
 class DeviceInfoActivity : BaseSetupWizardActivity() {
+
+    private val bootloaderUnlocked: Boolean
+        get() = SetupWizardUtils.isBootloaderUnlocked(this)
+
+    private val oemUnlockAllowed: Boolean
+        get() = SetupWizardUtils.isOemUnlockAllowed(this)
+
+    private val resetProtectionSet: Boolean
+        get() = SetupWizardUtils.isFactoryResetProtectionSet(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setNextText(R.string.ok)
 
         val itemGroup = ItemGroup()
+
+        for ((label, value) in bootloaderIdentifiers()) {
+            NonActionableItem()
+                .apply {
+                    title = label
+                    summary = value
+                }
+                .also { itemGroup.addChild(it) }
+        }
+
         for ((label, value) in deviceIdentifiers()) {
             itemGroup.addChild(DeviceInfoItem(label, value))
         }
@@ -29,6 +50,31 @@ class DeviceInfoActivity : BaseSetupWizardActivity() {
         val adapter = RecyclerItemAdapter(itemGroup)
         adapter.setOnItemSelectedListener { (it as? DeviceInfoItem)?.toggle() }
         itemAdapter = adapter
+    }
+
+    private fun bootloaderIdentifiers(): List<Pair<String, String>> {
+        val identifiers = mutableListOf<Pair<String, String>>()
+
+        val bootloader = getString(if (bootloaderUnlocked) R.string.unlocked else R.string.locked)
+        identifiers += getString(R.string.device_info_bootloader) to bootloader
+
+        val oemunlock =
+            getString(
+                when {
+                    bootloaderUnlocked -> R.string.notapplicable
+                    oemUnlockAllowed -> R.string.allowed
+                    else -> R.string.notallowed
+                }
+            )
+        identifiers += getString(R.string.device_info_oemunlock) to oemunlock
+
+        val frp = getString(if (resetProtectionSet) R.string.set else R.string.unset)
+        identifiers += getString(R.string.device_info_frp) to frp
+
+        if (identifiers.isEmpty()) {
+            Log.w(TAG, "No bootloader identifiers to show")
+        }
+        return identifiers
     }
 
     private fun deviceIdentifiers(): List<Pair<String, String>> {
