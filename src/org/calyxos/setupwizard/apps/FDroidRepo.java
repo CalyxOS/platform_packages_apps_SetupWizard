@@ -95,11 +95,7 @@ public class FDroidRepo {
 
             String iconPath = "";
             if (app.has("icon")) {
-                iconPath = app.getString("icon");
-            }
-            Drawable icon = Drawable.createFromPath(path + "/icons-640/" + iconPath);
-            if (icon == null) {
-                icon = Drawable.createFromPath(path + "/" + FALLBACK_ICON);
+                iconPath = path + "/icons-640/" + app.getString("icon");
             }
             CharSequence name = "";
             if (app.has("name")) {
@@ -124,6 +120,13 @@ public class FDroidRepo {
                 if (!TextUtils.isEmpty(value)) description = FDroidUtils.formatDescription(value);
                 value = FDroidUtils.getLocalizedEntry(localized, localesToUse, "summary");
                 if (!TextUtils.isEmpty(value)) summary = value;
+                value = FDroidUtils.getLocalizedEntry(localized, localesToUse, "icon");
+                if (!TextUtils.isEmpty(value)) iconPath = path + "/" + packageName + "/en-US/" + value;
+            }
+
+            Drawable icon = Drawable.createFromPath(iconPath);
+            if (icon == null) {
+                icon = Drawable.createFromPath(path + "/" + FALLBACK_ICON);
             }
 
             AppItem item = new AppItem(icon, name, packageName, apkName,
