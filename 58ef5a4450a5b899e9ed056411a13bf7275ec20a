@@ -22,6 +22,30 @@
       },
       "revId": "58ef5a4450a5b899e9ed056411a13bf7275ec20a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "06252cee_577eee16",
+        "filename": "src/org/calyxos/setupwizard/WelcomeActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-20T16:41:59Z",
+      "side": 1,
+      "message": "Why though? This works.",
+      "parentUuid": "e56a64ed_7dc886f4",
+      "range": {
+        "startLine": 176,
+        "startChar": 8,
+        "endLine": 183,
+        "endChar": 30
+      },
+      "revId": "58ef5a4450a5b899e9ed056411a13bf7275ec20a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
