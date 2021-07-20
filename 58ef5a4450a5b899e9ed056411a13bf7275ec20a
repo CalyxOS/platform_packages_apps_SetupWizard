@@ -20,6 +20,75 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "30417457_775e8423",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-07-20T16:51:12Z",
+      "side": 1,
+      "message": "Unlocking",
+      "range": {
+        "startLine": 45,
+        "startChar": 62,
+        "endLine": 45,
+        "endChar": 70
+      },
+      "revId": "58ef5a4450a5b899e9ed056411a13bf7275ec20a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "05d2691b_518a6415",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-07-20T16:51:12Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 46,
+        "startChar": 57,
+        "endLine": 46,
+        "endChar": 65
+      },
+      "revId": "58ef5a4450a5b899e9ed056411a13bf7275ec20a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "35c4628e_9d032096",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-07-20T16:51:12Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 47,
+        "startChar": 65,
+        "endLine": 47,
+        "endChar": 73
+      },
+      "revId": "58ef5a4450a5b899e9ed056411a13bf7275ec20a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e56a64ed_7dc886f4",
         "filename": "src/org/calyxos/setupwizard/WelcomeActivity.java",
         "patchSetId": 3
@@ -84,6 +153,29 @@
         "startChar": 8,
         "endLine": 183,
         "endChar": 30
+      },
+      "revId": "58ef5a4450a5b899e9ed056411a13bf7275ec20a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88a7b08d_f4f408c7",
+        "filename": "src/org/calyxos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-07-20T16:51:12Z",
+      "side": 1,
+      "message": "another nit, just noticed the API function capitalizes the u",
+      "range": {
+        "startLine": 268,
+        "startChar": 26,
+        "endLine": 268,
+        "endChar": 44
       },
       "revId": "58ef5a4450a5b899e9ed056411a13bf7275ec20a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
