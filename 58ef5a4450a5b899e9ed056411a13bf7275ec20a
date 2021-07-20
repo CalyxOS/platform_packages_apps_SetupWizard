@@ -293,6 +293,30 @@
       },
       "revId": "58ef5a4450a5b899e9ed056411a13bf7275ec20a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1ca13bf_337502d5",
+        "filename": "src/org/calyxos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-20T16:57:32Z",
+      "side": 1,
+      "message": "Can handle this when rebasing on 12.",
+      "parentUuid": "e52ceb7f_75b86bfa",
+      "range": {
+        "startLine": 268,
+        "startChar": 26,
+        "endLine": 268,
+        "endChar": 44
+      },
+      "revId": "58ef5a4450a5b899e9ed056411a13bf7275ec20a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
