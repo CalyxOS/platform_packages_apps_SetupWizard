@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a6ba3e1_622d7421",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-07-20T16:38:35Z",
+      "side": 1,
+      "message": "nitpick, but should it be SetupWizard? I can\u0027t remember what string Google uses on theirs",
+      "range": {
+        "startLine": 38,
+        "startChar": 4,
+        "endLine": 39,
+        "endChar": 66
+      },
+      "revId": "293054b3e3bc4e3d43371cb131ef858253fb441a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
