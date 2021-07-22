@@ -16,6 +16,24 @@
       "message": "Put it up here mainly for further discussion.\n\nWhy should it be the last step? \n\nAfter Wi-Fi and mobile data is if you\u0027re restoring from Nextcloud.",
       "revId": "da6e547ccacd3540b6329374579bda0c3a67c6e1",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b481c310_46328249",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2021-07-22T10:21:09Z",
+      "side": 1,
+      "message": "It used to be the last step, because we didn\u0027t ship Nextcloud and wanted to add it to out repo, so it needed to be after installing additional apps.",
+      "parentUuid": "4cec6c32_e1fd4adf",
+      "revId": "da6e547ccacd3540b6329374579bda0c3a67c6e1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
