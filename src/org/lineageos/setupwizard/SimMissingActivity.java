@@ -22,6 +22,7 @@ import static org.lineageos.setupwizard.SetupWizardApp.REQUEST_CODE_SETUP_EUICC;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.service.euicc.EuiccService;
 import android.telephony.euicc.EuiccManager;
 import android.util.Log;
@@ -37,6 +38,12 @@ import org.lineageos.setupwizard.util.PhoneMonitor;
 public class SimMissingActivity extends SubBaseActivity {
 
     public static final String TAG = SimMissingActivity.class.getSimpleName();
+
+    // From com.android.settings.network.telephony.MobileNetworkUtils
+    // System Property which is used to decide whether the default eSIM UI will be shown,
+    // the default value is false.
+    private static final String KEY_ENABLE_ESIM_UI_BY_DEFAULT =
+            "esim.enable_esim_system_ui_by_default";
 
     private static final int SIM_DEFAULT = 0;
     private static final int SIM_SIDE = 1;
@@ -71,7 +78,8 @@ public class SimMissingActivity extends SubBaseActivity {
     protected void onStartSubactivity() {
         setNextAllowed(true);
         EuiccManager euiccManager = (EuiccManager) getSystemService(Context.EUICC_SERVICE);
-        if (euiccManager.isEnabled() && NetworkMonitor.getInstance().isNetworkConnected()) {
+        if (euiccManager.isEnabled() && NetworkMonitor.getInstance().isNetworkConnected()
+                && SystemProperties.getBoolean(KEY_ENABLE_ESIM_UI_BY_DEFAULT, true)) {
             findViewById(R.id.setup_euicc).setOnClickListener(v -> launchEuiccSetup());
         } else {
             findViewById(R.id.euicc).setVisibility(View.GONE);
