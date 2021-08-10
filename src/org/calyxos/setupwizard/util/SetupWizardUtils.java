@@ -262,12 +262,18 @@ public class SetupWizardUtils {
 
     public static boolean isBootloaderUnlocked(Context context) {
         OemLockManager oemLockManager = context.getSystemService(OemLockManager.class);
-        return oemLockManager.isDeviceOemUnlocked();
+        if (oemLockManager != null) {
+            return oemLockManager.isDeviceOemUnlocked();
+        }
+        return true; // Default to unlocked
     }
 
     public static boolean isOemunlockAllowed(Context context) {
         OemLockManager oemLockManager = context.getSystemService(OemLockManager.class);
-        return oemLockManager.isOemUnlockAllowed();
+        if (oemLockManager != null) {
+            return oemLockManager.isOemUnlockAllowed();
+        }
+        return true; // Default to unlock allowed
     }
 
     public static void disableComponentsForMissingFeatures(Context context) {
