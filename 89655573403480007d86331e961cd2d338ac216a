@@ -33,6 +33,24 @@
       "message": "Note that this also runs on guest users",
       "revId": "89655573403480007d86331e961cd2d338ac216a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "84fbe235_8606298e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-17T11:16:16Z",
+      "side": 1,
+      "message": "Did you get a stack trace?",
+      "parentUuid": "df24d18b_05070a4a",
+      "revId": "89655573403480007d86331e961cd2d338ac216a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
