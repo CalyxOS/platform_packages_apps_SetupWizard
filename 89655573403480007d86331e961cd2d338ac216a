@@ -16,6 +16,23 @@
       "message": "Fails to install apps and causes the wizard to get stuck (similar behaviour originally observed when testing against work profiles)",
       "revId": "89655573403480007d86331e961cd2d338ac216a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "188897ef_d3342319",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-08-17T03:14:35Z",
+      "side": 1,
+      "message": "Note that this also runs on guest users",
+      "revId": "89655573403480007d86331e961cd2d338ac216a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
