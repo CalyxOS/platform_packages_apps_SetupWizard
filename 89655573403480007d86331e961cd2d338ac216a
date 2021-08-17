@@ -68,6 +68,24 @@
       "message": "In any case can just skip that step for now then and add it in a separate commit to be merged when we fix the crashing.",
       "revId": "89655573403480007d86331e961cd2d338ac216a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d670cdb4_5b09adcc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-08-17T14:33:55Z",
+      "side": 1,
+      "message": "Unfortunately nothing. When testing on the work profile I even had breakpoints and everything was being called as expected except at the point that the package installer was committing the session, it never seemed to install the apps nor receive a result (which would explain why it waits indefinitely).",
+      "parentUuid": "84fbe235_8606298e",
+      "revId": "89655573403480007d86331e961cd2d338ac216a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
