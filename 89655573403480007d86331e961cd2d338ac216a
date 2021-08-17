@@ -86,6 +86,24 @@
       "parentUuid": "84fbe235_8606298e",
       "revId": "89655573403480007d86331e961cd2d338ac216a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d8fb00e_89e37919",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-17T16:04:04Z",
+      "side": 1,
+      "message": "😞\n\nWhich screen was it on when waiting? The screen with the \"Please wait while apps are installed\" has a 60s timeout now, did you wait that long?",
+      "parentUuid": "d670cdb4_5b09adcc",
+      "revId": "89655573403480007d86331e961cd2d338ac216a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
