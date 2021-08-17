@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df24d18b_05070a4a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-08-17T03:13:34Z",
+      "side": 1,
+      "message": "Fails to install apps and causes the wizard to get stuck (similar behaviour originally observed when testing against work profiles)",
+      "revId": "89655573403480007d86331e961cd2d338ac216a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
