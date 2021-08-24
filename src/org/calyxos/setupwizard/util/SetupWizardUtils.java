@@ -124,6 +124,12 @@ public class SetupWizardUtils {
         return tm.isMultiSimEnabled();
     }
 
+    public static boolean hasSingleSim(Context context) {
+        TelephonyManager tm =
+                (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        return tm.getSimCount() == 1;
+    }
+
     public static boolean isRadioReady(Context context, ServiceState state) {
         final SetupWizardApp setupWizardApp = (SetupWizardApp) context.getApplicationContext();
         if (setupWizardApp.isRadioReady()) {
@@ -284,10 +290,10 @@ public class SetupWizardUtils {
         } else if (!simMissing()) {
             disableComponent(context, SimMissingActivity.class);
         }
-        if (!SetupWizardUtils.isMultiSimDevice(context)) {
+        if (!isMultiSimDevice(context) || hasSingleSim(context)) {
             disableComponent(context, ChooseDataSimActivity.class);
         }
-        if (!SetupWizardUtils.hasWifi(context) ||
+        if (!hasWifi(context) ||
             isEthernetConnected(context)) {
             disableComponent(context, WifiSetupActivity.class);
         }
