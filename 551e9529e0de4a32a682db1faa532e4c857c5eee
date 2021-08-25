@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "de5c1016_d2bf8829",
+        "filename": "src/org/calyxos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-08-25T13:24:40Z",
+      "side": 1,
+      "message": "Don\u0027t mind but was thinking it may be worth keeping separate if either of these are eventually needed for anything else?",
+      "parentUuid": "2b59e076_613cfaea",
+      "revId": "551e9529e0de4a32a682db1faa532e4c857c5eee",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9f0e5640_c5f42bfc",
         "filename": "src/org/calyxos/setupwizard/util/SetupWizardUtils.java",
         "patchSetId": 1
