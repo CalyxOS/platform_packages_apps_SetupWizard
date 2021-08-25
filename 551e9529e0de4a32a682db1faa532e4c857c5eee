@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c936dc0_6ef984ef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-25T11:13:28Z",
+      "side": 1,
+      "message": "Current change looks good, untested.\n\nComment left only as suggestion after a quick grep, it\u0027s fine as-is too, and clearer as well.",
+      "revId": "551e9529e0de4a32a682db1faa532e4c857c5eee",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b59e076_613cfaea",
+        "filename": "src/org/calyxos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-25T11:13:28Z",
+      "side": 1,
+      "message": "Could do `return tm.isMultiSimEnabled() \u0026\u0026 tm.getSimCount() \u003e 1`",
+      "revId": "551e9529e0de4a32a682db1faa532e4c857c5eee",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f0e5640_c5f42bfc",
+        "filename": "src/org/calyxos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-25T11:13:28Z",
+      "side": 1,
+      "message": "Since this is the only place `isMultiSimDevice()` is used.",
+      "revId": "551e9529e0de4a32a682db1faa532e4c857c5eee",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
