@@ -53,6 +53,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "deea42ba_ae80f2e6",
+        "filename": "src/org/calyxos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-25T17:17:39Z",
+      "side": 1,
+      "message": "Yeah, fair.",
+      "parentUuid": "de5c1016_d2bf8829",
+      "revId": "551e9529e0de4a32a682db1faa532e4c857c5eee",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9f0e5640_c5f42bfc",
@@ -66,6 +84,24 @@
       "writtenOn": "2021-08-25T11:13:28Z",
       "side": 1,
       "message": "Since this is the only place `isMultiSimDevice()` is used.",
+      "revId": "551e9529e0de4a32a682db1faa532e4c857c5eee",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51699cd4_9c18e0ad",
+        "filename": "src/org/calyxos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-25T17:17:39Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "9f0e5640_c5f42bfc",
       "revId": "551e9529e0de4a32a682db1faa532e4c857c5eee",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
