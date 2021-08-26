@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="setup_euicc">Налаштування eSIM</string>
+    <string name="euicc_summary">Ви також можете додати eSIM-карту до свого пристрою.</string>
+    <string name="calyx_intro_restore_subtitle">Якщо у вас є резервна копія з вашого останнього телефону Calyx, ви можете відновити її тут.</string>
+    <string name="microg_warning">Примітка. Якщо ви увімкнете це зараз, ваш телефон буде налаштований на надсилання даних до Google. Ви можете змінити це пізніше в налаштуваннях microG.</string>
+    <string name="microg_switch_label">Увімкнути сумісність зі службами Google</string>
+    <string name="microg_description">Це дозволяє запускати такі застосунки, як <b> Google Maps, Youtube і служби обміну</b> на CalyxOS. Вимкніть це, якщо ви не плануєте запускати застосунки, що вимагають служби Google. Ви НЕ зможете увімкнути їх пізніше.</string>
+    <string name="microg_title">Служби Google</string>
+    <string name="waiting_for_apps">Заждіть, поки ми завершимо налаштування вашого пристрою.</string>
+    <string name="install_apps_select_all">Усі наступні застосунки</string>
+    <string name="install_apps_subtitle"><b>Перегляньте додаткові застосунки.</b>Ви також можете встановити їх пізніше.</string>
+    <string name="install_apps_title">Додаткові застосунки</string>
+</resources>
