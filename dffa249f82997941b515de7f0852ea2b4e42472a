@@ -16,6 +16,24 @@
       "message": "No difference waiting for the timeout",
       "revId": "dffa249f82997941b515de7f0852ea2b4e42472a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "789eb070_6959a360",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-27T13:51:50Z",
+      "side": 1,
+      "message": "Wdym?\n\nIs it stuck even after waiting 60s? Does it not let you tap Next?",
+      "parentUuid": "7212f4a5_f9e55573",
+      "revId": "dffa249f82997941b515de7f0852ea2b4e42472a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
