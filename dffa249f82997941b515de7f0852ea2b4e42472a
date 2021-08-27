@@ -34,6 +34,24 @@
       "parentUuid": "7212f4a5_f9e55573",
       "revId": "dffa249f82997941b515de7f0852ea2b4e42472a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f99399ae_9d51587d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-08-27T13:52:32Z",
+      "side": 1,
+      "message": "No, that works. Just mean that nothing gets installed so always have to wait 60s",
+      "parentUuid": "789eb070_6959a360",
+      "revId": "dffa249f82997941b515de7f0852ea2b4e42472a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
