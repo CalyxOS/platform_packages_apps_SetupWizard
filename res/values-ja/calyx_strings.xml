@@ -9,4 +9,6 @@
     <string name="install_apps_select_all">次すべてのアプリ</string>
     <string name="install_apps_subtitle"><b>追加アプリをご確認ください。</b> 別途でインストールすることが可能です。</string>
     <string name="install_apps_title">追加アプリ</string>
+    <string name="setup_euicc">eSim 設定</string>
+    <string name="euicc_summary">eSIMを使用することも可能です。</string>
 </resources>
