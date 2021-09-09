@@ -17,12 +17,15 @@
 
 package org.calyxos.setupwizard;
 
+import android.app.AppOpsManager;
 import android.app.Application;
 import android.app.job.JobInfo;
 import android.app.job.JobScheduler;
 import android.content.ComponentName;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Process;
 import android.os.UserHandle;
 import android.service.oemlock.OemLockManager;
 import android.util.Log;
@@ -68,6 +71,7 @@ public class SetupWizardApp extends Application {
 
     public static final String KEY_DETECT_CAPTIVE_PORTAL = "captive_portal_detection_enabled";
 
+    public static final String AURORA_SERVICES_PACKAGE = "com.aurora.services";
     public static final String FDROID_PACKAGE = "org.fdroid.fdroid";
     public static final String FDROID_CATEGORY_DEFAULT = "Default";
     public static final String FDROID_CATEGORY_DEFAULT_BACKEND = "DefaultBackend";
@@ -111,6 +115,14 @@ public class SetupWizardApp extends Application {
             && !SetupWizardUtils.isBootloaderUnlocked(this)
             && SetupWizardUtils.isOemunlockAllowed(this)) {
             getSystemService(OemLockManager.class).setOemUnlockAllowedByUser(false);
+        }
+        try {
+            getSystemService(AppOpsManager.class).setMode(AppOpsManager.OP_REQUEST_INSTALL_PACKAGES,
+                    getPackageManager().getPackageUid(AURORA_SERVICES_PACKAGE, 0),
+                    AURORA_SERVICES_PACKAGE,
+                    AppOpsManager.MODE_ALLOWED);
+        } catch (PackageManager.NameNotFoundException e) {
+
         }
     }
 
