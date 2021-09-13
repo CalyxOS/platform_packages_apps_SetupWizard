@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="setup_euicc">eSIM ക്രമീകരിക്കുക</string>
+    <string name="euicc_summary">നിങ്ങളുടെ ഉപകരണത്തിലേക്ക് ഒരു ഇ-സിം ചേർക്കാനും കഴിയും.</string>
+    <string name="calyx_intro_restore_subtitle">നിങ്ങളുടെ നേരത്തെയുള്ള കാലിക്സ് ഫോണിൽ നിന്ന് നിങ്ങൾക്ക് ഒരു ബാക്കപ്പ് ഉണ്ടെങ്കിൽ, അത് ഇവിടെ പുനസ്ഥാപിക്കാനാകും.</string>
+    <string name="microg_warning">കുറിപ്പ്: നിങ്ങൾ ഇത് ഇപ്പോൾ പ്രവർത്തനക്ഷമമാക്കുകയാണെങ്കിൽ, Google- ലേക്ക് ഡാറ്റ അയയ്ക്കാൻ നിങ്ങളുടെ ഫോൺ സജ്ജീകരിക്കും. നിങ്ങൾക്ക് ഇത് പിന്നീട് മൈക്രോജി ക്രമീകരണങ്ങളിൽ മാറ്റാവുന്നതാണ്.</string>
+    <string name="microg_switch_label">Google സേവനങ്ങൾ അനുയോജ്യത പ്രവർത്തനക്ഷമമാക്കുക</string>
+    <string name="microg_description">ഇത് <b> Google മാപ്സ്, യൂട്യൂബ്, റൈഡ് ഷെയറിംഗ് സേവനങ്ങൾ </b> പോലുള്ള ആപ്പുകൾ CalyxOS- ൽ പ്രവർത്തിപ്പിക്കാൻ അനുവദിക്കുന്നു. Google സേവനങ്ങൾ ആവശ്യമുള്ള ആപ്പുകൾ പ്രവർത്തിപ്പിക്കാൻ നിങ്ങൾ പദ്ധതിയിടുന്നില്ലെങ്കിൽ ഇത് പ്രവർത്തനരഹിതമാക്കുക. നിങ്ങൾക്ക് ഇത് പിന്നീട് പ്രവർത്തനക്ഷമമാക്കാൻ കഴിയില്ല.</string>
+    <string name="microg_title">Google സേവനങ്ങൾ</string>
+    <string name="waiting_for_apps">നിങ്ങളുടെ ഉപകരണം സജ്ജീകരിക്കുന്നത് പൂർത്തിയാകുന്നതുവരെ ദയവായി കാത്തിരിക്കുക.</string>
+    <string name="install_apps_select_all">താഴെപ്പറയുന്ന എല്ലാ ആപ്പുകളും</string>
+    <string name="install_apps_subtitle"><b> അധിക ആപ്പുകൾ അവലോകനം ചെയ്യുക. </b> നിങ്ങൾക്ക് അവ പിന്നീട് സ്ഥാപിക്കാനും കഴിയും.</string>
+    <string name="install_apps_title">അധിക ആപ്പുകൾ</string>
+</resources>
