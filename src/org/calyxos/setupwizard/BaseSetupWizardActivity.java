@@ -365,7 +365,6 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
         SetupWizardUtils.disableCaptivePortalDetection(getApplicationContext());
         SetupWizardUtils.disableStatusBar(getApplicationContext());
         SystemBarHelper.hideSystemBars(getWindow());
-        tryEnablingWifi();
     }
 
 
