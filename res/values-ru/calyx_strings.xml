@@ -9,4 +9,6 @@
     <string name="waiting_for_apps">Подождите, пока мы завершим настройку вашего устройства.</string>
     <string name="install_apps_select_all">Все следующие приложения</string>
     <string name="install_apps_title">Дополнительные приложения</string>
+    <string name="setup_euicc">Настройка eSIM</string>
+    <string name="euicc_summary">Вы также можете добавить eSIM в свое устройство.</string>
 </resources>
