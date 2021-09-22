@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03aba6e5_7b0a6228",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-22T16:06:52Z",
+      "side": 1,
+      "message": "UX feedback: One primary call to action per page\n\nWe could probably skip this for now then, or create a dedicated eSIM page.\n\nIt\u0027d also easily handle edge cases then (SIM in but still want to add eSIM for example)\n\n\nAlso ok to leave this for now to keep things simpler in and change it later.",
+      "revId": "c3ecd47addf888e38b23adfce9f2697a812585cc",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
