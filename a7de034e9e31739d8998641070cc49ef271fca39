@@ -16,6 +16,24 @@
       "message": "Note: this is the wrong branch, but I guess it\u0027s ok for now.\n\nShould also move this to be first in series, I plan to do that for all repos come 12, makes it that much easier to see where our changes start.",
       "revId": "a7de034e9e31739d8998641070cc49ef271fca39",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f37953b9_3c1c46b4",
+        "filename": ".gitreview",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-09-22T16:09:50Z",
+      "side": 1,
+      "message": "It is the \"first\" in the series because I sent the previous changes upstream",
+      "parentUuid": "095b519f_54ecbb59",
+      "revId": "a7de034e9e31739d8998641070cc49ef271fca39",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
