@@ -22,6 +22,30 @@
       },
       "revId": "7d95c4991cd5914c80380776f2226946014d50eb",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b2c68262_ef1b9aff",
+        "filename": "src/org/calyxos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-27T19:41:43Z",
+      "side": 1,
+      "message": "I don\u0027t think we do in the case of SuW.",
+      "parentUuid": "cc297f1e_15abdd5f",
+      "range": {
+        "startLine": 84,
+        "startChar": 8,
+        "endLine": 87,
+        "endChar": 9
+      },
+      "revId": "7d95c4991cd5914c80380776f2226946014d50eb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
