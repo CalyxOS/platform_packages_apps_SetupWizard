@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.CheckBox;
 import android.widget.Switch;
 import org.calyxos.setupwizard.BaseSetupWizardActivity;
 import org.calyxos.setupwizard.R;
@@ -42,6 +43,7 @@ public class MicroGActivity extends BaseSetupWizardActivity {
 
     private PackageManager pm;
     private Switch enableSwitch;
+    private CheckBox enableDefaults;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,6 +53,9 @@ public class MicroGActivity extends BaseSetupWizardActivity {
 
         enableSwitch = findViewById(R.id.enableSwitch);
         findViewById(R.id.switchLayout).setOnClickListener(v -> enableSwitch.toggle());
+
+        enableDefaults = findViewById(R.id.enableDefaults);
+        findViewById(R.id.enableDefaults).setOnClickListener(v -> enableDefaults.setChecked(enableDefaults.isChecked()));
 
         pm = getPackageManager();
     }
@@ -76,6 +81,13 @@ public class MicroGActivity extends BaseSetupWizardActivity {
         for (String packageId : MICROG_PACKAGES) {
             setAppEnabled(packageId, enabled);
         }
+        Intent intent = new Intent();
+        intent.setClassName("com.google.android.gms",
+                "org.microg.gms.provision.ProvisionService");
+        intent.putExtra("checkin_enabled", enableDefaults.isChecked());
+        intent.putExtra("gcm_enabled", enableDefaults.isChecked());
+        intent.putExtra("safetynet_enabled", false);
+        startService(intent);
         super.onNextPressed();
     }
 
