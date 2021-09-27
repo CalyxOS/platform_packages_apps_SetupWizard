@@ -29,7 +29,8 @@
     <string name="microg_title">Google Services</string>
     <string name="microg_description">This allows apps such as <b>Google Maps, Youtube and ride sharing services</b> to run on CalyxOS. Disable this if you don\'t plan on running apps that require Google services. You will not be able to enable it later.</string>
     <string name="microg_switch_label">Enable Google Services Compatibility</string>
-    <string name="microg_warning">Note: If you enable this now, your phone will be set up to send data to Google. You can change this later in the microG settings.</string>
+    <string name="microg_defaults_switch_label">Enable Google Device Registration and Cloud Messaging</string>
+    <string name="microg_defaults_summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
 
     <!-- Toast show on skipping SetupWizard -->
     <string name="skip_setupwizard" translatable="false">Skipping setup wizard</string>
