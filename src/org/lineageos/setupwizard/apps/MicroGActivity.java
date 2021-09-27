@@ -24,6 +24,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.CompoundButton;
 import android.widget.Switch;
 
 import org.lineageos.setupwizard.BaseSetupWizardActivity;
@@ -43,6 +44,7 @@ public class MicroGActivity extends BaseSetupWizardActivity {
 
     private PackageManager pm;
     private Switch enableSwitch;
+    private Switch enableDefaults;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,7 +53,10 @@ public class MicroGActivity extends BaseSetupWizardActivity {
         setNextText(R.string.next);
 
         enableSwitch = findViewById(R.id.enableSwitch);
-        findViewById(R.id.switchLayout).setOnClickListener(v -> enableSwitch.toggle());
+        enableDefaults = findViewById(R.id.enableDefaults);
+        enableSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            enableDefaults.setEnabled(isChecked);
+        });
 
         pm = getPackageManager();
     }
@@ -76,6 +81,15 @@ public class MicroGActivity extends BaseSetupWizardActivity {
         boolean enabled = enableSwitch.isChecked();
         for (String packageId : MICROG_PACKAGES) {
             setAppEnabled(packageId, enabled);
+        }
+        if (enableDefaults.isEnabled()) {
+            Intent intent = new Intent();
+            intent.setClassName("com.google.android.gms",
+                    "org.microg.gms.provision.ProvisionService");
+            intent.putExtra("checkin_enabled", enableDefaults.isChecked());
+            intent.putExtra("gcm_enabled", enableDefaults.isChecked());
+            intent.putExtra("safetynet_enabled", false);
+            startService(intent);
         }
         super.onNextPressed();
     }
