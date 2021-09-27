@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc297f1e_15abdd5f",
+        "filename": "src/org/calyxos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-09-27T14:59:12Z",
+      "side": 1,
+      "message": "nitpick, but do we want to execute this always? afaik, the packages are enabled by default and only need to be disabled if the toggle is not checked?",
+      "range": {
+        "startLine": 84,
+        "startChar": 8,
+        "endLine": 87,
+        "endChar": 9
+      },
+      "revId": "7d95c4991cd5914c80380776f2226946014d50eb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
