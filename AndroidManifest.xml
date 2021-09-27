@@ -41,10 +41,17 @@
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
     <uses-permission android:name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS" />
     <uses-permission android:name="android.permission.BACKUP" />
+<<<<<<< HEAD   (396e94 Merge branch 'lineage-19.0' into android12)
     <uses-permission android:name="android.permission.NETWORK_SETTINGS" />
     <uses-permission android:name="lineageos.permission.FINISH_SETUP" />
     <uses-permission android:name="lineageos.permission.WRITE_SETTINGS" />
     <uses-permission android:name="lineageos.permission.WRITE_SECURE_SETTINGS" />
+=======
+    <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS" />
+    <uses-permission android:name="android.permission.MASTER_CLEAR" />
+    <uses-permission android:name="calyxos.permission.FINISH_SETUP" />
+    <uses-permission android:name="org.microg.gms.PROVISION" />
+>>>>>>> CHANGE (62cc2f Add MicroG defaults toggle)
 
     <permission
         android:name="lineageos.permission.FINISH_SETUP"

@@ -1,0 +1,53 @@
+<<<<<<< HEAD   (396e94 Merge branch 'lineage-19.0' into android12)
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 The Calyx Institute
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- App install -->
+    <string name="calyx_fdroid_repo_location" translatable="false">/product/fdroid/repo</string>
+    <string name="install_apps_title">Additional apps</string>
+    <string name="install_apps_subtitle"><b>Review additional apps.</b> You can install them later as well.</string>
+    <string name="install_apps_select_all">All of the following apps</string>
+    <string name="waiting_for_apps">Please wait while we finish setting up your device.</string>
+
+    <!-- MicroG setup -->
+    <string name="microg_title">Google Services</string>
+    <string name="microg_description">This allows apps such as <b>Google Maps, Youtube and ride sharing services</b> to run on CalyxOS. Disable this if you don\'t plan on running apps that require Google services. You will not be able to enable it later.</string>
+    <string name="microg_switch_label">Enable Google Services Compatibility</string>
+    <string name="microg_checkbox_label">Enable Google Device Registration and Cloud Messaging</string>
+    <string name="microg_warning">Note: If you enable this now, your phone will be set up to send data to Google.  You can change this later in the microG settings.</string>
+
+    <!-- Backup Restore -->
+    <string name="calyx_intro_restore_subtitle">If you have a backup from your last Calyx phone, you can restore it here.</string>
+
+    <!-- eSIM setup -->
+    <string name="euicc_summary">You can also add an eSIM to your device.</string>
+    <string name="setup_euicc">Setup eSIM</string>
+
+    <!-- Toast show on skipping SetupWizard -->
+    <string name="skip_setupwizard" translatable="false">Skipping SetupWizard!</string>
+
+    <!-- Welcome: long press Brand Logo
+         No translations because this is shown before locale selection -->
+    <string name="bootloader_unlocked" translatable="false">Bootloader: Unlocked</string>
+    <string name="bootloader_locked" translatable="false">Bootloader: Locked</string>
+    <string name="oemunlock_allowed" translatable="false">OEM Unlocking: Allowed</string>
+    <string name="oemunlock_na" translatable="false">OEM Unlocking: Not Applicable</string>
+    <string name="oemunlock_notallowed" translatable="false">OEM Unlocking: Not Allowed</string>
+    <string name="factory_reset" translatable="false">Factory Reset and Power off</string>
+</resources>
+>>>>>>> CHANGE (62cc2f Add MicroG defaults toggle)
