@@ -20,6 +20,7 @@ package org.calyxos.setupwizard;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Rect;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -57,6 +58,8 @@ public class WelcomeActivity extends BaseSetupWizardActivity {
         setBackDrawable(null);
         mEnableAccessibilityController =
                 EnableAccessibilityController.getInstance(getApplicationContext());
+        mRootView.setOnTouchListener((v, event) ->
+                mEnableAccessibilityController.onTouchEvent(event));
         mGestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
             @Override
             public boolean onDown(MotionEvent e) {
@@ -65,24 +68,26 @@ public class WelcomeActivity extends BaseSetupWizardActivity {
 
             @Override
             public boolean onSingleTapUp(MotionEvent e) {
-                Rect viewRect = new Rect();
-                int[] leftTop = new int[2];
-                mRootView.getLocationOnScreen(leftTop);
-                viewRect.set(
-                        leftTop[0], leftTop[1], leftTop[0] + mRootView.getWidth(), leftTop[1] + mRootView.getHeight());
-                if (viewRect.contains((int) e.getX(), (int) e.getY())) {
-                    if (isConsecutiveTap(e)) {
-                        consecutiveTaps++;
+                if (Build.IS_USERDEBUG || Build.IS_ENG) {
+                    Rect viewRect = new Rect();
+                    int[] leftTop = new int[2];
+                    mRootView.getLocationOnScreen(leftTop);
+                    viewRect.set(
+                            leftTop[0], leftTop[1], leftTop[0] + mRootView.getWidth(), leftTop[1] + mRootView.getHeight());
+                    if (viewRect.contains((int) e.getX(), (int) e.getY())) {
+                        if (isConsecutiveTap(e)) {
+                            consecutiveTaps++;
+                        } else {
+                            consecutiveTaps = 1;
+                        }
+                        if (consecutiveTaps == 4) {
+                            Toast.makeText(WelcomeActivity.this, R.string.skip_setupwizard, Toast.LENGTH_LONG).show();
+                            SetupWizardUtils.finishSetupWizard(WelcomeActivity.this);
+                        }
                     } else {
-                        consecutiveTaps = 1;
+                        // Touch outside the target view. Reset counter.
+                        consecutiveTaps = 0;
                     }
-                    if (consecutiveTaps == 4) {
-                        Toast.makeText(WelcomeActivity.this, R.string.skip_setupwizard, Toast.LENGTH_LONG).show();
-                        SetupWizardUtils.finishSetupWizard(WelcomeActivity.this);
-                    }
-                } else {
-                    // Touch outside the target view. Reset counter.
-                    consecutiveTaps = 0;
                 }
 
                 if (previousTapEvent != null) {
@@ -92,12 +97,12 @@ public class WelcomeActivity extends BaseSetupWizardActivity {
                 return false;
             }
 
-            @Override
-            public void onLongPress(MotionEvent e) {
-                Rect viewRect = new Rect();
-                int[] leftTop = new int[2];
+        @Override
+        public void onLongPress(MotionEvent e) {
+            Rect viewRect = new Rect();
+            int[] leftTop = new int[2];
 
-                findViewById(R.id.factory_reset).setOnClickListener(v -> factoryResetAndShutdown());
+            findViewById(R.id.factory_reset).setOnClickListener(v -> factoryResetAndShutdown());
 
                 mBrandLogoView.getLocationOnScreen(leftTop);
                 viewRect.set(
@@ -108,9 +113,6 @@ public class WelcomeActivity extends BaseSetupWizardActivity {
                 }
             }
         });
-
-        mRootView.setOnTouchListener((v, event) ->
-                mEnableAccessibilityController.onTouchEvent(event));
         mRootView.setOnTouchListener((v, event) ->
                 mGestureDetector.onTouchEvent(event));
     }
