@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7fb7f35_49a1a6f5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-28T13:56:14Z",
+      "side": 1,
+      "message": "We only want to prevent skipping, not \u0027long press on logo\u0027",
+      "revId": "f3a8f79f3cc979d6691f8a89a99266b55799ce15",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aedb6eda_35e4a382",
+        "filename": "src/org/calyxos/setupwizard/WelcomeActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-28T13:56:14Z",
+      "side": 1,
+      "message": "This is for prod builds.",
+      "revId": "f3a8f79f3cc979d6691f8a89a99266b55799ce15",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
