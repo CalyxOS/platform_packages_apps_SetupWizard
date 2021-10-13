@@ -16,6 +16,24 @@
       "message": "Upgrades: org.fdroid.fdroid\nNew installs: org.calyxos.fdroid\n\nI was going to say this change would be fine since SuW only runs on first install, but then I realised it runs for work profiles too, so if you upgrade to a build with the rename and then try to create a work profile, it\u0027d still have the old package name.",
       "revId": "4558d37472d4aa3a5f05d6d6eb73a846bbccbbd7",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bf0ad3c1_475bc546",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-10-13T17:42:16Z",
+      "side": 1,
+      "message": "All I can tell it does in this situation is not trigger the repo update automatically for current work profiles?",
+      "parentUuid": "2e533a85_439bd77f",
+      "revId": "4558d37472d4aa3a5f05d6d6eb73a846bbccbbd7",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
