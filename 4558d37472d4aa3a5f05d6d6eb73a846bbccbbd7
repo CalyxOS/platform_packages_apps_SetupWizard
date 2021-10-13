@@ -34,6 +34,24 @@
       "parentUuid": "2e533a85_439bd77f",
       "revId": "4558d37472d4aa3a5f05d6d6eb73a846bbccbbd7",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21add55d_e3f1976a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-13T17:43:29Z",
+      "side": 1,
+      "message": "It\u0027d be for new work profiles, but created on existing installs / upgrades.\n\nExisting work profiles won\u0027t run SuW again.\nNew installs will have the new package name.",
+      "parentUuid": "bf0ad3c1_475bc546",
+      "revId": "4558d37472d4aa3a5f05d6d6eb73a846bbccbbd7",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
