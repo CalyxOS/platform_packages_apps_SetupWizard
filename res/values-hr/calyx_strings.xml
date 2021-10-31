@@ -9,4 +9,6 @@
     <string name="install_apps_select_all">Sve sljedeće aplikacije</string>
     <string name="install_apps_subtitle"><b>Pregledaj dodatne aplikacije.</b> Mogu se instalirati i kasnije.</string>
     <string name="install_apps_title">Dodatne aplikacije</string>
+    <string name="setup_euicc">Postavi eSIM</string>
+    <string name="euicc_summary">Tvom uređaju možeš dodati i eSIM.</string>
 </resources>
