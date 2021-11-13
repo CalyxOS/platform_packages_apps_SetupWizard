@@ -8,7 +8,7 @@ LOCAL_PRIVILEGED_MODULE := true
 # Include all test java files.
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
-LOCAL_PACKAGE_NAME := LineageSetupWizardTests
+LOCAL_PACKAGE_NAME := CalyxSetupWizardTests
 LOCAL_CERTIFICATE := platform
 
 LOCAL_PRIVATE_PLATFORM_APIS := true
