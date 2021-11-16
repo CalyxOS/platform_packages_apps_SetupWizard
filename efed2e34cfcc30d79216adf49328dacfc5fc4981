@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e693fdd_dab67d6f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-11-16T22:36:01Z",
+      "side": 1,
+      "message": "We don\u0027t need these settings yet, but it could be handy in the future.\n\nPrivacy Policy link is nice to have.",
+      "revId": "efed2e34cfcc30d79216adf49328dacfc5fc4981",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
