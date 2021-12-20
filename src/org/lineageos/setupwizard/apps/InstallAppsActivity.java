@@ -58,7 +58,6 @@ public class InstallAppsActivity extends BaseSetupWizardActivity implements AppI
         super.onCreate(savedInstanceState);
 
         setNextText(R.string.next);
-        setBackAllowed(false);
 
         list = findViewById(R.id.list);
         adapter = new AppAdapter(this);
