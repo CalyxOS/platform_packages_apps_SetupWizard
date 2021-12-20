@@ -4,6 +4,21 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <permissions>
+    <!-- Compatibility for upgrades from old package name -->
+    <privapp-permissions package="org.calyxos.setupwizard">
+        <permission name="android.permission.BACKUP" />
+        <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
+        <permission name="android.permission.CHANGE_CONFIGURATION" />
+        <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED" />
+        <permission name="android.permission.INTERACT_ACROSS_USERS" />
+        <permission name="android.permission.MANAGE_USERS" />
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+        <permission name="android.permission.SET_TIME" />
+        <permission name="android.permission.SET_TIME_ZONE" />
+        <permission name="android.permission.STATUS_BAR" />
+        <permission name="android.permission.WRITE_SECURE_SETTINGS" />
+    </privapp-permissions>
+    <!-- Any permissions added below must also be added above. -->
     <privapp-permissions package="org.lineageos.setupwizard">
         <permission name="android.permission.BACKUP" />
         <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
