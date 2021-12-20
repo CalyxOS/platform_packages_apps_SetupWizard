@@ -87,7 +87,6 @@ public class WaitInstallAppsActivity extends BaseSetupWizardActivity {
             mHandler.postDelayed(mDoneWaitingForApps, 60 * 1000);
             // But first they have to wait for apps to install
             setNextAllowed(false);
-            setBackAllowed(false);
             if (!mProgressBar.isShown()) {
                 mProgressBar.setVisibility(View.VISIBLE);
                 mWaitingForAppsText.setVisibility(View.VISIBLE);
