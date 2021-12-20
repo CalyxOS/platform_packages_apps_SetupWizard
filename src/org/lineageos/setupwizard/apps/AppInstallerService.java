@@ -71,7 +71,7 @@ public class AppInstallerService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent i) {
-        PackageInstaller28 packageInstaller = new PackageInstaller28(getApplicationContext());
+        PackageInstaller31 packageInstaller = new PackageInstaller31(getApplicationContext());
         String path = i.getStringExtra(PATH);
         ArrayList<String> apks = i.getStringArrayListExtra(APKS);
         mPackagesExpected = i.getStringArrayListExtra(PACKAGENAMES);

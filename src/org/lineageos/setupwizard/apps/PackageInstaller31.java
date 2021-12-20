@@ -1,9 +1,9 @@
 /*
  * Copyright (C) 2016 The Android Open Source Project
- * Copyright (C) 2019 The Calyx Institute
+ * Copyright (C) 2019-2021 The Calyx Institute
  *
  *  Based on code from com.android.packageinstaller.InstallInstalling
- *                     (packages/apps/PackageInstaller/InstallInstalling.java)
+ *  frameworks/base/packages/PackageInstaller/src/com/android/packageinstaller/InstallInstalling.java
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -28,7 +28,10 @@ import android.content.IntentSender;
 import android.content.pm.PackageInstaller;
 import android.content.pm.PackageInstaller.Session;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageParser;
+import android.content.pm.parsing.ApkLiteParseUtils;
+import android.content.pm.parsing.PackageLite;
+import android.content.pm.parsing.result.ParseResult;
+import android.content.pm.parsing.result.ParseTypeImpl;
 import android.util.ArraySet;
 import android.util.Log;
 
@@ -41,6 +44,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Set;
 
+import static android.app.PendingIntent.FLAG_MUTABLE;
 import static android.app.PendingIntent.FLAG_UPDATE_CURRENT;
 import static android.content.Intent.FLAG_RECEIVER_FOREGROUND;
 import static android.content.pm.PackageInstaller.SessionParams;
@@ -51,9 +55,9 @@ import static android.Manifest.permission.ACCESS_BACKGROUND_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.READ_PHONE_STATE;
 
-class PackageInstaller28 {
+class PackageInstaller31 {
 
-    private static final String TAG = PackageInstaller28.class.getSimpleName();
+    private static final String TAG = PackageInstaller31.class.getSimpleName();
     private static final String PRIV_EXT_PACKAGE_ID = "org.fdroid.fdroid.privileged";
     private static final String BROADCAST_ACTION = "com.android.packageinstaller.ACTION_INSTALL_COMMIT";
     private static final int BUFFER_SIZE = 1024 * 1024;
@@ -62,7 +66,7 @@ class PackageInstaller28 {
     private final PackageManager pm;
     private final PackageInstaller installer;
 
-    PackageInstaller28(Context context) {
+    PackageInstaller31(Context context) {
         this.context = context;
         this.pm = context.getPackageManager();
         this.installer = pm.getPackageInstaller();
@@ -75,21 +79,27 @@ class PackageInstaller28 {
 
     @WorkerThread
     void install(File packageFile, String installerPackageName) throws IOException, SecurityException {
-        if (!packageFile.isFile()) throw new IOException("Can't read package file");
+        if (!packageFile.isFile()) throw new IOException("Cannot read package file " + packageFile);
 
         SessionParams params = new SessionParams(MODE_FULL_INSTALL);
         params.installFlags = INSTALL_FULL_APP;
         params.installerPackageName = installerPackageName;
+        params.installReason = PackageManager.INSTALL_REASON_DEVICE_SETUP;
 
         try {
-            PackageParser.PackageLite pkg = PackageParser.parsePackageLite(packageFile, 0);
-            params.setAppPackageName(pkg.packageName);
-            params.setInstallLocation(pkg.installLocation);
-            params.setSize(PackageHelper.calculateInstalledSize(pkg, false, params.abiOverride));
-        } catch (PackageParserException e) {
-            Log.e(TAG, "Cannot parse package " + packageFile + ". Assuming defaults.");
-            Log.e(TAG, "Cannot calculate installed size " + packageFile + ". Try only apk size.");
-            params.setSize(packageFile.length());
+            final ParseTypeImpl input = ParseTypeImpl.forDefaultParsing();
+            final ParseResult<PackageLite> result = ApkLiteParseUtils.parsePackageLite(input.reset(),
+                        packageFile, /* flags */ 0);
+            if (result.isError()) {
+                Log.e(TAG, "Cannot parse package " + packageFile + ". Assuming defaults.");
+                Log.e(TAG, "Cannot calculate installed size " + packageFile + ". Try only apk size.");
+                params.setSize(packageFile.length());
+            } else {
+                final PackageLite pkg = result.getResult();
+                params.setAppPackageName(pkg.getPackageName());
+                params.setInstallLocation(pkg.getInstallLocation());
+                params.setSize(PackageHelper.calculateInstalledSize(pkg, params.abiOverride));
+            }
         } catch (IOException e) {
             Log.e(TAG, "Cannot calculate installed size " + packageFile + ". Try only apk size.");
             params.setSize(packageFile.length());
@@ -100,7 +110,7 @@ class PackageInstaller28 {
         try {
             writePackage(packageFile, session);
         } catch (IOException e) {
-            Log.e(TAG, "Error installing package: " + packageFile);
+            Log.e(TAG, "Error installing package " + packageFile);
             session.close();
             throw e;
         }
@@ -128,7 +138,8 @@ class PackageInstaller28 {
         Intent broadcastIntent = new Intent(BROADCAST_ACTION);
         broadcastIntent.setFlags(FLAG_RECEIVER_FOREGROUND);
         broadcastIntent.setPackage(pm.getPermissionControllerPackageName());
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, broadcastIntent, FLAG_UPDATE_CURRENT);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, broadcastIntent,
+                FLAG_UPDATE_CURRENT | FLAG_MUTABLE);
         return pendingIntent.getIntentSender();
     }
 
