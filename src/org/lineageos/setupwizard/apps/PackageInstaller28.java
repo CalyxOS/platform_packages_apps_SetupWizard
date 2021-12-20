@@ -28,7 +28,10 @@ import android.content.IntentSender;
 import android.content.pm.PackageInstaller;
 import android.content.pm.PackageInstaller.Session;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageParser;
+import android.content.pm.parsing.ApkLiteParseUtils;
+import android.content.pm.parsing.PackageLite;
+import android.content.pm.parsing.result.ParseResult;
+import android.content.pm.parsing.result.ParseTypeImpl;
 import android.util.ArraySet;
 import android.util.Log;
 
@@ -81,18 +84,15 @@ class PackageInstaller28 {
         params.installFlags = INSTALL_FULL_APP;
         params.installerPackageName = installerPackageName;
 
-        try {
-            PackageParser.PackageLite pkg = PackageParser.parsePackageLite(packageFile, 0);
-            params.setAppPackageName(pkg.packageName);
-            params.setInstallLocation(pkg.installLocation);
-            params.setSize(PackageHelper.calculateInstalledSize(pkg, false, params.abiOverride));
-        } catch (PackageParserException e) {
-            Log.e(TAG, "Cannot parse package " + packageFile + ". Assuming defaults.");
-            Log.e(TAG, "Cannot calculate installed size " + packageFile + ". Try only apk size.");
-            params.setSize(packageFile.length());
-        } catch (IOException e) {
-            Log.e(TAG, "Cannot calculate installed size " + packageFile + ". Try only apk size.");
-            params.setSize(packageFile.length());
+        final ParseTypeImpl input = ParseTypeImpl.forDefaultParsing();
+        final ParseResult<PackageLite> ret = ApkLiteParseUtils.parsePackageLite(input.reset(),
+                    packageFile, /* flags */ 0);
+        if (ret.isError()) {
+            Log.e("Failed to parse package: " + packageFile,
+                    ". Try only apk size.");
+        } else {
+            final PackageLite apkLite = ret.getResult();
+            params.setAppPackageName(apkLite.getPackageName());
         }
 
         int sessionId = installer.createSession(params);
