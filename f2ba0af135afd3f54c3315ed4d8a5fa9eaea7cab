@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2848b57_62b66a4c",
+        "filename": "src/org/lineageos/setupwizard/WelcomeActivity.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-28T19:08:58Z",
+      "side": 1,
+      "message": "This makes it work (see xml for which view got this id), but it means you tap around the logo now instead of the edges.",
+      "revId": "f2ba0af135afd3f54c3315ed4d8a5fa9eaea7cab",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
