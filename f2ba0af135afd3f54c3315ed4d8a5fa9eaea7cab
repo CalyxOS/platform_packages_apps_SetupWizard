@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f61951c8_aa7fdcfc",
+        "filename": "src/org/lineageos/setupwizard/WelcomeActivity.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-28T19:09:48Z",
+      "side": 0,
+      "message": "The functionality added in this patch is meant to be used on production builds, so I just moved the check to the part that does the skipping.",
+      "revId": "f2ba0af135afd3f54c3315ed4d8a5fa9eaea7cab",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
