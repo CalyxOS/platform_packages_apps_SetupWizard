@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48758c2c_ab533f67",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-30T00:23:51Z",
+      "side": 1,
+      "message": "Not ideal but for something only meant for development usage it\u0027ll do for now.",
+      "revId": "48c49bb63b0ef92e16477c02e4a76dcd8da83217",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}

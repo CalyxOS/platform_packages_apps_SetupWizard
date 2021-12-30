@@ -16,6 +16,24 @@
       "message": "This makes it work (see xml for which view got this id), but it means you tap around the logo now instead of the edges.",
       "revId": "f2ba0af135afd3f54c3315ed4d8a5fa9eaea7cab",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42b39641_4d8aa229",
+        "filename": "src/org/lineageos/setupwizard/WelcomeActivity.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-30T00:23:51Z",
+      "side": 1,
+      "message": "Instead of the corners you have to do it between the corner and the logo on each side - if that makes sense.\n\n________\n\nx        x\n\n logo\n strt\n\nx        x\n\n emas\n________\n\nemas -\u003e emergency call, accessibility settings\n---- -\u003e top and bottom\n\nx is where you tap.",
+      "parentUuid": "c2848b57_62b66a4c",
+      "revId": "f2ba0af135afd3f54c3315ed4d8a5fa9eaea7cab",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
