@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26abe3c8_ed6c221c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-30T00:25:02Z",
+      "side": 1,
+      "message": "Only tested with unlocked bootloader, but ok.\n\nButton works. Text is too long for it now on some devices, but that\u0027s fine.",
+      "revId": "20eb3df12373d2218655de64f649e2b4f478e946",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
