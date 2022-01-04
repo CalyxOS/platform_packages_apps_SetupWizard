@@ -18,6 +18,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "28b2cce8_bba7d22c",
+        "filename": "res/layout/list_item_app.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fc0f5e0e_f8520f9a",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "761c5fe6_cc33ecbc",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-01-04T08:58:08Z",
       "side": 1,
       "message": "Are these imports needed? There are no changes in this file.",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8038fa8c_ffea3e71",
+        "filename": "src/org/lineageos/setupwizard/FinishActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Likely used by some other commit, I messed up while rebasing.\n\nRemoved so we\u0027ll find out.",
+      "parentUuid": "761c5fe6_cc33ecbc",
       "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
@@ -52,6 +88,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5bd56f3_07ef263d",
+        "filename": "src/org/lineageos/setupwizard/SetupWizardApp.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "28e27fdf_4f486f27",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f7a04542_8e4ae38c",
@@ -65,6 +119,24 @@
       "writtenOn": "2022-01-04T08:58:08Z",
       "side": 1,
       "message": "100 chars",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0452cc8_3458e3f3",
+        "filename": "src/org/lineageos/setupwizard/apps/AppAdapter.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f7a04542_8e4ae38c",
       "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
@@ -86,6 +158,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "30dd9844_68e40b94",
+        "filename": "src/org/lineageos/setupwizard/apps/AppAdapter.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7b1129a0_ed974a99",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8b5cf282_7717adc1",
@@ -99,6 +189,24 @@
       "writtenOn": "2022-01-04T08:58:08Z",
       "side": 1,
       "message": "100 chars",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fcc1277_99e5b36f",
+        "filename": "src/org/lineageos/setupwizard/apps/AppInstallerService.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8b5cf282_7717adc1",
       "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
@@ -120,6 +228,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed462bc9_d68367b4",
+        "filename": "src/org/lineageos/setupwizard/apps/AppItem.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "101 is not so bad, you\u0027ll find it in a bunch of places even in AOSP :P",
+      "parentUuid": "ab0d3673_96e5fecc",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4628d980_4cf37951",
@@ -133,6 +259,24 @@
       "writtenOn": "2022-01-04T08:58:08Z",
       "side": 1,
       "message": "Remove extra line here",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "110bfd31_bd0a7ec7",
+        "filename": "src/org/lineageos/setupwizard/apps/AppViewHolder.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4628d980_4cf37951",
       "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
@@ -154,6 +298,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0bda070b_b4939c3b",
+        "filename": "src/org/lineageos/setupwizard/apps/FDroidRepo.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bc7db8c4_556bbb87",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f7419a0f_08e9937d",
@@ -167,6 +329,24 @@
       "writtenOn": "2022-01-04T08:58:08Z",
       "side": 1,
       "message": "100 chars",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea553ca3_56cefc8e",
+        "filename": "src/org/lineageos/setupwizard/apps/FDroidRepo.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f7419a0f_08e9937d",
       "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
@@ -188,6 +368,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "aee1c9c2_2d9a1d86",
+        "filename": "src/org/lineageos/setupwizard/apps/FDroidRepo.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e33b7ea9_daa4d8a0",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "95169535_86339eb0",
@@ -201,6 +399,24 @@
       "writtenOn": "2022-01-04T08:58:08Z",
       "side": 1,
       "message": "Newline",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "806d43b5_110677a8",
+        "filename": "src/org/lineageos/setupwizard/apps/FDroidRepo.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "95169535_86339eb0",
       "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
@@ -222,6 +438,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "09d9ab59_996ad3bd",
+        "filename": "src/org/lineageos/setupwizard/apps/InstallAppsActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d7baa42c_07ea07bf",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "662c6592_dcb154cb",
@@ -235,6 +469,24 @@
       "writtenOn": "2022-01-04T08:58:08Z",
       "side": 1,
       "message": "100 chars",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5c36cef_14f7138f",
+        "filename": "src/org/lineageos/setupwizard/apps/PackageInstaller31.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "662c6592_dcb154cb",
       "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
@@ -256,6 +508,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "613cde77_bd7b64c7",
+        "filename": "src/org/lineageos/setupwizard/apps/PackageInstaller31.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "15ca04c4_1c03ac21",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3b160d7a_41e550f7",
@@ -273,6 +543,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9afd37b1_6ecf8bdc",
+        "filename": "src/org/lineageos/setupwizard/apps/PackageInstaller31.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3b160d7a_41e550f7",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "182245fb_558ff958",
@@ -286,6 +574,24 @@
       "writtenOn": "2022-01-04T08:58:08Z",
       "side": 1,
       "message": "100 chars",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "02eba760_34239f8a",
+        "filename": "src/org/lineageos/setupwizard/apps/PackageInstaller31.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "182245fb_558ff958",
       "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
@@ -313,6 +619,30 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8725e080_72babc87",
+        "filename": "src/org/lineageos/setupwizard/apps/WaitInstallAppsActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "56549977_f5124386",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 42
+      },
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9d8e05e1_028cd5fd",
@@ -326,6 +656,24 @@
       "writtenOn": "2022-01-04T08:58:08Z",
       "side": 1,
       "message": "Static imports should come before all imports, java.* imports should come after all imports",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43e32fca_97417f83",
+        "filename": "src/org/lineageos/setupwizard/apps/WaitInstallAppsActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9d8e05e1_028cd5fd",
       "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
@@ -349,6 +697,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d21699f6_2cfdf389",
+        "filename": "src/org/lineageos/setupwizard/util/FDroidUtils.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Yeah, so this one is a bit complicated.\n\nIt comes from F-Droid, but that\u0027s GPLv3. However the bits we needed were all authored by Hans, so we asked him if we could use it as Apache2, to which he agreed.\n\nBut what do we put as copyright for that then.",
+      "parentUuid": "8d7c94b5_a2d0f936",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "45bfc273_60672366",
         "filename": "src/org/lineageos/setupwizard/util/FDroidUtils.java",
         "patchSetId": 6
@@ -360,6 +726,24 @@
       "writtenOn": "2022-01-04T08:58:08Z",
       "side": 1,
       "message": "Newline",
+      "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cdf7c9ab_89975ba2",
+        "filename": "src/org/lineageos/setupwizard/util/FDroidUtils.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:39:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "45bfc273_60672366",
       "revId": "b08d9827d4e18f88f33b8a102a7df1e343f7a45f",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
