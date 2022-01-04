@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c645322_932506c7",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-01-04T08:45:20Z",
+      "side": 1,
+      "message": "There\u0027s an extra space here",
+      "range": {
+        "startLine": 22,
+        "startChar": 114,
+        "endLine": 22,
+        "endChar": 115
+      },
+      "revId": "3e15e537c978f41bf750fe02c684827549c91c3b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
