@@ -33,6 +33,24 @@
       "message": "Oops",
       "revId": "48c49bb63b0ef92e16477c02e4a76dcd8da83217",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d8fe22f_e71d178c",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:40:59Z",
+      "side": 1,
+      "message": "I likely checked out out the file from upstream to make the string changes in the downstream file.",
+      "parentUuid": "1704b571_d58363e4",
+      "revId": "48c49bb63b0ef92e16477c02e4a76dcd8da83217",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
