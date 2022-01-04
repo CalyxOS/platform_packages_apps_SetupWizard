@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f7ca535_b9d06a1e",
+        "filename": "src/org/lineageos/setupwizard/SetupWizardApp.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-01-04T09:05:05Z",
+      "side": 1,
+      "message": "8 spaces",
+      "range": {
+        "startLine": 112,
+        "startChar": 8,
+        "endLine": 112,
+        "endChar": 12
+      },
+      "revId": "1e2c4105289e3ae3dc4678ebf073b5eb49e9bb9a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7c1b787c_ff635d78",
+        "filename": "src/org/lineageos/setupwizard/SetupWizardApp.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-01-04T09:05:05Z",
+      "side": 1,
+      "message": "8 spaces",
+      "range": {
+        "startLine": 113,
+        "startChar": 8,
+        "endLine": 113,
+        "endChar": 12
+      },
+      "revId": "1e2c4105289e3ae3dc4678ebf073b5eb49e9bb9a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
