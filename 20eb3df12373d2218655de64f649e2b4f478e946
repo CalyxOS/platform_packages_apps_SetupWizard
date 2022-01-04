@@ -16,6 +16,115 @@
       "message": "Only tested with unlocked bootloader, but ok.\n\nButton works. Text is too long for it now on some devices, but that\u0027s fine.",
       "revId": "20eb3df12373d2218655de64f649e2b4f478e946",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2e1d424d_4564dbee",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-01-04T09:04:30Z",
+      "side": 1,
+      "message": "OEM unlocking",
+      "range": {
+        "startLine": 38,
+        "startChar": 58,
+        "endLine": 38,
+        "endChar": 71
+      },
+      "revId": "20eb3df12373d2218655de64f649e2b4f478e946",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "573a64fd_04b19f95",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-01-04T09:04:30Z",
+      "side": 1,
+      "message": "OEM unlocking: Not applicable",
+      "range": {
+        "startLine": 39,
+        "startChar": 53,
+        "endLine": 39,
+        "endChar": 82
+      },
+      "revId": "20eb3df12373d2218655de64f649e2b4f478e946",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "22c497b4_d88b6553",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-01-04T09:04:30Z",
+      "side": 1,
+      "message": "OEM unlocking: Not allowed",
+      "range": {
+        "startLine": 40,
+        "startChar": 61,
+        "endLine": 40,
+        "endChar": 87
+      },
+      "revId": "20eb3df12373d2218655de64f649e2b4f478e946",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1a267f3_eaa07424",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-01-04T09:04:30Z",
+      "side": 1,
+      "message": "Factory reset and power off",
+      "range": {
+        "startLine": 41,
+        "startChar": 54,
+        "endLine": 41,
+        "endChar": 81
+      },
+      "revId": "20eb3df12373d2218655de64f649e2b4f478e946",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c32f84c2_3b84be25",
+        "filename": "src/org/lineageos/setupwizard/WelcomeActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-01-04T09:04:30Z",
+      "side": 1,
+      "message": "100 chars",
+      "revId": "20eb3df12373d2218655de64f649e2b4f478e946",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
