@@ -24,6 +24,30 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0804563_729d47be",
+        "filename": "res/raw/lineage_wizard_script_managed_profile.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:36:52Z",
+      "side": 1,
+      "message": "Lol, sed gone wrong.",
+      "parentUuid": "0a8bb88b_5676a104",
+      "range": {
+        "startLine": 5,
+        "startChar": 28,
+        "endLine": 5,
+        "endChar": 35
+      },
+      "revId": "b88feeee36345bc757f9fe7e614e7761a23e735b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2b254f3b_6d5d960e",
@@ -41,6 +65,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5efaa7e9_1584f367",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:36:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2b254f3b_6d5d960e",
+      "revId": "b88feeee36345bc757f9fe7e614e7761a23e735b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "eef72304_3b9959a0",
@@ -54,6 +96,24 @@
       "writtenOn": "2022-01-04T09:06:02Z",
       "side": 1,
       "message": "100 chars",
+      "revId": "b88feeee36345bc757f9fe7e614e7761a23e735b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6050cffb_e6fd2b16",
+        "filename": "src/org/lineageos/setupwizard/SetupWizardActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-04T13:36:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eef72304_3b9959a0",
       "revId": "b88feeee36345bc757f9fe7e614e7761a23e735b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
