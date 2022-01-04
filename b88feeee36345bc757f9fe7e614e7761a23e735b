@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a8bb88b_5676a104",
+        "filename": "res/raw/lineage_wizard_script_managed_profile.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-01-04T09:06:02Z",
+      "side": 1,
+      "message": "Oops",
+      "range": {
+        "startLine": 5,
+        "startChar": 28,
+        "endLine": 5,
+        "endChar": 35
+      },
+      "revId": "b88feeee36345bc757f9fe7e614e7761a23e735b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b254f3b_6d5d960e",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-01-04T09:06:02Z",
+      "side": 1,
+      "message": "Remove extra space here",
+      "revId": "b88feeee36345bc757f9fe7e614e7761a23e735b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eef72304_3b9959a0",
+        "filename": "src/org/lineageos/setupwizard/SetupWizardActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-01-04T09:06:02Z",
+      "side": 1,
+      "message": "100 chars",
+      "revId": "b88feeee36345bc757f9fe7e614e7761a23e735b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
