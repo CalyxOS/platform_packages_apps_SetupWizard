@@ -31,6 +31,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.setupcompat.util.SystemBarHelper;
+import com.google.android.setupdesign.gesture.ConsecutiveTapsGestureDetector;
 
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
@@ -40,18 +41,15 @@ public class WelcomeActivity extends BaseSetupWizardActivity {
 
     public static final String TAG = WelcomeActivity.class.getSimpleName();
 
-    private View mRootView;
     private ImageView mBrandLogoView;
     private FrameLayout mPage;
+    private ConsecutiveTapsGestureDetector mConsecutiveTapsGestureDetector;
     private GestureDetector mGestureDetector;
-    private MotionEvent previousTapEvent;
-    private int consecutiveTaps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SystemBarHelper.setBackButtonVisible(getWindow(), false);
-        mRootView = findViewById(R.id.root_view);
         mBrandLogoView = findViewById(R.id.brand_logo);
         mPage = findViewById(R.id.page);
         setNextText(R.string.start);
@@ -61,61 +59,53 @@ public class WelcomeActivity extends BaseSetupWizardActivity {
                 .setOnClickListener(view -> startEmergencyDialer());
         findViewById(R.id.launch_accessibility)
                 .setOnClickListener(view -> startAccessibilitySettings());
-        mGestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
-            @Override
-            public boolean onDown(MotionEvent e) {
-                return true;
-            }
 
-            @Override
-            public boolean onSingleTapUp(MotionEvent e) {
-                Rect viewRect = new Rect();
-                int[] leftTop = new int[2];
-                mRootView.getLocationOnScreen(leftTop);
-                viewRect.set(
-                        leftTop[0], leftTop[1], leftTop[0] + mRootView.getWidth(), leftTop[1]
-                        + mRootView.getHeight());
-                if (viewRect.contains((int) e.getX(), (int) e.getY())) {
-                    if (isConsecutiveTap(e)) {
-                        consecutiveTaps++;
-                    } else {
-                        consecutiveTaps = 1;
-                    }
-                    if (Build.IS_DEBUGGABLE && consecutiveTaps == 4) {
-                        Toast.makeText(WelcomeActivity.this, R.string.skip_setupwizard,
-                                Toast.LENGTH_LONG).show();
-                        SetupWizardUtils.finishSetupWizard(WelcomeActivity.this);
-                    }
-                } else {
-                    // Touch outside the target view. Reset counter.
-                    consecutiveTaps = 0;
-                }
+        if (Build.IS_DEBUGGABLE) {
+            mConsecutiveTapsGestureDetector = new ConsecutiveTapsGestureDetector(
+                    (ConsecutiveTapsGestureDetector.OnConsecutiveTapsListener)
+                            numOfConsecutiveTaps -> {
+                                if (numOfConsecutiveTaps == 4) {
+                                    Toast.makeText(WelcomeActivity.this, R.string.skip_setupwizard,
+                                            Toast.LENGTH_LONG).show();
+                                    SetupWizardUtils.finishSetupWizard(WelcomeActivity.this);
+                                }
+                            }, findViewById(R.id.setup_wizard_layout),
+                    (int) TimeUnit.SECONDS.toMillis(1));
+            mGestureDetector = new GestureDetector(this,
+                    new GestureDetector.SimpleOnGestureListener() {
+                        @Override
+                        public boolean onDown(MotionEvent e) {
+                            return true;
+                        }
 
-                if (previousTapEvent != null) {
-                    previousTapEvent.recycle();
-                }
-                previousTapEvent = MotionEvent.obtain(e);
-                return false;
-            }
+                        @Override
+                        public void onLongPress(MotionEvent e) {
+                            Rect viewRect = new Rect();
+                            int[] leftTop = new int[2];
 
-            @Override
-            public void onLongPress(MotionEvent e) {
-                Rect viewRect = new Rect();
-                int[] leftTop = new int[2];
+                            findViewById(R.id.factory_reset).setOnClickListener(
+                                    v -> factoryResetAndShutdown());
 
-                findViewById(R.id.factory_reset).setOnClickListener(v -> factoryResetAndShutdown());
+                            mBrandLogoView.getLocationOnScreen(leftTop);
+                            viewRect.set(leftTop[0], leftTop[1],
+                                    leftTop[0] + mBrandLogoView.getWidth(),
+                                    leftTop[1] + mBrandLogoView.getHeight());
+                            if (viewRect.contains((int) e.getX(), (int) e.getY())) {
+                                setupDetails();
+                                mPage.setVisibility(View.VISIBLE);
+                            }
+                        }
+                    });
+        }
+    }
 
-                mBrandLogoView.getLocationOnScreen(leftTop);
-                viewRect.set(leftTop[0], leftTop[1], leftTop[0] + mBrandLogoView.getWidth(),
-                        leftTop[1] + mBrandLogoView.getHeight());
-                if (viewRect.contains((int) e.getX(), (int) e.getY())) {
-                    setupDetails();
-                    mPage.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        mRootView.setOnTouchListener((v, event) -> mGestureDetector.onTouchEvent(event));
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        if (Build.IS_DEBUGGABLE) {
+            mConsecutiveTapsGestureDetector.onTouchEvent(ev);
+            mGestureDetector.onTouchEvent(ev);
+        }
+        return super.dispatchTouchEvent(ev);
     }
 
     @Override
@@ -127,23 +117,10 @@ public class WelcomeActivity extends BaseSetupWizardActivity {
         return R.layout.welcome_activity;
     }
 
-    private boolean isConsecutiveTap(MotionEvent currentTapEvent) {
-        if (previousTapEvent == null) {
-            return false;
-        }
-
-        double deltaX = previousTapEvent.getX() - currentTapEvent.getX();
-        double deltaY = previousTapEvent.getY() - currentTapEvent.getY();
-        long deltaTime = currentTapEvent.getEventTime() - previousTapEvent.getEventTime();
-        return (deltaX * deltaX + deltaY * deltaY >=
-                (mRootView.getWidth() * mRootView.getWidth()) / 2
-                && deltaTime < TimeUnit.SECONDS.toMillis(1));
-    }
-
     private void setupDetails() {
         // CalyxOS is meant to be used with a locked bootloader and OEM Unlocking disabled
-        final Boolean bootloaderUnlocked = SetupWizardUtils.isBootloaderUnlocked(this);
-        final Boolean oemunlockAllowed = SetupWizardUtils.isOemunlockAllowed(this);
+        final boolean bootloaderUnlocked = SetupWizardUtils.isBootloaderUnlocked(this);
+        final boolean oemunlockAllowed = SetupWizardUtils.isOemunlockAllowed(this);
         final TextView bootloaderStatus = (TextView) findViewById(R.id.bootloader_status);
         final TextView oemunlockStatus = (TextView) findViewById(R.id.oemunlock_status);
 
