@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4828cfac_ffa43069",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-06T20:24:45Z",
+      "side": 1,
+      "message": "It\u0027s LINEAGE_NETWORK_SETUP now instead of WIFI_SETUP.\n\nCan also send upstream without the MICROG line.",
+      "revId": "aa428d19c4aaccf38c4d5ef31fa284204b51c842",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
