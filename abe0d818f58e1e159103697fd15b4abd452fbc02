@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2dc47833_d8d13620",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-06T12:17:25Z",
+      "side": 1,
+      "message": "This needs to be redesigned.\n\nOn stock, we have the nice location services / send data to google page.\n\nIt has a big explanation, and multiple options.\n\nSomething like that would be best, after further discussion.",
+      "revId": "abe0d818f58e1e159103697fd15b4abd452fbc02",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
