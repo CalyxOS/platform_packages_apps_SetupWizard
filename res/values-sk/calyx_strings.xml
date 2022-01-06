@@ -10,4 +10,5 @@
     <string name="install_apps_select_all">Všetky nasledujúce aplikácie</string>
     <string name="install_apps_subtitle"><b>Prezrite si ďalšie aplikácie</b> Môžete si ich nainštalovať aj neskôr.</string>
     <string name="install_apps_title">Ďalšie aplikácie</string>
+    <string name="setup_euicc">Nastavenie eSIM</string>
 </resources>

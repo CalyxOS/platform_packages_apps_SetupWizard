@@ -8,7 +8,7 @@
     <string name="waiting_for_apps">Bitte warten Sie, bis wir die Einrichtung Ihres Geräts abgeschlossen haben.</string>
     <string name="install_apps_select_all">Alle folgenden Apps</string>
     <string name="install_apps_subtitle"><b>Überprüfen Sie zusätzliche Apps.</b> Sie können sie auch später installieren.</string>
-    <string name="install_apps_title">Zusätzliche Anwendungen</string>
+    <string name="install_apps_title">Zusätzliche Apps</string>
     <string name="setup_euicc">eSIM einrichten</string>
-    <string name="euicc_summary">Du kannst auch eine eSIM zu deinem Gerät hinzufügen.</string>
+    <string name="euicc_summary">Sie können auch eine eSIM zu ihrem Gerät hinzufügen.</string>
 </resources>
