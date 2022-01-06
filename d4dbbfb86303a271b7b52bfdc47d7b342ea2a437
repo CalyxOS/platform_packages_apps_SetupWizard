@@ -33,6 +33,24 @@
       "message": "We don\u0027t have walleye to test with on 12 but works on sunfish",
       "revId": "d4dbbfb86303a271b7b52bfdc47d7b342ea2a437",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e2126b7_346acef3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-06T20:23:52Z",
+      "side": 1,
+      "message": "Can test by changing the prop.\n\nadb shell setprop esim.enable_esim_system_ui_by_default false\n./start_lineage_wizard.sh",
+      "parentUuid": "c0bb04d3_153e3af5",
+      "revId": "d4dbbfb86303a271b7b52bfdc47d7b342ea2a437",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
