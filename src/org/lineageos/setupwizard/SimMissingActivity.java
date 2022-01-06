@@ -31,6 +31,7 @@ import android.widget.ImageView;
 import com.google.android.setupcompat.util.ResultCodes;
 import com.google.android.setupcompat.util.WizardManagerHelper;
 
+import org.lineageos.setupwizard.util.NetworkMonitor;
 import org.lineageos.setupwizard.util.PhoneMonitor;
 
 public class SimMissingActivity extends SubBaseActivity {
@@ -70,7 +71,7 @@ public class SimMissingActivity extends SubBaseActivity {
     protected void onStartSubactivity() {
         setNextAllowed(true);
         EuiccManager euiccManager = (EuiccManager) getSystemService(Context.EUICC_SERVICE);
-        if (euiccManager.isEnabled()) {
+        if (euiccManager.isEnabled() && NetworkMonitor.getInstance().isNetworkConnected()) {
             findViewById(R.id.setup_euicc).setOnClickListener(v -> launchEuiccSetup());
         } else {
             findViewById(R.id.euicc).setVisibility(View.GONE);
