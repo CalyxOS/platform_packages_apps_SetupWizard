@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d86b2dc_cfbd3fc0",
+        "filename": "src/org/lineageos/setupwizard/WelcomeActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-06T20:22:11Z",
+      "side": 0,
+      "message": "There\u0027s a reason I had the debuggable check here and not anywhere else.",
+      "revId": "46ae69d0b5bc900de6ded7c2c053c2d21b7fe17f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}

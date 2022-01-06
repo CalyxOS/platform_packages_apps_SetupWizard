@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a017b8c_e1d42d86",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-06T20:22:11Z",
+      "side": 1,
+      "message": "This will break brand logo on user builds.\n\nLogo long press is for all builds.\n\nSkip is only for debug builds.",
+      "revId": "fefcf9219116feb9efa0b94ed95d555ad606c2a9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e80761ff_cd564b18",
+        "filename": "src/org/lineageos/setupwizard/WelcomeActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-06T20:22:11Z",
+      "side": 1,
+      "message": "This is used on prod builds.",
+      "revId": "fefcf9219116feb9efa0b94ed95d555ad606c2a9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "217aaeca_f5bd558d",
+        "filename": "src/org/lineageos/setupwizard/WelcomeActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-06T20:22:11Z",
+      "side": 1,
+      "message": "This is used on prod builds.",
+      "revId": "fefcf9219116feb9efa0b94ed95d555ad606c2a9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
