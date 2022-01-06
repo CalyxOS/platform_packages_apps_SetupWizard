@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "686c31d3_5d429084",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-06T20:20:30Z",
+      "side": 1,
+      "message": "network setup also contains mobile data toggle now, after this that would never be shown.",
+      "revId": "9baa98e01a4ea564b2a5b32fe99f64d1144573ec",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
