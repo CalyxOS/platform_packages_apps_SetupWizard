@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e081d450_868baa03",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-01-12T10:16:58Z",
+      "side": 1,
+      "message": "I wonder if there are other things that need to be moved into finishSetupWizard(). Or in general checking that calls that should happen in all circumstances do.",
+      "revId": "bc8169bdbaf13837665110ccfffd828130f44d6c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
