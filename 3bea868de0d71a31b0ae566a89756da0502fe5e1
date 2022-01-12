@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0472e528_085dc6f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-01-12T11:01:05Z",
+      "side": 1,
+      "message": "Should we have the location page for work profiles too? Noticed it is per user",
+      "revId": "3bea868de0d71a31b0ae566a89756da0502fe5e1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
