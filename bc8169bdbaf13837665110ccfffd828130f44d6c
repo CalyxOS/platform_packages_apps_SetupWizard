@@ -16,6 +16,23 @@
       "message": "I wonder if there are other things that need to be moved into finishSetupWizard(). Or in general checking that calls that should happen in all circumstances do.",
       "revId": "bc8169bdbaf13837665110ccfffd828130f44d6c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e9e8bb2_bfe749e5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-01-12T11:38:56Z",
+      "side": 1,
+      "message": "I think it was at that place so it wouldn\u0027t cause any UX issues in the setup flow",
+      "revId": "bc8169bdbaf13837665110ccfffd828130f44d6c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
