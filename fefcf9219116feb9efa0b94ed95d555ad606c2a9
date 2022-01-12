@@ -35,6 +35,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ead79d22_a80530cb",
+        "filename": "src/org/lineageos/setupwizard/WelcomeActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-01-12T10:31:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e80761ff_cd564b18",
+      "revId": "fefcf9219116feb9efa0b94ed95d555ad606c2a9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "217aaeca_f5bd558d",
@@ -48,6 +66,24 @@
       "writtenOn": "2022-01-06T20:22:11Z",
       "side": 1,
       "message": "This is used on prod builds.",
+      "revId": "fefcf9219116feb9efa0b94ed95d555ad606c2a9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed8f37a0_19e9401b",
+        "filename": "src/org/lineageos/setupwizard/WelcomeActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-01-12T10:31:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "217aaeca_f5bd558d",
       "revId": "fefcf9219116feb9efa0b94ed95d555ad606c2a9",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
