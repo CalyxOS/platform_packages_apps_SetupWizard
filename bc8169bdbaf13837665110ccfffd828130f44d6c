@@ -33,6 +33,23 @@
       "message": "I think it was at that place so it wouldn\u0027t cause any UX issues in the setup flow",
       "revId": "bc8169bdbaf13837665110ccfffd828130f44d6c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a460bdf0_0b569b17",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-13T01:07:05Z",
+      "side": 1,
+      "message": "Seems to work ok here.\n\nSkip -\u003e seems fine\nDon\u0027t skip -\u003e still fine.",
+      "revId": "bc8169bdbaf13837665110ccfffd828130f44d6c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
