@@ -40,7 +40,18 @@ android_app {
 
     libs: ["telephony-common"],
 
-    required: ["privapp_whitelist_org.lineageos.setupwizard"],
+    required: [
+        "privapp_whitelist_org.calyxos.setupwizard",
+        "privapp_whitelist_org.lineageos.setupwizard",
+    ],
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_org.calyxos.setupwizard",
+    system_ext_specific: true,
+    src: "privapp_whitelist_org.calyxos.setupwizard.xml",
+    sub_dir: "permissions",
+    filename_from_src: true,
 }
 
 prebuilt_etc {
