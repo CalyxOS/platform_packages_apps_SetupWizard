@@ -15,8 +15,9 @@
      limitations under the License.
 -->
 <permissions>
-    <!-- Keep org.calyxos.setupwizard in sync -->
-    <privapp-permissions package="org.lineageos.setupwizard">
+    <!-- Compatibility for upgrades from old package name
+         Keep in sync with org.lineageos.setupwizard -->
+    <privapp-permissions package="org.calyxos.setupwizard">
         <permission name="android.permission.BACKUP"/>
         <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
         <permission name="android.permission.CHANGE_CONFIGURATION"/>
