@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb4a4644_11182112",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-04T20:39:07Z",
+      "side": 1,
+      "message": "Sorry for the dependency chain mess up.",
+      "revId": "941d9c04386f73aae985469796e678f2d36d7e14",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
