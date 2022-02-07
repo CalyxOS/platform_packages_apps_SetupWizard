@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f36b8ecc_60f8cc24",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-07T19:52:45Z",
+      "side": 1,
+      "message": "I wanted to do a quick double-check of this on a locked bootloader build since membership relies on this.",
+      "revId": "dc3174924e7732b6da2fec51201f0fc22a2df558",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
