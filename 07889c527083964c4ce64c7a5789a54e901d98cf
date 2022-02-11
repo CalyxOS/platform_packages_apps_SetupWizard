@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd9a4640_b59f2cc3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-11T14:23:30Z",
+      "side": 1,
+      "message": "Fine for now, let\u0027s add more (mainly app install page) in a separate commit, when we fix that.",
+      "revId": "07889c527083964c4ce64c7a5789a54e901d98cf",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
