@@ -34,6 +34,24 @@
       "parentUuid": "ef295ffa_48313a12",
       "revId": "8809ff25f877bf8a3a61c00866ccba58c9fbebf7",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa17c11e_0165ddfe",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-11T14:25:28Z",
+      "side": 1,
+      "message": "This is early on in setup, before wifi, otherwise it could be a link.\n\nWe can still have a short link (maybe https://calyxos.org/oemlock or such) that people can open from another device, since the locking needs to happen from a PC anyway.\n\n\nWe\u0027ll handle the case where the bootloader can\u0027t be unlocked at all later, with a different summary, and just a simple next button instead of skip/reboot.",
+      "parentUuid": "f0f4a0a0_0b459f7b",
+      "revId": "8809ff25f877bf8a3a61c00866ccba58c9fbebf7",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
