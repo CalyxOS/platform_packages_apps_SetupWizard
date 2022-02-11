@@ -50,6 +50,24 @@
       "message": "How\u0027s this looking on 12 with the new internet page?",
       "revId": "36d3d2b738c801febd4bde0f3aeb149b1c78635e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4cb8a9b6_fa1e98f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-02-11T13:41:52Z",
+      "side": 1,
+      "message": "Looks like the issue is no longer present. Will abandon",
+      "parentUuid": "db0b0b94_f2d4b315",
+      "revId": "36d3d2b738c801febd4bde0f3aeb149b1c78635e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
