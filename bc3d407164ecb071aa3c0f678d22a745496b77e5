@@ -16,6 +16,24 @@
       "message": "We\u0027ll want this until Aurora Store ships the Android 12 update I guess?",
       "revId": "bc3d407164ecb071aa3c0f678d22a745496b77e5",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36c6cd96_55b27361",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-11T14:22:44Z",
+      "side": 1,
+      "message": "Yeah, good to have till then",
+      "parentUuid": "639ce1cb_906d955a",
+      "revId": "bc3d407164ecb071aa3c0f678d22a745496b77e5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
