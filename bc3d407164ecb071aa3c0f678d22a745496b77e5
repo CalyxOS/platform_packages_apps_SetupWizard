@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "639ce1cb_906d955a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-02-11T13:26:32Z",
+      "side": 1,
+      "message": "We\u0027ll want this until Aurora Store ships the Android 12 update I guess?",
+      "revId": "bc3d407164ecb071aa3c0f678d22a745496b77e5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
