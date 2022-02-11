@@ -33,6 +33,23 @@
       "message": "Related: https://gitlab.com/CalyxOS/calyxos/-/issues/703\nI think we can revisit this in 12 once we port redesign",
       "revId": "36d3d2b738c801febd4bde0f3aeb149b1c78635e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db0b0b94_f2d4b315",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-11T12:31:22Z",
+      "side": 1,
+      "message": "How\u0027s this looking on 12 with the new internet page?",
+      "revId": "36d3d2b738c801febd4bde0f3aeb149b1c78635e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
