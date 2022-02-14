@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ba635c8f_62071257",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-14T10:38:25Z",
+      "side": 1,
+      "message": "Could also disable this on debug builds to make things easier for us.",
+      "revId": "ab812523c7a8598309c0af0830bc6d0dc44812d2",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
