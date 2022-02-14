@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a56b99c4_a3687e49",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-14T16:07:53Z",
+      "side": 1,
+      "message": "Best solution would be a dedicated eSIM page in the future.",
+      "revId": "b3ceb081b7f4921c99041806ad24bbfd26503459",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
