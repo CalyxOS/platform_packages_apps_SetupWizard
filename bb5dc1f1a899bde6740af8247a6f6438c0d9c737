@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "319f5cd2_37a3416d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-14T15:57:49Z",
+      "side": 1,
+      "message": "Tap 4 times anywhere to skip setupwizard.\n\nMuch easier and faster",
+      "revId": "bb5dc1f1a899bde6740af8247a6f6438c0d9c737",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
