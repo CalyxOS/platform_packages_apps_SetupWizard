@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d5afa542_03b2d7ad",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 17
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-14T19:30:17Z",
+      "side": 1,
+      "message": "Need to linkify and then setup page.\n\nClicking it won\u0027t be useful (mobile data off, wifi not setup), however it would still stand out.",
+      "revId": "3033e8c7ae4b2b111aafd77e22a7386a00c2c81b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
