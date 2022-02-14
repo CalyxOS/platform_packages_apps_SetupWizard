@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4a525c0b_b2093d00",
+        "filename": "src/org/lineageos/setupwizard/BootloaderWarningActivity.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-14T16:25:34Z",
+      "side": 1,
+      "message": "This was ok for old suw layout, but not the new one.",
+      "revId": "ab812523c7a8598309c0af0830bc6d0dc44812d2",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ba635c8f_62071257",
         "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
         "patchSetId": 16
