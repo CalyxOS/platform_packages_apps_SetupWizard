@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3360603c_5b8a36aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-02-17T17:00:29Z",
+      "side": 1,
+      "message": "Need to check if there\u0027s a way to modify this after suw",
+      "revId": "f236fb2b8198ef67d2b9126b3eaf8827b356f060",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
