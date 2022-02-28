@@ -33,6 +33,24 @@
       "message": "I don\u0027t know if en-US is right here. All we get from this is an \u0027icon.png\u0027 so it has to be added.\n\nWe also don\u0027t have https://gitlab.com/fdroid/fdroidclient/-/commit/a500660a41463c4bcaed1246def61db10fb8fd0f#1929a60e1ddb78e0ff34c3fef115fe04be707386",
       "revId": "081a9db5786e1bc61f05511496f5b3a49e556540",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "99120853_c7b3438f",
+        "filename": "src/org/calyxos/setupwizard/apps/FDroidRepo.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-28T19:08:48Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "990f3f43_c54504f8",
+      "revId": "081a9db5786e1bc61f05511496f5b3a49e556540",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
