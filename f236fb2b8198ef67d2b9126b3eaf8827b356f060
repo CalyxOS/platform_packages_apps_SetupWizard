@@ -68,6 +68,24 @@
       "message": "https://gitlab.com/CalyxOS/platform_packages_apps_SetupWizard/-/blob/android12/src/org/lineageos/setupwizard/LocationSettingsActivity.java#L43\n\nBut SuW runs in user 0?\n\nUnless this is quickly fixable, let\u0027s just hold it, nbd.",
       "revId": "f236fb2b8198ef67d2b9126b3eaf8827b356f060",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2211a3eb_6a53ca54",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-02-28T19:04:20Z",
+      "side": 1,
+      "message": "It\u0027s not supposed to be running in user 0. LineageSettings.Secure grabbing the user id from content resolver is the proper way of doing things. USER_CURRENT is probably what\u0027s messing up",
+      "parentUuid": "83b55a68_6c7712ee",
+      "revId": "f236fb2b8198ef67d2b9126b3eaf8827b356f060",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
