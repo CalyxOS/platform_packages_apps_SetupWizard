@@ -34,6 +34,23 @@
       "parentUuid": "3360603c_5b8a36aa",
       "revId": "f236fb2b8198ef67d2b9126b3eaf8827b356f060",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "876ed047_9b3472cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-28T19:00:38Z",
+      "side": 1,
+      "message": "This turns off location globally.\n\nLikely need to tweak SuW page to set it per-user",
+      "revId": "f236fb2b8198ef67d2b9126b3eaf8827b356f060",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
