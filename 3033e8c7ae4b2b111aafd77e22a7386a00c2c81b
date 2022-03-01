@@ -16,6 +16,24 @@
       "message": "Need to linkify and then setup page.\n\nClicking it won\u0027t be useful (mobile data off, wifi not setup), however it would still stand out.",
       "revId": "3033e8c7ae4b2b111aafd77e22a7386a00c2c81b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64a0ff1c_4d8da1cb",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 17
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-01T13:43:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d5afa542_03b2d7ad",
+      "revId": "3033e8c7ae4b2b111aafd77e22a7386a00c2c81b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
