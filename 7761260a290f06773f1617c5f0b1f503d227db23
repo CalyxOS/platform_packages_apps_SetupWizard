@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "08a704e8_7f655e7c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-01T17:00:03Z",
+      "side": 1,
+      "message": "`m CalyxSetupWizard \u0026\u0026 adb sync \u0026\u0026 adb shell stop \u0026\u0026 adb shell start`",
+      "revId": "7761260a290f06773f1617c5f0b1f503d227db23",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
