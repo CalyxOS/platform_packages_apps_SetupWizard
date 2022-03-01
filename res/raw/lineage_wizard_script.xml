@@ -21,41 +21,6 @@
     wizard:firstAction="bluetooth_setup">
 
     <WizardAction wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_BLUETOOTH_SETUP;end" id="bluetooth_setup">
-        <result wizard:action="welcome" />
-    </WizardAction>
-
-    <WizardAction wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_WELCOME;end" id="welcome">
-        <result wizard:action="locale" />
-    </WizardAction>
-    <WizardAction wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_LOCALE;end" id="locale">
-        <result wizard:action="bootloader" />
-    </WizardAction>
-
-    <WizardAction wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_BOOTLOADER_WARNING;end" id="bootloader">
-        <result wizard:action="datetime" />
-    </WizardAction>
-
-    <WizardAction wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_DATETIME;end" id="datetime">
-        <result wizard:action="network_setup" />
-    </WizardAction>
-
-    <WizardAction wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_NETWORK_SETUP;end" id="network_setup">
-        <result wizard:action="sim_missing" />
-    </WizardAction>
-
-    <WizardAction wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_SIM_MISSING;end" id="sim_missing">
-        <result wizard:action="location_settings" />
-    </WizardAction>
-
-    <WizardAction wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_LOCATION_SETTINGS;end" id="location_settings">
-        <result wizard:action="biometric_settings" />
-    </WizardAction>
-
-    <WizardAction wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_BIOMETRIC_SETTINGS;end" id="biometric_settings">
-        <result wizard:action="lockscreen_settings" />
-    </WizardAction>
-
-    <WizardAction wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_LOCKSCREEN_SETTINGS;end" id="lockscreen_settings">
         <result wizard:action="microg" />
     </WizardAction>
 
