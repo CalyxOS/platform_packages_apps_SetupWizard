@@ -41,25 +41,6 @@
                 android:textAllCaps="true"
                 style="@style/SudGlifButton.Primary" />
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fillViewport="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/SudItemTitle.GlifDescription"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/bootloader_warning_summary" />
-
-                </LinearLayout>
-            </ScrollView>
-
         </FrameLayout>
 
         <org.lineageos.setupwizard.NavigationLayout
