@@ -29,17 +29,6 @@
         android:layout_height="match_parent"
         style="@style/SudContentFrame">
 
-        <TextView
-            style="@style/SudItemTitle.GlifDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="@dimen/content_margin_left"
-            android:paddingEnd="@dimen/content_margin_right"
-            android:paddingTop="@dimen/summary_margin_bottom"
-            android:paddingBottom="@dimen/summary_margin_bottom"
-            android:text="@string/install_apps_subtitle"
-            android:textSize="15sp" />
-
         <include layout="@layout/divider" />
 
         <LinearLayout

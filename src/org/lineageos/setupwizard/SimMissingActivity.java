@@ -50,7 +50,6 @@ public class SimMissingActivity extends SubBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getGlifLayout().setDescriptionText(getString(R.string.sim_missing_summary));
         mPhoneMonitor = PhoneMonitor.getInstance();
         if (!mPhoneMonitor.simMissing()) {
             finishAction(RESULT_OK);
@@ -63,9 +62,12 @@ public class SimMissingActivity extends SubBaseActivity {
         EuiccManager euiccManager = (EuiccManager) getSystemService(Context.EUICC_SERVICE);
         if (euiccManager.isEnabled() && NetworkMonitor.getInstance().isNetworkConnected()
                 && SystemProperties.getBoolean(KEY_ENABLE_ESIM_UI_BY_DEFAULT, true)) {
+            getGlifLayout().setDescriptionText(getString(R.string.sim_missing_full_description,
+                    getString(R.string.sim_missing_summary),
+                    getString(R.string.euicc_summary)));
             findViewById(R.id.setup_euicc).setOnClickListener(v -> launchEuiccSetup());
         } else {
-            findViewById(R.id.euicc).setVisibility(View.GONE);
+            getGlifLayout().setDescriptionText(getString(R.string.sim_missing_summary));
             findViewById(R.id.setup_euicc).setVisibility(View.GONE);
         }
     }
