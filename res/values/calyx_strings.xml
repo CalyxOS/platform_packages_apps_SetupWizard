@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2020 The Calyx Institute
+     Copyright (C) 2020-2022 The Calyx Institute
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Managed profile -->
     <string name="lineage_wizard_script_managed_profile_uri" translatable="false">android.resource://org.lineageos.setupwizard/raw/lineage_wizard_script_managed_profile</string>
 
@@ -45,6 +45,7 @@
 
     <!-- eSIM setup -->
     <string name="euicc_summary">You can also add an eSIM to your device.</string>
+    <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>\n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
     <string name="setup_euicc">Setup eSIM</string>
 
     <!-- Bootloader Lock Status -->

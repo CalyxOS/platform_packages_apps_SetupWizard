@@ -32,6 +32,7 @@ public class BootloaderWarningActivity extends BaseSetupWizardActivity {
             PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
             pm.reboot("bootloader");
         });
+        getGlifLayout().setDescriptionText(getString(R.string.bootloader_warning_summary));
         setNextAllowed(false);
     }
 

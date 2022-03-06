@@ -52,16 +52,6 @@
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/microg_logo" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="@dimen/content_margin_left"
-                        android:paddingRight="@dimen/content_margin_right"
-                        android:paddingBottom="@dimen/summary_margin_bottom"
-                        android:text="@string/microg_description"
-                        android:textSize="15sp"
-                        style="@style/SudItemTitle.GlifDescription" />
-
                     <include layout="@layout/divider" />
 
                     <LinearLayout

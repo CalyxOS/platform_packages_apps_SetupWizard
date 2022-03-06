@@ -49,6 +49,7 @@ public class MicroGActivity extends BaseSetupWizardActivity {
         super.onCreate(savedInstanceState);
 
         setNextText(R.string.next);
+        getGlifLayout().setDescriptionText(getString(R.string.microg_description));
 
         enableSwitch = findViewById(R.id.enableSwitch);
         findViewById(R.id.switchLayout).setOnClickListener(v -> enableSwitch.toggle());
