@@ -10,4 +10,7 @@
     <string name="install_apps_title">Další aplikace</string>
     <string name="euicc_summary">Do zařízení můžete také přidat kartu eSIM.</string>
     <string name="setup_euicc">Nastavit eSIM</string>
+    <string name="bootloader_warning_title">Varování zámku bootloaderu</string>
+    <string name="reboot">Restartovat</string>
+    <string name="bootloader_warning_summary">Bootloader tohoto zařízení je momentálně odemknutý. Prosím zamkněte bootloader z počítače. Pro více informací navštivte <a href="https://calyxos.org/lock">calyxos.org/lock</a>.</string>
 </resources>
