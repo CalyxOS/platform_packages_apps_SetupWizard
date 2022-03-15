@@ -32,6 +32,7 @@
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="android.permission.MASTER_CLEAR" />
     </privapp-permissions>
+    <!-- Any permissions added below must also be added above. -->
     <privapp-permissions package="org.lineageos.setupwizard">
         <permission name="android.permission.BACKUP"/>
         <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
