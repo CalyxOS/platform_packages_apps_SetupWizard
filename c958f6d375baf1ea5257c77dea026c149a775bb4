@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ccb24d64_d4840f46",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-15T22:19:10Z",
+      "side": 1,
+      "message": "Works, did blueline latest 11 -\u003e 12L this patch without issue.\n\nlogcat\n\u003e W PackageManager: New package org.lineageos.setupwizard renamed to replace old package org.calyxos.setupwizar\n\nBooted fine.\n\npm dump org.calyxos.setupwizard\n\u003e android.permission.REBOOT: granted\u003dtrue",
+      "revId": "c958f6d375baf1ea5257c77dea026c149a775bb4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
