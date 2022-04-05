@@ -10,4 +10,7 @@
     <string name="install_apps_title">Aplicativos adicionais</string>
     <string name="setup_euicc">Configuração do eSIM</string>
     <string name="euicc_summary">Você também pode adicionar um eSIM para o seu dispositivo.</string>
+    <string name="bootloader_warning_title">Aviso de bloqueio do bootloader</string>
+    <string name="bootloader_warning_summary">O bootloader deste dispositivo está desbloqueado no momento. Por favor, bloqueie o bootloader de um computador. Visite <a href="https://calyxos.org/lock">calyxos.org/lock</a> para mais informações.</string>
+    <string name="reboot">Reiniciar</string>
 </resources>

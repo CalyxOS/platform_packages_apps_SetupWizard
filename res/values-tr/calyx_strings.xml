@@ -10,4 +10,7 @@
     <string name="install_apps_title">Ek uygulamalar</string>
     <string name="setup_euicc">eSIM kur</string>
     <string name="euicc_summary">Ayrıca aygıtınıza bir eSIM ekleyebilirsiniz.</string>
+    <string name="reboot">Yeniden başlat</string>
+    <string name="bootloader_warning_title">Önyükleyici kilidi uyarısı</string>
+    <string name="bootloader_warning_summary">Bu aygıtın önyükleyicisinin kilidi şu anda açık. Lütfen önyükleyiciyi bir bilgisayardan kilitleyin. Daha fazla bilgi için <a href="https://calyxos.org/lock">calyxos.org/lock</a> adresini ziyaret edin.</string>
 </resources>
