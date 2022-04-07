@@ -20,6 +20,9 @@ import android.annotation.Nullable;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.widget.Button;
+
+import com.google.android.setupcompat.template.FooterButtonStyleUtils;
 
 public class BootloaderWarningActivity extends BaseSetupWizardActivity {
 
@@ -32,6 +35,8 @@ public class BootloaderWarningActivity extends BaseSetupWizardActivity {
             PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
             pm.reboot("bootloader");
         });
+        Button rebootButton = findViewById(R.id.reboot_bootloader);
+        FooterButtonStyleUtils.applyPrimaryButtonPartnerResource(this, rebootButton, true);
         getGlifLayout().setDescriptionText(getString(R.string.bootloader_warning_summary));
         setNextAllowed(false);
     }
