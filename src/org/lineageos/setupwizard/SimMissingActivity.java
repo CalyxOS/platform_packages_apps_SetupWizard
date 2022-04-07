@@ -27,8 +27,10 @@ import android.service.euicc.EuiccService;
 import android.telephony.euicc.EuiccManager;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
+import com.google.android.setupcompat.template.FooterButtonStyleUtils;
 import com.google.android.setupcompat.util.ResultCodes;
 import com.google.android.setupcompat.util.WizardManagerHelper;
 
@@ -65,7 +67,9 @@ public class SimMissingActivity extends SubBaseActivity {
             getGlifLayout().setDescriptionText(getString(R.string.sim_missing_full_description,
                     getString(R.string.sim_missing_summary),
                     getString(R.string.euicc_summary)));
-            findViewById(R.id.setup_euicc).setOnClickListener(v -> launchEuiccSetup());
+            Button setupEuiccButton = findViewById(R.id.setup_euicc);
+            setupEuiccButton.setOnClickListener(v -> launchEuiccSetup());
+            FooterButtonStyleUtils.applyPrimaryButtonPartnerResource(this, setupEuiccButton, true);
         } else {
             getGlifLayout().setDescriptionText(getString(R.string.sim_missing_summary));
             findViewById(R.id.setup_euicc).setVisibility(View.GONE);
