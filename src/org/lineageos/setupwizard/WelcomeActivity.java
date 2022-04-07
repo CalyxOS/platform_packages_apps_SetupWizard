@@ -94,8 +94,11 @@ public class WelcomeActivity extends BaseSetupWizardActivity {
                         Rect viewRect = new Rect();
                         int[] leftTop = new int[2];
 
-                        findViewById(R.id.factory_reset).setOnClickListener(
+                        Button factoryResetButton = findViewById(R.id.factory_reset);
+                        factoryResetButton.setOnClickListener(
                                 v -> factoryResetAndShutdown());
+                        FooterButtonStyleUtils.applyPrimaryButtonPartnerResource(
+                                WelcomeActivity.this, factoryResetButton, true);
 
                         mBrandLogoView.getLocationOnScreen(leftTop);
                         viewRect.set(leftTop[0], leftTop[1],
