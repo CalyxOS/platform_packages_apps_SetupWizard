@@ -10,4 +10,7 @@
     <string name="microg_warning">Nota: Si ho habiliteu ara, el telèfon es configurarà per enviar dades a Google. Pots canviar-ho més tard a la configuració del microG.</string>
     <string name="euicc_summary">També pots afegir un eSIM al teu dispositiu.</string>
     <string name="setup_euicc">Configuració eSIM</string>
+    <string name="bootloader_warning_title">Avís de bloqueig del carregador d\'arrencada</string>
+    <string name="bootloader_warning_summary">El carregador d\'arrencada d\'aquest dispositiu està desbloquejat. Bloqueja el carregador d\'arrencada des d\'un ordinador. Visiteu <a href="https://calyxos.org/lock">calyxos.org/lock</a> per a més informació.</string>
+    <string name="reboot">Reiniciar</string>
 </resources>
