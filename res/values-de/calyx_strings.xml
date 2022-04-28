@@ -10,4 +10,7 @@
     <string name="install_apps_title">Zusätzliche Apps</string>
     <string name="setup_euicc">eSIM einrichten</string>
     <string name="euicc_summary">Sie können auch eine eSIM zu ihrem Gerät hinzufügen.</string>
+    <string name="reboot">Neustart</string>
+    <string name="bootloader_warning_title">Warnung Bootloader-Sperre</string>
+    <string name="bootloader_warning_summary">Der Bootloader dieses Geräts ist derzeit entsperrt. Bitte sperren Sie den Bootloader von einem Computer aus. Besuchen Sie <a href="https://calyxos.org/lock">calyxos.org/lock</a> für weitere Informationen.</string>
 </resources>

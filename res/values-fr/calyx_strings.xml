@@ -10,4 +10,7 @@
     <string name="install_apps_title">Applis supplémentaires</string>
     <string name="euicc_summary">Vous pouvez aussi ajouter une eSIM a votre appareil.</string>
     <string name="setup_euicc">Installation eSIM</string>
+    <string name="reboot">Redémarrer</string>
+    <string name="bootloader_warning_title">Avertissement de verrouillage du chargeur de démarrage</string>
+    <string name="bootloader_warning_summary">Le chargeur de démarrage de cet appareil est actuellement déverrouillé. Veuillez verrouiller le bootloader depuis un ordinateur. Visitez <a href="https://calyxos.org/lock">calyxos.org/lock</a> pour plus d\'informations.</string>
 </resources>

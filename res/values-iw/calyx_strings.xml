@@ -10,4 +10,7 @@
     <string name="install_apps_title">יישומונים נוספים</string>
     <string name="setup_euicc">הגדרת eSIM</string>
     <string name="euicc_summary">ניתן גם להוסיף eSIM למכשיר שלך.</string>
+    <string name="bootloader_warning_title">אזהרת נעילת טוען המערכת</string>
+    <string name="reboot">הפעלה מחדש</string>
+    <string name="bootloader_warning_summary">טוען המערכת (ה־Bootloader) אינו נעול כרגע. נא לנעול את טוען המערכת דרך המחשב. יש לבקר בכתובת <a href="https://calyxos.org/lock">calyxos.org/lock</a> למידע נוסף.</string>
 </resources>
