@@ -10,4 +10,7 @@
     <string name="install_apps_title">Πρόσθετες εφαρμογές</string>
     <string name="euicc_summary">Μπορείτε επίσης να προσθέσετε μια eSIM στη συσκευή σας.</string>
     <string name="setup_euicc">Ρύθμιση eSIM</string>
+    <string name="bootloader_warning_summary">Το bootloader αυτής της συσκευής είναι προς το παρόν ξεκλείδωτο. Παρακαλώ κλειδώστε το bootloader από έναν υπολογιστή. Επισκεφθείτε το <a href="https://calyxos.org/lock">calyxos.org/lock</a> για περισσότερες πληροφορίες.</string>
+    <string name="reboot">Επανεκκίνηση</string>
+    <string name="bootloader_warning_title">Προειδοποίηση κλειδώματος bootloader</string>
 </resources>
