@@ -18,7 +18,6 @@
 package org.lineageos.setupwizard;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Rect;
 import android.os.Build;
 import android.os.Bundle;
@@ -140,24 +139,24 @@ public class WelcomeActivity extends BaseSetupWizardActivity {
         if (bootloaderUnlocked) {
             // Bootloader unlocked, bad.
             bootloaderStatus.setText(R.string.bootloader_unlocked);
-            bootloaderStatus.setTextColor(Color.RED);
+            bootloaderStatus.setTextColor(getColor(R.color.red));
             // OEM Unlocking is greyed out when bootloader is unlocked
             oemunlockStatus.setText(R.string.oemunlock_na);
-            oemunlockStatus.setTextColor(Color.YELLOW);
+            oemunlockStatus.setTextColor(getColor(R.color.yellow));
         } else {
             // Bootloader locked, good.
             bootloaderStatus.setText(R.string.bootloader_locked);
-            bootloaderStatus.setTextColor(Color.GREEN);
+            bootloaderStatus.setTextColor(getColor(R.color.green));
             if (oemunlockAllowed) {
                 // OEM Unlocking allowed, bad.
                 // Should never reach this since we now disable
                 // OEM Unlocking in SetupWizardApp.onCreate()
                 oemunlockStatus.setText(R.string.oemunlock_allowed);
-                oemunlockStatus.setTextColor(Color.RED);
+                oemunlockStatus.setTextColor(getColor(R.color.red));
             } else {
                 // OEM Unlocking not allowed, good.
                 oemunlockStatus.setText(R.string.oemunlock_notallowed);
-                oemunlockStatus.setTextColor(Color.GREEN);
+                oemunlockStatus.setTextColor(getColor(R.color.green));
             }
         }
     }

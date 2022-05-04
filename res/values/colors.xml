@@ -26,6 +26,11 @@
     <color name="lineage_accent">#167C80</color>
     <color name="primary_text">#8a000000</color>
     <color name="secondary_text">#42000000</color>
+
+    <color name="red">#a30000</color>
+    <color name="yellow">#c7a500</color>
+    <color name="green">#1faa00</color>
+
     <color name="button_bar_text_enabled">#ff1e1e1e</color>
     <color name="button_bar_text_disabled">#321e1e1e</color>
     <color name="divider">#40000000</color>
