@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources>
-    <style name="Theme.Setup" parent="@style/SudFullDynamicColorThemeGlifV3.DayNight">
+    <style name="Theme.Setup" parent="@style/SudFullDynamicColorThemeGlifV3.Light">
         <item name="sucUsePartnerResource">true</item>
         <item name="sudUsePartnerHeavyTheme">true</item>
     </style>
