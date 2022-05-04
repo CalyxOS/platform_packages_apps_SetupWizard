@@ -8,4 +8,8 @@
     <color name="accent">?attr/colorAccent</color>
 
     <color name="divider">#40ffffff</color>
+
+    <color name="red">#ff6434</color>
+    <color name="yellow">#ffff52</color>
+    <color name="green">#9cff57</color>
 </resources>
