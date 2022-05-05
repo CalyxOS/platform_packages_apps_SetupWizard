@@ -21,25 +21,25 @@
     android:viewportHeight="322.8">
 
     <path
-        android:fillColor="#231F20"
+        android:fillColor="@color/calyx_logo_accent"
         android:pathData="M439.05,196.34h1.46c9.77,0 13.14,-7.3 13.14,-17.51h27.73v1.31c0,29.33 -14.45,40.13 -42.33,40.13c-30.65,0 -44.07,-16.63 -44.07,-56.04v-5.83c0,-39.4 13.43,-56.04 44.07,-56.04c27.87,0 42.33,10.81 42.33,40.13v5.7h-27.73c0,-13.14 -2.19,-21.89 -13.14,-21.89h-1.46c-13.86,0 -15.91,12.41 -15.91,32.1v5.83C423.14,183.94 425.19,196.34 439.05,196.34"/>
     <path
-        android:fillColor="#231F20"
+        android:fillColor="@color/calyx_logo_accent"
         android:pathData="M520.15,171.24h14.01l-7.01,-34.73L520.15,171.24zM546.12,104.4l27.15,113.83H543.64l-4.67,-23.06h-23.64l-4.53,23.06h-29.77l27.14,-113.83H546.12z"/>
     <path
-        android:fillColor="#231F20"
+        android:fillColor="@color/calyx_logo_accent"
         android:pathData="M580.01,218.23l0,-113.84l27.73,0l0,89.9l40.13,0l0,23.93z"/>
     <path
-        android:fillColor="#231F20"
+        android:fillColor="@color/calyx_logo_accent"
         android:pathData="M690.93,218.23l-27.73,0l0,-35.03l-32.25,-78.81l30.36,0l15.76,44.66l15.76,-44.66l30.36,0l-32.25,78.81z"/>
     <path
-        android:fillColor="#231F20"
+        android:fillColor="@color/calyx_logo_accent"
         android:pathData="M756.14,157.96l-26.27,-53.56l32.11,0l13.86,34.73l13.86,-34.73l32.11,0l-26.42,53.56l26.42,60.27l-30.65,0l-15.32,-38.68l-15.33,38.68l-30.65,0z"/>
     <path
         android:fillColor="#9ACC01"
         android:pathData="M366.82,162.07c-29.23,51.1 -84.28,85.54 -147.37,85.54c-63.09,0 -118.13,-34.44 -147.37,-85.54c29.23,-51.1 84.28,-85.54 147.37,-85.54C282.54,76.53 337.59,110.96 366.82,162.07"/>
     <path
-        android:fillColor="#231F20"
+        android:fillColor="@color/calyx_logo_accent"
         android:pathData="M310.91,255.31l-25.83,-47.5c8.94,-13.01 14.16,-28.76 14.16,-45.74c0,-44.67 -36.21,-80.88 -80.88,-80.88s-80.88,36.21 -80.88,80.88c0,44.67 36.21,80.88 80.88,80.88c16.91,0 32.6,-5.19 45.58,-14.06l46.95,26.43L310.91,255.31z"/>
     <path
         android:fillColor="#9ACC01"
