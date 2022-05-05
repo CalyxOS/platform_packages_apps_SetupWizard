@@ -12,4 +12,6 @@
     <color name="red">#ff6434</color>
     <color name="yellow">#ffff52</color>
     <color name="green">#9cff57</color>
+
+    <color name="calyx_logo_accent">#FFFFFF</color>
 </resources>
