@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
- * Copyright (C) 2017-2021 The LineageOS Project
+ *               2017-2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,6 +30,7 @@ import android.os.Handler;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.NumberPicker;
 import android.widget.Toast;
@@ -81,6 +82,13 @@ public class LocaleActivity extends BaseSetupWizardActivity {
         SystemBarHelper.setBackButtonVisible(getWindow(), true);
         setNextText(R.string.next);
         mLanguagePicker = (LocalePicker) findViewById(R.id.locale_list);
+        mLanguagePicker.setNextRight(getNextButton().getId());
+        mLanguagePicker.requestFocus();
+        if (getResources().getBoolean(R.bool.config_isLargeNoTouch)) {
+            mLanguagePicker.setOnClickListener((View v) -> {
+                getNextButton().performClick();
+            });
+        }
         loadLanguages();
     }
 

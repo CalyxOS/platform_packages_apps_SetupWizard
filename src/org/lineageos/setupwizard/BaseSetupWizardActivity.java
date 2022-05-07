@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
- * Copyright (C) 2017-2021 The LineageOS Project
+ *               2017-2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -247,6 +247,10 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
         }
     }
 
+    public Button getNextButton() {
+        return mNavigationBar.getNextButton();
+    }
+
     protected void setSkipText(int resId) {
         if (mNavigationBar != null) {
             mNavigationBar.getSkipButton().setText(resId);
@@ -299,8 +303,9 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
 
     protected void startAccessibilitySettings() {
         try {
-            startFirstRunActivityForResult(new Intent(ACTION_ACCESSIBILITY_SETTINGS),
-                    ACCESSIBILITY_SETTINGS_ACTIVITY_REQUEST);
+            Intent intent = new Intent(ACTION_ACCESSIBILITY_SETTINGS);
+            intent.putExtra(WizardManagerHelper.EXTRA_IS_SETUP_FLOW, true);
+            startFirstRunActivityForResult(intent, ACCESSIBILITY_SETTINGS_ACTIVITY_REQUEST);
             applyForwardTransition(TRANSITION_ID_DEFAULT);
         } catch (ActivityNotFoundException e) {
             Log.e(TAG, "Can't find the accessibility settings: " +

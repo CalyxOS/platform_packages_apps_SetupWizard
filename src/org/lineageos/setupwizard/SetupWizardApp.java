@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2013 The CyanogenMod Project
- * Copyright (C) 2017-2021 The LineageOS Project
+ * Copyright (C) 2017-2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -79,6 +79,8 @@ public class SetupWizardApp extends Application {
     // Must match F-Droid's UpdateService JOB_ID
     public static final int FDROID_UPDATE_JOB_ID = 0xfedcba;
     public static final String PACKAGENAMES = "packageNames";
+
+    public static final String NAVIGATION_OPTION_KEY = "navigation_option";
 
     public static final int REQUEST_CODE_SETUP_NETWORK = 0;
     public static final int REQUEST_CODE_SETUP_CAPTIVE_PORTAL = 4;
