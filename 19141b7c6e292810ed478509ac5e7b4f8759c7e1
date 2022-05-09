@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b073745d_e79e1712",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-05-09T22:07:54Z",
+      "side": 1,
+      "message": "I\u0027d put this in some other app tbh.\n\nLet\u0027s not put it in the one app we expect to\n1) Be disabled for existing users, for whom this is needed\n2) Always run for new users, who don\u0027t need this.",
+      "revId": "19141b7c6e292810ed478509ac5e7b4f8759c7e1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0c7735e1_b0405b4b",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-05-09T22:07:54Z",
+      "side": 1,
+      "message": "Solely to avoid this 😊",
+      "revId": "19141b7c6e292810ed478509ac5e7b4f8759c7e1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
