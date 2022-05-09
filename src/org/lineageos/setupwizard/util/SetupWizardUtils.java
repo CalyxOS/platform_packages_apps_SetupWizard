@@ -213,7 +213,7 @@ public class SetupWizardUtils {
         context.sendStickyBroadcastAsUser(
                 new Intent(SetupWizardApp.ACTION_FINISHED),
                 Binder.getCallingUserHandle());
-        disableComponentSets(context, GET_RECEIVERS | GET_SERVICES);
+        disableComponentSets(context, 0);
         enableStatusBar(context);
 
         sendMicroGCheckInBroadcast(context);
