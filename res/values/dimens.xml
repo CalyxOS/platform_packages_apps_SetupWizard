@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2013 The CyanogenMod Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -35,4 +36,15 @@
     <dimen name="carrier_text_margin_left">15dp</dimen>
     <dimen name="setup_line_spacing">3sp</dimen>
     <dimen name="min_locale_picker_height">100dp</dimen>
+    <dimen name="base_margin_top">0dp</dimen>
+
+    <dimen name="welcome_content_container_padding_top">100dp</dimen>
+    <dimen name="welcome_content_container_padding_bottom">30dp</dimen>
+    <dimen name="welcome_content_container_padding_end">24dp</dimen>
+    <dimen name="welcome_content_container_padding_start">40dp</dimen>
+    <dimen name="welcome_title_text_size">56sp</dimen>
+    <dimen name="welcome_title_padding_bottom">16dp</dimen>
+    <dimen name="welcome_title_line_height">64dp</dimen>
+    <dimen name="welcome_accessibility_text_size">20sp</dimen>
+
 </resources>

@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
- * Copyright (C) 2017-2021 The LineageOS Project
+ *               2017-2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,32 +45,15 @@ public class SimMissingActivity extends SubBaseActivity {
     private static final String KEY_ENABLE_ESIM_UI_BY_DEFAULT =
             "esim.enable_esim_system_ui_by_default";
 
-    private static final int SIM_DEFAULT = 0;
-    private static final int SIM_SIDE = 1;
-    private static final int SIM_BACK = 2;
-
     private PhoneMonitor mPhoneMonitor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getGlifLayout().setDescriptionText(getString(R.string.sim_missing_summary));
         mPhoneMonitor = PhoneMonitor.getInstance();
         if (!mPhoneMonitor.simMissing()) {
             finishAction(RESULT_OK);
-        }
-        final int simLocation = getResources().getInteger(
-                R.integer.sim_image_type);
-        ImageView simLogo = ((ImageView) findViewById(R.id.sim_slot_image));
-        switch (simLocation) {
-            case SIM_SIDE:
-                simLogo.setImageResource(R.drawable.sim_side);
-                break;
-            case SIM_BACK:
-                simLogo.setImageResource(R.drawable.sim_back);
-                break;
-            default:
-                simLogo.setImageResource(R.drawable.sim);
-                simLogo.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         }
     }
 
