@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dbe6a4ce_50009bdc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-05-18T00:44:48Z",
+      "side": 1,
+      "message": "Will need to fix wifi page in settings separately.",
+      "revId": "cb9602652dd50b4ec7fd38e1e7fbd79c8f931f85",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
