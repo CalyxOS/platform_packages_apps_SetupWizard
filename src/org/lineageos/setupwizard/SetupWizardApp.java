@@ -17,16 +17,22 @@
 
 package org.lineageos.setupwizard;
 
+import static android.os.UserHandle.USER_CURRENT;
+import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
+
 import android.app.AppOpsManager;
 import android.app.Application;
 import android.app.job.JobInfo;
 import android.app.job.JobScheduler;
 import android.app.StatusBarManager;
 import android.content.ComponentName;
+import android.content.Context;
+import android.content.om.IOverlayManager;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Process;
+import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.service.oemlock.OemLockManager;
 import android.util.Log;
@@ -129,6 +135,16 @@ public class SetupWizardApp extends Application {
         } catch (PackageManager.NameNotFoundException e) {
 
         }
+        if (SetupWizardUtils.isOwner()
+                && SetupWizardUtils.isPackageInstalled(this, NAV_BAR_MODE_GESTURAL_OVERLAY)) {
+            IOverlayManager overlayManager = IOverlayManager.Stub.asInterface(
+                    ServiceManager.getService(Context.OVERLAY_SERVICE));
+            try {
+                overlayManager.setEnabledExclusiveInCategory(NAV_BAR_MODE_GESTURAL_OVERLAY,
+                    USER_CURRENT);
+            } catch (Exception e) {}
+        }
+
     }
 
     public static StatusBarManager getStatusBarManager() {
