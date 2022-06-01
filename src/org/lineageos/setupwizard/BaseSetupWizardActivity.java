@@ -314,8 +314,10 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
     }
 
     protected void onSetupStart() {
-        SetupWizardUtils.disableCaptivePortalDetection(getApplicationContext());
-        tryEnablingWifi();
+        if (SetupWizardUtils.isOwner()) {
+            SetupWizardUtils.disableCaptivePortalDetection(getApplicationContext());
+            tryEnablingWifi();
+        }
     }
 
     protected void exitIfSetupComplete() {
