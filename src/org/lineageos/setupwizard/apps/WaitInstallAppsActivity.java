@@ -43,8 +43,6 @@ public class WaitInstallAppsActivity extends BaseSetupWizardActivity {
 
     public static final String TAG = WaitInstallAppsActivity.class.getSimpleName();
 
-    private static final String DEFAULT_BROWSER = "com.duckduckgo.mobile.android";
-
     private final Handler mHandler = new Handler();
 
     private ProgressBar mProgressBar;
@@ -103,12 +101,6 @@ public class WaitInstallAppsActivity extends BaseSetupWizardActivity {
     @Override
     protected int getLayoutResId() {
         return R.layout.wait_install_apps_activity;
-    }
-
-    @Override
-    public void onNextPressed() {
-        getPackageManager().setDefaultBrowserPackageNameAsUser(DEFAULT_BROWSER, getUserId());
-        super.onNextPressed();
     }
 
     private void afterAppsInstalled() {
