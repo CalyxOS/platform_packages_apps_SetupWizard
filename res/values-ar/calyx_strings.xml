@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="microg_warning">ملاحظة: إذا قمت بتفعيل هذا, هاتفك سيقوم بإرسال بيانات الي جوجل. يمكنك تغيير هذا الاختيار لاحقا في إعدادات microG.</string>
-    <string name="microg_switch_label">تفعيل توافقية خدمات جوجل</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="microg_warning">ملاحظة: إذا قمت بتفعيل هذا الخيار اﻵن، هاتفك سيقوم بإرسال بيانات لـ Google. يمكنك تغيير هذا الخيار لاحقًا في إعدادات microG.</string>
+    <string name="microg_switch_label">فعل توافقية خدمات Google</string>
     <string name="microg_description">هذا يسمح لتطبيقات مثل<b>خرائط جوجل , يوتيوب , ride بإستخدام خدمات المشاركة</b>للعمل علي نظام Calyx. قم بتعطيل هذا الاختيار إذا كنت لا تخطط لإستخدام التطبيقات التي تحتاج الي خدمات جوجل. لن تتمكن من تفعيل هذا الاختيار فيما بعد.</string>
-    <string name="microg_title">خدمات جوجل</string>
-    <string name="waiting_for_apps">يرجى الانتظار حتى ننتهي من إعداد جهازك.</string>
-    <string name="install_apps_select_all">كل التطبيقات التالية</string>
-    <string name="install_apps_subtitle"><b>عرض التطبيقات الإضافية</b>يمكنك أيضا تثبيتهم لاحقا.</string>
+    <string name="microg_title">خدمات Google</string>
+    <string name="waiting_for_apps">يرجى الانتظار حتى ننتهي إعداد جهازك.</string>
+    <string name="install_apps_select_all">جميع التطبيقات التالية</string>
+    <string name="install_apps_subtitle"><b>راجع التطبيقات اﻹضافية.</b> يمكنك تثبيتهم لاحقًا أيضًا.</string>
     <string name="install_apps_title">التطبيقات الإضافية</string>
+    <string name="bootloader_warning_title">تحذير قُفْل Bootloader</string>
+    <string name="bootloader_warning_summary">محمل الإقلاع لهذا الجهاز غير مغلق حاليًا. الرجاء الأغلاق محمل الإقلاع من جهاز الحاسوب. تفضل بزيارة <a href="https://calyxos.org/lock"> calyxos.org/lock </a> لمزيد من المعلومات.</string>
+    <string name="euicc_summary">يمكنك أيضًا إضافة eSIM إلى جهازك.</string>
+    <string name="setup_euicc">إعداد eSIM</string>
+    <string name="reboot">اعادة التشغيل</string>
+    <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
+\n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
 </resources>
