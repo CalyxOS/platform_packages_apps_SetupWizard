@@ -8,4 +8,9 @@
     <string name="microg_title">Google-tjenester</string>
     <string name="install_apps_select_all">Alle følgende programmer</string>
     <string name="install_apps_title">Ytterligere programmer</string>
+    <string name="reboot">Omstart</string>
+    <string name="setup_euicc">Sett opp eSIM</string>
+    <string name="euicc_summary">Du kan også legge til en eSIM på din enhet.</string>
+    <string name="bootloader_warning_title">Advarsel om oppstartslasterlås</string>
+    <string name="bootloader_warning_summary">Enhetens oppstartslaster er opplåst. Lås oppstartslasteren fra en datamaskin. Besøk <a href="https://calyxos.org/lock">calyxos.org/lock</a> for mer info.</string>
 </resources>

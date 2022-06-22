@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="microg_warning">ノート：この設定を有効する場合、端末は Google にデータを送信するよう設定されます。 microG の設定画面から別途で変更することが可能です。</string>
-    <string name="microg_switch_label">Google のサービスとの適合性を有効する</string>
-    <string name="microg_description"><b>Google Maps、 Youtube や相乗りのアプリ</b> を CalyxOS で実行することができます。Google のサービスを必要としないアプリを使うつもりがない場合、無効を選択してください。別途でこの設定を変更できかねます。</string>
-    <string name="microg_title">Google のサービス</string>
-    <string name="waiting_for_apps">デバイスを設定しています。今しばらくお待ちください。</string>
-    <string name="install_apps_select_all">次すべてのアプリ</string>
-    <string name="install_apps_subtitle"><b>追加アプリをご確認ください。</b> 別途でインストールすることが可能です。</string>
-    <string name="install_apps_title">追加アプリ</string>
-    <string name="setup_euicc">eSim 設定</string>
-    <string name="euicc_summary">eSIMを使用することも可能です。</string>
+    <string name="microg_warning">注：これを有効にすると、あなたの携帯は Google にデータを送信するように設定されます。これは、後で microG の設定で変更できます。</string>
+    <string name="microg_switch_label">Google サービスとの互換性を有効にする</string>
+    <string name="microg_description">これにより、 <b>Google マップ、YouTube、ライドシェアリングサービス</b> などのアプリをCalyxOSで実行できるようになります。Google サービスを必要とするアプリを実行する予定がない場合は、これを無効にしてください。これは、後で変更することはできません。</string>
+    <string name="microg_title">Google サービス</string>
+    <string name="waiting_for_apps">デバイスをセットアップしています。完了するまでお待ちください。</string>
+    <string name="install_apps_select_all">以下のすべてのアプリ</string>
+    <string name="install_apps_subtitle"><b>追加のアプリを確認します。</b> 後でインストールすることもできます。</string>
+    <string name="install_apps_title">追加のアプリ</string>
+    <string name="setup_euicc">eSIM のセットアップ</string>
+    <string name="euicc_summary">また、eSIM を追加することもできます。</string>
+    <string name="reboot">再起動</string>
+    <string name="bootloader_warning_title">ブートローダーロックの警告</string>
+    <string name="bootloader_warning_summary">このデバイスのブートローダーは現在ロック解除されています。コンピューターからブートローダーをロックしてください。 詳しくは <a href="https://calyxos.org/lock">calyxos.org/lock</a> をご覧ください。</string>
 </resources>
