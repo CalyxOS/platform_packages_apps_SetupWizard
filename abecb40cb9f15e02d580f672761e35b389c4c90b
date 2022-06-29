@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e677190_ea3e089b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-06-29T16:23:44Z",
+      "side": 1,
+      "message": "Copy paste additional checks from https://github.com/LineageOS/android_packages_apps_SetupWizard/blob/lineage-19.1/src/org/lineageos/setupwizard/NavigationSettingsActivity.java",
+      "revId": "abecb40cb9f15e02d580f672761e35b389c4c90b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
