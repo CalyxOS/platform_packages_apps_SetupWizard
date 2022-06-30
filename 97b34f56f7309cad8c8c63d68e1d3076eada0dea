@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aaae1479_42983a12",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-06-30T22:50:15Z",
+      "side": 1,
+      "message": "https://cs.android.com/android/platform/superproject/+/master:packages/apps/Settings/src/com/android/settings/location/LocationForWorkPreferenceController.java",
+      "revId": "97b34f56f7309cad8c8c63d68e1d3076eada0dea",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
