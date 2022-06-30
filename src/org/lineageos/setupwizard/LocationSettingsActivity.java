@@ -19,7 +19,7 @@ package org.lineageos.setupwizard;
 
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.os.UserHandle;
+import android.os.Process;
 import android.view.View;
 import android.widget.CheckBox;
 
@@ -42,7 +42,7 @@ public class LocationSettingsActivity extends BaseSetupWizardActivity {
         View locationAccessView = findViewById(R.id.location);
         locationAccessView.setOnClickListener(v -> {
             mLocationManager.setLocationEnabledForUser(!mLocationAccess.isChecked(),
-                    new UserHandle(UserHandle.USER_CURRENT));
+                    Process.myUserHandle());
             mLocationAccess.setChecked(!mLocationAccess.isChecked());
         });
     }
