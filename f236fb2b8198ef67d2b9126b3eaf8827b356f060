@@ -86,6 +86,24 @@
       "parentUuid": "83b55a68_6c7712ee",
       "revId": "f236fb2b8198ef67d2b9126b3eaf8827b356f060",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5898e733_9be9a8be",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-06-30T23:12:00Z",
+      "side": 1,
+      "message": "Turns out it\u0027s related to https://cs.android.com/android/platform/superproject/+/master:packages/apps/Settings/src/com/android/settings/location/LocationForWorkPreferenceController.java\nand https://cs.android.com/android/platform/superproject/+/master:frameworks/base/core/java/android/provider/Settings.java;l\u003d10314;drc\u003dc0b28414d5cd686bf621fd71978699ec28177b21",
+      "parentUuid": "2211a3eb_6a53ca54",
+      "revId": "f236fb2b8198ef67d2b9126b3eaf8827b356f060",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
