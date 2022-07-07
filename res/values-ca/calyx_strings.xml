@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_title">Serveis de Google</string>
     <string name="install_apps_title">Aplicacions addicionals</string>
     <string name="install_apps_subtitle"><b>Revisa les aplicacions addicionals.</b> També les pots instal·lar més tard.</string>
@@ -13,4 +13,6 @@
     <string name="bootloader_warning_title">Avís de bloqueig del carregador d\'arrencada</string>
     <string name="bootloader_warning_summary">El carregador d\'arrencada d\'aquest dispositiu està desbloquejat. Bloqueja el carregador d\'arrencada des d\'un ordinador. Visiteu <a href="https://calyxos.org/lock">calyxos.org/lock</a> per a més informació.</string>
     <string name="reboot">Reiniciar</string>
+    <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
+\n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
 </resources>

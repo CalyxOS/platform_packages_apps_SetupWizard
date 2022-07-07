@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_warning">Remarque : Si vous activez ceci maintenant, votre téléphone sera configuré pour envoyer des données à Google. Vous pouvez changer ceci plus tard dans les paramètres microG.</string>
     <string name="microg_switch_label">Activer la compatibilité des services Google</string>
     <string name="microg_description">Ceci permet à des applications telles que <b>Google Maps, YouTube et les services de partage de trajet </b> de fonctionner sur CalyxOS. Désactivez ceci si vous ne prévoyez pas d’exécuter des applications qui nécessitent les services Google. Vous ne pourrez pas l’activer plus tard.</string>
@@ -13,4 +13,6 @@
     <string name="reboot">Redémarrer</string>
     <string name="bootloader_warning_title">Avertissement de verrouillage du chargeur de démarrage</string>
     <string name="bootloader_warning_summary">Le chargeur de démarrage de cet appareil est actuellement déverrouillé. Veuillez verrouiller le bootloader depuis un ordinateur. Visitez <a href="https://calyxos.org/lock">calyxos.org/lock</a> pour plus d\'informations.</string>
+    <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
+\n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
 </resources>
