@@ -52,6 +52,7 @@ import android.service.oemlock.OemLockManager;
 import android.telephony.ServiceState;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
+import android.text.TextUtils;
 import android.util.Log;
 
 import org.lineageos.setupwizard.BiometricActivity;
@@ -74,6 +75,9 @@ public class SetupWizardUtils {
     private static final String GMS_TV_SUW_PACKAGE = "com.google.android.tungsten.setupwraith";
 
     private static final String PROP_BUILD_DATE = "ro.build.date.utc";
+    private static final String PROP_OEM_UNLOCK_SUPPORTED = "ro.oem_unlock_supported";
+    private static final String UNSUPPORTED = "-9999";
+    private static final String SUPPORTED = "1";
 
     private SetupWizardUtils() {
     }
@@ -262,7 +266,13 @@ public class SetupWizardUtils {
     }
 
     public static boolean isBootloaderUnlocked(Context context) {
-        OemLockManager oemLockManager = context.getSystemService(OemLockManager.class);
+        OemLockManager oemLockManager;
+        if (!TextUtils.equals(SystemProperties.get(PROP_OEM_UNLOCK_SUPPORTED, UNSUPPORTED),
+                SUPPORTED)) {
+            oemLockManager = null;
+        } else {
+            oemLockManager = context.getSystemService(OemLockManager.class);
+        }
         if (oemLockManager != null) {
             return oemLockManager.isDeviceOemUnlocked();
         }
@@ -270,7 +280,13 @@ public class SetupWizardUtils {
     }
 
     public static boolean isOemunlockAllowed(Context context) {
-        OemLockManager oemLockManager = context.getSystemService(OemLockManager.class);
+        OemLockManager oemLockManager;
+        if (!TextUtils.equals(SystemProperties.get(PROP_OEM_UNLOCK_SUPPORTED, UNSUPPORTED),
+                SUPPORTED)) {
+            oemLockManager = null;
+        } else {
+            oemLockManager = context.getSystemService(OemLockManager.class);
+        }
         if (oemLockManager != null) {
             return oemLockManager.isOemUnlockAllowed();
         }
