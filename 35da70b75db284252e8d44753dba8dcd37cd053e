@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c9ee526_e55c8dca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-07T22:58:28Z",
+      "side": 1,
+      "message": "Works on emulator, need to test on device.\n\nKanged from Settings,\n\nhttps://android.googlesource.com/platform/packages/apps/Settings/+/android-12.0.0_r11/src/com/android/settings/development/OemUnlockPreferenceController.java",
+      "revId": "35da70b75db284252e8d44753dba8dcd37cd053e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
