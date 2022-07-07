@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_warning">Poznámka: Pokud kompatibilitu zapnete, váš telefon bude posílat data Googlu. Tohle je možné později změnit v nastavení microG.</string>
     <string name="microg_switch_label">Zapnout kompatibilitu se Službami Google</string>
     <string name="microg_description">Toto umožňuje aplikacím jako jsou <b>Google mapy, Youtube a aplikacím ke společné jízdě</b> fungovat na CalyxOS. Tuto možnost vypněte, pokud nemáte v plánu používat aplikace vyžadující služby Google. Toto nastavení nebude později možné zapnout.</string>
@@ -10,4 +10,9 @@
     <string name="install_apps_title">Další aplikace</string>
     <string name="euicc_summary">Do zařízení můžete také přidat kartu eSIM.</string>
     <string name="setup_euicc">Nastavit eSIM</string>
+    <string name="bootloader_warning_summary">Bootloader tohoto zařízení je momentálně odemknutý. Prosím, zamkněte bootloader z počítače. Pro více informací navštivte <a href="https://calyxos.org/lock">calyxos.org/lock</a>.</string>
+    <string name="bootloader_warning_title">Varování zámku bootloaderu</string>
+    <string name="reboot">Restartovat</string>
+    <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
+\n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
 </resources>

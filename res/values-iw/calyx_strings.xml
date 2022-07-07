@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_description">הגדרה זו מאפשרת ליישומונים כגון <b>מפות Google,‏ YouTube ושירותי נסיעה שיתופית</b> לפעול על גבי CalyxOS. יש להשבית את האפשרות הזאת אם אין לך תכניות להריץ יישומונים שדורשים את שירותי Google. לא תהיה לך אפשרות להפעיל את זה בהמשך.</string>
     <string name="microg_warning">הערה: אם התכונה הזאת תופעל כעת, הטלפון שלך יוגדר לשלוח נתונים ל־Google. ניתן לשנות זאת מאוחר יותר בהגדרות של microG.</string>
     <string name="microg_switch_label">הפעלת תאימות לשירותי Google</string>
@@ -13,4 +13,6 @@
     <string name="bootloader_warning_title">אזהרת נעילת טוען המערכת</string>
     <string name="reboot">הפעלה מחדש</string>
     <string name="bootloader_warning_summary">טוען המערכת (ה־Bootloader) אינו נעול כרגע. נא לנעול את טוען המערכת דרך המחשב. יש לבקר בכתובת <a href="https://calyxos.org/lock">calyxos.org/lock</a> למידע נוסף.</string>
+    <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
+\n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
 </resources>
