@@ -46,7 +46,7 @@ import android.content.pm.parsing.result.ParseTypeImpl;
 import android.util.ArraySet;
 import android.util.Log;
 
-import com.android.internal.content.PackageHelper;
+import com.android.internal.content.InstallLocationUtils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -101,7 +101,7 @@ class PackageInstaller31 {
                 final PackageLite pkg = result.getResult();
                 params.setAppPackageName(pkg.getPackageName());
                 params.setInstallLocation(pkg.getInstallLocation());
-                params.setSize(PackageHelper.calculateInstalledSize(pkg, params.abiOverride));
+                params.setSize(InstallLocationUtils.calculateInstalledSize(pkg, params.abiOverride));
             }
         } catch (IOException e) {
             Log.e(TAG, "Cannot calculate installed size " + packageFile + ". Try only apk size.");
