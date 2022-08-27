@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e262ae3a_21a5f15b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-08-27T15:11:07Z",
+      "side": 1,
+      "message": "Don\u0027t know if 13-fixes is the correct topic for this. There\u0027s no android13 branch yet.\n\nTiny fix; lets SetupWizard build.",
+      "revId": "0d6cc47042cd9d634dab504edcaa9e6f0797f51c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
