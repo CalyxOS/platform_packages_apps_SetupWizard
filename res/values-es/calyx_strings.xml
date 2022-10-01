@@ -9,7 +9,7 @@
     <string name="install_apps_subtitle"><b> Revise aplicaciones adicionales.</b> También las puede instalar más tarde.</string>
     <string name="install_apps_title">Aplicaciones adicionales</string>
     <string name="setup_euicc">Configurar eSIM</string>
-    <string name="euicc_summary">También puedes añadir una eSIM al dispositivo</string>
+    <string name="euicc_summary">También puedes añadir una eSIM al dispositivo.</string>
     <string name="bootloader_warning_summary">El gestor de arranque de este dispositivo está actualmente desbloqueado. Bloquee el cargador de arranque desde una computadora. Visite <a href="https://calyxos.org/lock">calyxos.org/lock</a> para obtener más información.</string>
     <string name="bootloader_warning_title">Advertencia de bloqueo del gestor de arranque</string>
     <string name="reboot">Reiniciar</string>
