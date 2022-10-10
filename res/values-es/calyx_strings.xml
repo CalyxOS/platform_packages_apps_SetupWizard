@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_title">Servicios de Google</string>
     <string name="waiting_for_apps">Espere a que acabemos de configurar el dispositivo.</string>
     <string name="microg_warning">Nota: Si lo habilita ahora, su teléfono estará configurado para enviar datos a Google. Puedes cambiar esto más tarde en los ajustes de microG.</string>
@@ -9,8 +9,10 @@
     <string name="install_apps_subtitle"><b> Revise aplicaciones adicionales.</b> También las puede instalar más tarde.</string>
     <string name="install_apps_title">Aplicaciones adicionales</string>
     <string name="setup_euicc">Configurar eSIM</string>
-    <string name="euicc_summary">También puedes añadir una eSIM al dispositivo.</string>
+    <string name="euicc_summary">También puedes añadir una eSIM a tu dispositivo.</string>
     <string name="bootloader_warning_summary">El gestor de arranque de este dispositivo está actualmente desbloqueado. Bloquee el cargador de arranque desde una computadora. Visite <a href="https://calyxos.org/lock">calyxos.org/lock</a> para obtener más información.</string>
     <string name="bootloader_warning_title">Advertencia de bloqueo del gestor de arranque</string>
     <string name="reboot">Reiniciar</string>
+    <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
+\n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
 </resources>
