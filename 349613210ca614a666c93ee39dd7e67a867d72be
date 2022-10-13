@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a05b3d27_5f934303",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2022-10-13T09:19:13Z",
+      "side": 1,
+      "message": "Icons have been taken from https://fonts.google.com/icons",
+      "revId": "349613210ca614a666c93ee39dd7e67a867d72be",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
