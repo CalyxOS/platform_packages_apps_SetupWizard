@@ -16,6 +16,24 @@
       "message": "Icons have been taken from https://fonts.google.com/icons",
       "revId": "349613210ca614a666c93ee39dd7e67a867d72be",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e95dd68d_05c27576",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-13T11:33:45Z",
+      "side": 1,
+      "message": "What about licensing and attribution",
+      "parentUuid": "a05b3d27_5f934303",
+      "revId": "349613210ca614a666c93ee39dd7e67a867d72be",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
