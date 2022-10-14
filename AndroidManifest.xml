@@ -286,19 +286,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".apps.WaitInstallAppsActivity"
-                  android:label="@string/activity_label_empty"
-                  android:excludeFromRecents="true"
-                  android:configChanges="mcc|mnc"
-                  android:immersive="true"
-                  android:exported="false"
-                  android:windowSoftInputMode="stateAlwaysHidden">
-            <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_WAIT_INSTALL_APPS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
         <activity android:name=".backup.RestoreIntroActivity"
                   android:label="@string/activity_label_empty"
                   android:excludeFromRecents="true"
@@ -356,9 +343,6 @@
         </receiver>
 
         <service android:name=".SetupWizardExitService"
-                 android:exported="false"/>
-
-        <service android:name=".apps.AppInstallerService"
                  android:exported="false"/>
 
     </application>
