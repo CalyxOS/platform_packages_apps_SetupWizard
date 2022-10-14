@@ -34,6 +34,24 @@
       "parentUuid": "a05b3d27_5f934303",
       "revId": "349613210ca614a666c93ee39dd7e67a867d72be",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1fafedf3_1a8da94b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2022-10-14T05:10:01Z",
+      "side": 1,
+      "message": "The license is Apache 2.0, but no attribution is required.\nRef: https://github.com/google/material-design-icons#license",
+      "parentUuid": "e95dd68d_05c27576",
+      "revId": "349613210ca614a666c93ee39dd7e67a867d72be",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
