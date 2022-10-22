@@ -206,8 +206,6 @@ public class SetupWizardUtils {
                 Binder.getCallingUserHandle());
         disableComponentSets(context, GET_RECEIVERS | GET_SERVICES);
         enableStatusBar(context);
-
-        sendMicroGCheckInBroadcast(context);
     }
 
     public static boolean isBluetoothDisabled() {
@@ -386,12 +384,6 @@ public class SetupWizardUtils {
         } catch (PackageManager.NameNotFoundException e) {
         }
         return componentNames;
-    }
-
-    private static void sendMicroGCheckInBroadcast(Context context) {
-        Intent i = new Intent("android.server.checkin.CHECKIN");
-        i.setPackage(GMS_PACKAGE);
-        context.sendBroadcast(i);
     }
 
     public static final ComponentName sTvWifiSetupSettingsActivity =
