@@ -22,6 +22,7 @@ import static android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
 import android.annotation.Nullable;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Binder;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.CompoundButton;
@@ -91,6 +92,11 @@ public class MicroGActivity extends BaseSetupWizardActivity {
             intent.putExtra("gcm_enabled", enableDefaults.isChecked());
             intent.putExtra("safetynet_enabled", false);
             startService(intent);
+            if (enableDefaults.isChecked()) {
+                Intent intent2 = new Intent("android.server.checkin.CHECKIN");
+                intent2.setPackage("com.google.android.gms");
+                sendBroadcastAsUser(intent2, Binder.getCallingUserHandle());
+            }
         }
         super.onNextPressed();
     }
