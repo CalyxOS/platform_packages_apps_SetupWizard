@@ -2,7 +2,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="setup_euicc">eSIM 설정</string>
     <string name="install_apps_select_all">모든 앱</string>
-    <string name="microg_switch_label">구글 서비스 호환성 사용</string>
     <string name="microg_warning">노트: 지금 활성화하면 기기가 Google에 데이터를 전송하도록 설정됩니다. 나중에 microG 설정에서 변경할 수 있습니다.</string>
     <string name="install_apps_title">추가적인 앱</string>
     <string name="waiting_for_apps">기기 설정을 끝내는 동안 잠시 기다려주세요.</string>

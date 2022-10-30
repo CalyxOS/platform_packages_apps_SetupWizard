@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="install_apps_subtitle"><b>Просмотрите дополнительные приложения.</b> Вы также можете установить их позже.</string>
-    <string name="microg_warning">Примечание. Если вы включите это сейчас, ваш телефон будет настроен на отправку данных в Google. Вы можете изменить это позже в настройках microG.</string>
     <string name="microg_switch_label">Включить совместимость с сервисами Google</string>
     <string name="microg_description">Это позволяет запускать такие приложения, как <b>Google Maps, Youtube и службы обмена</b> на CalyxOS. Отключите это, если вы не планируете запускать приложения, требующие сервисы Google. Вы не сможете включить их позже.</string>
     <string name="microg_title">Сервисы Google</string>

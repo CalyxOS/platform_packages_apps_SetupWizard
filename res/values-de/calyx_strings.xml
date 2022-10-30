@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="microg_warning">Hinweis: Wenn Sie dies jetzt aktivieren, wird Ihr Telefon so eingerichtet, dass es Daten an Google sendet. Sie können dies später in den microG-Einstellungen ändern.</string>
     <string name="microg_switch_label">Google-Services-Kompatibilität aktivieren</string>
     <string name="microg_description">Dadurch können Apps wie <b>Google Maps, YouTube und Mitfahrgelegenheitservices</b> unter CalyxOS ausgeführt werden. Deaktivieren Sie diese Option, wenn Sie keine Apps ausführen möchten, für die Google-Dienste erforderlich sind. Sie können es später nicht mehr aktivieren.</string>
     <string name="microg_title">Google-Services</string>

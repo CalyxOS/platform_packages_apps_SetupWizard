@@ -2,7 +2,6 @@
 <resources>
     <string name="microg_description">這允許應用程式，如<b>Google 地圖，Youtube和乘坐共享服務</b>在 CalyxOS 上執行。如果您不打算運行需要 Google 服務的應用程式，請禁用此功能。稍後將無法啟用它。</string>
     <string name="install_apps_subtitle"><b>查看其他應用程式</b> 您也可以稍後再安裝它們。</string>
-    <string name="microg_warning">注意：如果您現在啟用此功能，您的手機將被設置為向 Google 發送數據。您可以在稍後的 microG 設定中更改此更改。</string>
     <string name="microg_switch_label">啟用 Google 服務相容性</string>
     <string name="microg_title">Google服務</string>
     <string name="waiting_for_apps">請稍候，我們正完成您的裝置設置。</string>
