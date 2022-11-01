@@ -6,8 +6,6 @@
     <string name="waiting_for_apps">Harap tunggu sementara kami selesai menyiapkan perangkat Anda.</string>
     <string name="microg_title">Layanan Google</string>
     <string name="microg_description">Hal ini memungkinkan aplikasi seperti <b> Google Maps, Youtube dan layanan perjalanan </b> untuk berjalan di CalyxOS. Anda bisa menonaktifkannya jika tidak berencana menjalankan aplikasi yang memerlukan layanan Google. Anda tidak akan dapat mengaktifkannya nanti.</string>
-    <string name="microg_switch_label">Aktifkan Kompatibilitas Layanan Google</string>
     <string name="setup_euicc">Siapkan eSIM</string>
-    <string name="microg_warning">Catatan: Jika Anda mengaktifkan ini sekarang, ponsel Anda akan disiapkan untuk mengirim data ke Google. Anda dapat mengubahnya nanti di pengaturan microG.</string>
     <string name="euicc_summary">Anda juga dapat menambahkan eSIM ke perangkat.</string>
 </resources>

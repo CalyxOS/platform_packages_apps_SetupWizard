@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="microg_warning">注：これを有効にすると、あなたの携帯は Google にデータを送信するように設定されます。これは、後で microG の設定で変更できます。</string>
     <string name="microg_switch_label">Google サービスとの互換性を有効にする</string>
     <string name="microg_description">これにより、 <b>Google マップ、YouTube、ライドシェアリングサービス</b> などのアプリをCalyxOSで実行できるようになります。Google サービスを必要とするアプリを実行する予定がない場合は、これを無効にしてください。これは、後で変更することはできません。</string>
     <string name="microg_title">Google サービス</string>
