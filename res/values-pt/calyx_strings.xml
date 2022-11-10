@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="microg_warning">Nota: se ativar isto agora, o seu aparelho estará configurado para enviar dados ao Google. Pode alterar isso mais tarde nas configurações do microG.</string>
-    <string name="microg_switch_label">Ativar Compatibilidade de Serviços do Google</string>
     <string name="microg_description">Isso permite que apps como <b>Google Maps, Youtube e serviços de compartilhamento de passeios</b> funcionem no CalyxOS. Desative esta opção se não planea executar apps que requerem os serviços do Google.</string>
     <string name="microg_title">Serviços Google</string>
     <string name="waiting_for_apps">Aguarde enquanto terminamos de configurar o seu aparelho.</string>

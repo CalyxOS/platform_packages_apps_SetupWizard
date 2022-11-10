@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="microg_warning">ملاحظة: إذا قمت بتفعيل هذا الخيار اﻵن، هاتفك سيقوم بإرسال بيانات لـ Google. يمكنك تغيير هذا الخيار لاحقًا في إعدادات microG.</string>
-    <string name="microg_switch_label">فعل توافقية خدمات Google</string>
     <string name="microg_description">هذا يسمح لتطبيقات مثل<b>خرائط جوجل , يوتيوب , ride بإستخدام خدمات المشاركة</b>للعمل علي نظام Calyx. قم بتعطيل هذا الاختيار إذا كنت لا تخطط لإستخدام التطبيقات التي تحتاج الي خدمات جوجل. لن تتمكن من تفعيل هذا الاختيار فيما بعد.</string>
     <string name="microg_title">خدمات Google</string>
     <string name="waiting_for_apps">يرجى الانتظار حتى ننتهي إعداد جهازك.</string>

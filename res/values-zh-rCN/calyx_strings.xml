@@ -4,8 +4,6 @@
     <string name="waiting_for_apps">请等待设备完成设定。</string>
     <string name="install_apps_select_all">以下所有应用</string>
     <string name="install_apps_title">附加应用</string>
-    <string name="microg_warning">注意：开启此选项后您的设备将向 Google 发送数据。您稍后可在 MicroG 设置中修改相关发送设置。</string>
-    <string name="microg_switch_label">启用 Google 服务</string>
     <string name="microg_description">这能让您在 CalyxOS 上安装 <b>Google 地图、Youtube 及其他需要谷歌框架的应用</b>。之后将无法启用此选项。</string>
     <string name="install_apps_subtitle"><b>查看额外应用。</b>你也可以稍后再安装。</string>
     <string name="setup_euicc">设置 eSIM</string>
@@ -15,4 +13,8 @@
     <string name="bootloader_warning_title">Bootloader 锁定警告</string>
     <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
 \n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
+    <string name="microg_switch_label2">Google 服务兼容性</string>
+    <string name="microg_defaults_switch_label">推送通知支持</string>
+    <string name="microg_description2">microG 是 <b>Google Play Services</b> (以及相关软件) 的开源替代，只包含有用部分。 和 Play Services 不同，microG 不含任何广告或位置跟踪。</string>
+    <string name="microg_defaults_summary">允许应用注册 Google 推送通知。这会将你的设备注册到 Google 服务，不包含特定于设备的唯一标识符。可以稍后在 microG 设置中启用它，但是之前安装的任何应用都需要重新安装才能正常工作。</string>
 </resources>
