@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "012cba77_e2e91c91",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-11-14T16:46:23Z",
+      "side": 1,
+      "message": "I think this may be redundant since ProvisionService seems to already trigger checkin.\n\nTrace:\nhttps://github.com/microg/GmsCore/blob/4a5c98491bcfe4754b3efcfed20f3ada75a6ebec/play-services-core/src/main/kotlin/org/microg/gms/provision/ProvisionService.kt#L35\nhttps://github.com/microg/GmsCore/blob/2e286a7e5b6cdc402200efdcf97716150bdf059e/play-services-core/src/main/kotlin/org/microg/gms/checkin/ServiceInfo.kt#L40\nhttps://github.com/microg/GmsCore/blob/222b03f7eef92912263141152b62d164720b2297/play-services-core/src/main/java/org/microg/gms/checkin/TriggerReceiver.java#L55\nhttps://github.com/microg/GmsCore/blob/4a5c98491bcfe4754b3efcfed20f3ada75a6ebec/play-services-core/src/main/java/org/microg/gms/checkin/CheckinService.java#L86",
+      "range": {
+        "startLine": 95,
+        "startChar": 12,
+        "endLine": 99,
+        "endChar": 13
+      },
+      "revId": "1cff8041bdb6d57ea0544bffd8c8b03b69c51b16",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
