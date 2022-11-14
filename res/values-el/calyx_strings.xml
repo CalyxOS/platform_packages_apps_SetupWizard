@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_description">Αυτό επιτρέπει σε εφαρμογές όπως <b>Χάρτες Google, Youtube και υπηρεσίες κοινής χρήσης διαδρομών</b> να εκτελούνται στο CalyxOS. Απενεργοποιήστε το εάν δεν σκοπεύετε να εκτελέσετε εφαρμογές που απαιτούν υπηρεσίες Google. Δεν θα μπορείτε να το ενεργοποιήσετε αργότερα.</string>
-    <string name="microg_warning">Σημείωση: Εάν το ενεργοποιήσετε τώρα, το τηλέφωνό σας θα ρυθμιστεί για αποστολή δεδομένων στην Google. Μπορείτε να το αλλάξετε αργότερα στις ρυθμίσεις microG.</string>
-    <string name="microg_switch_label">Ενεργοποίηση συμβατότητας υπηρεσιών Google</string>
     <string name="microg_title">Υπηρεσίες Google</string>
     <string name="waiting_for_apps">Περιμένετε μέχρι να ολοκληρώσουμε τη ρύθμιση της συσκευής σας.</string>
     <string name="install_apps_select_all">Όλες οι ακόλουθες εφαρμογές</string>
@@ -15,4 +13,8 @@
     <string name="bootloader_warning_title">Προειδοποίηση κλειδώματος bootloader</string>
     <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
 \n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
+    <string name="microg_defaults_summary">Επιτρέψτε στις εφαρμογές να εγγραφούν για ειδοποιήσεις push στην Google. Αυτό καταχωρεί τη συσκευή σας στις υπηρεσίες της Google, χωρίς μοναδικά αναγνωριστικά που αφορούν τη συσκευή. Αυτό μπορεί να ενεργοποιηθεί αργότερα από τις Ρυθμίσεις microG, ωστόσο τυχόν εφαρμογές που έχουν ρυθμιστεί νωρίτερα θα πρέπει να επανεγκατασταθούν για να λειτουργήσουν σωστά.</string>
+    <string name="microg_defaults_switch_label">Υποστήριξη ειδοποιήσεων push</string>
+    <string name="microg_description2">Το microG είναι ένας αντικαταστάτης ανοιχτού κώδικα για τις <b>Υπηρεσίες Google Play</b> (και το σχετικό λογισμικό), αλλά περιλαμβάνει μόνο τα χρήσιμα μέρη. Σε αντίθεση με τις Υπηρεσίες Play, το microG δεν διαθέτει, για παράδειγμα, καμία διαφήμιση ή παρακολούθηση τοποθεσίας.</string>
+    <string name="microg_switch_label2">Συμβατότητα Υπηρεσιών Google</string>
 </resources>

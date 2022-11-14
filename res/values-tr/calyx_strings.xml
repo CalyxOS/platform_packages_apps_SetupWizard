@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="microg_warning">Not: Bunu şimdi etkinleştirirseniz, telefonunuz Google\'a veri gönderecek şekilde ayarlanacaktır. Bunu daha sonra microG ayarlarında değiştirebilirsiniz.</string>
-    <string name="microg_switch_label">Google Hizmetleri Uyumluluğunu Etkinleştir</string>
     <string name="microg_description">Bu, <b>Google Haritalar, Youtube ve sürüş paylaşım hizmetleri</b> gibi uygulamaların CalyxOS üzerinde çalışmasını sağlar. Google hizmetleri gerektiren uygulamaları çalıştırmayı düşünmüyorsanız bunu devre dışı bırakın. Daha sonra etkinleştirme imkanınız olmayacak.</string>
     <string name="microg_title">Google Hizmetleri</string>
     <string name="waiting_for_apps">Lütfen aygıtınızın kurulumunu bitirirken bekleyin.</string>
@@ -15,4 +13,8 @@
     <string name="bootloader_warning_summary">Bu aygıtın önyükleyicisinin kilidi şu anda açık. Lütfen önyükleyiciyi bir bilgisayardan kilitleyin. Daha fazla bilgi için <a href="https://calyxos.org/lock">calyxos.org/lock</a> adresini ziyaret edin.</string>
     <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
 \n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
+    <string name="microg_switch_label2">Google Hizmetleri Uyumluluğu</string>
+    <string name="microg_description2">microG, <b>Google Play hizmetleri</b> (ve ilgili yazılımlar) için açık kaynaklı bir alternatiftir, ancak yalnızca yararlı kısımları içerir. Play hizmetlerinin aksine, microG\'de örneğin herhangi bir reklam veya konum takibi yoktur.</string>
+    <string name="microg_defaults_switch_label">Anlık bildirim desteği</string>
+    <string name="microg_defaults_summary">Uygulamaların Google\'a anlık bildirimler için kaydolmasına izin ver. Bu, aygıta özgü benzersiz tanımlayıcılar olmadan aygıtınızı Google hizmetlerine kaydeder. Bu özellik daha sonra microG ayarlarından etkinleştirilebilir, ancak daha önce kurulan bir uygulamanın düzgün çalışması için yeniden kurulması gerekecektir.</string>
 </resources>
