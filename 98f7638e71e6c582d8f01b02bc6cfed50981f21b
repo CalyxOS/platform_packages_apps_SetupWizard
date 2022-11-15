@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4bbc07a_41ae525a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-15T19:04:26Z",
+      "side": 1,
+      "message": "For starters, we need to figure out how to best install apps",
+      "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4327c529_ee3df6c6",
+        "filename": "src/org/lineageos/setupwizard/apps/AppInstallerService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-15T19:04:26Z",
+      "side": 1,
+      "message": "Can\u0027t change or rely on this since it\u0027s all going away with Lupin.",
+      "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7fa5e2e6_142532a6",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-15T19:04:26Z",
+      "side": 1,
+      "message": "Lupin.",
+      "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85ec567b_a517ef2b",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-15T19:04:26Z",
+      "side": 1,
+      "message": "Relying on apk name like this may be fragile, but I also don\u0027t see a better way atm.",
+      "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f311d219_65dde116",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 457,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-15T19:04:26Z",
+      "side": 1,
+      "message": "This goes away with Lupin.",
+      "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7fe4a80_75c202b2",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 474,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-15T19:04:26Z",
+      "side": 1,
+      "message": "This should be a constant somewhere.",
+      "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
