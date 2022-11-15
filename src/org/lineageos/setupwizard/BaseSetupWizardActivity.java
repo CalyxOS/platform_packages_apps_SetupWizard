@@ -61,6 +61,8 @@ import com.google.android.setupcompat.util.WizardManagerHelper;
 import com.google.android.setupdesign.GlifLayout;
 
 import org.lineageos.setupwizard.NavigationLayout.NavigationBarListener;
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils;
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils.ProvisioningState;
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
 import java.util.List;
