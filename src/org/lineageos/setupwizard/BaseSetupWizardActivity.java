@@ -61,6 +61,8 @@ import com.google.android.setupcompat.util.WizardManagerHelper;
 import com.google.android.setupdesign.GlifLayout;
 
 import org.lineageos.setupwizard.NavigationLayout.NavigationBarListener;
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils;
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils.ProvisioningState;
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
 import java.util.List;
@@ -318,12 +320,17 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
     }
 
     protected void exitIfSetupComplete() {
-        if (WizardManagerHelper.isUserSetupComplete(this)) {
+        ProvisioningState provisioningState =
+                ManagedProvisioningUtils.getProvisioningState(this);
+        if (WizardManagerHelper.isUserSetupComplete(this)
+                && provisioningState == ProvisioningState.UNSUPPORTED) {
             Log.i(TAG, "Starting activity with USER_SETUP_COMPLETE=true");
             startSetupWizardExitActivity();
             setResult(RESULT_CANCELED, null);
             finishAllAppTasks();
         }
+        // garlic-level may still have more work to do, so we do not exit
+        // if provisioning is supported.
     }
 
     protected void finishAllAppTasks() {
