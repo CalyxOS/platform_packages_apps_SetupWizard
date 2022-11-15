@@ -43,8 +43,8 @@ import java.util.ArrayList;
 
 public class AppInstallerService extends IntentService {
 
-    static final String APKS = "apks";
-    static final String PATH = "path";
+    public static final String APKS = "apks";
+    public static final String PATH = "path";
 
     private static final String TAG = AppInstallerService.class.getSimpleName();
     private static final String CHANNEL_ID = "SetupWizard";

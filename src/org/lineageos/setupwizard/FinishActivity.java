@@ -48,6 +48,8 @@ import com.google.android.setupcompat.util.WizardManagerHelper;
 
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
+import lineageos.providers.LineageSettings;
+
 public class FinishActivity extends BaseSetupWizardActivity {
 
     public static final String TAG = FinishActivity.class.getSimpleName();
@@ -65,6 +67,13 @@ public class FinishActivity extends BaseSetupWizardActivity {
         super.onCreate(savedInstanceState);
         if (LOGV) {
             logActivityState("onCreate savedInstanceState=" + savedInstanceState);
+        }
+        int securityMode = LineageSettings.Global.getInt(getContentResolver(),
+                LineageSettings.Global.GARLIC_LEVEL, 0);
+        if (SetupWizardUtils.isOwner()) {
+            if (securityMode != 0) {
+                SetupWizardUtils.setupDeviceOrProfileOwner(this, securityMode);
+            }
         }
         mSetupWizardApp = (SetupWizardApp) getApplication();
         mReveal = (ImageView) findViewById(R.id.reveal);

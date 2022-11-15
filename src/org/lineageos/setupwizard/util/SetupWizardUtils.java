@@ -28,8 +28,12 @@ import static android.content.pm.PackageManager.GET_SERVICES;
 
 import static org.lineageos.setupwizard.SetupWizardApp.KEY_DETECT_CAPTIVE_PORTAL;
 import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
+import static org.lineageos.setupwizard.SetupWizardApp.PACKAGENAMES;
+import static org.lineageos.setupwizard.apps.AppInstallerService.APKS;
+import static org.lineageos.setupwizard.apps.AppInstallerService.PATH;
 
 import android.app.StatusBarManager;
+import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -45,6 +49,7 @@ import android.hardware.fingerprint.FingerprintManager;
 import android.net.ConnectivityManager;
 import android.os.Binder;
 import android.os.Build;
+import android.os.PersistableBundle;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings;
@@ -58,12 +63,17 @@ import org.lineageos.setupwizard.BiometricActivity;
 import org.lineageos.setupwizard.BluetoothSetupActivity;
 import org.lineageos.setupwizard.BootloaderWarningActivity;
 import org.lineageos.setupwizard.NetworkSetupActivity;
+import org.lineageos.setupwizard.R;
 import org.lineageos.setupwizard.SetupWizardApp;
 import org.lineageos.setupwizard.SimMissingActivity;
+import org.lineageos.setupwizard.apps.AppInstallerService;
 import org.lineageos.setupwizard.wizardmanager.WizardManager;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+
+import lineageos.providers.LineageSettings;
 
 public class SetupWizardUtils {
 
@@ -72,6 +82,12 @@ public class SetupWizardUtils {
     private static final String GMS_PACKAGE = "com.google.android.gms";
     private static final String GMS_SUW_PACKAGE = "com.google.android.setupwizard";
     private static final String GMS_TV_SUW_PACKAGE = "com.google.android.tungsten.setupwraith";
+
+    private static final String BELLIS_PACKAGE = "org.calyxos.bellis";
+    private static final String BELLIS_DEVICE_ADMIN_RECEIVER_CLASS = ".BasicDeviceAdminReceiver";
+
+    private static final String ORBOT_PACKAGE = "org.torproject.android";
+    private static final String ORBOT_APK = "Orbot.apk";
 
     private static final String PROP_BUILD_DATE = "ro.build.date.utc";
 
@@ -426,7 +442,7 @@ public class SetupWizardUtils {
      * @return null if the package cannot be found or the ApplicationInfo is null
      */
     public static ApplicationInfo getApplicationInfo(final Context context,
-                                                     final String packageName, final int flags) {
+            final String packageName, final int flags) {
         final PackageManager packageManager = context.getPackageManager();
         ApplicationInfo info;
         try {
@@ -435,5 +451,43 @@ public class SetupWizardUtils {
             info = null;
         }
         return info;
+    }
+
+    public static void setupDeviceOrProfileOwner(Context context, int securityMode) {
+        Intent intent = new Intent(context, AppInstallerService.class);
+        intent.putExtra(PATH, context.getString(R.string.calyx_fdroid_repo_location));
+        intent.putStringArrayListExtra(APKS, new ArrayList<>(
+                Collections.singleton(ORBOT_APK)));
+        intent.putStringArrayListExtra(PACKAGENAMES, new ArrayList<>(
+                Collections.singleton(ORBOT_PACKAGE)));
+        context.startForegroundService(intent);
+
+        Settings.Global.putInt(context.getContentResolver(),
+                Settings.Global.BLUETOOTH_OFF_TIMEOUT, 15000);
+        LineageSettings.Global.putInt(context.getContentResolver(),
+                LineageSettings.Global.DEVICE_REBOOT_TIMEOUT, 3600000);
+        Settings.Global.putInt(context.getContentResolver(),
+                Settings.Global.WIFI_OFF_TIMEOUT, 15000);
+
+        ComponentName component = new ComponentName(BELLIS_PACKAGE, BELLIS_PACKAGE
+                + BELLIS_DEVICE_ADMIN_RECEIVER_CLASS);
+        if (securityMode == 2) {
+            LineageSettings.Global.putInt(context.getContentResolver(),
+                    LineageSettings.Global.TRUST_RESTRICT_USB, 2);
+            LineageSettings.Global.putString(context.getContentResolver(),
+                    LineageSettings.Global.GLOBAL_VPN_APP, ORBOT_PACKAGE);
+        }
+        PersistableBundle persistableBundle = new PersistableBundle();
+        persistableBundle.putInt(LineageSettings.Global.GARLIC_LEVEL, securityMode);
+        intent = new Intent(DevicePolicyManager.ACTION_PROVISION_MANAGED_DEVICE_FROM_TRUSTED_SOURCE)
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                .putExtra(DevicePolicyManager.EXTRA_PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME,
+                        component)
+                .putExtra(DevicePolicyManager.EXTRA_PROVISIONING_MODE, securityMode == 1
+                        ? DevicePolicyManager.PROVISIONING_MODE_MANAGED_PROFILE_ON_PERSONAL_DEVICE
+                        : DevicePolicyManager.PROVISIONING_MODE_FULLY_MANAGED_DEVICE)
+                .putExtra(DevicePolicyManager.EXTRA_PROVISIONING_ADMIN_EXTRAS_BUNDLE,
+                        persistableBundle);
+        context.startActivityForResult("", intent, 0, null);
     }
 }
