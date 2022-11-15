@@ -48,6 +48,9 @@ import org.lineageos.setupwizard.NAVIGATION_OPTION_KEY
 import org.lineageos.setupwizard.SetupWizardActivity
 import org.lineageos.setupwizard.SetupWizardApp
 import org.lineageos.setupwizard.base.BaseSetupWizardActivity
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils.ProvisioningState
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils.finalizeProvisioning
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils.getProvisioningState
 
 object SetupWizardUtils {
 
@@ -179,6 +182,16 @@ object SetupWizardUtils {
         if (LOGV) {
             Log.v(TAG, "finishSetupWizard")
         }
+
+        val provisioningState = getProvisioningState(context)
+        if (LOGV) {
+            Log.v(TAG, "finishSetupWizard, provisioningState=$provisioningState")
+        }
+
+        if (provisioningState == ProvisioningState.PENDING) {
+            Log.e(TAG, "finishSetupWizard, but provisioning pending! Murky waters ahead!")
+        }
+
         val contentResolver = context.contentResolver
         Settings.Global.putInt(contentResolver, Settings.Global.DEVICE_PROVISIONED, 1)
         val userSetupComplete =
@@ -194,6 +207,9 @@ object SetupWizardUtils {
         Settings.Secure.putInt(contentResolver, Settings.Secure.USER_SETUP_COMPLETE, 1)
         if (hasLeanback(context)) {
             Settings.Secure.putInt(contentResolver, Settings.Secure.TV_USER_SETUP_COMPLETE, 1)
+        }
+        if (userSetupComplete != 1 && provisioningState == ProvisioningState.COMPLETE) {
+            finalizeProvisioning(context)
         }
 
         handleNavigationOption()
