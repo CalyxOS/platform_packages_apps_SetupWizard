@@ -19,8 +19,6 @@ package org.lineageos.setupwizard;
 
 import static android.os.Binder.getCallingUserHandle;
 import static android.os.UserHandle.USER_CURRENT;
-import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_3BUTTON_OVERLAY;
-import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
 
 import static org.lineageos.setupwizard.Manifest.permission.FINISH_SETUP;
 import static org.lineageos.setupwizard.SetupWizardApp.ACTION_SETUP_COMPLETE;
@@ -30,6 +28,7 @@ import static org.lineageos.setupwizard.SetupWizardApp.NAVIGATION_OPTION_KEY;
 import android.animation.Animator;
 import android.app.Activity;
 import android.app.WallpaperManager;
+import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.om.IOverlayManager;
@@ -46,7 +45,7 @@ import android.widget.ImageView;
 import com.google.android.setupcompat.util.SystemBarHelper;
 import com.google.android.setupcompat.util.WizardManagerHelper;
 
-import org.lineageos.setupwizard.util.SetupWizardUtils;
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils;
 
 public class FinishActivity extends BaseSetupWizardActivity {
 
@@ -77,6 +76,14 @@ public class FinishActivity extends BaseSetupWizardActivity {
     }
 
     @Override
+    protected void onRestart() {
+        super.onRestart();
+        startActivity(new Intent(DevicePolicyManager.ACTION_PROVISION_FINALIZATION));
+        applyForwardTransition(TRANSITION_ID_NONE);
+        startFinishSequence();
+    }
+
+    @Override
     public void finish() {
         super.finish();
         if (!isResumed() || mResultCode != RESULT_CANCELED) {
@@ -86,8 +93,12 @@ public class FinishActivity extends BaseSetupWizardActivity {
 
     @Override
     public void onNavigateNext() {
-        applyForwardTransition(TRANSITION_ID_NONE);
-        startFinishSequence();
+        if (ManagedProvisioningUtils.isProvisioningAllowed(this)) {
+            ManagedProvisioningUtils.init(this);
+        } else {
+            applyForwardTransition(TRANSITION_ID_NONE);
+            startFinishSequence();
+        }
     }
 
     private void finishSetup() {
