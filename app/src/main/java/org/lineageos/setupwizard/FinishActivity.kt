@@ -34,6 +34,9 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.android.setupcompat.util.SystemBarHelper
 import kotlin.math.min
 import org.lineageos.setupwizard.base.BaseSetupWizardActivity
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils.ProvisioningState
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils.getProvisioningState
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils.startProvisioning
 import org.lineageos.setupwizard.util.SetupWizardUtils
 import org.lineageos.setupwizard.widget.RevealHoleView
 
@@ -358,6 +361,11 @@ class FinishActivity : BaseSetupWizardActivity() {
 
     private fun commitReveal() {
         endEntranceAnimation()
+        // Initialize garlic-level provisioning.
+        if (getProvisioningState(this) == ProvisioningState.PENDING) {
+            startProvisioning(this)
+            return
+        }
         finishState = FinishState.ANIMATING
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED)
         disableNavigation()
