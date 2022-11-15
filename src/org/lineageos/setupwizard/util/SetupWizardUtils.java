@@ -64,6 +64,7 @@ import org.lineageos.setupwizard.NetworkSetupActivity;
 import org.lineageos.setupwizard.ScreenLockActivity;
 import org.lineageos.setupwizard.SetupWizardActivity;
 import org.lineageos.setupwizard.SetupWizardApp;
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils.ProvisioningState;
 
 import java.util.List;
 
@@ -162,6 +163,14 @@ public class SetupWizardUtils {
         if (LOGV) {
             Log.v(TAG, "finishSetupWizard");
         }
+        ProvisioningState provisioningState =
+                ManagedProvisioningUtils.getProvisioningState(context);
+        if (LOGV) {
+            Log.v(TAG, "finishSetupWizard, provisioningState=" + provisioningState);
+        }
+        if (provisioningState == ProvisioningState.PENDING) {
+            Log.e(TAG, "finishSetupWizard, but provisioning pending! Murky waters ahead!");
+        }
         ContentResolver contentResolver = context.getContentResolver();
         Settings.Global.putInt(contentResolver,
                 Settings.Global.DEVICE_PROVISIONED, 1);
@@ -176,6 +185,9 @@ public class SetupWizardUtils {
         if (hasLeanback(context)) {
             Settings.Secure.putInt(contentResolver,
                     Settings.Secure.TV_USER_SETUP_COMPLETE, 1);
+        }
+        if (userSetupComplete != 1 && provisioningState == ProvisioningState.COMPLETE) {
+            ManagedProvisioningUtils.finalizeProvisioning(context);
         }
 
         handleNavigationOption();
