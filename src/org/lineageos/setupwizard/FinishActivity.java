@@ -38,11 +38,13 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.om.IOverlayManager;
 import android.content.pm.ActivityInfo;
+import android.database.ContentObserver;
 import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.ServiceManager;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewAnimationUtils;
@@ -50,7 +52,8 @@ import android.widget.ImageView;
 
 import com.google.android.setupcompat.util.WizardManagerHelper;
 
-import org.lineageos.setupwizard.util.SetupWizardUtils;
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils;
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils.ProvisioningState;
 
 public class FinishActivity extends BaseSetupWizardActivity {
 
@@ -113,6 +116,14 @@ public class FinishActivity extends BaseSetupWizardActivity {
     @Override
     public void onNavigateNext() {
         if (mIsFinishing) {
+            return;
+        }
+        ProvisioningState provisioningState =
+                ManagedProvisioningUtils.getProvisioningState(this);
+        if (ManagedProvisioningUtils.getProvisioningState(this) == ProvisioningState.PENDING) {
+            // Initialize garlic-level provisioning.
+            ManagedProvisioningUtils.init(this);
+            // Do not finish yet...
             return;
         }
         mIsFinishing = true;
