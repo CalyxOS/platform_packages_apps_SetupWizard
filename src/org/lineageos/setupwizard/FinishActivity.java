@@ -30,15 +30,18 @@ import static org.lineageos.setupwizard.SetupWizardApp.NAVIGATION_OPTION_KEY;
 import android.animation.Animator;
 import android.app.Activity;
 import android.app.WallpaperManager;
+import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.om.IOverlayManager;
 import android.content.pm.ActivityInfo;
+import android.database.ContentObserver;
 import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.ServiceManager;
+import android.provider.Settings;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.widget.ImageView;
@@ -46,7 +49,7 @@ import android.widget.ImageView;
 import com.google.android.setupcompat.util.SystemBarHelper;
 import com.google.android.setupcompat.util.WizardManagerHelper;
 
-import org.lineageos.setupwizard.util.SetupWizardUtils;
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils;
 
 public class FinishActivity extends BaseSetupWizardActivity {
 
@@ -69,11 +72,29 @@ public class FinishActivity extends BaseSetupWizardActivity {
         mSetupWizardApp = (SetupWizardApp) getApplication();
         mReveal = (ImageView) findViewById(R.id.reveal);
         setNextText(R.string.start);
+
+        getContentResolver().registerContentObserver(
+                Settings.Secure.getUriFor(Settings.Secure.USER_SETUP_COMPLETE), false,
+                new ContentObserver(mHandler) {
+                    @Override
+                    public void onChange(boolean selfChange) {
+                        super.onChange(selfChange);
+                        ManagedProvisioningUtils.finalize(FinishActivity.this);
+                        FinishActivity.this.getContentResolver().unregisterContentObserver(this);
+                    }
+                });
     }
 
     @Override
     protected int getLayoutResId() {
         return R.layout.finish_activity;
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        applyForwardTransition(TRANSITION_ID_NONE);
+        startFinishSequence();
     }
 
     @Override
@@ -86,8 +107,12 @@ public class FinishActivity extends BaseSetupWizardActivity {
 
     @Override
     public void onNavigateNext() {
-        applyForwardTransition(TRANSITION_ID_NONE);
-        startFinishSequence();
+        if (ManagedProvisioningUtils.isProvisioningAllowed(this)) {
+            ManagedProvisioningUtils.init(this);
+        } else {
+            applyForwardTransition(TRANSITION_ID_NONE);
+            startFinishSequence();
+        }
     }
 
     private void finishSetup() {
