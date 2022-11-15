@@ -62,6 +62,7 @@ import org.lineageos.setupwizard.NetworkSetupActivity;
 import org.lineageos.setupwizard.SetupWizardApp;
 import org.lineageos.setupwizard.SetupWizardExitService;
 import org.lineageos.setupwizard.SimMissingActivity;
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils.ProvisioningState;
 import org.lineageos.setupwizard.wizardmanager.WizardManager;
 
 import java.util.ArrayList;
@@ -214,8 +215,13 @@ public class SetupWizardUtils {
             return;
         }
 
+        ProvisioningState provisioningState =
+                ManagedProvisioningUtils.getProvisioningState(context);
         if (LOGV) {
-            Log.v(TAG, "finishSetupWizard");
+            Log.v(TAG, "finishSetupWizard, provisioningState=" + provisioningState);
+        }
+        if (provisioningState == ProvisioningState.PENDING) {
+            Log.e(TAG, "finishSetupWizard, but provisioning pending! Murky waters ahead!");
         }
         ContentResolver contentResolver = context.getContentResolver();
         Settings.Global.putInt(contentResolver,
@@ -235,6 +241,9 @@ public class SetupWizardUtils {
 
         sendMicroGCheckInBroadcast(context);
 
+        if (userSetupComplete != 1 && provisioningState == ProvisioningState.COMPLETE) {
+            ManagedProvisioningUtils.finalizeProvisioning(context);
+        }
         disableSetupWizardComponentsAndSendFinishedBroadcast(context);
 
         prefs.edit().putBoolean(PREF_KEY_SETUP_COMPLETE, true).apply();
