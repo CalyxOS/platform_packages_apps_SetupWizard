@@ -42,6 +42,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils;
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils.ProvisioningState;
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
 public class FinishActivity extends BaseSetupWizardActivity {
@@ -114,6 +116,12 @@ public class FinishActivity extends BaseSetupWizardActivity {
 
     private void startFinishSequence() {
         if (mIsFinishing) {
+            return;
+        }
+        if (ProvisioningState.PENDING == ManagedProvisioningUtils.getProvisioningState(this)) {
+            // Initialize garlic-level provisioning.
+            ManagedProvisioningUtils.init(this);
+            // Do not finish yet...
             return;
         }
         mIsFinishing = true;
