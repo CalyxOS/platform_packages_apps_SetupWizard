@@ -35,18 +35,20 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.om.IOverlayManager;
 import android.content.pm.ActivityInfo;
+import android.database.ContentObserver;
 import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.ServiceManager;
+import android.provider.Settings;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.widget.ImageView;
 
 import com.google.android.setupcompat.util.WizardManagerHelper;
 
-import org.lineageos.setupwizard.util.SetupWizardUtils;
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils;
 
 public class FinishActivity extends BaseSetupWizardActivity {
 
@@ -93,8 +95,26 @@ public class FinishActivity extends BaseSetupWizardActivity {
 
     @Override
     public void onNavigateNext() {
-        applyForwardTransition(TRANSITION_ID_NONE);
-        startFinishSequence();
+        if (ManagedProvisioningUtils.isProvisioningAllowed(this)) {
+            // When initial setup wizard is complete, finalize garlic-level provisioning.
+            mSetupWizardApp.getContentResolver().registerContentObserver(
+                    Settings.Secure.getUriFor(Settings.Secure.USER_SETUP_COMPLETE), false,
+                    new ContentObserver(mHandler) {
+                        @Override
+                        public void onChange(boolean selfChange) {
+                            super.onChange(selfChange);
+                            ManagedProvisioningUtils.finalizeProvisioning(FinishActivity.this);
+                            startFinishSequence();
+                            FinishActivity.this.getContentResolver()
+                                    .unregisterContentObserver(this);
+                        }
+                    });
+            // Initialize garlic-level provisioning.
+            ManagedProvisioningUtils.init(this);
+        } else {
+            applyForwardTransition(TRANSITION_ID_NONE);
+            startFinishSequence();
+        }
     }
 
     private void finishSetup() {
