@@ -426,7 +426,7 @@ public class SetupWizardUtils {
      * @return null if the package cannot be found or the ApplicationInfo is null
      */
     public static ApplicationInfo getApplicationInfo(final Context context,
-                                                     final String packageName, final int flags) {
+            final String packageName, final int flags) {
         final PackageManager packageManager = context.getPackageManager();
         ApplicationInfo info;
         try {
