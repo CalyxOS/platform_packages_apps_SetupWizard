@@ -62,6 +62,7 @@ import org.lineageos.setupwizard.NetworkSetupActivity;
 import org.lineageos.setupwizard.SetupWizardApp;
 import org.lineageos.setupwizard.SimMissingActivity;
 import org.lineageos.setupwizard.wizardmanager.WizardManager;
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils.ProvisioningState;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -194,14 +195,19 @@ public class SetupWizardUtils {
     }
 
     public static void finishSetupWizard(Context context) {
+        ProvisioningState provisioningState =
+                ManagedProvisioningUtils.getProvisioningState(context);
         if (LOGV) {
-            Log.v(TAG, "finishSetupWizard...");
+            Log.v(TAG, "finishSetupWizard, provisioningState=" + provisioningState);
+        }
+        if (provisioningState == ProvisioningState.PENDING) {
+            Log.e(TAG, "finishSetupWizard, but provisioning pending! Murky waters ahead!");
         }
         ContentResolver contentResolver = context.getContentResolver();
         Settings.Global.putInt(contentResolver,
                 Settings.Global.DEVICE_PROVISIONED, 1);
-        final int userSetupComplete = Settings.Secure.getInt(contentResolver,
-                Settings.Secure.USER_SETUP_COMPLETE, 0);
+        final int userSetupComplete =
+                Settings.Secure.getInt(contentResolver, Settings.Secure.USER_SETUP_COMPLETE, 0);
         if (userSetupComplete != 0) {
             Log.e(TAG, "finishSetupWizard, but userSetupComplete=" + userSetupComplete + "! "
                     + "This should not happen!");
@@ -215,6 +221,12 @@ public class SetupWizardUtils {
 
         sendMicroGCheckInBroadcast(context);
 
+        if (userSetupComplete != 1 && provisioningState == ProvisioningState.COMPLETE) {
+            ManagedProvisioningUtils.finalizeProvisioning(context, result -> {
+                // TODO: handle failure result
+                disableSetupWizardComponentsAndSendFinishedBroadcast(context);
+            });
+        }
         disableSetupWizardComponentsAndSendFinishedBroadcast(context);
     }
 
