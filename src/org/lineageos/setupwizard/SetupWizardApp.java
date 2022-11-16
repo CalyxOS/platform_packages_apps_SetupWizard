@@ -96,6 +96,10 @@ public class SetupWizardApp extends Application {
 
     public static final int RADIO_READY_TIMEOUT = 10 * 1000;
 
+    public static final int GARLIC_LEVEL_STANDARD = 0;
+    public static final int GARLIC_LEVEL_SAFER = 1;
+    public static final int GARLIC_LEVEL_SAFEST = 2;
+
     private static StatusBarManager sStatusBarManager;
 
     private boolean mIsRadioReady = false;
