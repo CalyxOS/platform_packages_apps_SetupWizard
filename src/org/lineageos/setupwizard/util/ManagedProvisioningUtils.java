@@ -223,6 +223,11 @@ public class ManagedProvisioningUtils {
                 LineageSettings.Global.GARLIC_LEVEL, GARLIC_LEVEL_DEFAULT);
     }
 
+    public static void setGarlicLevel(final @NonNull Context context, final int garlicLevel) {
+        LineageSettings.Global.putInt(context.getContentResolver(),
+                LineageSettings.Global.GARLIC_LEVEL, garlicLevel);
+    }
+
     public static ProvisioningState getProvisioningState(final @NonNull Context context) {
         // Only system user can provision the device
         if (!SetupWizardUtils.isOwner()) {
