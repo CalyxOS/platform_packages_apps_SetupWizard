@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f03f31b3_ef705cba",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-16T12:53:51Z",
+      "side": 1,
+      "message": "Fine to have it at the end for now, can discuss moving it before shipping.",
+      "revId": "3e9863b1597168f71295583d00f22ea3081db33a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5676c0dd_4b7c3ddf",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-16T12:53:51Z",
+      "side": 1,
+      "message": "I\u0027m not sure about enforced.\n\nNeed to see what wording Tor Browser uses.",
+      "revId": "3e9863b1597168f71295583d00f22ea3081db33a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
