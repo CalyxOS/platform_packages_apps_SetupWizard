@@ -18,6 +18,23 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4bf569c9_2fad6ff4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-16T13:02:43Z",
+      "side": 1,
+      "message": "Let\u0027s split this into multiple commits\n\n1) Read garlic level, apply some settings (e.g. timeout, usb). This is the simple part, easy to test, verify and merge.\n2) Device owner. That one needs some further testing.\n2) Orbot, apk install. That\u0027s the current blocker, so at least we can get the rest of things going without having to wait.",
+      "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4327c529_ee3df6c6",
@@ -65,6 +82,23 @@
       "writtenOn": "2022-11-15T19:04:26Z",
       "side": 1,
       "message": "Relying on apk name like this may be fragile, but I also don\u0027t see a better way atm.",
+      "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f4210bf_2a18f01e",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 456,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-16T13:02:43Z",
+      "side": 1,
+      "message": "This should be split out into multiple methods\n\nStandard, safer and safest for a start, to keep things neater.\n\nWe should also move it out of this Util class to avoid overloading it, and instead create a new class just for this.\n\n\nAlso, call the variable `garlicLevel` to avoid confusion.",
       "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
