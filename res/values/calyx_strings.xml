@@ -54,4 +54,11 @@
     <string name="bootloader_warning_title">Bootloader lock warning</string>
     <string name="bootloader_warning_summary">This device\'s bootloader is currently unlocked. Please lock the bootloader from a computer. Visit <a href="https://calyxos.org/lock">calyxos.org/lock</a> for more info.</string>
     <string name="reboot">Reboot</string>
+
+    <!-- Garlic level -->
+    <string name="security_level_title">Security Level</string>
+    <string name="security_level_subtitle">Select the security level enforced on the device</string>
+    <string name="security_level_standard">Standard</string>
+    <string name="security_level_safer">Safer</string>
+    <string name="security_level_safest">Safest</string>
 </resources>
