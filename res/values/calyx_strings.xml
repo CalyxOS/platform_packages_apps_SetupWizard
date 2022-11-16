@@ -47,4 +47,14 @@
     <string name="bootloader_warning_title">Bootloader lock warning</string>
     <string name="bootloader_warning_summary">This device\'s bootloader is currently unlocked. Please lock the bootloader from a computer. Visit <a href="https://calyxos.org/lock">calyxos.org/lock</a> for more info.</string>
     <string name="reboot">Reboot</string>
+
+    <!-- Garlic level -->
+    <string name="security_level_title">Security Level</string>
+    <string name="security_level_subtitle">Disable certain device features that can be used to attack your security and anonymity.</string>
+    <string name="security_level_standard_title">Standard</string>
+    <string name="security_level_standard_desc">All device features are enabled to maintain a balance between security and usability (Recommended)</string>
+    <string name="security_level_safer_title">Safer</string>
+    <string name="security_level_safer_desc">Specific wireless communication systems and the device have a default timeout. Deploys a work profile that enforces network communication through Orbot</string>
+    <string name="security_level_safest_title">Safest</string>
+    <string name="security_level_safest_desc">Builds upon Safer while enforcing additional restrictions on app installation and debugging. This level may reduce device usability depending upon per use case.</string>
 </resources>
