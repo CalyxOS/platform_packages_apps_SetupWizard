@@ -52,6 +52,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e4b9a7d5_e92b026f",
+        "filename": "src/org/lineageos/setupwizard/apps/AppInstallerService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-11-21T22:22:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4327c529_ee3df6c6",
+      "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7fa5e2e6_142532a6",
@@ -65,6 +83,24 @@
       "writtenOn": "2022-11-15T19:04:26Z",
       "side": 1,
       "message": "Lupin.",
+      "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d625e63_878132da",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-11-21T22:22:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7fa5e2e6_142532a6",
       "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
@@ -86,6 +122,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb79c7e1_4e5168dc",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-11-21T22:22:46Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "85ec567b_a517ef2b",
+      "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3f4210bf_2a18f01e",
@@ -99,6 +153,24 @@
       "writtenOn": "2022-11-16T13:02:43Z",
       "side": 1,
       "message": "This should be split out into multiple methods\n\nStandard, safer and safest for a start, to keep things neater.\n\nWe should also move it out of this Util class to avoid overloading it, and instead create a new class just for this.\n\n\nAlso, call the variable `garlicLevel` to avoid confusion.",
+      "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "69984d1b_5f56b54c",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 456,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-11-21T22:22:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3f4210bf_2a18f01e",
       "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
@@ -120,6 +192,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e65e35ea_568623fb",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 457,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-11-21T22:22:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f311d219_65dde116",
+      "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c7fe4a80_75c202b2",
@@ -133,6 +223,24 @@
       "writtenOn": "2022-11-15T19:04:26Z",
       "side": 1,
       "message": "This should be a constant somewhere.",
+      "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a64d9e94_c171a751",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 474,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-11-21T22:22:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c7fe4a80_75c202b2",
       "revId": "98f7638e71e6c582d8f01b02bc6cfed50981f21b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
