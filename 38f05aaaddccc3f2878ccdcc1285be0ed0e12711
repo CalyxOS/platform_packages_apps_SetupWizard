@@ -3,6 +3,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bf4dbf68_d850fa71",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-22T12:32:30Z",
+      "side": 1,
+      "message": "This should be slightly generic - `installApk`",
+      "revId": "38f05aaaddccc3f2878ccdcc1285be0ed0e12711",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e0de741_0a1d59e6",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-22T12:32:30Z",
+      "side": 1,
+      "message": "The values for these will change based on the level so they should be kept per-level.\n\nSome duplication is fine.",
+      "revId": "38f05aaaddccc3f2878ccdcc1285be0ed0e12711",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "bddcc24d_6a97e722",
         "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
         "patchSetId": 4
