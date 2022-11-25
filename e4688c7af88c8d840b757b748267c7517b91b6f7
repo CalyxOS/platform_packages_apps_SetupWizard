@@ -16,6 +16,23 @@
       "message": "11-26 04:34:23.715  4935  4935 D GmsCheckinTrigger: Ignoring Intent { act\u003dandroid.intent.action.BOOT_COMPLETED flg\u003d0x89000010 cmp\u003dcom.google.android.gms/org.microg.gms.checkin.TriggerReceiver (has extras) }: device not provisioned\n11-26 04:34:23.786  6076  6076 D GmsGcmTrigger: Ignoring Intent { act\u003dandroid.intent.action.BOOT_COMPLETED flg\u003d0x89000010 cmp\u003dcom.google.android.gms/org.microg.gms.gcm.TriggerReceiver (has extras) }: need to checkin first.\n11-26 04:34:23.791  4935  4935 D GmsCheckinTrigger: Ignoring Intent { act\u003dandroid.server.checkin.CHECKIN flg\u003d0x10 cmp\u003dcom.google.android.gms/org.microg.gms.checkin.TriggerReceiver }: device not provisioned\n11-26 04:35:23.025  6426  6426 D GmsProvision: Provisioning: gcm_enabled \u003d true, checkin_enabled \u003d true, safetynet_enabled \u003d false",
       "revId": "e4688c7af88c8d840b757b748267c7517b91b6f7",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0066f6b0_21a1da2a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-25T23:28:12Z",
+      "side": 1,
+      "message": "Actually this can just stay.\n\nWe either have\n\n1) microG disabled\n* In which case this does nothing\n\n2) microG enabled, but push (and thus device reg) disabled\n* In which case broadcast gets sent, but microG will ignore it - it won\u0027t check in if device reg is disabled\n\n3) microG enabled, push enabled (default)\n* This will work, just like we wanted.",
+      "revId": "e4688c7af88c8d840b757b748267c7517b91b6f7",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
