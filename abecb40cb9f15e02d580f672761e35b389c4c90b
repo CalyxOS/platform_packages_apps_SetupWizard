@@ -16,6 +16,24 @@
       "message": "Copy paste additional checks from https://github.com/LineageOS/android_packages_apps_SetupWizard/blob/lineage-19.1/src/org/lineageos/setupwizard/NavigationSettingsActivity.java",
       "revId": "abecb40cb9f15e02d580f672761e35b389c4c90b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec088c7a_56b1ec04",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-25T16:53:09Z",
+      "side": 1,
+      "message": "Not relevant nor applicable for us, so this should be fine.",
+      "parentUuid": "4e677190_ea3e089b",
+      "revId": "abecb40cb9f15e02d580f672761e35b389c4c90b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
