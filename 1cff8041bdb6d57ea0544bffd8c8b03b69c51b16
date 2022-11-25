@@ -18,6 +18,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e30acb10_b0837747",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-25T17:12:18Z",
+      "side": 1,
+      "message": "Done, just need to do a quick test before merge.",
+      "parentUuid": "26f29b39_07184345",
+      "revId": "1cff8041bdb6d57ea0544bffd8c8b03b69c51b16",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "012cba77_e2e91c91",
