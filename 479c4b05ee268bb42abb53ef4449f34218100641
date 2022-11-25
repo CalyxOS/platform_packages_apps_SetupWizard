@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a89bfc9_b54f44b8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-11-25T19:52:58Z",
+      "side": 1,
+      "message": "Nit: What does it mean for the checkin to always be sent after microg-defaults? This line confuses me into thinking that either 1) this commit will cause a checkin to be sent always (it does the opposite), or 2) microG is still always going to check in, but now it\u0027s happening from somewhere else (after microg-defaults), rather than here. And users don\u0027t *want* microG to check in *always* (e.g. if they turn it off), so if that problem is solved now, this line casts some doubt on that.\n\nMaybe this line can just be removed, and the lines below changed to something like: `* When user enables push notification support / device registration on the microg-defaults page, microG does a CHECKIN for us`\n\n...but I don\u0027t know if that\u0027s an accurate description or not.",
+      "revId": "479c4b05ee268bb42abb53ef4449f34218100641",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
