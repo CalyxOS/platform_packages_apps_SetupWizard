@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "572d59de_30332f2f",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-30T16:45:53Z",
+      "side": 1,
+      "message": "Aayush: If we ever install more than one app here, move to Lupin.",
+      "parentUuid": "bf4dbf68_d850fa71",
+      "revId": "38f05aaaddccc3f2878ccdcc1285be0ed0e12711",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7e0de741_0a1d59e6",
         "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
         "patchSetId": 4
