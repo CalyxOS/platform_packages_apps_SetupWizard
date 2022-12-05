@@ -47,6 +47,7 @@ import android.os.Binder;
 import android.os.Build;
 import android.os.SystemProperties;
 import android.os.UserHandle;
+import android.os.UserManager;
 import android.provider.Settings;
 import android.service.oemlock.OemLockManager;
 import android.telephony.ServiceState;
@@ -121,6 +122,10 @@ public class SetupWizardUtils {
 
     public static boolean isOwner() {
         return UserHandle.myUserId() == 0;
+    }
+
+    public static boolean isManagedProfile(Context context) {
+        return context.getSystemService(UserManager.class).isManagedProfile();
     }
 
     public static void disableCaptivePortalDetection(Context context) {
