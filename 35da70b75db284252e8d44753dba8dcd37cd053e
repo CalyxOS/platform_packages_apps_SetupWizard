@@ -33,6 +33,24 @@
       "message": "I\u0027m pretty sure I\u0027ve built CalyxOS emulator images for 13 and not encountered any issues with SetupWizard. I\u0027d need to try again to be sure, though. I don\u0027t still have emulator easily accessible at the moment.",
       "revId": "35da70b75db284252e8d44753dba8dcd37cd053e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c9eb7a3_a1bcaacb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-05T22:45:56Z",
+      "side": 1,
+      "message": "Actually now that you mention it, so have I, and haven\u0027t seen it crashing.\n\nIt still makes sense to do it anyway, I think.",
+      "parentUuid": "94b5fce6_1ca5c32f",
+      "revId": "35da70b75db284252e8d44753dba8dcd37cd053e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
