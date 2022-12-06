@@ -51,6 +51,41 @@
       "parentUuid": "94b5fce6_1ca5c32f",
       "revId": "35da70b75db284252e8d44753dba8dcd37cd053e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "331150c8_b0fa9f7e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-12-06T18:37:41Z",
+      "side": 1,
+      "message": "After letting an emulator image build last night for `calyx_sdk_phone_x86_64-userdebug` with just `m installclean \u0026\u0026 m` and launched with `emulator`, can confirm no visible issues or any messages in `adb logcat -b crash` on 4.3.1-UNOFFICIAL. But true, I don\u0027t know how it would necessarily hurt to have this.",
+      "parentUuid": "9c9eb7a3_a1bcaacb",
+      "revId": "35da70b75db284252e8d44753dba8dcd37cd053e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a768d57_8ed1cc30",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-12-06T18:37:41Z",
+      "side": 1,
+      "message": "Haven\u0027t built or tested, but this looks like the same way this is handled in `packages/apps/Settings/src/com/android/settings/development/OemUnlockPreferenceController.java`, so it looks good to me",
+      "revId": "35da70b75db284252e8d44753dba8dcd37cd053e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
