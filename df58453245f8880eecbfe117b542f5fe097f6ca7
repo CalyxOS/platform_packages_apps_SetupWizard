@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8420798c_459d75ab",
+        "filename": "src/org/lineageos/setupwizard/BaseSetupWizardActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-07T12:00:53Z",
+      "side": 1,
+      "message": "Could just modify `isUserSetupComplete` and avoid having to modify two places. I see that it\u0027s a setup lib call, in which case we could copy it to Utils here.\n\nAlso, wouldn\u0027t it be better to actually check if setup is complete for that profile rather than just check if it\u0027s a profile.\n\nCurrent:\n\n```\npublic static boolean isUserSetupComplete(Context context) {\n    return Settings.Secure.getInt(context.getContentResolver(), SETTINGS_SECURE_USER_SETUP_COMPLETE, 0) \u003d\u003d 1;\n}\n```",
+      "revId": "df58453245f8880eecbfe117b542f5fe097f6ca7",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
