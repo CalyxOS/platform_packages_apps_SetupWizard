@@ -19,16 +19,35 @@ package org.lineageos.setupwizard.util;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.IIntentReceiver;
+import android.content.IIntentSender;
 import android.content.Intent;
+import android.content.IntentSender;
+import android.content.pm.PackageInstaller;
+import android.os.Bundle;
+import android.os.IBinder;
 import android.os.PersistableBundle;
 import android.os.Process;
+import android.os.UserHandle;
+import android.os.UserManager;
+import android.util.Log;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 import lineageos.providers.LineageSettings;
 
 public class ManagedProvisioningUtils {
 
+    private static final String TAG = ManagedProvisioningUtils.class.getSimpleName();
+
     private static final String BELLIS_PACKAGE = "org.calyxos.bellis";
     private static final String BELLIS_DEVICE_ADMIN_RECEIVER_CLASS = ".BasicDeviceAdminReceiver";
+
+    private static final String ORBOT_PACKAGE = "org.torproject.android";
+    private static final String ORBOT_APK_PATH = "/product/fdroid/repo/Orbot.apk";
 
     private enum GarlicLevel {
         STANDARD,
@@ -41,8 +60,51 @@ public class ManagedProvisioningUtils {
     }
 
     public static void finalizeProvisioning(Context context) {
-        context.startActivity(new Intent(DevicePolicyManager.ACTION_PROVISION_FINALIZATION)
-                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        Context userContext = context;
+        for (UserHandle userHandle : UserManager.get(context).getUserHandles(false)) {
+            userContext = context.createContextAsUser(userHandle, 0);
+        }
+        // userContext, now the Context for the last-listed user, is reasonably assumed to be that
+        // of the newly-created managed profile.
+        IntentSender intentSender = new IntentSender((IIntentSender) new IIntentSender.Stub() {
+            @Override
+            public void send(int code, Intent intent, String resolvedType,
+                    IBinder whitelistToken, IIntentReceiver finishedReceiver,
+                    String requiredPermission, Bundle options) {
+                final int status = intent.getIntExtra(
+                        PackageInstaller.EXTRA_STATUS, PackageInstaller.STATUS_FAILURE);
+                if (status != PackageInstaller.STATUS_SUCCESS) {
+                    Log.e(TAG, "Failed to install " + intent.getStringExtra(
+                            PackageInstaller.EXTRA_PACKAGE_NAME) + "[" +
+                            intent.getStringExtra(PackageInstaller.EXTRA_STATUS_MESSAGE) + "]");
+                }
+
+                // Finalize provisioning in Bellis.
+                context.startActivity(new Intent(DevicePolicyManager.ACTION_PROVISION_FINALIZATION)
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            }
+        });
+        installApk(userContext, intentSender, ORBOT_APK_PATH);
+    }
+
+    private static void installApk(Context context, IntentSender intentSender, String apkPath) {
+        try {
+            PackageInstaller packageInstaller = context.getPackageManager().getPackageInstaller();
+            PackageInstaller.Session session = packageInstaller.openSession(
+                    packageInstaller.createSession(new PackageInstaller.SessionParams(
+                            PackageInstaller.SessionParams.MODE_FULL_INSTALL)));
+            try (OutputStream packageInSession = session.openWrite("package", 0, -1);
+                 InputStream is = new FileInputStream(apkPath)) {
+                byte[] buffer = new byte[16384];
+                int n;
+                while ((n = is.read(buffer)) >= 0) {
+                    packageInSession.write(buffer, 0, n);
+                }
+            }
+            session.commit(intentSender);
+        } catch (IOException e) {
+            Log.e(TAG, "Failed to install " + apkPath, e);
+        }
     }
 
     private static void startProvisioning(Context context) {
