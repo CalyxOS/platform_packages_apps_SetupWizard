@@ -35,6 +35,7 @@ import android.os.PersistableBundle;
 import android.os.Process;
 import android.os.UserHandle;
 import android.os.UserManager;
+import android.provider.Settings;
 import android.util.Log;
 
 import java.io.FileInputStream;
@@ -67,6 +68,11 @@ public class ManagedProvisioningUtils {
     }
 
     public static void init(final @NonNull Context context) {
+        switch (getGarlicLevel(context)) {
+            case GARLIC_LEVEL_SAFER:
+                setupSaferMode(context);
+                break;
+        }
         startProvisioning(context);
     }
 
@@ -139,6 +145,23 @@ public class ManagedProvisioningUtils {
         } catch (IOException e) {
             Log.e(TAG, "Failed to install " + apkPath, e);
         }
+    }
+
+    /**
+     * Applies a pre-defined safer mode configuration
+     *
+     * Bluetooth Timeout: 5 minutes
+     * WiFi Timeout: 5 minutes
+     * Device Auto-reboot Timeout: 24 hours
+     * @param context Current context
+     */
+    private static void setupSaferMode(Context context) {
+        Settings.Global.putInt(context.getContentResolver(),
+                Settings.Global.BLUETOOTH_OFF_TIMEOUT, 5 * 60 * 1000);
+        Settings.Global.putInt(context.getContentResolver(),
+                Settings.Global.WIFI_OFF_TIMEOUT, 5 * 60 * 1000);
+        LineageSettings.Global.putInt(context.getContentResolver(),
+                LineageSettings.Global.DEVICE_REBOOT_TIMEOUT, 24 * 60 * 60 * 1000);
     }
 
     private static void startProvisioning(final @NonNull Context context) {
