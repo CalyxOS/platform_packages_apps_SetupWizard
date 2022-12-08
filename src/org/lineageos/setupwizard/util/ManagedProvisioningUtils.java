@@ -62,6 +62,8 @@ public class ManagedProvisioningUtils {
                 LineageSettings.Global.GARLIC_LEVEL, 0);
         if (garlicLevel == GarlicLevel.SAFER.ordinal()) {
             setupSafeMode(context);
+        } else if (garlicLevel == GarlicLevel.SAFEST.ordinal()) {
+            setupSafestMode(context);
         }
         startProvisioning(context);
     }
@@ -105,6 +107,15 @@ public class ManagedProvisioningUtils {
     }
 
     private static void setupSafeMode(Context context) {
+        Settings.Global.putInt(context.getContentResolver(),
+                Settings.Global.BLUETOOTH_OFF_TIMEOUT, 15000);
+        Settings.Global.putInt(context.getContentResolver(),
+                Settings.Global.WIFI_OFF_TIMEOUT, 15000);
+        LineageSettings.Global.putInt(context.getContentResolver(),
+                LineageSettings.Global.DEVICE_REBOOT_TIMEOUT, 3600000);
+    }
+
+    private static void setupSafestMode(Context context) {
         Settings.Global.putInt(context.getContentResolver(),
                 Settings.Global.BLUETOOTH_OFF_TIMEOUT, 15000);
         Settings.Global.putInt(context.getContentResolver(),
