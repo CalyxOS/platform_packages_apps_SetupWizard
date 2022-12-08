@@ -36,6 +36,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1755341d_e93d647e",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2022-12-08T17:20:52Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "572d59de_30332f2f",
+      "revId": "38f05aaaddccc3f2878ccdcc1285be0ed0e12711",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7e0de741_0a1d59e6",
@@ -49,6 +67,24 @@
       "writtenOn": "2022-11-22T12:32:30Z",
       "side": 1,
       "message": "The values for these will change based on the level so they should be kept per-level.\n\nSome duplication is fine.",
+      "revId": "38f05aaaddccc3f2878ccdcc1285be0ed0e12711",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "965861c4_b00f27c6",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2022-12-08T17:20:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7e0de741_0a1d59e6",
       "revId": "38f05aaaddccc3f2878ccdcc1285be0ed0e12711",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
