@@ -23,9 +23,11 @@ import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 import static org.lineageos.setupwizard.SetupWizardApp.NAVIGATION_OPTION_KEY;
 import static org.lineageos.setupwizard.SetupWizardApp.PACKAGE_INSTALLERS;
 
+import android.app.AlertDialog;
 import android.app.AppOpsManager;
 import android.app.StatusBarManager;
 import android.app.WallpaperManager;
+import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -60,6 +62,7 @@ import org.lineageos.setupwizard.BaseSetupWizardActivity;
 import org.lineageos.setupwizard.BluetoothSetupActivity;
 import org.lineageos.setupwizard.BootloaderWarningActivity;
 import org.lineageos.setupwizard.NetworkSetupActivity;
+import org.lineageos.setupwizard.R;
 import org.lineageos.setupwizard.SetupWizardActivity;
 import org.lineageos.setupwizard.SetupWizardApp;
 import org.lineageos.setupwizard.SimMissingActivity;
@@ -161,45 +164,41 @@ public class SetupWizardUtils {
     }
 
     public static void finishSetupWizard(BaseSetupWizardActivity context) {
-        if (LOGV) {
-            Log.v(TAG, "finishSetupWizard");
-        }
         ProvisioningState provisioningState =
                 ManagedProvisioningUtils.getProvisioningState(context);
         if (LOGV) {
             Log.v(TAG, "finishSetupWizard, provisioningState=" + provisioningState);
         }
-        if (provisioningState == ProvisioningState.PENDING) {
-            Log.e(TAG, "finishSetupWizard, but provisioning pending! Murky waters ahead!");
-        }
         ContentResolver contentResolver = context.getContentResolver();
         Settings.Global.putInt(contentResolver,
                 Settings.Global.DEVICE_PROVISIONED, 1);
-        final int userSetupComplete =
-                Settings.Secure.getInt(contentResolver, Settings.Secure.USER_SETUP_COMPLETE, 0);
-        if (userSetupComplete != 0 && !SetupWizardUtils.isManagedProfile(context)) {
-            Log.e(TAG, "finishSetupWizard, but userSetupComplete=" + userSetupComplete + "! "
-                    + "This should not happen!");
-        }
         Settings.Secure.putInt(contentResolver,
                 Settings.Secure.USER_SETUP_COMPLETE, 1);
         if (hasLeanback(context)) {
             Settings.Secure.putInt(contentResolver,
                     Settings.Secure.TV_USER_SETUP_COMPLETE, 1);
         }
-        if (userSetupComplete != 1 && provisioningState == ProvisioningState.COMPLETE) {
-            ManagedProvisioningUtils.finalizeProvisioning(context);
-        }
-
-        handleNavigationOption();
-        provisionDefaultUserAppPermissions(context);
-        sendMicroGCheckInBroadcast(context);
-        WallpaperManager.getInstance(context).forgetLoadedWallpaper();
-        disableHome(context);
-        enableStatusBar();
-        context.finishAffinity();
-        context.nextAction(RESULT_SKIP);
-        Log.i(TAG, "Setup complete!");
+        ManagedProvisioningUtils.finalizeProvisioning(context, result -> {
+            if (result != null) {
+                Log.e(TAG, "Failed to finalize provisioning", result);
+                context.runOnUiThread(() -> new AlertDialog.Builder(context).setTitle(
+                        R.string.cant_set_up_device).setMessage(
+                        R.string.provisioning_failed).setPositiveButton(R.string.reset,
+                        (dialogInterface, i) -> context.getSystemService(
+                                DevicePolicyManager.class).wipeDevice(0)).setCancelable(
+                        false).show());
+            } else {
+                handleNavigationOption();
+                provisionDefaultUserAppPermissions(context);
+                sendMicroGCheckInBroadcast(context);
+                WallpaperManager.getInstance(context).forgetLoadedWallpaper();
+                disableHome(context);
+                enableStatusBar();
+                context.finishAffinity();
+                context.nextAction(RESULT_SKIP);
+                Log.i(TAG, "Setup complete!");
+            }
+        });
     }
 
     public static boolean isSetupWizardComplete(Context context) {
