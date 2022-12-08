@@ -61,6 +61,8 @@ public class ManagedProvisioningUtils {
         int provisioningMode = getProvisioningMode(context);
         if (provisioningMode == DevicePolicyManager.PROVISIONING_MODE_MANAGED_PROFILE) {
             setupSafeMode(context);
+        } else if (provisioningMode == DevicePolicyManager.PROVISIONING_MODE_FULLY_MANAGED_DEVICE) {
+            setupSafestMode(context);
         }
         startProvisioning(context);
     }
@@ -104,6 +106,15 @@ public class ManagedProvisioningUtils {
     }
 
     private static void setupSafeMode(Context context) {
+        Settings.Global.putInt(context.getContentResolver(),
+                Settings.Global.BLUETOOTH_OFF_TIMEOUT, 15000);
+        Settings.Global.putInt(context.getContentResolver(),
+                Settings.Global.WIFI_OFF_TIMEOUT, 15000);
+        LineageSettings.Global.putInt(context.getContentResolver(),
+                LineageSettings.Global.DEVICE_REBOOT_TIMEOUT, 3600000);
+    }
+
+    private static void setupSafestMode(Context context) {
         Settings.Global.putInt(context.getContentResolver(),
                 Settings.Global.BLUETOOTH_OFF_TIMEOUT, 15000);
         Settings.Global.putInt(context.getContentResolver(),
