@@ -203,7 +203,10 @@ public class SetupWizardUtils {
                     Settings.Secure.TV_USER_SETUP_COMPLETE, 1);
         }
         if (userSetupComplete != 1 && provisioningState == ProvisioningState.COMPLETE) {
-            ManagedProvisioningUtils.finalizeProvisioning(context);
+            ManagedProvisioningUtils.finalizeProvisioning(context, result -> {
+                // TODO: handle failure result
+                disableComponentsAndSendFinishedBroadcast(context);
+            });
         }
 
         disableComponentsAndSendFinishedBroadcast(context);
