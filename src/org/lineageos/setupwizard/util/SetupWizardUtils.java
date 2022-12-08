@@ -57,6 +57,9 @@ import android.util.Log;
 import com.google.android.setupcompat.util.WizardManagerHelper;
 
 import org.lineageos.setupwizard.BaseSetupWizardActivity;
+import org.lineageos.setupwizard.BluetoothSetupActivity;
+import org.lineageos.setupwizard.BootloaderWarningActivity;
+import org.lineageos.setupwizard.NetworkSetupActivity;
 import org.lineageos.setupwizard.SetupWizardActivity;
 import org.lineageos.setupwizard.SetupWizardApp;
 import org.lineageos.setupwizard.util.ManagedProvisioningUtils.ProvisioningState;

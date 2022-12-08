@@ -19,13 +19,32 @@ package org.lineageos.setupwizard.util;
 import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 
 import android.annotation.NonNull;
+import android.annotation.Nullable;
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.IIntentReceiver;
+import android.content.IIntentSender;
 import android.content.Intent;
+import android.content.IntentSender;
+import android.content.pm.PackageInstaller;
+import android.os.Bundle;
+import android.os.IBinder;
 import android.os.PersistableBundle;
 import android.os.Process;
+import android.os.UserHandle;
+import android.os.UserManager;
 import android.util.Log;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.function.Consumer;
+
+import org.lineageos.setupwizard.R;
 
 import lineageos.providers.LineageSettings;
 
@@ -41,10 +60,64 @@ public class ManagedProvisioningUtils {
     private static final String BELLIS_PACKAGE = "org.calyxos.bellis";
     private static final String BELLIS_DEVICE_ADMIN_RECEIVER_CLASS = ".BasicDeviceAdminReceiver";
 
+    private static final String ORBOT_PACKAGE = "org.torproject.android";
+    private static final String ORBOT_APK_PATH = "/product/fdroid/repo/Orbot.apk";
+
     public enum ProvisioningState {
         UNSUPPORTED,
         PENDING,
         COMPLETE
+    }
+
+    public static void installManagedProfileApps(final @NonNull Context context,
+            final @Nullable Consumer<Exception> completionConsumer) {
+        if (LOGV) {
+            Log.v(TAG, "installManagedProfileApps");
+        }
+        if (getProvisioningState(context) != ProvisioningState.COMPLETE) {
+            if (completionConsumer != null) {
+                completionConsumer.accept(
+                        getProvisioningState(context) == ProvisioningState.UNSUPPORTED ? null
+                                : new Exception("Provisioning pending"));
+            }
+            return;
+        }
+        Context userContext = context;
+        for (UserHandle userHandle : UserManager.get(context).getUserHandles(false)) {
+            userContext = context.createContextAsUser(userHandle, 0);
+        }
+        // userContext, now the Context for the last-listed user, is reasonably assumed to be that
+        // of the newly-created managed profile.
+        IntentSender intentSender = new IntentSender((IIntentSender) new IIntentSender.Stub() {
+            @Override
+            public void send(int code, Intent intent, String resolvedType,
+                    IBinder whitelistToken, IIntentReceiver finishedReceiver,
+                    String requiredPermission, Bundle options) {
+                final int status = intent.getIntExtra(
+                        PackageInstaller.EXTRA_STATUS, PackageInstaller.STATUS_FAILURE);
+                if (status != PackageInstaller.STATUS_SUCCESS) {
+                    final String errorMessage = "Failed to install "
+                            + intent.getStringExtra(PackageInstaller.EXTRA_PACKAGE_NAME) + "["
+                            + intent.getStringExtra(PackageInstaller.EXTRA_STATUS_MESSAGE) + "]";
+                    Log.e(TAG, errorMessage);
+                    if (completionConsumer != null) {
+                        completionConsumer.accept(new Exception(errorMessage));
+                    }
+                    return;
+                }
+                if (completionConsumer != null) {
+                    // Return success via null Exception.
+                    completionConsumer.accept(null);
+                }
+            }
+        });
+        try {
+            installApk(userContext, intentSender, ORBOT_APK_PATH);
+        } catch (Exception e) {
+            if (completionConsumer != null) {
+                completionConsumer.accept(e);
+            }
+        }
     }
 
     public static Intent getFinalizeProvisioningIntent(final @NonNull Context context) {
@@ -53,6 +126,23 @@ public class ManagedProvisioningUtils {
         }
         return new Intent(DevicePolicyManager.ACTION_PROVISION_FINALIZATION)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    }
+
+    private static void installApk(Context context, IntentSender intentSender, String apkPath)
+            throws IOException {
+        PackageInstaller packageInstaller = context.getPackageManager().getPackageInstaller();
+        PackageInstaller.Session session = packageInstaller.openSession(
+                packageInstaller.createSession(new PackageInstaller.SessionParams(
+                        PackageInstaller.SessionParams.MODE_FULL_INSTALL)));
+        try (OutputStream packageInSession = session.openWrite("package", 0, -1);
+             InputStream is = new FileInputStream(apkPath)) {
+            byte[] buffer = new byte[16384];
+            int n;
+            while ((n = is.read(buffer)) >= 0) {
+                packageInSession.write(buffer, 0, n);
+            }
+        }
+        session.commit(intentSender);
     }
 
     public static Intent getStartProvisioningIntent(final @NonNull Context context) {
@@ -117,5 +207,14 @@ public class ManagedProvisioningUtils {
             }
         }
         return ProvisioningState.UNSUPPORTED;
+    }
+
+    public static void showFailedProvisioningDialog(Activity activity) {
+        activity.runOnUiThread(() -> new AlertDialog.Builder(activity).setTitle(
+                R.string.cant_set_up_device).setMessage(
+                R.string.provisioning_failed).setPositiveButton(R.string.reset,
+                (dialogInterface, i) -> activity.getSystemService(
+                        DevicePolicyManager.class).wipeDevice(0)).setCancelable(
+                false).show());
     }
 }

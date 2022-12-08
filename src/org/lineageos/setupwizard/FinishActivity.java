@@ -32,6 +32,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils;
 import org.lineageos.setupwizard.util.ManagedProvisioningUtils.ProvisioningState;
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
@@ -142,7 +143,14 @@ public class FinishActivity extends BaseSetupWizardActivity {
         }
         if (!SetupWizardUtils.isUserSetupMarkedComplete(this)) {
             SetupWizardUtils.markUserSetupComplete(this);
-            mFinalizeProvisioningResultLauncher.launch(getFinalizeProvisioningIntent(this));
+            ManagedProvisioningUtils.installManagedProfileApps(this, result -> {
+                if (result != null) {
+                    Log.e(TAG, "Failed to finalize provisioning", result);
+                    ManagedProvisioningUtils.showFailedProvisioningDialog(this);
+                } else {
+                    mFinalizeProvisioningResultLauncher.launch(getFinalizeProvisioningIntent(this));
+                }
+            });
             return true;
         }
         return false;
