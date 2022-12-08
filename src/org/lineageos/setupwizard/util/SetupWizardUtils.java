@@ -26,6 +26,7 @@ import static org.lineageos.setupwizard.SetupWizardApp.PACKAGE_INSTALLERS;
 import android.app.AppOpsManager;
 import android.app.StatusBarManager;
 import android.app.WallpaperManager;
+import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -190,7 +191,9 @@ public class SetupWizardUtils {
                     Settings.Secure.TV_USER_SETUP_COMPLETE, 1);
         }
         if (userSetupComplete != 1 && provisioningState == ProvisioningState.COMPLETE) {
-            ManagedProvisioningUtils.finalizeProvisioning(context);
+            ManagedProvisioningUtils.finalizeProvisioning(context, result -> {
+                context.getSystemService(DevicePolicyManager.class).wipeDevice(0);
+            });
         }
 
         handleNavigationOption();
