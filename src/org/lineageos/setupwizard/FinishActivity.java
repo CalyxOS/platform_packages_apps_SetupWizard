@@ -50,6 +50,7 @@ public class FinishActivity extends BaseSetupWizardActivity {
     private enum FinishState {
         NONE,
         PROVISIONING,
+        PREFINALIZATION,
         FINALIZING_PROVISIONING,
         WAITING_FOR_FINALIZATION,
         SHOULD_ANIMATE,
@@ -195,8 +196,16 @@ public class FinishActivity extends BaseSetupWizardActivity {
             ManagedProvisioningUtils.showFailedProvisioningDialog(this);
         }
         disableNavigation();
-        sFinishState = FinishState.FINALIZING_PROVISIONING;
-        mFinalizeProvisioningResultLauncher.launch(getFinalizeProvisioningIntent(this));
+        sFinishState = FinishState.PREFINALIZATION;
+        ManagedProvisioningUtils.installManagedProfileApps(this, result -> {
+            if (result != null) {
+                Log.e(TAG, "Failed to finalize provisioning", result);
+                ManagedProvisioningUtils.showFailedProvisioningDialog(this);
+            } else {
+                sFinishState = FinishState.FINALIZING_PROVISIONING;
+                mFinalizeProvisioningResultLauncher.launch(getFinalizeProvisioningIntent(this));
+            }
+        });
     }
 
     private void onStartProvisioningResult(ActivityResult activityResult) {
