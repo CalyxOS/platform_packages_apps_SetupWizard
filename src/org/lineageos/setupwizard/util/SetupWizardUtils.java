@@ -23,9 +23,11 @@ import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 import static org.lineageos.setupwizard.SetupWizardApp.NAVIGATION_OPTION_KEY;
 import static org.lineageos.setupwizard.SetupWizardApp.PACKAGE_INSTALLERS;
 
+import android.app.AlertDialog;
 import android.app.AppOpsManager;
 import android.app.StatusBarManager;
 import android.app.WallpaperManager;
+import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -61,6 +63,7 @@ import org.lineageos.setupwizard.BiometricActivity;
 import org.lineageos.setupwizard.BluetoothSetupActivity;
 import org.lineageos.setupwizard.BootloaderWarningActivity;
 import org.lineageos.setupwizard.NetworkSetupActivity;
+import org.lineageos.setupwizard.R;
 import org.lineageos.setupwizard.ScreenLockActivity;
 import org.lineageos.setupwizard.SetupWizardActivity;
 import org.lineageos.setupwizard.SetupWizardApp;
@@ -171,9 +174,6 @@ public class SetupWizardUtils {
         if (LOGV) {
             Log.v(TAG, "finishSetupWizard, provisioningState=" + provisioningState);
         }
-        if (provisioningState == ProvisioningState.PENDING) {
-            Log.e(TAG, "finishSetupWizard, but provisioning pending! Murky waters ahead!");
-        }
         ContentResolver contentResolver = context.getContentResolver();
         Settings.Global.putInt(contentResolver,
                 Settings.Global.DEVICE_PROVISIONED, 1);
@@ -189,19 +189,29 @@ public class SetupWizardUtils {
             Settings.Secure.putInt(contentResolver,
                     Settings.Secure.TV_USER_SETUP_COMPLETE, 1);
         }
-        if (userSetupComplete != 1 && provisioningState == ProvisioningState.COMPLETE) {
-            ManagedProvisioningUtils.finalizeProvisioning(context);
+        if (userSetupComplete != 1) {
+            ManagedProvisioningUtils.finalizeProvisioning(context, result -> {
+                if (result != null) {
+                    Log.e(TAG, "Failed to finalize provisioning", result);
+                    context.runOnUiThread(() -> new AlertDialog.Builder(context).setTitle(
+                            R.string.cant_set_up_device).setMessage(
+                            R.string.provisioning_failed).setPositiveButton(R.string.reset,
+                            (dialogInterface, i) -> context.getSystemService(
+                                    DevicePolicyManager.class).wipeDevice(0)).setCancelable(
+                            false).show());
+                } else {
+                    handleNavigationOption();
+                    provisionDefaultUserAppPermissions(context);
+                    sendMicroGCheckInBroadcast(context);
+                    WallpaperManager.getInstance(context).forgetLoadedWallpaper();
+                    disableHome(context);
+                    enableStatusBar();
+                    context.finishAffinity();
+                    context.nextAction(RESULT_SKIP);
+                    Log.i(TAG, "Setup complete!");
+                }
+            });
         }
-
-        handleNavigationOption();
-        provisionDefaultUserAppPermissions(context);
-        sendMicroGCheckInBroadcast(context);
-        WallpaperManager.getInstance(context).forgetLoadedWallpaper();
-        disableHome(context);
-        enableStatusBar();
-        context.finishAffinity();
-        context.nextAction(RESULT_SKIP);
-        Log.i(TAG, "Setup complete!");
     }
 
     public static boolean isSetupWizardComplete(Context context) {

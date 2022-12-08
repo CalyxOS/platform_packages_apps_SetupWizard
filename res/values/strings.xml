@@ -20,6 +20,7 @@
     <string name="done">Done</string>
     <string name="ok">OK</string>
     <string name="loading">Just a sec\u2026</string>
+    <string name="reset">Reset</string>
 
     <!-- Welcome page -->
     <string name="setup_welcome_message">Welcome to <xliff:g id="name" example="LineageOS">%1$s</xliff:g></string>
@@ -82,4 +83,8 @@
     <string name="theme_summary">Dark theme uses a black background to help keep battery alive longer on some screens</string>
     <string name="dark">Dark</string>
     <string name="light">Light</string>
+
+    <!-- Provisioning dialog -->
+    <string name="cant_set_up_device">Can\'t set up device</string>
+    <string name="provisioning_failed">Failed to finalize provisioning</string>
 </resources>
