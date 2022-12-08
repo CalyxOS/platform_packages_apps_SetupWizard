@@ -28,6 +28,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PersistableBundle;
 import android.os.Process;
+import android.provider.Settings;
 import android.util.Log;
 
 import org.lineageos.setupwizard.R;
@@ -58,6 +59,11 @@ public class ManagedProvisioningUtils {
     }
 
     public static void init(Context context) {
+        final int garlicLevel = LineageSettings.Global.getInt(context.getContentResolver(),
+                LineageSettings.Global.GARLIC_LEVEL, 0);
+        if (garlicLevel == GarlicLevel.SAFER.ordinal()) {
+            setupSaferMode(context);
+        }
         startProvisioning(context);
     }
 
@@ -98,6 +104,23 @@ public class ManagedProvisioningUtils {
         } catch (IOException e) {
             Log.e(TAG, "Failed to install Orbot", e);
         }
+    }
+
+    /**
+     * Applies a pre-defined safer mode configuration
+     *
+     * Bluetooth Timeout: 15 seconds
+     * WiFi Timeout: 15 seconds
+     * Device Auto-reboot Timeout: 36 hours
+     * @param context Current context
+     */
+    private static void setupSaferMode(Context context) {
+        Settings.Global.putInt(context.getContentResolver(),
+                Settings.Global.BLUETOOTH_OFF_TIMEOUT, 15000);
+        Settings.Global.putInt(context.getContentResolver(),
+                Settings.Global.WIFI_OFF_TIMEOUT, 15000);
+        LineageSettings.Global.putInt(context.getContentResolver(),
+                LineageSettings.Global.DEVICE_REBOOT_TIMEOUT, 3600000);
     }
 
     private static void startProvisioning(Context context) {
