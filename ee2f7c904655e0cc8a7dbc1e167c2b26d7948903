@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6192fd1_62337102",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-08T19:19:53Z",
+      "side": 1,
+      "message": "safer*",
+      "revId": "ee2f7c904655e0cc8a7dbc1e167c2b26d7948903",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f0dc691_684e589f",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-08T19:19:53Z",
+      "side": 1,
+      "message": "comment or variable for the values to make it easier to read.",
+      "revId": "ee2f7c904655e0cc8a7dbc1e167c2b26d7948903",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
