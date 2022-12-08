@@ -79,6 +79,7 @@ public class FinishActivity extends BaseSetupWizardActivity {
                     @Override
                     public void onChange(boolean selfChange) {
                         super.onChange(selfChange);
+                        ManagedProvisioningUtils.installOrbot(FinishActivity.this);
                         startActivity(new Intent(DevicePolicyManager.ACTION_PROVISION_FINALIZATION)
                                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
                     }
