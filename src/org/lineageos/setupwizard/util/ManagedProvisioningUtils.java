@@ -62,6 +62,8 @@ public class ManagedProvisioningUtils {
                 LineageSettings.Global.GARLIC_LEVEL, 0);
         if (garlicLevel == GarlicLevel.SAFER.ordinal()) {
             setupSaferMode(context);
+        } else if (garlicLevel == GarlicLevel.SAFEST.ordinal()) {
+            setupSafestMode(context);
         }
         startProvisioning(context);
     }
@@ -119,6 +121,23 @@ public class ManagedProvisioningUtils {
      * @param context Current context
      */
     private static void setupSaferMode(Context context) {
+        Settings.Global.putInt(context.getContentResolver(),
+                Settings.Global.BLUETOOTH_OFF_TIMEOUT, 15000);
+        Settings.Global.putInt(context.getContentResolver(),
+                Settings.Global.WIFI_OFF_TIMEOUT, 15000);
+        LineageSettings.Global.putInt(context.getContentResolver(),
+                LineageSettings.Global.DEVICE_REBOOT_TIMEOUT, 3600000);
+    }
+
+    /**
+     * Applies a pre-defined safest mode configuration
+     *
+     * Bluetooth Timeout: 15 seconds
+     * WiFi Timeout: 15 seconds
+     * Device Auto-reboot Timeout: 36 hours
+     * @param context Current context
+     */
+    private static void setupSafestMode(Context context) {
         Settings.Global.putInt(context.getContentResolver(),
                 Settings.Global.BLUETOOTH_OFF_TIMEOUT, 15000);
         Settings.Global.putInt(context.getContentResolver(),
