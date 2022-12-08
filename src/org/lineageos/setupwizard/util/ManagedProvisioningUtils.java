@@ -59,6 +59,10 @@ public class ManagedProvisioningUtils {
 
     public static void init(Context context) {
         installOrbot(context);
+        if (getProvisioningMode(context)
+                == DevicePolicyManager.PROVISIONING_MODE_MANAGED_PROFILE) {
+            setupSafeMode(context);
+        }
         startProvisioning(context);
     }
 
@@ -95,6 +99,15 @@ public class ManagedProvisioningUtils {
         } catch (IOException e) {
             Log.e(TAG, "Failed to install Orbot", e);
         }
+    }
+
+    private static void setupSafeMode(Context context) {
+        Settings.Global.putInt(context.getContentResolver(),
+                Settings.Global.BLUETOOTH_OFF_TIMEOUT, 15000);
+        Settings.Global.putInt(context.getContentResolver(),
+                Settings.Global.WIFI_OFF_TIMEOUT, 15000);
+        LineageSettings.Global.putInt(context.getContentResolver(),
+                LineageSettings.Global.DEVICE_REBOOT_TIMEOUT, 3600000);
     }
 
     private static void startProvisioning(Context context) {
