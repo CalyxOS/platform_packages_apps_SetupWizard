@@ -110,6 +110,30 @@
       },
       "revId": "38f05aaaddccc3f2878ccdcc1285be0ed0e12711",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aeb97023_ca80b5ee",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-08T19:17:14Z",
+      "side": 1,
+      "message": "Also this isn\u0027t really readable, suggest splitting it into variables / one line per condition with comments.",
+      "parentUuid": "bddcc24d_6a97e722",
+      "range": {
+        "startLine": 157,
+        "startChar": 30,
+        "endLine": 157,
+        "endChar": 44
+      },
+      "revId": "38f05aaaddccc3f2878ccdcc1285be0ed0e12711",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }

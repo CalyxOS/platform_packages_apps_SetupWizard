@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be906bc5_036648bb",
+        "filename": "src/org/lineageos/setupwizard/FinishActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-08T19:17:14Z",
+      "side": 1,
+      "message": "Why not have a separate activity to handle this rather than add more things here.\n\nIt could be just before this.",
+      "revId": "f2867c372f955fdb4ba3c0925fcbb62f44ca5bff",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "504f15ab_45dc9cac",
+        "filename": "src/org/lineageos/setupwizard/FinishActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-08T19:17:14Z",
+      "side": 1,
+      "message": "What happens on next there then if provisioning is allowed?",
+      "revId": "f2867c372f955fdb4ba3c0925fcbb62f44ca5bff",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e02262c1_2e5022e0",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-08T19:17:14Z",
+      "side": 1,
+      "message": "2022 AOSP is wrong.\n20xx whatever AOSP class you based this on.\n2022 Calyx",
+      "revId": "f2867c372f955fdb4ba3c0925fcbb62f44ca5bff",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
