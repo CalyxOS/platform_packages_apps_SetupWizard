@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4b9c3190_fb5ac3e0",
+        "filename": "src/org/lineageos/setupwizard/FinishActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-08T19:38:23Z",
+      "side": 1,
+      "message": "If for safer this shows a second SetupWizard right away that\u0027s going to be confusing but I also don\u0027t see another way.\n\nWhat does it do for standard (should be nothing) and safest?",
+      "parentUuid": "504f15ab_45dc9cac",
+      "revId": "f2867c372f955fdb4ba3c0925fcbb62f44ca5bff",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e02262c1_2e5022e0",
         "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
         "patchSetId": 6
