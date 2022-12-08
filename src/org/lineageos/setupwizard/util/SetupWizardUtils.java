@@ -222,7 +222,10 @@ public class SetupWizardUtils {
         sendMicroGCheckInBroadcast(context);
 
         if (userSetupComplete != 1 && provisioningState == ProvisioningState.COMPLETE) {
-            ManagedProvisioningUtils.finalizeProvisioning(context);
+            ManagedProvisioningUtils.finalizeProvisioning(context, result -> {
+                // TODO: handle failure result
+                disableSetupWizardComponentsAndSendFinishedBroadcast(context);
+            });
         }
         disableSetupWizardComponentsAndSendFinishedBroadcast(context);
     }
