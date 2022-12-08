@@ -260,6 +260,7 @@ public class FinishActivity extends BaseSetupWizardActivity {
                 && ProvisioningState.PENDING == getProvisioningState(this)) {
             // Initialize garlic-level provisioning.
             sFinishState = FinishState.PROVISIONING;
+            ManagedProvisioningUtils.init(this);
             mStartProvisioningResultLauncher.launch(getStartProvisioningIntent(this));
             // Do not finish yet...
             return;
