@@ -80,6 +80,7 @@ public class FinishActivity extends BaseSetupWizardActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
+        ManagedProvisioningUtils.installOrbot(this);
         startActivity(new Intent(DevicePolicyManager.ACTION_PROVISION_FINALIZATION)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
         applyForwardTransition(TRANSITION_ID_NONE);
