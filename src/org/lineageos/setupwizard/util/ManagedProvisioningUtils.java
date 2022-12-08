@@ -19,16 +19,36 @@ package org.lineageos.setupwizard.util;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.IIntentReceiver;
+import android.content.IIntentSender;
 import android.content.Intent;
+import android.content.IntentSender;
+import android.content.pm.PackageInstaller;
+import android.os.Bundle;
+import android.os.IBinder;
 import android.os.PersistableBundle;
 import android.os.Process;
+import android.util.Log;
+
+import org.lineageos.setupwizard.R;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 import lineageos.providers.LineageSettings;
 
 public class ManagedProvisioningUtils {
 
+    private static final String TAG = ManagedProvisioningUtils.class.getSimpleName();
+
     private static final String BELLIS_PACKAGE = "org.calyxos.bellis";
     private static final String BELLIS_DEVICE_ADMIN_RECEIVER_CLASS = ".BasicDeviceAdminReceiver";
+
+    private static final String ORBOT_PACKAGE = "org.torproject.android";
+    private static final String ORBOT_APK_LOCATION = "/product/fdroid/repo/Orbot.apk";
 
     private enum GarlicLevel {
         STANDARD,
@@ -41,8 +61,47 @@ public class ManagedProvisioningUtils {
     }
 
     public static void finalize(Context context) {
+        installOrbot(context);
         context.startActivity(new Intent(DevicePolicyManager.ACTION_PROVISION_FINALIZATION)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+    }
+
+    private static void installOrbot(Context context) {
+        try {
+            // Get PackageInstaller for the managed profile owned by the current user
+            // to install Orbot directly within the profile
+            PackageInstaller packageInstaller = context.createContextAsUser(
+                    context.getSystemService(DevicePolicyManager.class).getPolicyManagedProfiles(
+                            Process.myUserHandle()).get(0), 0)
+                    .getPackageManager().getPackageInstaller();
+            PackageInstaller.Session session = packageInstaller.openSession(
+                    packageInstaller.createSession(new PackageInstaller.SessionParams(
+                            PackageInstaller.SessionParams.MODE_FULL_INSTALL)));
+            try (OutputStream packageInSession = session.openWrite("package", 0, -1);
+                 InputStream is = new FileInputStream(ORBOT_APK_LOCATION)) {
+                byte[] buffer = new byte[16384];
+                int n;
+                while ((n = is.read(buffer)) >= 0) {
+                    packageInSession.write(buffer, 0, n);
+                }
+            }
+            final IIntentSender.Stub mLocalSender = new IIntentSender.Stub() {
+                @Override
+                public void send(int code, Intent intent, String resolvedType,
+                        IBinder whitelistToken, IIntentReceiver finishedReceiver,
+                        String requiredPermission, Bundle options) {
+                    final int status = intent.getIntExtra(
+                            PackageInstaller.EXTRA_STATUS, PackageInstaller.STATUS_FAILURE);
+                    if (status != PackageInstaller.STATUS_SUCCESS) {
+                        Log.e(TAG, "Failed to install Orbot [" +
+                                intent.getStringExtra(PackageInstaller.EXTRA_STATUS_MESSAGE) + "]");
+                    }
+                }
+            };
+            session.commit(new IntentSender((IIntentSender) mLocalSender));
+        } catch (IOException e) {
+            Log.e(TAG, "Failed to install Orbot", e);
+        }
     }
 
     private static void startProvisioning(Context context) {
