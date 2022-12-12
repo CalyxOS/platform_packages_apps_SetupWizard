@@ -18,6 +18,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "21eb5203_2714f2d6",
+        "filename": "src/org/lineageos/setupwizard/FinishActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-12-12T13:00:46Z",
+      "side": 1,
+      "message": "I don\u0027t think we can completely avoid modifying code here. We need to start managed provisioning for result from an activity context with UI and do so after a point of no return. This placement is the only place that fits the requirements afaict.",
+      "parentUuid": "be906bc5_036648bb",
+      "revId": "f2867c372f955fdb4ba3c0925fcbb62f44ca5bff",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "504f15ab_45dc9cac",
@@ -53,6 +71,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "06c28030_afba13f4",
+        "filename": "src/org/lineageos/setupwizard/FinishActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-12-12T13:00:46Z",
+      "side": 1,
+      "message": "When provisioning is allowed, next will start managed provisioning and wait for the result. When received `onRestart()` is triggered and we proceed the same as if provisioning was not allowed.\n\nFor safer mode, a second setupwizard is indeed shown right away since the work profile has been provisioned and it is its flow. We could add some UI to indicate which user the setup wizard is running in if wanted. For standard nothing happens since `ManagedProvisioningUtils.isProvisioningAllowed()` checks garlic level. Code below is executed.",
+      "parentUuid": "4b9c3190_fb5ac3e0",
+      "revId": "f2867c372f955fdb4ba3c0925fcbb62f44ca5bff",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e02262c1_2e5022e0",
@@ -66,6 +102,24 @@
       "writtenOn": "2022-12-08T19:17:14Z",
       "side": 1,
       "message": "2022 AOSP is wrong.\n20xx whatever AOSP class you based this on.\n2022 Calyx",
+      "revId": "f2867c372f955fdb4ba3c0925fcbb62f44ca5bff",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a36fc1a_89fd6c3d",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-12-12T13:00:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e02262c1_2e5022e0",
       "revId": "f2867c372f955fdb4ba3c0925fcbb62f44ca5bff",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
