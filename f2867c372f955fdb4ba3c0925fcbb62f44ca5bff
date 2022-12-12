@@ -91,6 +91,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b5a1f26b_795795ad",
+        "filename": "src/org/lineageos/setupwizard/FinishActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-12-12T17:57:02Z",
+      "side": 1,
+      "message": "Actually, this has changed (not sure why, could be QPR1?). Safer behaves like safest. It sends `ACTION_ADMIN_POLICY_COMPLIANCE` rather than `ACTION_PROVISIONING_SUCCESSFUL` (which launches the setup wizard). What do we want to do here? The second setupwizard is not particularly needed. The main appeal would be Seedvault I think.",
+      "parentUuid": "06c28030_afba13f4",
+      "revId": "f2867c372f955fdb4ba3c0925fcbb62f44ca5bff",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e02262c1_2e5022e0",
         "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
         "patchSetId": 6
