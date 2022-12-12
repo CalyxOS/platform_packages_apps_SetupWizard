@@ -16,6 +16,24 @@
       "message": "That is wrong.\n\nThe whole point of standard is nothing changes, it\u0027s exactly how we have things setup right now.\n\nStandard -\u003e no change.\nSafer -\u003e work profile, Orbot\nSafest -\u003e device owner, Orbot.",
       "revId": "abaef9badf7b8891b4838e7ba9709b36a1eb4fe3",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1eb3b12a_338331bb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-12-12T13:00:55Z",
+      "side": 1,
+      "message": "This is the case. Clarified in commit message.",
+      "parentUuid": "82d36867_f3885c33",
+      "revId": "abaef9badf7b8891b4838e7ba9709b36a1eb4fe3",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
