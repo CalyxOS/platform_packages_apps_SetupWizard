@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e679e75_dd13ad47",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-12-12T13:05:38Z",
+      "side": 1,
+      "message": "Before shipping this I would recommend ensuring that any Settings and LineageSettings we want enabled at this time for this mode are set. Migration for these is non-trivial.",
+      "revId": "28e99bf8849b46ed26afb94c8395401a305ca2ad",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
