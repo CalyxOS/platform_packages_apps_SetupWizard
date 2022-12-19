@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f21cd1ef_c992ae3b",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-19T12:24:09Z",
+      "side": 1,
+      "message": "Won\u0027t this run always and not just garlic level",
+      "revId": "50287322238356a4a070609b2601a945d7cd6825",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
