@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a8e8bcd5_9fcf9b50",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-19T12:23:22Z",
+      "side": 1,
+      "message": "This string goes away in the commit switching to Lupin.\n\nCan just put it in a variable here.",
+      "revId": "23f0caf11f8e2d6f6f28e658541aa746e76bddd4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
