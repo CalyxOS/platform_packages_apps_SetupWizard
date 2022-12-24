@@ -35,6 +35,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e4ae090b_cb0a5c5e",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-12-24T12:42:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7d837254_6ebf0184",
+      "revId": "be0f69b53ebadbc748fcaa6fcc1692eaa4e38db1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d32a8a5b_be7075d0",
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Let\u0027s move this to a different commit.",
       "parentUuid": "d32a8a5b_be7075d0",
+      "revId": "be0f69b53ebadbc748fcaa6fcc1692eaa4e38db1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "054daf7c_21ece2c6",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-12-24T12:42:29Z",
+      "side": 1,
+      "message": "No longer applicable given that the VPN will not be set as always on in the main user given the lack of device owner",
+      "parentUuid": "62eba252_9c965cc3",
       "revId": "be0f69b53ebadbc748fcaa6fcc1692eaa4e38db1",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
