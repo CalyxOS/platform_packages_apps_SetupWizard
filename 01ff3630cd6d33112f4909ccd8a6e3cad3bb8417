@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17dd3a85_3fbef8b8",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-24T15:10:22Z",
+      "side": 1,
+      "message": "I\u0027d add a comment here.",
+      "revId": "01ff3630cd6d33112f4909ccd8a6e3cad3bb8417",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
