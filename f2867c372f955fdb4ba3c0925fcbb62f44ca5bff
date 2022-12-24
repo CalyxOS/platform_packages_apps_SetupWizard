@@ -107,6 +107,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb953254_cbd411e2",
+        "filename": "src/org/lineageos/setupwizard/FinishActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-12-24T12:38:28Z",
+      "side": 1,
+      "message": "Behaviour has been made consistent whether provisioning from the setup wizard or not",
+      "parentUuid": "b5a1f26b_795795ad",
+      "revId": "f2867c372f955fdb4ba3c0925fcbb62f44ca5bff",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e02262c1_2e5022e0",
