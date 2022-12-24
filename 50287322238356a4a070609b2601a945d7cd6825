@@ -18,6 +18,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "18eedcfb_c9880c1d",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-12-24T12:42:21Z",
+      "side": 1,
+      "message": "This function is guarded by a call to `isProvisioningAllowed()` below by the caller (FinishActivity)",
+      "parentUuid": "f21cd1ef_c992ae3b",
+      "revId": "50287322238356a4a070609b2601a945d7cd6825",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e7ed58c4_d19539d7",
