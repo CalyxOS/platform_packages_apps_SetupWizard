@@ -51,6 +51,24 @@
       "message": "comment or variable for the values to make it easier to read.",
       "revId": "ee2f7c904655e0cc8a7dbc1e167c2b26d7948903",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "68e50377_7e809ef3",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2022-12-26T17:23:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0dc691_684e589f",
+      "revId": "ee2f7c904655e0cc8a7dbc1e167c2b26d7948903",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
