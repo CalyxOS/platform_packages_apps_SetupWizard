@@ -33,6 +33,24 @@
       "message": "I\u0027m not sure about enforced.\n\nNeed to see what wording Tor Browser uses.",
       "revId": "3e9863b1597168f71295583d00f22ea3081db33a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb0f1722_924ac010",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2022-12-28T09:30:16Z",
+      "side": 1,
+      "message": "Summary taken and adapted from Tor Browser",
+      "parentUuid": "5676c0dd_4b7c3ddf",
+      "revId": "3e9863b1597168f71295583d00f22ea3081db33a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
