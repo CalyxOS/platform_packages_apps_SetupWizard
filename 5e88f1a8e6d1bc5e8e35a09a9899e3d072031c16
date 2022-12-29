@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1fea01e9_aa6de928",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-29T12:25:32Z",
+      "side": 1,
+      "message": "Still need to finalise values, only minor nit otherwise.",
+      "revId": "5e88f1a8e6d1bc5e8e35a09a9899e3d072031c16",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "626a0676_792b1398",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-29T12:25:32Z",
+      "side": 1,
+      "message": "safer!",
+      "revId": "5e88f1a8e6d1bc5e8e35a09a9899e3d072031c16",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85c89c47_0cc5045f",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-29T12:25:32Z",
+      "side": 1,
+      "message": "safer",
+      "revId": "5e88f1a8e6d1bc5e8e35a09a9899e3d072031c16",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f313bed1_322725b9",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-29T12:25:32Z",
+      "side": 1,
+      "message": "safer!",
+      "revId": "5e88f1a8e6d1bc5e8e35a09a9899e3d072031c16",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
