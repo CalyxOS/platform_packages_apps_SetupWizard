@@ -26,9 +26,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import org.lineageos.setupwizard.BaseSetupWizardActivity;
 import org.lineageos.setupwizard.R;
+import org.lineageos.setupwizard.util.SetupWizardUtils;
 
 public class MicroGActivity extends BaseSetupWizardActivity {
 
@@ -60,6 +62,12 @@ public class MicroGActivity extends BaseSetupWizardActivity {
             enableLocation.setEnabled(isChecked);
             enableLocation.setChecked(isChecked);
         });
+
+        final TextView enableDescription = findViewById(R.id.enableDescription);
+        final String profileType = SetupWizardUtils.isManagedProfile(this)
+                ? getString(R.string.managed_profile)
+                : getString(R.string.personal_profile);
+        enableDescription.setText(getString(R.string.microg_description, profileType));
 
         pm = getPackageManager();
     }
