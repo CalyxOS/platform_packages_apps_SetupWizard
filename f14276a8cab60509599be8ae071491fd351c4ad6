@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "395eaf4b_0486dbc0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-29T12:24:18Z",
+      "side": 1,
+      "message": "Now:\n\n* Either enable microG in setupwizard during first boot, or\n* Create a work profile later and enable microG in that\n\n\nLater:\n\n* Either enable microG in setupwizard during first boot, or\n* Potentially get allowed to create a microG profile directly.\n\n\nNow I don\u0027t want to block this string change on a future addition, but it\u0027s something to keep in mind if it helps make this less confusing.",
+      "revId": "f14276a8cab60509599be8ae071491fd351c4ad6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0c73cce_f8148434",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-29T12:24:18Z",
+      "side": 1,
+      "message": "We need to think of a better string.",
+      "revId": "f14276a8cab60509599be8ae071491fd351c4ad6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
