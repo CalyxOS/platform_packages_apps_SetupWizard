@@ -46,6 +46,30 @@
       },
       "revId": "1791a2034d59da7aa993207c3a5be1d51d14041b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8e94a588_d17581db",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-01-06T18:28:48Z",
+      "side": 1,
+      "message": "That also applies to safer though",
+      "parentUuid": "917e3265_7a347ad6",
+      "range": {
+        "startLine": 7,
+        "startChar": 47,
+        "endLine": 7,
+        "endChar": 53
+      },
+      "revId": "1791a2034d59da7aa993207c3a5be1d51d14041b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
