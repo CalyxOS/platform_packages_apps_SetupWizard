@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_description">Dzięki temu aplikacje takie jak <b> Mapy Google, YouTube i usługi udostępniania pojazdów (np. Uber) </b> mogą działać na CalyxOS. Wyłącz tę opcję, jeśli nie planujesz uruchamiania aplikacji wymagających usług Google. Nie będzie można później włączyć tej opcji.</string>
     <string name="microg_title">Usługi Google</string>
     <string name="waiting_for_apps">Proszę czekać na zakończenie konfiguracji Twojego urządzenia.</string>
@@ -9,4 +9,12 @@
     <string name="setup_euicc">Skonfiguruj eSIM</string>
     <string name="euicc_summary">Możesz również dodać kartę eSIM do swojego urządzenia.</string>
     <string name="reboot">Uruchom ponownie</string>
+    <string name="microg_description2">microG jest otwartym zamiennikiem dla <b>Usług Google Play</b> (i powiązanego oprogramowania), ale zawiera tylko przydatne części. W przeciwieństwie do Usług Play, microG nie ma żadnych reklam ani, na przykład, śledzenia lokalizacji.</string>
+    <string name="microg_switch_label2">Zgodność z usługami Google</string>
+    <string name="microg_defaults_switch_label">Obsługa powiadomień push</string>
+    <string name="bootloader_warning_summary">Bootloader tego urządzenia jest obecnie odblokowany. Proszę zablokować bootloader za pomocą komputera. Odwiedź <a href="https://calyxos.org/lock">calyxos.org/lock</a> aby uzyskać więcej informacji.</string>
+    <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
+\n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
+    <string name="bootloader_warning_title">Ostrzeżenie o blokadzie bootloadera</string>
+    <string name="microg_defaults_summary">Zezwalaj aplikacjom na rejestrowanie się w Google w celu otrzymywania powiadomień push. To rejestruje urządzenie do usług Google, bez żadnych unikalnych identyfikatorów specyficznych dla urządzenia. Można to włączyć później w Ustawieniach microG, jednak wszelkie aplikacje skonfigurowane wcześniej będą musiały zostać ponownie zainstalowane, aby działały prawidłowo.</string>
 </resources>

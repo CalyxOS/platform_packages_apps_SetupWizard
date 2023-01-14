@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="setup_euicc">Налаштування eSIM</string>
-    <string name="euicc_summary">Ви також можете додати eSIM-карту до свого пристрою.</string>
-    <string name="microg_description">Це дозволяє запускати такі застосунки, як <b> Google Maps, Youtube і служби обміну</b> на CalyxOS. Вимкніть це, якщо ви не плануєте запускати застосунки, що вимагають служби Google. Ви НЕ зможете увімкнути їх пізніше.</string>
+    <string name="euicc_summary">Ви також можете додати eSIM до свого пристрою.</string>
+    <string name="microg_description">Це дозволяє запускати такі застосунки, як <b> Google Maps, Youtube та служби обміну</b> на CalyxOS. Вимкніть це, якщо ви не плануєте запускати застосунки, що вимагають служби Google. Ви не зможете увімкнути їх пізніше.</string>
     <string name="microg_title">Служби Google</string>
-    <string name="waiting_for_apps">Заждіть, поки ми завершимо налаштування вашого пристрою.</string>
+    <string name="waiting_for_apps">Зачекайте, поки ми завершимо налаштування вашого пристрою.</string>
     <string name="install_apps_select_all">Усі наступні застосунки</string>
     <string name="install_apps_subtitle"><b>Перегляньте додаткові застосунки.</b>Ви також можете встановити їх пізніше.</string>
     <string name="install_apps_title">Додаткові застосунки</string>
+    <string name="microg_switch_label2">Сумісність служб Google</string>
+    <string name="microg_defaults_switch_label">Підтримка push-повідомлень</string>
+    <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">
+\n%1$s</xliff:g>
+\n<xliff:g id="euicc_summary">
+\n%2$s</xliff:g></string>
+    <string name="bootloader_warning_title">Попередження про блокування завантажувача</string>
+    <string name="bootloader_warning_summary">Завантажувач цього пристрою в даний час розблокований. Будь ласка, заблокуйте завантажувач з комп\'ютера. Відвідати <a href="https://calyxos.org/lock">calyxos.org/lock</a> для отримання додаткової інформації.</string>
+    <string name="microg_description2">microG є заміною з відкритим кодом для <b>Google Play Services</b> (та пов’язане програмне забезпечення), але він включає лише корисні частини. На відміну від Play Services, microG не має жодної реклами чи відстеження місцезнаходження.</string>
+    <string name="microg_defaults_summary">Дозволити застосункам реєструватися для отримання push-сповіщень у Google. Це реєструє ваш пристрій у службах Google, без будь-яких унікальних ідентифікаторів пристрою. Це можна ввімкнути пізніше в налаштуваннях microG, однак для належної роботи будь-які застосунки, налаштовані раніше, потрібно перевстановити.</string>
+    <string name="reboot">Перезавантаження</string>
 </resources>
