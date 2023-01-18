@@ -33,6 +33,24 @@
       "message": "We need to think of a better string.",
       "revId": "f14276a8cab60509599be8ae071491fd351c4ad6",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9972d69a_37a4cd3d",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-18T17:47:05Z",
+      "side": 1,
+      "message": "Still not happy with the latest, but it\u0027s a start.",
+      "parentUuid": "b0c73cce_f8148434",
+      "revId": "f14276a8cab60509599be8ae071491fd351c4ad6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
