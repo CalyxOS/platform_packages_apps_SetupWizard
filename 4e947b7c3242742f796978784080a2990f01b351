@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d6e3f4c_5e62e0fa",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 11
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-18T16:45:18Z",
+      "side": 1,
+      "message": "Put garlic level here, as discussed in the meeting.",
+      "revId": "4e947b7c3242742f796978784080a2990f01b351",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
