@@ -16,6 +16,24 @@
       "message": "Missing close parenthesis",
       "revId": "04cf5e658e3b059ff955ad2c607c90c69ef55039",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f25f735b_e22c21b7",
+        "filename": "src/org/lineageos/setupwizard/WelcomeActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-18T17:48:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "584c1de8_b606baa5",
+      "revId": "04cf5e658e3b059ff955ad2c607c90c69ef55039",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
