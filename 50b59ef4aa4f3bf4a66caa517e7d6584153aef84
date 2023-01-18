@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b5f27da4_3da60c6d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-18T18:03:34Z",
+      "side": 1,
+      "message": "On Pixel 4a, it\u0027s two lines:\n\n```\nSetup your\nwork profile\n```",
+      "revId": "50b59ef4aa4f3bf4a66caa517e7d6584153aef84",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
