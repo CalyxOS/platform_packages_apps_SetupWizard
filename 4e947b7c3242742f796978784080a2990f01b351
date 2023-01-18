@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9f81fb3_6ebb1d9b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-18T17:37:33Z",
+      "side": 1,
+      "message": "Nick suggested adding a website link here.\n\nCan check bootloader unlock warning activity to see how it\u0027s done.\n\nI propose https://calyxos.org/garlic-level\n\nFeel free to use a better short link if you can think of something (barrring security-level to avoid mixing this up with SPL). The website isn\u0027t live now but that\u0027s easy to deploy anytime, can just pick a link.",
+      "revId": "4e947b7c3242742f796978784080a2990f01b351",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0d6e3f4c_5e62e0fa",
