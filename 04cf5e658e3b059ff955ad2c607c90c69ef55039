@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "584c1de8_b606baa5",
+        "filename": "src/org/lineageos/setupwizard/WelcomeActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-01-18T17:45:42Z",
+      "side": 1,
+      "message": "Missing close parenthesis",
+      "revId": "04cf5e658e3b059ff955ad2c607c90c69ef55039",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
