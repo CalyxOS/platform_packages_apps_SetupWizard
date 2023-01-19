@@ -67,7 +67,8 @@ public class SetupWizardApp extends Application {
         sStatusBarManager = SetupWizardUtils.disableStatusBar(this);
         mHandler.postDelayed(mRadioTimeoutRunnable, SetupWizardApp.RADIO_READY_TIMEOUT);
         // If the bootloader is locked, and OEM unlocking is allowed, turn it off
-        if (SetupWizardUtils.isOwner()
+        // Actually don't
+        if (false && SetupWizardUtils.isOwner()
                 && !SetupWizardUtils.isBootloaderUnlocked(this)
                 && SetupWizardUtils.isOemunlockAllowed(this)) {
             getSystemService(OemLockManager.class).setOemUnlockAllowedByUser(false);
