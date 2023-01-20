@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d205e178_04c59157",
+        "filename": "privapp_whitelist_org.lineageos.setupwizard.xml",
+        "patchSetId": 16
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-20T15:39:17Z",
+      "side": 1,
+      "message": "It needs to get added here too.",
+      "revId": "5a2a891dd387cf43e5432678d9197fafa1a24e73",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
