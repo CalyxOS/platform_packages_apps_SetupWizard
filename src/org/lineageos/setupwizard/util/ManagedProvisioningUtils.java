@@ -41,6 +41,12 @@ public class ManagedProvisioningUtils {
     }
 
     private static void startProvisioning(Context context) {
+        // Refresh the state of USER_SETUP_COMPLETE to ease testing
+        // TODO: REMOVE FOR PRODUCTION
+        DevicePolicyManager devicePolicyManager = context.getSystemService(
+                DevicePolicyManager.class);
+        devicePolicyManager.forceUpdateUserSetupComplete(Process.myUserHandle().getIdentifier());
+
         PersistableBundle persistableBundle = new PersistableBundle();
         int provisioningMode = getProvisioningMode(context);
         persistableBundle.putInt(DevicePolicyManager.EXTRA_PROVISIONING_MODE, provisioningMode);
