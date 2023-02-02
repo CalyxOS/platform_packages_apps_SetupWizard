@@ -16,6 +16,24 @@
       "message": "Just a guess but this might be to avoid accidental double suw\n\nLineage setupwizard is only meant to run once, for user 0.",
       "revId": "a5e6c7c0b4f18a3af1894043e9f18b743407f6bb",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67fa26a4_39c2bdaa",
+        "filename": "src/org/lineageos/setupwizard/BaseSetupWizardActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 325,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-02-02T17:28:42Z",
+      "side": 0,
+      "message": "Pretty sure that, if it\u0027s not already the case, it could be made into a singleton to ensure only one instance is ever running at a time per user",
+      "parentUuid": "57fc8983_ec22e9fb",
+      "revId": "a5e6c7c0b4f18a3af1894043e9f18b743407f6bb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
