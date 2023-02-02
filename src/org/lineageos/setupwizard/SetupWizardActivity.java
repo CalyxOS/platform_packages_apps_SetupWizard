@@ -45,10 +45,6 @@ public class SetupWizardActivity extends BaseSetupWizardActivity {
         if (SetupWizardUtils.hasGMS(this)) {
             SetupWizardUtils.disableHome(this);
             finish();
-        } else if (WizardManagerHelper.isUserSetupComplete(this)
-                && !SetupWizardUtils.isManagedProfile(this)) {
-            SetupWizardUtils.finishSetupWizard(this);
-            finish();
         } else {
             onSetupStart();
             SetupWizardUtils.enableComponent(this, WizardManager.class);
