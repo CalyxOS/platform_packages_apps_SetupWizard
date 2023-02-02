@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4ffa7a2_950e8c69",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-02T17:26:09Z",
+      "side": 1,
+      "message": "Should also send to lineage and try to see if someone there has an idea.\n\nUs (ab)using setupwizard like this is what\u0027s bringing forward these issues .",
+      "revId": "82763929976d2e0122efb6229ed0aaf2ccc1c97a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
