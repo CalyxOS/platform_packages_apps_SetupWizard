@@ -26,7 +26,6 @@ import static com.google.android.setupcompat.util.ResultCodes.RESULT_SKIP;
 import static org.lineageos.setupwizard.SetupWizardApp.ACTION_ACCESSIBILITY_SETTINGS;
 import static org.lineageos.setupwizard.SetupWizardApp.ACTION_EMERGENCY_DIAL;
 import static org.lineageos.setupwizard.SetupWizardApp.ACTION_NEXT;
-import static org.lineageos.setupwizard.SetupWizardApp.ACTION_SETUP_COMPLETE;
 import static org.lineageos.setupwizard.SetupWizardApp.EXTRA_ACTION_ID;
 import static org.lineageos.setupwizard.SetupWizardApp.EXTRA_HAS_MULTIPLE_USERS;
 import static org.lineageos.setupwizard.SetupWizardApp.EXTRA_RESULT_CODE;
@@ -38,15 +37,11 @@ import android.annotation.Nullable;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ActivityNotFoundException;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.os.UserManager;
 import android.text.TextUtils;
 import android.util.Log;
@@ -91,26 +86,12 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
     protected int mResultCode = 0;
     private Intent mResultData;
 
-    private final BroadcastReceiver finishReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if (ACTION_SETUP_COMPLETE.equals(intent.getAction())) {
-                if (BaseSetupWizardActivity.this instanceof FinishActivity) return;
-                if (mNavigationBar != null) {
-                    // hide the activity's view, so it does not pop up again
-                    mNavigationBar.getRootView().setVisibility(INVISIBLE);
-                }
-            }
-        }
-    };
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         if (LOGV) {
             logActivityState("onCreate savedInstanceState=" + savedInstanceState);
         }
         super.onCreate(savedInstanceState);
-        registerReceiver(finishReceiver, new IntentFilter(ACTION_SETUP_COMPLETE));
         initLayout();
         mNavigationBar = getNavigationBar();
         if (mNavigationBar != null) {
@@ -124,9 +105,6 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
             logActivityState("onStart");
         }
         super.onStart();
-        if (!SetupWizardUtils.isManagedProfile(this)) {
-            exitIfSetupComplete();
-        }
     }
 
     @Override
@@ -173,7 +151,6 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
         if (LOGV) {
             logActivityState("onDestroy");
         }
-        unregisterReceiver(finishReceiver);
         super.onDestroy();
     }
 
@@ -320,15 +297,6 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
         }
     }
 
-    protected void exitIfSetupComplete() {
-        if (WizardManagerHelper.isUserSetupComplete(this)) {
-            Log.i(TAG, "Starting activity with USER_SETUP_COMPLETE=true");
-            startSetupWizardExitActivity();
-            setResult(RESULT_CANCELED, null);
-            finishAllAppTasks();
-        }
-    }
-
     protected void finishAllAppTasks() {
         List<ActivityManager.AppTask> appTasks =
                 getSystemService(ActivityManager.class).getAppTasks();
@@ -339,7 +307,6 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
             }
             task.finishAndRemoveTask();
         }
-        finish();
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

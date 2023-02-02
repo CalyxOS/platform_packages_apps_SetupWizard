@@ -49,9 +49,6 @@ public class SetupWizardApp extends Application {
 
     public static final String ACTION_ACCESSIBILITY_SETTINGS =
             "android.settings.ACCESSIBILITY_SETTINGS_FOR_SUW";
-    public static final String ACTION_SETUP_COMPLETE =
-            "org.lineageos.setupwizard.LINEAGE_SETUP_COMPLETE";
-    public static final String ACTION_FINISHED = "org.lineageos.setupwizard.SETUP_FINISHED";
     public static final String ACTION_SETUP_NETWORK = "android.settings.NETWORK_PROVIDER_SETUP";
     public static final String ACTION_APPS_INSTALLED =
             "org.lineageos.setupwizard.LINEAGE_APPS_INSTALLED";
