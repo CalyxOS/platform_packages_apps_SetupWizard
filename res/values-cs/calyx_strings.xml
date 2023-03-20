@@ -13,4 +13,8 @@
     <string name="reboot">Restartovat</string>
     <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
 \n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
+    <string name="microg_description2">microG je open source náhrada za <b>Služby Google Play</b> (a související software), ale obsahuje pouze užitečné části. Na rozdíl od Služby Play neobsahuje microG například žádné reklamy ani sledování polohy.</string>
+    <string name="microg_defaults_summary">Povolit aplikacím registrovat se pro push oznámení u společnosti Google. Tímto se vaše zařízení zaregistruje do služeb Google bez jedinečných identifikátorů specifických pro zařízení. Tuto funkci lze povolit později v nastavení microG, avšak bude nutné znovu nainstalovat všechny dříve nastavené aplikace k jejich správnému fungování.</string>
+    <string name="microg_switch_label2">Kompatibilita se službami Google</string>
+    <string name="microg_defaults_switch_label">Podpora push oznámení</string>
 </resources>
