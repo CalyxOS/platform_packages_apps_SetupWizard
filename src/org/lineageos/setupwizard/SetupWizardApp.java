@@ -118,9 +118,6 @@ public class SetupWizardApp extends Application {
         NetworkMonitor.initInstance(this);
         PhoneMonitor.initInstance(this);
         SetupWizardUtils.disableComponentsForMissingFeatures(this);
-        if (SetupWizardUtils.isOwner()) {
-            SetupWizardUtils.setMobileDataEnabled(this, false);
-        }
         sStatusBarManager = SetupWizardUtils.disableStatusBar(this);
         if (SetupWizardUtils.isPackageInstalled(this, NAV_BAR_MODE_GESTURAL_OVERLAY)) {
             IOverlayManager overlayManager = IOverlayManager.Stub.asInterface(
