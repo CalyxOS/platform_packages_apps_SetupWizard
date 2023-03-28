@@ -68,6 +68,24 @@
       "message": "*This* is the place that impacts user education screens for the work profile setup in Safer/Safest.",
       "revId": "7679e910d24de720738e3cac4f4b59b437842f5d",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36f04739_f08e7891",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 14
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-03-28T11:37:11Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "e2366fcd_9534d6d4",
+      "revId": "7679e910d24de720738e3cac4f4b59b437842f5d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
