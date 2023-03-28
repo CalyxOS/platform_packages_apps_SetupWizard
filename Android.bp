@@ -32,7 +32,6 @@ android_app {
 
     static_libs: [
         "androidx.core_core",
-        "androidx.recyclerview_recyclerview",
         "SettingsLib",
         "setupcompat",
         "setupdesign",
