@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "07e162eb_78e0d673",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-03-28T09:47:48Z",
+      "side": 1,
+      "message": "Noticed these unused layouts when looking into garlic level",
+      "revId": "528bc94bb0df95007f14543106cc17fa16b1737a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
