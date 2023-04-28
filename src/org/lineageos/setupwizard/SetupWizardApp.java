@@ -79,12 +79,9 @@ public class SetupWizardApp extends Application {
 
     public static final String AURORA_SERVICES_PACKAGE = "com.aurora.services";
     public static final String FDROID_PACKAGE = "org.fdroid.fdroid";
-    public static final String FDROID_CATEGORY_DEFAULT = "Default";
-    public static final String FDROID_CATEGORY_DEFAULT_BACKEND = "DefaultBackend";
     public static final String FDROID_UPDATEJOBSERVICE_CLASS = ".UpdateJobService";
     // Must match F-Droid's UpdateService JOB_ID
     public static final int FDROID_UPDATE_JOB_ID = 0xfedcba;
-    public static final String PACKAGENAMES = "packageNames";
 
     public static final String NAVIGATION_OPTION_KEY = "navigation_option";
 
