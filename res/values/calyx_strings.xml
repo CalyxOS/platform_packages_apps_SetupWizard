@@ -54,4 +54,7 @@
     <string name="bootloader_warning_title">Bootloader lock warning</string>
     <string name="bootloader_warning_summary">This device\'s bootloader is currently unlocked. Please lock the bootloader from a computer. Visit <a href="https://calyxos.org/lock">calyxos.org/lock</a> for more info.</string>
     <string name="reboot">Reboot</string>
+
+    <!-- Assisted GPS -->
+    <string name="location_agps_access_summary">Download satellite assistance data from the internet which can greatly improve the GPS startup performance</string>
 </resources>
