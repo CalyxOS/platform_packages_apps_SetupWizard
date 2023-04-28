@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6f6d77e_c85ca5c8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-04-28T17:32:31Z",
+      "side": 1,
+      "message": "Minor nits",
+      "revId": "cff468d2da4d15d961c40dab6971ada5f54f8318",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "95cc4a7a_e436c9b9",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-04-28T17:32:31Z",
+      "side": 1,
+      "message": "It has to be in calyx_strings.xml unless this is going upstream, which is unlikely.",
+      "revId": "cff468d2da4d15d961c40dab6971ada5f54f8318",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3589bd0_8c799c7f",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-04-28T17:32:31Z",
+      "side": 1,
+      "message": "https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Settings/+/15631/6/res/values/calyx_strings.xml\n\nThis is less of \"Allow apps\" and more of assist GPS, maybe we could just copy the string.",
+      "revId": "cff468d2da4d15d961c40dab6971ada5f54f8318",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
