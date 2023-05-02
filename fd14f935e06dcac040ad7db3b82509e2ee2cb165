@@ -16,6 +16,24 @@
       "message": "Need to add description of what each option does",
       "revId": "fd14f935e06dcac040ad7db3b82509e2ee2cb165",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea738de8_13d0d2a4",
+        "filename": "res/layout/garlic_level_activity.xml",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-05-02T14:36:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "46dc7437_aa2f0633",
+      "revId": "fd14f935e06dcac040ad7db3b82509e2ee2cb165",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b5fc19b_f6563641",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-05-02T14:36:15Z",
+      "side": 1,
+      "message": "Need to iterate over strings and icons",
+      "revId": "96054f26caa4c58d836d96c2b757c9fff3b16a15",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
