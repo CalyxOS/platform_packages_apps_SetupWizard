@@ -21,7 +21,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -227,12 +226,6 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
         onSkipPressed();
     }
 
-    protected final void onSetupStart() {
-        if (SetupWizardUtils.isOwner()) {
-            tryEnablingWifi();
-        }
-    }
-
     public void finish() {
         if (LOGV) {
             Log.v(TAG, "finish");
@@ -297,11 +290,6 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
             }
             Log.v(TAG, append.append(extras).append(")").toString());
         }
-    }
-
-    protected final boolean tryEnablingWifi() {
-        WifiManager wifiManager = getSystemService(WifiManager.class);
-        return wifiManager.setWifiEnabled(true);
     }
 
     private boolean isFirstRun() {
