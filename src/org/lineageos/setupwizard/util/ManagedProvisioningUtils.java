@@ -24,10 +24,13 @@ import android.content.IIntentSender;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageInstaller;
+import android.hardware.SensorPrivacyManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PersistableBundle;
 import android.os.Process;
+import android.os.UserHandle;
+import android.os.UserManager;
 import android.provider.Settings;
 import android.util.Log;
 
@@ -70,6 +73,14 @@ public class ManagedProvisioningUtils {
 
     public static void finalize(Context context) {
         installOrbot(context);
+        SensorPrivacyManager sensorPrivacyManager = SensorPrivacyManager.getInstance(context);
+        sensorPrivacyManager.setAllSensorPrivacy(false);
+        for (UserHandle userHandle : UserManager.get(context).getUserHandles(false)) {
+            sensorPrivacyManager.setSensorPrivacy(SensorPrivacyManager.Sources.OTHER,
+                    SensorPrivacyManager.Sensors.CAMERA, false, userHandle.getIdentifier());
+            sensorPrivacyManager.setSensorPrivacy(SensorPrivacyManager.Sources.OTHER,
+                    SensorPrivacyManager.Sensors.MICROPHONE, false, userHandle.getIdentifier());
+        }
         context.startActivity(new Intent(DevicePolicyManager.ACTION_PROVISION_FINALIZATION)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
     }
