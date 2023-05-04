@@ -24,6 +24,7 @@ import android.content.IIntentSender;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageInstaller;
+import android.hardware.SensorPrivacyManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PersistableBundle;
@@ -69,6 +70,12 @@ public class ManagedProvisioningUtils {
         Context userContext = context;
         for (UserHandle userHandle : UserManager.get(context).getUserHandles(false)) {
             userContext = context.createContextAsUser(userHandle, 0);
+            SensorPrivacyManager sensorPrivacyManager = SensorPrivacyManager.getInstance(
+                    userContext);
+            sensorPrivacyManager.setSensorPrivacy(SensorPrivacyManager.Sources.OTHER,
+                    SensorPrivacyManager.Sensors.CAMERA, true, userContext.getUserId());
+            sensorPrivacyManager.setSensorPrivacy(SensorPrivacyManager.Sources.OTHER,
+                    SensorPrivacyManager.Sensors.MICROPHONE, true, userContext.getUserId());
         }
         // userContext, now the Context for the last-listed user, is reasonably assumed to be that
         // of the newly-created managed profile.
