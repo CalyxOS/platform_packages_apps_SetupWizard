@@ -16,6 +16,24 @@
       "message": "I still want to try to go for a better string because just this doesn\u0027t give any insight to the users.\n\nLike, why would one want to turn this off?\n\nSettings string for reference: https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Settings/+/15631/6/res/values/calyx_strings.xml",
       "revId": "bb0ad66a34a136371b9acc8ac547adde09e9d919",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "efe3b26f_75c2c3ae",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-05-04T20:30:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8d18c9d0_a796499e",
+      "revId": "bb0ad66a34a136371b9acc8ac547adde09e9d919",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
