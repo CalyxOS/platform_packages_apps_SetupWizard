@@ -316,7 +316,6 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
     protected void onSetupStart() {
         if (SetupWizardUtils.isOwner()) {
             SetupWizardUtils.disableCaptivePortalDetection(getApplicationContext());
-            tryEnablingWifi();
         }
     }
 
@@ -483,14 +482,6 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
 
     protected int getTransition() {
         return TRANSITION_ID_SLIDE;
-    }
-
-    protected boolean tryEnablingWifi() {
-        WifiManager wifiManager = getSystemService(WifiManager.class);
-        if (wifiManager != null && !wifiManager.isWifiEnabled()) {
-            return wifiManager.setWifiEnabled(true);
-        }
-        return false;
     }
 
     private void startSetupWizardExitActivity() {
