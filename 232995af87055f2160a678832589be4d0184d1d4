@@ -16,6 +16,24 @@
       "message": "Can you provide some more info about the changes being done here",
       "revId": "232995af87055f2160a678832589be4d0184d1d4",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e5eba32_4c025103",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-05-04T20:28:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8f61cfe4_6f0f4598",
+      "revId": "232995af87055f2160a678832589be4d0184d1d4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
