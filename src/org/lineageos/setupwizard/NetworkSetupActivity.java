@@ -21,9 +21,6 @@ public class NetworkSetupActivity extends SubBaseActivity {
 
     @Override
     protected void onStartSubactivity() {
-        if (SetupWizardUtils.isOwner()) {
-            tryEnablingWifi();
-        }
         Intent intent = new Intent(ACTION_SETUP_NETWORK);
         if (SetupWizardUtils.hasLeanback(this)) {
             intent.setComponent(SetupWizardUtils.sTvWifiSetupSettingsActivity);
