@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e87a816_445d3b0b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-04T23:12:45Z",
+      "side": 1,
+      "message": "I like. The fact that these are quick settings available by default is also good, but they\u0027re on the second page, making it unlikely to be used that way.\n\n1. If you open the camera app, it asks you to unblock camera - that works well.\n2. If you try to record a video, it asks you to unlock mic - good. But that interrupts the video. Not the most ideal, but eh\n3. Recorder -\u003e Prompts to unblock mic\n4. Outgoing call -\u003e Prompts to unblock mic\n5. Incoming call, screen off -\u003e Prompts to unblock mic\n\nGood to go!\n\n\nNot directly related to the commit, but we\u0027ve got a feature request on gitlab to have a timeout for these as well, and it makes sense, I think. Hopefully that\u0027s doable too, someday.",
+      "revId": "3a123ea2758c52f069ac91d3cce3ac1910949ba7",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
