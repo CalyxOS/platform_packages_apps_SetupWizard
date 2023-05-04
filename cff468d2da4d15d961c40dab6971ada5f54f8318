@@ -52,6 +52,42 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "49bac0de_fb2274a2",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-05-04T18:04:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "95cc4a7a_e436c9b9",
+      "revId": "cff468d2da4d15d961c40dab6971ada5f54f8318",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7bf75e6_e9892a15",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-05-04T18:04:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d3589bd0_8c799c7f",
+      "revId": "cff468d2da4d15d961c40dab6971ada5f54f8318",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a8dcdca3_783c34a7",
@@ -65,6 +101,24 @@
       "writtenOn": "2023-05-04T17:33:40Z",
       "side": 1,
       "message": "This will be disabled by default in 17080: Disable AGPS by default, it\u0027ll be enabled in SetupWizard | https://review.calyxos.org/c/CalyxOS/vendor_calyx/+/17080 - we need to handle that. Commit message has more details, but basically the setting will be off by default for new installs, but we want the toggle here to be on by default, so that\n\n1. if the user turns it off, it was never on\n2. when the user taps next it gets turned on. The default, if they don\u0027t change anything.",
+      "revId": "cff468d2da4d15d961c40dab6971ada5f54f8318",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80178e86_51dd4b3c",
+        "filename": "src/org/lineageos/setupwizard/LocationSettingsActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-05-04T18:04:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a8dcdca3_783c34a7",
       "revId": "cff468d2da4d15d961c40dab6971ada5f54f8318",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
