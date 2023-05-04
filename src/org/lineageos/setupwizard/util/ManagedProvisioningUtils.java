@@ -24,16 +24,16 @@ import android.content.IIntentSender;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageInstaller;
+import android.hardware.SensorPrivacyManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PersistableBundle;
 import android.os.Process;
+import android.os.UserHandle;
+import android.os.UserManager;
 import android.provider.Settings;
 import android.util.Log;
 
-import org.lineageos.setupwizard.R;
-
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -70,6 +70,14 @@ public class ManagedProvisioningUtils {
 
     public static void finalize(Context context) {
         installOrbot(context);
+        SensorPrivacyManager sensorPrivacyManager = SensorPrivacyManager.getInstance(context);
+        sensorPrivacyManager.setAllSensorPrivacy(false);
+        for (UserHandle userHandle : UserManager.get(context).getUserHandles(false)) {
+            sensorPrivacyManager.setSensorPrivacy(SensorPrivacyManager.Sources.OTHER,
+                    SensorPrivacyManager.Sensors.CAMERA, false, userHandle.getIdentifier());
+            sensorPrivacyManager.setSensorPrivacy(SensorPrivacyManager.Sources.OTHER,
+                    SensorPrivacyManager.Sensors.MICROPHONE, false, userHandle.getIdentifier());
+        }
         context.startActivity(new Intent(DevicePolicyManager.ACTION_PROVISION_FINALIZATION)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
     }
@@ -79,8 +87,8 @@ public class ManagedProvisioningUtils {
             // Get PackageInstaller for the managed profile owned by the current user
             // to install Orbot directly within the profile
             PackageInstaller packageInstaller = context.createContextAsUser(
-                    context.getSystemService(DevicePolicyManager.class).getPolicyManagedProfiles(
-                            Process.myUserHandle()).get(0), 0)
+                            context.getSystemService(DevicePolicyManager.class).getPolicyManagedProfiles(
+                                    Process.myUserHandle()).get(0), 0)
                     .getPackageManager().getPackageInstaller();
             PackageInstaller.Session session = packageInstaller.openSession(
                     packageInstaller.createSession(new PackageInstaller.SessionParams(
@@ -118,6 +126,7 @@ public class ManagedProvisioningUtils {
      * Bluetooth Timeout: 15 seconds
      * WiFi Timeout: 15 seconds
      * Device Auto-reboot Timeout: 36 hours
+     *
      * @param context Current context
      */
     private static void setupSaferMode(Context context) {
@@ -135,6 +144,7 @@ public class ManagedProvisioningUtils {
      * Bluetooth Timeout: 15 seconds
      * WiFi Timeout: 15 seconds
      * Device Auto-reboot Timeout: 36 hours
+     *
      * @param context Current context
      */
     private static void setupSafestMode(Context context) {
