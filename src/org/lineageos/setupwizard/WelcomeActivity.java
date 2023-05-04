@@ -29,7 +29,6 @@ public class WelcomeActivity extends SubBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        onSetupStart();
         SystemBarHelper.setBackButtonVisible(getWindow(), false);
         setNextText(R.string.start);
         Button startButton = findViewById(R.id.start);
