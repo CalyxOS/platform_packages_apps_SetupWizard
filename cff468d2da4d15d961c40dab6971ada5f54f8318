@@ -50,6 +50,23 @@
       "message": "https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Settings/+/15631/6/res/values/calyx_strings.xml\n\nThis is less of \"Allow apps\" and more of assist GPS, maybe we could just copy the string.",
       "revId": "cff468d2da4d15d961c40dab6971ada5f54f8318",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a8dcdca3_783c34a7",
+        "filename": "src/org/lineageos/setupwizard/LocationSettingsActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-04T17:33:40Z",
+      "side": 1,
+      "message": "This will be disabled by default in 17080: Disable AGPS by default, it\u0027ll be enabled in SetupWizard | https://review.calyxos.org/c/CalyxOS/vendor_calyx/+/17080 - we need to handle that. Commit message has more details, but basically the setting will be off by default for new installs, but we want the toggle here to be on by default, so that\n\n1. if the user turns it off, it was never on\n2. when the user taps next it gets turned on. The default, if they don\u0027t change anything.",
+      "revId": "cff468d2da4d15d961c40dab6971ada5f54f8318",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
