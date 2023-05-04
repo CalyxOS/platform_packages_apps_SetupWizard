@@ -8,7 +8,6 @@ package org.lineageos.setupwizard.base
 
 import android.content.Context
 import android.content.Intent
-import android.net.wifi.WifiManager
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
@@ -179,12 +178,6 @@ abstract class BaseSetupWizardActivity : AppCompatActivity() {
     val nextButton: Button?
         get() = footerBarMixin?.primaryButtonView
 
-    protected fun onSetupStart() {
-        if (SetupWizardUtils.isOwner()) {
-            tryEnablingWifi()
-        }
-    }
-
     override fun finish() {
         if (LOGV) {
             Log.v(TAG, "finish")
@@ -231,9 +224,6 @@ abstract class BaseSetupWizardActivity : AppCompatActivity() {
             Log.v(TAG, "onNextIntentResult($resultCode, ${data?.extras})")
         }
     }
-
-    protected fun tryEnablingWifi() =
-        getSystemService(WifiManager::class.java)?.setWifiEnabled(true) ?: false
 
     private fun isFirstRun(): Boolean = true
 

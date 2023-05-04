@@ -36,7 +36,6 @@ class WelcomeActivity : SubBaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        onSetupStart()
         SystemBarHelper.setBackButtonVisible(window, false)
 
         onBackPressedDispatcher.addCallback(

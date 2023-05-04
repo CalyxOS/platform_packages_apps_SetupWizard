@@ -31,10 +31,6 @@ class NetworkSetupActivity : SubBaseActivity() {
             return
         }
 
-        if (SetupWizardUtils.isOwner()) {
-            tryEnablingWifi()
-        }
-
         val intent =
             Intent(networkSetupAction()).apply {
                 if (!PartnerConfigHelper.isGlifExpressiveEnabled(this@NetworkSetupActivity)) {
