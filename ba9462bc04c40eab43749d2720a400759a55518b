@@ -16,6 +16,24 @@
       "message": "Forgot to submit this comment yesterday.\n\nHow does the Internet page behave with this?\n\nPreviously, you\u0027d get a list of the available wifi networks right away, and could connect to one easily. What does it look like now?",
       "revId": "ba9462bc04c40eab43749d2720a400759a55518b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53e0711e_c10f255d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-05-10T20:36:59Z",
+      "side": 1,
+      "message": "The wifi toggle is unchecked. If the user toggles the switch, wifi access points are shown as usual.",
+      "parentUuid": "5bb99450_e545a280",
+      "revId": "ba9462bc04c40eab43749d2720a400759a55518b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
