@@ -33,6 +33,24 @@
       "message": "Nit: Existing option has bold text, \"Allow apps that have asked for your permission\"; new option has nothing bold, which makes it look like something is wrong / failed to load properly.",
       "revId": "a53278ac922aa76b675cdc65ce34e7dfda087f9f",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4865d4e8_4400c706",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-11T13:05:32Z",
+      "side": 1,
+      "message": "For SetupWizard, there is a simple way to do this\n\nDefault:\n\nLocation toggle on and AGPS toggle on\n\nIf users turns off location, grey out the AGPS toggle, and set it to off as well.\n\nThe actual change happens in `onNextPressed()` in the followup so thats\u0027 fine.\n\nWe were going to do the same in Settings, but then Mike said some people may want to turn off AGPS first, so we didn\u0027t.",
+      "parentUuid": "e0e34cca_5337d822",
+      "revId": "a53278ac922aa76b675cdc65ce34e7dfda087f9f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
