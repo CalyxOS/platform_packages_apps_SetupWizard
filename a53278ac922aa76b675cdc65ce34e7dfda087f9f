@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e0e34cca_5337d822",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-11T12:49:32Z",
+      "side": 1,
+      "message": "UX: As a user, I would be very tempted at this point to uncheck this, because it looks like it would download the data even with the top box unchecked. Then, for me, from that point on, A-GPS would be off, and I may forget and later experience poor TTFF without realizing why.\n\nA few potential ways to improve this:\n- Add something such as \"(Only effective when location is enabled.)\" to the text...?\n- Indent this new A-GPS option so that it\u0027s visually clear that it is only important when the top option is on... but I realize that given the current margins, indenting may make the text width very small.\n\nJust possibilities. Feel free to \"Ack\" this if none of us have time before we want to get this merged.",
+      "revId": "a53278ac922aa76b675cdc65ce34e7dfda087f9f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
