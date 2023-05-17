@@ -18,6 +18,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fdb04805_c9a14945",
+        "filename": "src/org/lineageos/setupwizard/FinishActivity.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-17T14:14:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "06fe0d41_bc75b71d",
+      "revId": "50408802c2b424f9d021b6204401d7e8b1b94337",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "63f6dbf2_451d927d",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-05-17T14:12:09Z",
       "side": 1,
       "message": "nit: The finalize method (non-static, though) has another meaning in Java, which could make this a little confusing. We also already have startProvisioning, so naming this finalizeProvisioning instead makes sense.",
+      "revId": "50408802c2b424f9d021b6204401d7e8b1b94337",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8181a014_519b3b60",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-17T14:14:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "63f6dbf2_451d927d",
       "revId": "50408802c2b424f9d021b6204401d7e8b1b94337",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
