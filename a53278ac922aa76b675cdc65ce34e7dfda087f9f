@@ -51,6 +51,24 @@
       "parentUuid": "e0e34cca_5337d822",
       "revId": "a53278ac922aa76b675cdc65ce34e7dfda087f9f",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5685afa5_07a7fa72",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-22T18:26:40Z",
+      "side": 1,
+      "message": "You mean Location would no longer be default-off in setup but instead by default-on? I\u0027m not sure if that\u0027s what you mean, but that would be a pretty big change. Is it something we definitely want, apart from just improving the way these checkboxes interact?",
+      "parentUuid": "4865d4e8_4400c706",
+      "revId": "a53278ac922aa76b675cdc65ce34e7dfda087f9f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
