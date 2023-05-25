@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f22e97fb_a278cb6f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-25T17:57:16Z",
+      "side": 1,
+      "message": "I\u0027ve been trying out various ways of wording things, but the amount of space on the screen is really limited and ends up requiring scrolling.\n\nI know the info doesn\u0027t need to be exhaustive but should at least be accurate.",
+      "revId": "8cffa89c7d1cf4ba62444e7316aba51b80ccf875",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "79bb31fb_385fe569",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-25T17:57:16Z",
+      "side": 1,
+      "message": "microG does include location tracking, and by default location-related data is sent to Mozilla, so this unfortunately isn\u0027t accurate.",
+      "revId": "8cffa89c7d1cf4ba62444e7316aba51b80ccf875",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd97e744_f962418f",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-25T17:57:16Z",
+      "side": 1,
+      "message": "This toggle is not just about Google services compatibility. It also:\n* controls whether the location backends are enabled\n* controls whether particular features are available (e.g. support for security keys / FIDO2)",
+      "revId": "8cffa89c7d1cf4ba62444e7316aba51b80ccf875",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
