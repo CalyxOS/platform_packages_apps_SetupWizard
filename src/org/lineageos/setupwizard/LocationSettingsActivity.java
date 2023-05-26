@@ -64,8 +64,6 @@ public class LocationSettingsActivity extends BaseSetupWizardActivity {
             checked &= mUserManager.hasUserRestriction(UserManager.DISALLOW_SHARE_LOCATION);
         }
         mLocationAccess.setChecked(checked);
-        mLocationAgpsAccess.setChecked(Settings.Global.getInt(getContentResolver(),
-                Settings.Global.ASSISTED_GPS_ENABLED, 0) == 1);
     }
 
     @Override
