@@ -36,10 +36,7 @@ public class MicroGActivity extends BaseSetupWizardActivity {
     private static final String[] MICROG_PACKAGES = new String[]{
             "com.google.android.gms",
             "com.google.android.gsf",
-            "com.android.vending",
-            "org.fitchfamily.android.dejavu",
-            "org.microg.nlp.backend.ichnaea",
-            "org.microg.nlp.backend.nominatim"
+            "com.android.vending"
     };
 
     private PackageManager pm;
