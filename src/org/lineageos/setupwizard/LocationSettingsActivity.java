@@ -51,9 +51,13 @@ public class LocationSettingsActivity extends BaseSetupWizardActivity {
             mLocationAccess.setChecked(!mLocationAccess.isChecked());
         });
         View locationAgpsAccessView = findViewById(R.id.location_agps);
-        locationAgpsAccessView.setOnClickListener(v -> {
-            mLocationAgpsAccess.setChecked(!mLocationAgpsAccess.isChecked());
-        });
+        if (mUserManager.isPrimaryUser()) {
+            locationAgpsAccessView.setOnClickListener(v -> {
+                mLocationAgpsAccess.setChecked(!mLocationAgpsAccess.isChecked());
+            });
+        } else {
+            locationAgpsAccessView.setVisibility(View.GONE);
+        }
     }
 
     @Override
