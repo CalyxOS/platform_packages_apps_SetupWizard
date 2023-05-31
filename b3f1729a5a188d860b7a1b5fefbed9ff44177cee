@@ -16,6 +16,24 @@
       "message": "I\u0027d do this separately tbh.\n\napp installation is a no brainer.\n\nbiometric at least for work profile needs some thought, especially given issues such as https://gitlab.com/CalyxOS/calyxos/-/issues/971\n\nI suggest a split for the commits:\n1. App install for both, good to go!\n2. Biometric for _user, good to go!\n3. Biometric for _managed_profile, tbd",
       "revId": "b3f1729a5a188d860b7a1b5fefbed9ff44177cee",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a4a43eb_37b774eb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-05-31T02:03:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9da25e92_08194487",
+      "revId": "b3f1729a5a188d860b7a1b5fefbed9ff44177cee",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
