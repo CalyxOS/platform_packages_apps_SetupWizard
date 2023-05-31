@@ -16,6 +16,23 @@
       "message": "I like this, think its wortwhile",
       "revId": "e79cb5173b4eba9e23c196a5ebd857175701a519",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4772d35_66030280",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-31T16:22:14Z",
+      "side": 1,
+      "message": "https://gitlab.com/CalyxOS/calyxos/-/issues/971",
+      "revId": "e79cb5173b4eba9e23c196a5ebd857175701a519",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
