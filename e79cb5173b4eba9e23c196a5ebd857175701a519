@@ -33,6 +33,24 @@
       "message": "https://gitlab.com/CalyxOS/calyxos/-/issues/971",
       "revId": "e79cb5173b4eba9e23c196a5ebd857175701a519",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1771470_d8612137",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-31T16:59:19Z",
+      "side": 1,
+      "message": "Test scenarios\n\n1. Main user 1-2 fingerprints, work profile 1-2 fingerprints\n2. Main user 4 fingerprints, work profile 2 fingerprints\n\nEach scenario to be tested on - a qcom pixel, such as Pixel 4a 5G, and a tensor pixel, such as Pixel 6a",
+      "parentUuid": "d4772d35_66030280",
+      "revId": "e79cb5173b4eba9e23c196a5ebd857175701a519",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
