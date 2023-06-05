@@ -16,6 +16,24 @@
       "message": "If apps have been updated to newer versions than are present in the on-device repo, the apps will fail to install here, showing a circle exclamation icon with no explanation. https://gitlab.com/CalyxOS/calyxos/-/issues/1702#note_1418428161",
       "revId": "0a017ca0a089939860ee9fe273aa80c7e0adc6b2",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "998a4ab8_7d5d0e2e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-05T16:29:31Z",
+      "side": 1,
+      "message": "I think that\u0027s fine, for more details see gitlab.",
+      "parentUuid": "66848e43_a1190b96",
+      "revId": "0a017ca0a089939860ee9fe273aa80c7e0adc6b2",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
