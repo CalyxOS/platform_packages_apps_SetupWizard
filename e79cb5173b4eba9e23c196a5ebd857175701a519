@@ -68,6 +68,23 @@
       "message": "One concern I have here is that if a user chooses a weak lockscreen PIN or password for a work profile, cryptographically, it\u0027s actually worse than if they didn\u0027t choose one at all. Users will likely not understand this and think a simple PIN is better than nothing. It could be, but it depends on what you\u0027re trying to protect against / the method of attack.\n\ne.g., Even with a very strong user password, a work profile PIN of 1234 is extremely weak, and the strong password of the user itself has no involvement in the encryption at all. This is not the case if they keep it at the default \"Use one lock\".\n\nWith use one lock, the work profile password is randomly generated, stored with the user itself, and protected by the user\u0027s encryption.\n\nWith a separate lock, the work profile lock is cryptographically totally unrelated to the user\u0027s lock, and given the right conditions (other vuln(s) needed), the work profile data could be retrieved through guessing or brute force even if the user itself is not unlocked.",
       "revId": "e79cb5173b4eba9e23c196a5ebd857175701a519",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26168fde_343edac4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-06-05T16:52:58Z",
+      "side": 1,
+      "message": "Another issue: When we have multiple profiles, or for users already testing multiple profiles, there\u0027s no easy way to change these settings for anything other than the first profile.\n\nThis alone is likely not a blocker since we\u0027re not shipping multiple profiles now, but I think it\u0027s important to know.",
+      "revId": "e79cb5173b4eba9e23c196a5ebd857175701a519",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
