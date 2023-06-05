@@ -34,6 +34,24 @@
       "parentUuid": "6f99f2e0_b656ca9d",
       "revId": "848b3b72aa5304aa8a794415695a517e924085a2",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d513fc8b_c765da7d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-06-05T15:46:05Z",
+      "side": 1,
+      "message": "## qcom - Pixel 4a (5G):\nNo noticeable issues or delay in either scenario, even with as many as 5 fingerprints for main and secondary user.\n\n## Tensor - Pixel 6a:\n### Main user 1-2 fingerprints, secondary user 1-2 fingerprints\n* There may be a short delay, \u003c1 second or so, in fingerprint becoming usable when switching between running users (the lock symbol changing to a fingerprint symbol).\n    \n### Main user 4 fingerprints, secondary user 2 fingerprints\n* There may be a short delay, \u003c1 second or so, in fingerprint becoming usable when switching back to a running secondary user (the lock symbol changing to a fingerprint symbol).\n* When switching back to the Owner user, fingerprint unlock is glitchy and might not work again until the device is unlocked with PIN. It does not work initially (lock symbol only); however, it should start working if the screen is allowed to time out first, or it may transform into a fingerprint symbol if the user waits several seconds and then pulls down Quick Settings. Manually turning the screen off and on will result in fingerprint not working at all until unlocked with PIN.\n* With 4 fingerprints for the secondary user, as opposed to only 2, this same behavior also happens when switching back to a running secondary user, instead of being limited to the Owner user.",
+      "parentUuid": "536c155a_75f6e09c",
+      "revId": "848b3b72aa5304aa8a794415695a517e924085a2",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
