@@ -16,6 +16,24 @@
       "message": "Normal setup, skip installing apps -\u003e Couldn\u0027t access recents or status bar. user complete and device provisioned set to 1\n\nWork profile setup -\u003e launched ok, SystemUI ANR at the end\n\nSkip setup -\u003e seemed fine\n\nNormal setup, install apps, but go next while it\u0027s still installing -\u003e seems fine, it does install apps (given that Lupin handles that), and the device works ok too.",
       "revId": "5f189a34a9bfa3bbc2997537a11252dd55b03276",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5feb5bde_6df51b78",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-07T14:23:35Z",
+      "side": 1,
+      "message": "I was able to reproduce the first issue \"normal setup, skip installing apps\"\n\n\"Work profile\" was tried right after that and thus is it failed due to that.\n\nIf I try it after one of the other steps where the phone is setup correctly, it works fine.",
+      "parentUuid": "e39ab02a_740729ad",
+      "revId": "5f189a34a9bfa3bbc2997537a11252dd55b03276",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
