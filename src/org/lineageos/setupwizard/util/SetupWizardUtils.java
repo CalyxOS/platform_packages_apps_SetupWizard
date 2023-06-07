@@ -213,6 +213,9 @@ public class SetupWizardUtils {
         enableStatusBar(context);
 
         sendMicroGCheckInBroadcast(context);
+
+        context.getPackageManager().setApplicationEnabledSetting(context.getPackageName(),
+                COMPONENT_ENABLED_STATE_DISABLED, 0);
     }
 
     public static boolean isBluetoothDisabled() {
