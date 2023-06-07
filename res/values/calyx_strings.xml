@@ -15,9 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Managed profile -->
-    <string name="lineage_wizard_script_managed_profile_uri" translatable="false">android.resource://org.lineageos.setupwizard/raw/lineage_wizard_script_managed_profile</string>
-
     <!-- App install -->
     <string name="calyx_fdroid_repo_location" translatable="false">/product/fdroid/repo</string>
     <string name="install_apps_title">Additional apps</string>
@@ -54,7 +51,4 @@
     <string name="bootloader_warning_title">Bootloader lock warning</string>
     <string name="bootloader_warning_summary">This device\'s bootloader is currently unlocked. Please lock the bootloader from a computer. Visit <a href="https://calyxos.org/lock">calyxos.org/lock</a> for more info.</string>
     <string name="reboot">Reboot</string>
-
-    <!-- Assisted GPS -->
-    <string name="location_agps_access_summary">When location is on, <b>download satellite assistance data from the internet</b>, which can greatly improve the GPS startup performance.</string>
 </resources>
