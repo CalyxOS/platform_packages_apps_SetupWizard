@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "06102069_e68acf27",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-13T14:53:44Z",
+      "side": 1,
+      "message": "I\u0027d rather not add this page, especially not downstream.\n\nWhy add more pages to an already long SetupWizard unless there is a good reason to.\n\nWe also don\u0027t have Google\u0027s \"Continue setup later\" or \"You can additional setup these things\" functionality.",
+      "revId": "9eddad3014399e1b7f8de8ced3a1a83b5b57fc3f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "422c377f_43566b22",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-13T14:53:44Z",
+      "side": 1,
+      "message": "strings.xml is for upstream (lineage) strings, as that\u0027s where they\u0027re translated.\n\nThis should go upstream.",
+      "revId": "9eddad3014399e1b7f8de8ced3a1a83b5b57fc3f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
