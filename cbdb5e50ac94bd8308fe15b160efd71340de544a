@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "824717ca_f31a54c8",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-06-13T15:24:17Z",
+      "side": 1,
+      "message": "Firstly, I thought that setting up SIM/Network would possibly set these defaults to the proper date, time and timezone automatically. Secondly, Google has this page after setting up network.",
+      "parentUuid": "a1f12dc3_5fbcc348",
+      "revId": "cbdb5e50ac94bd8308fe15b160efd71340de544a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "83909673_171bfba3",
         "filename": "res/raw/lineage_wizard_script.xml",
         "patchSetId": 1
@@ -48,6 +66,24 @@
       "writtenOn": "2023-06-13T14:50:24Z",
       "side": 1,
       "message": "What will this do? skip biometric and go to microg if no lockscreen is configured?\n\nI thought stock had it the other way around but I must be mistaken.\n\nThis does make sense, either way.",
+      "revId": "cbdb5e50ac94bd8308fe15b160efd71340de544a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3442d1af_d272ef16",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-06-13T15:24:17Z",
+      "side": 1,
+      "message": "Yep. So Google, skips the biometrics page if user skips lockscreen step. The result code of skipping is 11. Otherwise default is to move on to biometric step.",
+      "parentUuid": "83909673_171bfba3",
       "revId": "cbdb5e50ac94bd8308fe15b160efd71340de544a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
@@ -65,6 +101,24 @@
       "writtenOn": "2023-06-13T14:50:24Z",
       "side": 1,
       "message": "This I like, makes sense to have it last!",
+      "revId": "cbdb5e50ac94bd8308fe15b160efd71340de544a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15e2a516_fbb1118a",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-06-13T15:24:17Z",
+      "side": 1,
+      "message": "It\u0027s also the last step in stock",
+      "parentUuid": "0edcad1e_61148f78",
       "revId": "cbdb5e50ac94bd8308fe15b160efd71340de544a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
