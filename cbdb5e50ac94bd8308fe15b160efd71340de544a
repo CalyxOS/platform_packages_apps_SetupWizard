@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c04cd6d3_fae03d00",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-13T14:50:24Z",
+      "side": 1,
+      "message": "I know this says \"match\", but leaving some inline comments because not all of it may make sense.",
+      "revId": "cbdb5e50ac94bd8308fe15b160efd71340de544a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a1f12dc3_5fbcc348",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-13T14:50:24Z",
+      "side": 1,
+      "message": "Why move this?",
+      "revId": "cbdb5e50ac94bd8308fe15b160efd71340de544a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83909673_171bfba3",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-13T14:50:24Z",
+      "side": 1,
+      "message": "What will this do? skip biometric and go to microg if no lockscreen is configured?\n\nI thought stock had it the other way around but I must be mistaken.\n\nThis does make sense, either way.",
+      "revId": "cbdb5e50ac94bd8308fe15b160efd71340de544a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0edcad1e_61148f78",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-13T14:50:24Z",
+      "side": 1,
+      "message": "This I like, makes sense to have it last!",
+      "revId": "cbdb5e50ac94bd8308fe15b160efd71340de544a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
