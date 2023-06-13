@@ -53,6 +53,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e168bb1_66a7e706",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-13T15:51:24Z",
+      "side": 1,
+      "message": "Right, and then I don\u0027t think that date/time should matter for network connections, maybe unless it\u0027s some enterprise wifi cert thingy.\n\nBut if Google has it the same, good enough for me.",
+      "parentUuid": "824717ca_f31a54c8",
+      "revId": "cbdb5e50ac94bd8308fe15b160efd71340de544a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "83909673_171bfba3",
@@ -84,6 +102,24 @@
       "side": 1,
       "message": "Yep. So Google, skips the biometrics page if user skips lockscreen step. The result code of skipping is 11. Otherwise default is to move on to biometric step.",
       "parentUuid": "83909673_171bfba3",
+      "revId": "cbdb5e50ac94bd8308fe15b160efd71340de544a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5f35c61_d00cc6ed",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-13T15:51:24Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "3442d1af_d272ef16",
       "revId": "cbdb5e50ac94bd8308fe15b160efd71340de544a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
