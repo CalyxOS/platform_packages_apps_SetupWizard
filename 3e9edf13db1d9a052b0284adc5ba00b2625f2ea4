@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d74a3bcb_ef591a68",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 27
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-06-16T01:33:01Z",
+      "side": 1,
+      "message": "There are only 2 users at this stage and this is used in a subsequent patchset. I\u0027m open to other suggestions. I would like to not hard code user 10 nor make assumptions about user type given we support both managed device and managed profile usecases here. Some function that returns the last created/provisioned user/profile could do?",
+      "range": {
+        "startLine": 65,
+        "startChar": 12,
+        "endLine": 65,
+        "endChar": 69
+      },
+      "revId": "3e9edf13db1d9a052b0284adc5ba00b2625f2ea4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c08af4d5_2bfe84c6",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 27
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-06-16T01:33:01Z",
+      "side": 1,
+      "message": "To make this more generic, ideally this clause should be checking that the last APK that we want to install has been installed and if so launches this flow. Could do so with a boolean flag?",
+      "range": {
+        "startLine": 78,
+        "startChar": 27,
+        "endLine": 79,
+        "endChar": 61
+      },
+      "revId": "3e9edf13db1d9a052b0284adc5ba00b2625f2ea4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
