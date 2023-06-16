@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b2f1f27c_23ece00a",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 27
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-06-16T20:13:27Z",
+      "side": 1,
+      "message": "Overall I wish we didn\u0027t have to do this, but personally I think it\u0027s an acceptable workaround for now, until we have time to reevaluate.\n\nNit: If you set a UserHandle instead, then you can createContextAsUser at the end based on the UserHandle and not have to create multiple contexts that aren\u0027t used.",
+      "parentUuid": "d74a3bcb_ef591a68",
+      "range": {
+        "startLine": 65,
+        "startChar": 12,
+        "endLine": 65,
+        "endChar": 69
+      },
+      "revId": "3e9edf13db1d9a052b0284adc5ba00b2625f2ea4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c08af4d5_2bfe84c6",
         "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
         "patchSetId": 27
@@ -43,6 +67,40 @@
         "endLine": 79,
         "endChar": 61
       },
+      "revId": "3e9edf13db1d9a052b0284adc5ba00b2625f2ea4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a634079_e8958f23",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 27
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-06-16T20:13:27Z",
+      "side": 1,
+      "message": "(Oliver, you asked me to mark this down.) Right now, if Orbot fails to install, the profile provisioning won\u0027t complete, but it probably shouldn\u0027t be conditional.",
+      "revId": "3e9edf13db1d9a052b0284adc5ba00b2625f2ea4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f10d8c87_18e98a35",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 27
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-06-16T20:13:27Z",
+      "side": 1,
+      "message": "installApk is generic, but this error is about Orbot",
       "revId": "3e9edf13db1d9a052b0284adc5ba00b2625f2ea4",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
