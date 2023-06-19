@@ -48,6 +48,30 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d686e0d0_89d2950d",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 27
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-06-19T21:42:51Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "b2f1f27c_23ece00a",
+      "range": {
+        "startLine": 65,
+        "startChar": 12,
+        "endLine": 65,
+        "endChar": 69
+      },
+      "revId": "3e9edf13db1d9a052b0284adc5ba00b2625f2ea4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c08af4d5_2bfe84c6",
@@ -61,6 +85,30 @@
       "writtenOn": "2023-06-16T01:33:01Z",
       "side": 1,
       "message": "To make this more generic, ideally this clause should be checking that the last APK that we want to install has been installed and if so launches this flow. Could do so with a boolean flag?",
+      "range": {
+        "startLine": 78,
+        "startChar": 27,
+        "endLine": 79,
+        "endChar": 61
+      },
+      "revId": "3e9edf13db1d9a052b0284adc5ba00b2625f2ea4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67a6840d_c0fe2110",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 27
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-06-19T21:42:51Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "c08af4d5_2bfe84c6",
       "range": {
         "startLine": 78,
         "startChar": 27,
@@ -88,6 +136,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a95dfc0_20c33775",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 27
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-06-19T21:42:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a634079_e8958f23",
+      "revId": "3e9edf13db1d9a052b0284adc5ba00b2625f2ea4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f10d8c87_18e98a35",
@@ -101,6 +167,24 @@
       "writtenOn": "2023-06-16T20:13:27Z",
       "side": 1,
       "message": "installApk is generic, but this error is about Orbot",
+      "revId": "3e9edf13db1d9a052b0284adc5ba00b2625f2ea4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80335954_e8c538b3",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 27
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-06-19T21:42:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f10d8c87_18e98a35",
       "revId": "3e9edf13db1d9a052b0284adc5ba00b2625f2ea4",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
