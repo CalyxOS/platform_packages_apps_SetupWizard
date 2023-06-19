@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "87720488_a27e820b",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 28
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-06-19T21:43:45Z",
+      "side": 1,
+      "message": "If someone can implement this, ideally this clause should be checking that the last APK that we want to install has been installed and if so launches this flow.",
+      "range": {
+        "startLine": 79,
+        "startChar": 16,
+        "endLine": 80,
+        "endChar": 66
+      },
+      "revId": "52413bcb76173a8ce6e466155befadab138bda17",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
