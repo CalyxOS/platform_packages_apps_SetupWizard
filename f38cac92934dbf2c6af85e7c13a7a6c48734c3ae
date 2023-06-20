@@ -123,6 +123,24 @@
       "parentUuid": "6ef97830_f5ea6da4",
       "revId": "f38cac92934dbf2c6af85e7c13a7a6c48734c3ae",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d446de3a_5717d65f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-06-20T18:20:48Z",
+      "side": 1,
+      "message": "Our welcome screen has a button for accessibility settings like display size (which affects the whole user) and a button for emergency call which probably shouldn\u0027t be there and shows the emergency information owner as \"Work Profile\"... but these seem out of scope for this change. Google doesn\u0027t have an equivalent for our work profile setup wizard.",
+      "parentUuid": "5873bf3f_1259777a",
+      "revId": "f38cac92934dbf2c6af85e7c13a7a6c48734c3ae",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
