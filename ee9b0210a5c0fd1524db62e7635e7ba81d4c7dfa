@@ -16,6 +16,23 @@
       "message": "Does this look and work ok?\n\nWe\u0027ll have to do some quick tests with a variety of devices - (rear fps, face unlock, udfps, side fps) - at least the first wo of these options if not all.",
       "revId": "ee9b0210a5c0fd1524db62e7635e7ba81d4c7dfa",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "710eb724_7a07fd30",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-06-20T13:44:23Z",
+      "side": 1,
+      "message": "Minor quirk, not a blocker imo: User needs to enter PIN/password three times: once to set, once to confirm, and then immediately after this, they are asked to re-enter it one more time, with the message \"Re-enter your PIN. Enter your device PIN to continue\".",
+      "revId": "ee9b0210a5c0fd1524db62e7635e7ba81d4c7dfa",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
