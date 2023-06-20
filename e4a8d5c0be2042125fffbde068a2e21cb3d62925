@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ec0f4ba_a6efa2d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-06-20T19:12:30Z",
+      "side": 1,
+      "message": "Aren\u0027t there a bunch of unused resources to remove after the java changes now? Also this should be upstream",
+      "revId": "e4a8d5c0be2042125fffbde068a2e21cb3d62925",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
