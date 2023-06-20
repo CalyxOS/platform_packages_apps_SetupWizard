@@ -34,6 +34,24 @@
       "parentUuid": "a0975356_6971bead",
       "revId": "f38cac92934dbf2c6af85e7c13a7a6c48734c3ae",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ef97830_f5ea6da4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-06-20T16:15:07Z",
+      "side": 1,
+      "message": "That would need to be done here: https://review.calyxos.org/c/CalyxOS/platform_packages_apps_SetupWizard/+/17521",
+      "parentUuid": "a0975356_6971bead",
+      "revId": "f38cac92934dbf2c6af85e7c13a7a6c48734c3ae",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
