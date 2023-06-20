@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a0f8038_2c39cbc3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-06-20T15:32:35Z",
+      "side": 1,
+      "message": "Also adjust secondary user flow here so that secure lock is not forced",
+      "revId": "71e5c138f6cf88883f51c56c42566922176cd93b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
