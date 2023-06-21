@@ -68,6 +68,24 @@
       "parentUuid": "10fdf1cf_06688c42",
       "revId": "ee9b0210a5c0fd1524db62e7635e7ba81d4c7dfa",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61434933_b02b2259",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-06-21T14:11:57Z",
+      "side": 1,
+      "message": "SUW is smoother without this change because of the above (three PIN prompts). That alone might be just a nit, but given Michael\u0027s comment, maybe it\u0027s worth not merging this directly in CalyxOS right now?",
+      "parentUuid": "710eb724_7a07fd30",
+      "revId": "ee9b0210a5c0fd1524db62e7635e7ba81d4c7dfa",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
