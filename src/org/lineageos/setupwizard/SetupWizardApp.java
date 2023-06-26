@@ -20,7 +20,6 @@ package org.lineageos.setupwizard;
 import static android.os.UserHandle.USER_CURRENT;
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
 
-import android.app.AppOpsManager;
 import android.app.Application;
 import android.app.StatusBarManager;
 import android.app.job.JobInfo;
@@ -28,7 +27,6 @@ import android.app.job.JobScheduler;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.om.IOverlayManager;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.ServiceManager;
@@ -77,7 +75,6 @@ public class SetupWizardApp extends Application {
 
     public static final String KEY_DETECT_CAPTIVE_PORTAL = "captive_portal_detection_enabled";
 
-    public static final String AURORA_SERVICES_PACKAGE = "com.aurora.services";
     public static final String FDROID_PACKAGE = "org.fdroid.fdroid";
     public static final String FDROID_UPDATEJOBSERVICE_CLASS = ".UpdateJobService";
     // Must match F-Droid's UpdateService JOB_ID
@@ -134,14 +131,6 @@ public class SetupWizardApp extends Application {
                 && !SetupWizardUtils.isBootloaderUnlocked(this)
                 && SetupWizardUtils.isOemunlockAllowed(this)) {
             getSystemService(OemLockManager.class).setOemUnlockAllowedByUser(false);
-        }
-        try {
-            getSystemService(AppOpsManager.class).setMode(AppOpsManager.OP_REQUEST_INSTALL_PACKAGES,
-                    getPackageManager().getPackageUid(AURORA_SERVICES_PACKAGE, 0),
-                    AURORA_SERVICES_PACKAGE,
-                    AppOpsManager.MODE_ALLOWED);
-        } catch (PackageManager.NameNotFoundException e) {
-
         }
     }
 
