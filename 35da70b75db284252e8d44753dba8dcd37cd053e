@@ -86,6 +86,24 @@
       "message": "Haven\u0027t built or tested, but this looks like the same way this is handled in `packages/apps/Settings/src/com/android/settings/development/OemUnlockPreferenceController.java`, so it looks good to me",
       "revId": "35da70b75db284252e8d44753dba8dcd37cd053e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e291f22_0c709441",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-28T19:43:48Z",
+      "side": 1,
+      "message": "It looks like this may not be needed anymore. Doesn\u0027t hurt to have it, but I don\u0027t want to do yet another round of testing, especially with locked bootloader. Skipping.",
+      "parentUuid": "331150c8_b0fa9f7e",
+      "revId": "35da70b75db284252e8d44753dba8dcd37cd053e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
