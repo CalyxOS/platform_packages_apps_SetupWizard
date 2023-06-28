@@ -34,6 +34,23 @@
       "parentUuid": "e39ab02a_740729ad",
       "revId": "5f189a34a9bfa3bbc2997537a11252dd55b03276",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3582c81_85a5694f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-28T17:11:43Z",
+      "side": 1,
+      "message": "TODO: Modify start_lineage_wizard.sh",
+      "revId": "5f189a34a9bfa3bbc2997537a11252dd55b03276",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
