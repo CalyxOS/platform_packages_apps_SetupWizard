@@ -16,6 +16,24 @@
       "message": "This was for race condition testing. Are you using it for anything, Chirayu? If not I could just abandon it so it doesn\u0027t get brought in by picking the topic.",
       "revId": "2cce8703bc821afaefadbabd0736a586123f9c66",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d175dde_c72bb055",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-03T14:49:14Z",
+      "side": 1,
+      "message": "repopick -f will work to pick abandoned changes.",
+      "parentUuid": "cb138e15_f72040b3",
+      "revId": "2cce8703bc821afaefadbabd0736a586123f9c66",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ],
   "submitRequirementResults": [
