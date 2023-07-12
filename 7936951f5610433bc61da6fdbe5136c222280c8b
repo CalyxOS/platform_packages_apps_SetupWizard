@@ -16,6 +16,24 @@
       "message": "How do we handle the case that a user never finishes the SUW? Maybe they swipe it away, or accidentally ignore it? It would never show up again to be finished properly, so it would never get disabled, right?",
       "revId": "7936951f5610433bc61da6fdbe5136c222280c8b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "011d37c9_e40a5625",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-12T16:02:46Z",
+      "side": 1,
+      "message": "Correct.\n\nThe notification Aayush proposed \"Complete your device setup\" could work.\n\nThat\u0027s separate from this change, however. It\u0027s an issue even if SuW isn\u0027t disabled.",
+      "parentUuid": "1b177ae3_1a2f6e2b",
+      "revId": "7936951f5610433bc61da6fdbe5136c222280c8b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
