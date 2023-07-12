@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b177ae3_1a2f6e2b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-07-12T14:43:09Z",
+      "side": 1,
+      "message": "How do we handle the case that a user never finishes the SUW? Maybe they swipe it away, or accidentally ignore it? It would never show up again to be finished properly, so it would never get disabled, right?",
+      "revId": "7936951f5610433bc61da6fdbe5136c222280c8b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
