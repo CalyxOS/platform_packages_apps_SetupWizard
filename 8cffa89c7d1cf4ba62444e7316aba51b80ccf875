@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6b7e83bb_ba5c2b28",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-31T17:35:57Z",
+      "side": 1,
+      "message": "Intentional because the latest microG changes how location works entirely, so we should make any changes needed there and then update this based on how things are.\n\nRight now it should be at parity (local + mozilla).",
+      "parentUuid": "0244711d_e277bb9a",
+      "revId": "8cffa89c7d1cf4ba62444e7316aba51b80ccf875",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "79bb31fb_385fe569",
         "filename": "res/values/calyx_strings.xml",
         "patchSetId": 3
