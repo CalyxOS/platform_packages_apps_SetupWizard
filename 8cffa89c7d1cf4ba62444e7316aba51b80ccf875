@@ -20,6 +20,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0244711d_e277bb9a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-07-31T14:45:09Z",
+      "side": 1,
+      "message": "Please note, the [issue for this change](https://gitlab.com/CalyxOS/calyxos/-/issues/1400) is blocked by multiple other issues.",
+      "revId": "8cffa89c7d1cf4ba62444e7316aba51b80ccf875",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "79bb31fb_385fe569",
         "filename": "res/values/calyx_strings.xml",
         "patchSetId": 3
