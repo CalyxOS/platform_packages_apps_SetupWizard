@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b00ab13_40d5e62e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-08-23T17:50:30Z",
+      "side": 1,
+      "message": "Not shipping this for now, edited commit message to make it extra clear.\n\nEverything else can get merged. We\u0027ll deal with the commits in the relation chain depending on this after we\u0027re done merging the rest of the topic.",
+      "revId": "716a6e4a09fe34504a349e34bda4b6ae839094b5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
