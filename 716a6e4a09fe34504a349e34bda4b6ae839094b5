@@ -16,6 +16,40 @@
       "message": "Not shipping this for now, edited commit message to make it extra clear.\n\nEverything else can get merged. We\u0027ll deal with the commits in the relation chain depending on this after we\u0027re done merging the rest of the topic.",
       "revId": "716a6e4a09fe34504a349e34bda4b6ae839094b5",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11734ba8_fde495e1",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 25
+      },
+      "lineNbr": 314,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-08-23T17:51:28Z",
+      "side": 1,
+      "message": "Maybe even disable the activity here, although `exported\u003d\"false\"` should mean it can\u0027t be launched from anywhere anyways.",
+      "revId": "716a6e4a09fe34504a349e34bda4b6ae839094b5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2bdfd96_1f5a9f74",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 25
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-08-23T17:51:28Z",
+      "side": 1,
+      "message": "In theory we could leave out just this part and merge everything else.",
+      "revId": "716a6e4a09fe34504a349e34bda4b6ae839094b5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
