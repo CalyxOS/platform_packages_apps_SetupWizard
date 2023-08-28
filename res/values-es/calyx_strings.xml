@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_title">Servicios de Google</string>
-    <string name="waiting_for_apps">Espere a que acabemos de configurar el dispositivo.</string>
     <string name="microg_description">Esto permite que aplicaciones como <b>Google Maps, Youtube y los servicios para compartir viajes</b> funcionen en CalyxOS. Deshabilita esto si no planeas ejecutar aplicaciones que requieran servicios de Google. No podrás habilitarlo más adelante.</string>
-    <string name="install_apps_select_all">Todas las siguientes aplicaciones</string>
-    <string name="install_apps_subtitle"><b> Revise aplicaciones adicionales.</b> También las puede instalar más tarde.</string>
-    <string name="install_apps_title">Aplicaciones adicionales</string>
     <string name="setup_euicc">Configurar eSIM</string>
     <string name="euicc_summary">También puedes añadir una eSIM a tu dispositivo.</string>
     <string name="bootloader_warning_summary">El gestor de arranque de este dispositivo está actualmente desbloqueado. Bloquee el cargador de arranque desde una computadora. Visite <a href="https://calyxos.org/lock">calyxos.org/lock</a> para obtener más información.</string>

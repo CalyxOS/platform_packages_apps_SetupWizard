@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="install_apps_subtitle"><b>Просмотрите дополнительные приложения.</b> Вы также можете установить их позже.</string>
     <string name="microg_description">Это позволяет запускать такие приложения, как <b>Google Maps, Youtube и службы обмена</b> на CalyxOS. Отключите это, если вы не планируете запускать приложения, требующие сервисы Google. Вы не сможете включить их позже.</string>
     <string name="microg_title">Сервисы Google</string>
-    <string name="waiting_for_apps">Подождите, пока мы завершим настройку вашего устройства.</string>
-    <string name="install_apps_select_all">Все следующие приложения</string>
-    <string name="install_apps_title">Дополнительные приложения</string>
     <string name="setup_euicc">Настройка eSIM</string>
     <string name="euicc_summary">Вы также можете добавить eSIM в свое устройство.</string>
     <string name="bootloader_warning_title">Предупреждение о блокировке загрузчика</string>
