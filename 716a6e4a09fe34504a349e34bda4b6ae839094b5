@@ -50,6 +50,24 @@
       "message": "In theory we could leave out just this part and merge everything else.",
       "revId": "716a6e4a09fe34504a349e34bda4b6ae839094b5",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d6156f19_60518ef9",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 25
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-08-30T13:31:26Z",
+      "side": 1,
+      "message": "Moved this to shown after date-time setting as others have been relocated and this allows to configure other pages from being shown if we want to such as location and lockscreen setting.",
+      "parentUuid": "c2bdfd96_1f5a9f74",
+      "revId": "716a6e4a09fe34504a349e34bda4b6ae839094b5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
