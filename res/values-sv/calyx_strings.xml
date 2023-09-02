@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="microg_title">Google Tjänster</string>
-    <string name="install_apps_subtitle"><b>Granska ytterligare appar.</b> De kan även installeras senare.</string>
-    <string name="install_apps_select_all">Alla dessa appar</string>
-    <string name="install_apps_title">Ytterligare appar</string>
 </resources>

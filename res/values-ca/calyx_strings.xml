@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_title">Serveis de Google</string>
-    <string name="install_apps_title">Aplicacions addicionals</string>
-    <string name="install_apps_subtitle"><b>Revisa les aplicacions addicionals.</b> També les pots instal·lar més tard.</string>
-    <string name="install_apps_select_all">Totes les aplicacions següents</string>
-    <string name="waiting_for_apps">Espereu mentre acabem de configurar el dispositiu.</string>
     <string name="microg_description">Això permet que aplicacions com <b>Google Maps, Youtube i ride sharing services</b> s\'executin a CalyxOS. Desactiva això si no tens previst executar aplicacions que requereixen serveis de Google. No podràs activar-ho més tard.</string>
     <string name="euicc_summary">També pots afegir un eSIM al teu dispositiu.</string>
     <string name="setup_euicc">Configuració eSIM</string>
