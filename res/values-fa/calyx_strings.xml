@@ -2,8 +2,4 @@
 <resources>
     <string name="microg_description">این اجازه می دهد تا برنامه های مانند <b> نقشه های گوگل، یوتیوب و خدمات به اشتراک گذاری سوار</b> بر روی کالیکس او اس اجرا شوند. اگر قصد ندارید برنامه هایی را که به سرویس های گوگل نیاز دارند، اجرا کنید این گزینه را غیرفعال کنید. بعداً نمی توانید آن را فعال کنید.</string>
     <string name="microg_title">خدمات گوگل</string>
-    <string name="waiting_for_apps">لطفاً منتظر بمانید تا ما آماده سازی دستگاه شما را به پایان برسانیم.</string>
-    <string name="install_apps_select_all">همه برنامه های زیرین</string>
-    <string name="install_apps_subtitle"><b>برنامه های اضافی را مرور کنید.</b> همچنین می توانید بعداً آنها را نصب کنید.</string>
-    <string name="install_apps_title">برنامه های بیشتر</string>
 </resources>

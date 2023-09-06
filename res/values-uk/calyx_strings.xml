@@ -4,10 +4,6 @@
     <string name="euicc_summary">Ви також можете додати eSIM до свого пристрою.</string>
     <string name="microg_description">Це дозволяє запускати такі застосунки, як <b> Google Maps, Youtube та служби обміну</b> на CalyxOS. Вимкніть це, якщо ви не плануєте запускати застосунки, що вимагають служби Google. Ви не зможете увімкнути їх пізніше.</string>
     <string name="microg_title">Служби Google</string>
-    <string name="waiting_for_apps">Зачекайте, поки ми завершимо налаштування вашого пристрою.</string>
-    <string name="install_apps_select_all">Усі наступні застосунки</string>
-    <string name="install_apps_subtitle"><b>Перегляньте додаткові застосунки.</b>Ви також можете встановити їх пізніше.</string>
-    <string name="install_apps_title">Додаткові застосунки</string>
     <string name="microg_switch_label2">Сумісність служб Google</string>
     <string name="microg_defaults_switch_label">Підтримка push-повідомлень</string>
     <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">
