@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="microg_title">গুগল পরিষেবাদি</string>
-    <string name="waiting_for_apps">অনুগ্রহ করে তোমার ডিভাইস সেট আপ শেষ করা পর্যন্ত অপেক্ষা করো।</string>
-    <string name="install_apps_select_all">নিচের সকল অ্যাপস</string>
-    <string name="install_apps_subtitle"><b> অতিরিক্ত অ্যাপ্লিকেশন পর্যালোচনা করো।</b> তুমি এগুলো পরে ইনস্টল করতে পারো।</string>
-    <string name="install_apps_title">অন্যান্য অ্যাপস</string>
 </resources>

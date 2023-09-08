@@ -2,10 +2,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_description">Bu, <b>Google Haritalar, Youtube ve sürüş paylaşım hizmetleri</b> gibi uygulamaların CalyxOS üzerinde çalışmasını sağlar. Google hizmetleri gerektiren uygulamaları çalıştırmayı düşünmüyorsanız bunu devre dışı bırakın. Daha sonra etkinleştirme imkanınız olmayacak.</string>
     <string name="microg_title">Google Hizmetleri</string>
-    <string name="waiting_for_apps">Lütfen aygıtınızın kurulumunu bitirirken bekleyin.</string>
-    <string name="install_apps_select_all">Aşağıdaki uygulamaların tümü</string>
-    <string name="install_apps_subtitle"><b>Ek uygulamaları inceleyin.</b> Bunları daha sonra da kurabilirsiniz.</string>
-    <string name="install_apps_title">Ek uygulamalar</string>
     <string name="setup_euicc">eSIM kur</string>
     <string name="euicc_summary">Ayrıca aygıtınıza bir eSIM ekleyebilirsiniz.</string>
     <string name="reboot">Yeniden başlat</string>
@@ -17,4 +13,5 @@
     <string name="microg_description2">microG, <b>Google Play hizmetleri</b> (ve ilgili yazılımlar) için açık kaynaklı bir alternatiftir, ancak yalnızca yararlı kısımları içerir. Play hizmetlerinin aksine, microG\'de örneğin herhangi bir reklam veya konum takibi yoktur.</string>
     <string name="microg_defaults_switch_label">Anlık bildirim desteği</string>
     <string name="microg_defaults_summary">Uygulamaların Google\'a anlık bildirimler için kaydolmasına izin ver. Bu, aygıta özgü benzersiz tanımlayıcılar olmadan aygıtınızı Google hizmetlerine kaydeder. Bu özellik daha sonra microG ayarlarından etkinleştirilebilir, ancak daha önce kurulan bir uygulamanın düzgün çalışması için yeniden kurulması gerekecektir.</string>
+    <string name="setup_managed_profile_welcome_message">İş profilinizi ayarlayın</string>
 </resources>
