@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="waiting_for_apps">Veuillez patienter pendant que nous terminons la configuration de votre appareil.</string>
-    <string name="install_apps_title">Applications supplémentaires</string>
-    <string name="install_apps_subtitle"><b>Examinez les applications supplémentaires.</b> Vous pouvez également les installer ultérieurement.</string>
-    <string name="install_apps_select_all">Toutes les applications suivantes</string>
     <string name="microg_title">Services Google</string>
     <string name="reboot">Redémarrage</string>
     <string name="bootloader_warning_title">Avertissement de verrouillage du bootloader</string>

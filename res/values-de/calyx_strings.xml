@@ -2,10 +2,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_description">Dadurch können Apps wie <b>Google Maps, YouTube und Mitfahrgelegenheitservices</b> unter CalyxOS ausgeführt werden. Deaktiviere diese Option, wenn du keine Apps ausführen möchtest, für die Google-Dienste erforderlich sind. Du kannst es später nicht mehr aktivieren.</string>
     <string name="microg_title">Google-Services</string>
-    <string name="waiting_for_apps">Bitte warten, bis wir die Einrichtung deines Geräts abgeschlossen haben.</string>
-    <string name="install_apps_select_all">Alle folgenden Apps</string>
-    <string name="install_apps_subtitle"><b>Überprüfe zusätzliche Apps.</b> Du kannst sie auch später installieren.</string>
-    <string name="install_apps_title">Zusätzliche Apps</string>
     <string name="setup_euicc">eSIM einrichten</string>
     <string name="euicc_summary">Du kannst auch eine eSIM zu deinem Gerät hinzufügen.</string>
     <string name="reboot">Neustart</string>
@@ -17,4 +13,5 @@
     <string name="microg_switch_label2">Kompatibilität mit Google-Diensten</string>
     <string name="microg_defaults_switch_label">Unterstützung für Push-Benachrichtigungen</string>
     <string name="microg_defaults_summary">Erlaube Apps, sich für Push-Benachrichtigungen bei Google zu registrieren. Dadurch wird dein Gerät bei Google-Diensten registriert, ohne dass gerätespezifische eindeutige Kennungen verwendet werden. Dies kann später in den microG-Einstellungen aktiviert werden, allerdings müssen alle zuvor eingerichteten Apps neu installiert werden, damit sie richtig funktionieren.</string>
+    <string name="setup_managed_profile_welcome_message">Richte dein Arbeitsprofil ein</string>
 </resources>
