@@ -2,10 +2,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_description">Toto umožňuje aplikacím jako jsou <b>Google mapy, Youtube a aplikacím ke společné jízdě</b> fungovat na CalyxOS. Tuto možnost vypněte, pokud nemáte v plánu používat aplikace vyžadující služby Google. Toto nastavení nebude později možné zapnout.</string>
     <string name="microg_title">Služby Google</string>
-    <string name="waiting_for_apps">Počkejte prosím, než dokončíme přípravu vašeho zařízení.</string>
-    <string name="install_apps_select_all">Všechny následující aplikace</string>
-    <string name="install_apps_subtitle"><b>Projděte si další aplikace</b> Můžete je nainstalovat i později.</string>
-    <string name="install_apps_title">Další aplikace</string>
     <string name="euicc_summary">Do zařízení můžete také přidat kartu eSIM.</string>
     <string name="setup_euicc">Nastavit eSIM</string>
     <string name="bootloader_warning_summary">Bootloader tohoto zařízení je momentálně odemknutý. Prosím, zamkněte bootloader z počítače. Pro více informací navštivte <a href="https://calyxos.org/lock">calyxos.org/lock</a>.</string>
@@ -17,4 +13,5 @@
     <string name="microg_defaults_summary">Povolit aplikacím registrovat se pro push oznámení u společnosti Google. Tímto se vaše zařízení zaregistruje do služeb Google bez jedinečných identifikátorů specifických pro zařízení. Tuto funkci lze povolit později v nastavení microG, avšak bude nutné znovu nainstalovat všechny dříve nastavené aplikace k jejich správnému fungování.</string>
     <string name="microg_switch_label2">Kompatibilita se službami Google</string>
     <string name="microg_defaults_switch_label">Podpora push oznámení</string>
+    <string name="setup_managed_profile_welcome_message">Nastavení pracovního profilu</string>
 </resources>

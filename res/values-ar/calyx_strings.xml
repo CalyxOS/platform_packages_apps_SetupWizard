@@ -2,10 +2,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_description">هذا يسمح لتطبيقات مثل<b>خرائط جوجل , يوتيوب , ride بإستخدام خدمات المشاركة</b>للعمل علي نظام Calyx. قم بتعطيل هذا الاختيار إذا كنت لا تخطط لإستخدام التطبيقات التي تحتاج الي خدمات جوجل. لن تتمكن من تفعيل هذا الاختيار فيما بعد.</string>
     <string name="microg_title">خدمات Google</string>
-    <string name="waiting_for_apps">يرجى الانتظار حتى ننتهي إعداد جهازك.</string>
-    <string name="install_apps_select_all">جميع التطبيقات التالية</string>
-    <string name="install_apps_subtitle"><b>راجع التطبيقات اﻹضافية.</b> يمكنك تثبيتهم لاحقًا أيضًا.</string>
-    <string name="install_apps_title">التطبيقات الإضافية</string>
     <string name="bootloader_warning_title">تحذير قُفْل Bootloader</string>
     <string name="bootloader_warning_summary">محمل الإقلاع لهذا الجهاز غير مغلق حاليًا. الرجاء الأغلاق محمل الإقلاع من جهاز الحاسوب. تفضل بزيارة <a href="https://calyxos.org/lock"> calyxos.org/lock </a> لمزيد من المعلومات.</string>
     <string name="euicc_summary">يمكنك أيضًا إضافة eSIM إلى جهازك.</string>

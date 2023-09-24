@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="setup_euicc">eSIM 설정</string>
-    <string name="install_apps_select_all">모든 앱</string>
-    <string name="install_apps_title">추가적인 앱</string>
-    <string name="waiting_for_apps">기기 설정을 끝내는 동안 잠시 기다려주세요.</string>
-    <string name="install_apps_subtitle"><b>추가적으로 설치할 앱을 확인하세요.</b> 나중에 설치할 수 있습니다.</string>
     <string name="microg_description">이것은 CalyxOS에서 <b>Google Maps, Youtube</b>와 같은 앱을 실행 시킬 수 있도록 합니다. 구글 서비스가 필요한 앱을 사용하지 않는다면 비활성화 하세요. 이것을 나중에 활성화 할 수 없습니다.</string>
     <string name="euicc_summary">기기에 eSIM을 추가할 수 있습니다.</string>
     <string name="microg_title">구글 서비스</string>
