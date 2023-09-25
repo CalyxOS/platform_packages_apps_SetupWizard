@@ -16,6 +16,29 @@
       "message": "safer:\nwifi \u0026 bt: 5 minutes\nreboot: 24 hours",
       "revId": "e89f958d1d362787fb3601d477b23e0d55db325a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b71ed346_aa52ed76",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-09-25T19:56:48Z",
+      "side": 1,
+      "message": "safer:\nwifi \u0026 bt: 5 minutes\nreboot: 24 hours",
+      "range": {
+        "startLine": 120,
+        "startChar": 0,
+        "endLine": 127,
+        "endChar": 5
+      },
+      "revId": "e89f958d1d362787fb3601d477b23e0d55db325a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
