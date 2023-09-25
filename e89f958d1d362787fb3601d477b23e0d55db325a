@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6030a95_40df074a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 26
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-09-25T19:56:16Z",
+      "side": 1,
+      "message": "safer:\nwifi \u0026 bt: 5 minutes\nreboot: 24 hours",
+      "revId": "e89f958d1d362787fb3601d477b23e0d55db325a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
