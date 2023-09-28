@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0720f382_304321a1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-28T21:31:27Z",
+      "side": 1,
+      "message": "Updated microG has been shipped. One blocker still remains, making unifiednlp optional.\n\nWe\u0027ve got the plumbing for that in microG already, so it should be just a few lines in SetupWizard. In theory, at least.",
+      "parentUuid": "6b7e83bb_ba5c2b28",
+      "revId": "8cffa89c7d1cf4ba62444e7316aba51b80ccf875",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "79bb31fb_385fe569",
         "filename": "res/values/calyx_strings.xml",
         "patchSetId": 3
