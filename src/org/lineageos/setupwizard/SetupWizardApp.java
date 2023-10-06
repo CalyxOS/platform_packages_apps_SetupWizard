@@ -78,10 +78,6 @@ public class SetupWizardApp extends Application {
     public static final String KEY_DETECT_CAPTIVE_PORTAL = "captive_portal_detection_enabled";
 
     public static final String AURORA_SERVICES_PACKAGE = "com.aurora.services";
-    public static final String FDROID_PACKAGE = "org.fdroid.fdroid";
-    public static final String FDROID_UPDATEJOBSERVICE_CLASS = ".UpdateJobService";
-    // Must match F-Droid's UpdateService JOB_ID
-    public static final int FDROID_UPDATE_JOB_ID = 0xfedcba;
 
     public static final String NAVIGATION_OPTION_KEY = "navigation_option";
 
@@ -128,7 +124,6 @@ public class SetupWizardApp extends Application {
             } catch (Exception e) {}
         }
         mHandler.postDelayed(mRadioTimeoutRunnable, SetupWizardApp.RADIO_READY_TIMEOUT);
-        scheduleIndexUpdateJob();
         // If the bootloader is locked, and OEM unlocking is allowed, turn it off
         if (SetupWizardUtils.isOwner()
                 && !SetupWizardUtils.isBootloaderUnlocked(this)
@@ -170,13 +165,5 @@ public class SetupWizardApp extends Application {
 
     public Bundle getSettingsBundle() {
         return mSettingsBundle;
-    }
-
-    public int scheduleIndexUpdateJob() {
-        return getSystemService(JobScheduler.class).scheduleAsPackage(new JobInfo.Builder(
-                FDROID_UPDATE_JOB_ID,
-                new ComponentName(FDROID_PACKAGE, FDROID_PACKAGE + FDROID_UPDATEJOBSERVICE_CLASS))
-                .setOverrideDeadline(0)
-                .build(), FDROID_PACKAGE, UserHandle.myUserId(), TAG);
     }
 }
