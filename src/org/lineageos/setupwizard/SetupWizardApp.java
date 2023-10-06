@@ -128,7 +128,7 @@ public class SetupWizardApp extends Application {
             } catch (Exception e) {}
         }
         mHandler.postDelayed(mRadioTimeoutRunnable, SetupWizardApp.RADIO_READY_TIMEOUT);
-        scheduleIndexUpdateJob();
+        //scheduleIndexUpdateJob();
         // If the bootloader is locked, and OEM unlocking is allowed, turn it off
         if (SetupWizardUtils.isOwner()
                 && !SetupWizardUtils.isBootloaderUnlocked(this)
