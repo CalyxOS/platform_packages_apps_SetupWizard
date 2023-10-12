@@ -46,6 +46,30 @@
       },
       "revId": "52413bcb76173a8ce6e466155befadab138bda17",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f150811e_d018519e",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 28
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-10-12T02:08:07Z",
+      "side": 1,
+      "message": "Per our discussion and following the example of AOSP in case of failure in provisioning a profile during setup, best course of action may be to factory reset.",
+      "parentUuid": "d154d178_610e223f",
+      "range": {
+        "startLine": 79,
+        "startChar": 16,
+        "endLine": 80,
+        "endChar": 66
+      },
+      "revId": "52413bcb76173a8ce6e466155befadab138bda17",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
