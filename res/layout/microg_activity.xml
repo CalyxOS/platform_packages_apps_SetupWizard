@@ -44,17 +44,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TextView
-                        android:drawableStart="@drawable/ic_playstore"
-                        android:drawablePadding="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="16dp"
-                        android:text="@string/microg_switch_label2"
-                        android:layout_weight="1"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
                     <LinearLayout
                         android:id="@+id/switchLayout"
                         android:layout_width="match_parent"
@@ -65,11 +54,15 @@
                         android:paddingBottom="16dp">
 
                         <TextView
+                            android:drawableStart="@drawable/ic_playstore"
+                            android:drawablePadding="10dp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:paddingTop="16dp"
+                            android:text="@string/microg_switch_label2"
                             android:layout_weight="1"
-                            android:text="@string/microg_description"
-                            android:textSize="15sp" />
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <Switch
                             android:id="@+id/enableSwitch"
@@ -80,30 +73,29 @@
                     </LinearLayout>
 
                     <TextView
-                        android:drawableStart="@drawable/ic_notification"
-                        android:drawablePadding="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingTop="16dp"
-                        android:text="@string/microg_defaults_switch_label"
                         android:layout_weight="1"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:text="@string/microg_description"
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="?android:attr/selectableItemBackground"
                         android:orientation="horizontal"
                         android:paddingTop="16dp"
                         android:paddingBottom="16dp">
 
                         <TextView
+                            android:drawableStart="@drawable/ic_notification"
+                            android:drawablePadding="10dp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:paddingTop="16dp"
+                            android:text="@string/microg_defaults_switch_label"
                             android:layout_weight="1"
-                            android:text="@string/microg_defaults_summary"
-                            android:textSize="15sp" />
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <Switch
                             android:id="@+id/enableDefaults"
@@ -112,6 +104,14 @@
                             android:checked="true" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/microg_defaults_summary"
+                        android:textSize="15sp" />
+
                 </LinearLayout>
             </ScrollView>
         </FrameLayout>
