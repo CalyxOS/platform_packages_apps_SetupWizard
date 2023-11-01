@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "200bb304_6ca443c5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T16:11:49Z",
+      "side": 1,
+      "message": "```\npackages/apps/SetupWizard/res/layout/list_item_app.xml:16: error: resource dimen/data_switch_margin_right (aka org.lineageos.setupwizard:dimen/data_switch_margin_right) not found.\npackages/apps/SetupWizard/res/layout/welcome_activity.xml:118: error: resource dimen/summary_margin_bottom (aka org.lineageos.setupwizard:dimen/summary_margin_bottom) not found.\npackages/apps/SetupWizard/res/layout/welcome_activity.xml:127: error: resource dimen/summary_margin_bottom (aka org.lineageos.setupwizard:dimen/summary_margin_bottom) not found.\n```",
+      "revId": "295843b9c0d3ad39d65e0a5fe6fcbffe58a6878f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
