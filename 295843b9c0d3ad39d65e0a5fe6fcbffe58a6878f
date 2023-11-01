@@ -34,6 +34,23 @@
       "parentUuid": "200bb304_6ca443c5",
       "revId": "295843b9c0d3ad39d65e0a5fe6fcbffe58a6878f",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7679b361_78d6e17d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-11-01T19:02:47Z",
+      "side": 1,
+      "message": "Works with the following 2 commits",
+      "revId": "295843b9c0d3ad39d65e0a5fe6fcbffe58a6878f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
