@@ -121,7 +121,7 @@
                         android:layout_height="wrap_content"
                         style="@style/SudItemTitle.GlifDescription"
                         android:textSize="16sp"
-                        android:layout_marginBottom="@dimen/summary_margin_bottom"
+                        android:layout_marginBottom="@dimen/welcome_status_margin_bottom"
                         android:paddingRight="@dimen/location_text_margin_right" />
 
                     <TextView
@@ -130,7 +130,7 @@
                         android:layout_height="wrap_content"
                         style="@style/SudItemTitle.GlifDescription"
                         android:textSize="16sp"
-                        android:layout_marginBottom="@dimen/summary_margin_bottom"
+                        android:layout_marginBottom="@dimen/welcome_status_margin_bottom"
                         android:paddingRight="@dimen/location_text_margin_right" />
 
                     <Button
