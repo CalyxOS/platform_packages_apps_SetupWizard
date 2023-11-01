@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
- * Copyright (C) 2017-2021 The LineageOS Project
+ * Copyright (C) 2017-2023 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,6 +38,8 @@ import org.lineageos.setupwizard.util.SetupWizardUtils;
 
 import java.util.concurrent.TimeUnit;
 
+import org.lineageos.setupwizard.util.SetupWizardUtils;
+
 public class WelcomeActivity extends BaseSetupWizardActivity {
 
     public static final String TAG = WelcomeActivity.class.getSimpleName();
@@ -54,16 +56,22 @@ public class WelcomeActivity extends BaseSetupWizardActivity {
         mBrandLogoView = findViewById(R.id.brand_logo);
         mPage = findViewById(R.id.page);
         setNextText(R.string.start);
-        setSkipText(R.string.emergency_call);
         Button startButton = findViewById(R.id.start);
         Button emergButton = findViewById(R.id.emerg_dialer);
         startButton.setOnClickListener(view -> onNextPressed());
-        emergButton.setOnClickListener(view -> startEmergencyDialer());
         findViewById(R.id.launch_accessibility)
                 .setOnClickListener(view -> startAccessibilitySettings());
 
         FooterButtonStyleUtils.applyPrimaryButtonPartnerResource(this, startButton, true);
-        FooterButtonStyleUtils.applySecondaryButtonPartnerResource(this, emergButton, true);
+
+        if (SetupWizardUtils.hasTelephony(this)) {
+            setSkipText(R.string.emergency_call);
+            emergButton.setOnClickListener(view -> startEmergencyDialer());
+
+            FooterButtonStyleUtils.applySecondaryButtonPartnerResource(this, emergButton, true);
+        } else {
+            emergButton.setVisibility(View.GONE);
+        }
 
         TextView welcomeTitle = findViewById(R.id.welcome_title);
         if (SetupWizardUtils.isManagedProfile(this)) {
