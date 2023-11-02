@@ -42,6 +42,7 @@ public class MicroGActivity extends BaseSetupWizardActivity {
     private PackageManager pm;
     private Switch enableSwitch;
     private Switch enablePush;
+    private Switch enableLocation;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -52,9 +53,12 @@ public class MicroGActivity extends BaseSetupWizardActivity {
 
         enableSwitch = findViewById(R.id.enableSwitch);
         enablePush = findViewById(R.id.enablePush);
+        enableLocation = findViewById(R.id.enableLocation);
         enableSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             enablePush.setEnabled(isChecked);
             enablePush.setChecked(isChecked);
+            enableLocation.setEnabled(isChecked);
+            enableLocation.setChecked(isChecked);
         });
 
         pm = getPackageManager();
@@ -80,12 +84,17 @@ public class MicroGActivity extends BaseSetupWizardActivity {
         for (String packageId : MICROG_PACKAGES) {
             setAppEnabled(packageId, enableSwitch.isChecked());
         }
-        if (enablePush.isEnabled()) {
+        if (enableSwitch.isChecked()) {
             Intent intent = new Intent();
             intent.setClassName("com.google.android.gms",
                     "org.microg.gms.provision.ProvisionService");
             intent.putExtra("checkin_enabled", enablePush.isChecked());
             intent.putExtra("gcm_enabled", enablePush.isChecked());
+            intent.putExtra("wifi_mls", enableLocation.isChecked());
+            intent.putExtra("cell_mls", enableLocation.isChecked());
+            intent.putExtra("wifi_learning", enableLocation.isChecked());
+            intent.putExtra("cell_learning", enableLocation.isChecked());
+            intent.putExtra("nominatim_enabled", enableLocation.isChecked());
             intent.putExtra("safetynet_enabled", false);
             startService(intent);
         }
