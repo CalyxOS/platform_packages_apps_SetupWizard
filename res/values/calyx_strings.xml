@@ -22,6 +22,8 @@
     <string name="microg_description">This allows apps such as <b>Google Maps, Youtube and ride sharing services</b> to run on CalyxOS. Disable this if you don\'t plan on running apps that require Google services. You will not be able to enable it later.</string>
     <string name="microg_defaults_switch_label">Push notification support</string>
     <string name="microg_defaults_summary">Allow apps to register for push notifications with Google. This registers your device to Google services, without any device-specific unique identifiers. This can be enabled later from microG Settings, however any apps setup earlier will need to be re-installed to work properly.</string>
+    <string name="microg_location_switch_label">Network location</string>
+    <string name="microg_location_summary">Improve location services by querying Mozilla Location Services with nearby Wi-Fi and cellular networks, using Nominatim for address lookups, and remembering GPS coordinates of nearby networks. You can customize these options more granularly in microG Settings later.</string>
 
     <!-- Toast show on skipping SetupWizard -->
     <string name="skip_setupwizard" translatable="false">Skipping setup wizard</string>
