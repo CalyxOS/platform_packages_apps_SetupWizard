@@ -42,6 +42,7 @@ public class MicroGActivity extends BaseSetupWizardActivity {
     private PackageManager pm;
     private Switch enableSwitch;
     private Switch enableDefaults;
+    private Switch enableLocation;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -52,9 +53,12 @@ public class MicroGActivity extends BaseSetupWizardActivity {
 
         enableSwitch = findViewById(R.id.enableSwitch);
         enableDefaults = findViewById(R.id.enableDefaults);
+        enableLocation = findViewById(R.id.enableLocation);
         enableSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             enableDefaults.setEnabled(isChecked);
             enableDefaults.setChecked(isChecked);
+            enableLocation.setEnabled(isChecked);
+            enableLocation.setChecked(isChecked);
         });
 
         pm = getPackageManager();
@@ -86,6 +90,11 @@ public class MicroGActivity extends BaseSetupWizardActivity {
                     "org.microg.gms.provision.ProvisionService");
             intent.putExtra("checkin_enabled", enableDefaults.isChecked());
             intent.putExtra("gcm_enabled", enableDefaults.isChecked());
+            intent.putExtra("wifi_mls", enableLocation.isChecked());
+            intent.putExtra("cell_mls", enableLocation.isChecked());
+            intent.putExtra("wifi_learning", enableLocation.isChecked());
+            intent.putExtra("cell_learning", enableLocation.isChecked());
+            intent.putExtra("nominatim_enabled", enableLocation.isChecked());
             intent.putExtra("safetynet_enabled", false);
             startService(intent);
         }
