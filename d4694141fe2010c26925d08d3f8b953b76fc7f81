@@ -55,6 +55,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "5cc689b8_04aa8ab4",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-03T13:53:33Z",
+      "side": 1,
+      "message": "Agreed on all points. Maybe when SUW is cleaned up a bit, it will be easier to present more granular options.",
+      "parentUuid": "95a65159_2349f7c1",
+      "revId": "d4694141fe2010c26925d08d3f8b953b76fc7f81",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "a34e9f8d_6c9ade85",
         "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
         "patchSetId": 2
@@ -66,6 +84,24 @@
       "writtenOn": "2023-11-03T10:31:55Z",
       "side": 1,
       "message": "Not exactly location related, but again, ok for now, too many toggles is also bad, and so would be blocking a useful toggle for a perfect solution.",
+      "revId": "d4694141fe2010c26925d08d3f8b953b76fc7f81",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d54d3a71_9df38c67",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-03T13:53:33Z",
+      "side": 1,
+      "message": "Yeah, and I know what the geocoder does in theory, but I have no idea how to even test that it works at all, like which app to use to show that it\u0027s working or isn\u0027t working, but that\u0027s another story. Same as above, maybe we can make it more granular later.",
+      "parentUuid": "a34e9f8d_6c9ade85",
       "revId": "d4694141fe2010c26925d08d3f8b953b76fc7f81",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
