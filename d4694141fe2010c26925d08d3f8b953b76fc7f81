@@ -16,6 +16,24 @@
       "message": "\"location services\" kind of redundant next to \"Mozilla Location Services\" :/",
       "revId": "d4694141fe2010c26925d08d3f8b953b76fc7f81",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "14420104_bcfdc858",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-03T07:53:10Z",
+      "side": 1,
+      "message": "I was going to say, how about\n\nImprove location by querying ...\n\nBut that doesn\u0027t fit.\n\nMaybe\n\nImprove location services by querying MLS (Mozilla Location Services) ...",
+      "parentUuid": "6302bb33_da3df179",
+      "revId": "d4694141fe2010c26925d08d3f8b953b76fc7f81",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
