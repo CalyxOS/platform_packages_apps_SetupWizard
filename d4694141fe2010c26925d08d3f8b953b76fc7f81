@@ -34,6 +34,40 @@
       "parentUuid": "6302bb33_da3df179",
       "revId": "d4694141fe2010c26925d08d3f8b953b76fc7f81",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95a65159_2349f7c1",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-03T10:31:55Z",
+      "side": 1,
+      "message": "Ideally the above is what we toggle, and the below stay on, but that\u0027ll lead to additional complication right now, and one more toggle might be too much.\n\nWe can always revisit, but I do imagine that even those who don\u0027t want mozilla may want the on-device bits stay on.",
+      "revId": "d4694141fe2010c26925d08d3f8b953b76fc7f81",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a34e9f8d_6c9ade85",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-03T10:31:55Z",
+      "side": 1,
+      "message": "Not exactly location related, but again, ok for now, too many toggles is also bad, and so would be blocking a useful toggle for a perfect solution.",
+      "revId": "d4694141fe2010c26925d08d3f8b953b76fc7f81",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
