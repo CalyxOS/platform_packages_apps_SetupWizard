@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e63a452f_eff1733c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-11-09T19:26:54Z",
+      "side": 1,
+      "message": "Haven\u0027t reproduced this crash since applying this patch. Was reproduced while testing garlic-level before this patch",
+      "revId": "c192afa1e3eb9b3be43a2b440dd175159222ebeb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
