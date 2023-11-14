@@ -33,6 +33,23 @@
       "message": "Should consider sending upstream",
       "revId": "c192afa1e3eb9b3be43a2b440dd175159222ebeb",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5ae86b8_0a8bc49a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-14T20:08:53Z",
+      "side": 1,
+      "message": "Weird... This doesn\u0027t look like it should have any impact at all. But if it has no impact, that also means it doesn\u0027t hurt!",
+      "revId": "c192afa1e3eb9b3be43a2b440dd175159222ebeb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
