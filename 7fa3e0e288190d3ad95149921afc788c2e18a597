@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e98515b1_8f5f08c1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-14T19:47:59Z",
+      "side": 1,
+      "message": "This change aligns the toggle titles (e.g. \"Google Services compatibility\"), their icons, and their toggles themselves on a single line. The description is below, and it now has more width to work with since it is not squished by the toggle, which was previously aligned with the description. It looks much better and gives the descriptions more room.",
+      "revId": "7fa3e0e288190d3ad95149921afc788c2e18a597",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
