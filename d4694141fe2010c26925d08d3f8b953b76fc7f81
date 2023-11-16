@@ -56,6 +56,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "23656036_7eec750a",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-16T14:51:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "38578e01_da557659",
+      "revId": "d4694141fe2010c26925d08d3f8b953b76fc7f81",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "95a65159_2349f7c1",
         "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
         "patchSetId": 2
