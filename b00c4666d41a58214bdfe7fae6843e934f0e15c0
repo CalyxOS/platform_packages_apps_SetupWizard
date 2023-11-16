@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a9a7782_d1a82c53",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-16T17:39:52Z",
+      "side": 1,
+      "message": "This change works independently. It doesn\u0027t need any of the other microg-defaults changes.",
+      "revId": "b00c4666d41a58214bdfe7fae6843e934f0e15c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
