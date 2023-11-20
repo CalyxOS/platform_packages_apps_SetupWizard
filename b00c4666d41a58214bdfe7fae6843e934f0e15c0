@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6f2627ee_be0bf53b",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-20T14:32:00Z",
+      "side": 1,
+      "message": "For extra confusion, this isn\u0027t checking if the checkbox for push notifications is checked; it\u0027s checking if it\u0027s enabled. And it\u0027s only enabled if the primary enableSwitch is checked. So, this is basically the same as enableSwitch.isChecked() and should be replaced for clarity.",
+      "parentUuid": "208dc7c1_78c99e1a",
+      "revId": "b00c4666d41a58214bdfe7fae6843e934f0e15c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c00f8968_4d448175",
         "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
         "patchSetId": 4
@@ -66,6 +84,24 @@
       "writtenOn": "2023-11-20T14:22:18Z",
       "side": 1,
       "message": "Unrelated, but we also want to always disable this.",
+      "revId": "b00c4666d41a58214bdfe7fae6843e934f0e15c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96fd2e61_9c4037d6",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-20T14:32:00Z",
+      "side": 1,
+      "message": "It is (see other comment) it\u0027s only not touched if microG itself is disabled.",
+      "parentUuid": "c00f8968_4d448175",
       "revId": "b00c4666d41a58214bdfe7fae6843e934f0e15c0",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
