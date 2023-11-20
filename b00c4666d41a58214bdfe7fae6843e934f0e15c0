@@ -33,6 +33,41 @@
       "message": "`enableLocation` is independent of `enableDefaults`, right?",
       "revId": "b00c4666d41a58214bdfe7fae6843e934f0e15c0",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "208dc7c1_78c99e1a",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-20T14:22:18Z",
+      "side": 1,
+      "message": "Yep!\n\nThe naming is confusing.\n\nenableSwitch \u003d\u003d first toggle.\nenableDefaults \u003d\u003d push notification\nenableLocation \u003d\u003d this new toggle.",
+      "parentUuid": "10071b5a_e0d5932d",
+      "revId": "b00c4666d41a58214bdfe7fae6843e934f0e15c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c00f8968_4d448175",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-20T14:22:18Z",
+      "side": 1,
+      "message": "Unrelated, but we also want to always disable this.",
+      "revId": "b00c4666d41a58214bdfe7fae6843e934f0e15c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
