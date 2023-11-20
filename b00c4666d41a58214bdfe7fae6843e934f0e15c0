@@ -122,6 +122,24 @@
       "parentUuid": "c00f8968_4d448175",
       "revId": "b00c4666d41a58214bdfe7fae6843e934f0e15c0",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03c16218_805ea328",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-20T14:39:19Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "96fd2e61_9c4037d6",
+      "revId": "b00c4666d41a58214bdfe7fae6843e934f0e15c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
