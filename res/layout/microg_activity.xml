@@ -98,7 +98,7 @@
                             android:textStyle="bold" />
 
                         <Switch
-                            android:id="@+id/enableDefaults"
+                            android:id="@+id/enablePush"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:checked="true" />

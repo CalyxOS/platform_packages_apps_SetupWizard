@@ -41,7 +41,7 @@ public class MicroGActivity extends BaseSetupWizardActivity {
 
     private PackageManager pm;
     private Switch enableSwitch;
-    private Switch enableDefaults;
+    private Switch enablePush;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,10 +51,10 @@ public class MicroGActivity extends BaseSetupWizardActivity {
         getGlifLayout().setDescriptionText(getString(R.string.microg_description2));
 
         enableSwitch = findViewById(R.id.enableSwitch);
-        enableDefaults = findViewById(R.id.enableDefaults);
+        enablePush = findViewById(R.id.enablePush);
         enableSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            enableDefaults.setEnabled(isChecked);
-            enableDefaults.setChecked(isChecked);
+            enablePush.setEnabled(isChecked);
+            enablePush.setChecked(isChecked);
         });
 
         pm = getPackageManager();
@@ -80,12 +80,12 @@ public class MicroGActivity extends BaseSetupWizardActivity {
         for (String packageId : MICROG_PACKAGES) {
             setAppEnabled(packageId, enableSwitch.isChecked());
         }
-        if (enableDefaults.isEnabled()) {
+        if (enablePush.isEnabled()) {
             Intent intent = new Intent();
             intent.setClassName("com.google.android.gms",
                     "org.microg.gms.provision.ProvisionService");
-            intent.putExtra("checkin_enabled", enableDefaults.isChecked());
-            intent.putExtra("gcm_enabled", enableDefaults.isChecked());
+            intent.putExtra("checkin_enabled", enablePush.isChecked());
+            intent.putExtra("gcm_enabled", enablePush.isChecked());
             intent.putExtra("safetynet_enabled", false);
             startService(intent);
         }
