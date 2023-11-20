@@ -16,6 +16,23 @@
       "message": "This change works independently. It doesn\u0027t need any of the other microg-defaults changes.",
       "revId": "b00c4666d41a58214bdfe7fae6843e934f0e15c0",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "10071b5a_e0d5932d",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-11-20T10:47:21Z",
+      "side": 1,
+      "message": "`enableLocation` is independent of `enableDefaults`, right?",
+      "revId": "b00c4666d41a58214bdfe7fae6843e934f0e15c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
