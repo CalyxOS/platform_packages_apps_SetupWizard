@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b9e0dd06_99b237eb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-22T16:18:24Z",
+      "side": 1,
+      "message": "Not a blocker: There\u0027s also the dedicated location page, which currently controls Location as a whole, and also has an additional toggle for AGPS.\n\nSomething to take into account later.",
+      "revId": "e80a5c66850702f4e47935b117d54eb4bf3d56a6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
