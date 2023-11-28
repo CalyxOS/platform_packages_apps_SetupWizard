@@ -16,6 +16,24 @@
       "message": "Permissions like this (but there are so many others already) remind me of the value of \"Disable SetupWizard app entirely when done\" (I5cb64603)",
       "revId": "2c66bdf23ef6a3060654dfa48b5678981a11c7eb",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f038cbb2_e0c62e6f",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-28T22:28:39Z",
+      "side": 1,
+      "message": "Let\u0027s get that in too 😊",
+      "parentUuid": "1b5bf21e_c0a17690",
+      "revId": "2c66bdf23ef6a3060654dfa48b5678981a11c7eb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
