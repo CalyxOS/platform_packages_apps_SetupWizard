@@ -33,6 +33,24 @@
       "message": "Maybe we can skip the NetworkMonitor change, since it\u0027s just going to fail unless F-Droid Basic is already installed somehow, which it almost certainly won\u0027t be.",
       "revId": "f4e2382dedddd297b53100f729cea973d1450b7e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "47e53a00_46bd6754",
+        "filename": "src/org/lineageos/setupwizard/util/NetworkMonitor.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-28T21:43:28Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "020ed0d1_6f7e482e",
+      "revId": "f4e2382dedddd297b53100f729cea973d1450b7e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
