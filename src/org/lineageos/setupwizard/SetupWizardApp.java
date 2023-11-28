@@ -13,6 +13,8 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.Process;
+import android.permission.PermissionManager;
 import android.provider.Settings;
 import android.service.oemlock.OemLockManager;
 import android.util.Log;
@@ -127,6 +129,13 @@ public class SetupWizardApp extends Application {
                 continue;
             } catch (Exception e) {
                 Log.e(TAG, "Failed to grant install unknown apps permission to " + packageName, e);
+            }
+            try {
+                getSystemService(PermissionManager.class).grantRuntimePermission(packageName,
+                        android.Manifest.permission.POST_NOTIFICATIONS,
+                        Process.myUserHandle());
+            } catch (Exception e) {
+                Log.e(TAG, "Failed to grant post notifications permission to " + packageName, e);
             }
         }
     }
