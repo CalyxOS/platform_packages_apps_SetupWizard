@@ -36,6 +36,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "10676f80_c86cc714",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-28T21:53:26Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "36accf6d_1dca04d7",
+      "revId": "171a45d93b8ba1cfad7063dff959c97066d0db11",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "44ef04c0_c819286c",
@@ -49,6 +67,24 @@
       "writtenOn": "2023-11-28T21:44:16Z",
       "side": 1,
       "message": "Nit: FDROID_BASIC_PACKAGE?",
+      "revId": "171a45d93b8ba1cfad7063dff959c97066d0db11",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e55a33d5_53fb7f3c",
+        "filename": "src/org/lineageos/setupwizard/SetupWizardApp.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-28T21:53:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "44ef04c0_c819286c",
       "revId": "171a45d93b8ba1cfad7063dff959c97066d0db11",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
