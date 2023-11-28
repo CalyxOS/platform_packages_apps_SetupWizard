@@ -105,6 +105,7 @@ public class FinishActivity extends BaseSetupWizardActivity {
     }
 
     private void startFinishSequence() {
+        mSetupWizardApp.provisionDefaultUserAppPermissions();
         Intent i = new Intent(ACTION_SETUP_COMPLETE);
         i.setPackage(getPackageName());
         sendBroadcastAsUser(i, getCallingUserHandle(), FINISH_SETUP);
