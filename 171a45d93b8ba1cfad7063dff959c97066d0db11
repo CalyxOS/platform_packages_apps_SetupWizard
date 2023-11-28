@@ -34,6 +34,23 @@
       "parentUuid": "44f62e1f_63743011",
       "revId": "171a45d93b8ba1cfad7063dff959c97066d0db11",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44ef04c0_c819286c",
+        "filename": "src/org/lineageos/setupwizard/SetupWizardApp.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-28T21:44:16Z",
+      "side": 1,
+      "message": "Nit: FDROID_BASIC_PACKAGE?",
+      "revId": "171a45d93b8ba1cfad7063dff959c97066d0db11",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
