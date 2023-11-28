@@ -16,6 +16,24 @@
       "message": "We do this when the user finishes setup. That\u0027s not guaranteed to happen for work profiles... Does it matter enough to think about how to fix it now? Technically even if we did it after Lupin, they would still have to tap Next I think, which isn\u0027t guaranteed to happen either.\n\nThis might be a separate problem / can of worms, in which case feel free to Ack.",
       "revId": "da42dfb9d1e3e90361d01548ff73f0fa011e9153",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ba791b9d_0b1259e9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-28T22:04:18Z",
+      "side": 1,
+      "message": "Even for work profile, users are going to press next on the Lupin screen, and also the last screen.\n\nSure it isn\u0027t guaranteed to happen, but it likely will happen.",
+      "parentUuid": "5f295ca8_58ea6896",
+      "revId": "da42dfb9d1e3e90361d01548ff73f0fa011e9153",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
