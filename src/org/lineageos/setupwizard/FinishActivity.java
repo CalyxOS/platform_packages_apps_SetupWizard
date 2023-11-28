@@ -123,6 +123,8 @@ public class FinishActivity extends BaseSetupWizardActivity {
         filter.addAction(ACTION_FINISHED);
         registerReceiver(mIntentReceiver, filter, null, null);
 
+        mSetupWizardApp.provisionDefaultUserAppPermissions();
+
         Intent i = new Intent(ACTION_SETUP_COMPLETE);
         i.setPackage(getPackageName());
         sendBroadcastAsUser(i, getCallingUserHandle(), FINISH_SETUP);
