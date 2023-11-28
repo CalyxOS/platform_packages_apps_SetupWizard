@@ -16,6 +16,24 @@
       "message": "Not working for notifications",
       "revId": "171a45d93b8ba1cfad7063dff959c97066d0db11",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "36accf6d_1dca04d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-28T21:42:45Z",
+      "side": 1,
+      "message": "Can do that in a followup to unblock this I\u0027d say.",
+      "parentUuid": "44f62e1f_63743011",
+      "revId": "171a45d93b8ba1cfad7063dff959c97066d0db11",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
