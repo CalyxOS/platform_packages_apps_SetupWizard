@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "531213f0_3c7b83e2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-28T22:32:10Z",
+      "side": 1,
+      "message": "I wonder if we can do something simpler here, like just send it an Intent or something, as we do for Orbot in garlic-level.",
+      "parentUuid": "99d2ff29_0f32dbd7",
+      "revId": "f4e2382dedddd297b53100f729cea973d1450b7e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "020ed0d1_6f7e482e",
         "filename": "src/org/lineageos/setupwizard/util/NetworkMonitor.java",
         "patchSetId": 1
