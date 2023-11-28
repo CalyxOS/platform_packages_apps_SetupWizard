@@ -36,6 +36,8 @@ import android.os.UserHandle;
 import android.service.oemlock.OemLockManager;
 import android.util.Log;
 
+import java.util.List;
+
 import org.lineageos.setupwizard.util.NetworkMonitor;
 import org.lineageos.setupwizard.util.PhoneMonitor;
 import org.lineageos.setupwizard.util.SetupWizardUtils;
@@ -78,6 +80,10 @@ public class SetupWizardApp extends Application {
     public static final String KEY_DETECT_CAPTIVE_PORTAL = "captive_portal_detection_enabled";
 
     public static final String AURORA_SERVICES_PACKAGE = "com.aurora.services";
+    public static final String AURORA_STORE_PACKAGE = "com.aurora.store";
+    public static final String FDROID_PACKAGE = "org.fdroid.basic";
+    public static final List<String> PACKAGE_INSTALLERS =
+            List.of(FDROID_PACKAGE, AURORA_STORE_PACKAGE);
 
     public static final String NAVIGATION_OPTION_KEY = "navigation_option";
 
@@ -165,5 +171,34 @@ public class SetupWizardApp extends Application {
 
     public Bundle getSettingsBundle() {
         return mSettingsBundle;
+    }
+
+    public void provisionDefaultUserAppPermissions() {
+        for (String packageName : PACKAGE_INSTALLERS) {
+            if (LOGV) Log.v(TAG, "Provisioning default permissions for " + packageName + "...");
+            try {
+                getSystemService(AppOpsManager.class).setMode(
+                        AppOpsManager.OP_REQUEST_INSTALL_PACKAGES,
+                        getPackageManager().getPackageUid(packageName, 0),
+                        packageName,
+                        AppOpsManager.MODE_ALLOWED);
+            } catch (PackageManager.NameNotFoundException ignored) {
+                if (LOGV) Log.v(TAG, "Missing " + packageName + " for appops, skipping");
+                continue;
+            } catch (Exception e) {
+                Log.e(TAG, "Failed to grant install unknown apps permission to " + packageName, e);
+            }
+            try {
+                getSystemService(AppOpsManager.class).setMode(
+                        AppOpsManager.OP_POST_NOTIFICATION,
+                        getPackageManager().getPackageUid(packageName, 0),
+                        packageName,
+                        AppOpsManager.MODE_ALLOWED);
+            } catch (PackageManager.NameNotFoundException ignored) {
+                if (LOGV) Log.v(TAG, "Missing " + packageName + " for appops");
+            } catch (Exception e) {
+                Log.e(TAG, "Failed to grant post notifications permission to " + packageName, e);
+            }
+        }
     }
 }
