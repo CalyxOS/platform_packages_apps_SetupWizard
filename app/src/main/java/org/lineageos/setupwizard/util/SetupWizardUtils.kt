@@ -6,6 +6,7 @@
 
 package org.lineageos.setupwizard.util
 
+import android.Manifest
 import android.app.AppOpsManager
 import android.app.StatusBarManager
 import android.app.WallpaperManager
@@ -29,6 +30,7 @@ import android.os.ServiceManager
 import android.os.SystemProperties
 import android.os.UserHandle
 import android.os.UserManager
+import android.permission.PermissionManager
 import android.provider.Settings
 import android.service.oemlock.OemLockManager
 import android.service.persistentdata.PersistentDataBlockManager
@@ -356,6 +358,17 @@ object SetupWizardUtils {
                             )
                         }
                     }
+                }
+            runCatching {
+                    val permissionManager = context.getSystemService(PermissionManager::class.java)
+                    permissionManager?.grantRuntimePermission(
+                        packageName,
+                        Manifest.permission.POST_NOTIFICATIONS,
+                        context.user,
+                    )
+                }
+                .onFailure { e ->
+                    Log.e(TAG, "Failed to grant post notifications permission to $packageName", e)
                 }
         }
     }
