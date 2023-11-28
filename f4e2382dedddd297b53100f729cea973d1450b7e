@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ddb37ce0_e032aca6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-28T22:48:36Z",
+      "side": 1,
+      "message": "We could certainly send a MR to F-Droid to add code for this if needed.",
+      "parentUuid": "531213f0_3c7b83e2",
+      "revId": "f4e2382dedddd297b53100f729cea973d1450b7e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "020ed0d1_6f7e482e",
         "filename": "src/org/lineageos/setupwizard/util/NetworkMonitor.java",
         "patchSetId": 1
