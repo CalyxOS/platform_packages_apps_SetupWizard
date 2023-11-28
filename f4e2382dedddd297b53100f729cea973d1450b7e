@@ -51,6 +51,24 @@
       "parentUuid": "020ed0d1_6f7e482e",
       "revId": "f4e2382dedddd297b53100f729cea973d1450b7e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b53601d_f324d5c4",
+        "filename": "src/org/lineageos/setupwizard/util/NetworkMonitor.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-28T21:54:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "47e53a00_46bd6754",
+      "revId": "f4e2382dedddd297b53100f729cea973d1450b7e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
