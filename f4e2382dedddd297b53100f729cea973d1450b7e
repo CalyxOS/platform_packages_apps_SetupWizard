@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0689fe7b_f9008c7d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-28T21:41:20Z",
+      "side": 1,
+      "message": "Currently fails with:\n```\nW SetupWizardApp: Could not schedule F-Droid index update (is it installed?)\nW SetupWizardApp: java.lang.IllegalArgumentException: uid 1000 cannot schedule job in org.fdroid.basic\n```",
+      "revId": "f4e2382dedddd297b53100f729cea973d1450b7e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "020ed0d1_6f7e482e",
+        "filename": "src/org/lineageos/setupwizard/util/NetworkMonitor.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-28T21:41:20Z",
+      "side": 1,
+      "message": "Maybe we can skip the NetworkMonitor change, since it\u0027s just going to fail unless F-Droid Basic is already installed somehow, which it almost certainly won\u0027t be.",
+      "revId": "f4e2382dedddd297b53100f729cea973d1450b7e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
