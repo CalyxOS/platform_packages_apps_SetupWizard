@@ -6,6 +6,7 @@
 
 package org.lineageos.setupwizard.util
 
+import android.app.AppOpsManager
 import android.app.StatusBarManager
 import android.app.WallpaperManager
 import android.content.ComponentName
@@ -62,6 +63,11 @@ object SetupWizardUtils {
     private const val UPDATER_PACKAGE = "org.lineageos.updater"
 
     private const val PROP_BUILD_DATE = "ro.build.date.utc"
+
+    private const val AURORA_STORE_PACKAGE = "com.aurora.store"
+    private const val FDROID_BASIC_PACKAGE = "org.fdroid.basic"
+
+    private val PACKAGE_INSTALLERS = listOf(FDROID_BASIC_PACKAGE, AURORA_STORE_PACKAGE)
 
     fun getPrefs(context: Context): SharedPreferences =
         context.getSharedPreferences("SetupWizardPrefs", MODE_PRIVATE)
@@ -188,6 +194,7 @@ object SetupWizardUtils {
         }
 
         handleNavigationOption()
+        provisionDefaultUserAppPermissions(context)
         WallpaperManager.getInstance(context).forgetLoadedWallpaper()
         disableHome(context)
         enableStatusBar()
@@ -319,6 +326,37 @@ object SetupWizardUtils {
                     UserHandle.USER_CURRENT,
                 )
             }
+        }
+    }
+
+    private fun provisionDefaultUserAppPermissions(context: Context) {
+        for (packageName in PACKAGE_INSTALLERS) {
+            if (LOGV) Log.v(TAG, "Provisioning default permissions for $packageName...")
+
+            runCatching {
+                    val uid = context.packageManager.getPackageUid(packageName, 0)
+                    val appOpsManager = context.getSystemService(AppOpsManager::class.java)
+                    appOpsManager?.setMode(
+                        AppOpsManager.OP_REQUEST_INSTALL_PACKAGES,
+                        uid,
+                        packageName,
+                        AppOpsManager.MODE_ALLOWED,
+                    )
+                }
+                .onFailure { e ->
+                    when (e) {
+                        is PackageManager.NameNotFoundException -> {
+                            if (LOGV) Log.v(TAG, "Missing $packageName for appops, skipping")
+                        }
+                        else -> {
+                            Log.e(
+                                TAG,
+                                "Failed to grant install unknown apps permission to $packageName",
+                                e,
+                            )
+                        }
+                    }
+                }
         }
     }
 
