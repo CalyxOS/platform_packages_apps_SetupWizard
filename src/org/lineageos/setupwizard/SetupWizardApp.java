@@ -6,8 +6,10 @@
 
 package org.lineageos.setupwizard;
 
+import android.app.AppOpsManager;
 import android.app.Application;
 import android.app.StatusBarManager;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -16,6 +18,8 @@ import android.service.oemlock.OemLockManager;
 import android.util.Log;
 
 import org.lineageos.setupwizard.util.SetupWizardUtils;
+
+import java.util.List;
 
 public class SetupWizardApp extends Application {
 
@@ -47,6 +51,12 @@ public class SetupWizardApp extends Application {
     public static final String EXTRA_ENABLE_NEXT_ON_CONNECT = "wifi_enable_next_on_connect";
 
     public static final String NAVIGATION_OPTION_KEY = "navigation_option";
+
+    public static final String AURORA_SERVICES_PACKAGE = "com.aurora.services";
+    public static final String AURORA_STORE_PACKAGE = "com.aurora.store";
+    public static final String FDROID_BASIC_PACKAGE = "org.fdroid.basic";
+    public static final List<String> PACKAGE_INSTALLERS =
+            List.of(FDROID_BASIC_PACKAGE, AURORA_STORE_PACKAGE);
 
     public static final int RADIO_READY_TIMEOUT = 10 * 1000;
 
@@ -101,5 +111,23 @@ public class SetupWizardApp extends Application {
 
     public Bundle getSettingsBundle() {
         return mSettingsBundle;
+    }
+
+    public void provisionDefaultUserAppPermissions() {
+        for (String packageName : PACKAGE_INSTALLERS) {
+            if (LOGV) Log.v(TAG, "Provisioning default permissions for " + packageName + "...");
+            try {
+                getSystemService(AppOpsManager.class).setMode(
+                        AppOpsManager.OP_REQUEST_INSTALL_PACKAGES,
+                        getPackageManager().getPackageUid(packageName, 0),
+                        packageName,
+                        AppOpsManager.MODE_ALLOWED);
+            } catch (PackageManager.NameNotFoundException ignored) {
+                if (LOGV) Log.v(TAG, "Missing " + packageName + " for appops, skipping");
+                continue;
+            } catch (Exception e) {
+                Log.e(TAG, "Failed to grant install unknown apps permission to " + packageName, e);
+            }
+        }
     }
 }
