@@ -106,6 +106,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa6a6926_c185b6e9",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-29T19:05:56Z",
+      "side": 1,
+      "message": "Ack, true, but that\u0027s not what this change is about.",
+      "parentUuid": "79bb31fb_385fe569",
+      "revId": "8cffa89c7d1cf4ba62444e7316aba51b80ccf875",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bd97e744_f962418f",
@@ -119,6 +137,24 @@
       "writtenOn": "2023-05-25T17:57:16Z",
       "side": 1,
       "message": "This toggle is not just about Google services compatibility. It also:\n* controls whether the location backends are enabled\n* controls whether particular features are available (e.g. support for security keys / FIDO2)",
+      "revId": "8cffa89c7d1cf4ba62444e7316aba51b80ccf875",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "508ca784_03202dca",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-29T19:05:56Z",
+      "side": 1,
+      "message": "Ack, true, but that\u0027s not what this change is about.",
+      "parentUuid": "bd97e744_f962418f",
       "revId": "8cffa89c7d1cf4ba62444e7316aba51b80ccf875",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
