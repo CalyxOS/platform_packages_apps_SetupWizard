@@ -74,6 +74,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ee24e53a_f2a6b221",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-29T00:08:19Z",
+      "side": 1,
+      "message": "Based on F-Droid Basic\u0027s StartupReceiver appearing to (try to) trigger an update, I tried various ways of sending it ACTION_BOOT_COMPLETED, but there\u0027s no sign that that does anything, either from code or from `adb shell am broadcast` and friends. Then again, even rebooting doesn\u0027t indicate anything is happening.\n\nIn case it\u0027s relevant...\n\n`adb shell dumpsys package org.fdroid.basic`\n\nBefore ever launching: `stopped\u003dtrue notLaunched\u003dtrue`\nAfter launching once: `stopped\u003dfalse notLaunched\u003dfalse`",
+      "parentUuid": "ddb37ce0_e032aca6",
+      "revId": "f4e2382dedddd297b53100f729cea973d1450b7e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "020ed0d1_6f7e482e",
         "filename": "src/org/lineageos/setupwizard/util/NetworkMonitor.java",
         "patchSetId": 1
