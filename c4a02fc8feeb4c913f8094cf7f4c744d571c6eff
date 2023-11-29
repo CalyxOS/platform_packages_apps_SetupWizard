@@ -16,6 +16,24 @@
       "message": "Oops, I just realized this is the same string that will appear in the work profile... Ugh.",
       "revId": "c4a02fc8feeb4c913f8094cf7f4c744d571c6eff",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "17202534_0a6388c2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-29T20:14:37Z",
+      "side": 1,
+      "message": "Now it says \"work profile\" if it\u0027s a work profile. It seems clear enough now.\n\n(In a secondary user, it also says \"personal profile\" for the user and \"work profile\", which is normal and as expected.)\n\nI couldn\u0027t think of a better way to write the string. Even if we redesigned the whole page, I\u0027m not sure how that would help with this specifically.",
+      "parentUuid": "ec2200be_4be38a84",
+      "revId": "c4a02fc8feeb4c913f8094cf7f4c744d571c6eff",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
