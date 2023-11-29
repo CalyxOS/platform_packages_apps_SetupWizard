@@ -92,6 +92,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ca38f858_b7786b6f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-29T12:30:25Z",
+      "side": 1,
+      "message": "Filed https://gitlab.com/fdroid/fdroidclient/-/issues/2721",
+      "parentUuid": "ee24e53a_f2a6b221",
+      "revId": "f4e2382dedddd297b53100f729cea973d1450b7e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "020ed0d1_6f7e482e",
         "filename": "src/org/lineageos/setupwizard/util/NetworkMonitor.java",
         "patchSetId": 1
