@@ -110,6 +110,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "48563290_c9e55cce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-29T17:41:56Z",
+      "side": 1,
+      "message": "After adding some debug lines to F-Droid Basic, I can confirm that nothing I\u0027ve tried from SUW to send BOOT_COMPLETED is received/handled by F-Droid Basic at all.\n```\n        final Intent intent \u003d new Intent(Intent.ACTION_BOOT_COMPLETED)\n                .putExtra(Intent.EXTRA_USER_HANDLE, UserHandle.myUserId())\n                .addFlags(Intent.FLAG_RECEIVER_NO_ABORT\n                        | Intent.FLAG_RECEIVER_INCLUDE_BACKGROUND\n                        | Intent.FLAG_RECEIVER_OFFLOAD\n                        | Intent.FLAG_INCLUDE_STOPPED_PACKAGES)\n                .setPackage(FDROID_BASIC_PACKAGE);\n        getActivity().sendOrderedBroadcast(intent, null);\n```\n\nThat\u0027s one of the things I tried. Just leaving it here for now.",
+      "parentUuid": "ca38f858_b7786b6f",
+      "revId": "f4e2382dedddd297b53100f729cea973d1450b7e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "020ed0d1_6f7e482e",
         "filename": "src/org/lineageos/setupwizard/util/NetworkMonitor.java",
         "patchSetId": 1

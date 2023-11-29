@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f38d3200_a56f0be8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-29T17:41:56Z",
+      "side": 1,
+      "message": "To summarize what we talked about in the meeting today:\n\nMy goal here was to kickstart F-Droid Basic into doing regular update checks, even if the user never opened it, so that their chosen (during Setup Wizard) bundled apps could get automatically updates. All things considered, it doesn\u0027t look simple, and our attempted approaches haven\u0027t worked. We are planning to handle this in Lupin Updater, so we don\u0027t need to solve this here.\n\nFor non-bundled apps, the user will *definitely* have already opened F-Droid Basic once, so it won\u0027t be an issue for those.\n\nEven if we figured out how to send F-Droid Basic a BOOT_COMPLETED broadcast that it would listen to, or if we had some other way to send it a signal to check for updates, it *might* only happen that one single time and never again (until the user manually opened it), meaning we would still need to solve the \"user has never launched the app\" problem in order for it to be resilient to reboots and such, but I\u0027m not sure. Too many unknowns, too little payoff, at least right now.",
+      "revId": "24568b047f8de0c7734c67134393cf483a94da1a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
