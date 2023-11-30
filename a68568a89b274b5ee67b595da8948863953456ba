@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9f6f7bd_076b7f28",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-30T13:13:51Z",
+      "side": 1,
+      "message": "How will this affect existing translations (which don\u0027t have said profile string)\n\nTest: Set language to something where `microg_description` is translated, and check what shows up (and more importantly make sure there\u0027s no crashes)",
+      "revId": "a68568a89b274b5ee67b595da8948863953456ba",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
