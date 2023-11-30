@@ -88,6 +88,24 @@
       "parentUuid": "95b2f562_c66731a6",
       "revId": "a68568a89b274b5ee67b595da8948863953456ba",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "25fc5378_55ed1fa8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-30T22:09:07Z",
+      "side": 1,
+      "message": "Fine with me, I\u0027ll leave it to Mike.",
+      "parentUuid": "7ce26ae8_701f49f0",
+      "revId": "a68568a89b274b5ee67b595da8948863953456ba",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
