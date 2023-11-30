@@ -34,6 +34,24 @@
       "parentUuid": "b9f6f7bd_076b7f28",
       "revId": "a68568a89b274b5ee67b595da8948863953456ba",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b9a1885_8ed0cdb3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-30T14:52:42Z",
+      "side": 1,
+      "message": "Changed system language to Spanish.\n\nFor me it didn\u0027t crash, just used an old Spanish translation for the description. (You can supply arguments to getString and if they are not ultimately substituted, it\u0027s okay.)\n\nNot tested: Spanish (or other language) that does try to use the xliff:g, but doesn\u0027t have personal_profile or managed_profile translations. Would it just use the English ones?",
+      "parentUuid": "c0a5fa0e_e4b2bba4",
+      "revId": "a68568a89b274b5ee67b595da8948863953456ba",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
