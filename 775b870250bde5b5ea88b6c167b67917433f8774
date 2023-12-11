@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17f0cf5b_8d6359c7",
+        "filename": "src/org/lineageos/setupwizard/FinishActivity.java",
+        "patchSetId": 35
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-12-11T23:46:42Z",
+      "side": 1,
+      "message": "Unused import?",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 45
+      },
+      "revId": "775b870250bde5b5ea88b6c167b67917433f8774",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
