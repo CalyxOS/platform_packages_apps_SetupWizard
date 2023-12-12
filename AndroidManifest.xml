@@ -48,6 +48,7 @@
     <uses-permission android:name="android.permission.REBOOT" />
     <uses-permission android:name="android.permission.GRANT_RUNTIME_PERMISSIONS" />
     <uses-permission android:name="android.permission.DISPATCH_PROVISIONING_MESSAGE" />
+    <uses-permission android:name="android.permission.REQUEST_PASSWORD_COMPLEXITY" />
     <uses-permission android:name="lineageos.permission.FINISH_SETUP" />
     <uses-permission android:name="org.microg.gms.PROVISION" />
 
