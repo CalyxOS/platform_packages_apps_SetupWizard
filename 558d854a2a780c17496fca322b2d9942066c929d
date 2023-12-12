@@ -16,6 +16,24 @@
       "message": "Commit message now differs from upstream.\n\nWe can let this commit just sit, if it\u0027s merged upstream soon we\u0027ll just get it in a merge. ",
       "revId": "558d854a2a780c17496fca322b2d9942066c929d",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a01d6b8c_31c49eac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-12-12T08:10:45Z",
+      "side": 1,
+      "message": "Ah but this commit differs - that\u0027ll cause confusion during merges.\n\nCan you do it in two parts instead, calyx specific changes in a separate commit.",
+      "parentUuid": "ae9ddb68_37b52b91",
+      "revId": "558d854a2a780c17496fca322b2d9942066c929d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
