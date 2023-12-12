@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dbc9a082_948f0300",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-12T14:21:49Z",
+      "side": 1,
+      "message": "Do we also need to remove the lockscreen_settings WizardAction for res/raw/lineage_wizard_script_user.xml (secondary users)?",
+      "revId": "9837f26340adec55151822acd30b16d0d5b8ae65",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
