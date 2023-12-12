@@ -16,6 +16,10 @@
 
 package org.lineageos.setupwizard.util;
 
+import static android.app.admin.DevicePolicyManager.PASSWORD_COMPLEXITY_LOW;
+import static android.app.admin.DevicePolicyManager.PASSWORD_COMPLEXITY_MEDIUM;
+import static android.app.admin.DevicePolicyManager.PASSWORD_COMPLEXITY_NONE;
+
 import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 
 import android.annotation.NonNull;
@@ -56,6 +60,9 @@ public class ManagedProvisioningUtils {
     public static final int GARLIC_LEVEL_SAFER = 1;
     public static final int GARLIC_LEVEL_SAFEST = 2;
     public static final int GARLIC_LEVEL_DEFAULT = GARLIC_LEVEL_STANDARD;
+
+    // sync with com.android.settings.password.ChooseLockSettingsHelper
+    private static final String EXTRA_KEY_REQUESTED_MIN_COMPLEXITY = "requested_min_complexity";
 
     private static final String BELLIS_PACKAGE = "org.calyxos.bellis";
     private static final String BELLIS_DEVICE_ADMIN_RECEIVER_CLASS = ".BasicDeviceAdminReceiver";
@@ -265,5 +272,23 @@ public class ManagedProvisioningUtils {
             }
         }
         return ProvisioningState.UNSUPPORTED;
+    }
+
+    private static int getGarlicLevelMinPasswordComplexity(int garlicLevel) {
+        switch (garlicLevel) {
+            case GARLIC_LEVEL_SAFER:
+                return PASSWORD_COMPLEXITY_LOW;
+            case GARLIC_LEVEL_SAFEST:
+                return PASSWORD_COMPLEXITY_MEDIUM;
+            default:
+                return PASSWORD_COMPLEXITY_NONE;
+        }
+    }
+
+    public static Intent putMinPasswordComplexityToIntent(Context context, Intent intent) {
+        final int garlicLevel = getGarlicLevel(context);
+        intent.putExtra(EXTRA_KEY_REQUESTED_MIN_COMPLEXITY,
+                getGarlicLevelMinPasswordComplexity(garlicLevel));
+        return intent;
     }
 }
