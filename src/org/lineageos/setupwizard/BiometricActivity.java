@@ -22,13 +22,35 @@ import static org.lineageos.setupwizard.SetupWizardApp.REQUEST_CODE_SETUP_BIOMET
 
 import android.content.Intent;
 
+import org.lineageos.setupwizard.util.GarlicLevelHelper;
+
 public class BiometricActivity extends WrapperSubBaseActivity {
 
     public static final String TAG = BiometricActivity.class.getSimpleName();
 
+    private GarlicLevelHelper mGarlicLevelHelper;
+
     @Override
     protected void onStartSubactivity() {
+        mGarlicLevelHelper = new GarlicLevelHelper(this);
         Intent intent = new Intent(ACTION_SETUP_BIOMETRIC);
+        intent = mGarlicLevelHelper.putMinPasswordComplexityToIntent(intent);
         startSubactivity(intent, REQUEST_CODE_SETUP_BIOMETRIC);
+    }
+
+    @Override
+    protected void onSubactivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_CODE_SETUP_BIOMETRIC) {
+            if (resultCode != RESULT_OK) {
+                final boolean insufficientPassword =
+                        mGarlicLevelHelper.maybeShowInsufficientPasswordDialog(dialog -> {
+                            super.onSubactivityResult(requestCode, RESULT_CANCELED, null);
+                        });
+                if (insufficientPassword) {
+                    return;
+                }
+            }
+        }
+        super.onSubactivityResult(requestCode, resultCode, data);
     }
 }
