@@ -16,13 +16,19 @@
 
 package org.lineageos.setupwizard.util;
 
+import static android.app.admin.DevicePolicyManager.PASSWORD_COMPLEXITY_LOW;
+import static android.app.admin.DevicePolicyManager.PASSWORD_COMPLEXITY_MEDIUM;
+import static android.app.admin.DevicePolicyManager.PASSWORD_COMPLEXITY_NONE;
+
 import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 
 import android.annotation.NonNull;
 import android.annotation.Nullable;
+import android.app.AlertDialog;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface.OnDismissListener;
 import android.content.IIntentReceiver;
 import android.content.IIntentSender;
 import android.content.Intent;
@@ -46,6 +52,8 @@ import java.util.function.Consumer;
 
 import lineageos.providers.LineageSettings;
 
+import org.lineageos.setupwizard.R;
+
 public class ManagedProvisioningUtils {
 
     private static final String TAG = ManagedProvisioningUtils.class.getSimpleName();
@@ -54,6 +62,9 @@ public class ManagedProvisioningUtils {
     public static final int GARLIC_LEVEL_SAFER = 1;
     public static final int GARLIC_LEVEL_SAFEST = 2;
     public static final int GARLIC_LEVEL_DEFAULT = GARLIC_LEVEL_STANDARD;
+
+    // sync with com.android.settings.password.ChooseLockSettingsHelper
+    private static final String EXTRA_KEY_REQUESTED_MIN_COMPLEXITY = "requested_min_complexity";
 
     private static final String BELLIS_PACKAGE = "org.calyxos.bellis";
     private static final String BELLIS_DEVICE_ADMIN_RECEIVER_CLASS = ".BasicDeviceAdminReceiver";
@@ -251,5 +262,70 @@ public class ManagedProvisioningUtils {
             }
         }
         return ProvisioningState.UNSUPPORTED;
+    }
+
+    private static int getGarlicLevelMinPasswordComplexity(int garlicLevel) {
+        switch (garlicLevel) {
+            case GARLIC_LEVEL_SAFER:
+                return PASSWORD_COMPLEXITY_LOW;
+            case GARLIC_LEVEL_SAFEST:
+                return PASSWORD_COMPLEXITY_MEDIUM;
+            default:
+                return PASSWORD_COMPLEXITY_NONE;
+        }
+    }
+
+    public static Intent putMinPasswordComplexityToIntent(Context context, Intent intent) {
+        final int garlicLevel = getGarlicLevel(context);
+        intent.putExtra(EXTRA_KEY_REQUESTED_MIN_COMPLEXITY,
+                getGarlicLevelMinPasswordComplexity(garlicLevel));
+        return intent;
+    }
+
+    /**
+      * Return the current password complexity if it is not sufficient for the current garlic level.
+      * Otherwise, return null.
+      */
+    private static Integer getPasswordComplexityIfUnmetForGarlicLevel(Context context) {
+        if (!SetupWizardUtils.isOwner()) {
+            // This requirement only applies to the owner user.
+            return null;
+        }
+        final int garlicLevel = getGarlicLevel(context);
+        final int minComplexity = getGarlicLevelMinPasswordComplexity(garlicLevel);
+        if (minComplexity == PASSWORD_COMPLEXITY_NONE) {
+            return null;
+        }
+        final int complexity = context.getSystemService(DevicePolicyManager.class)
+                .getPasswordComplexity();
+        if (LOGV) Log.v(TAG, "Password complexity requirement: minComplexity: " + minComplexity
+                + ", complexity: " + complexity);
+        // As of this writing, password complexity values may be compared.
+        return (complexity >= minComplexity) ? null : complexity;
+    }
+
+    /**
+      * If the current password complexity is not sufficient for the current garlic level,
+      * show an alert dialog. When dismissed, use the provided onDismissListener.
+      * Return true if the password was insufficient and a dialog was shown. Otherwise, false.
+      */
+    public static boolean maybeShowInsufficientPasswordDialog(Context context,
+            OnDismissListener onDismissListener) {
+        final Integer passwordComplexity = getPasswordComplexityIfUnmetForGarlicLevel(context);
+        if (passwordComplexity == null) {
+            return false;
+        }
+        if (passwordComplexity != PASSWORD_COMPLEXITY_NONE) {
+            Log.wtf(TAG, "Insufficient screen lock provided. This should not be possible, as the "
+                    + "chooser activity is supposed to enforce the requested complexity.");
+        }
+        AlertDialog dialog = new AlertDialog.Builder(context)
+                .setTitle(R.string.security_level_password_required_title)
+                .setMessage(R.string.security_level_password_required_desc)
+                .setPositiveButton(android.R.string.ok, null)
+                .setOnDismissListener(onDismissListener)
+                .create();
+        dialog.show();
+        return true;
     }
 }
