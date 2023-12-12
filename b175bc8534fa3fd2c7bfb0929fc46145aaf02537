@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c3b4a34a_043aa557",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-12-12T07:41:18Z",
+      "side": 1,
+      "message": "Additional `;`",
+      "revId": "b175bc8534fa3fd2c7bfb0929fc46145aaf02537",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
