@@ -16,6 +16,23 @@
       "message": "Do we also need to remove the lockscreen_settings WizardAction for res/raw/lineage_wizard_script_user.xml (secondary users)?",
       "revId": "9837f26340adec55151822acd30b16d0d5b8ae65",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a3eb3d1_88a4f5d4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-12T15:13:58Z",
+      "side": 1,
+      "message": "I wonder, since both responsibilities are delegated to biometric setup, if the device has no biometric hardware (or none is detected, i.e. hardware failure), what happens? Is the user even prompted for set a PIN/password, or is that skipped?",
+      "revId": "9837f26340adec55151822acd30b16d0d5b8ae65",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
