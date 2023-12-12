@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c522f728_d1e0db20",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-12T22:52:11Z",
+      "side": 1,
+      "message": "This change itself doesn\u0027t ensure a minimum password complexity, but provides the tools to do it. Actually doing it needs e.g. \"BiometricActivity: Minimum password complexity\" (Ia8570cea). I split this up because I wanted to upload it, but parts of SetupWizard are being actively changed in a separate relation chain.",
+      "revId": "89f3842d9292f25eacd276dd849c7857de733058",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
