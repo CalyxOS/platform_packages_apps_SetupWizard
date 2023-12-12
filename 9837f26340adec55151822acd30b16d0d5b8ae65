@@ -33,6 +33,24 @@
       "message": "I wonder, since both responsibilities are delegated to biometric setup, if the device has no biometric hardware (or none is detected, i.e. hardware failure), what happens? Is the user even prompted for set a PIN/password, or is that skipped?",
       "revId": "9837f26340adec55151822acd30b16d0d5b8ae65",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6eaed52d_ca7b2fbd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-12T15:20:49Z",
+      "side": 1,
+      "message": "To me, it looks like it would be skipped with unknown state, but I haven\u0027t tried it: https://cs.android.com/android/platform/superproject/main/+/4f8416246ff7a23eac0b74a6225a440ebbc0dc00:packages/apps/Settings/src/com/android/settings/biometrics/BiometricEnrollActivity.java;l\u003d360;bpv\u003d0\n\nWhat if we just check if biometric hardware is available (we already have code for that), and if so, do what we\u0027re doing now; otherwise, launch an intent specifically for lockscreen PIN/password?",
+      "parentUuid": "4a3eb3d1_88a4f5d4",
+      "revId": "9837f26340adec55151822acd30b16d0d5b8ae65",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
