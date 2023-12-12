@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "541ffbfc_dbbd09c3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-12-12T08:08:57Z",
+      "side": 1,
+      "message": "17675: Add step for changing theme | https://review.calyxos.org/c/CalyxOS/platform_packages_apps_SetupWizard/+/17675 \n\nComments above still apply.",
+      "revId": "f564d7e8b8510477797b9ecc00fe3d78b0c0926f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
