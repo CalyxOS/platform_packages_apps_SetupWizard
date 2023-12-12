@@ -48,4 +48,6 @@
     <string name="security_level_safer_desc">Specific wireless communication systems and the device have a default timeout. Deploys a work profile that enforces network communication through Orbot</string>
     <string name="security_level_safest_title">Safest</string>
     <string name="security_level_safest_desc">Builds upon Safer while enforcing additional restrictions on app installation and debugging. This level may reduce device usability depending upon per use case.</string>
+    <string name="security_level_password_required_title">Screen lock required</string>
+    <string name="security_level_password_required_desc">Your chosen security level requires a screen lock. Please set a screen lock, or go back and adjust your security level.</string>
 </resources>
