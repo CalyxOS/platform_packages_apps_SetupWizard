@@ -16,6 +16,23 @@
       "message": "This change itself doesn\u0027t ensure a minimum password complexity, but provides the tools to do it. Actually doing it needs e.g. \"BiometricActivity: Minimum password complexity\" (Ia8570cea). I split this up because I wanted to upload it, but parts of SetupWizard are being actively changed in a separate relation chain.",
       "revId": "89f3842d9292f25eacd276dd849c7857de733058",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1fb0e36c_4d029e87",
+        "filename": "src/org/lineageos/setupwizard/util/GarlicLevelHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-12-13T16:47:47Z",
+      "side": 1,
+      "message": "Maybe just medium or low for now?\n\nhttps://developer.android.com/reference/android/app/admin/DevicePolicyManager#PASSWORD_COMPLEXITY_HIGH",
+      "revId": "89f3842d9292f25eacd276dd849c7857de733058",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
