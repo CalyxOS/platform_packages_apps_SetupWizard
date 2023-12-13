@@ -33,6 +33,24 @@
       "message": "Maybe just medium or low for now?\n\nhttps://developer.android.com/reference/android/app/admin/DevicePolicyManager#PASSWORD_COMPLEXITY_HIGH",
       "revId": "89f3842d9292f25eacd276dd849c7857de733058",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "73538a22_9d0e2fa1",
+        "filename": "src/org/lineageos/setupwizard/util/GarlicLevelHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-13T16:51:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1fb0e36c_4d029e87",
+      "revId": "89f3842d9292f25eacd276dd849c7857de733058",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
