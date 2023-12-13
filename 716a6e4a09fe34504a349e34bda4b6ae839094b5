@@ -68,6 +68,24 @@
       "parentUuid": "c2bdfd96_1f5a9f74",
       "revId": "716a6e4a09fe34504a349e34bda4b6ae839094b5",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "94ec922d_b2ac1229",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 25
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-13T19:50:38Z",
+      "side": 1,
+      "message": "Ack, that change is now here: https://review.calyxos.org/c/CalyxOS/platform_packages_apps_SetupWizard/+/23736",
+      "parentUuid": "d6156f19_60518ef9",
+      "revId": "716a6e4a09fe34504a349e34bda4b6ae839094b5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
