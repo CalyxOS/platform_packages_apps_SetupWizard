@@ -34,6 +34,24 @@
       "parentUuid": "a09c36a1_b7eb86b0",
       "revId": "2c66bdf23ef6a3060654dfa48b5678981a11c7eb",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "39557629_cccae516",
+        "filename": "src/org/lineageos/setupwizard/BaseSetupWizardActivity.java",
+        "patchSetId": 36
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-14T15:06:15Z",
+      "side": 0,
+      "message": "Ack, tested PS38: no SUW popup now with Standard (or without garlic-level page), yes SUW popup with Safer/Safest. Not a new issue. I\u0027d like it to get fixed in a follow-up instead if possible to make things easier.",
+      "parentUuid": "9ebc3f31_fc77b118",
+      "revId": "2c66bdf23ef6a3060654dfa48b5678981a11c7eb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
