@@ -94,6 +94,30 @@
       },
       "revId": "52413bcb76173a8ce6e466155befadab138bda17",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1122ad7e_16bcfd12",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 28
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-12-14T16:25:31Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "71082bac_ff54a9a0",
+      "range": {
+        "startLine": 79,
+        "startChar": 16,
+        "endLine": 80,
+        "endChar": 66
+      },
+      "revId": "52413bcb76173a8ce6e466155befadab138bda17",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
