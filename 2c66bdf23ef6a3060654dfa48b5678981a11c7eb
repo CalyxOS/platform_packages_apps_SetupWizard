@@ -16,6 +16,24 @@
       "message": "This change is causing the Setup Wizard to pop up again once it\u0027s finished, without garlic-level selection for sure, but possibly in all cases.",
       "revId": "2c66bdf23ef6a3060654dfa48b5678981a11c7eb",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ebc3f31_fc77b118",
+        "filename": "src/org/lineageos/setupwizard/BaseSetupWizardActivity.java",
+        "patchSetId": 36
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-14T14:57:08Z",
+      "side": 0,
+      "message": "Changes in PS37:\n- isProvisioningAllowed -\u003e getProvisioningState; now we can know whether it\u0027s unsupported, still pending, or complete.\n- Brought back exitIfSetupComplete. We do not exit if provisioning is still pending... but now I think that\u0027s wrong. I\u0027m going to change it so that it doesn\u0027t exit if provisioning is supported at all, and that will make the behavior match pre-PS37, for garlic-level only.\n\nThe net result should be, for Standard (or no garlic-level page), no visible change for users. Otherwise, SUW might still pop up at the end, but we can figure that out separately.",
+      "parentUuid": "a09c36a1_b7eb86b0",
+      "revId": "2c66bdf23ef6a3060654dfa48b5678981a11c7eb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
