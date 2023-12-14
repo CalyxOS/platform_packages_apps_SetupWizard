@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a09c36a1_b7eb86b0",
+        "filename": "src/org/lineageos/setupwizard/BaseSetupWizardActivity.java",
+        "patchSetId": 36
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-14T14:21:49Z",
+      "side": 0,
+      "message": "This change is causing the Setup Wizard to pop up again once it\u0027s finished, without garlic-level selection for sure, but possibly in all cases.",
+      "revId": "2c66bdf23ef6a3060654dfa48b5678981a11c7eb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
