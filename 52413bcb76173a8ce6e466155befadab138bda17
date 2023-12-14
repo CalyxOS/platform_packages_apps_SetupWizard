@@ -70,6 +70,30 @@
       },
       "revId": "52413bcb76173a8ce6e466155befadab138bda17",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71082bac_ff54a9a0",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 28
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-14T01:13:05Z",
+      "side": 1,
+      "message": "I have code to do this, but it requires a lot of changes (there\u0027s no simple one-liner or anything like that, unless we want the user to be very confused about why their device is resetting... in which case all we would need is a few lines!). Let\u0027s get this merged first, imo, and then handle in a follow-up?",
+      "parentUuid": "f150811e_d018519e",
+      "range": {
+        "startLine": 79,
+        "startChar": 16,
+        "endLine": 80,
+        "endChar": 66
+      },
+      "revId": "52413bcb76173a8ce6e466155befadab138bda17",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
