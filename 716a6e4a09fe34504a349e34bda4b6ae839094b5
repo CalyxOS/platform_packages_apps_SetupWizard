@@ -35,6 +35,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5ecdf2d_0c6da562",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 25
+      },
+      "lineNbr": 314,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-14T01:26:07Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "11734ba8_fde495e1",
+      "revId": "716a6e4a09fe34504a349e34bda4b6ae839094b5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c2bdfd96_1f5a9f74",
