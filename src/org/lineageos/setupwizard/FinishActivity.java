@@ -98,25 +98,18 @@ public class FinishActivity extends BaseSetupWizardActivity {
     public void onNavigateNext() {
         ProvisioningState provisioningState =
                 ManagedProvisioningUtils.getProvisioningState(this);
-        if (provisioningState == ProvisioningState.PENDING) {
-            // When initial setup wizard is complete, finalize garlic-level provisioning.
-            mSetupWizardApp.getContentResolver().registerContentObserver(
-                    Settings.Secure.getUriFor(Settings.Secure.USER_SETUP_COMPLETE), false,
-                    new ContentObserver(mHandler) {
-                        @Override
-                        public void onChange(boolean selfChange) {
-                            super.onChange(selfChange);
-                            ManagedProvisioningUtils.finalizeProvisioning(FinishActivity.this);
-                            startFinishSequence();
-                            FinishActivity.this.getContentResolver()
-                                    .unregisterContentObserver(this);
-                        }
-                    });
-            // Initialize garlic-level provisioning.
-            ManagedProvisioningUtils.init(this);
-        } else {
-            applyForwardTransition(TRANSITION_ID_NONE);
-            startFinishSequence();
+        switch (provisioningState) {
+            case PENDING:
+                // Initialize garlic-level provisioning.
+                ManagedProvisioningUtils.init(this);
+                break;
+            case COMPLETE:
+                ManagedProvisioningUtils.finalizeProvisioning(this);
+                startFinishSequence();
+                break;
+            default:
+                applyForwardTransition(TRANSITION_ID_NONE);
+                startFinishSequence();
         }
     }
 
