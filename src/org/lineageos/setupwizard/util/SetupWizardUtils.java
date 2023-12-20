@@ -60,6 +60,7 @@ import org.lineageos.setupwizard.BluetoothSetupActivity;
 import org.lineageos.setupwizard.BootloaderWarningActivity;
 import org.lineageos.setupwizard.NetworkSetupActivity;
 import org.lineageos.setupwizard.SetupWizardApp;
+import org.lineageos.setupwizard.SetupWizardExitService;
 import org.lineageos.setupwizard.SimMissingActivity;
 import org.lineageos.setupwizard.wizardmanager.WizardManager;
 
@@ -75,6 +76,8 @@ public class SetupWizardUtils {
     private static final String GMS_TV_SUW_PACKAGE = "com.google.android.tungsten.setupwraith";
 
     private static final String PROP_BUILD_DATE = "ro.build.date.utc";
+
+    private static final String PREF_KEY_SETUP_COMPLETE = "setup_complete";
 
     private SetupWizardUtils() {
     }
@@ -193,10 +196,38 @@ public class SetupWizardUtils {
         }
     }
 
+    public static void startSetupWizardExitProcedure(Context context) {
+        if (isOwner()) {
+            enableCaptivePortalDetection(context);
+        }
+        PhoneMonitor.onSetupFinished();
+        Intent i = new Intent()
+                .setClassName(context.getPackageName(), SetupWizardExitService.class.getName());
+        context.startService(i);
+    }
+
     public static void finishSetupWizard(Context context) {
+        SharedPreferences prefs = getPrefs(context);
+        if (prefs.getBoolean(PREF_KEY_SETUP_COMPLETE, false)) {
+            // Setup is complete, so there is no need to do any of this.
+            Log.w(TAG, "finishSetupWizard called, but already marked complete");
+            return;
+        }
+
+        ProvisioningState provisioningState =
+                ManagedProvisioningUtils.getProvisioningState(context);
+        if (LOGV) {
+            Log.v(TAG, "finishSetupWizard");
+        }
         ContentResolver contentResolver = context.getContentResolver();
         Settings.Global.putInt(contentResolver,
                 Settings.Global.DEVICE_PROVISIONED, 1);
+        final int userSetupComplete =
+                Settings.Secure.getInt(contentResolver, Settings.Secure.USER_SETUP_COMPLETE, 0);
+        if (userSetupComplete != 0 && !SetupWizardUtils.isManagedProfile(context)) {
+            Log.e(TAG, "finishSetupWizard, but userSetupComplete=" + userSetupComplete + "! "
+                    + "This should not happen!");
+        }
         Settings.Secure.putInt(contentResolver,
                 Settings.Secure.USER_SETUP_COMPLETE, 1);
         if (hasLeanback(context)) {
@@ -204,6 +235,17 @@ public class SetupWizardUtils {
                     Settings.Secure.TV_USER_SETUP_COMPLETE, 1);
         }
 
+        sendMicroGCheckInBroadcast(context);
+
+        disableSetupWizardComponentsAndSendFinishedBroadcast(context);
+
+        prefs.edit().putBoolean(PREF_KEY_SETUP_COMPLETE, true).apply();
+    }
+
+    private static void disableSetupWizardComponentsAndSendFinishedBroadcast(Context context) {
+        if (LOGV) {
+            Log.v(TAG, "Disabling Setup Wizard components and sending FINISHED broadcast.");
+        }
         disableComponent(context, WizardManager.class);
         disableHome(context);
         context.sendStickyBroadcastAsUser(
@@ -211,8 +253,6 @@ public class SetupWizardUtils {
                 Binder.getCallingUserHandle());
         disableComponentSets(context, GET_RECEIVERS | GET_SERVICES);
         enableStatusBar(context);
-
-        sendMicroGCheckInBroadcast(context);
     }
 
     public static boolean isBluetoothDisabled() {
