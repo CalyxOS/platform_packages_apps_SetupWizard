@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "454127c2_ae5ed8c2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-20T22:51:11Z",
+      "side": 1,
+      "message": "It may still be wanted, even if it is not needed, because we don\u0027t actually disable the setup wizard, and we don\u0027t want it to get relaunched.",
+      "revId": "8fa1620e319e3a189ed0e5224cd8349dc6f3e38d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
