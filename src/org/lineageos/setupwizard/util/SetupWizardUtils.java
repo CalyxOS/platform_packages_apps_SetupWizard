@@ -194,9 +194,18 @@ public class SetupWizardUtils {
     }
 
     public static void finishSetupWizard(Context context) {
+        if (LOGV) {
+            Log.v(TAG, "finishSetupWizard...");
+        }
         ContentResolver contentResolver = context.getContentResolver();
         Settings.Global.putInt(contentResolver,
                 Settings.Global.DEVICE_PROVISIONED, 1);
+        final int userSetupComplete = Settings.Secure.getInt(contentResolver,
+                Settings.Secure.USER_SETUP_COMPLETE, 0);
+        if (userSetupComplete != 0) {
+            Log.e(TAG, "finishSetupWizard, but userSetupComplete=" + userSetupComplete + "! "
+                    + "This should not happen!");
+        }
         Settings.Secure.putInt(contentResolver,
                 Settings.Secure.USER_SETUP_COMPLETE, 1);
         if (hasLeanback(context)) {
@@ -204,6 +213,15 @@ public class SetupWizardUtils {
                     Settings.Secure.TV_USER_SETUP_COMPLETE, 1);
         }
 
+        sendMicroGCheckInBroadcast(context);
+
+        disableSetupWizardComponentsAndSendFinishedBroadcast(context);
+    }
+
+    private static void disableSetupWizardComponentsAndSendFinishedBroadcast(Context context) {
+        if (LOGV) {
+            Log.v(TAG, "Disabling Setup Wizard components and sending FINISHED broadcast...");
+        }
         disableComponent(context, WizardManager.class);
         disableHome(context);
         context.sendStickyBroadcastAsUser(
@@ -211,8 +229,6 @@ public class SetupWizardUtils {
                 Binder.getCallingUserHandle());
         disableComponentSets(context, GET_RECEIVERS | GET_SERVICES);
         enableStatusBar(context);
-
-        sendMicroGCheckInBroadcast(context);
     }
 
     public static boolean isBluetoothDisabled() {

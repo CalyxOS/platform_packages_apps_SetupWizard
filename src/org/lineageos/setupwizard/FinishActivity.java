@@ -23,6 +23,7 @@ import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_3BUTTON_OVE
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
 
 import static org.lineageos.setupwizard.Manifest.permission.FINISH_SETUP;
+import static org.lineageos.setupwizard.SetupWizardApp.ACTION_FINISHED;
 import static org.lineageos.setupwizard.SetupWizardApp.ACTION_SETUP_COMPLETE;
 import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 import static org.lineageos.setupwizard.SetupWizardApp.NAVIGATION_OPTION_KEY;
@@ -31,8 +32,10 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.app.Activity;
 import android.app.WallpaperManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.om.IOverlayManager;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
@@ -40,6 +43,7 @@ import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.ServiceManager;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.widget.ImageView;
@@ -58,7 +62,22 @@ public class FinishActivity extends BaseSetupWizardActivity {
 
     private final Handler mHandler = new Handler();
 
+    private volatile boolean mIsInFinishAnimation = false;
     private volatile boolean mIsFinishing = false;
+
+    private final BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (LOGV) {
+                Log.v(TAG, "onReceive intent=" + intent);
+            }
+            if (intent != null && intent.getAction() == ACTION_FINISHED) {
+                unregisterReceiver(mIntentReceiver);
+                applyForwardTransition(TRANSITION_ID_NONE);
+                startFinishSequence();
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,13 +112,24 @@ public class FinishActivity extends BaseSetupWizardActivity {
 
     @Override
     public void onNavigateNext() {
-        applyForwardTransition(TRANSITION_ID_NONE);
-        startFinishSequence();
+        if (mIsFinishing) {
+            return;
+        }
+        mIsFinishing = true;
+        setNextAllowed(false);
+        // Listen for completion.
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(ACTION_FINISHED);
+        registerReceiver(mIntentReceiver, filter, null, null);
+        // Begin setup exit procedures. (Finish the wizard in the broadcast receiver.)
+        Intent i = new Intent();
+        i.setClassName(getPackageName(), SetupWizardExitService.class.getName());
+        startService(i);
     }
 
     private void finishSetup() {
-        if (!mIsFinishing) {
-            mIsFinishing = true;
+        if (!mIsInFinishAnimation) {
+            mIsInFinishAnimation = true;
             setupRevealImage();
         }
     }
