@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21993318_2e46a066",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 39
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-20T22:05:36Z",
+      "side": 1,
+      "message": "Oops, this extra argument is not meant for this change",
+      "revId": "bb2da02f606230b09de30e5edd6dc87c747a0658",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
