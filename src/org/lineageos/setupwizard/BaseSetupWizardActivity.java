@@ -126,9 +126,6 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
             logActivityState("onStart");
         }
         super.onStart();
-        if (!SetupWizardUtils.isManagedProfile(this)) {
-            exitIfSetupComplete();
-        }
     }
 
     @Override
@@ -316,14 +313,6 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
     protected void onSetupStart() {
         if (SetupWizardUtils.isOwner()) {
             SetupWizardUtils.disableCaptivePortalDetection(getApplicationContext());
-        }
-    }
-
-    protected void exitIfSetupComplete() {
-        if (WizardManagerHelper.isUserSetupComplete(this)) {
-            Log.i(TAG, "Starting activity with USER_SETUP_COMPLETE=true");
-            setResult(RESULT_CANCELED, null);
-            finishAllAppTasks();
         }
     }
 
