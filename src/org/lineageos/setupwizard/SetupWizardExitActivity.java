@@ -39,24 +39,8 @@ public class SetupWizardExitActivity extends BaseSetupWizardActivity {
         if (LOGV) {
             Log.v(TAG, "onCreate savedInstanceState=" + savedInstanceState);
         }
-        if (SetupWizardUtils.isOwner()) {
-            SetupWizardUtils.enableCaptivePortalDetection(this);
-        }
-        PhoneMonitor.onSetupFinished();
-        if (!SetupWizardUtils.isManagedProfile(this)) {
-            launchHome();
-        }
+        SetupWizardUtils.startSetupWizardExitProcedure(this);
         finish();
-        applyForwardTransition(TRANSITION_ID_FADE);
-        Intent i = new Intent();
-        i.setClassName(getPackageName(), SetupWizardExitService.class.getName());
-        startService(i);
-    }
-
-    private void launchHome() {
-        startActivity(new Intent("android.intent.action.MAIN")
-                .addCategory("android.intent.category.HOME")
-                .addFlags(FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_CLEAR_TASK));
     }
 
 }
