@@ -320,7 +320,6 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
     protected void exitIfSetupComplete() {
         if (WizardManagerHelper.isUserSetupComplete(this)) {
             Log.i(TAG, "Starting activity with USER_SETUP_COMPLETE=true");
-            startSetupWizardExitActivity();
             setResult(RESULT_CANCELED, null);
             finishAllAppTasks();
         }
