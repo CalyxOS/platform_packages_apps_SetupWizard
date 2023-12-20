@@ -23,6 +23,7 @@ import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_3BUTTON_OVE
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
 
 import static org.lineageos.setupwizard.Manifest.permission.FINISH_SETUP;
+import static org.lineageos.setupwizard.SetupWizardApp.ACTION_FINISHED;
 import static org.lineageos.setupwizard.SetupWizardApp.ACTION_SETUP_COMPLETE;
 import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 import static org.lineageos.setupwizard.SetupWizardApp.NAVIGATION_OPTION_KEY;
@@ -31,8 +32,10 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.app.Activity;
 import android.app.WallpaperManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.om.IOverlayManager;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
@@ -40,6 +43,7 @@ import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.ServiceManager;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.widget.ImageView;
@@ -58,7 +62,20 @@ public class FinishActivity extends BaseSetupWizardActivity {
 
     private final Handler mHandler = new Handler();
 
-    private volatile boolean mIsFinishing = false;
+    private boolean mIsFinishing;
+
+    private final BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (LOGV) {
+                Log.v(TAG, "onReceive intent=" + intent);
+            }
+            if (intent != null && intent.getAction() == ACTION_FINISHED) {
+                unregisterReceiver(mIntentReceiver);
+                completeSetup();
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,18 +110,20 @@ public class FinishActivity extends BaseSetupWizardActivity {
 
     @Override
     public void onNavigateNext() {
-        applyForwardTransition(TRANSITION_ID_NONE);
         startFinishSequence();
     }
 
-    private void finishSetup() {
-        if (!mIsFinishing) {
-            mIsFinishing = true;
-            setupRevealImage();
-        }
-    }
-
     private void startFinishSequence() {
+        if (mIsFinishing) {
+            return;
+        }
+        mIsFinishing = true;
+
+        // Listen for completion from the exit service.
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(ACTION_FINISHED);
+        registerReceiver(mIntentReceiver, filter, null, null);
+
         mSetupWizardApp.provisionDefaultUserAppPermissions();
         Intent i = new Intent(ACTION_SETUP_COMPLETE);
         i.setPackage(getPackageName());
@@ -112,7 +131,9 @@ public class FinishActivity extends BaseSetupWizardActivity {
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
         hideNextButton();
-        finishSetup();
+
+        // Begin outro animation.
+        setupRevealImage();
     }
 
     private void setupRevealImage() {
@@ -156,7 +177,11 @@ public class FinishActivity extends BaseSetupWizardActivity {
                 mHandler.post(new Runnable() {
                     @Override
                     public void run() {
-                        completeSetup();
+                        if (LOGV) {
+                            Log.v(TAG, "Animation ended");
+                        }
+                        // Start exit procedures, including the exit service.
+                        SetupWizardUtils.startSetupWizardExitProcedure(FinishActivity.this);
                     }
                 });
             }
@@ -165,14 +190,13 @@ public class FinishActivity extends BaseSetupWizardActivity {
     }
 
     private void completeSetup() {
+        Log.i(TAG, "Setup complete!");
         handleNavigationOption(mSetupWizardApp);
         final WallpaperManager wallpaperManager =
                 WallpaperManager.getInstance(mSetupWizardApp);
         wallpaperManager.forgetLoadedWallpaper();
         finishAllAppTasks();
-        Intent intent = WizardManagerHelper.getNextIntent(getIntent(),
-                Activity.RESULT_OK);
-        startActivityForResult(intent, NEXT_REQUEST);
+        applyForwardTransition(TRANSITION_ID_FADE);
     }
 
     private void handleNavigationOption(Context context) {
