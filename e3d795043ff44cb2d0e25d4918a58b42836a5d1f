@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee5dd487_07bb42c4",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-21T23:00:28Z",
+      "side": 1,
+      "message": "finishSetupWizard could be reached again from exitIfSetupComplete (i.e. if the SUW is launched again); that\u0027s why this was added. We don\u0027t want to and shouldn\u0027t have to do any of this again.\n\nManaged profiles are one reason why user_setup_complete alone is not good enough. It\u0027s always 1 for them.",
+      "revId": "e3d795043ff44cb2d0e25d4918a58b42836a5d1f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
