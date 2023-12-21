@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f485c17e_9788cc44",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-21T21:31:56Z",
+      "side": 1,
+      "message": "This patchset is an improvement, but it still doesn\u0027t look like the actual wallpaper. I\u0027m about to replace it with a change that is a slightly different style - a circular hide rather than a circular reveal - but which I think works better, at least on phones (haven\u0027t tested on other devices). Due to the way the new method works, which involves using a transparent background that shows the wallpaper, it\u0027s not possible to use a circular reveal, but I think it looks pretty good. Feel free to return to this patchset if needed.",
+      "revId": "04fcecf4d90b20703c66fc0aa6263ab52db3163f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
