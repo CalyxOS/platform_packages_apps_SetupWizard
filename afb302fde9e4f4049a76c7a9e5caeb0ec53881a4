@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a494e8c_8847f5a4",
+        "filename": "src/org/lineageos/setupwizard/GarlicLevelActivity.java",
+        "patchSetId": 43
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-21T23:47:29Z",
+      "side": 1,
+      "message": "unused import",
+      "revId": "afb302fde9e4f4049a76c7a9e5caeb0ec53881a4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
