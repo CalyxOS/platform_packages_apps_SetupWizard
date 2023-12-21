@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b72815e_a85dc146",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-21T07:51:02Z",
+      "side": 1,
+      "message": "Works but skips the circular reveal animation on exit sometimes, going straight to a brief fade.",
+      "revId": "547e4586a951f04d89f9db43d6f16a991d48deac",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
