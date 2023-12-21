@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "84d23f5e_9f9613d1",
+        "filename": "src/org/lineageos/setupwizard/BaseSetupWizardActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 323,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-21T21:18:52Z",
+      "side": 1,
+      "message": "This ultimately reaches SetupWizardUtils.finishSetupWizard, and none of the stuff in there needs to be done more than once (nor should it depend on that), so I removed this line.",
+      "revId": "57efd0e51299be4d3595c5d4e41a150b2638073e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
