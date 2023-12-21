@@ -48,6 +48,8 @@ import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewAnimationUtils;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
 import android.widget.ImageView;
 
 import com.google.android.setupcompat.util.WizardManagerHelper;
@@ -105,14 +107,6 @@ public class FinishActivity extends BaseSetupWizardActivity {
     }
 
     @Override
-    public void finish() {
-        super.finish();
-        if (!isResumed() || mResultCode != RESULT_CANCELED) {
-            overridePendingTransition(R.anim.translucent_enter, R.anim.translucent_exit);
-        }
-    }
-
-    @Override
     public void onNavigateNext() {
         startFinishSequence();
     }
@@ -149,6 +143,13 @@ public class FinishActivity extends BaseSetupWizardActivity {
     }
 
     private void setupRevealImage() {
+        // Edge-to-edge.
+        getWindow().setDecorFitsSystemWindows(false);
+        WindowInsetsController insetsController = getWindow().getInsetsController();
+        if (insetsController != null) {
+            insetsController.hide(WindowInsets.Type.navigationBars());
+        }
+
         final Point p = new Point();
         getWindowManager().getDefaultDisplay().getRealSize(p);
         final WallpaperManager wallpaperManager =
@@ -208,7 +209,7 @@ public class FinishActivity extends BaseSetupWizardActivity {
                 WallpaperManager.getInstance(mSetupWizardApp);
         wallpaperManager.forgetLoadedWallpaper();
         finishAllAppTasks();
-        applyForwardTransition(TRANSITION_ID_FADE);
+        overridePendingTransition(R.anim.translucent_enter, R.anim.translucent_exit);
     }
 
     private void handleNavigationOption(Context context) {
