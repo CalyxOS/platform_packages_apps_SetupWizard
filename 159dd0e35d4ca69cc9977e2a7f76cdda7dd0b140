@@ -16,6 +16,24 @@
       "message": "GarlicLevelHelper probably shouldn\u0027t be its own class.\n\nI lost track of the fact that ManagedProvisioningUtils is also our own addition (I was absentmindedly thinking it was part of upstream SUW at Lineage) and already does garlic-level stuff, since that\u0027s the point.\n\nGarlicLevelHelper prevents needing to provide a Context all the time, but that is its only benefit vs putting everything into ManagedProvisioningUtils. Might as well just combine them.",
       "revId": "159dd0e35d4ca69cc9977e2a7f76cdda7dd0b140",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6fdbdb3_72cbcc76",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-21T21:23:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "269fbaaf_accf5b2b",
+      "revId": "159dd0e35d4ca69cc9977e2a7f76cdda7dd0b140",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
