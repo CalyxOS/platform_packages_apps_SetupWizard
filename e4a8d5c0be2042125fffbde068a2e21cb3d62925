@@ -16,6 +16,24 @@
       "message": "Aren\u0027t there a bunch of unused resources to remove after the java changes now? Also this should be upstream",
       "revId": "e4a8d5c0be2042125fffbde068a2e21cb3d62925",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1fac5a0_f840a211",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-01-01T22:13:06Z",
+      "side": 1,
+      "message": "Upstream patch is now open and a separate patch to remove unused resources was also uploaded",
+      "parentUuid": "6ec0f4ba_a6efa2d7",
+      "revId": "e4a8d5c0be2042125fffbde068a2e21cb3d62925",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ],
   "submitRequirementResults": [
