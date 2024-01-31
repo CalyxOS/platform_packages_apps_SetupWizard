@@ -13,4 +13,5 @@
     <string name="bootloader_warning_summary">De bootloader van dit apparaat is momenteel ontgrendeld. Vergrendel de bootloader vanaf een computer. Ga naar <a href="https://calyxos.org/lock">calyxos.org/lock</a> voor meer informatie.</string>
     <string name="microg_description2">microG is een open sourcevervanging voor <b>Google Play Services</b> (en aanverwante software), maar het bevat alleen zinvolle delen. In tegenstelling tot Play Services, heeft microG bijvoorbeeld geen reclames en houdt niet je locatie bij.</string>
     <string name="microg_defaults_summary">Sta toe dat apps zich registreren om pushnotificaties van Google te ontvangen. Dit registreert je apparaat bij Googlediensten zonder apparaatspecifieke identificatie. Dit kan later worden ingeschakeld vanuit de instellingen van microG, maar apps die eerder zijn ingesteld moeten worden geherinstalleerd om correct te werken.</string>
+    <string name="setup_managed_profile_welcome_message">Stel je werkprofiel in</string>
 </resources>
