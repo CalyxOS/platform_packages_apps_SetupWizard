@@ -11,14 +11,20 @@
         "submittabilityExpression": {
           "expressionString": "label:Builds\u003dMAX AND -label:Builds\u003dMIN"
         },
-        "overrideExpression": {},
+        "overrideExpression": {
+          "value": {
+            "expressionString": "label:Builds\u003d0 AND (label:Works\u003dMAX OR label:Bypass-Verification\u003dMAX)"
+          }
+        },
         "allowOverrideInChildProjects": true
       },
       "applicabilityExpressionResult": {},
       "submittabilityExpressionResult": {
         "value": {"expression":{"expressionString":"label:Builds=MAX AND -label:Builds=MIN"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["label:Builds=MAX","label:Builds=MIN"]}
       },
-      "overrideExpressionResult": {},
+      "overrideExpressionResult": {
+        "value": {"expression":{"expressionString":"label:Builds=0 AND (label:Works=MAX OR label:Bypass-Verification=MAX)"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":["label:Builds=0"],"failingAtoms":["label:Works=MAX","label:Bypass-Verification=MAX"]}
+      },
       "patchSetCommitId": "be8069dcb01b666cea6ea19d138d81b9a59d8131",
       "legacy": {
         "value": false
@@ -41,7 +47,7 @@
       },
       "applicabilityExpressionResult": {},
       "submittabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"label:Code-Review=MAX AND -label:Code-Review=MIN"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":["label:Code-Review=MIN"],"failingAtoms":["label:Code-Review=MAX"]}
+        "value": {"expression":{"expressionString":"label:Code-Review=MAX AND -label:Code-Review=MIN"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["label:Code-Review=MAX","label:Code-Review=MIN"]}
       },
       "overrideExpressionResult": {},
       "patchSetCommitId": "be8069dcb01b666cea6ea19d138d81b9a59d8131",
@@ -61,14 +67,20 @@
         "submittabilityExpression": {
           "expressionString": "label:Works\u003dMAX AND -label:Works\u003dMIN"
         },
-        "overrideExpression": {},
+        "overrideExpression": {
+          "value": {
+            "expressionString": "label:Works\u003d0 AND label:Bypass-Verification\u003dMAX"
+          }
+        },
         "allowOverrideInChildProjects": true
       },
       "applicabilityExpressionResult": {},
       "submittabilityExpressionResult": {
         "value": {"expression":{"expressionString":"label:Works=MAX AND -label:Works=MIN"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["label:Works=MAX","label:Works=MIN"]}
       },
-      "overrideExpressionResult": {},
+      "overrideExpressionResult": {
+        "value": {"expression":{"expressionString":"label:Works=0 AND label:Bypass-Verification=MAX"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":["label:Works=0"],"failingAtoms":["label:Bypass-Verification=MAX"]}
+      },
       "patchSetCommitId": "be8069dcb01b666cea6ea19d138d81b9a59d8131",
       "legacy": {
         "value": false
