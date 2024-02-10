@@ -7,8 +7,6 @@
     <string name="bootloader_warning_title">אזהרת נעילת טוען המערכת</string>
     <string name="reboot">הפעלה מחדש</string>
     <string name="bootloader_warning_summary">טוען המערכת (ה־Bootloader) אינו נעול כרגע. נא לנעול את טוען המערכת דרך המחשב. יש לבקר בכתובת <a href="https://calyxos.org/lock">calyxos.org/lock</a> למידע נוסף.</string>
-    <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
-\n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
     <string name="microg_defaults_switch_label">תמיכה בהתראות בדחיפה</string>
     <string name="microg_description2">microG היא חלופה בקוד פתוח ל <b>שירותי Google Play</b> (והתוכנה העוטפת), אך היא כוללת את החלקים החיוניים בלבד. בניגוד לשירותי Play, ב־microG אין פרסום או מעקב אחר המיקום, למשל.</string>
     <string name="microg_switch_label2">תאימות עם שירותי Google</string>

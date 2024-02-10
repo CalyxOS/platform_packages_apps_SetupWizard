@@ -9,8 +9,6 @@
     <string name="microg_defaults_switch_label">Supporto notifiche push</string>
     <string name="microg_defaults_summary">Consenti alle app di registrarsi per le notifiche push con Google. Questo registra il dispositivo ai servizi Google, senza alcun identificatore univoco specifico del dispositivo. Questo può essere abilitato in seguito dalle impostazioni di microG, tuttavia qualsiasi setup di applicazione eseguito in precedenza dovrà essere reinstallato per funzionare correttamente.</string>
     <string name="euicc_summary">Puoi anche aggiungere una eSIM al tuo dispositivo.</string>
-    <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
-\n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
     <string name="setup_euicc">Inizializza eSIM</string>
     <string name="bootloader_warning_title">Avviso blocco bootloader</string>
 </resources>

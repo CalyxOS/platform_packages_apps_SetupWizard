@@ -7,8 +7,6 @@
     <string name="reboot">Neustart</string>
     <string name="bootloader_warning_title">Warnung Bootloader-Sperre</string>
     <string name="bootloader_warning_summary">Der Bootloader dieses Geräts ist derzeit entsperrt. Bitte sperre den Bootloader von einem Computer aus. Besuche <a href="https://calyxos.org/lock">calyxos.org/lock</a> für weitere Informationen.</string>
-    <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
-\n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
     <string name="microg_description2">microG ist ein Open-Source-Ersatz für <b>Google Play Services</b> (und zugehörige Software), enthält aber nur die nützlichen Teile. Im Gegensatz zu Play Services enthält microG zum Beispiel keine Werbung oder Standortverfolgung.</string>
     <string name="microg_switch_label2">Kompatibilität mit Google-Diensten</string>
     <string name="microg_defaults_switch_label">Unterstützung für Push-Benachrichtigungen</string>

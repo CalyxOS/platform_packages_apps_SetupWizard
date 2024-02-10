@@ -9,8 +9,6 @@
     <string name="microg_switch_label2">Zgodność z usługami Google</string>
     <string name="microg_defaults_switch_label">Obsługa powiadomień push</string>
     <string name="bootloader_warning_summary">Bootloader tego urządzenia jest obecnie odblokowany. Proszę zablokować bootloader za pomocą komputera. Odwiedź <a href="https://calyxos.org/lock">calyxos.org/lock</a> aby uzyskać więcej informacji.</string>
-    <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
-\n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
     <string name="bootloader_warning_title">Ostrzeżenie o blokadzie bootloadera</string>
     <string name="microg_defaults_summary">Zezwalaj aplikacjom na rejestrowanie się w Google w celu otrzymywania powiadomień push. To rejestruje urządzenie do usług Google, bez żadnych unikalnych identyfikatorów specyficznych dla urządzenia. Można to włączyć później w Ustawieniach microG, jednak wszelkie aplikacje skonfigurowane wcześniej będą musiały zostać ponownie zainstalowane, aby działały prawidłowo.</string>
     <string name="setup_managed_profile_welcome_message">Ustaw swój profil zawodowy</string>

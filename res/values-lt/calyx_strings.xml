@@ -4,8 +4,6 @@
     <string name="euicc_summary">Prie savo prietaiso taip pat galite pridėti „eSIM“.</string>
     <string name="microg_description">Tai leidžia tokias programėles kaip <b> „Google“ žemėlapiai, „Youtube“ ir pavežėjų dalijimosi paslaugos </b> naudoti „CalyxOS“. Išjunkite tai, jei neplanuojate naudoti programėlių, kurioms reikia „Google“ paslaugų. Vėliau to įjungti negalėsite.</string>
     <string name="microg_title">„Google“ paslaugos</string>
-    <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
-\n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
     <string name="reboot">Perkrauti</string>
     <string name="bootloader_warning_title">„Bootloader” užrakto įspėjimas</string>
     <string name="bootloader_warning_summary">Šio įrenginio „Bootloader” šiuo metu atrakintas. Užrakinkite „Bootloader” iš kompiuterio. Norėdami gauti daugiau informacijos, apsilankykite <a href="https://calyxos.org/lock">calyxos.org/lock</a>.</string>

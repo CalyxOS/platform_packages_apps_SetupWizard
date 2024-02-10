@@ -7,8 +7,6 @@
     <string name="bootloader_warning_title">Предупреждение о блокировке загрузчика</string>
     <string name="reboot">Перезагрузка</string>
     <string name="bootloader_warning_summary">Загрузчик этого устройства разблокирован. Пожалуйста, заблокируйте загрузчик через компьютер. Посетите <a href="https://calyxos.org/lock">calyxos.org/lock</a> для получения дополнительной информации.</string>
-    <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
-\n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
     <string name="microg_description2">microG — это замена <b>Сервисов Google Play</b> (и связанного с ними программного обеспечения) с открытым исходным кодом, но содержащая только полезные части. Например, в отличие от Play Services, в microG нет рекламы или отслеживания местоположения.</string>
     <string name="microg_defaults_switch_label">Поддержка push-уведомлений</string>
     <string name="microg_defaults_summary">Разрешить приложениям регистрироваться для получения push-уведомлений в Google. Это регистрирует ваше устройство в службах Google без каких-либо уникальных идентификаторов устройства. Это можно включить позже в настройках microG, однако для правильной работы любые установленные ранее приложения необходимо будет переустановить.</string>

@@ -7,8 +7,6 @@
     <string name="reboot">Yeniden başlat</string>
     <string name="bootloader_warning_title">Önyükleyici kilidi uyarısı</string>
     <string name="bootloader_warning_summary">Bu aygıtın önyükleyicisinin kilidi şu anda açık. Lütfen önyükleyiciyi bir bilgisayardan kilitleyin. Daha fazla bilgi için <a href="https://calyxos.org/lock">calyxos.org/lock</a> adresini ziyaret edin.</string>
-    <string name="sim_missing_full_description"><xliff:g id="sim_missing_summary">%1$s</xliff:g>
-\n<xliff:g id="euicc_summary">%2$s</xliff:g></string>
     <string name="microg_switch_label2">Google Hizmetleri Uyumluluğu</string>
     <string name="microg_description2">microG, <b>Google Play hizmetleri</b> (ve ilgili yazılımlar) için açık kaynaklı bir alternatiftir, ancak yalnızca yararlı kısımları içerir. Play hizmetlerinin aksine, microG\'de örneğin herhangi bir reklam veya konum takibi yoktur.</string>
     <string name="microg_defaults_switch_label">Anlık bildirim desteği</string>
