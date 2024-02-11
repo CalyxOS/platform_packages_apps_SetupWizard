@@ -12,4 +12,6 @@
     <string name="microg_description2">microG 是 <b>Google Play Services</b> (以及相关软件) 的开源替代，只包含有用部分。 和 Play Services 不同，microG 不含任何广告或位置跟踪。</string>
     <string name="microg_defaults_summary">允许应用注册 Google 推送通知。这会将你的设备注册到 Google 服务，不包含特定于设备的唯一标识符。可以稍后在 microG 设置中启用它，但是之前安装的任何应用都需要重新安装才能正常工作。</string>
     <string name="setup_managed_profile_welcome_message">设置工作配置文件</string>
+    <string name="microg_location_switch_label">网络位置</string>
+    <string name="microg_location_summary">通过查询 MLS（Mozilla 位置服务）获取附近的 WiFi 和蜂窝网络位置，使用 Nominatim 进行地址查询并记住附近网络的 GPS 坐标来改进位置服务。稍后你可以在 microG 设置中更精细地定制这些选项。</string>
 </resources>

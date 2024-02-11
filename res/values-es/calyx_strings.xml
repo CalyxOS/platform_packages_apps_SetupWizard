@@ -12,4 +12,6 @@
     <string name="microg_switch_label2">Compatibilidad con los servicios de Google</string>
     <string name="microg_defaults_summary">Permita que las aplicaciones se registren para recibir notificaciones automáticas con Google. Esto registra su dispositivo con los servicios de Google, sin un identificador único específico para el dispositivo. Esto se puede habilitar más tarde desde la configuración de microG, sin embargo, cualquier aplicación que se haya configurado previamente deberá reinstalarse para que funcione correctamente.</string>
     <string name="setup_managed_profile_welcome_message">Configura tu perfil de trabajo</string>
+    <string name="microg_location_switch_label">Ubicación de la red</string>
+    <string name="microg_location_summary">Mejora los servicios de localización consultando MLS (Mozilla Location Services) con redes Wi-Fi y celulares cercanas, utilizando Nominatim para la búsqueda de direcciones y recordando las coordenadas GPS de las redes cercanas. Puedes personalizar estas opciones de forma más detallada en los Ajustes de microG más adelante.</string>
 </resources>
