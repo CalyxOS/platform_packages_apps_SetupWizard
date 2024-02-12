@@ -69,6 +69,24 @@
       "parentUuid": "5feb5bde_6df51b78",
       "revId": "5f189a34a9bfa3bbc2997537a11252dd55b03276",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bc6e4f93_9896b032",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-12T19:40:08Z",
+      "side": 1,
+      "message": "This all appears to be working fine with the not-yet-merged upstream chain here: https://review.lineageos.org/c/LineageOS/android_packages_apps_SetupWizard/+/379258/11\n\nSince SUW doesn\u0027t get re-launched, it doesn\u0027t break status bar and such when launching again. And it ends up disabling the app within a worker, after everything else has been done.",
+      "parentUuid": "638c632f_20da2a8f",
+      "revId": "5f189a34a9bfa3bbc2997537a11252dd55b03276",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
