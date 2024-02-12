@@ -55,10 +55,13 @@ import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
+import com.google.android.setupcompat.util.WizardManagerHelper;
+
 import org.lineageos.setupwizard.BiometricActivity;
 import org.lineageos.setupwizard.BluetoothSetupActivity;
 import org.lineageos.setupwizard.BootloaderWarningActivity;
 import org.lineageos.setupwizard.NetworkSetupActivity;
+import org.lineageos.setupwizard.SetupWizardActivity;
 import org.lineageos.setupwizard.SetupWizardApp;
 import org.lineageos.setupwizard.SimMissingActivity;
 import org.lineageos.setupwizard.wizardmanager.WizardManager;
@@ -213,6 +216,20 @@ public class SetupWizardUtils {
         enableStatusBar(context);
 
         sendMicroGCheckInBroadcast(context);
+    }
+
+    public static boolean isSetupWizardComplete(Context context) {
+        if (!isManagedProfile(context) && WizardManagerHelper.isUserSetupComplete(context)) {
+            return true;
+        }
+        final int enabledSetting = context.getPackageManager().getComponentEnabledSetting(
+                new ComponentName(context, SetupWizardActivity.class));
+        switch (enabledSetting) {
+            case COMPONENT_ENABLED_STATE_DEFAULT:
+            case COMPONENT_ENABLED_STATE_ENABLED:
+                return false;
+        }
+        return true;
     }
 
     public static boolean isBluetoothDisabled() {
