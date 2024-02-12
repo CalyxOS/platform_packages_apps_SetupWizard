@@ -51,6 +51,9 @@ class SetupWizardApp : Application() {
         if (LOGV) {
             Log.v(TAG, "onCreate()")
         }
+        if (SetupWizardUtils.isSetupWizardComplete(this)) {
+            return
+        }
         statusBarManager = SetupWizardUtils.disableStatusBar(this)
         handler.postDelayed(radioTimeoutRunnable, RADIO_READY_TIMEOUT.toLong())
         // If the bootloader is locked, and OEM unlocking is allowed, turn it off
