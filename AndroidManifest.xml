@@ -193,7 +193,7 @@
             android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
-            android:exported="true"
+            android:exported="false"
             android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="org.lineageos.setupwizard.NAVIGATION_SETTINGS" />
@@ -235,7 +235,7 @@
             android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
-            android:exported="true"
+            android:exported="false"
             android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="org.lineageos.setupwizard.LINEAGE_RESTORE_BACKUP" />
@@ -249,7 +249,7 @@
             android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
-            android:exported="true"
+            android:exported="false"
             android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="org.lineageos.setupwizard.THEME_SETTINGS" />
@@ -264,7 +264,7 @@
             android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
-            android:exported="true"
+            android:exported="false"
             android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="org.lineageos.setupwizard.LINEAGE_SETUP_COMPLETE" />
