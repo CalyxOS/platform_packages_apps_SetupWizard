@@ -16,6 +16,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.content.om.IOverlayManager
 import android.content.pm.PackageManager
+import android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_DEFAULT
 import android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_DISABLED
 import android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_ENABLED
 import android.content.pm.PackageManager.DONT_KILL_APP
@@ -40,6 +41,7 @@ import com.google.android.setupcompat.util.ResultCodes.RESULT_SKIP
 import org.json.JSONObject
 import org.lineageos.setupwizard.LOGV
 import org.lineageos.setupwizard.NAVIGATION_OPTION_KEY
+import org.lineageos.setupwizard.SetupWizardActivity
 import org.lineageos.setupwizard.SetupWizardApp
 import org.lineageos.setupwizard.base.BaseSetupWizardActivity
 
@@ -192,6 +194,24 @@ object SetupWizardUtils {
         context.finishAffinity()
         context.nextAction(RESULT_SKIP)
         Log.i(TAG, "Setup complete!")
+    }
+
+    fun isSetupWizardComplete(context: Context): Boolean {
+        val userSetupComplete =
+            Settings.Secure.getInt(context.contentResolver, Settings.Secure.USER_SETUP_COMPLETE, 0)
+        return if (userSetupComplete != 0 && !isManagedProfile(context)) {
+            true
+        } else {
+            val enabledSetting =
+                context.packageManager.getComponentEnabledSetting(
+                    ComponentName(context, SetupWizardActivity::class.java)
+                )
+            when (enabledSetting) {
+                COMPONENT_ENABLED_STATE_DEFAULT,
+                COMPONENT_ENABLED_STATE_ENABLED -> false
+                else -> true
+            }
+        }
     }
 
     fun isBluetoothDisabled(): Boolean =
