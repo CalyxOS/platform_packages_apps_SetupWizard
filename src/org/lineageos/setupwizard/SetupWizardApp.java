@@ -116,6 +116,9 @@ public class SetupWizardApp extends Application {
         if (LOGV) {
             Log.v(TAG, "onCreate()");
         }
+        if (SetupWizardUtils.isSetupWizardComplete(this)) {
+            return;
+        }
         NetworkMonitor.initInstance(this);
         PhoneMonitor.initInstance(this);
         SetupWizardUtils.disableComponentsForMissingFeatures(this);
