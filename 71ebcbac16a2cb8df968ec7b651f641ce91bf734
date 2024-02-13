@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "558b7602_3bda6e35",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-13T14:42:53Z",
+      "side": 1,
+      "message": "Added hashtag for send-upstream, but Oliver has pointed out that LineageOS with GMS *might* need those activities to be exported for some reason, so when sending upstream, it should be noted that that will need to be tested.",
+      "revId": "71ebcbac16a2cb8df968ec7b651f641ce91bf734",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
