@@ -21,7 +21,6 @@ import static com.google.android.setupcompat.util.ResultCodes.RESULT_SKIP;
 
 import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 import static org.lineageos.setupwizard.SetupWizardApp.NAVIGATION_OPTION_KEY;
-import static org.lineageos.setupwizard.SetupWizardApp.PACKAGE_INSTALLERS;
 
 import android.app.AppOpsManager;
 import android.app.StatusBarManager;
@@ -78,7 +77,12 @@ public class SetupWizardUtils {
 
     private static final String PROP_BUILD_DATE = "ro.build.date.utc";
 
+    private static final String AURORA_SERVICES_PACKAGE = "com.aurora.services";
     private static final String AURORA_STORE_PACKAGE = "com.aurora.store";
+    private static final String FDROID_BASIC_PACKAGE = "org.fdroid.basic";
+    private static final String FDROID_PRIVEXT_PACKAGE = "org.fdroid.fdroid.privileged";
+    private static final List<String> PACKAGE_INSTALLERS =
+            List.of(FDROID_BASIC_PACKAGE, AURORA_STORE_PACKAGE);
 
     private SetupWizardUtils() {
     }
@@ -183,6 +187,7 @@ public class SetupWizardUtils {
 
         handleNavigationOption();
         provisionDefaultUserAppPermissions(context);
+        disableLegacyApps(context);
         sendMicroGCheckInBroadcast(context);
         WallpaperManager.getInstance(context).forgetLoadedWallpaper();
         disableHome(context);
@@ -361,6 +366,14 @@ public class SetupWizardUtils {
         } catch (RemoteException e) {
             Log.e(TAG, "Failed to add " + AURORA_STORE_PACKAGE + " to power save allowlist", e);
         }
+    }
+
+
+    public static void disableLegacyApps(Context context) {
+        context.getPackageManager().setApplicationEnabledSetting(AURORA_SERVICES_PACKAGE,
+                COMPONENT_ENABLED_STATE_DISABLED, 0);
+        context.getPackageManager().setApplicationEnabledSetting(FDROID_PRIVEXT_PACKAGE,
+                COMPONENT_ENABLED_STATE_DISABLED, 0);
     }
 
     public static long getBuildDateTimestamp() {
