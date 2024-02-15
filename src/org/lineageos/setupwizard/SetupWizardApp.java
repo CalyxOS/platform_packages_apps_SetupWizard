@@ -84,6 +84,7 @@ public class SetupWizardApp extends Application {
     public static final String AURORA_SERVICES_PACKAGE = "com.aurora.services";
     public static final String AURORA_STORE_PACKAGE = "com.aurora.store";
     public static final String FDROID_BASIC_PACKAGE = "org.fdroid.basic";
+    public static final String FDROID_PRIVEXT_PACKAGE = "org.fdroid.fdroid.privileged";
     public static final List<String> PACKAGE_INSTALLERS =
             List.of(FDROID_BASIC_PACKAGE, AURORA_STORE_PACKAGE);
 
@@ -198,5 +199,12 @@ public class SetupWizardApp extends Application {
                 Log.e(TAG, "Failed to grant post notifications permission to " + packageName, e);
             }
         }
+    }
+
+    public void disableLegacyApps() {
+        context.getPackageManager().setApplicationEnabledSetting(AURORA_STORE_PACKAGE,
+                COMPONENT_ENABLED_STATE_DISABLED, 0);
+        context.getPackageManager().setApplicationEnabledSetting(FDROID_PRIVEXT_PACKAGE,
+                COMPONENT_ENABLED_STATE_DISABLED, 0);
     }
 }
