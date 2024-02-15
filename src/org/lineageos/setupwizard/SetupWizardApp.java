@@ -42,12 +42,6 @@ public class SetupWizardApp extends Application {
 
     public static final String NAVIGATION_OPTION_KEY = "navigation_option";
 
-    public static final String AURORA_SERVICES_PACKAGE = "com.aurora.services";
-    public static final String AURORA_STORE_PACKAGE = "com.aurora.store";
-    public static final String FDROID_BASIC_PACKAGE = "org.fdroid.basic";
-    public static final List<String> PACKAGE_INSTALLERS =
-            List.of(FDROID_BASIC_PACKAGE, AURORA_STORE_PACKAGE);
-
     public static final int RADIO_READY_TIMEOUT = 10 * 1000;
 
     private static StatusBarManager sStatusBarManager;
