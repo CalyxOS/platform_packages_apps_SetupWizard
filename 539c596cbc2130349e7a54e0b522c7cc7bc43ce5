@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96b5c4e9_746c0331",
+        "filename": "src/org/lineageos/setupwizard/SetupWizardApp.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-15T21:38:02Z",
+      "side": 1,
+      "message": "Should be `AURORA_SERVICES_PACKAGE`",
+      "revId": "539c596cbc2130349e7a54e0b522c7cc7bc43ce5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
