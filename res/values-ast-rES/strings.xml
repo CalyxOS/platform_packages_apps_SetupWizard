@@ -64,6 +64,7 @@
     <string name="lockscreen_setup_summary"><b>Protexi esti preséu</b> y riqui un PIN, una contraseña o un patrón pa desbloquiar la pantalla</string>
     <string name="lockscreen_setup_screen_lock_setup">Configurar</string>
     <string name="intro_restore_title">Restauración d\'aplicaciones y datos</string>
+    <string name="intro_restore_subtitle">Si tienes dalguna copia de seguranza de <xliff:g id="name" example="LineageOS">%s</xliff:g> pal preséu, pues restaurala equí.</string>
     <string name="update_recovery_title">Anovar el recovery de Lineage</string>
     <string name="update_recovery_description">Anueva\'l recovery de Lineage nel primer arrinque de cada anovamientu.</string>
     <string name="update_recovery_warning">El recovery anuévase namás que fine la configuración. Si nun lu quies tocar, desactiva esta función.</string>
@@ -75,5 +76,5 @@
     <string name="two_button_navigation">Navegación con dos botones</string>
     <string name="navbar_navigation">Navegación con trés botones</string>
     <string name="hide_gesture_hint">Anubrir l\'indicador de la navegación xestual</string>
-    <string name="location_agps_access_summary">Al activar la llocalización, <b>baxa los datos d\'asistencia satelitales d\'internet</b> que puen ameyorar muncho el rindimientu inicial del GPS</string>
+    <string name="location_agps_access_summary">Al activar la llocalización, <b>baxa los datos d\'asistencia satelitales d\'internet</b> que puen ameyorar muncho\'l rindimientu inicial del GPS</string>
 </resources>
