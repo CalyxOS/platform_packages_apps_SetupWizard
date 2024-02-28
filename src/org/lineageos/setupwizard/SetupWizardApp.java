@@ -6,6 +6,7 @@
 
 package org.lineageos.setupwizard;
 
+import static android.os.UserHandle.USER_CURRENT;
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
 
 import android.app.AppOpsManager;

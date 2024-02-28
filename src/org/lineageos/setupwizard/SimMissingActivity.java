@@ -6,8 +6,6 @@
 
 package org.lineageos.setupwizard;
 
-import static org.lineageos.setupwizard.SetupWizardApp.REQUEST_CODE_SETUP_EUICC;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -77,10 +75,8 @@ public class SimMissingActivity extends SubBaseActivity {
     private void launchEuiccSetup() {
         Intent intent = new Intent(EuiccService.ACTION_PROVISION_EMBEDDED_SUBSCRIPTION);
         intent.putExtra(EuiccManager.EXTRA_FORCE_PROVISION, true);
-        intent.putExtra(WizardManagerHelper.EXTRA_IS_FIRST_RUN, true);
-        intent.putExtra(WizardManagerHelper.EXTRA_IS_SETUP_FLOW, true);
         if (intent.resolveActivity(getPackageManager()) != null) {
-            startSubactivity(intent, REQUEST_CODE_SETUP_EUICC);
+            startSubactivity(intent);
         } else {
             Log.e(TAG, "No activity available to handle " + intent.getAction());
         }
