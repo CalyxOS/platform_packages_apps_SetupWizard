@@ -1,17 +1,6 @@
 /*
- * Copyright (C) 2022-2023 The LineageOS Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-FileCopyrightText: 2022-2024 The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 package org.lineageos.setupwizard;
@@ -26,27 +15,20 @@ import static org.lineageos.setupwizard.SetupWizardApp.NAVIGATION_OPTION_KEY;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.content.Context;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.google.android.setupcompat.util.WizardManagerHelper;
 
 import lineageos.providers.LineageSettings;
 
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
 public class NavigationSettingsActivity extends BaseSetupWizardActivity {
-
-    public static final String TAG = NavigationSettingsActivity.class.getSimpleName();
 
     private SetupWizardApp mSetupWizardApp;
 
@@ -89,8 +71,7 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
         if (available <= 1) {
             mSetupWizardApp.getSettingsBundle().putString(NAVIGATION_OPTION_KEY,
                     NAV_BAR_MODE_3BUTTON_OVERLAY);
-            Intent intent = WizardManagerHelper.getNextIntent(getIntent(), Activity.RESULT_OK);
-            finishAction(RESULT_OK, intent);
+            finishAction(RESULT_OK);
         }
 
         final LottieAnimationView navigationIllustration =
@@ -103,10 +84,8 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
             mHideGesturalHint.setVisibility(View.GONE);
         }
 
-        radioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch (checkedId) {
+        radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
+            switch (checkedId) {
                 case R.id.radio_gesture:
                     mSelection = NAV_BAR_MODE_GESTURAL_OVERLAY;
                     navigationIllustration
@@ -123,16 +102,15 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
                     navigationIllustration.setAnimation(R.raw.lottie_system_nav_3_button);
                     hideHintCheckBox();
                     break;
-                }
-
-                navigationIllustration.playAnimation();
             }
+
+            navigationIllustration.playAnimation();
         });
     }
 
     private void revealHintCheckbox() {
         if (mIsTaskbarEnabled) {
-           return;
+            return;
         }
 
         mHideGesturalHint.animate().cancel();
@@ -144,14 +122,14 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
         mHideGesturalHint.setVisibility(View.VISIBLE);
         mHideGesturalHint.setAlpha(0.0f);
         mHideGesturalHint.animate()
-            .translationY(0)
-            .alpha(1.0f)
-            .setListener(null);
+                .translationY(0)
+                .alpha(1.0f)
+                .setListener(null);
     }
 
     private void hideHintCheckBox() {
         if (mIsTaskbarEnabled) {
-           return;
+            return;
         }
 
         if (mHideGesturalHint.getVisibility() == View.INVISIBLE) {
@@ -159,15 +137,15 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
         }
 
         mHideGesturalHint.animate()
-            .translationY(-mHideGesturalHint.getHeight())
-            .alpha(0.0f)
-            .setListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    super.onAnimationEnd(animation);
-                    mHideGesturalHint.setVisibility(View.INVISIBLE);
-                }
-            });
+                .translationY(-mHideGesturalHint.getHeight())
+                .alpha(0.0f)
+                .setListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        mHideGesturalHint.setVisibility(View.INVISIBLE);
+                    }
+                });
     }
 
     @Override
@@ -179,8 +157,7 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
                     LineageSettings.System.NAVIGATION_BAR_HINT, hideHint ? 0 : 1,
                     UserHandle.USER_CURRENT);
         }
-        Intent intent = WizardManagerHelper.getNextIntent(getIntent(), Activity.RESULT_OK);
-        nextAction(NEXT_REQUEST, intent);
+        super.onNextPressed();
     }
 
     @Override

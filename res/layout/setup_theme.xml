@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     SPDX-FileCopyrightText: 2015 The CyanogenMod Project
-     SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
+     SPDX-FileCopyrightText: 2023 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <com.google.android.setupdesign.GlifLayout
@@ -14,7 +13,8 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        style="@style/SudContentFrame">
+        style="@style/SudContentFrame"
+        android:layout_marginTop="@dimen/base_margin_top">
 
         <FrameLayout
             android:id="@+id/page"
@@ -22,28 +22,28 @@
             android:layout_height="0dp"
             android:layout_weight="1">
 
-            <LinearLayout
-                android:orientation="vertical"
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:fillViewport="true">
 
-                <LinearLayout
+                <RadioGroup
+                    android:id="@+id/theme_radio_group"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content">
 
-                    <Button
-                        android:id="@+id/setup_euicc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/setup_euicc"
-                        style="@style/SudGlifButton.Primary" />
+                    <RadioButton
+                        android:id="@+id/radio_dark"
+                        android:text="@string/dark"
+                        style="@style/SudRadioButton" />
 
-                </LinearLayout>
-            </LinearLayout>
+                    <RadioButton
+                        android:id="@+id/radio_light"
+                        android:text="@string/light"
+                        style="@style/SudRadioButton" />
+
+                </RadioGroup>
+            </ScrollView>
         </FrameLayout>
 
         <org.lineageos.setupwizard.NavigationLayout

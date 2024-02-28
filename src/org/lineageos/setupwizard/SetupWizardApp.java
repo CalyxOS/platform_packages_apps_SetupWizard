@@ -1,48 +1,32 @@
 /*
- * Copyright (C) 2013 The CyanogenMod Project
- * Copyright (C) 2017-2022 The LineageOS Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-FileCopyrightText: 2013 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 package org.lineageos.setupwizard;
 
-import static android.os.UserHandle.USER_CURRENT;
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
 
 import android.app.AppOpsManager;
 import android.app.Application;
 import android.app.StatusBarManager;
-import android.app.job.JobInfo;
-import android.app.job.JobScheduler;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.om.IOverlayManager;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Process;
 import android.os.ServiceManager;
-import android.os.UserHandle;
 import android.permission.PermissionManager;
+import android.provider.Settings;
 import android.service.oemlock.OemLockManager;
 import android.util.Log;
 
-import java.util.List;
-
-import org.lineageos.setupwizard.util.NetworkMonitor;
-import org.lineageos.setupwizard.util.PhoneMonitor;
 import org.lineageos.setupwizard.util.SetupWizardUtils;
+
+import java.util.List;
 
 public class SetupWizardApp extends Application {
 
@@ -52,24 +36,18 @@ public class SetupWizardApp extends Application {
 
     public static final String ACTION_ACCESSIBILITY_SETTINGS =
             "android.settings.ACCESSIBILITY_SETTINGS_FOR_SUW";
+    public static final String ACTION_FINISHED = "org.lineageos.setupwizard.SETUP_FINISHED";
     public static final String ACTION_SETUP_COMPLETE =
             "org.lineageos.setupwizard.LINEAGE_SETUP_COMPLETE";
-    public static final String ACTION_FINISHED = "org.lineageos.setupwizard.SETUP_FINISHED";
     public static final String ACTION_SETUP_NETWORK = "android.settings.NETWORK_PROVIDER_SETUP";
-    public static final String ACTION_APPS_INSTALLED =
-            "org.lineageos.setupwizard.LINEAGE_APPS_INSTALLED";
     public static final String ACTION_SETUP_BIOMETRIC = "android.settings.BIOMETRIC_ENROLL";
     public static final String ACTION_SETUP_LOCKSCREEN = "com.android.settings.SETUP_LOCK_SCREEN";
     public static final String ACTION_SETUP_INSTALL = "org.calyxos.lupin.INSTALL";
     public static final String ACTION_RESTORE_FROM_BACKUP =
             "com.stevesoltys.seedvault.RESTORE_BACKUP";
     public static final String ACTION_EMERGENCY_DIAL = "com.android.phone.EmergencyDialer.DIAL";
-    public static final String ACTION_NEXT = "com.android.wizard.NEXT";
     public static final String ACTION_LOAD = "com.android.wizard.LOAD";
 
-    public static final String EXTRA_HAS_MULTIPLE_USERS = "hasMultipleUsers";
-    public static final String EXTRA_TITLE = "title";
-    public static final String EXTRA_DETAILS = "details";
     public static final String EXTRA_SCRIPT_URI = "scriptUri";
     public static final String EXTRA_ACTION_ID = "actionId";
     public static final String EXTRA_RESULT_CODE = "com.android.setupwizard.ResultCode";
@@ -79,8 +57,6 @@ public class SetupWizardApp extends Application {
     public static final String EXTRA_PREFS_SET_BACK_TEXT = "extra_prefs_set_back_text";
     public static final String EXTRA_ENABLE_NEXT_ON_CONNECT = "wifi_enable_next_on_connect";
 
-    public static final String KEY_DETECT_CAPTIVE_PORTAL = "captive_portal_detection_enabled";
-
     public static final String AURORA_SERVICES_PACKAGE = "com.aurora.services";
     public static final String AURORA_STORE_PACKAGE = "com.aurora.store";
     public static final String FDROID_BASIC_PACKAGE = "org.fdroid.basic";
@@ -88,15 +64,6 @@ public class SetupWizardApp extends Application {
             List.of(FDROID_BASIC_PACKAGE, AURORA_STORE_PACKAGE);
 
     public static final String NAVIGATION_OPTION_KEY = "navigation_option";
-
-    public static final int REQUEST_CODE_SETUP_NETWORK = 0;
-    public static final int REQUEST_CODE_SETUP_CAPTIVE_PORTAL = 4;
-    public static final int REQUEST_CODE_SETUP_BLUETOOTH = 5;
-    public static final int REQUEST_CODE_SETUP_BIOMETRIC = 7;
-    public static final int REQUEST_CODE_SETUP_LOCKSCREEN = 9;
-    public static final int REQUEST_CODE_SETUP_INSTALL = 10;
-    public static final int REQUEST_CODE_RESTORE = 11;
-    public static final int REQUEST_CODE_SETUP_EUICC = 12;
 
     public static final int RADIO_READY_TIMEOUT = 10 * 1000;
 
@@ -106,7 +73,7 @@ public class SetupWizardApp extends Application {
     private boolean mIgnoreSimLocale = false;
 
     private final Bundle mSettingsBundle = new Bundle();
-    private final Handler mHandler = new Handler();
+    private final Handler mHandler = new Handler(Looper.getMainLooper());
 
     private final Runnable mRadioTimeoutRunnable = () -> mIsRadioReady = true;
 
@@ -119,8 +86,6 @@ public class SetupWizardApp extends Application {
         if (SetupWizardUtils.isSetupWizardComplete(this)) {
             return;
         }
-        NetworkMonitor.initInstance(this);
-        PhoneMonitor.initInstance(this);
         SetupWizardUtils.disableComponentsForMissingFeatures(this);
         if (SetupWizardUtils.isOwner()) {
             SetupWizardUtils.setMobileDataEnabled(this, false);
@@ -147,23 +112,18 @@ public class SetupWizardApp extends Application {
                     AURORA_SERVICES_PACKAGE,
                     AppOpsManager.MODE_ALLOWED);
         } catch (PackageManager.NameNotFoundException e) {
-
+        }
+        if (SetupWizardUtils.hasGMS(this)) {
+            SetupWizardUtils.disableHome(this);
+            if (SetupWizardUtils.isOwner()) {
+                Settings.Global.putInt(getContentResolver(),
+                        Settings.Global.ASSISTED_GPS_ENABLED, 1);
+            }
         }
     }
 
     public static StatusBarManager getStatusBarManager() {
         return sStatusBarManager;
-    }
-
-    public boolean isRadioReady() {
-        return mIsRadioReady;
-    }
-
-    public void setRadioReady(boolean radioReady) {
-        if (!mIsRadioReady && radioReady) {
-            mHandler.removeCallbacks(mRadioTimeoutRunnable);
-        }
-        mIsRadioReady = radioReady;
     }
 
     public boolean ignoreSimLocale() {

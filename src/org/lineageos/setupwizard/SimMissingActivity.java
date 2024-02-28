@@ -1,18 +1,7 @@
 /*
- * Copyright (C) 2016 The CyanogenMod Project
- *               2017-2022 The LineageOS Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 package org.lineageos.setupwizard;
@@ -28,14 +17,11 @@ import android.telephony.euicc.EuiccManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import com.google.android.setupcompat.template.FooterButtonStyleUtils;
-import com.google.android.setupcompat.util.ResultCodes;
 import com.google.android.setupcompat.util.WizardManagerHelper;
 
-import org.lineageos.setupwizard.util.NetworkMonitor;
-import org.lineageos.setupwizard.util.PhoneMonitor;
+import org.lineageos.setupwizard.util.SetupWizardUtils;
 
 public class SimMissingActivity extends SubBaseActivity {
 
@@ -47,13 +33,10 @@ public class SimMissingActivity extends SubBaseActivity {
     private static final String KEY_ENABLE_ESIM_UI_BY_DEFAULT =
             "esim.enable_esim_system_ui_by_default";
 
-    private PhoneMonitor mPhoneMonitor;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mPhoneMonitor = PhoneMonitor.getInstance();
-        if (!mPhoneMonitor.simMissing()) {
+        if (!SetupWizardUtils.simMissing(this)) {
             finishAction(RESULT_OK);
         }
     }
@@ -62,7 +45,7 @@ public class SimMissingActivity extends SubBaseActivity {
     protected void onStartSubactivity() {
         setNextAllowed(true);
         EuiccManager euiccManager = (EuiccManager) getSystemService(Context.EUICC_SERVICE);
-        if (euiccManager.isEnabled() && NetworkMonitor.getInstance().isNetworkConnected()
+        if (euiccManager.isEnabled() /*&& NetworkMonitor.getInstance().isNetworkConnected()*/
                 && SystemProperties.getBoolean(KEY_ENABLE_ESIM_UI_BY_DEFAULT, true)) {
             getGlifLayout().setDescriptionText(getString(R.string.sim_missing_full_description,
                     getString(R.string.sim_missing_summary),

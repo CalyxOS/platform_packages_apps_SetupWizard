@@ -1,24 +1,14 @@
 /*
- * Copyright (C) 2016 The CyanogenMod Project
- *               2017-2022 The LineageOS Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 package org.lineageos.setupwizard.wizardmanager;
 
+import static com.google.android.setupcompat.util.WizardManagerHelper.ACTION_NEXT;
+
 import static org.lineageos.setupwizard.SetupWizardApp.ACTION_LOAD;
-import static org.lineageos.setupwizard.SetupWizardApp.ACTION_NEXT;
 import static org.lineageos.setupwizard.SetupWizardApp.EXTRA_ACTION_ID;
 import static org.lineageos.setupwizard.SetupWizardApp.EXTRA_RESULT_CODE;
 import static org.lineageos.setupwizard.SetupWizardApp.EXTRA_SCRIPT_URI;
@@ -34,7 +24,6 @@ import android.util.Log;
 
 import com.google.android.setupcompat.util.ResultCodes;
 import com.google.android.setupcompat.util.WizardManagerHelper;
-import com.google.android.setupdesign.util.ThemeHelper;
 
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
@@ -44,7 +33,7 @@ public class WizardManager extends Activity {
 
     private static final String TAG = WizardManager.class.getSimpleName();
 
-    private static final HashMap<String, WizardScript> sWizardScripts = new HashMap();
+    private static final HashMap<String, WizardScript> sWizardScripts = new HashMap<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -101,6 +90,7 @@ public class WizardManager extends Activity {
 
         intent.putExtra(EXTRA_SCRIPT_URI, scriptUri);
         intent.putExtra(EXTRA_ACTION_ID, action.getId());
+        intent.addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
         startActivity(intent);
     }
 
@@ -184,8 +174,8 @@ public class WizardManager extends Activity {
     }
 
     private static boolean isIntentAvailable(Context context, Intent intent) {
-        return context.getPackageManager().queryIntentActivities(intent,
-                PackageManager.MATCH_DEFAULT_ONLY).size() > 0;
+        return !context.getPackageManager().queryIntentActivities(intent,
+                PackageManager.MATCH_DEFAULT_ONLY).isEmpty();
     }
 
     private static WizardScript getWizardScript(Context context, String scriptUri) {
