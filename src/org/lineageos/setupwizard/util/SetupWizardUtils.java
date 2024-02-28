@@ -1,32 +1,24 @@
 /*
- * Copyright (C) 2013 The CyanogenMod Project
- *               2017-2023 The LineageOS Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-FileCopyrightText: 2013 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 package org.lineageos.setupwizard.util;
 
 import static android.content.Context.MODE_PRIVATE;
-import static android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_DEFAULT;
 import static android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
 import static android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
 import static android.content.pm.PackageManager.DONT_KILL_APP;
 import static android.content.pm.PackageManager.GET_ACTIVITIES;
 import static android.content.pm.PackageManager.GET_RECEIVERS;
 import static android.content.pm.PackageManager.GET_SERVICES;
+import static android.telephony.TelephonyManager.PHONE_TYPE_GSM;
+import static android.telephony.TelephonyManager.SIM_STATE_ABSENT;
 
-import static org.lineageos.setupwizard.SetupWizardApp.KEY_DETECT_CAPTIVE_PORTAL;
+import static com.android.internal.telephony.PhoneConstants.LTE_ON_CDMA_TRUE;
+import static com.android.internal.telephony.PhoneConstants.LTE_ON_CDMA_UNKNOWN;
+
 import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 
 import android.app.StatusBarManager;
@@ -42,6 +34,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ServiceInfo;
 import android.hardware.biometrics.BiometricManager;
 import android.net.ConnectivityManager;
+import android.net.NetworkCapabilities;
 import android.os.Binder;
 import android.os.Build;
 import android.os.SystemProperties;
@@ -49,21 +42,25 @@ import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
 import android.service.oemlock.OemLockManager;
+import android.sysprop.TelephonyProperties;
 import android.telephony.ServiceState;
+import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import com.google.android.setupcompat.util.WizardManagerHelper;
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.OutOfQuotaPolicy;
+import androidx.work.WorkManager;
 
 import org.lineageos.setupwizard.BiometricActivity;
 import org.lineageos.setupwizard.BluetoothSetupActivity;
 import org.lineageos.setupwizard.BootloaderWarningActivity;
 import org.lineageos.setupwizard.NetworkSetupActivity;
-import org.lineageos.setupwizard.SetupWizardActivity;
+import org.lineageos.setupwizard.ScreenLockActivity;
 import org.lineageos.setupwizard.SetupWizardApp;
+import org.lineageos.setupwizard.SetupWizardExitWorker;
 import org.lineageos.setupwizard.SimMissingActivity;
-import org.lineageos.setupwizard.wizardmanager.WizardManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -89,14 +86,11 @@ public class SetupWizardUtils {
         TelephonyManager tm = context.getSystemService(TelephonyManager.class);
         if (tm.isMultiSimEnabled()) {
             int subId = SubscriptionManager.getDefaultDataSubscriptionId();
-            int phoneId = SubscriptionManager.from(context).getPhoneId(subId);
-            android.provider.Settings.Global.putInt(context.getContentResolver(),
-                    android.provider.Settings.Global.MOBILE_DATA + phoneId, enabled ? 1 : 0);
-            tm.createForSubscriptionId(subId).setDataEnabled(enabled);
+            int phoneId = SubscriptionManager.getPhoneId(subId);
+            tm.createForSubscriptionId(subId).setDataEnabledForReason(
+                    TelephonyManager.DATA_ENABLED_REASON_USER, enabled);
         } else {
-            android.provider.Settings.Global.putInt(context.getContentResolver(),
-                    android.provider.Settings.Global.MOBILE_DATA, enabled ? 1 : 0);
-            tm.setDataEnabled(enabled);
+            tm.setDataEnabledForReason(TelephonyManager.DATA_ENABLED_REASON_USER, enabled);
         }
     }
 
@@ -110,32 +104,12 @@ public class SetupWizardUtils {
         return packageManager.hasSystemFeature(PackageManager.FEATURE_TELEPHONY);
     }
 
-    public static boolean isRadioReady(Context context, ServiceState state) {
-        final SetupWizardApp setupWizardApp = (SetupWizardApp) context.getApplicationContext();
-        if (setupWizardApp.isRadioReady()) {
-            return true;
-        } else {
-            final boolean ready = state != null
-                    && state.getState() != ServiceState.STATE_POWER_OFF;
-            setupWizardApp.setRadioReady(ready);
-            return ready;
-        }
-    }
-
     public static boolean isOwner() {
         return UserHandle.myUserId() == 0;
     }
 
     public static boolean isManagedProfile(Context context) {
         return context.getSystemService(UserManager.class).isManagedProfile();
-    }
-
-    public static void disableCaptivePortalDetection(Context context) {
-        Settings.Global.putInt(context.getContentResolver(), KEY_DETECT_CAPTIVE_PORTAL, 0);
-    }
-
-    public static void enableCaptivePortalDetection(Context context) {
-        Settings.Global.putInt(context.getContentResolver(), KEY_DETECT_CAPTIVE_PORTAL, 1);
     }
 
     public static StatusBarManager disableStatusBar(Context context) {
@@ -152,9 +126,8 @@ public class SetupWizardUtils {
         return statusBarManager;
     }
 
-    public static void enableStatusBar(Context context) {
-        final SetupWizardApp setupWizardApp = (SetupWizardApp)context.getApplicationContext();
-        StatusBarManager statusBarManager = setupWizardApp.getStatusBarManager();
+    public static void enableStatusBar() {
+        StatusBarManager statusBarManager = SetupWizardApp.getStatusBarManager();
         if (statusBarManager != null) {
             if (LOGV) {
                 Log.v(SetupWizardApp.TAG, "Enabling status bar");
@@ -195,10 +168,33 @@ public class SetupWizardUtils {
         }
     }
 
+    public static void startSetupWizardExitProcedure(Context context) {
+        try {
+            WorkManager.getInstance(context).enqueue(new OneTimeWorkRequest.Builder(
+                    SetupWizardExitWorker.class).setExpedited(
+                    OutOfQuotaPolicy.RUN_AS_NON_EXPEDITED_WORK_REQUEST).build());
+        } catch (IllegalArgumentException e) {
+            // finishSetupWizard -- called by the exit worker -- disables components at the end,
+            // including the WorkManager component required here, so this is likely an error finding
+            // that component. The worker only needs to run once. We can assume it already has.
+            Log.w(TAG, "Could not start SetupWizardExitWorker. It has likely already run.", e);
+            return;
+        }
+    }
+
     public static void finishSetupWizard(Context context) {
+        if (LOGV) {
+            Log.v(TAG, "finishSetupWizard");
+        }
         ContentResolver contentResolver = context.getContentResolver();
         Settings.Global.putInt(contentResolver,
                 Settings.Global.DEVICE_PROVISIONED, 1);
+        final int userSetupComplete =
+                Settings.Secure.getInt(contentResolver, Settings.Secure.USER_SETUP_COMPLETE, 0);
+        if (userSetupComplete != 0 && !SetupWizardUtils.isManagedProfile(context)) {
+            Log.e(TAG, "finishSetupWizard, but userSetupComplete=" + userSetupComplete + "! "
+                    + "This should not happen!");
+        }
         Settings.Secure.putInt(contentResolver,
                 Settings.Secure.USER_SETUP_COMPLETE, 1);
         if (hasLeanback(context)) {
@@ -206,29 +202,22 @@ public class SetupWizardUtils {
                     Settings.Secure.TV_USER_SETUP_COMPLETE, 1);
         }
 
-        disableComponent(context, WizardManager.class);
+        disableComponentsAndSendFinishedBroadcast(context);
+    }
+
+    private static void disableComponentsAndSendFinishedBroadcast(Context context) {
+        if (LOGV) {
+            Log.v(TAG, "Disabling Setup Wizard components and sending FINISHED broadcast.");
+        }
         disableHome(context);
         context.sendStickyBroadcastAsUser(
                 new Intent(SetupWizardApp.ACTION_FINISHED),
                 Binder.getCallingUserHandle());
         disableComponentSets(context, GET_RECEIVERS | GET_SERVICES);
-        enableStatusBar(context);
+        // Note: The WizardManager component is disabled when the WizardManager exits,
+        // which happens when FinishActivity calls nextAction while completing.
 
         sendMicroGCheckInBroadcast(context);
-    }
-
-    public static boolean isSetupWizardComplete(Context context) {
-        if (!isManagedProfile(context) && WizardManagerHelper.isUserSetupComplete(context)) {
-            return true;
-        }
-        final int enabledSetting = context.getPackageManager().getComponentEnabledSetting(
-                new ComponentName(context, SetupWizardActivity.class));
-        switch (enabledSetting) {
-            case COMPONENT_ENABLED_STATE_DEFAULT:
-            case COMPONENT_ENABLED_STATE_ENABLED:
-                return false;
-        }
-        return true;
     }
 
     public static boolean isBluetoothDisabled() {
@@ -238,9 +227,11 @@ public class SetupWizardUtils {
     public static boolean isEthernetConnected(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.
                 getSystemService(Context.CONNECTIVITY_SERVICE);
-
-        return (cm.getActiveNetworkInfo() != null &&
-                cm.getActiveNetworkInfo().getType() == ConnectivityManager.TYPE_ETHERNET);
+        NetworkCapabilities networkCapabilities = cm.getNetworkCapabilities(cm.getActiveNetwork());
+        if (networkCapabilities != null) {
+            return networkCapabilities.hasCapability(NetworkCapabilities.TRANSPORT_ETHERNET);
+        }
+        return false;
     }
 
     public static boolean hasLeanback(Context context) {
@@ -257,18 +248,6 @@ public class SetupWizardUtils {
                     BiometricManager.BIOMETRIC_SUCCESS -> true;
             default -> false;
         };
-    }
-
-    public static boolean simMissing() {
-        return PhoneMonitor.getInstance().simMissing();
-    }
-
-    public static boolean singleSimInserted() {
-        return PhoneMonitor.getInstance().singleSimInserted();
-    }
-
-    public static boolean isMultiSimDevice() {
-        return PhoneMonitor.getInstance().isMultiSimDevice();
     }
 
     public static boolean isBootloaderUnlocked(Context context) {
@@ -293,8 +272,10 @@ public class SetupWizardUtils {
         }
         if (!hasBiometric(context)) {
             disableComponent(context, BiometricActivity.class);
+        } else {
+            disableComponent(context, ScreenLockActivity.class);
         }
-        if (!hasTelephony(context) || !simMissing()) {
+        if (!hasTelephony(context) || !simMissing(context)) {
             disableComponent(context, SimMissingActivity.class);
         }
         if ((!hasWifi(context) && !hasTelephony(context)) || isEthernetConnected(context)) {
@@ -305,7 +286,6 @@ public class SetupWizardUtils {
         }
     }
 
-    /** Disable the Home component, which is presumably SetupWizardActivity at this time. */
     public static void disableHome(Context context) {
         ComponentName homeComponent = getHomeComponent(context);
         if (homeComponent != null) {
@@ -331,7 +311,7 @@ public class SetupWizardUtils {
                 COMPONENT_ENABLED_STATE_DISABLED);
     }
 
-    public static void disableComponent(Context context, Class cls) {
+    public static void disableComponent(Context context, Class<?> cls) {
         setComponentEnabledState(context, new ComponentName(context, cls),
                 COMPONENT_ENABLED_STATE_DISABLED);
     }
@@ -339,16 +319,6 @@ public class SetupWizardUtils {
     public static void enableComponent(Context context, Class<?> cls) {
         setComponentEnabledState(context, new ComponentName(context, cls),
                 COMPONENT_ENABLED_STATE_ENABLED);
-    }
-
-    public static void resetComponentSets(Context context, int flags) {
-        setComponentListEnabledState(context, getComponentSets(context, flags),
-                COMPONENT_ENABLED_STATE_DEFAULT);
-    }
-
-    public static void resetComponent(Context context, Class<?> cls) {
-        setComponentEnabledState(context, new ComponentName(context, cls),
-                COMPONENT_ENABLED_STATE_DEFAULT);
     }
 
     public static void setComponentEnabledState(Context context, ComponentName componentName,
@@ -366,7 +336,7 @@ public class SetupWizardUtils {
 
     public static List<ComponentName> getComponentSets(Context context, int flags) {
         int i = 0;
-        List<ComponentName> componentNames = new ArrayList();
+        List<ComponentName> componentNames = new ArrayList<>();
         try {
             PackageInfo allInfo = context.getPackageManager()
                     .getPackageInfo(context.getPackageName(), flags);
@@ -390,7 +360,7 @@ public class SetupWizardUtils {
                     }
                 }
             }
-        } catch (PackageManager.NameNotFoundException e) {
+        } catch (PackageManager.NameNotFoundException ignored) {
         }
         return componentNames;
     }
@@ -411,6 +381,44 @@ public class SetupWizardUtils {
 
     public static long getBuildDateTimestamp() {
         return SystemProperties.getLong(PROP_BUILD_DATE, 0);
+    }
+
+    public static boolean simMissing(Context context) {
+        TelephonyManager tm = context.getSystemService(TelephonyManager.class);
+        SubscriptionManager sm = context.getSystemService(SubscriptionManager.class);
+        if (tm == null || sm == null) {
+            return false;
+        }
+        List<SubscriptionInfo> subs = sm.getActiveSubscriptionInfoList();
+        if (subs != null) {
+            for (SubscriptionInfo sub : subs) {
+                int simState = tm.getSimState(sub.getSimSlotIndex());
+                if (LOGV) {
+                    Log.v(TAG, "getSimState(" + sub.getSubscriptionId() + ") == " + simState);
+                }
+                if (simState != -1) {
+                    final int subId = sub.getSubscriptionId();
+                    final TelephonyManager subTm = tm.createForSubscriptionId(subId);
+                    if (isGSM(subTm) || isLteOnCdma(subTm, subId)) {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
+    private static boolean isGSM(TelephonyManager subTelephonyManager) {
+        return subTelephonyManager.getCurrentPhoneType() == PHONE_TYPE_GSM;
+    }
+
+    private static boolean isLteOnCdma(TelephonyManager subTelephonyManager, int subId) {
+        final int lteOnCdmaMode = subTelephonyManager.getLteOnCdmaMode(subId);
+        if (lteOnCdmaMode == LTE_ON_CDMA_UNKNOWN) {
+            return TelephonyProperties.lte_on_cdma_device().orElse(LTE_ON_CDMA_UNKNOWN)
+                    == LTE_ON_CDMA_TRUE;
+        }
+        return lteOnCdmaMode == LTE_ON_CDMA_TRUE;
     }
 
     /**

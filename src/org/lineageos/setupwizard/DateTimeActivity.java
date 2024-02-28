@@ -1,18 +1,7 @@
 /*
- * Copyright (C) 2016 The CyanogenMod Project
- *               2017-2018,2020,2022 The LineageOS Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 package org.lineageos.setupwizard;
@@ -20,7 +9,6 @@ package org.lineageos.setupwizard;
 import android.app.AlarmManager;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
 import android.app.TimePickerDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -28,6 +16,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.AdapterView;
@@ -37,12 +26,14 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
+
 import com.android.settingslib.datetime.ZoneGetter;
 
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
 import java.util.Calendar;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -51,21 +42,16 @@ import java.util.TimeZone;
 public class DateTimeActivity extends BaseSetupWizardActivity implements
         TimePickerDialog.OnTimeSetListener, DatePickerDialog.OnDateSetListener {
 
-    public static final String TAG = DateTimeActivity.class.getSimpleName();
-
     private static final String KEY_ID = "id"; // value: String
     private static final String KEY_DISPLAYNAME = "name"; // value: String
     private static final String KEY_GMT = "gmt"; // value: String
     private static final String KEY_OFFSET = "offset"; // value: int (Integer)
-    private static final String XMLTAG_TIMEZONE = "timezone";
-
-    private static final int HOURS_1 = 60 * 60000;
 
     private TimeZone mCurrentTimeZone;
     private TextView mDateTextView;
     private TextView mTimeTextView;
 
-    private final Handler mHandler = new Handler();
+    private final Handler mHandler = new Handler(Looper.getMainLooper());
 
     private final BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
         @Override
@@ -80,15 +66,15 @@ public class DateTimeActivity extends BaseSetupWizardActivity implements
         setNextText(R.string.next);
         getGlifLayout().setDescriptionText(getString(R.string.date_time_summary));
 
-        final Spinner spinner = (Spinner) findViewById(R.id.timezone_list);
+        final Spinner spinner = findViewById(R.id.timezone_list);
         final SimpleAdapter adapter = constructTimezoneAdapter(this);
         mCurrentTimeZone = TimeZone.getDefault();
         View dateView = findViewById(R.id.date_item);
         dateView.setOnClickListener((view) -> showDatePicker());
         View timeView = findViewById(R.id.time_item);
         timeView.setOnClickListener((view) -> showTimePicker());
-        mDateTextView = (TextView) findViewById(R.id.date_text);
-        mTimeTextView = (TextView) findViewById(R.id.time_text);
+        mDateTextView = findViewById(R.id.date_text);
+        mTimeTextView = findViewById(R.id.time_text);
         // Pre-select current/default timezone
         mHandler.post(() -> {
             int tzIndex = getTimeZoneIndex(adapter, mCurrentTimeZone);
@@ -184,12 +170,12 @@ public class DateTimeActivity extends BaseSetupWizardActivity implements
 
     private void showDatePicker() {
         DatePickerFragment datePickerFragment = DatePickerFragment.newInstance();
-        datePickerFragment.show(getFragmentManager(), DatePickerFragment.TAG);
+        datePickerFragment.show(getSupportFragmentManager(), DatePickerFragment.TAG);
     }
 
     private void showTimePicker() {
         TimePickerFragment timePickerFragment = TimePickerFragment.newInstance();
-        timePickerFragment.show(getFragmentManager(), TimePickerFragment.TAG);
+        timePickerFragment.show(getSupportFragmentManager(), TimePickerFragment.TAG);
     }
 
     private void updateTimeAndDateDisplay() {
@@ -205,14 +191,13 @@ public class DateTimeActivity extends BaseSetupWizardActivity implements
 
         final TimeZoneComparator comparator = new TimeZoneComparator(KEY_OFFSET);
         final List<Map<String, Object>> sortedList = ZoneGetter.getZonesList(context);
-        Collections.sort(sortedList, comparator);
-        final SimpleAdapter adapter = new SimpleAdapter(context,
+        sortedList.sort(comparator);
+
+        return new SimpleAdapter(context,
                 sortedList,
                 R.layout.date_time_setup_custom_list_item_2,
                 from,
                 to);
-
-        return adapter;
     }
 
     private static int getTimeZoneIndex(SimpleAdapter adapter, TimeZone tz) {
@@ -257,13 +242,9 @@ public class DateTimeActivity extends BaseSetupWizardActivity implements
     }
 
     private static class TimeZoneComparator implements Comparator<Map<?, ?>> {
-        private String mSortingKey;
+        private final String mSortingKey;
 
         public TimeZoneComparator(String sortingKey) {
-            mSortingKey = sortingKey;
-        }
-
-        public void setSortingKey(String sortingKey) {
             mSortingKey = sortingKey;
         }
 
@@ -285,7 +266,7 @@ public class DateTimeActivity extends BaseSetupWizardActivity implements
         }
 
         private boolean isComparable(Object value) {
-            return (value != null) && (value instanceof Comparable);
+            return (value instanceof Comparable);
         }
     }
 
@@ -295,8 +276,7 @@ public class DateTimeActivity extends BaseSetupWizardActivity implements
         private static final String TAG = TimePickerFragment.class.getSimpleName();
 
         public static TimePickerFragment newInstance() {
-            TimePickerFragment frag = new TimePickerFragment();
-            return frag;
+            return new TimePickerFragment();
         }
 
         @Override
@@ -304,6 +284,7 @@ public class DateTimeActivity extends BaseSetupWizardActivity implements
             ((DateTimeActivity) getActivity()).onTimeSet(view, hourOfDay, minute);
         }
 
+        @NonNull
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             final Calendar calendar = Calendar.getInstance();
@@ -322,8 +303,7 @@ public class DateTimeActivity extends BaseSetupWizardActivity implements
         private static final String TAG = DatePickerFragment.class.getSimpleName();
 
         public static DatePickerFragment newInstance() {
-            DatePickerFragment frag = new DatePickerFragment();
-            return frag;
+            return new DatePickerFragment();
         }
 
         @Override
@@ -331,6 +311,7 @@ public class DateTimeActivity extends BaseSetupWizardActivity implements
             ((DateTimeActivity) getActivity()).onDateSet(view, year, month, day);
         }
 
+        @NonNull
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             final Calendar calendar = Calendar.getInstance();

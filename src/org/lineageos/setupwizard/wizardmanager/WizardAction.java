@@ -1,18 +1,7 @@
 /*
- * Copyright (C) 2016 The CyanogenMod Project
- * Copyright (C) 2017 The LineageOS Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 package org.lineageos.setupwizard.wizardmanager;
@@ -34,6 +23,7 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Objects;
 
 public class WizardAction implements Parcelable {
 
@@ -87,15 +77,11 @@ public class WizardAction implements Parcelable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof WizardAction)) return false;
+        if (!(o instanceof WizardAction that)) return false;
 
-        WizardAction that = (WizardAction) o;
-
-        if (mId != null ? !mId.equals(that.mId) : that.mId != null) return false;
-        if (mUri != null ? !mUri.equals(that.mUri) : that.mUri != null) return false;
-        return mTransitions != null ?
-                mTransitions.equals(that.mTransitions) :
-                that.mTransitions == null;
+        if (!Objects.equals(mId, that.mId)) return false;
+        if (!Objects.equals(mUri, that.mUri)) return false;
+        return Objects.equals(mTransitions, that.mTransitions);
 
     }
 
@@ -117,11 +103,12 @@ public class WizardAction implements Parcelable {
         dest.writeParcelable(mTransitions, flags);
     }
 
-    public static final Creator<WizardAction> CREATOR = new Creator<WizardAction>() {
+    public static final Creator<WizardAction> CREATOR = new Creator<>() {
         public WizardAction createFromParcel(Parcel source) {
             return new WizardAction(source.readString(),
                     source.readString(),
-                    source.readParcelable(WizardTransitions.class.getClassLoader()));
+                    source.readParcelable(WizardTransitions.class.getClassLoader(),
+                            WizardTransitions.class));
         }
 
         public WizardAction[] newArray(int size) {
@@ -143,7 +130,7 @@ public class WizardAction implements Parcelable {
         if (resultCode == null) {
             transitions.setDefaultAction(action);
         } else {
-            transitions.put(Integer.valueOf(resultCode).intValue(), action);
+            transitions.put(Integer.parseInt(resultCode), action);
         }
     }
 
