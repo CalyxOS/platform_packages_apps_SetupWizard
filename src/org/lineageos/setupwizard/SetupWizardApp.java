@@ -6,20 +6,14 @@
 
 package org.lineageos.setupwizard;
 
-import static android.os.UserHandle.USER_CURRENT;
-import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
-
 import android.app.AppOpsManager;
 import android.app.Application;
 import android.app.StatusBarManager;
-import android.content.Context;
-import android.content.om.IOverlayManager;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Process;
-import android.os.ServiceManager;
 import android.permission.PermissionManager;
 import android.provider.Settings;
 import android.service.oemlock.OemLockManager;
@@ -89,14 +83,6 @@ public class SetupWizardApp extends Application {
             SetupWizardUtils.setMobileDataEnabled(this, false);
         }
         sStatusBarManager = SetupWizardUtils.disableStatusBar(this);
-        if (SetupWizardUtils.isPackageInstalled(this, NAV_BAR_MODE_GESTURAL_OVERLAY)) {
-            IOverlayManager overlayManager = IOverlayManager.Stub.asInterface(
-                    ServiceManager.getService(Context.OVERLAY_SERVICE));
-            try {
-                overlayManager.setEnabledExclusiveInCategory(NAV_BAR_MODE_GESTURAL_OVERLAY,
-                    USER_CURRENT);
-            } catch (Exception e) {}
-        }
         mHandler.postDelayed(mRadioTimeoutRunnable, SetupWizardApp.RADIO_READY_TIMEOUT);
         // If the bootloader is locked, and OEM unlocking is allowed, turn it off
         if (SetupWizardUtils.isOwner()
