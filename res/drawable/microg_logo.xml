@@ -1,8 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: microG Project Team
+     SPDX-License-Identifier: Apache-2.0
+-->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="105dp"
     android:height="30dp"
     android:viewportWidth="98.4375"
     android:viewportHeight="28.124998">
+
     <path
         android:fillAlpha="0.5372549"
         android:fillColor="@color/microg_logo_accent"
