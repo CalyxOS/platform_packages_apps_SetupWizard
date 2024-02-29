@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0474124d_17b517fc",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 47
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-02-29T05:17:26Z",
+      "side": 1,
+      "message": "Why do we call this here if it\u0027s called unconditionally below?",
+      "range": {
+        "startLine": 204,
+        "startChar": 16,
+        "endLine": 204,
+        "endChar": 67
+      },
+      "revId": "ca61ee8d34c8021d7d1612ffdede69927ffe7c86",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
