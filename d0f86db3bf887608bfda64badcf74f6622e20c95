@@ -33,6 +33,23 @@
       "message": "Just for testing and comparison, will be rebased.",
       "revId": "d0f86db3bf887608bfda64badcf74f6622e20c95",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88fabf82_2bf8e88b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-29T20:59:55Z",
+      "side": 1,
+      "message": "Missing a couple, talked with Michael and I will try to fix:\nhttps://review.calyxos.org/c/CalyxOS/platform_packages_apps_SetupWizard/+/24377/3\nhttps://review.calyxos.org/c/CalyxOS/platform_packages_apps_SetupWizard/+/24378/3",
+      "revId": "d0f86db3bf887608bfda64badcf74f6622e20c95",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
