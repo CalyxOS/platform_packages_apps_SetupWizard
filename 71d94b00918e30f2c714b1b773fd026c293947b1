@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "148756eb_b5d67432",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 16
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-02-29T05:42:27Z",
+      "side": 1,
+      "message": "Should it before or after restore? And does it need to be before lock screen?\nI can\u0027t remember if it\u0027s executed on next press (which would matter) or if it\u0027s only done at the end of setup wizard (which wouldn\u0027t matter).",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 62,
+        "endChar": 20
+      },
+      "revId": "71d94b00918e30f2c714b1b773fd026c293947b1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
