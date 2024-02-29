@@ -16,6 +16,23 @@
       "message": "On bluejay, tested initial SUW, secondary user, and work profile. No crashes or anything; looked fine!",
       "revId": "d0f86db3bf887608bfda64badcf74f6622e20c95",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc76fc01_57199811",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-02-29T14:33:12Z",
+      "side": 1,
+      "message": "Just for testing and comparison, will be rebased.",
+      "revId": "d0f86db3bf887608bfda64badcf74f6622e20c95",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
