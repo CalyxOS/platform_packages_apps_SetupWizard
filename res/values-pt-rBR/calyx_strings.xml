@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="microg_description">Isso permite que aplicativos como <b>Google Maps, Youtube e serviços de compartilhamento de passeios</b> funcionem no CalyxOS. Desative esta opção se você não planeja executar aplicativos que requerem os serviços do Google.</string>
+    <string name="microg_description">Isso permite que aplicativos como <b>Google Maps, Youtube e serviços de compartilhamento de passeios</b> funcionem no CalyxOS. Desative esta opção se você não planeja executar aplicativos que requerem os serviços do Google. Você não poderá ativar isso depois.</string>
     <string name="microg_title">Serviços Google</string>
-    <string name="setup_euicc">Configuração do eSIM</string>
+    <string name="setup_euicc">Configurar eSIM</string>
     <string name="euicc_summary">Você também pode adicionar um eSIM para o seu dispositivo.</string>
     <string name="bootloader_warning_title">Aviso de bloqueio do bootloader</string>
-    <string name="bootloader_warning_summary">O bootloader deste dispositivo está desbloqueado no momento. Por favor, bloqueie o bootloader de um computador. Visite <a href="https://calyxos.org/lock">calyxos.org/lock</a> para mais informações.</string>
+    <string name="bootloader_warning_summary">O bootloader deste dispositivo está desbloqueado. Por favor, bloqueie o bootloader por meio de um computador. Visite <a href="https://calyxos.org/lock">calyxos.org/lock</a> para mais informações.</string>
     <string name="reboot">Reiniciar</string>
     <string name="setup_managed_profile_welcome_message">Configure seu perfil de trabalho</string>
     <string name="microg_switch_label2">Compatibilidade com serviços Google</string>
