@@ -11,5 +11,4 @@
     <string name="microg_description2">microG는 <b>Google Play Services</b>의 오픈 소스 대체물로, 관련 소프트웨어를 대체하는데 사용되지만, 유용한 부분만을 포함하고 있습니다. Play Services와 달리 microG에는 광고나 위치 추적과 같은 기능이 없습니다.</string>
     <string name="microg_defaults_switch_label">푸시 알림 지원</string>
     <string name="microg_defaults_summary">앱이 Google에 푸시 알림을 등록할 수 있도록 허용합니다. 이는 장치별 고유 식별자없이 당신의 장치를 Google 서비스에 등록합니다. 이 기능은 나중에 microG 설정에서 활성화할 수 있지만, 미리 설정한 앱들을 제대로 작동하려면 다시 설치해야 합니다.</string>
-    <string name="setup_managed_profile_welcome_message">작업 프로필 설정</string>
 </resources>

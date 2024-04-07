@@ -11,5 +11,4 @@
     <string name="microg_defaults_switch_label">Поддержка push-уведомлений</string>
     <string name="microg_defaults_summary">Разрешить приложениям регистрироваться для получения push-уведомлений в Google. Это регистрирует ваше устройство в службах Google без каких-либо уникальных идентификаторов устройства. Это можно включить позже в настройках microG, однако для правильной работы любые установленные ранее приложения необходимо будет переустановить.</string>
     <string name="microg_switch_label2">Совместимость с сервисами Google</string>
-    <string name="setup_managed_profile_welcome_message">Настройка рабочего профиля</string>
 </resources>

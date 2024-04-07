@@ -7,7 +7,6 @@
     <string name="bootloader_warning_title">Aviso de bloqueio do bootloader</string>
     <string name="bootloader_warning_summary">O bootloader deste dispositivo está desbloqueado no momento. Por favor, bloqueie o bootloader de um computador. Visite <a href="https://calyxos.org/lock">calyxos.org/lock</a> para mais informações.</string>
     <string name="reboot">Reiniciar</string>
-    <string name="setup_managed_profile_welcome_message">Configure seu perfil de trabalho</string>
     <string name="microg_switch_label2">Compatibilidade com serviços Google</string>
     <string name="microg_defaults_switch_label">Suporte a notificações push</string>
     <string name="microg_description2">O microG é uma alternativa de código aberto ao <b>Google Play Services</b> (e software relacionado), mas inclui somente as partes úteis. Diferentemente do Play Services, o microG não tem nenhum tipo de rastreamento de anúncios ou localização, por exemplo.</string>

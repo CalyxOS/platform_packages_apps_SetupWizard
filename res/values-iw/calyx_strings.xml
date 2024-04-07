@@ -11,5 +11,4 @@
     <string name="microg_description2">microG היא חלופה בקוד פתוח ל <b>שירותי Google Play</b> (והתוכנה העוטפת), אך היא כוללת את החלקים החיוניים בלבד. בניגוד לשירותי Play, ב־microG אין פרסום או מעקב אחר המיקום, למשל.</string>
     <string name="microg_switch_label2">תאימות עם שירותי Google</string>
     <string name="microg_defaults_summary">לאפשר ליישומונים להירשם להתראות דחיפה מול Google. כך המכשיר שלך נרשם לשירותי Google, ללא אמצעי זיהוי ייחודיים למכשיר. ניתן להפעיל את זה מאוחר יותר מההגדרות של microG, על אף שיש להתקין מחדש יישומונים שהותקנו קודם לכן כדי שיעבדו כראוי.</string>
-    <string name="setup_managed_profile_welcome_message">הקמת פרופיל העבודה שלך</string>
 </resources>

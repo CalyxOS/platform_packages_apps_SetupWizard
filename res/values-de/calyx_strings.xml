@@ -11,5 +11,4 @@
     <string name="microg_switch_label2">Kompatibilität mit Google-Diensten</string>
     <string name="microg_defaults_switch_label">Unterstützung für Push-Benachrichtigungen</string>
     <string name="microg_defaults_summary">Erlaube Apps, sich für Push-Benachrichtigungen bei Google zu registrieren. Dadurch wird dein Gerät bei Google-Diensten registriert, ohne dass gerätespezifische eindeutige Kennungen verwendet werden. Dies kann später in den microG-Einstellungen aktiviert werden, allerdings müssen alle zuvor eingerichteten Apps neu installiert werden, damit sie richtig funktionieren.</string>
-    <string name="setup_managed_profile_welcome_message">Richte dein Arbeitsprofil ein</string>
 </resources>
