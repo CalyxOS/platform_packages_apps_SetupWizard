@@ -11,5 +11,6 @@
     <string name="bootloader_warning_summary">Bootloader tego urządzenia jest obecnie odblokowany. Proszę zablokować bootloader za pomocą komputera. Odwiedź <a href="https://calyxos.org/lock">calyxos.org/lock</a> aby uzyskać więcej informacji.</string>
     <string name="bootloader_warning_title">Ostrzeżenie o blokadzie bootloadera</string>
     <string name="microg_defaults_summary">Zezwalaj aplikacjom na rejestrowanie się w Google w celu otrzymywania powiadomień push. To rejestruje urządzenie do usług Google, bez żadnych unikalnych identyfikatorów specyficznych dla urządzenia. Można to włączyć później w Ustawieniach microG, jednak wszelkie aplikacje skonfigurowane wcześniej będą musiały zostać ponownie zainstalowane, aby działały prawidłowo.</string>
-    <string name="setup_managed_profile_welcome_message">Ustaw swój profil zawodowy</string>
+    <string name="microg_location_switch_label">Lokalizacja poprzez sieć</string>
+    <string name="microg_location_summary">Polepsza usługi lokalizacyjne, wysyłając zapytania MLS (Mozilla Location Services) do pobliskich sieci Wi-Fi oraz komórkowych, używając Nominatim do wyszukiwania adresów i zapamiętując współrzędne GPS pobliskich sieci. Opcje te można później dostosować bardziej szczegółowo w Ustawieniach microG.</string>
 </resources>

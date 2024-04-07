@@ -11,7 +11,6 @@
     <string name="microg_description2">microG, <b>Google Play hizmetleri</b> (ve ilgili yazılımlar) için açık kaynaklı bir alternatiftir, ancak yalnızca yararlı kısımları içerir. Play hizmetlerinin aksine, microG\'de örneğin herhangi bir reklam veya konum takibi yoktur.</string>
     <string name="microg_defaults_switch_label">Anlık bildirim desteği</string>
     <string name="microg_defaults_summary">Uygulamaların Google\'a anlık bildirimler için kaydolmasına izin ver. Bu, aygıta özgü benzersiz tanımlayıcılar olmadan aygıtınızı Google hizmetlerine kaydeder. Bu özellik daha sonra microG ayarlarından etkinleştirilebilir, ancak daha önce kurulan bir uygulamanın düzgün çalışması için yeniden kurulması gerekecektir.</string>
-    <string name="setup_managed_profile_welcome_message">İş profilinizi ayarlayın</string>
     <string name="microg_location_summary">Yakındaki Wi-Fi ve hücresel ağlarla MLS\'yi (Mozilla Location Services - Mozilla Konum Hizmetleri) sorgulayarak, adres aramaları için Nominatim\'i kullanarak ve yakındaki ağların GPS koordinatlarını hatırlayarak konum hizmetlerini iyileştirin. Bu seçenekleri daha sonra microG ayarlarında daha ayrıntılı olarak özelleştirebilirsiniz.</string>
     <string name="microg_location_switch_label">Ağ konumu</string>
 </resources>

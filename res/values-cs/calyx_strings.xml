@@ -11,7 +11,6 @@
     <string name="microg_defaults_summary">Povolit aplikacím registrovat se pro push oznámení u společnosti Google. Tímto se vaše zařízení zaregistruje do služeb Google bez jedinečných identifikátorů specifických pro zařízení. Tuto funkci lze povolit později v nastavení microG, avšak bude nutné znovu nainstalovat všechny dříve nastavené aplikace k jejich správnému fungování.</string>
     <string name="microg_switch_label2">Kompatibilita se službami Google</string>
     <string name="microg_defaults_switch_label">Podpora push oznámení</string>
-    <string name="setup_managed_profile_welcome_message">Nastavení pracovního profilu</string>
     <string name="microg_location_switch_label">Síťová poloha</string>
     <string name="microg_location_summary">Vylepšit polohové služby dotázáním se služby MLS (Mozilla Location Service) se seznamem Wi-Fi a mobilních sítí v okolí zařízení, použitím služby Nominatim pro zjištění adresy a zapamatováním si souřadnic sítí v okolí. Tato nastavení můžete později upřesnit v nastavení služby microG.</string>
 </resources>

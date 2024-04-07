@@ -11,7 +11,6 @@
     <string name="microg_defaults_switch_label">Υποστήριξη ειδοποιήσεων push</string>
     <string name="microg_description2">Το microG είναι ένας αντικαταστάτης ανοιχτού κώδικα για τις <b>Υπηρεσίες Google Play</b> (και το σχετικό λογισμικό), αλλά περιλαμβάνει μόνο τα χρήσιμα μέρη. Σε αντίθεση με τις Υπηρεσίες Play, το microG δεν διαθέτει, για παράδειγμα, καμία διαφήμιση ή παρακολούθηση τοποθεσίας.</string>
     <string name="microg_switch_label2">Συμβατότητα Υπηρεσιών Google</string>
-    <string name="setup_managed_profile_welcome_message">Ρύθμιση του προφίλ εργασίας σας</string>
     <string name="microg_location_switch_label">Τοποθεσία δικτύου</string>
     <string name="microg_location_summary">Βελτιώστε τις υπηρεσίες τοποθεσίας χρησιμοποιώντας τις MLS (Υπηρεσίες τοποθεσίας Mozilla) με βάση τα κοντινά δίκτυα Wi-Fi και κινητής τηλεφωνίας, χρησιμοποιώντας το Nominatim για αναζήτηση διευθύνσεων και απομνημόνευση συντεταγμένων GPS κοντινών δικτύων. Μπορείτε να προσαρμόσετε αυτές τις επιλογές πιο αναλυτικά στις Ρυθμίσεις microG αργότερα.</string>
 </resources>
