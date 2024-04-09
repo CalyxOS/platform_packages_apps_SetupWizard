@@ -74,7 +74,8 @@ public class SimMissingActivity extends SubBaseActivity {
 
     private void launchEuiccSetup() {
         Intent intent = new Intent(EuiccService.ACTION_PROVISION_EMBEDDED_SUBSCRIPTION);
-        intent.putExtra(EuiccManager.EXTRA_FORCE_PROVISION, true);
+        intent.putExtra(EuiccManager.EXTRA_ACTIVATION_TYPE,
+                EuiccManager.EUICC_ACTIVATION_TYPE_TRANSFER);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startSubactivity(intent);
         } else {
