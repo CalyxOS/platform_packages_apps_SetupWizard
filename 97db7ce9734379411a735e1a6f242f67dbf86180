@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da98e4dc_12082a7e",
+        "filename": "src/org/lineageos/setupwizard/BaseSetupWizardActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-09T18:18:57Z",
+      "side": 1,
+      "message": "Let\u0027s make this two lines.",
+      "revId": "97db7ce9734379411a735e1a6f242f67dbf86180",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "59c44703_af4a5550",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-09T18:18:57Z",
+      "side": 1,
+      "message": "Should this be in this change? If so, why?\n\nAnd let\u0027s make it two lines if so.",
+      "revId": "97db7ce9734379411a735e1a6f242f67dbf86180",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67523ee3_e20b43cd",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-09T18:18:57Z",
+      "side": 1,
+      "message": "I think I have a silly question on this. Should this have `@Override`? Is `@Override` implied? Throughout AOSP, sometimes I see it and sometimes I don\u0027t.",
+      "revId": "97db7ce9734379411a735e1a6f242f67dbf86180",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
