@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b568866_4600997e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-09T19:38:43Z",
+      "side": 1,
+      "message": "How would one test this? Install eSIM, factory reset, make sure it still works?",
+      "revId": "61287e9457001fb6136b36ef1de0f936446563be",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
