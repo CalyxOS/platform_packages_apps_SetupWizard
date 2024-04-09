@@ -36,6 +36,7 @@ public class SimMissingActivity extends SubBaseActivity {
 
     @Override
     protected void onStartSubactivity() {
+        mUseSuwIntentExtras = false;
         if (!SetupWizardUtils.simMissing(this)) {
             nextAction(RESULT_OK);
             return;

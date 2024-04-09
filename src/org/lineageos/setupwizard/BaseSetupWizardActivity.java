@@ -44,6 +44,8 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
 
     private NavigationLayout mNavigationBar;
 
+    protected boolean mUseSuwIntentExtras = true;
+
     private final ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             BaseSetupWizardActivity.this::onActivityResult);
@@ -254,8 +256,10 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
     }
 
     protected final void startActivityForResult(@NonNull Intent intent) {
-        intent.putExtra(WizardManagerHelper.EXTRA_IS_FIRST_RUN, isFirstRun());
-        intent.putExtra(WizardManagerHelper.EXTRA_IS_SETUP_FLOW, true);
+        if (mUseSuwIntentExtras) {
+            intent.putExtra(WizardManagerHelper.EXTRA_IS_FIRST_RUN, isFirstRun());
+            intent.putExtra(WizardManagerHelper.EXTRA_IS_SETUP_FLOW, true);
+        }
         intent.putExtra(WizardManagerHelper.EXTRA_THEME, ThemeHelper.THEME_GLIF_V4);
         activityResultLauncher.launch(intent);
         TransitionHelper.applyForwardTransition(this, TransitionHelper.TRANSITION_SLIDE, true);
