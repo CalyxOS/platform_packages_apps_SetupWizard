@@ -76,7 +76,9 @@ public class SimMissingActivity extends SubBaseActivity {
         Intent intent = new Intent(EuiccService.ACTION_PROVISION_EMBEDDED_SUBSCRIPTION);
         intent.putExtra(EuiccManager.EXTRA_FORCE_PROVISION, true);
         if (intent.resolveActivity(getPackageManager()) != null) {
-            startSubactivity(intent);
+            // Start without the SUW extras that are added by the overridden `startActivity(Intent)`
+            // as those break EUICC.
+            startActivity(intent, /* options */ null);
         } else {
             Log.e(TAG, "No activity available to handle " + intent.getAction());
         }
