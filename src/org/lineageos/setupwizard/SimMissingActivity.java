@@ -6,6 +6,7 @@
 
 package org.lineageos.setupwizard;
 
+import android.annotation.NonNull;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,8 +17,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.Nullable;
+
 import com.google.android.setupcompat.template.FooterButtonStyleUtils;
 import com.google.android.setupcompat.util.WizardManagerHelper;
+import com.google.android.setupdesign.util.ThemeHelper;
 
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
@@ -37,6 +41,11 @@ public class SimMissingActivity extends SubBaseActivity {
         if (!SetupWizardUtils.simMissing(this)) {
             finishAction(RESULT_OK);
         }
+    }
+
+    protected void startActivityForResult(@NonNull Intent intent) {
+        intent.putExtra(WizardManagerHelper.EXTRA_THEME, ThemeHelper.THEME_GLIF_V4);
+        activityResultLauncher.launch(intent);
     }
 
     @Override

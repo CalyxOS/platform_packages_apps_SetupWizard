@@ -63,7 +63,7 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
             }
         }
     };
-    private final ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
+    protected final ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             BaseSetupWizardActivity.this::onActivityResult);
 
@@ -271,7 +271,7 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
         super.startActivity(intent);
     }
 
-    protected final void startActivityForResult(@NonNull Intent intent) {
+    protected void startActivityForResult(@NonNull Intent intent) {
         intent.putExtra(WizardManagerHelper.EXTRA_IS_FIRST_RUN, isFirstRun());
         intent.putExtra(WizardManagerHelper.EXTRA_IS_SETUP_FLOW, true);
         intent.putExtra(WizardManagerHelper.EXTRA_THEME, ThemeHelper.THEME_GLIF_V4);
