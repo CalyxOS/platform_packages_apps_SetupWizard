@@ -35,6 +35,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2cdc77de_f7c63ad9",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-09T19:37:29Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "59c44703_af4a5550",
+      "revId": "97db7ce9734379411a735e1a6f242f67dbf86180",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "67523ee3_e20b43cd",
@@ -48,6 +66,24 @@
       "writtenOn": "2024-04-09T18:18:57Z",
       "side": 1,
       "message": "I think I have a silly question on this. Should this have `@Override`? Is `@Override` implied? Throughout AOSP, sometimes I see it and sometimes I don\u0027t.",
+      "revId": "97db7ce9734379411a735e1a6f242f67dbf86180",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d55a583_ec81e1d3",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-09T19:37:29Z",
+      "side": 1,
+      "message": "Acknowledged, I still wonder this in general but I can always look it up lol",
+      "parentUuid": "67523ee3_e20b43cd",
       "revId": "97db7ce9734379411a735e1a6f242f67dbf86180",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
