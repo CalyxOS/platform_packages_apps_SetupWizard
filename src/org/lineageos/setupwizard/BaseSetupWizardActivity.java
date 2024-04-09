@@ -253,9 +253,11 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
         TransitionHelper.applyForwardTransition(this, TransitionHelper.TRANSITION_SLIDE, true);
     }
 
-    protected final void startActivityForResult(@NonNull Intent intent) {
-        intent.putExtra(WizardManagerHelper.EXTRA_IS_FIRST_RUN, isFirstRun());
-        intent.putExtra(WizardManagerHelper.EXTRA_IS_SETUP_FLOW, true);
+    protected void startActivityForResult(@NonNull Intent intent) {
+        if (!(this instanceof SimMissingActivity)) {
+            intent.putExtra(WizardManagerHelper.EXTRA_IS_FIRST_RUN, isFirstRun());
+            intent.putExtra(WizardManagerHelper.EXTRA_IS_SETUP_FLOW, true);
+        }
         intent.putExtra(WizardManagerHelper.EXTRA_THEME, ThemeHelper.THEME_GLIF_V4);
         activityResultLauncher.launch(intent);
         TransitionHelper.applyForwardTransition(this, TransitionHelper.TRANSITION_SLIDE, true);
