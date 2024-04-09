@@ -10,8 +10,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemProperties;
-import android.service.euicc.EuiccService;
-import android.telephony.euicc.EuiccManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -25,12 +23,6 @@ public class SimMissingActivity extends SubBaseActivity {
 
     public static final String TAG = SimMissingActivity.class.getSimpleName();
 
-    // From com.android.settings.network.telephony.MobileNetworkUtils
-    // System Property which is used to decide whether the default eSIM UI will be shown,
-    // the default value is false.
-    private static final String KEY_ENABLE_ESIM_UI_BY_DEFAULT =
-            "esim.enable_esim_system_ui_by_default";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,19 +34,9 @@ public class SimMissingActivity extends SubBaseActivity {
     @Override
     protected void onStartSubactivity() {
         setNextAllowed(true);
-        EuiccManager euiccManager = (EuiccManager) getSystemService(Context.EUICC_SERVICE);
-        if (euiccManager.isEnabled() /*&& NetworkMonitor.getInstance().isNetworkConnected()*/
-                && SystemProperties.getBoolean(KEY_ENABLE_ESIM_UI_BY_DEFAULT, true)) {
-            getGlifLayout().setDescriptionText(getString(R.string.sim_missing_full_description,
-                    getString(R.string.sim_missing_summary),
-                    getString(R.string.euicc_summary)));
-            Button setupEuiccButton = findViewById(R.id.setup_euicc);
-            setupEuiccButton.setOnClickListener(v -> launchEuiccSetup());
-            FooterButtonStyleUtils.applyPrimaryButtonPartnerResource(this, setupEuiccButton, true);
-        } else {
-            getGlifLayout().setDescriptionText(getString(R.string.sim_missing_summary));
-            findViewById(R.id.setup_euicc).setVisibility(View.GONE);
-        }
+        getGlifLayout().setDescriptionText(getString(R.string.sim_missing_summary));
+        Button manageSimsButton = findViewById(R.id.manage_sims);
+        manageSimsButton.setOnClickListener(v -> manageSims());
     }
 
     @Override
@@ -72,11 +54,12 @@ public class SimMissingActivity extends SubBaseActivity {
         return R.drawable.ic_sim;
     }
 
-    private void launchEuiccSetup() {
-        Intent intent = new Intent(EuiccService.ACTION_PROVISION_EMBEDDED_SUBSCRIPTION);
-        intent.putExtra(EuiccManager.EXTRA_FORCE_PROVISION, true);
+    private void manageSims() {
+        Intent intent = new Intent("android.settings.MANAGE_ALL_SIM_PROFILES_SETTINGS");
         if (intent.resolveActivity(getPackageManager()) != null) {
-            startSubactivity(intent);
+            // Start without the SUW extras that are added by the overridden `startActivity(Intent)`
+            // as those break the "SIMs" header.
+            startActivity(intent, /* options */ null);
         } else {
             Log.e(TAG, "No activity available to handle " + intent.getAction());
         }
