@@ -17,7 +17,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.android.setupcompat.template.FooterButtonStyleUtils;
-import com.google.android.setupcompat.util.WizardManagerHelper;
 
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
