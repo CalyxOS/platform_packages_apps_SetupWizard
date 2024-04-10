@@ -7,4 +7,5 @@
     <string name="reboot">再起動</string>
     <string name="bootloader_warning_title">ブートローダーロックの警告</string>
     <string name="bootloader_warning_summary">このデバイスのブートローダーは現在ロック解除されています。コンピューターからブートローダーをロックしてください。 詳しくは <a href="https://calyxos.org/lock">calyxos.org/lock</a> をご覧ください。</string>
+    <string name="microg_defaults_switch_label">プッシュ通知サポート</string>
 </resources>
