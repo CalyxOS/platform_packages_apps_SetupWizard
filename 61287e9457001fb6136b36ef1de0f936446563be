@@ -51,6 +51,24 @@
       "parentUuid": "fbd4c967_6d54f78e",
       "revId": "61287e9457001fb6136b36ef1de0f936446563be",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a6b54bd_fb4705a4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-10T21:36:11Z",
+      "side": 1,
+      "message": "PS1 is closer to what we want I think. It asks to connect to Wi-Fi, then wants to scan a QR code.",
+      "parentUuid": "4c6657f7_a38def7c",
+      "revId": "61287e9457001fb6136b36ef1de0f936446563be",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
