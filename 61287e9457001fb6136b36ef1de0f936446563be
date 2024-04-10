@@ -33,6 +33,24 @@
       "message": "1. SIM is detected as missing. Tap \"Setup eSIM\".\n2. Continue, and see \"Checking networking info...\" page. Mobile network icon appears in the status bar in the top right.\n3. \"eSIM found\" page appears. \"A number was previously set up on this phone\". Mobile network icon is still present in the status bar in the top right.\n4. Tap Next.\n5. You are returned to the language selection page (sent backwards), and the mobile network icon is gone from the top right.\n6. Next brings you to the same SIM missing screen. The eSIM is not available.\n\nError in crash log:\n```\nE AndroidRuntime: FATAL EXCEPTION: main\nE AndroidRuntime: Process: com.google.android.euicc, PID: 3500\nE AndroidRuntime: java.lang.RuntimeException: Unable to pause activity {com.google.android.euicc/com.android.euicc.ui.suw.SuwSimMissingActivity}: java.lang.IllegalArgumentException: Receiver not registered: com.android.euicc.ui.suw.SuwSimMissingActivity$SimStateChangeReceiver@c2cb9e8\nE AndroidRuntime: \tat android.app.ActivityThread.performPauseActivityIfNeeded(ActivityThread.java:5476)\nE AndroidRuntime: \tat android.app.ActivityThread.performPauseActivity(ActivityThread.java:5427)\nE AndroidRuntime: \tat android.app.ActivityThread.handlePauseActivity(ActivityThread.java:5379)\nE AndroidRuntime: \tat android.app.servertransaction.PauseActivityItem.execute(PauseActivityItem.java:48)\nE AndroidRuntime: \tat android.app.servertransaction.ActivityTransactionItem.execute(ActivityTransactionItem.java:60)\nE AndroidRuntime: \tat android.app.servertransaction.TransactionExecutor.executeLifecycleItem(TransactionExecutor.java:254)\nE AndroidRuntime: \tat android.app.servertransaction.TransactionExecutor.executeLifecycleState(TransactionExecutor.java:228)\nE AndroidRuntime: \tat android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:91)\nE AndroidRuntime: \tat android.app.ActivityThread$H.handleMessage(ActivityThread.java:2544)\nE AndroidRuntime: \tat android.os.Handler.dispatchMessage(Handler.java:107)\nE AndroidRuntime: \tat android.os.Looper.loopOnce(Looper.java:232)\nE AndroidRuntime: \tat android.os.Looper.loop(Looper.java:317)\nE AndroidRuntime: \tat android.app.ActivityThread.main(ActivityThread.java:8501)\nE AndroidRuntime: \tat java.lang.reflect.Method.invoke(Native Method)\nE AndroidRuntime: \tat com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:552)\nE AndroidRuntime: \tat com.android.internal.os.ZygoteInit.main(ZygoteInit.java:878)\nE AndroidRuntime: Caused by: java.lang.IllegalArgumentException: Receiver not registered: com.android.euicc.ui.suw.SuwSimMissingActivity$SimStateChangeReceiver@c2cb9e8\nE AndroidRuntime: \tat android.app.LoadedApk.forgetReceiverDispatcher(LoadedApk.java:1670)\nE AndroidRuntime: \tat android.app.ContextImpl.unregisterReceiver(ContextImpl.java:1873)\nE AndroidRuntime: \tat android.content.ContextWrapper.unregisterReceiver(ContextWrapper.java:821)\nE AndroidRuntime: \tat com.android.euicc.ui.suw.SuwSimMissingActivity.onPause(PG:2)\nE AndroidRuntime: \tat android.app.Activity.performPause(Activity.java:8962)\nE AndroidRuntime: \tat android.app.Instrumentation.callActivityOnPause(Instrumentation.java:1720)\nE AndroidRuntime: \tat android.app.ActivityThread.performPauseActivityIfNeeded(ActivityThread.java:5466)\nE AndroidRuntime: \t... 15 more\n```",
       "revId": "61287e9457001fb6136b36ef1de0f936446563be",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c6657f7_a38def7c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-10T21:03:00Z",
+      "side": 1,
+      "message": "The above is with a Google Pixel 6a bluejay. And it says \"Checking network info\" not \"networking info\".",
+      "parentUuid": "fbd4c967_6d54f78e",
+      "revId": "61287e9457001fb6136b36ef1de0f936446563be",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
