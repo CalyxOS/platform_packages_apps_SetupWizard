@@ -122,6 +122,24 @@
       "message": "Since this isn\u0027t a transfer from another device and isn\u0027t about existing eSIMs, I\u0027m curious what happens if we use EUICC_ACTIVATION_TYPE_DEFAULT, or maybe nothing?",
       "revId": "61287e9457001fb6136b36ef1de0f936446563be",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03771141_03a4504e",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-04-11T16:17:44Z",
+      "side": 1,
+      "message": "With any other flag it crashes too unfortunately. The default flag is set by default (aka behaviour without this patch), the BACKUP flag triggers a \"post-flow\" whatever that means and also crashes. TRANSFER triggers \"pre-flow\" and does not crash",
+      "parentUuid": "c592078c_d1d6943f",
+      "revId": "61287e9457001fb6136b36ef1de0f936446563be",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
