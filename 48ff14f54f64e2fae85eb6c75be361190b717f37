@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ff15518_9f2cb1ab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-11T21:58:21Z",
+      "side": 1,
+      "message": "Preexisting quirk, bluejay+bramble: User needs to turn on the newly-provisioned eSIM; it\u0027s not automatic, and the provisioning even tells you to go to Settings to do it, and has a button for it.\n\nNew quirk: User will be returned to the Missing SIM page, even if they successfully add and turn on a SIM. We could handle this in onResume or something.",
+      "revId": "48ff14f54f64e2fae85eb6c75be361190b717f37",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
