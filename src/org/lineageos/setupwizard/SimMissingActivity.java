@@ -6,6 +6,8 @@
 
 package org.lineageos.setupwizard;
 
+import static com.google.android.setupcompat.util.ResultCodes.RESULT_ACTIVITY_NOT_FOUND;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +17,8 @@ import android.telephony.euicc.EuiccManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.activity.result.ActivityResult;
 
 import com.google.android.setupcompat.template.FooterButtonStyleUtils;
 
@@ -33,13 +37,13 @@ public class SimMissingActivity extends SubBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (!SetupWizardUtils.simMissing(this)) {
-            finishAction(RESULT_OK);
-        }
     }
 
     @Override
     protected void onStartSubactivity() {
+        if (maybeSkipThisPage(/* backPressedIntent */ null)) {
+            return;
+        }
         setNextAllowed(true);
         EuiccManager euiccManager = (EuiccManager) getSystemService(Context.EUICC_SERVICE);
         if (euiccManager.isEnabled() /*&& NetworkMonitor.getInstance().isNetworkConnected()*/
@@ -71,6 +75,19 @@ public class SimMissingActivity extends SubBaseActivity {
         return R.drawable.ic_sim;
     }
 
+    /** If a SIM is present, either skip forward or go backwards if backPressedIntent is given. */
+    private boolean maybeSkipThisPage(Intent backPressedIntent) {
+        if (!SetupWizardUtils.simMissing(this)) {
+            if (null == backPressedIntent) {
+                nextAction(RESULT_OK);
+            } else {
+                finishAction(RESULT_CANCELED, backPressedIntent);
+            }
+            return true;
+        }
+        return false;
+    }
+
     private void launchEuiccSetup() {
         Intent intent = new Intent(EuiccService.ACTION_PROVISION_EMBEDDED_SUBSCRIPTION);
         intent.putExtra(EuiccManager.EXTRA_FORCE_PROVISION, true);
@@ -78,6 +95,18 @@ public class SimMissingActivity extends SubBaseActivity {
             startSubactivity(intent);
         } else {
             Log.e(TAG, "No activity available to handle " + intent.getAction());
+        }
+    }
+
+    @Override
+    protected void onActivityResult(ActivityResult activityResult) {
+        Intent data = activityResult.getData();
+        if (mIsSubactivityNotFound) {
+            finishAction(RESULT_ACTIVITY_NOT_FOUND);
+        } else if (data != null && data.getBooleanExtra("onBackPressed", false)) {
+            maybeSkipThisPage(/* backPressedIntent */ data);
+        } else {
+            maybeSkipThisPage(/* backPressedIntent */ null);
         }
     }
 
