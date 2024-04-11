@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d7570ba7_fe0d3d6b",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-11T22:47:23Z",
+      "side": 1,
+      "message": "We don\u0027t want or need this part.",
+      "revId": "c87d739890ccfcc4ad6506dc0522a988e1244af0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
