@@ -140,6 +140,24 @@
       "parentUuid": "c592078c_d1d6943f",
       "revId": "61287e9457001fb6136b36ef1de0f936446563be",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca956f72_52ba555c",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-11T16:20:35Z",
+      "side": 1,
+      "message": "I can confirm that it doesn\u0027t work with EUICC_ACTIVATION_TYPE_DEFAULT. It doesn\u0027t crash though. It loads the EUICC activity super briefly before it disappears, proceeding to the next page (yes, the next one, as opposed to the previous one, which is what happens when it crashes) of the Setup Wizard, without doing anything useful or visible. The crash log is empty.\n\nAlso, I can unfortunately confirm that EUICC_ACTIVATION_TYPE_TRANSFER does not work for enrolling a new SIM from a QR code. It gets stuck on \"Checking network info\", even if connected to Wi-Fi.\n\nPS1, on the other hand, works properly. And if you are not connected to Wi-Fi, it tells you to connect before proceeding.\n\nAs for the \"existing eSIM\" situation, I\u0027ve said it elsewhere, but you just need to reboot once in order for it to be seen from the Setup Wizard. That issue has existed since 5.4.1 or earlier (maybe forever, for all I know).",
+      "parentUuid": "c592078c_d1d6943f",
+      "revId": "61287e9457001fb6136b36ef1de0f936446563be",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
