@@ -158,6 +158,24 @@
       "parentUuid": "c592078c_d1d6943f",
       "revId": "61287e9457001fb6136b36ef1de0f936446563be",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "473d18f0_706fd545",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-04-11T16:42:06Z",
+      "side": 1,
+      "message": "Tested EUICC_ACTIVATION_TYPE_TRANSFER with https://esimqr.com/# locally and it provisioned as expected",
+      "parentUuid": "ca956f72_52ba555c",
+      "revId": "61287e9457001fb6136b36ef1de0f936446563be",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
