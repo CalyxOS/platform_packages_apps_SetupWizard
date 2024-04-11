@@ -34,6 +34,11 @@ public class SimMissingActivity extends SubBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         if (!SetupWizardUtils.simMissing(this)) {
             finishAction(RESULT_OK);
         }
