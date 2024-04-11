@@ -194,6 +194,24 @@
       "parentUuid": "473d18f0_706fd545",
       "revId": "61287e9457001fb6136b36ef1de0f936446563be",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dcbce05c_6ba5fcbe",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-11T20:59:46Z",
+      "side": 1,
+      "message": "I described non-Pixels in other comments. But even on bluejay, we both saw greater delays and occasional apparently stuckness with the TRANSFER type.",
+      "parentUuid": "cfe143de_8d0179d9",
+      "revId": "61287e9457001fb6136b36ef1de0f936446563be",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }

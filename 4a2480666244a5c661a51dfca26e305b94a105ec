@@ -33,6 +33,42 @@
       "message": "bramble: Doesn\u0027t work (but, did it work before? I don\u0027t know). It disappears quickly, proceeding to the next page.\n\n```\n04-11 07:26:59.396 10134  5006  5006 I EuiccGoogle: [2] CurrentSuwInitActivity.onCreate: Caller is SUW. Go to SuwFlowControllerActivity\n04-11 07:26:59.411 10134  5006  5006 I EuiccGoogle: [2] SuwFlowControllerActivity.onCreate: inSetupWizard \u003d true, activationType \u003d 3, hasAccount \u003d false, iosPaired \u003d false\n04-11 07:26:59.411 10134  5006  5006 I EuiccGoogle: [2] SuwFlowControllerActivity.onCreate: Start pre-flow\n04-11 07:26:59.412 10134  5006  5006 E EuiccGoogle: [2] AppCompatTextHelper$Api28Impl.getFirstActiveEmbeddedSubscription: No active subscriptions.\n04-11 07:26:59.437 10134  5006  5006 I EuiccGoogle: [2] SuwFlowControllerActivity.handleDownloadableProfileNotFound: No downloadable subscriptions found\n04-11 07:26:59.437 10134  5006  5006 I EuiccGoogle: [2] DrawableUtils$Api29Impl.isEsimTransferEnabled: isEsimTransferEnabled: P/H is not available\n04-11 07:26:59.437 10134  5006  6678 I EuiccGoogle: [81] TS43CarrierWebPortalActivity$$ExternalSyntheticLambda2.run: Switch back to pSIM\n04-11 07:26:59.437 10134  5006  5006 I EuiccGoogle: [2] DrawableUtils$Api29Impl.isEsimTransferEnabled: Device warranty sku:\n```",
       "revId": "4a2480666244a5c661a51dfca26e305b94a105ec",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ac0e10d0_1d324b7d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-11T20:59:46Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "f99182ca_eaf15fe4",
+      "revId": "4a2480666244a5c661a51dfca26e305b94a105ec",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5bccee81_89058073",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-11T20:59:46Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "3931799f_04174094",
+      "revId": "4a2480666244a5c661a51dfca26e305b94a105ec",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
