@@ -6,6 +6,8 @@
 
 package org.lineageos.setupwizard;
 
+import static com.google.android.setupcompat.util.ResultCodes.RESULT_ACTIVITY_NOT_FOUND;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +17,8 @@ import android.telephony.euicc.EuiccManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.activity.result.ActivityResult;
 
 import com.google.android.setupcompat.template.FooterButtonStyleUtils;
 import com.google.android.setupcompat.util.WizardManagerHelper;
@@ -86,6 +90,18 @@ public class SimMissingActivity extends SubBaseActivity {
             startActivity(intent, /* options */ null);
         } else {
             Log.e(TAG, "No activity available to handle " + intent.getAction());
+        }
+    }
+
+    @Override
+    protected void onActivityResult(ActivityResult activityResult) {
+        Intent data = activityResult.getData();
+        if (mIsSubactivityNotFound) {
+            finishAction(RESULT_ACTIVITY_NOT_FOUND);
+        } else if (data != null && data.getBooleanExtra("onBackPressed", false)) {
+            onStartSubactivity();
+        } else {
+            nextAction(RESULT_OK, data);
         }
     }
 
