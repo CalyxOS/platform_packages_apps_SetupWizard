@@ -176,6 +176,24 @@
       "parentUuid": "ca956f72_52ba555c",
       "revId": "61287e9457001fb6136b36ef1de0f936446563be",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cfe143de_8d0179d9",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-11T17:02:58Z",
+      "side": 1,
+      "message": "Okay, it\u0027s actually working for me too, seems like it just shows \"Checking network info\" an extra time or two and possibly takes longer.\n\nWe should test this on a non-Pixel as well, if we can. I don\u0027t know if all EUICC apps will respect us giving them the wrong activation type.",
+      "parentUuid": "473d18f0_706fd545",
+      "revId": "61287e9457001fb6136b36ef1de0f936446563be",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
