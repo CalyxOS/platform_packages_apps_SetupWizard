@@ -69,6 +69,59 @@
       "parentUuid": "4c6657f7_a38def7c",
       "revId": "61287e9457001fb6136b36ef1de0f936446563be",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8833f88_730714f9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-11T15:17:27Z",
+      "side": 1,
+      "message": "From some testing, the \"Setup eSIM\" feature is apparently not about existing eSIM functionality at all, but about setting up a new eSIM. Existing eSIMs should already show up, but due to quirks and mysterious mysteries, may require a reboot first.",
+      "parentUuid": "4b568866_4600997e",
+      "revId": "61287e9457001fb6136b36ef1de0f936446563be",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b964fb2_e195c7fb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-11T15:17:27Z",
+      "side": 1,
+      "message": "In 5.5.2, 5.5.0, and 5.4.1, the button didn\u0027t work for me at all. It showed another activity briefly, which quickly disappeared and then the SUW proceed to the next page.\n\nResolving this particular comment because it\u0027s based on the false assumption that this feature is intended for existing eSIMs.",
+      "parentUuid": "8a6b54bd_fb4705a4",
+      "revId": "61287e9457001fb6136b36ef1de0f936446563be",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c592078c_d1d6943f",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-11T15:17:27Z",
+      "side": 1,
+      "message": "Since this isn\u0027t a transfer from another device and isn\u0027t about existing eSIMs, I\u0027m curious what happens if we use EUICC_ACTIVATION_TYPE_DEFAULT, or maybe nothing?",
+      "revId": "61287e9457001fb6136b36ef1de0f936446563be",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
