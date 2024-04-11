@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3459f407_b8bf53e5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-11T21:35:40Z",
+      "side": 1,
+      "message": "This won\u0027t show \"Add SIM\" until the country is detected. User needs to leave and re-enter \"Manage SIMs\" manually. They won\u0027t know to do this.",
+      "revId": "c0212f0c5268e56f42fad9a3c4a6f261a9e7d7ac",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
