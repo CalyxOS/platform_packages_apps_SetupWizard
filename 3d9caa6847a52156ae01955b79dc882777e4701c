@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "18943ea9_429dab60",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-04-11T17:56:12Z",
+      "side": 1,
+      "message": "One problem here is that the network setup activity enables the next button as soon as a wifi network is connected to whether it has been set as the active network or not. So if a user moves on to this page before it has, they will not be offered to setup an eSIM",
+      "range": {
+        "startLine": 57,
+        "startChar": 40,
+        "endLine": 57,
+        "endChar": 52
+      },
+      "revId": "3d9caa6847a52156ae01955b79dc882777e4701c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
