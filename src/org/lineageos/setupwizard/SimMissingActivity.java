@@ -8,6 +8,8 @@ package org.lineageos.setupwizard;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkCapabilities;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.service.euicc.EuiccService;
@@ -41,9 +43,19 @@ public class SimMissingActivity extends SubBaseActivity {
     @Override
     protected void onStartSubactivity() {
         setNextAllowed(true);
+        ConnectivityManager connectivityManager = getSystemService(ConnectivityManager.class);
+        boolean hasInternet = false;
+        if (connectivityManager != null) {
+            NetworkCapabilities networkCapabilities = connectivityManager.getNetworkCapabilities(
+                    connectivityManager.getActiveNetwork());
+            if (networkCapabilities != null) {
+                hasInternet = networkCapabilities.hasCapability(
+                        NetworkCapabilities.NET_CAPABILITY_INTERNET);
+            }
+        }
         EuiccManager euiccManager = (EuiccManager) getSystemService(Context.EUICC_SERVICE);
-        if (euiccManager.isEnabled() /*&& NetworkMonitor.getInstance().isNetworkConnected()*/
-                && SystemProperties.getBoolean(KEY_ENABLE_ESIM_UI_BY_DEFAULT, true)) {
+        if (euiccManager.isEnabled() && hasInternet && SystemProperties.getBoolean(
+                KEY_ENABLE_ESIM_UI_BY_DEFAULT, true)) {
             getGlifLayout().setDescriptionText(getString(R.string.sim_missing_full_description,
                     getString(R.string.sim_missing_summary),
                     getString(R.string.euicc_summary)));
