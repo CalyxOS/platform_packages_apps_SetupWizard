@@ -32,6 +32,9 @@ import java.util.concurrent.TimeUnit;
 
 public class WelcomeActivity extends SubBaseActivity {
 
+    private static final String ACTION_ACCESSIBILITY_SETTINGS =
+            "android.settings.ACCESSIBILITY_SETTINGS_FOR_SUW";
+
     private ConsecutiveTapsGestureDetector mConsecutiveTapsGestureDetector;
     private GestureDetector mGestureDetector;
 
