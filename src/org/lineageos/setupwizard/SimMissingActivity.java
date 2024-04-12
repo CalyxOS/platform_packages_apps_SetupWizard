@@ -6,9 +6,10 @@
 
 package org.lineageos.setupwizard;
 
+import static com.google.android.setupcompat.util.ResultCodes.RESULT_ACTIVITY_NOT_FOUND;
+
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.os.SystemProperties;
 import android.service.euicc.EuiccService;
 import android.telephony.euicc.EuiccManager;
@@ -16,8 +17,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.activity.result.ActivityResult;
+
 import com.google.android.setupcompat.template.FooterButtonStyleUtils;
-import com.google.android.setupcompat.util.WizardManagerHelper;
+import com.google.android.setupdesign.transition.TransitionHelper;
 
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
@@ -32,18 +35,14 @@ public class SimMissingActivity extends SubBaseActivity {
             "esim.enable_esim_system_ui_by_default";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (!SetupWizardUtils.simMissing(this)) {
-            finishAction(RESULT_OK);
-        }
-    }
-
-    @Override
     protected void onStartSubactivity() {
+        if (!SetupWizardUtils.simMissing(this)) {
+            nextAction(RESULT_OK);
+            return;
+        }
         setNextAllowed(true);
         EuiccManager euiccManager = (EuiccManager) getSystemService(Context.EUICC_SERVICE);
-        if (euiccManager.isEnabled() /*&& NetworkMonitor.getInstance().isNetworkConnected()*/
+        if (euiccManager.isEnabled()
                 && SystemProperties.getBoolean(KEY_ENABLE_ESIM_UI_BY_DEFAULT, true)) {
             getGlifLayout().setDescriptionText(getString(R.string.sim_missing_full_description,
                     getString(R.string.sim_missing_summary),
@@ -54,6 +53,26 @@ public class SimMissingActivity extends SubBaseActivity {
         } else {
             getGlifLayout().setDescriptionText(getString(R.string.sim_missing_summary));
             findViewById(R.id.setup_euicc).setVisibility(View.GONE);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(ActivityResult activityResult) {
+        int resultCode = activityResult.getResultCode();
+        Intent data = activityResult.getData();
+        if (resultCode != RESULT_CANCELED) {
+            nextAction(resultCode, data);
+        } else if (mIsSubactivityNotFound) {
+            finishAction(RESULT_ACTIVITY_NOT_FOUND);
+        } else if (data != null && data.getBooleanExtra("onBackPressed", false)) {
+            if (SetupWizardUtils.simMissing(this)) {
+                onStartSubactivity();
+            } else {
+                finishAction(RESULT_CANCELED, data);
+            }
+            TransitionHelper.applyBackwardTransition(this, TransitionHelper.TRANSITION_SLIDE, true);
+        } else if (!SetupWizardUtils.simMissing(this)) {
+            nextAction(RESULT_OK);
         }
     }
 
