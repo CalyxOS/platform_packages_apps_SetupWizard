@@ -15,7 +15,6 @@ import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 
 import android.annotation.NonNull;
 import android.annotation.Nullable;
-import android.app.ActivityManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -37,12 +36,10 @@ import com.android.settingslib.Utils;
 
 import com.google.android.setupcompat.util.WizardManagerHelper;
 import com.google.android.setupdesign.GlifLayout;
+import com.google.android.setupdesign.transition.TransitionHelper;
 import com.google.android.setupdesign.util.ThemeHelper;
 
 import org.lineageos.setupwizard.NavigationLayout.NavigationBarListener;
-import org.lineageos.setupwizard.util.SetupWizardUtils;
-
-import java.util.List;
 
 public abstract class BaseSetupWizardActivity extends AppCompatActivity implements
         NavigationBarListener {
@@ -86,6 +83,8 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
                     Log.v(TAG, "handleOnBackPressed()");
                 }
                 finishAction(RESULT_CANCELED, new Intent().putExtra("onBackPressed", true));
+                TransitionHelper.applyBackwardTransition(BaseSetupWizardActivity.this,
+                        TransitionHelper.TRANSITION_SLIDE, true);
             }
         });
     }
@@ -269,6 +268,7 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
         intent.putExtra(WizardManagerHelper.EXTRA_IS_SETUP_FLOW, true);
         intent.putExtra(WizardManagerHelper.EXTRA_THEME, ThemeHelper.THEME_GLIF_V4);
         super.startActivity(intent);
+        TransitionHelper.applyForwardTransition(this, TransitionHelper.TRANSITION_SLIDE, true);
     }
 
     protected final void startActivityForResult(@NonNull Intent intent) {
@@ -276,6 +276,7 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
         intent.putExtra(WizardManagerHelper.EXTRA_IS_SETUP_FLOW, true);
         intent.putExtra(WizardManagerHelper.EXTRA_THEME, ThemeHelper.THEME_GLIF_V4);
         activityResultLauncher.launch(intent);
+        TransitionHelper.applyForwardTransition(this, TransitionHelper.TRANSITION_SLIDE, true);
     }
 
     protected void onActivityResult(ActivityResult activityResult) {
