@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "421fc394_250bd412",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-12T01:59:21Z",
+      "side": 1,
+      "message": "The main problem with the back stack seemed to be that we were using `finishAction(int)` but should have been using `nextAction(int)`.\n\nSame issue occurs if we ever try to use `finish()`.",
+      "revId": "86287e712c5048887fb40669810e1a684b772acf",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
