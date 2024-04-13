@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6422fa3_6e04df13",
+        "filename": "res/drawable/garlic_level_background.xml",
+        "patchSetId": 47
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-04-13T02:10:37Z",
+      "side": 1,
+      "message": "error: resource color/black (aka org.lineageos.setupwizard:color/black) not found.",
+      "range": {
+        "startLine": 20,
+        "startChar": 31,
+        "endLine": 20,
+        "endChar": 59
+      },
+      "revId": "7e4d57a5351d779dba36474002f94bc30bd707cc",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b6ae130c_d36bcf69",
+        "filename": "res/drawable/garlic_level_background_focused.xml",
+        "patchSetId": 47
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-04-13T02:10:37Z",
+      "side": 1,
+      "message": "error: resource color/accent (aka org.lineageos.setupwizard:color/accent) not found.",
+      "range": {
+        "startLine": 20,
+        "startChar": 31,
+        "endLine": 20,
+        "endChar": 60
+      },
+      "revId": "7e4d57a5351d779dba36474002f94bc30bd707cc",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
