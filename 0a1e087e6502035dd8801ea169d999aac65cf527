@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "add79d13_bc10e6b5",
+        "filename": "src/org/lineageos/setupwizard/BaseSetupWizardActivity.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-04-13T02:54:24Z",
+      "side": 0,
+      "message": "Guess it can still be final?",
+      "range": {
+        "startLine": 256,
+        "startChar": 14,
+        "endLine": 256,
+        "endChar": 20
+      },
+      "revId": "0a1e087e6502035dd8801ea169d999aac65cf527",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
