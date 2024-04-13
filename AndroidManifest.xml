@@ -63,7 +63,6 @@
             android:name=".wizardmanager.WizardManager"
             android:enabled="false"
             android:exported="false"
-            android:excludeFromRecents="true"
             android:configChanges="keyboard|keyboardHidden|mcc|mnc|orientation|screenSize"
             android:immersive="true">
             <intent-filter>
@@ -78,7 +77,6 @@
             android:label="@string/activity_label_empty"
             android:lockTaskMode="normal"
             android:launchMode="singleTask"
-            android:excludeFromRecents="true"
             android:configChanges="keyboard|keyboardHidden|mcc|mnc|orientation|screenSize"
             android:immersive="true"
             android:exported="true"
@@ -96,7 +94,6 @@
         <activity
             android:name=".BluetoothSetupActivity"
             android:label="@string/activity_label_empty"
-            android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
             android:exported="false"
@@ -110,7 +107,6 @@
         <activity
             android:name=".WelcomeActivity"
             android:label="@string/activity_label_empty"
-            android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
             android:exported="false"
@@ -124,7 +120,6 @@
         <activity
             android:name=".LocaleActivity"
             android:label="@string/activity_label_empty"
-            android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
             android:exported="false"
@@ -138,7 +133,6 @@
         <activity
             android:name=".BootloaderWarningActivity"
             android:label="@string/activity_label_empty"
-            android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
             android:exported="false"
@@ -152,7 +146,6 @@
         <activity
             android:name=".DateTimeActivity"
             android:label="@string/activity_label_empty"
-            android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
             android:exported="false"
@@ -166,7 +159,6 @@
         <activity
             android:name=".SimMissingActivity"
             android:label="@string/activity_label_empty"
-            android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
             android:exported="false"
@@ -180,7 +172,6 @@
         <activity
             android:name=".NetworkSetupActivity"
             android:label="@string/activity_label_empty"
-            android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
             android:exported="false"
@@ -194,7 +185,6 @@
         <activity
             android:name=".LocationSettingsActivity"
             android:label="@string/activity_label_empty"
-            android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
             android:exported="false"
@@ -208,7 +198,6 @@
         <activity
             android:name=".NavigationSettingsActivity"
             android:label="@string/activity_label_empty"
-            android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
             android:exported="false"
@@ -222,7 +211,6 @@
         <activity
             android:name=".BiometricActivity"
             android:label="@string/activity_label_empty"
-            android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
             android:exported="false"
@@ -236,7 +224,6 @@
         <activity
             android:name=".ScreenLockActivity"
             android:label="@string/activity_label_empty"
-            android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
             android:exported="false"
@@ -250,7 +237,6 @@
         <activity
             android:name=".backup.RestoreIntroActivity"
             android:label="@string/activity_label_empty"
-            android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
             android:exported="false"
@@ -264,7 +250,6 @@
         <activity
             android:name=".apps.MicroGActivity"
             android:label="@string/activity_label_empty"
-            android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
             android:exported="false"
@@ -278,7 +263,6 @@
         <activity
             android:name=".apps.InstallAppsActivity"
             android:label="@string/activity_label_empty"
-            android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
             android:exported="false"
@@ -292,7 +276,6 @@
         <activity
             android:name=".ThemeSettingsActivity"
             android:label="@string/activity_label_empty"
-            android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
             android:exported="false"
@@ -307,7 +290,6 @@
             android:name=".FinishActivity"
             android:theme="@style/EdgeToEdgeWallpaperBackground"
             android:label="@string/activity_label_empty"
-            android:excludeFromRecents="true"
             android:configChanges="mcc|mnc"
             android:immersive="true"
             android:exported="false"
