@@ -77,14 +77,13 @@ public class WelcomeActivity extends SubBaseActivity {
 
         if (Build.IS_DEBUGGABLE) {
             mConsecutiveTapsGestureDetector = new ConsecutiveTapsGestureDetector(
-                    (ConsecutiveTapsGestureDetector.OnConsecutiveTapsListener)
-                            numOfConsecutiveTaps -> {
-                                if (numOfConsecutiveTaps == 4) {
-                                    Toast.makeText(WelcomeActivity.this, R.string.skip_setupwizard,
-                                            Toast.LENGTH_LONG).show();
-                                    SetupWizardUtils.finishSetupWizard(WelcomeActivity.this);
-                                }
-                            }, findViewById(R.id.setup_wizard_layout),
+                    numOfConsecutiveTaps -> {
+                        if (numOfConsecutiveTaps == 4) {
+                            Toast.makeText(WelcomeActivity.this, R.string.skip_setupwizard,
+                                    Toast.LENGTH_LONG).show();
+                            SetupWizardUtils.finishSetupWizard(WelcomeActivity.this);
+                        }
+                    }, findViewById(R.id.setup_wizard_layout),
                     (int) TimeUnit.SECONDS.toMillis(1));
         }
         mGestureDetector = new GestureDetector(this,
