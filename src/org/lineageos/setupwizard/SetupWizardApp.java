@@ -6,15 +6,11 @@
 
 package org.lineageos.setupwizard;
 
-import android.app.AppOpsManager;
 import android.app.Application;
 import android.app.StatusBarManager;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.os.Process;
-import android.permission.PermissionManager;
 import android.provider.Settings;
 import android.service.oemlock.OemLockManager;
 import android.util.Log;
@@ -29,9 +25,6 @@ public class SetupWizardApp extends Application {
     // Verbose logging
     public static final boolean LOGV = Log.isLoggable(TAG, Log.VERBOSE);
 
-    public static final String ACTION_FINISHED = "org.lineageos.setupwizard.SETUP_FINISHED";
-    public static final String ACTION_SETUP_COMPLETE =
-            "org.lineageos.setupwizard.LINEAGE_SETUP_COMPLETE";
     public static final String ACTION_SETUP_INSTALL = "org.calyxos.lupin.INSTALL";
     public static final String ACTION_RESTORE_FROM_BACKUP =
             "com.stevesoltys.seedvault.RESTORE_BACKUP";
@@ -62,7 +55,7 @@ public class SetupWizardApp extends Application {
     private boolean mIsRadioReady = false;
     private boolean mIgnoreSimLocale = false;
 
-    private final Bundle mSettingsBundle = new Bundle();
+    private static final Bundle mSettingsBundle = new Bundle();
     private final Handler mHandler = new Handler(Looper.getMainLooper());
 
     private final Runnable mRadioTimeoutRunnable = () -> mIsRadioReady = true;
@@ -106,32 +99,7 @@ public class SetupWizardApp extends Application {
         mIgnoreSimLocale = ignoreSimLocale;
     }
 
-    public Bundle getSettingsBundle() {
+    public static Bundle getSettingsBundle() {
         return mSettingsBundle;
-    }
-
-    public void provisionDefaultUserAppPermissions() {
-        for (String packageName : PACKAGE_INSTALLERS) {
-            if (LOGV) Log.v(TAG, "Provisioning default permissions for " + packageName + "...");
-            try {
-                getSystemService(AppOpsManager.class).setMode(
-                        AppOpsManager.OP_REQUEST_INSTALL_PACKAGES,
-                        getPackageManager().getPackageUid(packageName, 0),
-                        packageName,
-                        AppOpsManager.MODE_ALLOWED);
-            } catch (PackageManager.NameNotFoundException ignored) {
-                if (LOGV) Log.v(TAG, "Missing " + packageName + " for appops, skipping");
-                continue;
-            } catch (Exception e) {
-                Log.e(TAG, "Failed to grant install unknown apps permission to " + packageName, e);
-            }
-            try {
-                getSystemService(PermissionManager.class).grantRuntimePermission(packageName,
-                        android.Manifest.permission.POST_NOTIFICATIONS,
-                        Process.myUserHandle());
-            } catch (Exception e) {
-                Log.e(TAG, "Failed to grant post notifications permission to " + packageName, e);
-            }
-        }
     }
 }
