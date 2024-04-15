@@ -34,6 +34,24 @@
       "parentUuid": "c2fa55c5_bf08f600",
       "revId": "cf48839488b1d429e7ed511ad65863e860811ab9",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "58fc412b_15029567",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-04-15T16:31:45Z",
+      "side": 1,
+      "message": "I haven\u0027t seen anything that would make other apps use our animations. That said I guess we could check stock (if it is different I would suspect they may have reimplemented the page rather than are executing the AOSP one with extra flags).\nThat said, we can definitely add code to Settings to have it apply the animations if wanted.",
+      "parentUuid": "f141da1f_ce7596d4",
+      "revId": "cf48839488b1d429e7ed511ad65863e860811ab9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
