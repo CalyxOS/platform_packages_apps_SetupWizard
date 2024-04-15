@@ -34,6 +34,24 @@
       "parentUuid": "a5580d0f_fde220d8",
       "revId": "9c1c9d74d4de86baa5373b8abecf2f84ccc2e227",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31ad2195_e919881d",
+        "filename": "src/org/lineageos/setupwizard/BaseSetupWizardActivity.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-15T18:49:26Z",
+      "side": 1,
+      "message": "Not override startActivityForResult itself, because that\u0027s unnecessary redundancy, but add something that can etiher be checked or overridden, e.g. add something like this to BaseSetupWizardActivity.java\n```\nprotected boolean shouldUseSuwIntentExtras() {\n    return true;\n}\n```\n... and then startActivityForResult uses `if (shouldUseSuwIntentExtras()) {`, and SimMissingActivity.java overrides that new method to return false, rather than checking what class is involved.\n\nI guess another possibility would be a protected field, like `protected boolean mShouldUseSuwIntentExtras \u003d false`, which SimMissingActivity.java would set to true in its constructor.\n\nI don\u0027t know which of those options is better code-wise or if there\u0027s something even better than either, but they both avoid the issue I mentioned.",
+      "parentUuid": "0d36d335_075a4ffc",
+      "revId": "9c1c9d74d4de86baa5373b8abecf2f84ccc2e227",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
