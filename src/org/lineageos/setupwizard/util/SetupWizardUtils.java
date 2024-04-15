@@ -61,6 +61,7 @@ import org.lineageos.setupwizard.BiometricActivity;
 import org.lineageos.setupwizard.BluetoothSetupActivity;
 import org.lineageos.setupwizard.BootloaderWarningActivity;
 import org.lineageos.setupwizard.NetworkSetupActivity;
+import org.lineageos.setupwizard.PartnerReceiver;
 import org.lineageos.setupwizard.ScreenLockActivity;
 import org.lineageos.setupwizard.SetupWizardActivity;
 import org.lineageos.setupwizard.SetupWizardApp;
@@ -183,6 +184,7 @@ public class SetupWizardUtils {
         sendMicroGCheckInBroadcast(context);
         WallpaperManager.getInstance(context).forgetLoadedWallpaper();
         disableHome(context);
+        disableComponent(context, PartnerReceiver.class);
         enableStatusBar();
         context.finishAffinity();
         context.nextAction(RESULT_SKIP);
