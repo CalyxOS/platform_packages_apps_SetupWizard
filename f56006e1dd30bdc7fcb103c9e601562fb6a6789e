@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee5a58f1_c7db9c75",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-15T14:01:46Z",
+      "side": 1,
+      "message": "I wish we didn\u0027t need to add a specific transition override in this change, but it\u0027s good enough for the moment I think, since addressing that would require other refactoring. Overriding onActivityResult just to get proper navigation behavior is already confusing for unfamiliar developers as it is, but it\u0027s done in other places and would have to be fixed separately.",
+      "revId": "f56006e1dd30bdc7fcb103c9e601562fb6a6789e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
