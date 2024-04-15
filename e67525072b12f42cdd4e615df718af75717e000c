@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "21b533c7_0afe3c01",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-15T15:27:28Z",
+      "side": 1,
+      "message": "Crucially, by the *end* of the Setup Wizard, no SUW activities remain in Recents. This is true both for the main SUW and for a work profile SUW.",
+      "revId": "e67525072b12f42cdd4e615df718af75717e000c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
