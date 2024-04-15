@@ -86,6 +86,24 @@
       "parentUuid": "1cf4e326_0cad0891",
       "revId": "a49efd6f76b55f0f78dd70c06139fe2aab3edf5c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2820e5fb_fe74caa6",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-04-15T16:41:50Z",
+      "side": 1,
+      "message": "Oh, sorry forgot they\u0027re separate changes. I figured that this doesn\u0027t hurt to be present upstream but the skip functionality is custom to us",
+      "parentUuid": "f8cf26c9_1b0ce12b",
+      "revId": "a49efd6f76b55f0f78dd70c06139fe2aab3edf5c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
