@@ -68,6 +68,24 @@
       "message": "What does this do?",
       "revId": "a49efd6f76b55f0f78dd70c06139fe2aab3edf5c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8cf26c9_1b0ce12b",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-04-15T16:40:22Z",
+      "side": 1,
+      "message": "This is part of what allows skipping the setup wizard and finishing things off the same way normal exit works. When nextAction has no action to run the WizardManager disables itself.\nIn this case, we\u0027re setting the result code to skip (1) and calling the same function to set everything else ready for exiting in SetupWizardUtils and then calling nextAction takes care of the rest.",
+      "parentUuid": "1cf4e326_0cad0891",
+      "revId": "a49efd6f76b55f0f78dd70c06139fe2aab3edf5c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
