@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2fa55c5_bf08f600",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-15T14:00:43Z",
+      "side": 1,
+      "message": "Going Back from the \"Set a PIN\" page uses the wrong transition. Otherwise, everything looked fixed to me so far.",
+      "revId": "cf48839488b1d429e7ed511ad65863e860811ab9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
