@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "08117f01_3669e81c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-15T15:24:14Z",
+      "side": 1,
+      "message": "Oops. When I restored this, I had observed that FP5\u0027s \"Setup eSIM\" button appears and quickly disappears, doing nothing, with Wi-Fi off. But I had forgotten to pick the following change (which is/was the parent of this one): https://review.calyxos.org/c/CalyxOS/platform_packages_apps_SetupWizard/+/25801\n\nWith it, the reason for abandoning seems to hold. FP5\u0027s Euicc app shows a warning \"Connect to W-Fi\" - with a Next button to turn on Wi-Fi and get connected, too - rather than disappearing.",
+      "revId": "00b02e4abf93929bf7a8372f5fb5050ec0e9af9c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
