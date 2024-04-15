@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1249ff20_2544f3ef",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-15T14:25:35Z",
+      "side": 1,
+      "message": "Add something like: \"Where they are still needed, move hardcoded strings into the files which use them.\"\n\n(because this change also moves a few things around.)",
+      "revId": "b200816329dd6982aea993178f4bbb84a0f4f8c5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
