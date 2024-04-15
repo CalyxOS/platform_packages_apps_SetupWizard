@@ -89,6 +89,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b80e66b_09c4c931",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-15T18:43:01Z",
+      "side": 1,
+      "message": "Agree, and potentially not tackling it at all, since it seems to be part of the way Android does things. It should get killed as needed by the system, even without reboot.",
+      "parentUuid": "43c36b67_d09fbf1b",
+      "revId": "a49efd6f76b55f0f78dd70c06139fe2aab3edf5c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1cf4e326_0cad0891",
