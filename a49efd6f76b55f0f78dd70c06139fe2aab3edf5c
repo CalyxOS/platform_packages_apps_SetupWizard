@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db2344c8_f70ac220",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-15T14:53:04Z",
+      "side": 1,
+      "message": "This appears to work just fine. It also fixes the inability to skip the SUW properly in userdebug/eng builds. I think most of the problems that kept the exit procedure so complicated were already solved in previous changes.\n\nThere are some CalyxOS-specific movements here, like for provisioning defaults, that will need to be accounted for when sending upstream.",
+      "revId": "a49efd6f76b55f0f78dd70c06139fe2aab3edf5c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1cf4e326_0cad0891",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-15T14:53:04Z",
+      "side": 1,
+      "message": "What does this do?",
+      "revId": "a49efd6f76b55f0f78dd70c06139fe2aab3edf5c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
