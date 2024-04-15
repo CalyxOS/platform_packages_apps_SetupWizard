@@ -38,6 +38,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4d72a40e_22a8592c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-15T15:34:49Z",
+      "side": 1,
+      "message": "Was noticed that the process remains running. We think it could be because PartnerReceiver (should be the only one) doesn\u0027t get disabled now?",
+      "revId": "a49efd6f76b55f0f78dd70c06139fe2aab3edf5c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1cf4e326_0cad0891",
         "filename": "res/raw/lineage_wizard_script.xml",
         "patchSetId": 2
