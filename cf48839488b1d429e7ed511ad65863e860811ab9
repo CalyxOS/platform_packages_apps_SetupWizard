@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "622dedce_d49e4630",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-15T14:19:13Z",
+      "side": 0,
+      "message": "I like that this is removed, since its presence made debugging more difficult and it shouldn\u0027t be necessary.\n\nThere is the minor side effect that if you Skip the Internet page and then go Back before the transition is completed, you will see \"SIM card missing\" appear very briefly as you are returned to the Internet page. To me this reflects overall weirdness with the Setup Wizard, not something we need to fix here.",
+      "revId": "cf48839488b1d429e7ed511ad65863e860811ab9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
