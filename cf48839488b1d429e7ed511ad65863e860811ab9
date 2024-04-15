@@ -16,6 +16,24 @@
       "message": "Going Back from the \"Set a PIN\" page uses the wrong transition. Otherwise, everything looked fixed to me so far.",
       "revId": "cf48839488b1d429e7ed511ad65863e860811ab9",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f141da1f_ce7596d4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-15T14:05:52Z",
+      "side": 1,
+      "message": "I\u0027m not sure how fixable this is, since isn\u0027t that happening *within* Settings, which has its own transition animations? Like it\u0027s transitioning from the biometric screen, which is briefly avoided in order to show the prerequisite screen for setting a PIN?\n\nNot sure if there is an extras flag or something to get Settings to use our transitions.\n\nCan just mark this Resolved for now if it seems too tricky/time-consuming or not worth it.",
+      "parentUuid": "c2fa55c5_bf08f600",
+      "revId": "cf48839488b1d429e7ed511ad65863e860811ab9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
