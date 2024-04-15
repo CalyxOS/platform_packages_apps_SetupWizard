@@ -16,6 +16,24 @@
       "message": "It may not be the best idea for this class to reference its subclasses like this. BaseSetupWizardActivity shouldn\u0027t need to even know what its subclasses are. I made this mistake in an [Aperture change once](https://review.lineageos.org/c/LineageOS/android_packages_apps_Aperture/+/347850/comments/23eb273b_82c553ce) and was reminded of that. Some more info here: https://softwareengineering.stackexchange.com/questions/219543/should-a-class-know-about-its-subclasses\n\nThis does work, but I suppose a better approach code-wise could be to add something that the subclass can set or override to indicate that it doesn\u0027t want the extras added.",
       "revId": "9c1c9d74d4de86baa5373b8abecf2f84ccc2e227",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d36d335_075a4ffc",
+        "filename": "src/org/lineageos/setupwizard/BaseSetupWizardActivity.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-04-15T18:43:30Z",
+      "side": 1,
+      "message": "So override it in subclass? I think that\u0027s why I originally removed the final keyword",
+      "parentUuid": "a5580d0f_fde220d8",
+      "revId": "9c1c9d74d4de86baa5373b8abecf2f84ccc2e227",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
