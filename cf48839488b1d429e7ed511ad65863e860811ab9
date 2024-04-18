@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "15e18a37_01ea32b1",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-04-18T16:45:01Z",
+      "side": 0,
+      "message": "This was removed after the rebase (because upstream removed it) but it looks like something we still want",
+      "range": {
+        "startLine": 46,
+        "startChar": 37,
+        "endLine": 46,
+        "endChar": 93
+      },
+      "revId": "cf48839488b1d429e7ed511ad65863e860811ab9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "622dedce_d49e4630",
