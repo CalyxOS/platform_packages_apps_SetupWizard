@@ -52,6 +52,24 @@
       "parentUuid": "f141da1f_ce7596d4",
       "revId": "cf48839488b1d429e7ed511ad65863e860811ab9",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7d28b483_360873c7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-18T19:03:35Z",
+      "side": 1,
+      "message": "Another thought: we could just use the same animations Settings is already using, instead of slide...? If I recall correctly, in the rebase, they matched, it was just using the wrong back/forward sometimes.",
+      "parentUuid": "58fc412b_15029567",
+      "revId": "cf48839488b1d429e7ed511ad65863e860811ab9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
