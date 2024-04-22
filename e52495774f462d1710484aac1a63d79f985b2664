@@ -16,6 +16,24 @@
       "message": "Oliver Scott: Does this affect the setup wizard shell scripts?\nTommy Webb: Doesn\u0027t look like it to me. I have never used them, but I looked at them just now and can\u0027t see how it would.\nOliver Scott: Was thinking maybe upstream if PartnerReceiver is disabled when the shell scripts are used to restart setup?",
       "revId": "e52495774f462d1710484aac1a63d79f985b2664",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "995214cd_b763386d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-22T20:10:20Z",
+      "side": 1,
+      "message": "I don\u0027t know the answer to this or why it would matter, sorry.",
+      "parentUuid": "b4398949_2bffa677",
+      "revId": "e52495774f462d1710484aac1a63d79f985b2664",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
