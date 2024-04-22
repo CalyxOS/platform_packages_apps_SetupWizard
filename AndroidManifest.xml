@@ -304,6 +304,7 @@
 
         <receiver
             android:name=".PartnerReceiver"
+            android:enabled="false"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.android.setupwizard.action.PARTNER_CUSTOMIZATION" />
