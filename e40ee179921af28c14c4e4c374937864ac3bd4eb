@@ -16,6 +16,24 @@
       "message": "Need to update this commit message... which also means rebasing again or I\u0027d just do it here and now",
       "revId": "e40ee179921af28c14c4e4c374937864ac3bd4eb",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d326d81b_683018ac",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-22T19:33:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b3cac0eb_1e852619",
+      "revId": "e40ee179921af28c14c4e4c374937864ac3bd4eb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
