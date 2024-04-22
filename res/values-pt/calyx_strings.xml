@@ -4,4 +4,13 @@
     <string name="microg_title">Serviços Google</string>
     <string name="setup_euicc">Configuração do eSIM</string>
     <string name="euicc_summary">Também pode adicionar um eSIM ao seu aparelho.</string>
+    <string name="microg_description2">O microG é uma alternativa de código aberto ao <b>Google Play Services</b> (e software relacionado), mas inclui somente as partes úteis. Diferentemente do Play Services, o microG não possui nenhum tipo de rastreamento publicitário ou de localização, por exemplo.</string>
+    <string name="microg_switch_label2">Compatibilidade com Serviços do Google</string>
+    <string name="microg_defaults_switch_label">Suporte à notificações push</string>
+    <string name="microg_location_summary">Melhore os serviços de localização consultando o MLS (serviços de localização da Mozilla) com redes Wi-Fi e redes móveis próximas, e lembrando as coordenadas de GPS de redes próximas. Você pode configurar essas opções com mais precisão nas configurações do microG depois.</string>
+    <string name="microg_defaults_summary">Permite que aplicativos se registrem para notificações push com o Google. Isso registra seu dispositivo aos serviços do Google, mas sem nenhum identificador único ao dispositivo. Isso pode ser ativado depois pelas configurações do microG, mas qualquer aplicativo configurado antes precisará ser reinstalado para funcionar corretamente.</string>
+    <string name="bootloader_warning_title">Aviso do bloqueio do bootloader</string>
+    <string name="microg_location_switch_label">Localização de rede</string>
+    <string name="bootloader_warning_summary">O bootloader deste dispositivo está desbloqueado. Bloqueie o bootloader por meio de um computador. Visite <a href="https://calyxos.org/lock">calyxos.org/lock</a> para mais informações.</string>
+    <string name="reboot">Reiniciar</string>
 </resources>

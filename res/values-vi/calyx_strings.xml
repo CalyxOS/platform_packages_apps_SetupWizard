@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="microg_title">Dịch vụ Google</string>
+    <string name="microg_description2">microG là mã nguồn mở thay thế cho <b>Google Play Services</b> (và phần mềm liên quan), nhưng nó chỉ chứa phần hữu ích. Không giống như Play Services, microG không có tính năng ví dụ như quảng cáo hay theo dõi vị trí.</string>
+    <string name="microg_switch_label2">Tương thích với Google Services</string>
+    <string name="microg_defaults_switch_label">Hỗ trợ thông báo đẩy</string>
+    <string name="setup_euicc">Thiết lập eSIM</string>
+    <string name="bootloader_warning_summary">Bộ tái khởi động của thiết bị đang bị khóa. Hãy mở khóa bộ tải khởi động từ máy tính. Vào <a href="https://calyxos.org/lock">calyxos.org/lock</a> để thêm thông tin.</string>
+    <string name="microg_description">Cho phép ứng dụng như <b>Google Maps, Youtube và các dịch vụ gọi xe công nghệ</b> chạy trên CalyxOS. Hãy vô hiệu nó nếu bạn không dùng ứng dụng cần Google services. Bạn sẽ không thể kích hoạt lại nó sau này.</string>
+    <string name="microg_defaults_summary">Cho phép ứng dụng đăng ký thông báo đẩy với Google. Điều này đăng ký thiết bị của bạn với Google services, nhưng không kèm thông tin cá nhân gì của thiết bị. Nó có thể được kích hoạt sau từ phần Cài đặt của microG, nhưng bất kỳ ứng dụng nào cài đặt trước đó cần phải cài lại để hoạt động bình thường.</string>
+    <string name="bootloader_warning_title">Cảnh báo bộ tái khởi động bị khóa</string>
+    <string name="microg_location_switch_label">Vị trí mạng</string>
+    <string name="microg_location_summary">Cải thiện dịch vụ vị trí bằng cách sử dụng MLS (Mozilla Location Services) với Wi-Fi và mạng viễn thông xung quanh, sử dụng Nominatim để tìm địa chỉ, và nhớ tọa độ GPS của mạng xung quanh. Bạn có thể tinh chỉnh những cài đặt này trong phần Cài đặt của microG sau này.</string>
+    <string name="euicc_summary">Bạn cũng có thể thêm eSIM vào thiết bị.</string>
+    <string name="reboot">Khởi động</string>
+</resources>
