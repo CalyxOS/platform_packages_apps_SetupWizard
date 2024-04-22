@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "85b8b036_dffdadfe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-22T19:40:10Z",
+      "side": 1,
+      "message": "If the amount of error handling looks like a bit more than is needed, that\u0027s kind of intentional, because I\u0027m not sure why we get the result we do, and having more info about that could be useful in the future. This at least avoids the crash.",
+      "revId": "37fa0778a97283ac8f30dd397315d77d8dcd3d1c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
