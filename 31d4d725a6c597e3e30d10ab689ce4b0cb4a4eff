@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54f9d7f0_d016ef78",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-23T15:43:10Z",
+      "side": 1,
+      "message": "The most useful thing about this change is probably the commit message.",
+      "revId": "31d4d725a6c597e3e30d10ab689ce4b0cb4a4eff",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
