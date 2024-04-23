@@ -16,6 +16,24 @@
       "message": "From what we can glean in AOSP, PartnerReceiver is used as a marker to find a partner and use its receiver. The receiver may not even need to be enabled. See [setupdesign\u0027s Partner.java](https://cs.android.com/android/platform/superproject/+/android-14.0.0_r33:external/setupdesign/main/src/com/google/android/setupdesign/util/Partner.java;l\u003d225-235).\n\nIf the above is true, then we can just keep the receiver disabled via manifest and not have to deal with it programmatically.\n\nThere is a Partner.java in frameworks/opt/setupwizard/library as well, but from testing, that library does not appear to be involved for us at all. It\u0027s used by SimAppDialog and that\u0027s it. Adding debug lines to its Partner.java methods yielded nothing during SUW.",
       "revId": "03579a22144540ab290aaca176ada9f3f094b786",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6552c40b_ad6eb44c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-23T15:12:26Z",
+      "side": 1,
+      "message": "I said \"find a partner and use its receiver\" but what I meant was \"find a partner and use its *resources*\".\n\nThere\u0027s also a provider that we don\u0027t have, `com.google.android.setupwizard.partner`, referenced in a few places: [setupdesign\u0027s DeviceHelper](https://cs.android.com/android/platform/superproject/main/+/main:external/setupdesign/main/src/com/google/android/setupdesign/util/DeviceHelper.java;l\u003d38?q\u003ddevicehelper.java\u0026ss\u003dandroid%2Fplatform%2Fsuperproject%2Fmain) and [setupcompat\u0027s PartnerConfigHelper](https://cs.android.com/android/platform/superproject/main/+/main:external/setupcompat/partnerconfig/java/com/google/android/setupcompat/partnerconfig/PartnerConfigHelper.java;l\u003d55?q\u003dcom.google.android.setupwizard.partner\u0026ss\u003dandroid%2Fplatform%2Fsuperproject%2Fmain:external%2Fsetupcompat%2F) - but from what I can tell, it\u0027s not related to the Partner Receiver, which (by the way) is found via the action `com.android.setupwizard.action.PARTNER_CUSTOMIZATION`.",
+      "parentUuid": "796a6e10_c4b367c5",
+      "revId": "03579a22144540ab290aaca176ada9f3f094b786",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
