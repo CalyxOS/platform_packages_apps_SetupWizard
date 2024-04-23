@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "796a6e10_c4b367c5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-23T15:03:41Z",
+      "side": 1,
+      "message": "From what we can glean in AOSP, PartnerReceiver is used as a marker to find a partner and use its receiver. The receiver may not even need to be enabled. See [setupdesign\u0027s Partner.java](https://cs.android.com/android/platform/superproject/+/android-14.0.0_r33:external/setupdesign/main/src/com/google/android/setupdesign/util/Partner.java;l\u003d225-235).\n\nIf the above is true, then we can just keep the receiver disabled via manifest and not have to deal with it programmatically.\n\nThere is a Partner.java in frameworks/opt/setupwizard/library as well, but from testing, that library does not appear to be involved for us at all. It\u0027s used by SimAppDialog and that\u0027s it. Adding debug lines to its Partner.java methods yielded nothing during SUW.",
+      "revId": "03579a22144540ab290aaca176ada9f3f094b786",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
