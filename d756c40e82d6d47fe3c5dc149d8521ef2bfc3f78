@@ -16,6 +16,24 @@
       "message": "Nitpick. Extra empty line",
       "revId": "d756c40e82d6d47fe3c5dc149d8521ef2bfc3f78",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f9cc6b4_c6fbd7aa",
+        "filename": "src/org/lineageos/setupwizard/ScreenLockActivity.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-04-25T14:58:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9575f334_935a0e24",
+      "revId": "d756c40e82d6d47fe3c5dc149d8521ef2bfc3f78",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
