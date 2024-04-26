@@ -23,7 +23,6 @@ import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 import static org.lineageos.setupwizard.SetupWizardApp.NAVIGATION_OPTION_KEY;
 import static org.lineageos.setupwizard.SetupWizardApp.PACKAGE_INSTALLERS;
 
-import android.app.Activity;
 import android.app.AppOpsManager;
 import android.app.StatusBarManager;
 import android.app.WallpaperManager;
@@ -39,7 +38,9 @@ import android.net.ConnectivityManager;
 import android.net.NetworkCapabilities;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.IDeviceIdleController;
 import android.os.Process;
+import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.SystemProperties;
 import android.os.UserHandle;
@@ -350,6 +351,13 @@ public class SetupWizardUtils {
             } catch (Exception e) {
                 Log.e(TAG, "Failed to grant post notifications permission to " + packageName, e);
             }
+        }
+        try {
+            IDeviceIdleController.Stub.asInterface(
+                    ServiceManager.getService("deviceidle")).addPowerSaveWhitelistApp(
+                    AURORA_STORE_PACKAGE);
+        } catch (RemoteException e) {
+            Log.e(TAG, "Failed to add " + AURORA_STORE_PACKAGE + " to power save allowlist", e);
         }
     }
 
