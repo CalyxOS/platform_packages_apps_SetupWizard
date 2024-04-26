@@ -26,6 +26,7 @@ import android.content.pm.PackageManager.GET_ACTIVITIES
 import android.hardware.biometrics.BiometricManager
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import android.os.PowerExemptionManager
 import android.os.ServiceManager
 import android.os.SystemProperties
 import android.os.UserHandle
@@ -369,6 +370,14 @@ object SetupWizardUtils {
                 }
                 .onFailure { e ->
                     Log.e(TAG, "Failed to grant post notifications permission to $packageName", e)
+                }
+            runCatching {
+                    val exemptionManager =
+                        context.getSystemService(PowerExemptionManager::class.java)
+                    exemptionManager?.addToPermanentAllowList(AURORA_STORE_PACKAGE)
+                }
+                .onFailure { e ->
+                    Log.e(TAG, "Failed to add $AURORA_STORE_PACKAGE to power save allowlist", e)
                 }
         }
     }
