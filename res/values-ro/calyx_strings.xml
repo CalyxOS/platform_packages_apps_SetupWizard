@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="microg_title">Servicii Google</string>
+    <string name="microg_description2">microG este un înlocuitor cu sursă deschisă pentru <b>Serviciile Google Play</b> (și software-ul asociat), dar include doar părțile utile. Spre deosebire de Play Services, microG nu are nicio publicitate sau urmărire a locației, de exemplu.</string>
+    <string name="microg_switch_label2">Compatibilitate cu serviciile Google</string>
+    <string name="microg_description">Acest lucru permite aplicațiilor precum <b>Google Maps, Youtube și servicii de partajare a călătoriilor</b> să ruleze pe CalyxOS. Dezactivează această opțiune dacă nu intenționezi să rulezi aplicații care necesită serviciile Google. Nu o vei putea activa mai târziu.</string>
+    <string name="microg_defaults_switch_label">Suport pentru notificări push</string>
+    <string name="setup_euicc">Configurare eSIM</string>
+    <string name="bootloader_warning_title">Avertisment pentru Bootloader blocat</string>
+    <string name="reboot">Repornește</string>
+    <string name="microg_location_switch_label">Locație rețea</string>
+    <string name="euicc_summary">De asemenea, poți adăuga un eSIM pe dispozitiv.</string>
+    <string name="microg_defaults_summary">Permite aplicațiilor să se înregistreze pentru notificări push cu Google. Acest lucru înregistrează dispozitivul la serviciile Google, fără identificatori unici specifici dispozitivului. Acest lucru poate fi activat mai târziu în Setările microG, cu toate acestea, orice aplicație configurată mai devreme va trebui să fie reinstalată pentru a funcționa corect.</string>
+    <string name="microg_location_summary">Îmbunătățește serviciile de localizare interogând MLS (Mozilla Location Services) cu rețelele Wi-Fi și celulare din apropiere, folosind Nominatim pentru căutări de adrese și memorizând coordonatele GPS ale rețelelor din apropiere. Poți personaliza aceste opțiuni mai detaliat în Setările microG mai târziu.</string>
+    <string name="bootloader_warning_summary">Bootloader-ul acestui dispozitiv este deblocat în prezent. Blochează bootloader-ul de pe un computer. Vizitează <a href="https://calyxos.org/lock">calyxos.org/lock</a> pentru mai multe informații.</string>
+</resources>
