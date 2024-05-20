@@ -12,7 +12,6 @@ import static android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_DISABLED
 import static android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
 import static android.content.pm.PackageManager.DONT_KILL_APP;
 import static android.content.pm.PackageManager.GET_ACTIVITIES;
-import static android.os.UserHandle.USER_CURRENT;
 import static android.telephony.TelephonyManager.PHONE_TYPE_GSM;
 
 import static com.android.internal.telephony.PhoneConstants.LTE_ON_CDMA_TRUE;
@@ -64,6 +63,7 @@ import org.lineageos.setupwizard.NetworkSetupActivity;
 import org.lineageos.setupwizard.ScreenLockActivity;
 import org.lineageos.setupwizard.SetupWizardActivity;
 import org.lineageos.setupwizard.SetupWizardApp;
+import org.lineageos.setupwizard.SimMissingActivity;
 
 import java.util.List;
 
@@ -205,14 +205,13 @@ public class SetupWizardUtils {
         return SystemProperties.getBoolean("config.disable_bluetooth", false);
     }
 
-    public static boolean isEthernetConnected(Context context) {
-        ConnectivityManager cm = (ConnectivityManager) context.
-                getSystemService(Context.CONNECTIVITY_SERVICE);
+    private static boolean isNetworkConnectedToInternetViaEthernet(Context context) {
+        ConnectivityManager cm = context.getSystemService(ConnectivityManager.class);
         NetworkCapabilities networkCapabilities = cm.getNetworkCapabilities(cm.getActiveNetwork());
-        if (networkCapabilities != null) {
-            return networkCapabilities.hasCapability(NetworkCapabilities.TRANSPORT_ETHERNET);
-        }
-        return false;
+        return networkCapabilities != null &&
+                networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) &&
+                networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) &&
+                networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED);
     }
 
     public static boolean hasLeanback(Context context) {
@@ -256,7 +255,11 @@ public class SetupWizardUtils {
         } else {
             disableComponent(context, ScreenLockActivity.class);
         }
-        if ((!hasWifi(context) && !hasTelephony(context)) || isEthernetConnected(context)) {
+        if (!hasTelephony(context)) {
+            disableComponent(context, SimMissingActivity.class);
+        }
+        if ((!hasWifi(context) && !hasTelephony(context)) ||
+                isNetworkConnectedToInternetViaEthernet(context)) {
             disableComponent(context, NetworkSetupActivity.class);
         }
         if (!isBootloaderUnlocked(context) || Build.IS_DEBUGGABLE) {
@@ -317,7 +320,8 @@ public class SetupWizardUtils {
             String selectedNavMode = settingsBundle.getString(NAVIGATION_OPTION_KEY);
 
             try {
-                overlayManager.setEnabledExclusiveInCategory(selectedNavMode, USER_CURRENT);
+                overlayManager.setEnabledExclusiveInCategory(selectedNavMode,
+                        UserHandle.USER_CURRENT);
             } catch (Exception ignored) {
             }
         }

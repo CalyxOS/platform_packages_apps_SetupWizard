@@ -19,15 +19,7 @@ import org.lineageos.setupwizard.util.SetupWizardUtils;
 
 public class NetworkSetupActivity extends SubBaseActivity {
 
-    private static String ACTION_SETUP_NETWORK = "android.settings.NETWORK_PROVIDER_SETUP";
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (SetupWizardUtils.hasLeanback(this)) {
-            ACTION_SETUP_NETWORK = "com.android.net.wifi.SETUP_WIFI_NETWORK";
-        }
-    }
+    private static final String ACTION_SETUP_NETWORK = "android.settings.NETWORK_PROVIDER_SETUP";
 
     @Override
     protected void onStartSubactivity() {
