@@ -191,9 +191,6 @@ public class SetupWizardUtils {
     }
 
     public static boolean isSetupWizardComplete(Context context) {
-        if (!isManagedProfile(context) && WizardManagerHelper.isUserSetupComplete(context)) {
-            return true;
-        }
         final int enabledSetting = context.getPackageManager().getComponentEnabledSetting(
                 new ComponentName(context, SetupWizardActivity.class));
         return switch (enabledSetting) {
