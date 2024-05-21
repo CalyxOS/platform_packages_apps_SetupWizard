@@ -16,6 +16,24 @@
       "message": "I did this instead https://review.calyxos.org/c/CalyxOS/platform_packages_apps_SetupWizard/+/26407 since new page is also missing the other modifications for bootloader status",
       "revId": "3c2544b87b0f865088385366b486e236218954fb",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d404a9f5_0edfa5fb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-05-21T14:56:39Z",
+      "side": 1,
+      "message": "Alright, that\u0027s ok, I was just trying to get it to compile.",
+      "parentUuid": "09d59beb_bdedbcc2",
+      "revId": "3c2544b87b0f865088385366b486e236218954fb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
