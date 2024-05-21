@@ -46,6 +46,30 @@
       },
       "revId": "4db73b823440b25cfea5843e71af65c81985ac0b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "35c724e8_a47f2c88",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-05-21T17:15:43Z",
+      "side": 1,
+      "message": "hasTelephony should be true on any device which has eSIM since it just does a feature check.",
+      "parentUuid": "375438e8_6cc38547",
+      "range": {
+        "startLine": 258,
+        "startChar": 0,
+        "endLine": 260,
+        "endChar": 9
+      },
+      "revId": "4db73b823440b25cfea5843e71af65c81985ac0b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
