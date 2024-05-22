@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d449a3d3_12495a8c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-05-22T11:08:45Z",
+      "side": 1,
+      "message": "I\u0027m not able to tell if this is working.\n\nThe apps don\u0027t show up in Settings, even with \"Show system\" and \"Disabled apps\"\n\n`pm dump` output isn\u0027t too helpful, from that it looks like they\u0027re enabled, but only relevant line I see is: `lastDisabledCaller: org.lineageos.setupwizard`\n\nhttps://zifb.in/ljOUFfvFWW and https://zifb.in/M8vtxjp4IO",
+      "revId": "726573af71b7e7dd97a094b6b075d2977d750be5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
