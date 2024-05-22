@@ -78,6 +78,8 @@ public class SetupWizardUtils {
 
     private static final String PROP_BUILD_DATE = "ro.build.date.utc";
 
+    private static final String AURORA_STORE_PACKAGE = "com.aurora.store";
+
     private SetupWizardUtils() {
     }
 
