@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4887820_d0f0262e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2024-05-31T12:30:39Z",
+      "side": 1,
+      "message": "Added logic in Aurora Store to not suggest users Aurora Services in case it is disabled: https://gitlab.com/AuroraOSS/AuroraStore/-/commit/9004aa6df85df231eb24ae6dfc64340cd6136b74",
+      "revId": "31815f99e0f3cbddc328887b533907d0d52798c7",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
