@@ -34,6 +34,40 @@
       "parentUuid": "87c4f77f_6a1a4e2a",
       "revId": "3b14936c61ac01691fd68478ce78eaac23d5a7ba",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d82086e_ed47c505",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-12T19:38:49Z",
+      "side": 1,
+      "message": "This still doesn\u0027t solve the problem and leaves vending unhandled / not installed, and thus is not the right fix.",
+      "revId": "3b14936c61ac01691fd68478ce78eaac23d5a7ba",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6d7a2cd1_871814dd",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-12T19:38:49Z",
+      "side": 1,
+      "message": "Remove this and figure out how to handle it.",
+      "revId": "3b14936c61ac01691fd68478ce78eaac23d5a7ba",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
