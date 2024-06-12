@@ -16,6 +16,24 @@
       "message": "Maybe skip entire activity if this microG is missing? Also, how can it be missing?",
       "revId": "3b14936c61ac01691fd68478ce78eaac23d5a7ba",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8fd7b0b3_b07db50f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-06-12T15:38:24Z",
+      "side": 1,
+      "message": "We\u0027re considering making FakeStore a user app (demoted like F-Droid was previously)",
+      "parentUuid": "87c4f77f_6a1a4e2a",
+      "revId": "3b14936c61ac01691fd68478ce78eaac23d5a7ba",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
