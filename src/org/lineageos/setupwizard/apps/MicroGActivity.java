@@ -91,6 +91,10 @@ public class MicroGActivity extends BaseSetupWizardActivity {
 
     private void setAppEnabled(String packageName, boolean enabled) {
         int state = enabled ? COMPONENT_ENABLED_STATE_ENABLED : COMPONENT_ENABLED_STATE_DISABLED;
-        pm.setApplicationEnabledSetting(packageName, state, 0);
+        try {
+            pm.setApplicationEnabledSetting(packageName, state, 0);
+        } catch (IllegalArgumentException e) {
+            Log.e(TAG, "Failed to enable " + packageName, e);
+        }
     }
 }
