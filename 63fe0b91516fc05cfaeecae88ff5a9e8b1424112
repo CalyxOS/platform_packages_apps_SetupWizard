@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8ea5bc8_0b0f0c9f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000109
+      },
+      "writtenOn": "2024-06-17T01:28:49Z",
+      "side": 1,
+      "message": "No weird symbols.",
+      "revId": "63fe0b91516fc05cfaeecae88ff5a9e8b1424112",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
