@@ -22,6 +22,30 @@
       },
       "revId": "71d94b00918e30f2c714b1b773fd026c293947b1",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fee1371f_5f5ec33d",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 16
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-06-21T14:18:22Z",
+      "side": 1,
+      "message": "It also seems to make a difference concerning the lockscreen page if set to safest which requires a minimum password complexity. If a user sets a password that doesn\u0027t fit the requirements it seems to cause some sort of a crash which kicks you back to before the lockscreen page and then allows you to try again, but not so nice UX",
+      "parentUuid": "148756eb_b5d67432",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 62,
+        "endChar": 20
+      },
+      "revId": "71d94b00918e30f2c714b1b773fd026c293947b1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
