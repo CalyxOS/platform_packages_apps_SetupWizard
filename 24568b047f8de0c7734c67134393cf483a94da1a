@@ -33,6 +33,24 @@
       "message": "Wait for F-Droid index update code re-work to land, then use the new functionality",
       "revId": "24568b047f8de0c7734c67134393cf483a94da1a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ae8a8743_10bc084b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-24T13:33:28Z",
+      "side": 1,
+      "message": "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1386",
+      "parentUuid": "f868ba3b_18e4fa80",
+      "revId": "24568b047f8de0c7734c67134393cf483a94da1a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
