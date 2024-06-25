@@ -47,12 +47,6 @@
     <WizardAction
         wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_DATETIME;end"
         id="datetime">
-        <result wizard:action="restore" />
-    </WizardAction>
-
-    <WizardAction
-        wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_RESTORE_BACKUP;end"
-        id="restore">
         <result wizard:action="location_settings" />
     </WizardAction>
 
@@ -95,6 +89,12 @@
     <WizardAction
         wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.NAVIGATION_SETTINGS;end"
         id="navigation_settings">
+        <result wizard:action="restore" />
+    </WizardAction>
+
+    <WizardAction
+        wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_RESTORE_BACKUP;end"
+        id="restore">
         <result wizard:action="finish" />
     </WizardAction>
 
