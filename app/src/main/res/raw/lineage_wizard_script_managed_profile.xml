@@ -14,18 +14,18 @@
         <result
             wizard:name="skip"
             wizard:resultCode="1" />
-        <result wizard:action="restore" />
-    </WizardAction>
-
-    <WizardAction
-        id="restore"
-        wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_RESTORE_BACKUP;end">
         <result wizard:action="location_settings" />
     </WizardAction>
 
     <WizardAction
         id="location_settings"
         wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_LOCATION_SETTINGS;end">
+        <result wizard:action="restore" />
+    </WizardAction>
+
+    <WizardAction
+        id="restore"
+        wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_RESTORE_BACKUP;end">
         <result wizard:action="finish" />
     </WizardAction>
 
