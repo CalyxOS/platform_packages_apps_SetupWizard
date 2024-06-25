@@ -46,6 +46,30 @@
       },
       "revId": "71d94b00918e30f2c714b1b773fd026c293947b1",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a703265_62955804",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 16
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-25T23:47:35Z",
+      "side": 1,
+      "message": "It has to be before restore for sure, otherwise the app install restrictions can be bypassed.\n\nFor lockscreen, do you have a stacktrace of the crash? Should fix that.",
+      "parentUuid": "fee1371f_5f5ec33d",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 62,
+        "endChar": 20
+      },
+      "revId": "71d94b00918e30f2c714b1b773fd026c293947b1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
