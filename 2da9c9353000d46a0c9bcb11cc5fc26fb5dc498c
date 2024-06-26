@@ -70,6 +70,30 @@
       },
       "revId": "2da9c9353000d46a0c9bcb11cc5fc26fb5dc498c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b7ec4540_d497169c",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 56
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-06-26T18:10:12Z",
+      "side": 1,
+      "message": "e.g. https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/ManagedProvisioning/src/com/android/managedprovisioning/preprovisioning/PreProvisioningActivity.java;l\u003d931;drc\u003d5b41a18044efc0b644d428b955a69b0e8833c904 and maybe https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/ManagedProvisioning/src/com/android/managedprovisioning/common/Utils.java;l\u003d874;bpv\u003d1;bpt\u003d1?q\u003dresetdialog\u0026ss\u003dandroid%2Fplatform%2Fsuperproject%2Fmain:packages%2Fapps%2FManagedProvisioning%2F",
+      "parentUuid": "70f89876_13377ba6",
+      "range": {
+        "startLine": 195,
+        "startChar": 16,
+        "endLine": 195,
+        "endChar": 81
+      },
+      "revId": "2da9c9353000d46a0c9bcb11cc5fc26fb5dc498c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
