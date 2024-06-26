@@ -11,6 +11,8 @@ import static com.google.android.setupcompat.util.ResultCodes.RESULT_SKIP;
 import android.content.Intent;
 import android.provider.Settings;
 
+import org.lineageos.setupwizard.ScreenLockActivity;
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils;
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
 public class BiometricActivity extends SubBaseActivity {
@@ -24,7 +26,8 @@ public class BiometricActivity extends SubBaseActivity {
         } else {
             SetupWizardUtils.disableComponent(this, ScreenLockActivity.class);
         }
-        Intent intent = new Intent(Settings.ACTION_BIOMETRIC_ENROLL);
+        Intent intent = ManagedProvisioningUtils.putMinPasswordComplexityToIntent(this,
+                new Intent(Settings.ACTION_BIOMETRIC_ENROLL));
         startSubactivity(intent);
     }
 }
