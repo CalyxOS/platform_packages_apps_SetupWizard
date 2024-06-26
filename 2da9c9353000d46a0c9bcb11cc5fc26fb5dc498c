@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29b1ab9f_c7d842b4",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 56
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-06-26T17:40:26Z",
+      "side": 1,
+      "message": "Tested with a zeroed out apk. This is reached and works but isn\u0027t great UX since it occurs after the user presses start (exiting setup wizard) and doesn\u0027t give a reason, notification nor dialog.",
+      "range": {
+        "startLine": 195,
+        "startChar": 16,
+        "endLine": 195,
+        "endChar": 81
+      },
+      "revId": "2da9c9353000d46a0c9bcb11cc5fc26fb5dc498c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
