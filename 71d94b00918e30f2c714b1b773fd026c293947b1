@@ -94,6 +94,30 @@
       },
       "revId": "71d94b00918e30f2c714b1b773fd026c293947b1",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ddf88c8_52e89e6e",
+        "filename": "res/raw/lineage_wizard_script.xml",
+        "patchSetId": 16
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-26T22:34:15Z",
+      "side": 1,
+      "message": "Actually done now.",
+      "parentUuid": "49504d5c_d5491943",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 62,
+        "endChar": 20
+      },
+      "revId": "71d94b00918e30f2c714b1b773fd026c293947b1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
