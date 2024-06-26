@@ -46,6 +46,30 @@
       },
       "revId": "2da9c9353000d46a0c9bcb11cc5fc26fb5dc498c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "70f89876_13377ba6",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 56
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-06-26T18:05:03Z",
+      "side": 1,
+      "message": "@aayushgupta219@gmail.com think we should copy the dialog shown by managed provisioning?",
+      "parentUuid": "b0ee4ae4_2d5cdb85",
+      "range": {
+        "startLine": 195,
+        "startChar": 16,
+        "endLine": 195,
+        "endChar": 81
+      },
+      "revId": "2da9c9353000d46a0c9bcb11cc5fc26fb5dc498c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
