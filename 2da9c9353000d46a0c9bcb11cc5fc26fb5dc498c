@@ -22,6 +22,30 @@
       },
       "revId": "2da9c9353000d46a0c9bcb11cc5fc26fb5dc498c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0ee4ae4_2d5cdb85",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 56
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-06-26T17:53:44Z",
+      "side": 1,
+      "message": "To add to this, I was wrong that we could simply \"let it happen\" as in PS55 and get a factory reset dialog, because as Oliver pointed out to me, this is happening in the Setup Wizard *after* the provisioning process is successfully finished. I was confused about the phase in which we were trying to install Orbot.",
+      "parentUuid": "29b1ab9f_c7d842b4",
+      "range": {
+        "startLine": 195,
+        "startChar": 16,
+        "endLine": 195,
+        "endChar": 81
+      },
+      "revId": "2da9c9353000d46a0c9bcb11cc5fc26fb5dc498c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
