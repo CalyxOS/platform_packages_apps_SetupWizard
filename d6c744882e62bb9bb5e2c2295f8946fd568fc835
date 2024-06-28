@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e07bc549_59eccd98",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 56
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-28T01:41:10Z",
+      "side": 1,
+      "message": "Ok to merge because we can still iterate and address UX feedback before merging the change which actually enables this screen.",
+      "revId": "d6c744882e62bb9bb5e2c2295f8946fd568fc835",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
