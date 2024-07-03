@@ -18,6 +18,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0b058d7_6024aaf6",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 55
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-07-03T13:03:55Z",
+      "side": 1,
+      "message": "We already have Log.v(TAG, \"finishSetupWizard, provisioningState\u003d\" + provisioningState); below, duplicate log without detail",
+      "parentUuid": "a73d79f4_4ac1a710",
+      "revId": "1c2280dd79ac3945ef34b17a15637149f8542726",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "faa314b5_dfbbb7c6",
@@ -35,6 +53,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "340d56ae_6c0641c1",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 55
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-07-03T13:03:55Z",
+      "side": 1,
+      "message": "Theoretically never happens, and handled by finalizeProvisioning call (anything like this should be handled there)",
+      "parentUuid": "faa314b5_dfbbb7c6",
+      "revId": "1c2280dd79ac3945ef34b17a15637149f8542726",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "840b72ce_0964f1a8",
@@ -48,6 +84,24 @@
       "writtenOn": "2024-07-03T12:22:23Z",
       "side": 1,
       "message": "Why was this removed?",
+      "revId": "1c2280dd79ac3945ef34b17a15637149f8542726",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e59ff6f1_6d77154d",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 55
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-07-03T13:03:55Z",
+      "side": 1,
+      "message": "Handled within finalizeProvisioning call. Also should never happen since it is set below.",
+      "parentUuid": "840b72ce_0964f1a8",
       "revId": "1c2280dd79ac3945ef34b17a15637149f8542726",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
