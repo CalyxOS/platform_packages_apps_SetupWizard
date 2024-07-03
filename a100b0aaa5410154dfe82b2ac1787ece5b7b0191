@@ -16,6 +16,24 @@
       "message": "These changes should go to calyx_strings.xml",
       "revId": "a100b0aaa5410154dfe82b2ac1787ece5b7b0191",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c5cfed2_8d4c4137",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 59
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-07-03T13:14:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "18335db0_af45f285",
+      "revId": "a100b0aaa5410154dfe82b2ac1787ece5b7b0191",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
