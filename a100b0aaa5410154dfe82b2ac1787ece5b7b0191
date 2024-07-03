@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "18335db0_af45f285",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 59
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-03T12:20:22Z",
+      "side": 1,
+      "message": "These changes should go to calyx_strings.xml",
+      "revId": "a100b0aaa5410154dfe82b2ac1787ece5b7b0191",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
