@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a73d79f4_4ac1a710",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 55
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-03T12:22:23Z",
+      "side": 1,
+      "message": "Unrelated change.",
+      "revId": "1c2280dd79ac3945ef34b17a15637149f8542726",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "faa314b5_dfbbb7c6",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 55
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-03T12:22:23Z",
+      "side": 1,
+      "message": "Unrelated change?",
+      "revId": "1c2280dd79ac3945ef34b17a15637149f8542726",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "840b72ce_0964f1a8",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 55
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-03T12:22:23Z",
+      "side": 1,
+      "message": "Why was this removed?",
+      "revId": "1c2280dd79ac3945ef34b17a15637149f8542726",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
