@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="euicc_summary">Do svojho zariadenia môžete pridať aj eSIM.</string>
-    <string name="microg_description">Toto umožňuje aplikáciam ako <b>Google Mapy, Youtube a podobným</b> fungovať na CalyxOS. Vypnite to ak neplánujete používať aplikácie ktoré vyžaduje služby Google. Neskôr to už nebudete môcť povoliť.</string>
     <string name="microg_title">Služby Google</string>
     <string name="setup_euicc">Nastavenie eSIM</string>
     <string name="microg_location_summary">Vylepšiť polohové služby opýtaním sa služby MLS (Mozilla Location Service) so zoznamom Wi-Fi a mobilných sietí v okolí zariadenia, použitím služby Nominatim pre zistenie adresy a zapamätaním si súradníc sietí v okolí. Tieto nastavenia môžete neskôr upresniť v nastaveniach služby microG.</string>
     <string name="bootloader_warning_summary">Bootloader tohto zariadenia je momentálne odomknutý. Prosím, zamknite bootloader z počítača. Pre viac informácií navštívte <a href="https://calyxos.org/lock">calyxos.org/lock</a>.</string>
     <string name="reboot">Reštartovať</string>
-    <string name="microg_description2">microG je open source náhrada za <b>Služby Google Play</b> (a súvisiaci softvér), ale obsahuje iba užitočné časti. Na rozdiel od Služby Play neobsahuje microG napríklad žiadne reklamy ani sledovanie polohy.</string>
+    <string name="microg_description2">microG je open source náhrada za &lt;b&gt;Služby Google Play&lt;/b&gt; (a súvisiaci softvér), ale obsahuje iba užitočné časti. Na rozdiel od Služby Play neobsahuje microG napríklad žiadne reklamy ani sledovanie polohy.</string>
     <string name="microg_switch_label2">Kompatibilita so službami Google</string>
     <string name="microg_defaults_summary">Povoliť aplikáciám registrovať sa pre push oznámenia v spoločnosti Google. Týmto sa vaše zariadenie zaregistruje do služieb Google bez jedinečných identifikátorov špecifických pre zariadenie. Túto funkciu je možné povoliť neskôr v nastavení microG, avšak bude nutné znovu nainštalovať všetky skôr nastavené aplikácie na ich správne fungovanie.</string>
     <string name="microg_defaults_switch_label">Podpora push oznámení</string>
