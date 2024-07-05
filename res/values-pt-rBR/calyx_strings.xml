@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="microg_description">Permite que aplicativos como o <b>Google Maps, YouTube e serviços de compartilhamento de corridas</b> funcionem no CalyxOS. Desative esta opção se você não planeja executar aplicativos que necessitam dos serviços do Google. Você não poderá ativar isso depois.</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_title">Serviços do Google</string>
     <string name="setup_euicc">Configurar eSIM</string>
     <string name="euicc_summary">Você também pode adicionar um eSIM ao seu dispositivo.</string>
@@ -13,4 +12,7 @@
     <string name="microg_defaults_summary">Permite que aplicativos se registrem para notificações push com o Google. Isso registra seu dispositivo aos serviços do Google, mas sem nenhum identificador único ao dispositivo. Isso pode ser ativado depois pelas configurações do microG, mas qualquer aplicativo configurado antes precisará ser reinstalado para funcionar corretamente.</string>
     <string name="microg_location_switch_label">Localização de rede</string>
     <string name="microg_location_summary">Melhore os serviços de localização consultando o MLS (serviços de localização da Mozilla) com redes Wi-Fi e redes móveis próximas, e lembrando as coordenadas de GPS de redes próximas. Você pode configurar essas opções com mais precisão nas configurações do microG depois.</string>
+    <string name="managed_profile">perfil de trabalho</string>
+    <string name="personal_profile">perfil pessoal</string>
+    <string name="microg_summary">Isto permite que apps como <b>Google Maps, YouTube e serviços de compartilhamento de corrida</b> funcionem. Desative isto se não planeja em usar apps que precisam dos serviços do Google em seu <xliff:g id="profileType" example="personal profile">%1$s</xliff:g>. Esta opção não poderá ser alterada depois.</string>
 </resources>
