@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2cc3f0c9_68347ae9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-08T21:07:22Z",
+      "side": 1,
+      "message": "There is still the theoretical possibility that `hasBiometric` could return `true` for the screen lock page but return `false` for the biometric page immediately after, which would then cause the page to get skipped again. I don\u0027t know under what conditions that would happen and am not particularly worried about it right now, unless someone else is.",
+      "revId": "2ee86e4d354bc57d87045442ce745fd7a4cb87c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
