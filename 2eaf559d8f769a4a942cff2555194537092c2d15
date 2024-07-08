@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "73a367b4_70aff51d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 32
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-08T20:00:00Z",
+      "side": 1,
+      "message": "calyxos#2544 makes this feature unreliable since the screen lock/biometrics page is sometimes not shown.",
+      "revId": "2eaf559d8f769a4a942cff2555194537092c2d15",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
