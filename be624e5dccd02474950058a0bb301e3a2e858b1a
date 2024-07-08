@@ -34,6 +34,24 @@
       "parentUuid": "31968413_ae461b3a",
       "revId": "be624e5dccd02474950058a0bb301e3a2e858b1a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7f88b972_a40a7087",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 60
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-08T18:16:20Z",
+      "side": 1,
+      "message": "I see, it\u0027s because installApk silently logs the error but doesn\u0027t handle it.\n\nWe could have installApk not do that, but let it be thrown, and then catch it in finalizeProvisioning so we can do something about it.",
+      "parentUuid": "810187b9_45cac459",
+      "revId": "be624e5dccd02474950058a0bb301e3a2e858b1a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
