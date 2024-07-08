@@ -16,6 +16,24 @@
       "message": "For the new error-handling in installApk, when it fails, there is supposed to be a dialog for wiping the device, correct?\n\nI tried removing Orbot.apk prior to running this, and I see the wallpaper with a back button indefinitely. The back button sends me back to the \"Restore apps and data\" page, which I can proceed past and go to Start again, which does the same thing.\n\nLogs show this each time:\n```\n07-08 14:08:14.677  1000  2831  2831 E ManagedProvisioningUtils: Failed to install /product/fdroid/repo/Orbot.apk\n07-08 14:08:14.677  1000  2831  2831 E ManagedProvisioningUtils: java.io.FileNotFoundException: /product/fdroid/repo/Orbot.apk: open failed: ENOENT (No such file or directory)\n```",
       "revId": "be624e5dccd02474950058a0bb301e3a2e858b1a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "810187b9_45cac459",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 60
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-08T18:13:00Z",
+      "side": 1,
+      "message": "It looks like this unwanted behavior may be specific to the file being missing, rather than being present+bad. If I `touch /product/fdroid/repo/Orbot.apk` and try again, I see the \"Can\u0027t set up device\" \"Failed to finalize provisioning\" dialog with the Reset button, which seems to work as expected.",
+      "parentUuid": "31968413_ae461b3a",
+      "revId": "be624e5dccd02474950058a0bb301e3a2e858b1a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
