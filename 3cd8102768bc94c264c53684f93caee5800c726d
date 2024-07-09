@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1a57fa4_052be669",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-09T18:49:16Z",
+      "side": 1,
+      "message": "Let\u0027s also use this occasion in the string change to add some more info if possible, and also link to the privacy policy at the very least.",
+      "revId": "3cd8102768bc94c264c53684f93caee5800c726d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
