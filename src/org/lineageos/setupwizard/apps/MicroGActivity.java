@@ -88,6 +88,7 @@ public class MicroGActivity extends BaseSetupWizardActivity {
             intent.putExtra("gcm_enabled", enablePush.isChecked());
             intent.putExtra("wifi_mls", enableLocation.isChecked());
             intent.putExtra("cell_mls", enableLocation.isChecked());
+            intent.putExtra("ichnaea_endpoint", R.string.microg_ichnaea_endpoint);
             intent.putExtra("wifi_learning", enableLocation.isChecked());
             intent.putExtra("cell_learning", enableLocation.isChecked());
             intent.putExtra("nominatim_enabled", enableLocation.isChecked());
