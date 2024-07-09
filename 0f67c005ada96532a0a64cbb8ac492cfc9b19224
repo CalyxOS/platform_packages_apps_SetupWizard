@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7d1323a7_b5aa1beb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-09T18:50:03Z",
+      "side": 1,
+      "message": "Not sure if there\u0027s a better way to not make the API key so easily visible.\n\nIn many ways it doesn\u0027t matter because at the end you\u0027d still be able to extract it from the APK, but at least that\u0027s not without some extra steps.",
+      "revId": "0f67c005ada96532a0a64cbb8ac492cfc9b19224",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
