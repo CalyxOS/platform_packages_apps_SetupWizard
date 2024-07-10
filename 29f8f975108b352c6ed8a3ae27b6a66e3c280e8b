@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "13c879f4_3b5c0f5f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 41
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-10T15:17:59Z",
+      "side": 1,
+      "message": "This worked before rebase, it should still work now.",
+      "revId": "29f8f975108b352c6ed8a3ae27b6a66e3c280e8b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
