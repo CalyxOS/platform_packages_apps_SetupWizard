@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b86ee0db_86b6fbe2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-10T14:39:51Z",
+      "side": 1,
+      "message": "Works.\n\nYou can test the \"no biometrics\" case on a Google Pixel 6a with:\n```\nadb root\nadb shell stop vendor.fingerprint-goodix\n```\n\nAnd change back (in same session if wanting to see how it affects already-running SUW):\n```\nadb shell start vendor.fingerprint-goodix\n```",
+      "revId": "0c291d61674dc0bc37970f9874ebcf01f45e70c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
