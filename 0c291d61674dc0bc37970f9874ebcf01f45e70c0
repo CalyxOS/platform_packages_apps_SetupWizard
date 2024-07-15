@@ -35,6 +35,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "066b578e_f93c1644",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-15T18:31:46Z",
+      "side": 1,
+      "message": "Maybe!",
+      "parentUuid": "ea98b9c5_30af5aea",
+      "revId": "0c291d61674dc0bc37970f9874ebcf01f45e70c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cf7628fe_154c9b15",
@@ -60,6 +78,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "adcf94f6_15018436",
+        "filename": "src/org/lineageos/setupwizard/BiometricActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-15T18:31:46Z",
+      "side": 1,
+      "message": "If that\u0027s functionally the same, that sounds more accurate, so it sounds okay.",
+      "parentUuid": "cf7628fe_154c9b15",
+      "range": {
+        "startLine": 21,
+        "startChar": 23,
+        "endLine": 21,
+        "endChar": 32
+      },
+      "revId": "0c291d61674dc0bc37970f9874ebcf01f45e70c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2f7d741b_2beb6468",
         "filename": "src/org/lineageos/setupwizard/ScreenLockActivity.java",
         "patchSetId": 3
@@ -71,6 +113,30 @@
       "writtenOn": "2024-07-15T17:11:04Z",
       "side": 1,
       "message": "Unused import?",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 55
+      },
+      "revId": "0c291d61674dc0bc37970f9874ebcf01f45e70c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "218f2544_9c5edd4e",
+        "filename": "src/org/lineageos/setupwizard/ScreenLockActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-15T18:31:46Z",
+      "side": 1,
+      "message": "Yes, thanks for catching that.",
+      "parentUuid": "2f7d741b_2beb6468",
       "range": {
         "startLine": 11,
         "startChar": 0,
