@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="microg_title">Servicii Google</string>
-    <string name="microg_description2">microG este un înlocuitor cu sursă deschisă pentru <b>Serviciile Google Play</b> (și software-ul asociat), dar include doar părțile utile. Spre deosebire de Play Services, microG nu are nicio publicitate sau urmărire a locației, de exemplu.</string>
+    <string name="microg_description2">microG este un înlocuitor cu sursă deschisă pentru &lt;b&gt;Serviciile Google Play&lt;/b&gt; (și software-ul asociat), dar include doar părțile utile. Spre deosebire de Play Services, microG nu are nicio publicitate sau urmărire a locației, de exemplu.</string>
     <string name="microg_switch_label2">Compatibilitate cu serviciile Google</string>
-    <string name="microg_description">Acest lucru permite aplicațiilor precum <b>Google Maps, Youtube și servicii de partajare a călătoriilor</b> să ruleze pe CalyxOS. Dezactivează această opțiune dacă nu intenționezi să rulezi aplicații care necesită serviciile Google. Nu o vei putea activa mai târziu.</string>
     <string name="microg_defaults_switch_label">Suport pentru notificări push</string>
     <string name="setup_euicc">Configurare eSIM</string>
     <string name="bootloader_warning_title">Avertisment pentru Bootloader blocat</string>
