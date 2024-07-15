@@ -20,6 +20,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ea98b9c5_30af5aea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-07-15T17:13:01Z",
+      "side": 1,
+      "message": "Not relevant to this change directly, but wonder if we should do similar patches for other components that are still currrently permanently disabled in the SetupWizardUtils function?",
+      "revId": "0c291d61674dc0bc37970f9874ebcf01f45e70c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cf7628fe_154c9b15",
         "filename": "src/org/lineageos/setupwizard/BiometricActivity.java",
         "patchSetId": 3
