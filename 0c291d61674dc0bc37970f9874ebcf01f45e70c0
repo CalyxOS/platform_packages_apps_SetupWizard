@@ -102,6 +102,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4623fb13_2089daef",
+        "filename": "src/org/lineageos/setupwizard/BiometricActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-16T21:49:53Z",
+      "side": 1,
+      "message": "@olivercscott@gmail.com can you get to trying the change this week? \n\nBecause there is a difference,\n\nhttps://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/core/java/android/app/Activity.java;l\u003d773;drc\u003dd194518ee3f46839ea545e7178d3f3d1f1ef1e5f\n\n```\n    /** Standard activity result: operation succeeded. */\n    public static final int RESULT_OK           \u003d -1;\n    /** Start of user-defined activity results. */\n    public static final int RESULT_FIRST_USER   \u003d 1; // This is what RESULT_SKIP is set to\n```",
+      "parentUuid": "adcf94f6_15018436",
+      "range": {
+        "startLine": 21,
+        "startChar": 23,
+        "endLine": 21,
+        "endChar": 32
+      },
+      "revId": "0c291d61674dc0bc37970f9874ebcf01f45e70c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2f7d741b_2beb6468",
         "filename": "src/org/lineageos/setupwizard/ScreenLockActivity.java",
         "patchSetId": 3
