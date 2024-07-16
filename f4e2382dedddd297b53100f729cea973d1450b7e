@@ -126,6 +126,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8977cbeb_65c9f3e8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-07-16T23:20:44Z",
+      "side": 1,
+      "message": "\u003e Filed https://gitlab.com/fdroid/fdroidclient/-/issues/2721\n\nThis has been closed because the change has been merged",
+      "parentUuid": "48563290_c9e55cce",
+      "revId": "f4e2382dedddd297b53100f729cea973d1450b7e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "020ed0d1_6f7e482e",

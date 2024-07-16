@@ -51,6 +51,24 @@
       "parentUuid": "f868ba3b_18e4fa80",
       "revId": "24568b047f8de0c7734c67134393cf483a94da1a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2aa9ada_78bbc892",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-07-16T23:20:44Z",
+      "side": 1,
+      "message": "This has been merged",
+      "parentUuid": "ae8a8743_10bc084b",
+      "revId": "24568b047f8de0c7734c67134393cf483a94da1a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
