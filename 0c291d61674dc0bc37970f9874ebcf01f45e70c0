@@ -145,6 +145,30 @@
       },
       "revId": "0c291d61674dc0bc37970f9874ebcf01f45e70c0",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92e03625_52021392",
+        "filename": "src/org/lineageos/setupwizard/ScreenLockActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-16T18:12:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "218f2544_9c5edd4e",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 55
+      },
+      "revId": "0c291d61674dc0bc37970f9874ebcf01f45e70c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
