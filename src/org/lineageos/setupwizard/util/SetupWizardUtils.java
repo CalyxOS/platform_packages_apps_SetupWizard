@@ -260,9 +260,7 @@ public class SetupWizardUtils {
     }
 
     public static void disableComponentsForMissingFeatures(Context context) {
-        if (!hasLeanback(context) || isBluetoothDisabled()) {
-            disableComponent(context, BluetoothSetupActivity.class);
-        }
+
     }
 
     /**
