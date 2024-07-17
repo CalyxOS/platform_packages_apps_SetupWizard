@@ -270,9 +270,6 @@ public class SetupWizardUtils {
                 isNetworkConnectedToInternetViaEthernet(context)) {
             disableComponent(context, NetworkSetupActivity.class);
         }
-        if (!isBootloaderUnlocked(context) || Build.IS_DEBUGGABLE) {
-            disableComponent(context, BootloaderWarningActivity.class);
-        }
     }
 
     /**

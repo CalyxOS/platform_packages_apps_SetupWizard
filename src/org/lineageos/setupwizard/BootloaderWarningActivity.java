@@ -5,8 +5,13 @@
 
 package org.lineageos.setupwizard;
 
+import static com.google.android.setupcompat.util.ResultCodes.RESULT_SKIP;
+
+import static org.lineageos.setupwizard.util.SetupWizardUtils.isBootloaderUnlocked;
+
 import android.annotation.Nullable;
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.widget.Button;
@@ -18,6 +23,10 @@ public class BootloaderWarningActivity extends BaseSetupWizardActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (!isBootloaderUnlocked(this) || Build.IS_DEBUGGABLE) {
+            finishAction(RESULT_SKIP);
+            return;
+        }
         findViewById(R.id.reboot_bootloader).setOnClickListener(v -> {
             PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
             pm.reboot("bootloader");
