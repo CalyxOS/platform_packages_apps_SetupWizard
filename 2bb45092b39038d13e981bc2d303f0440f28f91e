@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26dcba6a_a4e8e1d3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-07-17T01:07:19Z",
+      "side": 1,
+      "message": "Marked as -1 but was actually hit the bug that\u0027s fixed by https://review.calyxos.org/c/CalyxOS/platform_packages_apps_SetupWizard/+/27645 for the first time",
+      "revId": "2bb45092b39038d13e981bc2d303f0440f28f91e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
