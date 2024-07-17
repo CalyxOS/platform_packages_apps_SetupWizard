@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "16d1c391_84bdc801",
+        "filename": "src/org/lineageos/setupwizard/BiometricActivity.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-07-17T01:39:31Z",
+      "side": 1,
+      "message": "Should this be `finishAction`? I think that I\u0027ve seen some weirdness if going through quickly and also in the backstack. Seems to be possible to get this screen when not intended since it is not finished and therefore available in the backstack?",
+      "range": {
+        "startLine": 22,
+        "startChar": 12,
+        "endLine": 22,
+        "endChar": 22
+      },
+      "revId": "63f7659694554f579aa2f4a722dfd53bc75dca47",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
