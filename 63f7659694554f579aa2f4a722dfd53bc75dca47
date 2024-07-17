@@ -46,6 +46,30 @@
       },
       "revId": "63f7659694554f579aa2f4a722dfd53bc75dca47",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "239e6a0b_933d371e",
+        "filename": "src/org/lineageos/setupwizard/BiometricActivity.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-17T17:40:05Z",
+      "side": 1,
+      "message": "don\u0027t want to chance*",
+      "parentUuid": "5beca2b8_17ef72a6",
+      "range": {
+        "startLine": 22,
+        "startChar": 12,
+        "endLine": 22,
+        "endChar": 22
+      },
+      "revId": "63f7659694554f579aa2f4a722dfd53bc75dca47",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
