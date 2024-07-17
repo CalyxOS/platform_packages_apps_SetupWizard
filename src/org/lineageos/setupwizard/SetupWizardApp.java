@@ -69,7 +69,6 @@ public class SetupWizardApp extends Application {
         if (SetupWizardUtils.isSetupWizardComplete(this)) {
             return;
         }
-        SetupWizardUtils.disableComponentsForMissingFeatures(this);
         sStatusBarManager = SetupWizardUtils.disableStatusBar(this);
         mHandler.postDelayed(mRadioTimeoutRunnable, SetupWizardApp.RADIO_READY_TIMEOUT);
         // If the bootloader is locked, and OEM unlocking is allowed, turn it off
