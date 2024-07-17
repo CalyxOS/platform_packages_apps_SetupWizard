@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aee6f13a_aa9ffd6f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-17T22:28:17Z",
+      "side": 1,
+      "message": "Moved out of chain since it\u0027s unrelated to the other commits.",
+      "revId": "79fddcb2540fa4e40f23304707b82367cb6123e1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
