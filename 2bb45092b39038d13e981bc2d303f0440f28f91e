@@ -16,6 +16,29 @@
       "message": "Marked as -1 but was actually hit the bug that\u0027s fixed by https://review.calyxos.org/c/CalyxOS/platform_packages_apps_SetupWizard/+/27645 for the first time",
       "revId": "2bb45092b39038d13e981bc2d303f0440f28f91e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fbed36c7_de4fd2e7",
+        "filename": "src/org/lineageos/setupwizard/SubBaseActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-07-17T01:09:27Z",
+      "side": 1,
+      "message": "Should this be `intent.hasExtra(EXTRA_WIZARD_BUNDLE)` instead?",
+      "range": {
+        "startLine": 62,
+        "startChar": 12,
+        "endLine": 62,
+        "endChar": 54
+      },
+      "revId": "2bb45092b39038d13e981bc2d303f0440f28f91e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
