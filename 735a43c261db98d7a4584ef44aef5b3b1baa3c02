@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8dd256e7_135e9ae6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-19T20:22:18Z",
+      "side": 1,
+      "message": "Now this always forces you to set a PIN.\n\nIt won\u0027t let you choose a password, or pattern.",
+      "revId": "735a43c261db98d7a4584ef44aef5b3b1baa3c02",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
