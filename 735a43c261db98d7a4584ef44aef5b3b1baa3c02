@@ -16,6 +16,24 @@
       "message": "Now this always forces you to set a PIN.\n\nIt won\u0027t let you choose a password, or pattern.",
       "revId": "735a43c261db98d7a4584ef44aef5b3b1baa3c02",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f3aca7c_7929ec8d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-19T20:24:42Z",
+      "side": 1,
+      "message": "It sounds like that may be unrelated to this change after all.\n\nWe should see what stock is doing in that case and tweak accordingly.\n\nIf you don\u0027t set anything here, but go to Settings after setup - it will ask you to choose a pin, password or pattern instead of forcing a pin / saying that a \"PIN is required\"\n\nWhich makes it sounds like the BiometricsActivity is launching things late / pre-selecting PIN somehow.",
+      "parentUuid": "8dd256e7_135e9ae6",
+      "revId": "735a43c261db98d7a4584ef44aef5b3b1baa3c02",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
