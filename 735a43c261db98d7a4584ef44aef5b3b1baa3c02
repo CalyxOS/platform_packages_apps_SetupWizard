@@ -34,6 +34,24 @@
       "parentUuid": "8dd256e7_135e9ae6",
       "revId": "735a43c261db98d7a4584ef44aef5b3b1baa3c02",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8ce91ac9_d5ecc31b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-19T21:55:52Z",
+      "side": 1,
+      "message": "Nevermind at all, I\u0027m blind, there\u0027s a \"Screen lock options\" that you can tap.\n\nCould use better UX for sure but at least the option is present.",
+      "parentUuid": "9f3aca7c_7929ec8d",
+      "revId": "735a43c261db98d7a4584ef44aef5b3b1baa3c02",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ],
   "submitRequirementResults": [
