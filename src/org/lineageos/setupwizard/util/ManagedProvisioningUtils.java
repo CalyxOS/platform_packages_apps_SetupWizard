@@ -16,10 +16,14 @@
 
 package org.lineageos.setupwizard.util;
 
+import static android.app.admin.DevicePolicyManager.STATE_USER_PROFILE_COMPLETE;
+import static android.app.admin.DevicePolicyManager.STATE_USER_PROFILE_FINALIZED;
+
 import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 
 import android.annotation.NonNull;
-import android.annotation.Nullable;
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
@@ -30,9 +34,12 @@ import android.util.Log;
 
 import lineageos.providers.LineageSettings;
 
+import org.lineageos.setupwizard.R;
+
 public class ManagedProvisioningUtils {
 
     private static final String TAG = ManagedProvisioningUtils.class.getSimpleName();
+    private static final String PREF_WIPE_REQUIRED = "wipe_required";
 
     public static final int GARLIC_LEVEL_STANDARD = 0;
     public static final int GARLIC_LEVEL_SAFER = 1;
@@ -45,22 +52,18 @@ public class ManagedProvisioningUtils {
     public enum ProvisioningState {
         UNSUPPORTED,
         PENDING,
-        COMPLETE
+        COMPLETE,
+        FINALIZED
     }
 
-    public static void init(final @NonNull Context context) {
-        startProvisioning(context);
-    }
-
-    public static void finalizeProvisioning(final @NonNull Context context) {
+    public static Intent getFinalizeProvisioningIntent(final @NonNull Context context) {
         if (LOGV) {
             Log.v(TAG, "finalizeProvisioning");
         }
-        context.startActivity(new Intent(DevicePolicyManager.ACTION_PROVISION_FINALIZATION)
-                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        return new Intent(DevicePolicyManager.ACTION_PROVISION_FINALIZATION);
     }
 
-    private static void startProvisioning(final @NonNull Context context) {
+    public static Intent getStartProvisioningIntent(final @NonNull Context context) {
         final PersistableBundle persistableBundle = new PersistableBundle();
         final Integer provisioningMode = getProvisioningMode(context);
         if (provisioningMode == null) {
@@ -82,7 +85,7 @@ public class ManagedProvisioningUtils {
             intent.putExtra(DevicePolicyManager.EXTRA_PROVISIONING_LEAVE_ALL_SYSTEM_APPS_ENABLED,
                     true);
         }
-        context.startActivityForResult("", intent, 0, null);
+        return intent;
     }
 
     private static Integer getProvisioningMode(final @NonNull Context context) {
@@ -109,12 +112,23 @@ public class ManagedProvisioningUtils {
         if (provisioningMode != null) {
             final DevicePolicyManager dpm = context.getSystemService(DevicePolicyManager.class);
             if (provisioningMode.equals(DevicePolicyManager.PROVISIONING_MODE_MANAGED_PROFILE)) {
-                // In managed profile provisioning mode, having no policy-managed profiles yet
-                // return PENDING; otherwise, return COMPLETE.
-                return dpm.getPolicyManagedProfiles(Process.myUserHandle()).size() == 0
-                        ? ProvisioningState.PENDING : ProvisioningState.COMPLETE;
+                // In managed profile provisioning mode, return PENDING with no policy-managed
+                // profiles yet; otherwise, return either COMPLETE or FINALIZED.
+                if (dpm.getPolicyManagedProfiles(Process.myUserHandle()).size() == 0) {
+                    return ProvisioningState.PENDING;
+                }
+                final int userProvisioningState = dpm.getUserProvisioningState();
+                Log.v(TAG, "getProvisioningState: " + userProvisioningState);
+                switch (userProvisioningState) {
+                    case STATE_USER_PROFILE_COMPLETE:
+                        return ProvisioningState.COMPLETE;
+                    case STATE_USER_PROFILE_FINALIZED:
+                        return ProvisioningState.FINALIZED;
+                }
             } else if (provisioningMode
                     .equals(DevicePolicyManager.PROVISIONING_MODE_FULLY_MANAGED_DEVICE)) {
+                // NOTE: THIS MODE IS NOT CURRENTLY UTILIZED. THIS CODE MAY NEED TO BE UPDATED
+                // FOR IT TO BE PROPERLY UTILIZED IN THE FUTURE. THE HANDLING ABOVE MAY BE USEFUL.
                 // In fully-managed mode, if Bellis is not the device owner yet, return PENDING;
                 // otherwise, return COMPLETE.
                 return !dpm.isDeviceOwnerAppOnAnyUser(BELLIS_PACKAGE)
@@ -122,5 +136,25 @@ public class ManagedProvisioningUtils {
             }
         }
         return ProvisioningState.UNSUPPORTED;
+    }
+
+    public static boolean maybeShowFailedProvisioningDialogAgain(Activity activity) {
+        if (SetupWizardUtils.getPrefs(activity).getBoolean(PREF_WIPE_REQUIRED, false)) {
+            showFailedProvisioningDialog(activity);
+            return true;
+        }
+        return false;
+    }
+
+    public static void showFailedProvisioningDialog(Activity activity) {
+        SetupWizardUtils.getPrefs(activity).edit()
+                .putBoolean(PREF_WIPE_REQUIRED, true)
+                .apply();
+        activity.runOnUiThread(() -> new AlertDialog.Builder(activity).setTitle(
+                R.string.cant_set_up_device).setMessage(
+                R.string.provisioning_failed).setPositiveButton(R.string.reset,
+                (dialogInterface, i) -> activity.getSystemService(
+                        DevicePolicyManager.class).wipeDevice(0)).setCancelable(
+                false).show());
     }
 }
