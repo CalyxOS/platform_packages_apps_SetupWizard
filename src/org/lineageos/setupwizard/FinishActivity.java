@@ -10,16 +10,19 @@ import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.UserManager;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.view.Window;
 
+import androidx.activity.result.ActivityResult;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -66,6 +69,16 @@ public class FinishActivity extends BaseSetupWizardActivity {
             linearLayout.setLayoutParams(params);
             return WindowInsetsCompat.CONSUMED;
         });
+    }
+
+    @Override
+    protected void onActivityResult(ActivityResult activityResult) {
+        super.onActivityResult(activityResult);
+        if (activityResult.getResultCode() == RESULT_CANCELED) {
+            startActivityAsUser(new Intent(this, SetupWizardActivity.class).addFlags(
+                    Intent.FLAG_ACTIVITY_NEW_TASK), UserManager.get(this).getUserHandles(
+                    false).getLast());
+        }
     }
 
     @Override
