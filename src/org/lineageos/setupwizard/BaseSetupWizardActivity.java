@@ -256,7 +256,7 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
                 TransitionHelper.TRANSITION_FADE_THROUGH, true);
     }
 
-    protected final void startActivityForResult(@NonNull Intent intent) {
+    public final void startActivityForResult(@NonNull Intent intent) {
         if (mUseSuwIntentExtras) {
             intent.putExtra(WizardManagerHelper.EXTRA_IS_FIRST_RUN, isFirstRun());
             intent.putExtra(WizardManagerHelper.EXTRA_IS_SETUP_FLOW, true);

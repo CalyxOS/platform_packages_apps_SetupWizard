@@ -19,7 +19,6 @@ package org.lineageos.setupwizard.util;
 import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 
 import android.annotation.NonNull;
-import android.annotation.Nullable;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
@@ -27,6 +26,8 @@ import android.content.Intent;
 import android.os.PersistableBundle;
 import android.os.Process;
 import android.util.Log;
+
+import org.lineageos.setupwizard.BaseSetupWizardActivity;
 
 import lineageos.providers.LineageSettings;
 
@@ -48,19 +49,20 @@ public class ManagedProvisioningUtils {
         COMPLETE
     }
 
-    public static void init(final @NonNull Context context) {
+    public static void init(final @NonNull BaseSetupWizardActivity context) {
         startProvisioning(context);
     }
 
-    public static void finalizeProvisioning(final @NonNull Context context) {
+    public static void finalizeProvisioning(final @NonNull BaseSetupWizardActivity context) {
         if (LOGV) {
             Log.v(TAG, "finalizeProvisioning");
         }
-        context.startActivity(new Intent(DevicePolicyManager.ACTION_PROVISION_FINALIZATION)
-                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        context.startActivityForResult(
+                new Intent(DevicePolicyManager.ACTION_PROVISION_FINALIZATION)
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
     }
 
-    private static void startProvisioning(final @NonNull Context context) {
+    private static void startProvisioning(final @NonNull BaseSetupWizardActivity context) {
         final PersistableBundle persistableBundle = new PersistableBundle();
         final Integer provisioningMode = getProvisioningMode(context);
         if (provisioningMode == null) {
@@ -82,7 +84,7 @@ public class ManagedProvisioningUtils {
             intent.putExtra(DevicePolicyManager.EXTRA_PROVISIONING_LEAVE_ALL_SYSTEM_APPS_ENABLED,
                     true);
         }
-        context.startActivityForResult("", intent, 0, null);
+        context.startActivityForResult(intent);
     }
 
     private static Integer getProvisioningMode(final @NonNull Context context) {
