@@ -31,6 +31,7 @@ import com.google.android.setupcompat.template.FooterButtonStyleUtils;
 import com.google.android.setupcompat.util.SystemBarHelper;
 import com.google.android.setupdesign.gesture.ConsecutiveTapsGestureDetector;
 
+import org.lineageos.setupwizard.util.ManagedProvisioningUtils;
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
 import java.util.concurrent.TimeUnit;
@@ -123,6 +124,7 @@ public class WelcomeActivity extends SubBaseActivity {
                         }
                     }
                 });
+        ManagedProvisioningUtils.maybeShowFailedProvisioningDialogAgain(this);
     }
 
     @Override
