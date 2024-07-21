@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8cfea9c2_8151d66a",
+        "filename": "src/org/lineageos/setupwizard/FinishActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-07-21T05:13:50Z",
+      "side": 1,
+      "message": "This is the code returned by `finalizeProvisioning`, ideally we need to find why this is the case since it should be returning the same result that ManagedProvisioning receives (-1 which is RESULT_OK). `startProvisioning` returns some custom code.",
+      "range": {
+        "startLine": 77,
+        "startChar": 46,
+        "endLine": 77,
+        "endChar": 61
+      },
+      "revId": "c356bf388fcacc005e72b415964ca14df3b683cd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
