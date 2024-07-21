@@ -7,6 +7,9 @@
 package org.lineageos.setupwizard;
 
 import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
+import static org.lineageos.setupwizard.util.ManagedProvisioningUtils.getFinalizeProvisioningIntent;
+import static org.lineageos.setupwizard.util.ManagedProvisioningUtils.getProvisioningState;
+import static org.lineageos.setupwizard.util.ManagedProvisioningUtils.getStartProvisioningIntent;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -16,12 +19,15 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.UserManager;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.view.Window;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -35,11 +41,17 @@ import org.lineageos.setupwizard.util.SetupWizardUtils;
 public class FinishActivity extends BaseSetupWizardActivity {
 
     public static final String TAG = FinishActivity.class.getSimpleName();
+    // Provisioning finalization relaunches our activity, interrupting the animation. Not cool.
+    // Unclear what to do other than wait.
+    private static final int WAIT_FOR_FINALIZATION_MS = 1000;
 
     private final Handler mHandler = new Handler(Looper.getMainLooper());
 
     private enum FinishState {
         NONE,
+        PROVISIONING,
+        FINALIZING_PROVISIONING,
+        WAITING_FOR_FINALIZATION,
         SHOULD_ANIMATE,
         ANIMATING,
         FINISHED
@@ -53,11 +65,21 @@ public class FinishActivity extends BaseSetupWizardActivity {
     private View mRootView;
     private Resources.Theme mEdgeToEdgeWallpaperBackgroundTheme;
 
+    private ActivityResultLauncher<Intent> mStartProvisioningResultLauncher;
+    private ActivityResultLauncher<Intent> mFinalizeProvisioningResultLauncher;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         Log.i(TAG, "onCreate: sFinishState=" + sFinishState);
+
+        mStartProvisioningResultLauncher = registerForActivityResult(
+                new StartDecoratedActivityForResult(),
+                this::onStartProvisioningResult);
+        mFinalizeProvisioningResultLauncher = registerForActivityResult(
+                new StartDecoratedActivityForResult(),
+                this::onFinalizeProvisioningResult);
 
         overrideActivityTransition(OVERRIDE_TRANSITION_CLOSE, R.anim.translucent_enter,
                 R.anim.translucent_exit);
@@ -91,10 +113,21 @@ public class FinishActivity extends BaseSetupWizardActivity {
             disableNavigation();
         }
 
+        if (ManagedProvisioningUtils.maybeShowFailedProvisioningDialogAgain(this)) {
+            return;
+        }
+
         switch (sFinishState) {
             case NONE:
                 break;
+            case WAITING_FOR_FINALIZATION:
+                // As long as provisioning keeps relaunching us, we need to keep delaying.
+                mHandler.removeCallbacksAndMessages(/* token */ this);
+                mHandler.postDelayed(this::relaunchAndRunAnimation, /* token */ this,
+                        WAIT_FOR_FINALIZATION_MS);
+                break;
             case SHOULD_ANIMATE:
+                mHandler.removeCallbacksAndMessages(/* token */ this);
                 startFinishSequence();
                 break;
             case FINISHED:
@@ -105,6 +138,15 @@ public class FinishActivity extends BaseSetupWizardActivity {
                 Log.w(TAG, "Unexpected onCreate state " + sFinishState);
                 break;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(TAG, "onDestroy: sFinishState=" + sFinishState);
+        mStartProvisioningResultLauncher.unregister();
+        mFinalizeProvisioningResultLauncher.unregister();
+        mHandler.removeCallbacksAndMessages(/* token */ this);
     }
 
     private void disableNavigation() {
@@ -131,6 +173,60 @@ public class FinishActivity extends BaseSetupWizardActivity {
         }
     }
 
+    private void finalizeProvisioning() {
+        final ProvisioningState provisioningState = getProvisioningState(this);
+        if (LOGV) {
+            Log.v(TAG, "finalizeProvisioning, provisioningState=" + provisioningState);
+        }
+        switch (provisioningState) {
+            case COMPLETE:
+                // Expected. Do nothing.
+                break;
+            case UNSUPPORTED:
+                Log.e(TAG, "Tried to finalize provisioning when unsupported");
+                ManagedProvisioningUtils.showFailedProvisioningDialog(this);
+            case PENDING:
+            case FINALIZED:
+                Log.w(TAG, "finalizeProvisioning, unexpected state " + provisioningState);
+                break;
+        }
+        if (sFinishState != FinishState.PROVISIONING) {
+            Log.e(TAG, "Tried to finalize provisioning when " + sFinishState);
+            ManagedProvisioningUtils.showFailedProvisioningDialog(this);
+        }
+        disableNavigation();
+        sFinishState = FinishState.FINALIZING_PROVISIONING;
+        mFinalizeProvisioningResultLauncher.launch(getFinalizeProvisioningIntent(this));
+    }
+
+    private void onStartProvisioningResult(ActivityResult activityResult) {
+        try {
+            finalizeProvisioning();
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to finalize provisioning", e);
+            ManagedProvisioningUtils.showFailedProvisioningDialog(this);
+        }
+    }
+
+    private void onFinalizeProvisioningResult(ActivityResult activityResult) {
+        if (sFinishState != FinishState.FINALIZING_PROVISIONING) {
+            Log.e(TAG, "onFinalizeProvisioningResult: Unexpected sFinishState " + sFinishState);
+            ManagedProvisioningUtils.showFailedProvisioningDialog(this);
+            return;
+        }
+        final ProvisioningState provisioningState = getProvisioningState(this);
+        if (provisioningState != ProvisioningState.FINALIZED) {
+            Log.e(TAG, "onFinalizeProvisioningResult: expected FINALIZED, got "
+                    + provisioningState);
+            Log.e(TAG, "onFinalizeProvisioningResult: activityResult=" + activityResult);
+            ManagedProvisioningUtils.showFailedProvisioningDialog(this);
+            return;
+        }
+        sFinishState = FinishState.WAITING_FOR_FINALIZATION;
+        mHandler.postDelayed(this::relaunchAndRunAnimation, /* token */ this,
+                WAIT_FOR_FINALIZATION_MS);
+    }
+
     @Override
     protected int getLayoutResId() {
         return R.layout.finish_activity;
@@ -151,6 +247,14 @@ public class FinishActivity extends BaseSetupWizardActivity {
 
     @Override
     public void onNavigateNext() {
+        if (FinishState.NONE == sFinishState
+                && ProvisioningState.PENDING == getProvisioningState(this)) {
+            // Initialize garlic-level provisioning.
+            sFinishState = FinishState.PROVISIONING;
+            mStartProvisioningResultLauncher.launch(getStartProvisioningIntent(this));
+            // Do not finish yet...
+            return;
+        }
         switch (sFinishState) {
             case NONE:
                 relaunchAndRunAnimation();
@@ -174,12 +278,6 @@ public class FinishActivity extends BaseSetupWizardActivity {
     }
 
     private void startFinishSequence() {
-        if (ProvisioningState.PENDING == ManagedProvisioningUtils.getProvisioningState(this)) {
-            // Initialize garlic-level provisioning.
-            ManagedProvisioningUtils.init(this);
-            // Do not finish yet...
-            return;
-        }
         sFinishState = FinishState.ANIMATING;
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
         disableNavigation();
@@ -240,6 +338,12 @@ public class FinishActivity extends BaseSetupWizardActivity {
     }
 
     private void finishAfterAnimation() {
+        if (ProvisioningState.FINALIZED == getProvisioningState(this)) {
+            // Start the Setup Wizard within the finalized managed profile.
+            startActivityAsUser(new Intent(this, SetupWizardActivity.class).addFlags(
+                    Intent.FLAG_ACTIVITY_NEW_TASK), UserManager.get(this).getUserHandles(
+                    false).getLast());
+        }
         SetupWizardUtils.finishSetupWizard(FinishActivity.this);
         sFinishState = FinishState.FINISHED;
     }
