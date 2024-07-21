@@ -156,36 +156,29 @@ public class SetupWizardUtils {
         }
     }
 
-    public static void finishSetupWizard(BaseSetupWizardActivity context) {
-        if (LOGV) {
-            Log.v(TAG, "finishSetupWizard");
-        }
-        ProvisioningState provisioningState =
-                ManagedProvisioningUtils.getProvisioningState(context);
-        if (LOGV) {
-            Log.v(TAG, "finishSetupWizard, provisioningState=" + provisioningState);
-        }
-        if (provisioningState == ProvisioningState.PENDING) {
-            Log.e(TAG, "finishSetupWizard, but provisioning pending! Murky waters ahead!");
-        }
-        ContentResolver contentResolver = context.getContentResolver();
-        Settings.Global.putInt(contentResolver,
-                Settings.Global.DEVICE_PROVISIONED, 1);
-        final int userSetupComplete =
-                Settings.Secure.getInt(contentResolver, Settings.Secure.USER_SETUP_COMPLETE, 0);
-        if (userSetupComplete != 0 && !SetupWizardUtils.isManagedProfile(context)) {
-            Log.e(TAG, "finishSetupWizard, but userSetupComplete=" + userSetupComplete + "! "
-                    + "This should not happen!");
-        }
+    public static boolean isUserSetupMarkedComplete(Context context) {
+        return Settings.Secure.getInt(context.getContentResolver(),
+                Settings.Secure.USER_SETUP_COMPLETE, 0) == 1;
+    }
+
+    public static void markUserSetupComplete(Context context) {
+        final ContentResolver contentResolver = context.getContentResolver();
         Settings.Secure.putInt(contentResolver,
                 Settings.Secure.USER_SETUP_COMPLETE, 1);
         if (hasLeanback(context)) {
             Settings.Secure.putInt(contentResolver,
                     Settings.Secure.TV_USER_SETUP_COMPLETE, 1);
         }
-        if (userSetupComplete != 1 && provisioningState == ProvisioningState.COMPLETE) {
-            ManagedProvisioningUtils.finalizeProvisioning(context);
+    }
+
+    public static void finishSetupWizard(BaseSetupWizardActivity context) {
+        if (LOGV) {
+            Log.v(TAG, "finishSetupWizard");
         }
+        ContentResolver contentResolver = context.getContentResolver();
+        Settings.Global.putInt(contentResolver,
+                Settings.Global.DEVICE_PROVISIONED, 1);
+        markUserSetupComplete(context);
 
         handleNavigationOption();
         provisionDefaultUserAppPermissions(context);

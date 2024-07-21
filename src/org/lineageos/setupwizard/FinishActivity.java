@@ -7,6 +7,9 @@
 package org.lineageos.setupwizard;
 
 import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
+import static org.lineageos.setupwizard.util.ManagedProvisioningUtils.getFinalizeProvisioningIntent;
+import static org.lineageos.setupwizard.util.ManagedProvisioningUtils.getProvisioningState;
+import static org.lineageos.setupwizard.util.ManagedProvisioningUtils.getStartProvisioningIntent;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -16,17 +19,19 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.UserManager;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.view.Window;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import org.lineageos.setupwizard.util.ManagedProvisioningUtils;
 import org.lineageos.setupwizard.util.ManagedProvisioningUtils.ProvisioningState;
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
@@ -44,9 +49,20 @@ public class FinishActivity extends BaseSetupWizardActivity {
     private View mRootView;
     private Resources.Theme mEdgeToEdgeWallpaperBackgroundTheme;
 
+    private ActivityResultLauncher<Intent> mStartProvisioningResultLauncher;
+    private ActivityResultLauncher<Intent> mFinalizeProvisioningResultLauncher;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mStartProvisioningResultLauncher = registerForActivityResult(
+                new StartDecoratedActivityForResult(),
+                this::onStartProvisioningResult);
+        mFinalizeProvisioningResultLauncher = registerForActivityResult(
+                new StartDecoratedActivityForResult(),
+                this::onFinalizeProvisioningResult);
+
         overrideActivityTransition(OVERRIDE_TRANSITION_CLOSE, R.anim.translucent_enter,
                 R.anim.translucent_exit);
         if (LOGV) {
@@ -80,6 +96,13 @@ public class FinishActivity extends BaseSetupWizardActivity {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mStartProvisioningResultLauncher.unregister();
+        mFinalizeProvisioningResultLauncher.unregister();
+    }
+
     private void disableActivityTransitions() {
         overrideActivityTransition(OVERRIDE_TRANSITION_OPEN, 0, 0);
         overrideActivityTransition(OVERRIDE_TRANSITION_CLOSE, 0, 0);
@@ -97,6 +120,43 @@ public class FinishActivity extends BaseSetupWizardActivity {
         if (!sIsFinishing) {
             super.applyBackwardTransition();
         }
+    }
+
+    private void finishAfterAnimation() {
+        if (!maybeFinalizeProvisioning()) {
+            // If provisioning is being finalized, it will finish when it's done.
+            SetupWizardUtils.finishSetupWizard(FinishActivity.this);
+        }
+    }
+
+    private boolean maybeFinalizeProvisioning() {
+        final ProvisioningState provisioningState = getProvisioningState(this);
+        if (LOGV) {
+            Log.v(TAG, "maybeFinalizeProvisioning, provisioningState=" + provisioningState);
+        }
+        if (provisioningState == ProvisioningState.PENDING) {
+            Log.e(TAG, "maybeFinalizeProvisioning, but provisioning pending! Murky waters ahead!");
+        }
+        if (provisioningState != ProvisioningState.COMPLETE) {
+            return false;
+        }
+        if (!SetupWizardUtils.isUserSetupMarkedComplete(this)) {
+            SetupWizardUtils.markUserSetupComplete(this);
+            mFinalizeProvisioningResultLauncher.launch(getFinalizeProvisioningIntent(this));
+            return true;
+        }
+        return false;
+    }
+
+    private void onStartProvisioningResult(ActivityResult activityResult) {
+        // do nothing
+    }
+
+    private void onFinalizeProvisioningResult(ActivityResult activityResult) {
+        startActivityAsUser(new Intent(this, SetupWizardActivity.class).addFlags(
+                Intent.FLAG_ACTIVITY_NEW_TASK), UserManager.get(this).getUserHandles(
+                false).getLast());
+        SetupWizardUtils.finishSetupWizard(FinishActivity.this);
     }
 
     @Override
@@ -119,6 +179,12 @@ public class FinishActivity extends BaseSetupWizardActivity {
 
     @Override
     public void onNavigateNext() {
+        if (ProvisioningState.PENDING == getProvisioningState(this)) {
+            // Initialize garlic-level provisioning.
+            mStartProvisioningResultLauncher.launch(getStartProvisioningIntent(this));
+            // Do not finish yet...
+            return;
+        }
         if (!sIsFinishing) {
             sIsFinishing = true;
             startActivity(getIntent());
@@ -129,12 +195,6 @@ public class FinishActivity extends BaseSetupWizardActivity {
     }
 
     private void startFinishSequence() {
-        if (ProvisioningState.PENDING == ManagedProvisioningUtils.getProvisioningState(this)) {
-            // Initialize garlic-level provisioning.
-            ManagedProvisioningUtils.init(this);
-            // Do not finish yet...
-            return;
-        }
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
         hideNextButton();
 
@@ -176,7 +236,7 @@ public class FinishActivity extends BaseSetupWizardActivity {
                     if (LOGV) {
                         Log.v(TAG, "Animation ended");
                     }
-                    SetupWizardUtils.finishSetupWizard(FinishActivity.this);
+                    finishAfterAnimation();
                 });
             }
         });
