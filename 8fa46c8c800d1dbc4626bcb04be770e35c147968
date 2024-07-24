@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "361d5b88_7e58c8ed",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-24T20:58:32Z",
+      "side": 1,
+      "message": "Can\u0027t stay named `context`, too confusing. The same is true for all the other type changes.",
+      "range": {
+        "startLine": 52,
+        "startChar": 67,
+        "endLine": 52,
+        "endChar": 74
+      },
+      "revId": "8fa46c8c800d1dbc4626bcb04be770e35c147968",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f4eed16f_64d56c16",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-24T20:58:32Z",
+      "side": 1,
+      "message": "I\u0027m desperate for this to be named differently, since it is not `startActivityForResult`, it\u0027s something custom. I\u0027ll make another change to adjust that and then resolve this.",
+      "range": {
+        "startLine": 87,
+        "startChar": 16,
+        "endLine": 87,
+        "endChar": 38
+      },
+      "revId": "8fa46c8c800d1dbc4626bcb04be770e35c147968",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
