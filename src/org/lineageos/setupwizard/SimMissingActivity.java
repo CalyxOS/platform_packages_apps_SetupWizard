@@ -9,8 +9,6 @@ package org.lineageos.setupwizard;
 import static com.google.android.setupcompat.util.ResultCodes.RESULT_ACTIVITY_NOT_FOUND;
 import static com.google.android.setupcompat.util.ResultCodes.RESULT_SKIP;
 
-import static org.lineageos.setupwizard.util.SetupWizardUtils.hasTelephony;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.SystemProperties;
@@ -40,7 +38,7 @@ public class SimMissingActivity extends SubBaseActivity {
     @Override
     protected void onStartSubactivity() {
         mUseSuwIntentExtras = false;
-        if (!SetupWizardUtils.simMissing(this) || !hasTelephony(this)) {
+        if (!SetupWizardUtils.simMissing(this) || !SetupWizardUtils.hasTelephony(this)) {
             finishAction(RESULT_SKIP);
             return;
         }

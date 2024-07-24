@@ -13,9 +13,6 @@ import static org.lineageos.setupwizard.SetupWizardApp.EXTRA_PREFS_SET_BACK_TEXT
 import static org.lineageos.setupwizard.SetupWizardApp.EXTRA_PREFS_SHOW_BUTTON_BAR;
 import static org.lineageos.setupwizard.SetupWizardApp.EXTRA_PREFS_SHOW_SKIP;
 import static org.lineageos.setupwizard.SetupWizardApp.EXTRA_PREFS_SHOW_SKIP_TV;
-import static org.lineageos.setupwizard.util.SetupWizardUtils.hasTelephony;
-import static org.lineageos.setupwizard.util.SetupWizardUtils.hasWifi;
-import static org.lineageos.setupwizard.util.SetupWizardUtils.isNetworkConnectedToInternetViaEthernet;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,8 +25,8 @@ public class NetworkSetupActivity extends SubBaseActivity {
 
     @Override
     protected void onStartSubactivity() {
-        if ((!hasWifi(this) && !hasTelephony(this)) ||
-                isNetworkConnectedToInternetViaEthernet(this)) {
+        if ((!SetupWizardUtils.hasWifi(this) && !SetupWizardUtils.hasTelephony(this)) ||
+                SetupWizardUtils.isNetworkConnectedToInternetViaEthernet(this)) {
             finishAction(RESULT_SKIP);
             return;
         }

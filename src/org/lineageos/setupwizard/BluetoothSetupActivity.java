@@ -9,9 +9,6 @@ package org.lineageos.setupwizard;
 import static com.google.android.setupcompat.util.ResultCodes.RESULT_ACTIVITY_NOT_FOUND;
 import static com.google.android.setupcompat.util.ResultCodes.RESULT_SKIP;
 
-import static org.lineageos.setupwizard.util.SetupWizardUtils.hasLeanback;
-import static org.lineageos.setupwizard.util.SetupWizardUtils.isBluetoothDisabled;
-
 import android.content.Intent;
 import android.util.Log;
 
@@ -30,7 +27,7 @@ public class BluetoothSetupActivity extends SubBaseActivity {
 
     @Override
     protected void onStartSubactivity() {
-        if (!hasLeanback(this) || isBluetoothDisabled()) {
+        if (!SetupWizardUtils.hasLeanback(this) || SetupWizardUtils.isBluetoothDisabled()) {
             finishAction(RESULT_SKIP);
             return;
         }
