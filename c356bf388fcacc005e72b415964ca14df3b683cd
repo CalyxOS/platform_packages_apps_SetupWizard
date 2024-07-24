@@ -22,6 +22,30 @@
       },
       "revId": "c356bf388fcacc005e72b415964ca14df3b683cd",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a6339ff_7dcb0149",
+        "filename": "src/org/lineageos/setupwizard/FinishActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-24T19:41:50Z",
+      "side": 1,
+      "message": "`finalizeProvisioning` in ManagedProvisioningUtils.java uses `FLAG_ACTIVITY_NEW_TASK`. The [startActivityForResult documentation](https://developer.android.com/reference/android/app/Activity#startActivityForResult(android.content.Intent,%20int,%20android.os.Bundle) states that this will immediately lead to a cancel result:\n\n\u003e Note that this method should only be used with Intent protocols that are defined to return a result. In other protocols (such as Intent#ACTION_MAIN or Intent#ACTION_VIEW), you may not get the result when you expect. For example, if the activity you are launching uses Intent#FLAG_ACTIVITY_NEW_TASK, it will not run in your task and thus you will immediately receive a cancel result.\n\nSo, I suppose that\u0027s what\u0027s happening.",
+      "parentUuid": "8cfea9c2_8151d66a",
+      "range": {
+        "startLine": 77,
+        "startChar": 46,
+        "endLine": 77,
+        "endChar": 61
+      },
+      "revId": "c356bf388fcacc005e72b415964ca14df3b683cd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
