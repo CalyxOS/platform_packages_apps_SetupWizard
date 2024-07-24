@@ -46,6 +46,30 @@
       },
       "revId": "c356bf388fcacc005e72b415964ca14df3b683cd",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bbcee64a_1f8cbe5c",
+        "filename": "src/org/lineageos/setupwizard/FinishActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-24T21:05:52Z",
+      "side": 1,
+      "message": "`onActivityResult` is doing double duty handling results of two different activities, called by startProvisioning and finalizeProvisioning, with no way to differentiate between them. `startProvisioning` seems to return 122 when successful, which is `RESULT_CODE_WORK_PROFILE_CREATED`, for which docs say, \"Returned after the work profile has been completed. Note this is before launching the DPC.\"\n\nWell, we need to know what\u0027s returning what, and right now we can\u0027t know.\n\nThis all revealed a very confusing mechanism in BaseSetupWizardActivity, designed to allow a familiar-sounding method named `startActivityForResult` to be called, but it\u0027s not what it sounds like - it\u0027s a custom implementation that does not support request codes and thus has no way to differentiate results. It uses the new androidx mechanism under the hood but without the flexibility of custom callbacks.\n\nSo, before I do anything else with this, I feel a strong need to make some adjustments in a precursor change to avoid on-going confusion, since this has come up before and has already confused me for at least a cumulative hour, along with adding a way to use a callback. I\u0027ll make another change for that and then resolve this before moving forward.",
+      "parentUuid": "2a6339ff_7dcb0149",
+      "range": {
+        "startLine": 77,
+        "startChar": 46,
+        "endLine": 77,
+        "endChar": 61
+      },
+      "revId": "c356bf388fcacc005e72b415964ca14df3b683cd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
