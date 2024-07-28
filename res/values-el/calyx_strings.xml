@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="microg_description">Αυτό επιτρέπει σε εφαρμογές όπως <b>Χάρτες Google, Youtube και υπηρεσίες κοινής χρήσης διαδρομών</b> να εκτελούνται στο CalyxOS. Απενεργοποιήστε το εάν δεν σκοπεύετε να εκτελέσετε εφαρμογές που απαιτούν υπηρεσίες Google. Δεν θα μπορείτε να το ενεργοποιήσετε αργότερα.</string>
     <string name="microg_title">Υπηρεσίες Google</string>
     <string name="euicc_summary">Μπορείτε επίσης να προσθέσετε μια eSIM στη συσκευή σας.</string>
     <string name="setup_euicc">Ρύθμιση eSIM</string>
