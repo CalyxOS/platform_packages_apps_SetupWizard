@@ -39,6 +39,30 @@
       },
       "revId": "2bb45092b39038d13e981bc2d303f0440f28f91e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3bcdaca_b3cb8dd2",
+        "filename": "src/org/lineageos/setupwizard/SubBaseActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-29T18:19:51Z",
+      "side": 1,
+      "message": "Probably, yeah, the SCRIPT_URI check is odd.\n\nMaybe replace it all with something like this (and no need to assign to wizardBundle)?\n```\n        if (intent.hasExtra(EXTRA_WIZARD_BUNDLE)) {\n            subactivityIntent.putExtra(EXTRA_WIZARD_BUNDLE, intent.getBundleExtra(EXTRA_WIZARD_BUNDLE));\n        }\n```",
+      "parentUuid": "fbed36c7_de4fd2e7",
+      "range": {
+        "startLine": 62,
+        "startChar": 12,
+        "endLine": 62,
+        "endChar": 54
+      },
+      "revId": "2bb45092b39038d13e981bc2d303f0440f28f91e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
