@@ -8,12 +8,15 @@ package org.lineageos.setupwizard;
 
 import static android.view.View.INVISIBLE;
 
+import static androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult;
+
 import static com.google.android.setupcompat.util.ResultCodes.RESULT_SKIP;
 
 import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 
 import android.annotation.NonNull;
 import android.annotation.Nullable;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -25,7 +28,7 @@ import android.widget.Button;
 import androidx.activity.OnBackPressedCallback;
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.activity.result.contract.ActivityResultContract;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.settingslib.Utils;
@@ -41,14 +44,16 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
         NavigationBarListener {
 
     public static final String TAG = BaseSetupWizardActivity.class.getSimpleName();
+    public static final int DEFAULT_TRANSITION = TransitionHelper.TRANSITION_FADE_THROUGH;
 
     private NavigationLayout mNavigationBar;
 
     protected boolean mUseSuwIntentExtras = true;
 
-    private final ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
-            new ActivityResultContracts.StartActivityForResult(),
-            BaseSetupWizardActivity.this::onActivityResult);
+    private final ActivityResultLauncher<Intent> mNextIntentResultLauncher =
+            registerForActivityResult(
+                    new StartDecoratedActivityForResult(),
+                    BaseSetupWizardActivity.this::onNextIntentResult);
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -68,10 +73,10 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
                     Log.v(TAG, "handleOnBackPressed()");
                 }
                 finishAction(RESULT_CANCELED, new Intent().putExtra("onBackPressed", true));
-                TransitionHelper.applyBackwardTransition(BaseSetupWizardActivity.this,
-                        TransitionHelper.TRANSITION_FADE_THROUGH, true);
             }
         });
+        // Apply default transition, to take effect whenever leaving this activity.
+        applyForwardTransition();
     }
 
     @Override
@@ -223,10 +228,12 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
     protected final void finishAction(int resultCode, Intent data) {
         if (resultCode != RESULT_CANCELED) {
             nextAction(resultCode, data);
+            finish();
         } else {
             setResult(resultCode, data);
+            finish();
+            applyBackwardTransition();
         }
-        finish();
     }
 
     public final void nextAction(int resultCode) {
@@ -243,35 +250,28 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
         }
         setResult(resultCode, data);
         Intent intent = WizardManagerHelper.getNextIntent(getIntent(), resultCode, data);
-        startActivityForResult(intent);
+        mNextIntentResultLauncher.launch(intent);
     }
 
-    @Override
-    public void startActivity(Intent intent) {
-        intent.putExtra(WizardManagerHelper.EXTRA_IS_FIRST_RUN, isFirstRun());
-        intent.putExtra(WizardManagerHelper.EXTRA_IS_SETUP_FLOW, true);
-        intent.putExtra(WizardManagerHelper.EXTRA_THEME, ThemeHelper.THEME_GLIF_V4);
-        super.startActivity(intent);
-        TransitionHelper.applyForwardTransition(this,
-                TransitionHelper.TRANSITION_FADE_THROUGH, true);
-    }
-
-    protected final void startActivityForResult(@NonNull Intent intent) {
+    /** Adorn the Intent with Setup Wizard-related extras. */
+    protected Intent decorateIntent(Intent intent) {
         if (mUseSuwIntentExtras) {
             intent.putExtra(WizardManagerHelper.EXTRA_IS_FIRST_RUN, isFirstRun());
             intent.putExtra(WizardManagerHelper.EXTRA_IS_SETUP_FLOW, true);
         }
-        intent.putExtra(WizardManagerHelper.EXTRA_THEME, ThemeHelper.THEME_GLIF_V4);
-        activityResultLauncher.launch(intent);
-        TransitionHelper.applyForwardTransition(this,
-                TransitionHelper.TRANSITION_FADE_THROUGH, true);
+        return intent.putExtra(WizardManagerHelper.EXTRA_THEME, ThemeHelper.THEME_GLIF_V4);
     }
 
-    protected void onActivityResult(ActivityResult activityResult) {
+    @Override
+    public void startActivity(Intent intent) {
+        super.startActivity(decorateIntent(intent));
+    }
+
+    protected void onNextIntentResult(@NonNull ActivityResult activityResult) {
         int resultCode = activityResult.getResultCode();
         Intent data = activityResult.getData();
         if (LOGV) {
-            StringBuilder append = new StringBuilder().append("onActivityResult(")
+            StringBuilder append = new StringBuilder().append("onNextIntentResult(")
                     .append(resultCode).append(", ");
             Bundle extras = null;
             if (data != null) {
@@ -320,5 +320,31 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
 
     protected int getIconResId() {
         return -1;
+    }
+
+    protected void applyForwardTransition() {
+        TransitionHelper.applyForwardTransition(this, DEFAULT_TRANSITION, true);
+    }
+
+    protected void applyBackwardTransition() {
+        TransitionHelper.applyBackwardTransition(BaseSetupWizardActivity.this,
+                DEFAULT_TRANSITION, true);
+    }
+
+    protected final class StartDecoratedActivityForResult
+            extends ActivityResultContract<Intent, ActivityResult> {
+
+        private final StartActivityForResult mWrappedContract = new StartActivityForResult();
+
+        @NonNull
+        @Override
+        public Intent createIntent(@NonNull Context context, @NonNull Intent intent) {
+            return decorateIntent(mWrappedContract.createIntent(context, intent));
+        }
+
+        @Override
+        public ActivityResult parseResult(int resultCode, @Nullable Intent result) {
+            return mWrappedContract.parseResult(resultCode, result);
+        }
     }
 }
