@@ -6,11 +6,12 @@
 
 package org.lineageos.setupwizard;
 
-import static com.google.android.setupcompat.util.ResultCodes.RESULT_ACTIVITY_NOT_FOUND;
 import static com.google.android.setupcompat.util.ResultCodes.RESULT_SKIP;
 
+import android.annotation.Nullable;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.SystemProperties;
 import android.service.euicc.EuiccService;
 import android.telephony.euicc.EuiccManager;
@@ -19,13 +20,13 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultLauncher;
 
 import com.google.android.setupcompat.template.FooterButtonStyleUtils;
-import com.google.android.setupdesign.transition.TransitionHelper;
 
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
-public class SimMissingActivity extends SubBaseActivity {
+public class SimMissingActivity extends BaseSetupWizardActivity {
 
     public static final String TAG = SimMissingActivity.class.getSimpleName();
 
@@ -35,10 +36,16 @@ public class SimMissingActivity extends SubBaseActivity {
     private static final String KEY_ENABLE_ESIM_UI_BY_DEFAULT =
             "esim.enable_esim_system_ui_by_default";
 
+    private final ActivityResultLauncher<Intent> mEuiccSetupResultLauncher =
+            registerForActivityResult(
+                    new StartDecoratedActivityForResult(),
+                    this::onEuiccSetupActivityResult);
+
     @Override
-    protected void onStartSubactivity() {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         mUseSuwIntentExtras = false;
-        if (!SetupWizardUtils.simMissing(this) || !SetupWizardUtils.hasTelephony(this)) {
+        super.onCreate(savedInstanceState);
+        if (!isAvailable()) {
             finishAction(RESULT_SKIP);
             return;
         }
@@ -58,24 +65,20 @@ public class SimMissingActivity extends SubBaseActivity {
         }
     }
 
+    // TODO: Something like this could be in the base class and eliminate a lot of boilerplate.
+    private boolean isAvailable() {
+        return SetupWizardUtils.simMissing(this) && SetupWizardUtils.hasTelephony(this);
+    }
+
     @Override
-    protected void onActivityResult(ActivityResult activityResult) {
-        int resultCode = activityResult.getResultCode();
-        Intent data = activityResult.getData();
-        if (resultCode != RESULT_CANCELED) {
-            nextAction(resultCode, data);
-        } else if (mIsSubactivityNotFound) {
-            finishAction(RESULT_ACTIVITY_NOT_FOUND);
-        } else if (data != null && data.getBooleanExtra("onBackPressed", false)) {
-            if (SetupWizardUtils.simMissing(this)) {
-                onStartSubactivity();
-            } else {
-                finishAction(RESULT_CANCELED, data);
+    protected void onNextIntentResult(ActivityResult activityResult) {
+        if (!isAvailable()) {
+            final int resultCode = activityResult.getResultCode();
+            final Intent data = activityResult.getData();
+            if (resultCode == RESULT_CANCELED
+                    && data != null && data.getBooleanExtra("onBackPressed", false)) {
+                finishAction(resultCode, data);
             }
-            TransitionHelper.applyBackwardTransition(this,
-                    TransitionHelper.TRANSITION_FADE_THROUGH, true);
-        } else if (!SetupWizardUtils.simMissing(this)) {
-            nextAction(RESULT_OK);
         }
     }
 
@@ -98,10 +101,16 @@ public class SimMissingActivity extends SubBaseActivity {
         Intent intent = new Intent(EuiccService.ACTION_PROVISION_EMBEDDED_SUBSCRIPTION);
         intent.putExtra(EuiccManager.EXTRA_FORCE_PROVISION, true);
         if (intent.resolveActivity(getPackageManager()) != null) {
-            startSubactivity(intent);
+            mEuiccSetupResultLauncher.launch(intent);
         } else {
             Log.e(TAG, "No activity available to handle " + intent.getAction());
         }
     }
 
+    private void onEuiccSetupActivityResult(ActivityResult activityResult) {
+        // We don't really care about the result, but if a SIM is no longer missing, we're done.
+        if (!SetupWizardUtils.simMissing(this)) {
+            finishAction(RESULT_SKIP);
+        }
+    }
 }
