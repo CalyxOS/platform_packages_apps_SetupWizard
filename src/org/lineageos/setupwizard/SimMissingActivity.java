@@ -36,15 +36,16 @@ public class SimMissingActivity extends BaseSetupWizardActivity {
     private static final String KEY_ENABLE_ESIM_UI_BY_DEFAULT =
             "esim.enable_esim_system_ui_by_default";
 
-    private final ActivityResultLauncher<Intent> mEuiccSetupResultLauncher =
-            registerForActivityResult(
-                    new StartDecoratedActivityForResult(),
-                    this::onEuiccSetupActivityResult);
+    private ActivityResultLauncher<Intent> mEuiccSetupResultLauncher;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         mUseSuwIntentExtras = false;
         super.onCreate(savedInstanceState);
+        mEuiccSetupResultLauncher = registerForActivityResult(
+                new StartDecoratedActivityForResult(),
+                this::onEuiccSetupActivityResult);
+
         if (!isAvailable()) {
             // NetworkSetupActivity comes before us. DateTimeActivity comes after.
             // If the user presses the back button on DateTimeActivity, we can only pass along
@@ -73,6 +74,12 @@ public class SimMissingActivity extends BaseSetupWizardActivity {
             getGlifLayout().setDescriptionText(getString(R.string.sim_missing_summary));
             findViewById(R.id.setup_euicc).setVisibility(View.GONE);
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mEuiccSetupResultLauncher.unregister();
     }
 
     // TODO: Something like this could be in the base class and eliminate a lot of boilerplate.
