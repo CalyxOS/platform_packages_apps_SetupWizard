@@ -46,7 +46,17 @@ public class SimMissingActivity extends BaseSetupWizardActivity {
         mUseSuwIntentExtras = false;
         super.onCreate(savedInstanceState);
         if (!isAvailable()) {
-            finishAction(RESULT_SKIP);
+            // NetworkSetupActivity comes before us. DateTimeActivity comes after.
+            // If the user presses the back button on DateTimeActivity, we can only pass along
+            // that information to NetworkSetupActivity if we are still around. But if we finish
+            // here, we're gone, and NetworkSetupActivity will get whatever result we give here.
+            // We can't predict the future, but we can reasonably assume that the only way for
+            // NetworkSetupActivity to be reached later is if the user went backwards. So, we
+            // finish this activity faking that the user pressed the back button, which is required
+            // for subactivities like NetworkSetupActivity to work properly on backward navigation.
+            // See also onEuiccSetupActivityResult.
+            // TODO: Resolve all this.
+            finishAction(RESULT_SKIP, new Intent().putExtra("onBackPressed", true));
             return;
         }
         setNextAllowed(true);
@@ -110,7 +120,8 @@ public class SimMissingActivity extends BaseSetupWizardActivity {
     private void onEuiccSetupActivityResult(ActivityResult activityResult) {
         // We don't really care about the result, but if a SIM is no longer missing, we're done.
         if (!SetupWizardUtils.simMissing(this)) {
-            finishAction(RESULT_SKIP);
+            // See comments in onCreate for an explanation.
+            finishAction(RESULT_SKIP, new Intent().putExtra("onBackPressed", true));
         }
     }
 }
