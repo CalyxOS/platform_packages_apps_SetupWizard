@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "12951aed_1f274617",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-01T16:55:57Z",
+      "side": 1,
+      "message": "This should always be RESULT_CANCELED going backwards from the next page, which is DateTimeActivity. We may not need to even check it, but at this point, it can stay as-is. This all needs further reworking later.",
+      "revId": "79654af926ab65a44d6418d1a0d01e493606680a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}

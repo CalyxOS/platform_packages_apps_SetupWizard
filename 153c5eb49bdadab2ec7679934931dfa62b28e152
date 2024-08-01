@@ -16,6 +16,24 @@
       "message": "This isn\u0027t correct because onStartSubactivity happens even if you go backwards into the activity. That means if this page was present earlier, and a SIM ended up getting inserted later, and the user goes back at DateTimeActivity, this sends them right back forward (confirmed).\n\nMaybe it\u0027s worth avoiding SubBaseActivity for this after all.",
       "revId": "153c5eb49bdadab2ec7679934931dfa62b28e152",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f899ece_ad5ef803",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-01T16:55:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b5c113b7_436464c2",
+      "revId": "153c5eb49bdadab2ec7679934931dfa62b28e152",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
