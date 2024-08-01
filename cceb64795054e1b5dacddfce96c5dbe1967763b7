@@ -16,6 +16,24 @@
       "message": "@olivercscott@gmail.com pointed out that CalyxOS actually does use subactivity features for SimMissingActivity, for launching eSIM setup, whereas LineageOS does not. Having LineageOS use a subactivity was convenient for CalyxOS alone. But I think it\u0027s fine for us to have this be one of the ways we diverge - better (imo) to diverge here than to have upstream look confusing and wrong just for our benefit.\n\nI\u0027ll adjust this.",
       "revId": "cceb64795054e1b5dacddfce96c5dbe1967763b7",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2711a84c_dfd184b2",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-01T14:45:01Z",
+      "side": 0,
+      "message": "On second thought, it starts an activity, sure, but I don\u0027t know if it\u0027s fair to call it a subactivity. It only starts it when you press a button. So I\u0027ll make it a regular activity launcher.\n\nThis may be a little annoying to rebase in the future... If anyone has ideas on what I can do to improve that now, let me know, or else I don\u0027t mind tackling it when the time comes, either.",
+      "parentUuid": "fded1e11_6da6b754",
+      "revId": "cceb64795054e1b5dacddfce96c5dbe1967763b7",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
