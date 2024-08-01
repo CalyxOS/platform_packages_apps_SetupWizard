@@ -24,6 +24,30 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4c49bf1_52e10b7d",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-01T20:15:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "361d5b88_7e58c8ed",
+      "range": {
+        "startLine": 52,
+        "startChar": 67,
+        "endLine": 52,
+        "endChar": 74
+      },
+      "revId": "8fa46c8c800d1dbc4626bcb04be770e35c147968",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f4eed16f_64d56c16",
@@ -85,6 +109,30 @@
       "side": 1,
       "message": "Should bring them downstream.",
       "parentUuid": "a3275ad7_e81a3f00",
+      "range": {
+        "startLine": 87,
+        "startChar": 16,
+        "endLine": 87,
+        "endChar": 38
+      },
+      "revId": "8fa46c8c800d1dbc4626bcb04be770e35c147968",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64fadda9_d0282e41",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-01T20:15:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eec5d2ed_3aeb48e6",
       "range": {
         "startLine": 87,
         "startChar": 16,
