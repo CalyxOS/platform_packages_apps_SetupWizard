@@ -191,10 +191,10 @@ public class SetupWizardUtils {
         provisionDefaultUserAppPermissions(context);
         sendMicroGCheckInBroadcast(context);
         WallpaperManager.getInstance(context).forgetLoadedWallpaper();
-        disableHome(context);
-        enableStatusBar();
         context.finishAffinity();
         context.nextAction(RESULT_SKIP);
+        disableHome(context);
+        enableStatusBar();
         Log.i(TAG, "Setup complete!");
     }
 
