@@ -16,6 +16,23 @@
       "message": "This (and rest of chain) could use some more testing than I had time to give it, but I finally got it provisioning a work profile successfully again after all this.",
       "revId": "b17f20962e587efc588dbcd3e3ea7d5ab307c28c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64d0b711_c0c0a85d",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-06T15:55:30Z",
+      "side": 1,
+      "message": "Oops, I thought we didn\u0027t want it to be a new task...",
+      "revId": "b17f20962e587efc588dbcd3e3ea7d5ab307c28c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
