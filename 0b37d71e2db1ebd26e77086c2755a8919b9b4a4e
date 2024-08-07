@@ -16,6 +16,24 @@
       "message": "Is this case for a \"fully-managed device\" never reached in our current code? Like, is that device owner, which we ended up not using?\n\nThat\u0027s what I\u0027m observing, whether it be Safer or Safest - only the above case, `PROVISIONING_MODE_MANAGED_PROFILE`, is reached.",
       "revId": "0b37d71e2db1ebd26e77086c2755a8919b9b4a4e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "81dd0227_b1a65cfb",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-07T15:06:22Z",
+      "side": 0,
+      "message": "Correct, we never use it. It should be removed to avoid further confusion.",
+      "parentUuid": "124018a0_0eeb2912",
+      "revId": "0b37d71e2db1ebd26e77086c2755a8919b9b4a4e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
