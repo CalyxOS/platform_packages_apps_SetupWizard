@@ -34,6 +34,24 @@
       "parentUuid": "124018a0_0eeb2912",
       "revId": "0b37d71e2db1ebd26e77086c2755a8919b9b4a4e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48b834e6_27a598db",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-08T20:59:31Z",
+      "side": 0,
+      "message": "I added some comments to make it very clear it\u0027s not used. Let\u0027s let it be from here.",
+      "parentUuid": "81dd0227_b1a65cfb",
+      "revId": "0b37d71e2db1ebd26e77086c2755a8919b9b4a4e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }

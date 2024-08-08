@@ -33,6 +33,24 @@
       "message": "Oops, I thought we didn\u0027t want it to be a new task...",
       "revId": "b17f20962e587efc588dbcd3e3ea7d5ab307c28c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9f90b61_14f9c174",
+        "filename": "src/org/lineageos/setupwizard/util/ManagedProvisioningUtils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-08T20:59:31Z",
+      "side": 1,
+      "message": "And correct, we don\u0027t (see commit message).",
+      "parentUuid": "64d0b711_c0c0a85d",
+      "revId": "b17f20962e587efc588dbcd3e3ea7d5ab307c28c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
