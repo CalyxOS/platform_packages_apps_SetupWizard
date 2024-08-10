@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="microg_title">Google Services</string>
+    <string name="microg_description2">microG is a open source replacement for <b>Google Play Services</b> (and related software), but it only includes the useful parts. Unlike Play Services, microG does not have any advertising or location tracking, for example.</string>
+    <string name="microg_switch_label2">Google Services Compatibility</string>
+</resources>
