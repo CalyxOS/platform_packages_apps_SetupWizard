@@ -16,6 +16,24 @@
       "message": "Handle exceptions. This isn\u0027t worth ever crashing the wizard.",
       "revId": "099a1275ccf78ecfd44a029d81a0d2fa329a7a7f",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "22f477f8_1588c9d2",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-12T19:49:34Z",
+      "side": 1,
+      "message": "Done. If we forgot to undo this change after removing the privileged extensions entirely, it shouldn\u0027t crash for anybody now.",
+      "parentUuid": "9620241d_c5cdcf92",
+      "revId": "099a1275ccf78ecfd44a029d81a0d2fa329a7a7f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
