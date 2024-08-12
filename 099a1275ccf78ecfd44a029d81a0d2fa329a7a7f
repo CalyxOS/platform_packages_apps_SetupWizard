@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9620241d_c5cdcf92",
+        "filename": "src/org/lineageos/setupwizard/util/SetupWizardUtils.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-12T15:46:40Z",
+      "side": 1,
+      "message": "Handle exceptions. This isn\u0027t worth ever crashing the wizard.",
+      "revId": "099a1275ccf78ecfd44a029d81a0d2fa329a7a7f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}

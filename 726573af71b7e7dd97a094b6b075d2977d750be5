@@ -16,6 +16,24 @@
       "message": "I\u0027m not able to tell if this is working.\n\nThe apps don\u0027t show up in Settings, even with \"Show system\" and \"Disabled apps\"\n\n`pm dump` output isn\u0027t too helpful, from that it looks like they\u0027re enabled, but only relevant line I see is: `lastDisabledCaller: org.lineageos.setupwizard`\n\nhttps://zifb.in/ljOUFfvFWW and https://zifb.in/M8vtxjp4IO",
       "revId": "726573af71b7e7dd97a094b6b075d2977d750be5",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "238ce024_bba5fede",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-12T15:46:40Z",
+      "side": 1,
+      "message": "This is working.\n\nOn this line:\n\n`User 0: ceDataInode\u003d3471 deDataInode\u003d1850 installed\u003dtrue hidden\u003dfalse suspended\u003dfalse distractionFlags\u003d0 stopped\u003dfalse notLaunched\u003dfalse enabled\u003d2 instant\u003dfalse virtual\u003dfalse quarantined\u003dfalse`\n\nWhat we want to look at is `enabled\u003dX`.\n\nConstants are:\n- `COMPONENT_ENABLED_STATE_DEFAULT \u003d 0;`\n- `COMPONENT_ENABLED_STATE_ENABLED \u003d 1;`\n- `COMPONENT_ENABLED_STATE_DISABLED \u003d 2;`\n- `COMPONENT_ENABLED_STATE_DISABLED_USER \u003d 3;`\n- `COMPONENT_ENABLED_STATE_DISABLED_UNTIL_USED \u003d 4;`\n\nBefore the SUW completes, we have `enabled\u003d0`. After it completes, we have `enabled\u003d2`.",
+      "parentUuid": "d449a3d3_12495a8c",
+      "revId": "726573af71b7e7dd97a094b6b075d2977d750be5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
