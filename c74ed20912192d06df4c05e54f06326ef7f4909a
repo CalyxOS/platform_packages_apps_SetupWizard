@@ -16,6 +16,24 @@
       "message": "The installer of record remains even when an app is disabled (tested and confirmed), so we could do this for existing users as well any time.",
       "revId": "c74ed20912192d06df4c05e54f06326ef7f4909a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "28b58faf_f1a58f36",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-13T11:52:34Z",
+      "side": 1,
+      "message": "I meant that even when the installer is disabled, or hidden, the installerPackageName and updateOwnerPackageName fields for packages that reference it continue to reference it, after reboot as well. Uninstalling is a different story.",
+      "parentUuid": "daba96f1_51b38c64",
+      "revId": "c74ed20912192d06df4c05e54f06326ef7f4909a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
