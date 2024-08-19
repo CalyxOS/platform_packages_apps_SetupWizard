@@ -70,6 +70,24 @@
       "parentUuid": "8b6d9913_a704103c",
       "revId": "abf316b80b36b6195967b43823c300b8adb72c53",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d6526817_976e170d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-19T14:24:24Z",
+      "side": 1,
+      "message": "Updated commit message.\n\n\u003e Otherwise, could there be a scenario where something fails and navigation should be enabled but these calls keep it disabled?\n\nWe don\u0027t want navigation during the animation, which is before finishSetupWizard.",
+      "parentUuid": "ad9a8790_2cee30a5",
+      "revId": "abf316b80b36b6195967b43823c300b8adb72c53",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
