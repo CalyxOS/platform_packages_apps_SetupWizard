@@ -34,6 +34,24 @@
       "parentUuid": "91885ecb_f7b43ef2",
       "revId": "abf316b80b36b6195967b43823c300b8adb72c53",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8b6d9913_a704103c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-08-19T14:10:23Z",
+      "side": 1,
+      "message": "Yeah, just don\u0027t understand the purpose vs having them in a common place like SetupWizardUtils\u0027 `finishSetupWizard` call. Otherwise, could there be a scenario where something fails and navigation should be enabled but these calls keep it disabled?",
+      "parentUuid": "991a9b70_3ce9bb79",
+      "revId": "abf316b80b36b6195967b43823c300b8adb72c53",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
