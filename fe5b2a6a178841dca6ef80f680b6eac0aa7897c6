@@ -16,6 +16,24 @@
       "message": "We still need nextAction since internally the WizardManager disables itself if there are no more actions to execute",
       "revId": "fe5b2a6a178841dca6ef80f680b6eac0aa7897c6",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c3cda0e_d812f98f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-19T21:45:45Z",
+      "side": 1,
+      "message": "Okay, I see. Otherwise the WizardManager component remains enabled and can be seen as such in `dumpsys package org.lineageos.setupwizard`, which is a regression.\n\nThanks for fixing this!",
+      "parentUuid": "d2fa8475_cf316c1e",
+      "revId": "fe5b2a6a178841dca6ef80f680b6eac0aa7897c6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
