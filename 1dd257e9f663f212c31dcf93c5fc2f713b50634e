@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c2eef486_9d5a03ca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-19T14:13:20Z",
+      "side": 1,
+      "message": "Yeah, I understand this and partly agree. The problem is that ManagedProvisioningUtils is a static class. It\u0027s not an activity, and it\u0027s not naturally suitable for launching activities or getting their results. This is why prior to this change, there was also some confusing passing back-and-forth of the handling, just to make it work.\n\nIf we used a dedicated activity for garlic-level provisioning, I think it may help...? This is part of the reason I opened calyxos#2629, although I didn\u0027t mention it there.",
+      "parentUuid": "bcda2f84_8801fce4",
+      "revId": "1dd257e9f663f212c31dcf93c5fc2f713b50634e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b2f39d5e_2ed98949",
         "filename": "src/org/lineageos/setupwizard/WelcomeActivity.java",
         "patchSetId": 4
@@ -31,6 +49,30 @@
       "writtenOn": "2024-08-19T14:02:31Z",
       "side": 1,
       "message": "Not sure I understand why this call is present here?",
+      "range": {
+        "startLine": 118,
+        "startChar": 8,
+        "endLine": 118,
+        "endChar": 77
+      },
+      "revId": "1dd257e9f663f212c31dcf93c5fc2f713b50634e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "39491edb_483708ec",
+        "filename": "src/org/lineageos/setupwizard/WelcomeActivity.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-19T14:13:20Z",
+      "side": 1,
+      "message": "If provisioning fails, and the user restarts the device, this will let them know right away that they need to wipe the device, rather than faking them out until the last page.",
+      "parentUuid": "b2f39d5e_2ed98949",
       "range": {
         "startLine": 118,
         "startChar": 8,
