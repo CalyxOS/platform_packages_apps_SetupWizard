@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cfa5aded_eb57f31c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-08-19T13:51:49Z",
+      "side": 1,
+      "message": "Does this end the process and wizard script? The reason it was present was because WizardScript has logic to end and clean up after itself if there are no more actions to run and next is called",
+      "revId": "26af6a0a3d5006677099057fed2a4276f0f1b530",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
