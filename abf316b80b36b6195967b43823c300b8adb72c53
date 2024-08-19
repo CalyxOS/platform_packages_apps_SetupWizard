@@ -88,6 +88,24 @@
       "parentUuid": "ad9a8790_2cee30a5",
       "revId": "abf316b80b36b6195967b43823c300b8adb72c53",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a48316fe_6dcd8d99",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-19T16:22:03Z",
+      "side": 1,
+      "message": "\u003e Otherwise, could there be a scenario where something fails and navigation should be enabled but these calls keep it disabled?\n\nSorry, I think I still hadn\u0027t answered this question: no, there shouldn\u0027t be such a situation. When sFinishState isn\u0027t NONE, that means we\u0027ve reached a point of no return. The animation is going, or (in later patches) provisioning is going. Without the provisioning steps, the wizard should just exit on its own after the animation. With the provisioning steps, we have other failure handling that ensures the device must be wiped. In neither situation do we need to enable navigating backwards or forwards.\n\nNote that disabling navigation is not at a system level but at the SUW app level.",
+      "parentUuid": "d6526817_976e170d",
+      "revId": "abf316b80b36b6195967b43823c300b8adb72c53",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
