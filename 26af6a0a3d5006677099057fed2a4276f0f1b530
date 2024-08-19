@@ -106,6 +106,24 @@
       "parentUuid": "01043f2b_05c55661",
       "revId": "26af6a0a3d5006677099057fed2a4276f0f1b530",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f9c7a849_0eac3e65",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-08-19T18:13:30Z",
+      "side": 1,
+      "message": "I added the call back and it doesn\u0027t make a difference so maybe something else in the recent changes may be affecting the process lingering? That said, it\u0027d still be good to ensure the wizard manager disables itself and removes the wizard script? \n\nNormally the process lingering means there is a service or activity hanging around. In this case I don\u0027t see anything that should/makes sent to be lingering?",
+      "parentUuid": "e074f6aa_186837ef",
+      "revId": "26af6a0a3d5006677099057fed2a4276f0f1b530",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
