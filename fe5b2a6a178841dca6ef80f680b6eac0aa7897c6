@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2fa8475_cf316c1e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-08-19T21:42:11Z",
+      "side": 1,
+      "message": "We still need nextAction since internally the WizardManager disables itself if there are no more actions to execute",
+      "revId": "fe5b2a6a178841dca6ef80f680b6eac0aa7897c6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
