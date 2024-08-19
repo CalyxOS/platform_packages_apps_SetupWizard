@@ -88,6 +88,24 @@
       "parentUuid": "0cdc0f10_00a33b7d",
       "revId": "26af6a0a3d5006677099057fed2a4276f0f1b530",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e074f6aa_186837ef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-19T18:04:43Z",
+      "side": 1,
+      "message": "Also wondering if it really matters if the process ends. Do other apps\u0027 processes end in these cases? I thought it was up to Android to decide how it wants to handle all that.\n\nSorry, we\u0027ve probably been over this, but it\u0027s been across quite a long span of time.",
+      "parentUuid": "01043f2b_05c55661",
+      "revId": "26af6a0a3d5006677099057fed2a4276f0f1b530",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
