@@ -52,6 +52,24 @@
       "parentUuid": "a7c9cf9a_b1762cf8",
       "revId": "26af6a0a3d5006677099057fed2a4276f0f1b530",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0cdc0f10_00a33b7d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-08-19T17:39:27Z",
+      "side": 1,
+      "message": "For reference, https://github.com/LineageOS/android_packages_apps_SetupWizard/blob/lineage-21.0/src/org/lineageos/setupwizard/wizardmanager/WizardManager.java#L138",
+      "parentUuid": "710b9217_2fd5aba3",
+      "revId": "26af6a0a3d5006677099057fed2a4276f0f1b530",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
