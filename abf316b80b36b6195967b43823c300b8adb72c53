@@ -52,6 +52,24 @@
       "parentUuid": "991a9b70_3ce9bb79",
       "revId": "abf316b80b36b6195967b43823c300b8adb72c53",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad9a8790_2cee30a5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-19T14:19:36Z",
+      "side": 1,
+      "message": "Oops, I was wrong.\n\nBefore this change, we only hid the next button; we didn\u0027t do anything with the back button. We want the back button to be gone, too, since going backwards after a certain point-of-no-return (e.g. the animation) can cause problems, crashes, weird behavior.\n\nAnd in the place where we hide the next button, we also want to hide the back button. So I made a method that does both.\n\nI guess it could be in SetupWizardUtils, but I wasn\u0027t thinking of that.\n\nThe commit message should be updated.",
+      "parentUuid": "8b6d9913_a704103c",
+      "revId": "abf316b80b36b6195967b43823c300b8adb72c53",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
