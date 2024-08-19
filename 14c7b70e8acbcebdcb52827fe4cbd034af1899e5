@@ -22,6 +22,30 @@
       },
       "revId": "14c7b70e8acbcebdcb52827fe4cbd034af1899e5",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e9ff35d_b6c71175",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-19T13:57:08Z",
+      "side": 1,
+      "message": "The horrors referenced in the comment above. I don\u0027t think a sensible design should require an individual activity to finish itself with an \"onBackPressed\" lie as a workaround. It works, and it should always work as expected as far as I know, but at the very least, it shouldn\u0027t be something that individual activities each need to work around in this same way.",
+      "parentUuid": "db05cc2d_8773cd7a",
+      "range": {
+        "startLine": 58,
+        "startChar": 15,
+        "endLine": 58,
+        "endChar": 37
+      },
+      "revId": "14c7b70e8acbcebdcb52827fe4cbd034af1899e5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
