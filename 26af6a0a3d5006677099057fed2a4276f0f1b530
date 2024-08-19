@@ -16,6 +16,24 @@
       "message": "Does this end the process and wizard script? The reason it was present was because WizardScript has logic to end and clean up after itself if there are no more actions to run and next is called",
       "revId": "26af6a0a3d5006677099057fed2a4276f0f1b530",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a7c9cf9a_b1762cf8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-19T14:06:36Z",
+      "side": 1,
+      "message": "From a visible user perspective, everything ends and there are no errors. Before removing this, there was a crash as described in the commit message. I think this may have looked a bit glitchy. I also happened to notice the crash in the crash log. I didn\u0027t notice other issues you\u0027ve described (not sure to notice them), though they may be present.\n\nIt sounds like you\u0027re more familiar with possible repercussions. Can you take a look?",
+      "parentUuid": "cfa5aded_eb57f31c",
+      "revId": "26af6a0a3d5006677099057fed2a4276f0f1b530",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
