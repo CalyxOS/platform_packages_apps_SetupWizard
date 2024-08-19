@@ -36,6 +36,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6a348d3_6aabd11f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-08-19T17:34:52Z",
+      "side": 1,
+      "message": "Given I don\u0027t know what an activity like that would look like in the setup wizard given it\u0027s meant to have UI activities that a user steps back and forth through based on the wizard script. If I had to guess it\u0027d resemble the bluetooth activity or maybe it\u0027d be a subactivity, but either way the amount of reimplementation is probably not worthwhile especially since the finish activity probably will not conflict regularly with upstream afaik",
+      "parentUuid": "c2eef486_9d5a03ca",
+      "revId": "1dd257e9f663f212c31dcf93c5fc2f713b50634e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b2f39d5e_2ed98949",
