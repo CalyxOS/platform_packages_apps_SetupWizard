@@ -46,6 +46,30 @@
       },
       "revId": "14c7b70e8acbcebdcb52827fe4cbd034af1899e5",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2911c2f2_8b5bfba9",
+        "filename": "src/org/lineageos/setupwizard/SimMissingActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-08-19T14:07:31Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "5e9ff35d_b6c71175",
+      "range": {
+        "startLine": 58,
+        "startChar": 15,
+        "endLine": 58,
+        "endChar": 37
+      },
+      "revId": "14c7b70e8acbcebdcb52827fe4cbd034af1899e5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
