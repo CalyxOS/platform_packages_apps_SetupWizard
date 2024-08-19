@@ -16,6 +16,24 @@
       "message": "Why are the calls disableNavigation introduced here?",
       "revId": "abf316b80b36b6195967b43823c300b8adb72c53",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "991a9b70_3ce9bb79",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-19T14:07:26Z",
+      "side": 1,
+      "message": "This is the \"A little refactoring and additional comments\" part of the commit message.",
+      "parentUuid": "91885ecb_f7b43ef2",
+      "revId": "abf316b80b36b6195967b43823c300b8adb72c53",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
