@@ -34,6 +34,24 @@
       "parentUuid": "cfa5aded_eb57f31c",
       "revId": "26af6a0a3d5006677099057fed2a4276f0f1b530",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "710b9217_2fd5aba3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-08-19T17:37:06Z",
+      "side": 1,
+      "message": "The only case I see the process disappearing is if skipping the setup wizard with the 4 taps. Otherwise the process remains present (this also applies to the work profile setup wizard).",
+      "parentUuid": "a7c9cf9a_b1762cf8",
+      "revId": "26af6a0a3d5006677099057fed2a4276f0f1b530",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
