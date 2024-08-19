@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "91885ecb_f7b43ef2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-08-19T13:55:29Z",
+      "side": 1,
+      "message": "Why are the calls disableNavigation introduced here?",
+      "revId": "abf316b80b36b6195967b43823c300b8adb72c53",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
