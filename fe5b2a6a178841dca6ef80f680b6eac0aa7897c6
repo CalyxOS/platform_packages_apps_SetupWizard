@@ -34,6 +34,23 @@
       "parentUuid": "d2fa8475_cf316c1e",
       "revId": "fe5b2a6a178841dca6ef80f680b6eac0aa7897c6",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e783e9a2_e8a0b3db",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-08-20T14:40:40Z",
+      "side": 1,
+      "message": "Seeing a crash dialog after SUW, along with:\n```\n08-20 10:35:21.940  1000  5090  5090 E AndroidRuntime: FATAL EXCEPTION: main\n08-20 10:35:21.940  1000  5090  5090 E AndroidRuntime: Process: org.lineageos.setupwizard, PID: 5090\n08-20 10:35:21.940  1000  5090  5090 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{org.lineageos.setupwizard/org.lineageos.setupwizard.BluetoothSetupActivity}: android.content.ActivityNotFoundException: No Activity found to handle Intent { act\u003dcom.android.wizard.NEXT (has extras) }\n```",
+      "revId": "fe5b2a6a178841dca6ef80f680b6eac0aa7897c6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
