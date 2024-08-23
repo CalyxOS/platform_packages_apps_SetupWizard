@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="microg_description">Isso permite que apps como <b>Google Maps, Youtube e serviços de compartilhamento de passeios</b> funcionem no CalyxOS. Desative esta opção se não planea executar apps que requerem os serviços do Google.</string>
     <string name="microg_title">Serviços Google</string>
     <string name="setup_euicc">Configuração do eSIM</string>
     <string name="euicc_summary">Também pode adicionar um eSIM ao seu aparelho.</string>
-    <string name="microg_description2">O microG é uma alternativa de código aberto ao <b>Google Play Services</b> (e software relacionado), mas inclui somente as partes úteis. Diferentemente do Play Services, o microG não possui nenhum tipo de rastreamento publicitário ou de localização, por exemplo.</string>
+    <string name="microg_description2">O microG é uma alternativa de código aberto ao &lt;b&gt;Google Play Services&lt;/b&gt; (e software relacionado), mas inclui somente as partes úteis. Diferentemente do Play Services, o microG não possui nenhum tipo de rastreamento publicitário ou de localização, por exemplo.</string>
     <string name="microg_switch_label2">Compatibilidade com Serviços do Google</string>
     <string name="microg_defaults_switch_label">Suporte à notificações push</string>
     <string name="microg_location_summary">Melhore os serviços de localização consultando o MLS (serviços de localização da Mozilla) com redes Wi-Fi e redes móveis próximas, e lembrando as coordenadas de GPS de redes próximas. Você pode configurar essas opções com mais precisão nas configurações do microG depois.</string>
