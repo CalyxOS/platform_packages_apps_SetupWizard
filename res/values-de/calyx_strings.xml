@@ -12,4 +12,6 @@
     <string name="microg_defaults_summary">Erlaube Apps, sich für Push-Benachrichtigungen bei Google zu registrieren. Dadurch wird dein Gerät bei Google-Diensten registriert, ohne dass gerätespezifische eindeutige Kennungen verwendet werden. Dies kann später in den microG-Einstellungen aktiviert werden, allerdings müssen alle zuvor eingerichteten Apps neu installiert werden, damit sie richtig funktionieren.</string>
     <string name="microg_location_switch_label">Netzwerkstandort</string>
     <string name="microg_location_summary">Verbessern Sie die Standortdienste, indem Sie MLS (Mozilla Location Services) mit nahegelegenen WLAN- und Mobilfunknetzen abfragen, Nominatim für die Adresssuche verwenden und die GPS-Koordinaten nahegelegener Netzwerke speichern. Sie können diese Optionen später in den microG-Einstellungen detaillierter anpassen.</string>
+    <string name="personal_profile">persönliches profil</string>
+    <string name="microg_summary">Dies Erlaubt Anwendung wie diese <b>Google Maps, YouTube und ride-sharing Dienste</b> zu Funktionieren. Deaktiviere dies wen du nicht planst Anwendungen zu verwenden welche die Google Play Dienste Benötigt in deinem<xliff:g id="profileType" example="personal profile">%1$s</xliff:g>. Diese Einstellung kann später nicht verändert werden.</string>
 </resources>
