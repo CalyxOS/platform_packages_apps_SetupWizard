@@ -69,6 +69,23 @@
       "parentUuid": "ae8a8743_10bc084b",
       "revId": "24568b047f8de0c7734c67134393cf483a94da1a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e86397c_2714a893",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2024-09-30T15:56:20Z",
+      "side": 1,
+      "message": "OK, so for this to work, you nee F-Droid Basic 1.21 (not yet released) which will include https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1437\n\nThen, in Manifest:\n\n\u003cuses-permission android:name\u003d\"org.fdroid.basic.permission.UPDATE_REPOS\"/\u003e\n\nTo send the broadcast:\n\n        Intent().also { intent -\u003e\n            intent.setAction(\"org.fdroid.action.UPDATE_REPOS\")\n            intent.`package` \u003d \"org.fdroid.basic\"\n            sendBroadcast(intent, \"org.fdroid.basic.permission.UPDATE_REPOS\")\n        }\n\nThen, it may need pre-granting the org.fdroid.basic.permission.UPDATE_REPOS permission via xml files.",
+      "revId": "24568b047f8de0c7734c67134393cf483a94da1a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
