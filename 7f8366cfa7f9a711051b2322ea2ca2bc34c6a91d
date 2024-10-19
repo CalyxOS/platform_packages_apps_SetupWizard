@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "900f5a07_7e4dccfd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-10-19T01:23:18Z",
+      "side": 1,
+      "message": "java.lang.SecurityException: FRP is active",
+      "revId": "7f8366cfa7f9a711051b2322ea2ca2bc34c6a91d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
