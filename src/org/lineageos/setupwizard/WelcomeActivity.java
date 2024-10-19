@@ -8,10 +8,16 @@ package org.lineageos.setupwizard;
 
 import static org.lineageos.setupwizard.SetupWizardApp.ACTION_EMERGENCY_DIAL;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Rect;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemProperties;
+import android.service.persistentdata.PersistentDataBlockManager;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -33,6 +39,8 @@ public class WelcomeActivity extends SubBaseActivity {
 
     private static final String ACTION_ACCESSIBILITY_SETTINGS =
             "android.settings.ACCESSIBILITY_SETTINGS_FOR_SUW";
+
+    private static final String PERSISTENT_DATA_BLOCK_PROP = "ro.frp.pst";
 
     private ConsecutiveTapsGestureDetector mConsecutiveTapsGestureDetector;
     private GestureDetector mGestureDetector;
@@ -139,7 +147,48 @@ public class WelcomeActivity extends SubBaseActivity {
         return -1;
     }
 
+    public void wipeFrpPst() {
+        final PersistentDataBlockManager pdbManager;
+        // pre-flight check hardware support PersistentDataBlockManager
+        if (!SystemProperties.get(PERSISTENT_DATA_BLOCK_PROP).equals("")) {
+            pdbManager = (PersistentDataBlockManager)
+                getSystemService(Context.PERSISTENT_DATA_BLOCK_SERVICE);
+        } else {
+            pdbManager = null;
+        }
+        if (pdbManager != null) {
+
+            new AsyncTask<Void, Void, Void>() {
+                int mOldOrientation;
+                ProgressDialog mProgressDialog;
+
+                @Override
+                protected Void doInBackground(Void... params) {
+                    pdbManager.wipe();
+                    return null;
+                }
+
+                @Override
+                protected void onPostExecute(Void aVoid) {
+                    mProgressDialog.hide();
+                    setRequestedOrientation(mOldOrientation);
+                }
+
+                @Override
+                protected void onPreExecute() {
+                    // need to prevent orientation changes as we're about to go into
+                    // a long IO request, so we won't be able to access inflate resources on
+                    // flash
+                    mOldOrientation = getRequestedOrientation();
+                    setRequestedOrientation(
+                            ActivityInfo.SCREEN_ORIENTATION_LOCKED);
+                }
+            }.execute();
+        }
+    }
+
     private void setupDetails() {
+        wipeFrpPst();
         // CalyxOS is meant to be used with a locked bootloader and OEM Unlocking disabled
         final boolean bootloaderUnlocked = SetupWizardUtils.isBootloaderUnlocked(this);
         final boolean oemunlockAllowed = SetupWizardUtils.isOemunlockAllowed(this);
