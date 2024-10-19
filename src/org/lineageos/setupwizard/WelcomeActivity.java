@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.server.pdb.PersistentDataBlockManagerInternal;
 import com.google.android.setupcompat.template.FooterButtonStyleUtils;
 import com.google.android.setupcompat.util.SystemBarHelper;
 import com.google.android.setupdesign.gesture.ConsecutiveTapsGestureDetector;
@@ -36,6 +37,7 @@ public class WelcomeActivity extends SubBaseActivity {
 
     private ConsecutiveTapsGestureDetector mConsecutiveTapsGestureDetector;
     private GestureDetector mGestureDetector;
+    private PersistentDataBlockManagerInternal mPersistentDataBlockManagerInternal;
 
     @Override
     protected void onStartSubactivity() {
@@ -139,7 +141,26 @@ public class WelcomeActivity extends SubBaseActivity {
         return -1;
     }
 
+    @Nullable
+    PersistentDataBlockManagerInternal getPersistentDataBlockManager() {
+        if (mPersistentDataBlockManagerInternal == null) {
+            mPersistentDataBlockManagerInternal =
+                    LocalServices.getService(PersistentDataBlockManagerInternal.class);
+        }
+        return mPersistentDataBlockManagerInternal;
+    }
+
+    public void deactivateFactoryResetProtectionWithoutSecret() {
+        PersistentDataBlockManagerInternal persistentDataBlock = getPersistentDataBlockManager();
+        if (persistentDataBlock != null) {
+            persistentDataBlock.deactivateFactoryResetProtectionWithoutSecret();
+        } else {
+            Slog.wtf(TAG, "Failed to get PersistentDataBlockManagerInternal");
+        }
+    }
+
     private void setupDetails() {
+        deactivateFactoryResetProtectionWithoutSecret();
         // CalyxOS is meant to be used with a locked bootloader and OEM Unlocking disabled
         final boolean bootloaderUnlocked = SetupWizardUtils.isBootloaderUnlocked(this);
         final boolean oemunlockAllowed = SetupWizardUtils.isOemunlockAllowed(this);
