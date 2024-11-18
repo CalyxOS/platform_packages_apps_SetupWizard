@@ -23,13 +23,13 @@
     <string name="sim_missing_summary" product="default">Telefonunuzda SIM kart aşkarlanmadı. SIM kart taxmaq üçün cihazınızla birgə gələn təlimatları oxuyun.</string>
     <string name="setup_datetime">Tarix &amp; vaxt</string>
     <string name="date_time_summary">Saat qurşağınızı seçin və lazım olsa hazırkı tarix və saatı ayarlayın</string>
-    <string name="setup_current_date">Hazırki tarix</string>
-    <string name="setup_current_time">Hazırki vaxt</string>
+    <string name="setup_current_date">Hazırkı tarix</string>
+    <string name="setup_current_time">Hazırkı vaxt</string>
     <string name="intro_restore_title">Tətbiqləri və datanı bərpa et</string>
     <string name="intro_restore_subtitle"><xliff:g id="name" example="LineageOS">%s</xliff:g> və ya başqa bir əməliyyat sistemindən Seedvault nüsxəniz varsa, onu burada bərpa edə bilərsiniz.</string>
     <string name="intro_restore_button">Nüsxədən bərpa et</string>
     <string name="setup_location">Yerləşmə xidmətləri</string>
-    <string name="location_access_summary"><b>Yer məlumatlarınızı istəyən tətbiqlərə icazə verin.</b> Bu hazırki və keçmiş yerləşmənizi ehtiva edə bilər.</string>
+    <string name="location_access_summary"><b>Yer məlumatlarınızı istəyən tətbiqlərə icazə verin.</b> Bu hazırkı və keçmiş yerləşmənizi ehtiva edə bilər.</string>
     <string name="location_agps_access_summary">Yerləşmə açıq olduqda, <b>peyk köməkçi datalarını internetdən endirin</b>, bu GPS-in başlatma performansını əhəmiyyətli dərəcədə artıra bilər.</string>
     <string name="update_recovery_title">Lineage Geri qaytarma Rejimini Güncəllə</string>
     <string name="update_recovery_description">Hər güncəlləmədən sonrakı ilk açılışda Lineage Geri qaytarma rejimini güncəlləyir.</string>
