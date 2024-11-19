@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_title">Google服務</string>
+    <string name="microg_summary">這允許 <b>Google Maps、YouTube 和拼車服務</b>等應用程式運行。如果您不打算在 <xliff:g id="profileType" example="personal profile">%1$s</xliff:g>中運行需要 Google 服務的應用程式，請禁用此選項。以後無法更改此設置。</string>
+    <string name="personal_profile">個人資料夾</string>
+    <string name="managed_profile">工作資料夾</string>
+    <string name="setup_euicc">設定 eSIM</string>
+    <string name="bootloader_warning_title">Bootloader 鎖定警告</string>
+    <string name="reboot">重新啟動</string>
+    <string name="microg_description2">microG 是 <b>Google Play Services</b>（和相關軟體）的開源替代品，但它僅包含有用的部分。例如，與 Play 服務不同，microG 沒有任何廣告或位置跟蹤。</string>
+    <string name="microg_switch_label2">Google 服務相容性</string>
+    <string name="microg_defaults_switch_label">推送通知支援</string>
+    <string name="euicc_summary">您還可以將 eSIM 添加到裝置。</string>
+    <string name="microg_location_switch_label">網路位置</string>
+    <string name="microg_location_summary">通過查詢附近Wi-Fi和行動數據的MLS（Mozilla定位服務），使用 Nominatim 進行位址查找，以及記住附近網路的 GPS 座標，改進定位服務。您可以稍後在 microG 設置中更精細地自定義這些選項。</string>
+    <string name="microg_defaults_summary">允許應用程式向Google註冊推送通知。這會將您的設備註冊到 Google 服務，而無需任何特定於設備的唯一標識碼。稍後可以從 microG 設置中啟用此功能，但是之前設置的任何應用程式都需要重新安裝才能正常工作。</string>
+    <string name="bootloader_warning_summary">此裝置的bootloader目前已解鎖。請從計算機鎖定 Bootloader。有關更多資訊，請訪問 <a href="https://calyxos.org/lock">calyxos.org/lock</a>。</string>
 </resources>
