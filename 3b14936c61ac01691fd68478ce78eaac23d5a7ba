@@ -68,6 +68,24 @@
       "message": "Remove this and figure out how to handle it.",
       "revId": "3b14936c61ac01691fd68478ce78eaac23d5a7ba",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "de8450d4_16a895f9",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-11-22T01:18:14Z",
+      "side": 1,
+      "message": "Can\u0027t think of many ways to handle this. As it would no longer be a system app, it wouldn\u0027t be present yet and would have to be installed as a user app by Lupin (currently at a later stage in the setup process).",
+      "parentUuid": "6d7a2cd1_871814dd",
+      "revId": "3b14936c61ac01691fd68478ce78eaac23d5a7ba",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
