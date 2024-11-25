@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_title">Google サービス</string>
     <string name="setup_euicc">eSIM のセットアップ</string>
     <string name="euicc_summary">また、eSIM を追加することもできます。</string>
@@ -7,4 +7,11 @@
     <string name="bootloader_warning_title">ブートローダーロックの警告</string>
     <string name="bootloader_warning_summary">このデバイスのブートローダーは現在ロック解除されています。コンピューターからブートローダーをロックしてください。 詳しくは <a href="https://calyxos.org/lock">calyxos.org/lock</a> をご覧ください。</string>
     <string name="microg_defaults_switch_label">プッシュ通知サポート</string>
+    <string name="microg_description2">microGは、<b>Google Play Services</b>（および関連ソフトウェア）のオープンソースの代替で、必要な部分のみが含まれたバージョンです。Play Servicesとは異なり、microGには広告や位置追跡が含まれていません。</string>
+    <string name="microg_defaults_summary">Googleでプッシュ通知を登録できるようにします。 デバイス固有の識別子なしで、デバイスをGoogleサービスに登録します。 この設定はmicroGから有効にすることができます。 ただし、設定を変更した場合アプリの再インストールが必要になる場合があります。</string>
+    <string name="microg_summary">これにより、<b>Google マップ、YouTube、ライドシェアサービス</b>などのアプリが実行できるようになります。<xliff:g id="profileType" example="personal profile">%1$s</xliff:g>で Google サービスを必要とするアプリを実行しない場合は、この設定を無効にしてください。この設定は後で変更することはできません。</string>
+    <string name="managed_profile">仕事用プロファイル</string>
+    <string name="microg_switch_label2">Googleサービスとの互換性</string>
+    <string name="microg_location_switch_label">ネットワークの場所</string>
+    <string name="microg_location_summary">MLS(Mozilla Location Services)と近くのWi-Fiとセルラーネットワークをスキャンし、Nominatimを使用して位置情報精度を向上させ、周辺のネットワークのGPS座標を記憶します。 この設定は、後からmicroGの設定でより細かくカスタマイズできます.</string>
 </resources>
