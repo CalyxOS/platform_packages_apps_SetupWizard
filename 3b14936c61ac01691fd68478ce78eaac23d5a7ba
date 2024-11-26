@@ -86,6 +86,24 @@
       "parentUuid": "6d7a2cd1_871814dd",
       "revId": "3b14936c61ac01691fd68478ce78eaac23d5a7ba",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "34096fa7_c05f49be",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-26T12:21:42Z",
+      "side": 1,
+      "message": "Or installed as a user app some other way. We need to figure that out regardless, because otherwise this toggle won\u0027t work the same as it did.",
+      "parentUuid": "de8450d4_16a895f9",
+      "revId": "3b14936c61ac01691fd68478ce78eaac23d5a7ba",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
