@@ -9,6 +9,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.TypedValue
+import android.view.KeyEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewGroup.MarginLayoutParams
@@ -29,6 +30,9 @@ class WelcomeActivity : SubBaseActivity() {
 
     private val isSkipAvailable: Boolean
         get() = Build.IS_DEBUGGABLE
+
+    private var volumeDownLongPress = false
+    private var volumeUpLongPress = false
 
     override fun onStartSubactivity() {
         // no-op
@@ -63,6 +67,35 @@ class WelcomeActivity : SubBaseActivity() {
             } else {
                 getString(R.string.setup_welcome_message, getString(R.string.os_name))
             }
+    }
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
+        if (keyCode == KeyEvent.KEYCODE_VOLUME_UP || keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
+            if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
+                volumeUpLongPress = true
+            } else if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
+                volumeDownLongPress = true
+            }
+            event.startTracking()
+            return true
+        }
+        return super.onKeyDown(keyCode, event)
+    }
+
+    override fun onKeyLongPress(keyCode: Int, event: KeyEvent): Boolean {
+        if (volumeUpLongPress && volumeDownLongPress) {
+            SetupWizardUtils.enableTalkbackComponent(this)
+            return true
+        }
+        return super.onKeyLongPress(keyCode, event)
+    }
+
+    override fun onKeyUp(keyCode: Int, event: KeyEvent): Boolean {
+        when (keyCode) {
+            KeyEvent.KEYCODE_VOLUME_UP -> volumeUpLongPress = false
+            KeyEvent.KEYCODE_VOLUME_DOWN -> volumeDownLongPress = false
+        }
+        return super.onKeyUp(keyCode, event)
     }
 
     private fun MaterialButton.applyChipStyle(label: CharSequence) {

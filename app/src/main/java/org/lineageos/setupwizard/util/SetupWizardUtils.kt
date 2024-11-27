@@ -41,6 +41,7 @@ import android.telephony.TelephonyManager.PHONE_TYPE_GSM
 import android.util.Log
 import android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL
 import android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY
+import com.android.internal.accessibility.util.AccessibilityUtils
 import com.google.android.setupcompat.util.ResultCodes.RESULT_SKIP
 import org.json.JSONObject
 import org.lineageos.setupwizard.LOGV
@@ -74,6 +75,9 @@ object SetupWizardUtils {
     private const val FDROID_BASIC_PACKAGE = "org.fdroid.basic"
 
     private val PACKAGE_INSTALLERS = listOf(FDROID_BASIC_PACKAGE, AURORA_STORE_PACKAGE)
+
+    private const val TALKBACK_PACKAGE = "org.calyxos.talkback"
+    private const val TALKBACK_SERVICE_CLASS = "com.google.android.marvin.talkback.TalkBackService"
 
     fun getPrefs(context: Context): SharedPreferences =
         context.getSharedPreferences("SetupWizardPrefs", MODE_PRIVATE)
@@ -417,5 +421,16 @@ object SetupWizardUtils {
                         PHONE_TYPE_GSM
             } ?: false
         return !hasGsmSim
+    }
+
+    fun enableTalkbackComponent(context: Context) {
+        val enabled =
+            AccessibilityUtils.getEnabledServicesFromSettings(context, UserHandle.myUserId())
+                .isNotEmpty()
+        AccessibilityUtils.setAccessibilityServiceState(
+            context,
+            ComponentName(TALKBACK_PACKAGE, TALKBACK_SERVICE_CLASS),
+            !enabled,
+        )
     }
 }
