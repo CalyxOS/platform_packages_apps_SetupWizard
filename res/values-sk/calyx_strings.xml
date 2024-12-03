@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="euicc_summary">Do svojho zariadenia môžete pridať aj eSIM.</string>
     <string name="microg_title">Služby Google</string>
     <string name="setup_euicc">Nastavenie eSIM</string>
@@ -12,4 +12,7 @@
     <string name="microg_defaults_switch_label">Podpora push oznámení</string>
     <string name="microg_location_switch_label">Sieťová poloha</string>
     <string name="bootloader_warning_title">Varovanie zámku bootloaderu</string>
+    <string name="microg_summary">To umožňuje spustenie aplikácií, ako sú &lt;b&gt;Mapy Google, YouTube a služby zdieľania jázd&lt;b&gt;. Zakážte túto možnosť, ak vo svojom &lt;xliff:g id=\"profileType\" example=\"osobnom profile\"&gt;%1$s&lt;xliff:g&gt; neplánujete spúšťať aplikácie vyžadujúce služby Google. Toto nastavenie nie je možné neskôr zmeniť.</string>
+    <string name="personal_profile">osobnom profile</string>
+    <string name="managed_profile">pracovnom profile</string>
 </resources>
