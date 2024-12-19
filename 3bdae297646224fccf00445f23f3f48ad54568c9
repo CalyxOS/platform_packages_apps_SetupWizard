@@ -18,6 +18,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e4525655_a5c6399a",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-12-19T22:10:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "530a9f5e_67f4b107",
+      "revId": "3bdae297646224fccf00445f23f3f48ad54568c9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "82292603_912f4eff",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-12-19T21:57:56Z",
       "side": 1,
       "message": "Remove debug line",
+      "revId": "3bdae297646224fccf00445f23f3f48ad54568c9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b5ca0b90_751e6e14",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-12-19T22:10:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "82292603_912f4eff",
       "revId": "3bdae297646224fccf00445f23f3f48ad54568c9",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
