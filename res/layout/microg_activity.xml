@@ -132,8 +132,128 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/microg_location_summary"
+                        android:text="@string/microg_location_summary2"
                         android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/onlineSourcesList"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <tag android:id="@+id/online_source_id" />
+
+                        <TextView
+                            android:paddingTop="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/microg_online_source_select_summary"
+                            android:textStyle="bold"
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="@drawable/rectangle_background"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <tag
+                                android:id="@id/online_source_id"
+                                android:value="@string/microg_online_source_positon_id" />
+
+                            <TextView
+                                android:id="@+id/microg_online_source_positon_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/microg_online_source_positon_title"
+                                android:textStyle="bold"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/microg_online_source_positon_title"
+                                android:text="@string/microg_online_source_positon_summary" />
+
+                            <requestFocus/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="@drawable/rectangle_background"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <tag
+                                android:id="@id/online_source_id"
+                                android:value="@string/microg_online_source_beacondb_id" />
+
+                            <TextView
+                                android:id="@+id/microg_online_source_beacondb_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/microg_online_source_beacondb_title"
+                                android:textStyle="bold"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/microg_online_source_beacondb_title"
+                                android:text="@string/microg_online_source_beacondb_summary" />
+
+                            <requestFocus/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="@drawable/rectangle_background"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <!-- online_source_id tag intentionally left out for None. -->
+
+                            <TextView
+                                android:id="@+id/microg_online_source_none_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/microg_online_source_none_title"
+                                android:textStyle="bold"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/microg_online_source_none_title"
+                                android:text="@string/microg_online_source_none_summary" />
+
+                            <requestFocus/>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/onlineSourceRequiredError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red"
+                            android:text="@string/microg_online_source_required_error"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
             </ScrollView>
