@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "530a9f5e_67f4b107",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-12-19T21:57:56Z",
+      "side": 1,
+      "message": "This should be false if selectedOnlineSource is null. Same for cell_ichnaea below",
+      "revId": "3bdae297646224fccf00445f23f3f48ad54568c9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82292603_912f4eff",
+        "filename": "src/org/lineageos/setupwizard/apps/MicroGActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-12-19T21:57:56Z",
+      "side": 1,
+      "message": "Remove debug line",
+      "revId": "3bdae297646224fccf00445f23f3f48ad54568c9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
