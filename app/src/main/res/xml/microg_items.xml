@@ -29,4 +29,25 @@
         android:title="@string/microg_location_switch_label"
         android:checked="true" />
 
+    <SectionItem
+        android:id="@+id/online_source_select"
+        android:title="@string/microg_online_source_select_summary">
+
+        <RadioButtonItem
+            android:id="@+id/online_source_position"
+            android:title="@string/microg_online_source_positon_title"
+            android:summary="@string/microg_online_source_positon_summary" />
+
+        <RadioButtonItem
+            android:id="@+id/online_source_beacondb"
+            android:title="@string/microg_online_source_beacondb_title"
+            android:summary="@string/microg_online_source_beacondb_summary" />
+
+        <RadioButtonItem
+            android:id="@+id/online_source_none"
+            android:title="@string/microg_online_source_none_title"
+            android:summary="@string/microg_online_source_none_summary" />
+
+    </SectionItem>
+
 </ItemGroup>
