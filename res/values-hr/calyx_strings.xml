@@ -3,4 +3,6 @@
     <string name="microg_title">Google usluge</string>
     <string name="setup_euicc">Postavi eSIM</string>
     <string name="euicc_summary">Tvom uređaju možeš dodati i eSIM.</string>
+    <string name="managed_profile">poslovni profil</string>
+    <string name="personal_profile">osobni profil</string>
 </resources>
