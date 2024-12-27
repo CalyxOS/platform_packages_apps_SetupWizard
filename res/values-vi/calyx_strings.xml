@@ -9,7 +9,6 @@
     <string name="microg_defaults_summary">Cho phép ứng dụng đăng ký thông báo đẩy với Google. Điều này đăng ký thiết bị của bạn với Google services, nhưng không kèm thông tin cá nhân gì của thiết bị. Nó có thể được kích hoạt sau từ phần Cài đặt của microG, nhưng bất kỳ ứng dụng nào cài đặt trước đó cần phải cài lại để hoạt động bình thường.</string>
     <string name="bootloader_warning_title">Cảnh báo bộ tái khởi động bị khóa</string>
     <string name="microg_location_switch_label">Vị trí mạng</string>
-    <string name="microg_location_summary">Cải thiện dịch vụ vị trí bằng cách sử dụng MLS (Mozilla Location Services) với Wi-Fi và mạng viễn thông xung quanh, sử dụng Nominatim để tìm địa chỉ, và nhớ tọa độ GPS của mạng xung quanh. Bạn có thể tinh chỉnh những cài đặt này trong phần Cài đặt của microG sau này.</string>
     <string name="euicc_summary">Bạn cũng có thể thêm eSIM vào thiết bị.</string>
     <string name="reboot">Khởi động</string>
 </resources>

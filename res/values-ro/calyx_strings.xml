@@ -10,7 +10,6 @@
     <string name="microg_location_switch_label">Locație rețea</string>
     <string name="euicc_summary">De asemenea, poți adăuga un eSIM pe dispozitiv.</string>
     <string name="microg_defaults_summary">Permite aplicațiilor să se înregistreze pentru notificări push cu Google. Acest lucru înregistrează dispozitivul la serviciile Google, fără identificatori unici specifici dispozitivului. Acest lucru poate fi activat mai târziu în Setările microG, cu toate acestea, orice aplicație configurată mai devreme va trebui să fie reinstalată pentru a funcționa corect.</string>
-    <string name="microg_location_summary">Îmbunătățește serviciile de localizare interogând MLS (Mozilla Location Services) cu rețelele Wi-Fi și celulare din apropiere, folosind Nominatim pentru căutări de adrese și memorizând coordonatele GPS ale rețelelor din apropiere. Poți personaliza aceste opțiuni mai detaliat în Setările microG mai târziu.</string>
     <string name="bootloader_warning_summary">Bootloader-ul acestui dispozitiv este deblocat în prezent. Blochează bootloader-ul de pe un computer. Vizitează <a href="https://calyxos.org/lock">calyxos.org/lock</a> pentru mai multe informații.</string>
     <string name="personal_profile">profil personal</string>
     <string name="managed_profile">Profil de servici</string>
