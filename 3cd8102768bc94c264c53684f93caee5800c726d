@@ -16,6 +16,24 @@
       "message": "Let\u0027s also use this occasion in the string change to add some more info if possible, and also link to the privacy policy at the very least.",
       "revId": "3cd8102768bc94c264c53684f93caee5800c726d",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f13c9cde_45dd18b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-06T21:37:09Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "e1a57fa4_052be669",
+      "revId": "3cd8102768bc94c264c53684f93caee5800c726d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
