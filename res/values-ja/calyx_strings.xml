@@ -13,5 +13,4 @@
     <string name="managed_profile">仕事用プロファイル</string>
     <string name="microg_switch_label2">Googleサービスとの互換性</string>
     <string name="microg_location_switch_label">ネットワークの場所</string>
-    <string name="microg_location_summary">MLS(Mozilla Location Services)と近くのWi-Fiとセルラーネットワークをスキャンし、Nominatimを使用して位置情報精度を向上させ、周辺のネットワークのGPS座標を記憶します。 この設定は、後からmicroGの設定でより細かくカスタマイズできます.</string>
 </resources>

@@ -11,7 +11,6 @@
     <string name="microg_switch_label2">תאימות עם שירותי Google</string>
     <string name="microg_defaults_summary">לאפשר ליישומונים להירשם להתראות דחיפה מול Google. כך המכשיר שלך נרשם לשירותי Google, ללא אמצעי זיהוי ייחודיים למכשיר. ניתן להפעיל את זה מאוחר יותר מההגדרות של microG, על אף שיש להתקין מחדש יישומונים שהותקנו קודם לכן כדי שיעבדו כראוי.</string>
     <string name="microg_location_switch_label">מקום רשת</string>
-    <string name="microg_location_summary">שיפור שירותי המיקום על ידי תשאול MLS (שירותי המיקום של Mozilla) כנגד רשתות אלחוטיות וסלולריות בקרבתך, בסיוע Nominatim לחיפוש כתובות ושמירת נקודות ציון של GPS/נווטן של רשתות קרובות. אפשר להתאים את האפשרויות האלה בצורה יותר נקודתית בהגדרות ה־microG בהמשך.</string>
     <string name="personal_profile">פרופיל אישי</string>
     <string name="managed_profile">פרופיל עבודה</string>
 </resources>

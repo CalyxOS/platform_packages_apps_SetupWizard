@@ -10,7 +10,6 @@
     <string name="microg_description2">microG є заміною з відкритим кодом для &lt;b&gt;Google Play Services&lt;/b&gt; (та пов’язане програмне забезпечення), але він включає лише корисні частини. На відміну від Play Services, microG не має жодної реклами чи відстеження місцезнаходження.</string>
     <string name="microg_defaults_summary">Дозволити програмам реєструватися для отримання push-сповіщень у Google. Це реєструє Ваш пристрій у службах Google, без будь-яких унікальних ідентифікаторів пристрою. Це можна увімкнути пізніше в налаштуваннях microG, але для належної роботи будь-які програми, налаштовані раніше, потрібно перевстановити.</string>
     <string name="reboot">Перезавантаження</string>
-    <string name="microg_location_summary">Покращуйте служби визначення місцеположення, запитуючи MLS (Mozilla Location Services) про найближчі мережі Wi-Fi та мобільні дані, використовуючи Nominatim для пошуку адрес та запам\'ятовуючи GPS-координати найближчих мереж. Пізніше Ви зможете налаштувати ці параметри детальніше в Налаштуваннях microG.</string>
     <string name="microg_location_switch_label">Розташування мережі</string>
     <string name="personal_profile">особистий профіль</string>
     <string name="managed_profile">робочий профіль</string>

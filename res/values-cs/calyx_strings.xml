@@ -11,7 +11,6 @@
     <string name="microg_switch_label2">Kompatibilita se službami Google</string>
     <string name="microg_defaults_switch_label">Podpora push oznámení</string>
     <string name="microg_location_switch_label">Síťová poloha</string>
-    <string name="microg_location_summary">Vylepšit polohové služby dotázáním se služby MLS (Mozilla Location Service) se seznamem Wi-Fi a mobilních sítí v okolí zařízení, použitím služby Nominatim pro zjištění adresy a zapamatováním si souřadnic sítí v okolí. Tato nastavení můžete později upřesnit v nastavení služby microG.</string>
     <string name="personal_profile">osobním profilu</string>
     <string name="managed_profile">pracovním profilu</string>
     <string name="microg_summary">Tato funkce umožní spuštění aplikací, jako jsou &lt;b&gt;Mapy Google, YouTube a služby sdílených jízd&lt;/b&gt;. Funkci zakažte, pokud neplánujete ve vašem <xliff:g id="profileType" example="personal profile">%1$s</xliff:g> používat aplikace, které vyžadují služby Google. Toto nastavení později nelze změnit.</string>
