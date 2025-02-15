@@ -13,6 +13,7 @@
     <string name="ok">OK</string>
     <string name="loading">Um momento\u2026</string>
     <string name="setup_welcome_message">Bem-vindo a <xliff:g id="nome" example="LineageOS">%1$s</xliff:g></string>
+    <string name="setup_managed_profile_welcome_message">Configure o seu perfil de trabalho</string>
     <string name="emergency_call">Chamada de emergência</string>
     <string name="accessibility_settings">Definições de acessibilidade</string>
     <string name="setup_locale">Idioma</string>
@@ -25,9 +26,11 @@
     <string name="setup_current_date">Data atual</string>
     <string name="setup_current_time">Hora atual</string>
     <string name="intro_restore_title">Restaurar aplicações e dados</string>
+    <string name="intro_restore_subtitle">Se tiver uma cópia de segurança Seedvault da <xliff:g id="name" example="LineageOS">%s</xliff:g> ou de qualquer outro SO, pode restaurá-la aqui.</string>
     <string name="intro_restore_button">Restaurar a partir de cópia de segurança</string>
     <string name="setup_location">Serviços de localização</string>
     <string name="location_access_summary"><b>Permitir que as aplicações que pediram a sua permissão</b> usem as suas informações de localização. Isso pode incluir a sua localização atual bem como localizações anteriores.</string>
+    <string name="location_agps_access_summary">Quando a localização estiver ativada, &lt;b&gt;descarregar da internet dados de assistência por satélite&lt;b&gt;, o que pode melhorar bastante o desempenho de arranque do GPS.</string>
     <string name="update_recovery_title">Atualizar a recuperação Lineage</string>
     <string name="update_recovery_description">Atualiza a recuperação Lineage na primeira inicialização subsequente a cada atualização.</string>
     <string name="update_recovery_warning">A recuperação será atualizada assim que terminar a configuração. Se desejar mantê-la intacta, desative esta opção.</string>
@@ -46,4 +49,8 @@
     <string name="two_button_navigation">Navegação com 2 botões</string>
     <string name="navbar_navigation">Navegação com 3 botões</string>
     <string name="hide_gesture_hint">Ocultar dica de navegação por gestos</string>
+    <string name="setup_theme">Tema</string>
+    <string name="theme_summary">O tema escuro usa um fundo preto para ajudar a obter mais tempo de bateria nalguns ecrãs</string>
+    <string name="dark">Escuro</string>
+    <string name="light">Claro</string>
 </resources>
