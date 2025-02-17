@@ -14,4 +14,13 @@
     <string name="microg_summary">这允许&lt;b&gt;Google Maps、YouTube 和拼车服务&lt;/b&gt;等应用运行。如果你不打算在你的 <xliff:g id="profileType" example="personal profile">%1$s</xliff:g> 配置中运行需要 Google services 的应用，请停用此设置。此设置之后无法更改。</string>
     <string name="managed_profile">工作配置</string>
     <string name="personal_profile">个人配置</string>
+    <string name="microg_online_source_positon_title">位置（建议）</string>
+    <string name="microg_online_source_beacondb_title">BeaconDB</string>
+    <string name="microg_online_source_beacondb_summary">beacondb.net - 访问站点了解详情</string>
+    <string name="microg_online_source_none_title">无</string>
+    <string name="microg_online_source_positon_summary">positon.xyz - 访问站点了解详情</string>
+    <string name="microg_online_source_none_summary">不要使用附近 Wi-FI 和信号网络进行在线位置查找。</string>
+    <string name="microg_online_source_select_summary">请选择一个线上源：</string>
+    <string name="microg_online_source_required_error">请选择一个线上源，或者不选。</string>
+    <string name="microg_location_summary2">改进位置服务，手段包括查询带附近 Wi-Fi 和信号网络的选定服务，使用 Nominatim 查找地址，记住附近网络的 GPS 坐标等。你可以稍后在 microG 设置中更精细地自定义这些选项。</string>
 </resources>
