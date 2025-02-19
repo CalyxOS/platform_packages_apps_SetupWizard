@@ -14,4 +14,13 @@
     <string name="personal_profile">profil osobisty</string>
     <string name="managed_profile">profil zawodowy</string>
     <string name="microg_summary">Pozwala to na uruchamianie aplikacji takich jak &lt;b&gt;Mapy Google, YouTube i usługi współdzielenia przejazdów&lt;/b&gt;. Wyłącz tę opcję, jeśli nie planujesz uruchamiać aplikacji wymagających usług Google w swoim <xliff:g id="profileType" example="profilu osobistym">%1$s</xliff:g>. Tego ustawienia nie można później zmienić.</string>
+    <string name="microg_location_summary2">Ulepszanie usług lokalizacji poprzez odpytywanie wybranej usługi o pobliskie sieci Wi-Fi i komórkowe, używanie Nominatim do wyszukiwania adresów i zapamiętywanie współrzędnych GPS pobliskich sieci. Opcje te można później dostosować bardziej szczegółowo w Ustawieniach microG.</string>
+    <string name="microg_online_source_positon_title">Pozycja (sugerowana)</string>
+    <string name="microg_online_source_positon_summary">positon.xyz - zobacz warunki na stronie</string>
+    <string name="microg_online_source_beacondb_title">BeaconDB</string>
+    <string name="microg_online_source_beacondb_summary">beacondb.net - zobacz warunki na stronie</string>
+    <string name="microg_online_source_none_title">Brak</string>
+    <string name="microg_online_source_none_summary">Nie używaj pobliskich sieci Wi-Fi i sieci komórkowych do wyszukiwania lokalizacji online.</string>
+    <string name="microg_online_source_select_summary">Wybierz źródło online:</string>
+    <string name="microg_online_source_required_error">Wybierz źródło online lub wybierz \"brak\".</string>
 </resources>
