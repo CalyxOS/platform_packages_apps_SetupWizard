@@ -195,7 +195,7 @@ public class SetupWizardUtils {
 
         handleNavigationOption();
         provisionDefaultUserAppPermissions(context);
-        disableLegacyApps(context);
+        hideLegacyApps(context);
         sendMicroGCheckInBroadcast(context);
         WallpaperManager.getInstance(context).forgetLoadedWallpaper();
         disableHome(context);
@@ -352,13 +352,13 @@ public class SetupWizardUtils {
         }
     }
 
-    private static void disableLegacyApps(Context context) {
+    private static void hideLegacyApps(Context context) {
         for (String packageName : LEGACY_PACKAGES) {
             try {
-                context.getPackageManager().setApplicationEnabledSetting(packageName,
-                        COMPONENT_ENABLED_STATE_DISABLED, 0);
+                UserHandle userHandle = UserHandle.getUserHandleForUid(UserHandle.myUserId());
+                pm.setApplicationHiddenSettingAsUser(packageName, true, userHandle);
             } catch (Exception e) {
-                Log.e(TAG, "Failed to disable " + packageName, e);
+                Log.e(TAG, "Failed to hide " + packageName, e);
             }
         }
     }
