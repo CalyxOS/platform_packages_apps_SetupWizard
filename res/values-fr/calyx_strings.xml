@@ -2,13 +2,23 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_title">Services Google</string>
     <string name="euicc_summary">Vous pouvez aussi ajouter une eSIM a votre appareil.</string>
-    <string name="setup_euicc">Installation eSIM</string>
+    <string name="setup_euicc">Configurer eSIM</string>
     <string name="reboot">Redémarrer</string>
     <string name="bootloader_warning_title">Avertissement de verrouillage du chargeur de démarrage</string>
     <string name="bootloader_warning_summary">Le chargeur de démarrage de cet appareil est actuellement déverrouillé. Veuillez verrouiller le bootloader depuis un ordinateur. Visitez <a href="https://calyxos.org/lock">calyxos.org/lock</a> pour plus d\'informations.</string>
     <string name="microg_switch_label2">Compatibilité aux Services Google</string>
-    <string name="microg_description2">MicroG est un replacement Open Source du
-\n&lt;b&gt; Google Play Services &lt;/b&gt; (et logiciel relié),
-\nmais inclus seulement les parties utiles.Contrairement aux &lt;b&gt; Play Services &lt;/b&gt;,microG n\'inclus pas de publicité ni geolocalisation,par exemple.</string>
-    <string name="microg_defaults_switch_label">Activer push-notifications</string>
+    <string name="microg_description2">microG est un remplaçant open source de <b>Google Play Services</b> (et applications associées), mais inclut seulement les parties utiles. Contrairement à Play Services, microG ne contient pas de publicité ou de suivi de la localisation, par exemple.</string>
+    <string name="microg_defaults_switch_label">Activer les notifications push</string>
+    <string name="microg_summary">Autorise l\'utilisation d\'applications tels que <b>Google Maps, YouTube et les services de partage de véhicule </b>. Désactivez si vous ne comptez pas utiliser d\'application qui requièrent les services Google pour fonctionner avec votre <xliff:g id="profileType" exemple="profil personnel">%1$s</xliff:g>. Ce paramètre ne peut pas être modifié plus tard.</string>
+    <string name="microg_defaults_summary">Autoriser les applications à s\'enregistrer auprès de Google pour recevoir des notifications push. Cela enregistre votre appareil auprès des services Google, sans identifiant unique spécifique à l\'appareil. Cette fonction peut être activée ultérieurement dans les paramètres de microG, mais les applications configurées précédemment devront être réinstallées pour fonctionner correctement.</string>
+    <string name="microg_location_summary2">Améliorez les services de localisation en interrogeant le service choisi avec les réseaux Wi-Fi et cellulaires proches, en utilisant Nominatim pour les recherches d\'adresses et en mémorisant les coordonnées GPS des réseaux proches. Vous pouvez personnaliser ultérieurement ces options de manière plus approfondie dans les paramètres microG.</string>
+    <string name="microg_location_switch_label">Localisation du réseau</string>
+    <string name="microg_online_source_positon_title">Position (suggérée)</string>
+    <string name="microg_online_source_positon_summary">positon.xyz - voir le site pour les conditions d\'utilisation</string>
+    <string name="microg_online_source_none_title">Aucune</string>
+    <string name="microg_online_source_none_summary">Ne pas utiliser les réseaux Wi-Fi et cellulaires à proximité pour effectuer des recherches de localisation en ligne.</string>
+    <string name="microg_online_source_select_summary">Choisir une source en ligne :</string>
+    <string name="microg_online_source_required_error">Choisir une source en ligne, ou sélectionner \"Aucune\".</string>
+    <string name="personal_profile">profil personnel</string>
+    <string name="managed_profile">profil profesionnel</string>
 </resources>
