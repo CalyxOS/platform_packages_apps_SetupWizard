@@ -14,4 +14,13 @@
     <string name="personal_profile">особистий профіль</string>
     <string name="managed_profile">робочий профіль</string>
     <string name="microg_summary">Це дозволяє запускати такі програми, як <b>Карти Google, YouTube та послуги спільного використання поїздок</b>. Можете вимкнути, якщо не плануєте запускати програми, які потребують служб Google, у Вашому <xliff:g id="profileType" example="особистому профілі">%1$s</xliff:g>. Це налаштування не можна змінити пізніше.</string>
+    <string name="microg_online_source_none_summary">Не використовуйте найближчі Wi-Fi і стільникові мережі для онлайн-пошуку місцезнаходження.</string>
+    <string name="microg_online_source_positon_title">Positon (запропоновано)</string>
+    <string name="microg_online_source_positon_summary">positon.xyz - див. умови на сайті</string>
+    <string name="microg_online_source_beacondb_title">BeaconDB</string>
+    <string name="microg_online_source_beacondb_summary">beacondb.net - див. умови на сайті</string>
+    <string name="microg_online_source_none_title">Жодного</string>
+    <string name="microg_online_source_select_summary">Виберіть онлайн-джерело:</string>
+    <string name="microg_online_source_required_error">Виберіть онлайн-джерело або виберіть «Жодного».</string>
+    <string name="microg_location_summary2">Удосконалюйте служби визначення місцезнаходження, запитуючи вибрану службу в найближчих Wi-Fi і стільникових мережах, використовуючи Nominatim для пошуку адрес і запам’ятовуючи GPS-координати найближчих мереж. Пізніше ви зможете налаштувати ці параметри більш детально в налаштуваннях microG.</string>
 </resources>

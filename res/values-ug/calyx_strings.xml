@@ -1,2 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="microg_title">Google مۇلازىمىتى</string>
+    <string name="microg_description2">microG ئوچۇق كودلۇق بولۇپ <b>Google Play مۇلازىمىتى </b> (ۋە مۇناسىۋەتلىك يۇمشاق دېتال) نىڭ ئورنىنى ئالغۇچىدۇر. ئەمما ئۇ پەقەت كېرەكلىك قىسىملارنىلا ئۆز ئىچىگە ئالىدۇ. مەسىلەن، Play مۇلازىمىتىگە ئوخشىمايدىغىنى، microG دا ھەر قانداق ئېلان ياكى ئورۇن ئىزلاش يوق.</string>
+    <string name="microg_switch_label2">Google مۇلازىمىتى ماسلىشىشچانلىقى</string>
+    <string name="microg_defaults_switch_label">يەتكۈزۈش ئۇقتۇرۇشىنى قوللايدۇ</string>
+    <string name="microg_location_switch_label">تور ئورنى</string>
+    <string name="microg_summary">بۇ <b>Google خەرىتە، YouTube ۋە كىرا ھەمبەھىر مۇلازىمىتى</b>غا ئوخشاش ئەپنىڭ ئىجرا قىلىنىشىغا يول قويىدۇ. ئەگەر سىز <xliff:g id="profileType" example="personal profile">%1$s</xliff:g> سەپلىمىسىدە Google مۇلازىمىتىگە ئېھتىياجلىق ئەپنى ئىجرا قىلماقچى بولسىڭىز، بۇ تەڭشەكنى چەكلەڭ. بۇ تەڭشەكنى كېيىن ئۆزگەرتكىلى بولمايدۇ.</string>
+    <string name="microg_online_source_beacondb_title">BeaconDB</string>
+    <string name="microg_online_source_beacondb_summary">beacondb.net - شەرتلەرنى بېكەتتىن كۆرۈڭ</string>
+    <string name="microg_online_source_none_title">يوق</string>
+    <string name="microg_online_source_none_summary">توردىكى ئورۇن ئۇچۇرىنى ئىزدەشكە يېقىن ئەتراپتىكى Wi-Fi ۋە كۆچمە تېلېفون تورىنى ئىشلەتمەيدۇ.</string>
+    <string name="microg_online_source_select_summary">توردىكى مەنبەدىن بىرنى تاللاڭ:</string>
+    <string name="microg_online_source_required_error">توردىكى مەنبەدىن بىرنى تاللاڭ ياكى ھېچنېمە تاللىماڭ.</string>
+    <string name="personal_profile">شەخسىي تەرجىمىھال</string>
+    <string name="managed_profile">خىزمەت تەرجىمىھال</string>
+    <string name="microg_defaults_summary">ئەپنىڭ Google يەتكۈزۈش ئۇقتۇرۇشىغا تىزىملىتىشىغا يول قويىدۇ. بۇ ئۈسكۈنىڭىزنى Google مۇلازىمىتىگە تىزىملىتىدۇ، ئۈسكۈنىنىڭ بىردىنبىر كىملىكىنى ئۆز ئىچىگە ئالمايدۇ. سەل تۇرۇپ microG تەڭشىكىدە ئۇنى قوزغاتقىلى بولىدۇ ئەمما ئىلگىرى ئورناتقان ھەر قانداق ئەپ قايتا ئورنىتىلغاندىن كېيىن ئاندىن ئادەتتىكىدەك ئىشلەيدۇ.</string>
+    <string name="microg_online_source_positon_title">ئورنى (تەۋسىيە)</string>
+    <string name="microg_online_source_positon_summary">positon.xyz - شەرتلەرنى بېكەتتىن كۆرۈڭ</string>
+    <string name="euicc_summary">ئۈسكۈنىڭىزگە يەنە eSIM قوشالايسىز.</string>
+    <string name="setup_euicc">eSIM تەڭشەك</string>
+    <string name="bootloader_warning_title">قوزغىتىش يېتەكلىگۈچ قۇلۇپلاش ئاگاھلاندۇرۇشى</string>
+    <string name="bootloader_warning_summary">بۇ ئۈسكۈنىنىڭ قوزغىتىش يېتەكلىگۈچىسىنىڭ قۇلۇپى ئېچىلغان. كومپيۇتېردىن قوزغىتىش يېتەكلىگۈچنى قۇلۇپلاڭ. تېخىمۇ كۆپ ئۇچۇر ئۈچۈن <a href="https://calyxos.org/lock">calyxos.org/lock</a> نى زىيارەت قىلىڭ.</string>
+    <string name="reboot">قايتا قوزغات</string>
+    <string name="microg_location_summary2">ئورۇن مۇلازىمىتىنى ياخشىلايدۇ، يېقىن ئەتراپتىكى Wi-Fi ۋە كۆچمە تېلېفون تورىنىڭ تاللانغان مۇلازىمىتى، Nominatim نى ئىشلىتىپ ئادرېس ئىزدەش، يېقىن ئەتراپتىكى GPS كوردىناتىنى ئەستە تۇتۇش قاتارلىقلارنى ئۆز ئىچىگە ئالىدۇ. بۇ تاللانمىلارنى كېيىن microG تەڭشىكىدىن تېخىمۇ تەپسىلىي خاسلاشتۇرالايسىز.</string>
+</resources>

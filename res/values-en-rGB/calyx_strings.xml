@@ -14,4 +14,13 @@
     <string name="setup_euicc">Setup eSIM</string>
     <string name="bootloader_warning_title">Bootloader lock warning</string>
     <string name="reboot">Reboot</string>
+    <string name="microg_location_summary2">Improve location services by querying the chosen service with nearby Wi-Fi and cellular networks, using Nominatim for address lookups, and remembering GPS coordinates of nearby networks. You can customise these options more granularly in microG Settings later.</string>
+    <string name="microg_online_source_positon_title">Positon (suggested)</string>
+    <string name="microg_online_source_positon_summary">positon.xyz - see site for terms</string>
+    <string name="microg_online_source_beacondb_title">BeaconDB</string>
+    <string name="microg_online_source_beacondb_summary">beacondb.net - see site for terms</string>
+    <string name="microg_online_source_none_title">None</string>
+    <string name="microg_online_source_none_summary">Do not use nearby Wi-Fi and cellular networks for online location lookups.</string>
+    <string name="microg_online_source_select_summary">Please choose an online source:</string>
+    <string name="microg_online_source_required_error">Please select an online source, or choose None.</string>
 </resources>

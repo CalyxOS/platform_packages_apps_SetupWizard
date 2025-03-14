@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="microg_summary">Engedélyezi olyan appokat futását, mint a <b>Google Térkép, YouTube és ezeken alapuló szolgáltatások</b>. Kapcsolja ki, ha nem tervez Google Szolgáltatásokon alapuló applikációkat használni a <xliff:g id="profileType" example="personal profile">%1$s</xliff:g> profiljában. Ez a beállítás később már nem változtatható meg.</string>
+    <string name="microg_title">Google Szolgáltatások</string>
+    <string name="microg_description2">A microG egy nyílt forráskódú <b>Google Play Szolgáltatás</b> (és kapcsolódó szoftver) helyettesítő, de csak a hasznos részeket foglalja magában. A Play Szolgáltatásokkal ellentétben például nem tartalmaz követést vagy reklámokat.</string>
+    <string name="microg_switch_label2">Google Szolgáltatások Kompatibilitás</string>
+    <string name="microg_defaults_switch_label">Push értesítés támogatás</string>
+</resources>
