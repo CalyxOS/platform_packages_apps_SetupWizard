@@ -14,4 +14,13 @@
     <string name="personal_profile">προσωπικό προφίλ</string>
     <string name="managed_profile">προφίλ εργασίας</string>
     <string name="microg_summary">Αυτό επιτρέπει την λειτουργία εφαρμογών όπως οι <b>Χάρτες Google, το YouTube και υπηρεσίες κοινής χρήσης οδήγησης</b>. Απενεργοποιήστε αυτήν την επιλογή εάν δεν σκοπεύετε να εκτελείτε εφαρμογές που απαιτούν υπηρεσίες Google στο <xliff:g id="profileType" example="προσωπικό προφίλ">%1$s</xliff:g> σας. Αυτή η ρύθμιση δεν μπορεί να αλλάξει αργότερα.</string>
+    <string name="microg_location_summary2">Βελτιώστε τις υπηρεσίες τοποθεσίας χρησιμοποιώντας πληροφορίες κοντινών δίκτυα Wi-Fi και κινητής τηλεφωνίας από την επιλεγμένη υπηρεσία, χρησιμοποιώντας το Nominatim για αναζητήσεις διευθύνσεων και απομνημονεύοντας τις συντεταγμένες GPS των κοντινών δικτύων. Μπορείτε να προσαρμόσετε αυτές τις επιλογές πιο αναλυτικά στις Ρυθμίσεις microG αργότερα.</string>
+    <string name="microg_online_source_positon_title">Positon (προτείνεται)</string>
+    <string name="microg_online_source_positon_summary">positon.xyz - δείτε τον ιστότοπο για όρους</string>
+    <string name="microg_online_source_beacondb_title">BeaconDB</string>
+    <string name="microg_online_source_beacondb_summary">beacondb.net - δείτε τον ιστότοπο για όρους</string>
+    <string name="microg_online_source_none_title">Καμία</string>
+    <string name="microg_online_source_select_summary">Επιλέξτε μια διαδικτυακή πηγή:</string>
+    <string name="microg_online_source_required_error">Επιλέξτε μια διαδικτυακή πηγή ή επιλέξτε Καμία.</string>
+    <string name="microg_online_source_none_summary">Μη χρησιμοποιείτε κοντινά δίκτυα Wi-Fi και δίκτυα κινητής τηλεφωνίας για διαδικτυακές αναζητήσεις τοποθεσίας.</string>
 </resources>
