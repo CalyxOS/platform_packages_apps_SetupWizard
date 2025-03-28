@@ -53,8 +53,6 @@ import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import com.google.android.setupcompat.util.WizardManagerHelper;
-
 import org.lineageos.setupwizard.BaseSetupWizardActivity;
 import org.lineageos.setupwizard.SetupWizardActivity;
 import org.lineageos.setupwizard.SetupWizardApp;

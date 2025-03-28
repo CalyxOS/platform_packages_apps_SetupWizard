@@ -10,7 +10,6 @@ import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
-import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -119,14 +118,14 @@ public class FinishActivity extends BaseSetupWizardActivity {
 
     @Override
     protected void applyForwardTransition() {
-        if (FinishState.NONE == sFinishState) {
+        if (sFinishState == FinishState.NONE) {
             super.applyForwardTransition();
         }
     }
 
     @Override
     protected void applyBackwardTransition() {
-        if (FinishState.NONE == sFinishState) {
+        if (sFinishState == FinishState.NONE) {
             super.applyBackwardTransition();
         }
     }
