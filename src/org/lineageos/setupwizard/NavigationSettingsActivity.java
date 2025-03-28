@@ -5,11 +5,8 @@
 
 package org.lineageos.setupwizard;
 
-import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_2BUTTON_OVERLAY;
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_3BUTTON_OVERLAY;
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
-
-import static com.android.systemui.shared.recents.utilities.Utilities.isLargeScreen;
 
 import static org.lineageos.setupwizard.SetupWizardApp.NAVIGATION_OPTION_KEY;
 
@@ -32,8 +29,6 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
 
     private SetupWizardApp mSetupWizardApp;
 
-    private boolean mIsTaskbarEnabled;
-
     private String mSelection = NAV_BAR_MODE_GESTURAL_OVERLAY;
 
     private CheckBox mHideGesturalHint;
@@ -43,8 +38,6 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
         super.onCreate(savedInstanceState);
 
         mSetupWizardApp = (SetupWizardApp) getApplication();
-        mIsTaskbarEnabled = LineageSettings.System.getInt(getContentResolver(),
-                LineageSettings.System.ENABLE_TASKBAR, isLargeScreen(this) ? 1 : 0) == 1;
 
         getGlifLayout().setDescriptionText(getString(R.string.navigation_summary));
         setNextText(R.string.next);
@@ -54,11 +47,6 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
         if (!SetupWizardUtils.isPackageInstalled(this, NAV_BAR_MODE_GESTURAL_OVERLAY)) {
             findViewById(R.id.radio_gesture).setVisibility(View.GONE);
             ((RadioButton) findViewById(R.id.radio_sw_keys)).setChecked(true);
-            available--;
-        }
-
-        if (!SetupWizardUtils.isPackageInstalled(this, NAV_BAR_MODE_2BUTTON_OVERLAY)) {
-            findViewById(R.id.radio_two_button).setVisibility(View.GONE);
             available--;
         }
 
@@ -79,11 +67,6 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
         final RadioGroup radioGroup = findViewById(R.id.navigation_radio_group);
         mHideGesturalHint = findViewById(R.id.hide_navigation_hint);
 
-        // Hide navigation hint checkbox when taskbar is enabled
-        if (mIsTaskbarEnabled) {
-            mHideGesturalHint.setVisibility(View.GONE);
-        }
-
         radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             switch (checkedId) {
                 case R.id.radio_gesture:
@@ -91,11 +74,6 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
                     navigationIllustration
                             .setAnimation(R.raw.lottie_system_nav_fully_gestural);
                     revealHintCheckbox();
-                    break;
-                case R.id.radio_two_button:
-                    mSelection = NAV_BAR_MODE_2BUTTON_OVERLAY;
-                    navigationIllustration.setAnimation(R.raw.lottie_system_nav_2_button);
-                    hideHintCheckBox();
                     break;
                 case R.id.radio_sw_keys:
                     mSelection = NAV_BAR_MODE_3BUTTON_OVERLAY;
@@ -109,10 +87,6 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
     }
 
     private void revealHintCheckbox() {
-        if (mIsTaskbarEnabled) {
-            return;
-        }
-
         mHideGesturalHint.animate().cancel();
 
         if (mHideGesturalHint.getVisibility() == View.VISIBLE) {
@@ -128,10 +102,6 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
     }
 
     private void hideHintCheckBox() {
-        if (mIsTaskbarEnabled) {
-            return;
-        }
-
         if (mHideGesturalHint.getVisibility() == View.INVISIBLE) {
             return;
         }
@@ -151,12 +121,10 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
     @Override
     protected void onNextPressed() {
         mSetupWizardApp.getSettingsBundle().putString(NAVIGATION_OPTION_KEY, mSelection);
-        if (!mIsTaskbarEnabled) {
-            boolean hideHint = mHideGesturalHint.isChecked();
-            LineageSettings.System.putIntForUser(getContentResolver(),
-                    LineageSettings.System.NAVIGATION_BAR_HINT, hideHint ? 0 : 1,
-                    UserHandle.USER_CURRENT);
-        }
+        boolean hideHint = mHideGesturalHint.isChecked();
+        LineageSettings.System.putIntForUser(getContentResolver(),
+                LineageSettings.System.NAVIGATION_BAR_HINT, hideHint ? 0 : 1,
+                UserHandle.USER_CURRENT);
         super.onNextPressed();
     }
 
