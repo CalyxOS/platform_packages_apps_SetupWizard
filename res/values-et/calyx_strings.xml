@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="microg_title">Google teenused</string>
+    <string name="microg_description2">microG on <b>Google Play teenuste</b> (ja seotud tarkvara) avatud lähtekoodiga asendus, kuid see sisaldab ainult kasulikke osi. Erinevalt Play teenustest ei oma microG näiteks reklaami ega asukoha jälgimist.</string>
+    <string name="microg_switch_label2">Google teenuste ühilduvus</string>
+</resources>
