@@ -14,4 +14,13 @@
     <string name="personal_profile">profil personal</string>
     <string name="managed_profile">Profil de servici</string>
     <string name="microg_summary">Aceasta permite aplicațiilor precum <b>Google Maps, YouTube și ride-sharing services</b> să funcționeze. Dezactivați această funcție dacă nu intenționa-ți să utilizați aplicații ce necesită Google services în <xliff:g id="profileType" example="personal profile">%1$s</xliff:g>. Această schimbare nu poate fi inversată mai târziu.</string>
+    <string name="microg_online_source_beacondb_summary">beacondb.net - accesează pagina web pentru termeni și condiții</string>
+    <string name="microg_online_source_select_summary">Alege o sursă online:</string>
+    <string name="microg_online_source_none_title">Niciuna</string>
+    <string name="microg_online_source_none_summary">Nu folosi rețelele Wi-Fi și celulare din apropiere pentru căutările de locație online.</string>
+    <string name="microg_online_source_required_error">Selectează o sursă online sau alege Niciuna.</string>
+    <string name="microg_location_summary2">Îmbunătățește serviciile de locație prin interogarea serviciului ales al rețelelor Wi-Fi și celulare din apropiere, folosind Nominatim pentru căutări de adrese și memorizarea coordonatelor GPS ale rețelelor din apropiere. Poți personaliza aceste opțiuni mai detaliat în setările microG mai târziu.</string>
+    <string name="microg_online_source_positon_title">Positon (sugerat)</string>
+    <string name="microg_online_source_positon_summary">positon.xyz - accesează pagina web pentru termeni și condiții</string>
+    <string name="microg_online_source_beacondb_title">BeaconDB</string>
 </resources>

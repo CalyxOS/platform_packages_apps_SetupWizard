@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_title">Serviços Google</string>
+    <string name="microg_summary">Isto permite que apps como &lt;b&gt;Google Maps, YouTube e serviços de compartilhamento de corrida&lt;/b&gt; funcionem. Desative isto se não planeja em usar apps que precisam dos serviços do Google no seu <xliff:g id="profileType" example="personal profile">%1$s</xliff:g>. Esta opção não poderá ser alterada depois.</string>
+    <string name="personal_profile">perfil pessoal</string>
+    <string name="managed_profile">perfil de trabalho</string>
+    <string name="microg_defaults_switch_label">Suporte à notificações push</string>
+    <string name="microg_location_switch_label">Localização por rede</string>
+    <string name="setup_euicc">Configuração do eSIM</string>
+    <string name="microg_location_summary2">Melhore os serviços de localização ao consultar o serviço escolhido com redes Wi-Fi e móveis próximas, usando o Nominatim para consulta de endereços e lembrando as coordenadas de GPS de redes próximas. Pode customizar estas opções de forma mais precisa nas Configurações do microG depois.</string>
+    <string name="microg_online_source_none_summary">Não usar redes Wi-Fi e móveis próximas para consultas de localização online.</string>
+    <string name="microg_online_source_select_summary">Escolha uma fonte online:</string>
+    <string name="microg_online_source_required_error">Selecione uma fonte online, ou escolha Nenhuma.</string>
+    <string name="reboot">Reiniciar</string>
+    <string name="euicc_summary">Também pode adicionar um eSIM ao seu aparelho.</string>
+    <string name="microg_switch_label2">Compatibilidade com Serviços Google</string>
+    <string name="microg_defaults_summary">Permita que apps se registem para notificações push com o Google. Isto regista o seu dispositivo aos serviços do Google, mas sem nenhum identificador único ao dispositivo. Isto pode ser ativado depois pelas configurações do microG, mas qualquer app configurado antes precisará ser reinstalado para funcionar corretamente.</string>
+    <string name="microg_online_source_positon_title">Positon (sugerido)</string>
+    <string name="microg_online_source_positon_summary">positon.xyz - veja o site para termos de uso</string>
+    <string name="microg_online_source_none_title">Nenhuma</string>
+    <string name="microg_online_source_beacondb_title">BeaconDB</string>
+    <string name="microg_online_source_beacondb_summary">beacondb.net - veja o site para termos de uso</string>
+    <string name="bootloader_warning_title">Alerta de bloqueio do bootloader</string>
+    <string name="bootloader_warning_summary">O bootloader deste dispositivo está desbloqueado. Bloqueie o bootloader por meio de um computador. Visite <a href="https://calyxos.org/lock">calyxos.org/lock</a> para mais informações.</string>
+    <string name="microg_description2">O microG é uma alternativa de código aberto ao <b>Google Play Services</b> (e software relacionado), mas inclui somente partes úteis. Diferentemente do Play Services, o microG não possui nenhum tipo de rasteamento publicitário ou de localização, por exemplo.</string>
 </resources>
