@@ -14,4 +14,13 @@
     <string name="microg_summary">Bu, &lt;b&gt;Google Haritalar, YouTube ve araç paylaşım hizmetleri&lt;/b&gt; gibi uygulamaların çalışmasını sağlar. Google hizmetleri gerektiren uygulamaları <xliff:g id="profileType" example="personal profile">%1$s</xliff:g> içinde çalıştırmayı düşünmüyorsanız bunu devre dışı bırakın. Bu ayar daha sonra değiştirilemez.</string>
     <string name="personal_profile">kişisel profil</string>
     <string name="managed_profile">iş profili</string>
+    <string name="microg_online_source_positon_summary">positon.xyz - koşullar için siteye bakınız</string>
+    <string name="microg_online_source_beacondb_summary">beacondb.net - koşullar için siteye bakınız</string>
+    <string name="microg_online_source_select_summary">Lütfen çevrimiçi bir kaynak seçiniz:</string>
+    <string name="microg_online_source_none_summary">Çevrimiçi konum sorguları için yakındaki Wi-Fi ve hücresel ağları kullanma.</string>
+    <string name="microg_online_source_required_error">Lütfen çevrimiçi bir kaynak seçiniz, ya da Hiçbiri seçeneğini seçiniz.</string>
+    <string name="microg_online_source_none_title">Hiçbiri</string>
+    <string name="microg_online_source_positon_title">Positon (önerilir)</string>
+    <string name="microg_online_source_beacondb_title">BeaconDB</string>
+    <string name="microg_location_summary2">Adres sorguları için Nominatim kullanarak ve yakındaki ağların GPS koordinatlarını akılda tutarak seçtiğiniz hizmete yakınınızdaki Wi-Fi ve hücresel ağları kullanıp sorgu göndererek konum hizmetlerini iyileştir. Bu seçenekleri daha sonra microG ayarlarında daha ince bir şekilde özelleştirebilirsiniz.</string>
 </resources>

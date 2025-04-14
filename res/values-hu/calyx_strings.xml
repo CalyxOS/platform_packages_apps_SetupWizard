@@ -1,2 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="microg_summary">Engedélyezi olyan appokat futását, mint a <b>Google Térkép, YouTube és ezeken alapuló szolgáltatások</b>. Kapcsolja ki, ha nem tervez Google Szolgáltatásokon alapuló applikációkat használni a <xliff:g id="profileType" example="personal profile">%1$s</xliff:g> profiljában. Ez a beállítás később már nem változtatható meg.</string>
+    <string name="microg_title">Google Szolgáltatások</string>
+    <string name="microg_description2">A microG egy nyílt forráskódú <b>Google Play Szolgáltatás</b> (és kapcsolódó szoftver) helyettesítő, de csak a hasznos részeket foglalja magában. A Play Szolgáltatásokkal ellentétben például nem tartalmaz követést vagy reklámokat.</string>
+    <string name="microg_switch_label2">Google Szolgáltatások Kompatibilitás</string>
+    <string name="microg_defaults_switch_label">Push értesítés támogatás</string>
+    <string name="microg_online_source_beacondb_summary">beacondb.net - keresse fel az oldalt a kifejezésekért</string>
+    <string name="microg_defaults_summary">Engedélyezi az applikációk számára a Google-ös push értesítések regisztrációját. Ezzel regisztrálja eszközét a Google Szolgáltatások rendszerébe mindenféle eszköz specifikus egyéni azonosító nélkül. Ez később bekapcsolható a microG beállításoknál, azonban minden korábban telepített applikációt újra kell telepíteni a megfelelő működéshez.</string>
+    <string name="euicc_summary">Hozzáadhat egy eSIM kártyát is a készülékéhez.</string>
+    <string name="setup_euicc">eSIM beállítása</string>
+    <string name="microg_online_source_beacondb_title">BeaconDB</string>
+    <string name="managed_profile">munka profil</string>
+    <string name="microg_online_source_positon_summary">positon.xyz - keresse fel az oldalt a kifejezésekért</string>
+    <string name="bootloader_warning_title">Zárt bootloader figyelmeztetés</string>
+    <string name="microg_location_summary2">Pontosítsa a helymeghatározást a környéken levő Wi-Fi és mobiladat pontok segítségével, Nominatim-ot használva a cím felkereséshez, és a közelben levő hálózatok GPS koordinátáinak megjegyzésére. Ezeket a beállításokat behatóbban testreszabhatja a microG-ben a későbbiek folyamán.</string>
+    <string name="microg_online_source_positon_title">Pozíció (ajánlott)</string>
+    <string name="microg_online_source_none_title">Nincs</string>
+    <string name="microg_online_source_none_summary">Ne használja a közeli Wi-Fi és mobil hálózatokat az online helymeghatározáshoz.</string>
+    <string name="microg_online_source_select_summary">Kérem válasszon egy online forrást:</string>
+    <string name="microg_online_source_required_error">Kérem válasszon egy online forrást vagy válassza ki a \"Nincs\" opciót.</string>
+    <string name="personal_profile">személyi profil</string>
+    <string name="microg_location_switch_label">Hálózati pozíció</string>
+    <string name="bootloader_warning_summary">Ennek a készüléknek jelenleg ki van nyitva bootloader-e. Kérem zárja le a bootloadert egy számítógépről. Keresse fel a <a href="https://calyxos.org/lock">calyxos.org/lock</a> oldalt további információkért.</string>
+    <string name="reboot">Újraindítás</string>
+</resources>
