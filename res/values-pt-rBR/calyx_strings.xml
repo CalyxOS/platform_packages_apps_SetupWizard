@@ -13,7 +13,7 @@
     <string name="microg_location_switch_label">Localização por rede</string>
     <string name="managed_profile">perfil de trabalho</string>
     <string name="personal_profile">perfil pessoal</string>
-    <string name="microg_summary">Isto permite que apps como &lt;b&gt;Google Maps, YouTube e serviços de compartilhamento de corrida&lt;/b&gt; funcionem. Desative isto se não planeja em usar apps que precisam dos serviços do Google em seu <xliff:g id="profileType" example="personal profile">%1$s</xliff:g>. Esta opção não poderá ser alterada depois.</string>
+    <string name="microg_summary">Isto permite que apps como <b>Google Maps, YouTube e serviços de compartilhamento de corrida</b> funcionem. Desative isto se não planeja em usar apps que precisam dos serviços do Google em seu <xliff:g id="profileType" example="personal profile">%1$s</xliff:g>. Esta opção não poderá ser alterada depois.</string>
     <string name="microg_online_source_positon_summary">positon.xyz - veja o site para termos de uso</string>
     <string name="microg_online_source_beacondb_title">BeaconDB</string>
     <string name="microg_online_source_beacondb_summary">beacondb.net - veja o site para termos de uso</string>

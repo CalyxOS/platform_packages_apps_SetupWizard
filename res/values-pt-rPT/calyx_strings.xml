@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_title">Serviços Google</string>
-    <string name="microg_summary">Isto permite que apps como &lt;b&gt;Google Maps, YouTube e serviços de compartilhamento de corrida&lt;/b&gt; funcionem. Desative isto se não planeja em usar apps que precisam dos serviços do Google no seu <xliff:g id="profileType" example="personal profile">%1$s</xliff:g>. Esta opção não poderá ser alterada depois.</string>
+    <string name="microg_summary">Isto permite que apps como <b>Google Maps, YouTube e serviços de compartilhamento de corrida</b> funcionem. Desative isto se não planeja em usar apps que precisam dos serviços do Google no seu <xliff:g id="profileType" example="personal profile">%1$s</xliff:g>. Esta opção não poderá ser alterada depois.</string>
     <string name="personal_profile">perfil pessoal</string>
     <string name="managed_profile">perfil de trabalho</string>
     <string name="microg_defaults_switch_label">Suporte à notificações push</string>

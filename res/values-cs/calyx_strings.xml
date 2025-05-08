@@ -13,7 +13,7 @@
     <string name="microg_location_switch_label">Síťová poloha</string>
     <string name="personal_profile">osobním profilu</string>
     <string name="managed_profile">pracovním profilu</string>
-    <string name="microg_summary">Tato funkce umožní spuštění aplikací, jako jsou &lt;b&gt;Mapy Google, YouTube a služby sdílených jízd&lt;/b&gt;. Funkci zakažte, pokud neplánujete ve vašem <xliff:g id="profileType" example="personal profile">%1$s</xliff:g> používat aplikace, které vyžadují služby Google. Toto nastavení později nelze změnit.</string>
+    <string name="microg_summary">Tato funkce umožní spuštění aplikací, jako jsou <b>Mapy Google, YouTube a služby sdílených jízd</b>. Funkci zakažte, pokud neplánujete ve vašem <xliff:g id="profileType" example="personal profile">%1$s</xliff:g> používat aplikace, které vyžadují služby Google. Toto nastavení později nelze změnit.</string>
     <string name="microg_online_source_positon_title">Positon (doporučeno)</string>
     <string name="microg_location_summary2">Vylepšit polohové služby dotazováním na zvolenou službu s mobilními a Wi-Fi sítěmi v okolí, používat Nominatim pro hledání adres a pamatovat si GPS souřadnice sítí v okolí. Tyto možnosti můžete později podrobněji přizpůsobit v Nastavení microG.</string>
     <string name="microg_online_source_positon_summary">positon.xyz – podmínky najdete na webu</string>

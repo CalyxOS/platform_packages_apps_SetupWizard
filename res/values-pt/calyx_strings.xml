@@ -11,7 +11,7 @@
     <string name="microg_location_switch_label">Localização por rede</string>
     <string name="bootloader_warning_summary">O bootloader deste dispositivo está desbloqueado. Bloqueie o bootloader por meio de um computador. Visite <a href="https://calyxos.org/lock">calyxos.org/lock</a> para mais informações.</string>
     <string name="reboot">Reiniciar</string>
-    <string name="microg_summary">Isto permite que apps como &lt;b&gt;Google Maps, YouTube e serviços de compartilhamento de corrida&lt;/b&gt; funcionem. Desative isto se não planeja em usar apps que precisam dos serviços do Google no seu <xliff:g id="profileType" example="personal profile">%1$s</xliff:g>. Esta opção não poderá ser alterada depois.</string>
+    <string name="microg_summary">Isto permite que apps como <b>Google Maps, YouTube e serviços de compartilhamento de corrida</b> funcionem. Desative isto se não planeja em usar apps que precisam dos serviços do Google no seu <xliff:g id="profileType" example="personal profile">%1$s</xliff:g>. Esta opção não poderá ser alterada depois.</string>
     <string name="personal_profile">perfil pessoal</string>
     <string name="managed_profile">perfil de trabalho</string>
     <string name="microg_online_source_positon_title">Positon (sugerido)</string>
