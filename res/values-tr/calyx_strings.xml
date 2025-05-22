@@ -11,7 +11,7 @@
     <string name="microg_defaults_switch_label">Anlık bildirim desteği</string>
     <string name="microg_defaults_summary">Uygulamaların Google\'a anlık bildirimler için kaydolmasına izin ver. Bu, aygıta özgü benzersiz tanımlayıcılar olmadan aygıtınızı Google hizmetlerine kaydeder. Bu özellik daha sonra microG ayarlarından etkinleştirilebilir, ancak daha önce kurulan bir uygulamanın düzgün çalışması için yeniden kurulması gerekecektir.</string>
     <string name="microg_location_switch_label">Ağ konumu</string>
-    <string name="microg_summary">Bu, &lt;b&gt;Google Haritalar, YouTube ve araç paylaşım hizmetleri&lt;/b&gt; gibi uygulamaların çalışmasını sağlar. Google hizmetleri gerektiren uygulamaları <xliff:g id="profileType" example="personal profile">%1$s</xliff:g> içinde çalıştırmayı düşünmüyorsanız bunu devre dışı bırakın. Bu ayar daha sonra değiştirilemez.</string>
+    <string name="microg_summary">Bu, <b>Google Haritalar, YouTube ve araç paylaşım hizmetleri</b> gibi uygulamaların çalışmasını sağlar. Google hizmetleri gerektiren uygulamaları <xliff:g id="profileType" example="personal profile">%1$s</xliff:g> içinde çalıştırmayı düşünmüyorsanız bunu devre dışı bırakın. Bu ayar daha sonra değiştirilemez.</string>
     <string name="personal_profile">kişisel profil</string>
     <string name="managed_profile">iş profili</string>
     <string name="microg_online_source_positon_summary">positon.xyz - koşullar için siteye bakınız</string>
