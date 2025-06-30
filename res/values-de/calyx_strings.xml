@@ -14,9 +14,13 @@
     <string name="personal_profile">Persönliches Profil</string>
     <string name="microg_summary">Dies ermöglicht die Ausführung von Apps wie <b>Google Maps, YouTube und Mitfahrdiensten</b>. Deaktiviere dies, wenn du nicht vorhast, Apps, die Google-Dienste benötigen, in deinem <xliff:g id="profileType" example="personal profile">%1$s</xliff:g> auszuführen. Diese Einstellung kann später nicht mehr geändert werden.</string>
     <string name="managed_profile">Arbeitsprofil</string>
-    <string name="microg_location_summary2">Verbessert die Lokalisierungsdienste durch Abfrage der ausgewählten Dienste mithilfe benachbarter WLANs und Mobilfunknetze, der Verwendung von Nominatim für Adresssuche, und gespeicherter GPS-Koordinaten von benachbarten Netzwerken. Sie können diese Optionen später im den microG-Einstellungen feiner anpassen.</string>
+    <string name="microg_location_summary2">Verbessert die Lokalisierungsdienste durch Abfrage der ausgewählten Dienste mithilfe benachbarter WLANs und Mobilfunknetze, der Verwendung von Nominatim für Adresssuche, und gespeicherter GPS-Koordinaten von benachbarten Netzwerken. Du kannst diese Optionen später im den microG-Einstellungen feiner anpassen.</string>
     <string name="microg_online_source_beacondb_title">BeaconDB</string>
-    <string name="microg_online_source_none_summary">Verwende keine benachbarten WLAN und Funknetze für die online Adresssuche.</string>
+    <string name="microg_online_source_none_summary">Verwende keine benachbarten WLANs und Funknetze für die Online-Adresssuche.</string>
     <string name="microg_online_source_none_title">Keine</string>
-    <string name="microg_online_source_required_error">Bitte wählen Sie eine Online-Quelle aus, oder wählen Sie Keine.</string>
+    <string name="microg_online_source_required_error">Bitte wähle eine Online-Quelle aus, oder wähle Keine.</string>
+    <string name="microg_online_source_positon_title">position (vorgeschlagen)</string>
+    <string name="microg_online_source_positon_summary">positon.xyz - siehe Webseite für die Bedingungen</string>
+    <string name="microg_online_source_beacondb_summary">beacondb.net - siehe Webseite für die Bedingungen</string>
+    <string name="microg_online_source_select_summary">Bitte wähle eine Online-Quelle:</string>
 </resources>
