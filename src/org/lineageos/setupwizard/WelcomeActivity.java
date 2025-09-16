@@ -59,6 +59,7 @@ public class WelcomeActivity extends SubBaseActivity {
         setNextText(R.string.start);
         Button startButton = findViewById(R.id.start);
         Button emergButton = findViewById(R.id.emerg_dialer);
+        Button skipButton = findViewById(R.id.skip);
         startButton.setOnClickListener(view -> onNextPressed());
         findViewById(R.id.launch_accessibility)
                 .setOnClickListener(
@@ -82,6 +83,13 @@ public class WelcomeActivity extends SubBaseActivity {
         } else {
             welcomeTitle.setText(getString(R.string.setup_welcome_message,
                     getString(R.string.os_name)));
+        }
+
+        if (Build.TYPE.equals("eng")) {
+            skipButton.setVisibility(View.VISIBLE);
+            skipButton.setOnClickListener(v -> {
+                SetupWizardUtils.finishSetupWizard(WelcomeActivity.this);
+            });
         }
 
         if (Build.IS_DEBUGGABLE) {
