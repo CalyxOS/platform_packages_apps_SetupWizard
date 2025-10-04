@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_title">Google usluge</string>
     <string name="setup_euicc">Postavi eSIM</string>
     <string name="euicc_summary">Tvom uređaju možeš dodati i eSIM.</string>
     <string name="managed_profile">poslovni profil</string>
     <string name="personal_profile">osobni profil</string>
+    <string name="microg_description2">microG je zamjena otvorenog koda za <b>Google Play usluge</b> (i povezani softver), ali uključuje samo korisne dijelove. Za razliku od Play usluga, microG npr. ne sadrži oglase ili praćenje lokacije.</string>
+    <string name="microg_switch_label2">Kompatibilnost s Google uslugama</string>
+    <string name="microg_summary">Ovo omogućuje pokretanje aplikacija kao što su <b>Google karte, YouTube i usluge dijeljenja prijevoza</b>. Deaktiviraj ovo ako ne planiraš pokretati aplikacije koje zahtijevaju Google usluge u tvom <xliff:g id="profileType" example="personal profile">%1$s</xliff:g> profilu. Ova se postavka kasnije ne može promijeniti.</string>
+    <string name="microg_defaults_switch_label">Podrška za push obavijesti</string>
+    <string name="microg_defaults_summary">Dozvoli aplikacijama da se registriraju za push obavijesti s Googleom. Ovo registrira tvoj uređaj na Google uslugama, bez ikakvih jedinstvenih identifikatora specifičnih za uređaj. To se može aktivirati kasnije u postavkama microG-a, no sve ranije postavljene aplikacije će se morati ponovo instalirati da bi ispravno radile.</string>
+    <string name="microg_location_switch_label">Lokacija mreže</string>
+    <string name="microg_location_summary2">Poboljšaj usluge lokacije slanjem upita odabranoj usluzi putem obližnjih Wi-Fi i mobilnih mreža, korištenjem Nominatima za pretraživanje adresa i pamćenjem GPS koordinata obližnjih mreža. Ove se opcije mogu kasnije detaljnije prilagoditi u postavkama microG-a.</string>
+    <string name="microg_online_source_positon_title">Pozicija (predloženo)</string>
+    <string name="microg_online_source_positon_summary">positon.xyz – pogledaj uvjete na web-stranici</string>
+    <string name="microg_online_source_beacondb_title">BeaconDB</string>
+    <string name="microg_online_source_beacondb_summary">beacondb.net – pogledaj uvjete na web-stranici</string>
+    <string name="microg_online_source_none_title">Bez</string>
+    <string name="microg_online_source_none_summary">Ne koristi obližnje Wi-Fi i mobilne mreže za online pretragu lokacije.</string>
+    <string name="microg_online_source_select_summary">Odaberi jedan online izvor:</string>
+    <string name="microg_online_source_required_error">Odaberi jedan online izvor ili odaberi „Bez”.</string>
+    <string name="bootloader_warning_title">Upozorenje o zaključavanju bootloadera</string>
+    <string name="bootloader_warning_summary">Bootloader ovog uređaja je trenutačno otključan. Zaključaj bootloader s računala. Pogledaj <a href="https://calyxos.org/lock">calyxos.org/lock</a> za više informacija.</string>
+    <string name="reboot">Ponovo pokreni</string>
 </resources>
