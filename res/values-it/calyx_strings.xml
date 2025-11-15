@@ -10,4 +10,10 @@
     <string name="euicc_summary">Puoi anche aggiungere una eSIM al tuo dispositivo.</string>
     <string name="setup_euicc">Inizializza eSIM</string>
     <string name="bootloader_warning_title">Avviso blocco bootloader</string>
+    <string name="microg_summary">Questo permette ad applicazioni come <b>Google Maps, YouTube and ride-sharing services</b> di funzionare. Disattivalo se non hai in mente di utilizzare applicazioni che richiedono i servizi Google nel tuo <xliff:g id="profileType" example="personal profile">%1$s</xliff:g>. Questa impostazione non può essere modificata in seguito.</string>
+    <string name="microg_online_source_positon_title">Posizione (suggerita)</string>
+    <string name="microg_online_source_positon_summary">position.xyz - visita il sito per i termini di utilizzo</string>
+    <string name="microg_online_source_beacondb_title">BeaconDB</string>
+    <string name="microg_online_source_beacondb_summary">beacondb.net - visita il sito per i termini di utilizzo</string>
+    <string name="microg_online_source_none_title">Nessuna</string>
 </resources>
