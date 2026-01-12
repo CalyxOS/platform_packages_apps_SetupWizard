@@ -1,2 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="microg_title">ບໍລິການ Google</string>
+    <string name="microg_description2">microG ແມ່ນຊັອບແວແຫຼ່ງເປີດທີ່ໃຊ້ທົດແທນ <b>ບໍລິການ Google Play</b> (ແລະ ຊັອບແວທີ່ກ່ຽວຂ້ອງ), ແຕ່ມັນປະກອບມີພຽງສ່ວນທີ່ເປັນປະໂຫຍດເທົ່ານັ້ນ. ເຊິ່ງຕ່າງຈາກ Play Services, microG ບໍ່ມີການໂຄສະນາ ຫຼື ການຕິດຕາມຕຳແໜ່ງ.</string>
+    <string name="microg_switch_label2">ຄວາມເຂົ້າກັນໄດ້ຂອງບໍລິການ Google</string>
+    <string name="microg_summary">ສິ່ງນີ້ຊ່ວຍໃຫ້ແອັບຕ່າງໆ ເຊັ່ນ <b>Google Maps, YouTube ແລະ ບໍລິການຮຽກລົດ</b> ສາມາດເຮັດວຽກໄດ້. ໃຫ້ປິດໃຊ້ງານຫາກທ່ານບໍ່ໄດ້ວາງແຜນທີ່ຈະໃຊ້ແອັບທີ່ຕ້ອງການບໍລິການຂອງ Google ໃນ <xliff:g id="profileType" example="personal profile">%1$s</xliff:g> ຂອງທ່ານ. ການຕັ້ງຄ່ານີ້ບໍ່ສາມາດປ່ຽນແປງໄດ້ໃນພາຍຫຼັງ.</string>
+    <string name="microg_defaults_switch_label">ຮອງຮັບການແຈ້ງເຕືອນແບບ Push</string>
+    <string name="microg_defaults_summary">ອະນຸຍາດໃຫ້ແອັບຕ່າງໆລົງທະບຽນເພື່ອຮັບການແຈ້ງເຕືອນແບບ Push ກັບ Google. ສິ່ງນີ້ຈະລົງທະບຽນອຸປະກອນຂອງທ່ານກັບບໍລິການຂອງ Google ໂດຍບໍ່ມີຂໍ້ມູນລະບຸຕົວຕົນສະເພາະອຸປະກອນ. ສາມາດເປີດໃຊ້ງານໄດ້ໃນພາຍຫຼັງຈາກການຕັ້ງຄ່າ microG, ແນວໃດກໍຕາມ ແອັບຕ່າງໆທີ່ຕິດຕັ້ງໄວ້ກ່ອນໜ້ານີ້ອາດຈະຕ້ອງຕິດຕັ້ງໃໝ່ເພື່ອໃຫ້ເຮັດວຽກໄດ້ຢ່າງຖືກຕ້ອງ.</string>
+    <string name="microg_location_switch_label">ຕຳແໜ່ງຜ່ານເຄືອຂ່າຍ</string>
+    <string name="microg_location_summary2">ປັບປຸງການບໍລິການຕຳແໜ່ງໂດຍການສອບຖາມຈາກບໍລິການທີ່ເລືອກ ດ້ວຍຂໍ້ມູນ Wi-Fi ແລະ ເຄືອຂ່າຍມືຖືທີ່ຢູ່ໃກ້ຄຽງ, ໂດຍໃຊ້ Nominatim ເພື່ອຄົ້ນຫາທີ່ຢູ່ ແລະ ຈື່ຈຳຈຸດພິກັດ GPS ຂອງເຄືອຂ່າຍທີ່ຢູ່ໃກ້ໆ. ທ່ານສາມາດປັບແຕ່ງຕົວເລືອກເຫຼົ່ານີ້ໄດ້ລະອຽດຍິ່ງຂຶ້ນໃນການຕັ້ງຄ່າ microG ພາຍຫຼັງ.</string>
+    <string name="microg_online_source_positon_title">Positon (ແນະນຳ)</string>
+    <string name="microg_online_source_positon_summary">positon.xyz - ເບິ່ງເງື່ອນໄຂໃນເວັບໄຊ</string>
+    <string name="microg_online_source_beacondb_title">BeaconDB</string>
+    <string name="microg_online_source_beacondb_summary">beacondb.net - ເບິ່ງເງື່ອນໄຂໃນເວັບໄຊ</string>
+    <string name="microg_online_source_none_title">ບໍ່ມີ</string>
+    <string name="microg_online_source_none_summary">ບໍ່ໃຊ້ Wi-Fi ແລະ ເຄືອຂ່າຍມືຖືທີ່ຢູ່ໃກ້ຄຽງໃນການຄົ້ນຫາຕຳແໜ່ງອອນລາຍ.</string>
+    <string name="microg_online_source_select_summary">ກະລຸນາເລືອກແຫຼ່ງຂໍ້ມູນອອນລາຍ:</string>
+    <string name="microg_online_source_required_error">ກະລຸນາເລືອກແຫຼ່ງຂໍ້ມູນອອນລາຍ ຫຼື ເລືອກ ບໍ່ມີ.</string>
+    <string name="personal_profile">ໂປຣໄຟລ໌ສ່ວນຕົວ</string>
+    <string name="managed_profile">ໂປຣໄຟລ໌ວຽກ</string>
+    <string name="euicc_summary">ທ່ານຍັງສາມາດເພີ່ມ eSIM ໃສ່ອຸປະກອນຂອງທ່ານໄດ້.</string>
+    <string name="setup_euicc">ຕັ້ງຄ່າ eSIM</string>
+    <string name="bootloader_warning_title">ຄຳເຕືອນການລັອກບູຕໂຫຼດເດີ</string>
+    <string name="bootloader_warning_summary">ບູຕໂຫຼດເດີຂອງອຸປະກອນນີ້ກຳລັງຖືກປົດລັອກຢູ່. ກະລຸນາລັອກບູຕໂຫຼດເດີຈາກຄອມພິວເຕີ. ເຂົ້າເບິ່ງ <a href="https://calyxos.org/lock">calyxos.org/lock</a> ສຳລັບຂໍ້ມູນເພີ່ມເຕີມ.</string>
+    <string name="reboot">ເປີດເຄື່ອງໃໝ່</string>
+</resources>

@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_title">Layanan Google</string>
     <string name="setup_euicc">Siapkan eSIM</string>
     <string name="euicc_summary">Anda juga dapat menambahkan eSIM ke perangkat.</string>
+    <string name="microg_switch_label2">Kompatibilitas Layanan Google</string>
+    <string name="microg_summary">Ini memungkinkan aplikasi seperti <b>Google Maps, YouTube, dan layanan berbagi tumpangan</b> berjalan. Nonaktifkan ini jika Anda tidak berencana menjalankan aplikasi yang memerlukan layanan Google di <xliff:g id="profileType" example="personal profile">%1$s</xliff:g> Anda. Setelan ini tidak dapat diubah nanti.</string>
+    <string name="microg_defaults_switch_label">Dukungan notifikasi push</string>
+    <string name="microg_defaults_summary">Izinkan aplikasi mendaftar untuk notifikasi push dengan Google. Ini mendaftarkan perangkat Anda ke layanan Google, tanpa pengenal unik spesifik perangkat apa pun. Ini dapat diaktifkan nanti dari Setelan microG, namun aplikasi apa pun yang disiapkan sebelumnya perlu diinstal ulang agar berfungsi dengan benar.</string>
+    <string name="microg_location_switch_label">Lokasi jaringan</string>
+    <string name="microg_location_summary2">Tingkatkan layanan lokasi dengan mengkueri layanan yang dipilih menggunakan jaringan Wi‑Fi dan seluler di sekitar, menggunakan Nominatim untuk pencarian alamat, serta mengingat koordinat GPS dari jaringan di sekitar. Anda dapat menyesuaikan opsi ini dengan lebih terperinci di Setelan microG nanti.</string>
+    <string name="microg_online_source_positon_title">Positon (disarankan)</string>
+    <string name="microg_online_source_positon_summary">positon.xyz - lihat situs untuk ketentuan</string>
+    <string name="microg_online_source_beacondb_title">BeaconDB</string>
+    <string name="microg_online_source_beacondb_summary">beacondb.net - lihat situs untuk ketentuan</string>
+    <string name="microg_online_source_none_title">Tidak ada</string>
+    <string name="microg_online_source_none_summary">Jangan gunakan jaringan Wi‑Fi dan seluler di sekitar untuk pencarian lokasi online.</string>
+    <string name="microg_online_source_select_summary">Silakan pilih sumber online:</string>
+    <string name="microg_online_source_required_error">Silakan pilih sumber online, atau pilih Tidak ada.</string>
+    <string name="personal_profile">profil pribadi</string>
+    <string name="managed_profile">profil kerja</string>
+    <string name="bootloader_warning_title">Peringatan penguncian bootloader</string>
+    <string name="bootloader_warning_summary">Bootloader perangkat ini saat ini tidak terkunci. Harap kunci bootloader dari komputer. Kunjungi <a href="https://calyxos.org/lock">calyxos.org/lock</a> untuk info lebih lanjut.</string>
+    <string name="reboot">Mulai ulang</string>
+    <string name="microg_description2">microG adalah pengganti sumber terbuka untuk <b>Google Play Services</b> (dan perangkat lunak terkait), tetapi hanya mencakup bagian-bagian yang berguna. Berbeda dengan Play Services, microG tidak memiliki iklan atau pelacakan lokasi, misalnya.</string>
 </resources>
