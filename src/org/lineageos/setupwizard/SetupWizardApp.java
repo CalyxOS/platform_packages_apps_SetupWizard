@@ -66,12 +66,12 @@ public class SetupWizardApp extends Application {
         }
         sStatusBarManager = SetupWizardUtils.disableStatusBar(this);
         mHandler.postDelayed(mRadioTimeoutRunnable, SetupWizardApp.RADIO_READY_TIMEOUT);
-        // If the bootloader is locked, and OEM unlocking is allowed, turn it off
+        // If the bootloader is locked, FRP is set and OEM unlocking is not allowed, turn it on
         if (SetupWizardUtils.isOwner()
                 && !SetupWizardUtils.isBootloaderUnlocked(this)
-                && SetupWizardUtils.isOemunlockAllowed(this)
-                && !SetupWizardUtils.isFrpSet(this)) {
-            getSystemService(OemLockManager.class).setOemUnlockAllowedByUser(false);
+                && !SetupWizardUtils.isOemunlockAllowed(this)
+                && SetupWizardUtils.isFrpSet(this)) {
+            getSystemService(OemLockManager.class).setOemUnlockAllowedByUser(true);
         }
         if (SetupWizardUtils.hasGMS(this)) {
             SetupWizardUtils.disableHome(this);
