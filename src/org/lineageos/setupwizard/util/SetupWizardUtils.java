@@ -44,6 +44,7 @@ import android.os.UserManager;
 import android.permission.PermissionManager;
 import android.provider.Settings;
 import android.service.oemlock.OemLockManager;
+import android.service.persistentdata.PersistentDataBlockManager;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
@@ -246,6 +247,15 @@ public class SetupWizardUtils {
             return oemLockManager.isOemUnlockAllowed();
         }
         return true; // Default to unlock allowed
+    }
+
+    public static boolean isFrpSet(Context context) {
+        PersistentDataBlockManager pdbManager =
+                context.getSystemService(PersistentDataBlockManager.class);
+        if (pdbManager != null) {
+            return pdbManager.getDataBlockSize() != 0;
+        }
+        return false; // Default to unset
     }
 
     /**

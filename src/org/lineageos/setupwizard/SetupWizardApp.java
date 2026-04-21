@@ -69,7 +69,8 @@ public class SetupWizardApp extends Application {
         // If the bootloader is locked, and OEM unlocking is allowed, turn it off
         if (SetupWizardUtils.isOwner()
                 && !SetupWizardUtils.isBootloaderUnlocked(this)
-                && SetupWizardUtils.isOemunlockAllowed(this)) {
+                && SetupWizardUtils.isOemunlockAllowed(this)
+                && !SetupWizardUtils.isFrpSet(this)) {
             getSystemService(OemLockManager.class).setOemUnlockAllowedByUser(false);
         }
         if (SetupWizardUtils.hasGMS(this)) {
