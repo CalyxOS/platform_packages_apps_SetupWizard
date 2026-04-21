@@ -39,6 +39,8 @@
     <string name="oemunlock_allowed" translatable="false">OEM unlocking: Allowed</string>
     <string name="oemunlock_na" translatable="false">OEM unlocking: Not Applicable</string>
     <string name="oemunlock_notallowed" translatable="false">OEM unlocking: Not Allowed</string>
+    <string name="frp_set" translatable="false">FRP: Set</string>
+    <string name="frp_unset" translatable="false">FRP: Unset</string>
     <string name="factory_reset" translatable="false">Factory reset and power off</string>
 
     <!-- eSIM setup -->

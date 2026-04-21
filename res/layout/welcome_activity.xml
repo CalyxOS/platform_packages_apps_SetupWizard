@@ -109,8 +109,7 @@
                         android:layout_height="wrap_content"
                         style="@style/SudItemTitle.GlifDescription"
                         android:textSize="16sp"
-                        android:layout_marginBottom="@dimen/welcome_status_margin_bottom"
-                        android:paddingRight="@dimen/location_text_margin_right" />
+                        android:layout_marginBottom="@dimen/welcome_status_margin_bottom" />
 
                     <TextView
                         android:id="@+id/oemunlock_status"
@@ -118,8 +117,15 @@
                         android:layout_height="wrap_content"
                         style="@style/SudItemTitle.GlifDescription"
                         android:textSize="16sp"
-                        android:layout_marginBottom="@dimen/welcome_status_margin_bottom"
-                        android:paddingRight="@dimen/location_text_margin_right" />
+                        android:layout_marginBottom="@dimen/welcome_status_margin_bottom" />
+
+                    <TextView
+                        android:id="@+id/frp_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/SudItemTitle.GlifDescription"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="@dimen/welcome_status_margin_bottom" />
 
                     <Button
                         android:id="@+id/factory_reset"

@@ -196,8 +196,10 @@ public class WelcomeActivity extends SubBaseActivity {
         // CalyxOS is meant to be used with a locked bootloader and OEM Unlocking disabled
         final boolean bootloaderUnlocked = SetupWizardUtils.isBootloaderUnlocked(this);
         final boolean oemunlockAllowed = SetupWizardUtils.isOemunlockAllowed(this);
+        final boolean frpSet = SetupWizardUtils.isFrpSet(this);
         final TextView bootloaderStatus = (TextView) findViewById(R.id.bootloader_status);
         final TextView oemunlockStatus = (TextView) findViewById(R.id.oemunlock_status);
+        final TextView frpStatus = (TextView) findViewById(R.id.frp_status);
 
         if (bootloaderUnlocked) {
             // Bootloader unlocked, bad.
@@ -221,6 +223,13 @@ public class WelcomeActivity extends SubBaseActivity {
                 oemunlockStatus.setText(R.string.oemunlock_notallowed);
                 oemunlockStatus.setTextColor(getColor(R.color.green));
             }
+        }
+        if (frpSet) {
+            frpStatus.setText(R.string.frp_set);
+            frpStatus.setTextColor(getColor(R.color.red));
+        } else {
+            frpStatus.setText(R.string.frp_unset);
+            frpStatus.setTextColor(getColor(R.color.green));
         }
     }
 
