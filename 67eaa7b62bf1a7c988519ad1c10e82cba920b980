@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2f59112_d1b8e00c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2026-04-24T20:42:18Z",
+      "side": 1,
+      "message": "This should now work, but there\u0027s no released version of FDroid supporting this.",
+      "revId": "67eaa7b62bf1a7c988519ad1c10e82cba920b980",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
