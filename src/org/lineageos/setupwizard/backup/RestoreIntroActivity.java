@@ -12,6 +12,7 @@ import static org.lineageos.setupwizard.SetupWizardApp.ACTION_RESTORE_FROM_BACKU
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.activity.result.ActivityResult;
 
@@ -25,6 +26,12 @@ public class RestoreIntroActivity extends SubBaseActivity {
         super.onCreate(savedInstanceState);
         getGlifLayout().setDescriptionText(getString(R.string.intro_restore_subtitle,
                 getString(R.string.os_name)));
+
+        // tell F-Droid (should be installed by now) to start updating its repos
+        Log.i(RestoreIntroActivity.class.getSimpleName(), "Asking F-Droid to update repos...");
+        Intent intent = new Intent("org.fdroid.action.UPDATE_REPOS");
+        intent.setPackage("org.fdroid.basic");
+        sendBroadcast(intent);
     }
 
     @Override
