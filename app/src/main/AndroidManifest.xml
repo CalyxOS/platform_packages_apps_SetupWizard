@@ -213,6 +213,19 @@
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
+            android:name=".system.FrpWarningActivity"
+            android:label="@string/activity_label_empty"
+            android:configChanges="mcc|mnc"
+            android:immersive="true"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="org.lineageos.setupwizard.LINEAGE_FRP_WARNING" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".settings.NavigationSettingsActivity"
             android:label="@string/activity_label_empty"
             android:configChanges="mcc|mnc"
