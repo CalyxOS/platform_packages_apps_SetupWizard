@@ -31,6 +31,12 @@
     <WizardAction
         id="bootloader"
         wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_BOOTLOADER_WARNING;end">
+        <result wizard:action="frp" />
+    </WizardAction>
+
+    <WizardAction
+        id="frp"
+        wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_FRP_WARNING;end">
         <result wizard:action="network_setup" />
     </WizardAction>
 
