@@ -52,4 +52,8 @@
     <string name="bootloader_warning_title">Bootloader lock warning</string>
     <string name="bootloader_warning_summary">This device\'s bootloader is currently unlocked. Please lock the bootloader from a computer. Visit <a href="https://calyxos.org/lock">calyxos.org/lock</a> for more info.</string>
     <string name="reboot">Reboot</string>
+
+    <!-- FRP Warning -->
+    <string name="frp_warning_title">Factory reset protection warning</string>
+    <string name="frp_warning_summary">This device has factory reset protection enabled. Please flash the stock OS and remove your Google account before reinstalling CalyxOS. Visit calyxos.org/frp for more info.</string>
 </resources>
