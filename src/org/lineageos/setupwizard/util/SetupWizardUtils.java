@@ -244,7 +244,11 @@ public class SetupWizardUtils {
     public static boolean isOemunlockAllowed(Context context) {
         OemLockManager oemLockManager = context.getSystemService(OemLockManager.class);
         if (oemLockManager != null) {
-            return oemLockManager.isOemUnlockAllowed();
+            try {
+                return oemLockManager.isOemUnlockAllowed();
+            } catch (SecurityException e) {
+                Log.e(TAG, "Failed to check if OEM unlock is allowed", e);
+            }
         }
         return true; // Default to unlock allowed
     }
