@@ -16,6 +16,24 @@
       "message": "This should now work, but there\u0027s no released version of FDroid supporting this.",
       "revId": "67eaa7b62bf1a7c988519ad1c10e82cba920b980",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb702bf2_a832b9fc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2026-04-30T20:19:05Z",
+      "side": 1,
+      "message": "2.0-alpha9 is the first version supporting this.",
+      "parentUuid": "f2f59112_d1b8e00c",
+      "revId": "67eaa7b62bf1a7c988519ad1c10e82cba920b980",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
