@@ -52,6 +52,24 @@
       "parentUuid": "bb702bf2_a832b9fc",
       "revId": "67eaa7b62bf1a7c988519ad1c10e82cba920b980",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7167364d_3f7101b7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2026-05-07T18:54:34Z",
+      "side": 1,
+      "message": "https://review.calyxos.org/c/CalyxOS/lfs_prebuilts_calyx_fdroid/+/45704",
+      "parentUuid": "0b2aedca_a3329dcb",
+      "revId": "67eaa7b62bf1a7c988519ad1c10e82cba920b980",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
