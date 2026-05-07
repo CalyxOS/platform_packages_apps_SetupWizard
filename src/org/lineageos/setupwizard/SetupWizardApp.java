@@ -1,6 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2013 The CyanogenMod Project
- * SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
+ * SPDX-FileCopyrightText: The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -11,6 +11,7 @@ import android.app.StatusBarManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.SystemProperties;
 import android.provider.Settings;
 import android.service.oemlock.OemLockManager;
 import android.util.Log;
@@ -41,6 +42,8 @@ public class SetupWizardApp extends Application {
     public static final String EXTRA_PREFS_SET_BACK_TEXT = "extra_prefs_set_back_text";
     public static final String EXTRA_ENABLE_NEXT_ON_CONNECT = "wifi_enable_next_on_connect";
 
+    public static final String IGNORE_SIM_LOCALE_PROP = "ro.setupwizard.ignore_sim_locale";
+
     public static final String NAVIGATION_OPTION_KEY = "navigation_option";
 
     public static final int RADIO_READY_TIMEOUT = 10 * 1000;
@@ -48,7 +51,7 @@ public class SetupWizardApp extends Application {
     private static StatusBarManager sStatusBarManager;
 
     private boolean mIsRadioReady = false;
-    private boolean mIgnoreSimLocale = false;
+    private boolean mIgnoreSimLocale = SystemProperties.getBoolean(IGNORE_SIM_LOCALE_PROP, false);
 
     private static final Bundle mSettingsBundle = new Bundle();
     private final Handler mHandler = new Handler(Looper.getMainLooper());
