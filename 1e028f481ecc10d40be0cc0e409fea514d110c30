@@ -34,6 +34,24 @@
       "parentUuid": "e25926a4_244a6a45",
       "revId": "1e028f481ecc10d40be0cc0e409fea514d110c30",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "73a04c0b_4cfd915c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2026-05-09T15:01:35Z",
+      "side": 1,
+      "message": "Doesn\u0027t loading + a check mark in the install apps page means that the app is installed?",
+      "parentUuid": "8fa53d89_c420377c",
+      "revId": "1e028f481ecc10d40be0cc0e409fea514d110c30",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
