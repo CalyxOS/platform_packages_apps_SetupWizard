@@ -52,6 +52,24 @@
       "parentUuid": "8fa53d89_c420377c",
       "revId": "1e028f481ecc10d40be0cc0e409fea514d110c30",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "58896129_78f2ad2f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2026-05-09T17:50:12Z",
+      "side": 1,
+      "message": "Yes, but app install is async and the user can go to next page before anything is installed.",
+      "parentUuid": "73a04c0b_4cfd915c",
+      "revId": "1e028f481ecc10d40be0cc0e409fea514d110c30",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
