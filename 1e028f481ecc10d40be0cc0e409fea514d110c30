@@ -16,6 +16,24 @@
       "message": "Works with the commit above, although not ideal since it creates an extra transition animation, but I\u0027m not sure if this can be solved in another way.\n\nMaybe this should be triggered earlier as well, right after the install apps page?",
       "revId": "1e028f481ecc10d40be0cc0e409fea514d110c30",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8fa53d89_c420377c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2026-05-09T14:38:19Z",
+      "side": 1,
+      "message": "Great it works for you!\n\nI didn\u0027t do it earlier, because F-Droid itself gets installed and will need a bit of time. So later is better to be sure it got installed.\n\nAs for the animation. Maybe there is some way to disable the splash screen for f-droid? or otherwise try to turn the animation off, make the activity more invisible?",
+      "parentUuid": "e25926a4_244a6a45",
+      "revId": "1e028f481ecc10d40be0cc0e409fea514d110c30",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
