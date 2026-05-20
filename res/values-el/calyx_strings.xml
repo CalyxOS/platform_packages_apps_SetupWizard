@@ -23,4 +23,6 @@
     <string name="microg_online_source_select_summary">Επιλέξτε μια διαδικτυακή πηγή:</string>
     <string name="microg_online_source_required_error">Επιλέξτε μια διαδικτυακή πηγή ή επιλέξτε Καμία.</string>
     <string name="microg_online_source_none_summary">Μη χρησιμοποιείτε κοντινά δίκτυα Wi-Fi και δίκτυα κινητής τηλεφωνίας για διαδικτυακές αναζητήσεις τοποθεσίας.</string>
+    <string name="frp_warning_title">Προειδοποίηση προστασίας επαναφοράς εργοστασιακών ρυθμίσεων</string>
+    <string name="frp_warning_summary">Αυτή η συσκευή έχει ενεργοποιημένη την προστασία επαναφοράς εργοστασιακών ρυθμίσεων. Παρακαλούμε επιστρέψτε στο εργοστασιακό λειτουργικό σύστημα και καταργήστε τον λογαριασμό σας Google πριν από την επανεγκατάσταση του CalyxOS. Επισκεφθείτε το calyxos.org/frp για περισσότερες πληροφορίες.</string>
 </resources>
