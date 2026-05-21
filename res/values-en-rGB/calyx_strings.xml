@@ -23,4 +23,6 @@
     <string name="microg_online_source_none_summary">Do not use nearby Wi-Fi and cellular networks for online location lookups.</string>
     <string name="microg_online_source_select_summary">Please choose an online source:</string>
     <string name="microg_online_source_required_error">Please select an online source, or choose None.</string>
+    <string name="frp_warning_title">Factory reset protection warning</string>
+    <string name="frp_warning_summary">This device has factory reset protection enabled. Please flash the stock OS and remove your Google account before reinstalling CalyxOS. Visit calyxos.org/frp for more info.</string>
 </resources>

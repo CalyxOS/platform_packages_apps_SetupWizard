@@ -23,4 +23,6 @@
     <string name="microg_online_source_positon_title">Positon (sugerat)</string>
     <string name="microg_online_source_positon_summary">positon.xyz - accesează pagina web pentru termeni și condiții</string>
     <string name="microg_online_source_beacondb_title">BeaconDB</string>
+    <string name="frp_warning_title">Avertisment de protecție la resetarea din fabrică</string>
+    <string name="frp_warning_summary">Acest dispozitiv are activată protecția la resetarea din fabrică. Instalează sistemul de operare stoc și elimină contul Google înainte de a reinstala CalyxOS. Vizitează calyxos.org/frp pentru mai multe informații.</string>
 </resources>
