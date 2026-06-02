@@ -23,4 +23,6 @@
     <string name="microg_online_source_select_summary">请选择一个线上源：</string>
     <string name="microg_online_source_required_error">请选择一个线上源，或者不选。</string>
     <string name="microg_location_summary2">改进位置服务，手段包括查询带附近 Wi-Fi 和信号网络的选定服务，使用 Nominatim 查找地址，记住附近网络的 GPS 坐标等。你可以稍后在 microG 设置中更精细地自定义这些选项。</string>
+    <string name="frp_warning_title">出厂重置保护警告</string>
+    <string name="frp_warning_summary">这台设备启用了出厂重置保护。请刷入出厂系统并删除 Google 账户然后再重装 CalyxOS。访问 calyxos.org/frp 获取更多信息。</string>
 </resources>
