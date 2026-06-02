@@ -23,4 +23,6 @@
     <string name="microg_online_source_required_error">Selecione uma fonte online, ou escolha Nenhuma.</string>
     <string name="microg_location_summary2">Melhore os serviços de localização ao consultar o serviço escolhido com redes Wi-Fi e móveis próximas, usando o Nominatim para consulta de endereços, e lembrando as coordenadas de GPS de redes próximas. Você pode customizar essas opções de forma mais precisa nas Configurações do microG depois.</string>
     <string name="microg_online_source_positon_title">Positon (sugerido)</string>
+    <string name="frp_warning_title">Alerta de proteção de redefinição de fábrica</string>
+    <string name="frp_warning_summary">O seu dispositivo tem a proteção de redefinição de fábrica ativada. Instale o sistema de fábrica e remova sua conta do Google antes de reinstalar o CalyxOS. Visite calyxos.org/frp para mais informações.</string>
 </resources>
