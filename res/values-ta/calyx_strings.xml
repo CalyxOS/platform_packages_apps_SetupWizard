@@ -23,4 +23,6 @@
     <string name="microg_online_source_none_summary">நிகழ்நிலை இருப்பிடத் தேடல்களுக்கு அருகிலுள்ள வைஃபை மற்றும் செல்லுலார் நெட்வொர்க்குகளைப் பயன்படுத்த வேண்டாம்.</string>
     <string name="microg_online_source_select_summary">நிகழ்நிலை மூலத்தைத் தேர்வுசெய்க:</string>
     <string name="microg_online_source_required_error">நிகழ்நிலை மூலத்தைத் தேர்ந்தெடுக்கவும் அல்லது எதையும் தேர்வு செய்யவும்.</string>
+    <string name="frp_warning_title">தொழிற்சாலை மீட்டமைப்பு பாதுகாப்பு முன்னறிவிப்பு</string>
+    <string name="frp_warning_summary">இந்தச் சாதனத்தில் ஃபேக்டரி ரீசெட் பாதுகாப்பு இயக்கப்பட்டுள்ளது. CalyxOS ஐ மீண்டும் நிறுவும் முன், ச்டாக் ஓஎச்சை ப்ளாச் செய்து, உங்கள் Google கணக்கை அகற்றவும். மேலும் தகவலுக்கு calyxos.org/frp ஐப் பார்வையிடவும்.</string>
 </resources>
