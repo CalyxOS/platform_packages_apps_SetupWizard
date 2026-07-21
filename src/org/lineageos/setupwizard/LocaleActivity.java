@@ -201,7 +201,7 @@ public class LocaleActivity extends BaseSetupWizardActivity {
                 try {
                     if (mccString != null && !mccString.isEmpty()) {
                         int mcc = Integer.parseInt(mccString);
-                        locale = LocaleUtils.getLocaleFromMcc(activity, mcc, null);
+                        locale = LocaleUtils.getLocaleFromMccMnc(activity, mcc, null, null);
                     } else {
                         Log.w(TAG, "Unexpected mccString: '" + mccString + "'");
                     }
