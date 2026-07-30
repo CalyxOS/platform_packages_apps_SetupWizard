@@ -23,4 +23,6 @@
     <string name="microg_online_source_none_summary">Nepoužívat mobilní a Wi-Fi sítě v okolí pro hledání online polohy.</string>
     <string name="microg_online_source_select_summary">Vyberte prosím online zdroj:</string>
     <string name="microg_online_source_required_error">Vyberte prosím online zdroj, nebo vyberte Žádný.</string>
+    <string name="frp_warning_title">Varování před ochranou obnovení továrního nastavení</string>
+    <string name="frp_warning_summary">Toto zařízení má zapnutou ochranu před obnovením do továrního nastavení. Před reinstalací CalyxOS prosím nainstalujte výchozí OS a odstraňte svůj účet Google. Více informací naleznete na calyxos.org/frp.</string>
 </resources>

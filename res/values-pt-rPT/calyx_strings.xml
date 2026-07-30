@@ -23,4 +23,6 @@
     <string name="bootloader_warning_title">Alerta de bloqueio do bootloader</string>
     <string name="bootloader_warning_summary">O bootloader deste aparelho está desbloqueado. Bloqueie o bootloader por meio de um computador. Visite <a href="https://calyxos.org/lock">calyxos.org/lock</a> para mais informações.</string>
     <string name="microg_description2">O microG é uma alternativa de código aberto ao <b>Google Play Services</b> (e software relacionado), mas inclui somente partes úteis. Diferentemente do Play Services, o microG não possui nenhum tipo de rasteamento publicitário ou de localização, por exemplo.</string>
+    <string name="frp_warning_title">Aviso de proteção de reinicio de fábrica</string>
+    <string name="frp_warning_summary">Este dispositivo tem a proteção de reiniciar de fábrica ativo. Por favor, dê flash do OS padrão e remova a sua conta google antes de reinstalar o CalyxOS. Visite calyxos.org/frp para mais informação.</string>
 </resources>
