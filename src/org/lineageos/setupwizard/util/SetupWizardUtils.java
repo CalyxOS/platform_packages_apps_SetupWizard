@@ -67,10 +67,11 @@ public class SetupWizardUtils {
 
     private static final String PROP_BUILD_DATE = "ro.build.date.utc";
 
+    private static final String LUPIN_UPDATER_PACKAGE = "org.calyxos.lupin.updater";
     private static final String AURORA_STORE_PACKAGE = "com.aurora.store";
     private static final String FDROID_BASIC_PACKAGE = "org.fdroid.basic";
     private static final List<String> PACKAGE_INSTALLERS =
-            List.of(FDROID_BASIC_PACKAGE, AURORA_STORE_PACKAGE);
+            List.of(LUPIN_UPDATER_PACKAGE, FDROID_BASIC_PACKAGE, AURORA_STORE_PACKAGE);
 
     private SetupWizardUtils() {
     }
