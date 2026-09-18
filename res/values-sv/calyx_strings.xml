@@ -1,4 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_title">Google Tjänster</string>
+    <string name="euicc_summary">Du kan också lägga till ett eSIM på enheten.</string>
+    <string name="setup_euicc">Konfigurera eSIM</string>
+    <string name="bootloader_warning_title">Varning för olåst bootloader</string>
+    <string name="bootloader_warning_summary">Enhetens bootloader är för närvarande olåst. Lås bootloadern från en dator. Besök <a href="https://calyxos.org/lock">calyxos.org/lock</a> för mer information.</string>
+    <string name="reboot">Starta om</string>
+    <string name="microg_description2">microG är en programvara med öppen källkod som ersätter <b>Google Play-tjänster</b> (och relaterad programvara), men den innehåller bara de användbara delarna. Till skillnad från Play-tjänster har microG exempelvis ingen reklam- eller platsuppföljning.</string>
+    <string name="microg_switch_label2">Kompatibilitet med Google-tjänster</string>
+    <string name="microg_defaults_switch_label">Stöd för push-aviseringar</string>
+    <string name="microg_defaults_summary">Tillåt appar att registrera sig för push-aviseringar hos Google. Då registreras enheten hos Googles tjänster utan enhetsspecifika unika identifierare. Detta kan aktiveras senare i microG-inställningarna, men appar som har konfigurerats tidigare måste installeras om för att fungera korrekt.</string>
+    <string name="microg_location_switch_label">Nätverksplats</string>
+    <string name="microg_summary">Detta gör att appar som <b>Google Maps, YouTube och samåkningstjänster</b> kan köras. Inaktivera detta om du inte tänker använda appar som kräver Google-tjänster i din <xliff:g id="profileType" example="personal profile">%1$s</xliff:g>. Inställningen kan inte ändras senare.</string>
+    <string name="personal_profile">privata profil</string>
+    <string name="managed_profile">arbetsprofil</string>
+    <string name="microg_location_summary2">Förbättra platstjänster genom att fråga den valda tjänsten om Wi-Fi- och mobilnät i närheten, använda Nominatim för adressuppslag och komma ihåg GPS-koordinater för närliggande nätverk. Dessa alternativ kan anpassas mer detaljerat senare i microG-inställningarna.</string>
+    <string name="microg_online_source_positon_title">Positon (föreslaget)</string>
+    <string name="microg_online_source_positon_summary">positon.xyz – se webbplatsen för villkor</string>
+    <string name="microg_online_source_beacondb_title">BeaconDB</string>
+    <string name="microg_online_source_beacondb_summary">beacondb.net – se webbplatsen för villkor</string>
+    <string name="microg_online_source_none_title">Ingen</string>
+    <string name="microg_online_source_none_summary">Använd inte Wi-Fi- och mobilnät i närheten för platsuppslag online.</string>
+    <string name="microg_online_source_select_summary">Välj en källa online:</string>
+    <string name="microg_online_source_required_error">Välj en källa online eller välj Ingen.</string>
+    <string name="frp_warning_title">Varning för skydd mot fabriksåterställning</string>
+    <string name="frp_warning_summary">Den här enheten har skydd mot fabriksåterställning aktiverat. Installera originaloperativsystemet och ta bort Google-kontot innan du installerar om CalyxOS. Besök calyxos.org/frp för mer information.</string>
 </resources>
