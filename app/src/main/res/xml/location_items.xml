@@ -18,4 +18,32 @@
         android:summary="@string/location_agps_access_summary"
         android:title="@string/location_agps_access_title" />
 
+    <SwitchItem
+        android:id="@+id/location_network_item"
+        android:checked="true"
+        android:layout="@layout/setup_items_switch"
+        android:summary="@string/microg_location_summary2"
+        android:title="@string/microg_location_switch_label" />
+
+    <SectionItem
+        android:id="@+id/online_source_select"
+        android:title="@string/microg_online_source_select_summary">
+
+        <RadioButtonItem
+            android:id="@+id/online_source_position"
+            android:title="@string/microg_online_source_positon_title"
+            android:summary="@string/microg_online_source_positon_summary" />
+
+        <RadioButtonItem
+            android:id="@+id/online_source_beacondb"
+            android:title="@string/microg_online_source_beacondb_title"
+            android:summary="@string/microg_online_source_beacondb_summary" />
+
+        <RadioButtonItem
+            android:id="@+id/online_source_none"
+            android:title="@string/microg_online_source_none_title"
+            android:summary="@string/microg_online_source_none_summary" />
+
+    </SectionItem>
+
 </ItemGroup>
