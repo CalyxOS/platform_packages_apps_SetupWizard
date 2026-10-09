@@ -79,6 +79,9 @@ object SetupWizardUtils {
     private const val TALKBACK_PACKAGE = "org.calyxos.talkback"
     private const val TALKBACK_SERVICE_CLASS = "com.google.android.marvin.talkback.TalkBackService"
 
+    const val MICROG_NETWORK_LOCATION = "microg_network_location"
+    const val MICROG_LOCATION_PROVIDER = "microg_location_provider"
+
     fun getPrefs(context: Context): SharedPreferences =
         context.getSharedPreferences("SetupWizardPrefs", MODE_PRIVATE)
 
