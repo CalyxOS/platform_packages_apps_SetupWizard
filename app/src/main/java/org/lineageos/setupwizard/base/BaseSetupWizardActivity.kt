@@ -39,6 +39,7 @@ abstract class BaseSetupWizardActivity : AppCompatActivity() {
 
     private var footerBarMixin: FooterBarMixin? = null
     private var nextFooterButton: FooterButton? = null
+    private var skipFooterButton: FooterButton? = null
 
     private lateinit var nextIntentResultLauncher: ActivityResultLauncher<Intent>
 
@@ -149,13 +150,13 @@ abstract class BaseSetupWizardActivity : AppCompatActivity() {
                 .also { mixin.setPrimaryButton(it) }
 
         if (showSkipButton) {
-            mixin.setSecondaryButton(
+            skipFooterButton =
                 FooterButton.Builder(this)
                     .setText(R.string.skip)
                     .setListener { onSkipPressed() }
                     .setButtonType(FooterButton.ButtonType.SKIP)
                     .build()
-            )
+                    .also { mixin.setSecondaryButton(it) }
         }
     }
 
@@ -173,6 +174,10 @@ abstract class BaseSetupWizardActivity : AppCompatActivity() {
 
     protected fun setNextText(resId: Int) {
         nextFooterButton?.setText(this, resId)
+    }
+
+    protected fun setSkipText(resId: Int) {
+        skipFooterButton?.setText(this, resId)
     }
 
     val nextButton: Button?
