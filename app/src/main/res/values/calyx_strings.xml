@@ -18,6 +18,9 @@
     <string name="device_info_bootloader">Bootloader</string>
     <string name="device_info_frp">Factory reset protection</string>
     <string name="device_info_oemunlock">OEM unlocking</string>
+    <string name="factory_reset">Factory reset and power off</string>
+    <string name="factory_reset_title">Erase all data?</string>
+    <string name="factory_reset_desc">"\n\nThis will not cancel your mobile service plan.</string>
 
     <!-- Bootloader Lock Status -->
     <string name="bootloader_warning_title">Bootloader lock warning</string>
