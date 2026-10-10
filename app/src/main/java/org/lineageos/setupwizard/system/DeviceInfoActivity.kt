@@ -5,11 +5,13 @@
 
 package org.lineageos.setupwizard.system
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.telephony.TelephonyManager
 import android.telephony.euicc.EuiccManager
 import android.util.Log
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.setupdesign.items.ItemGroup
 import com.google.android.setupdesign.items.NonActionableItem
 import com.google.android.setupdesign.items.RecyclerItemAdapter
@@ -31,6 +33,7 @@ class DeviceInfoActivity : BaseSetupWizardActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setNextText(R.string.ok)
+        setSkipText(R.string.factory_reset)
 
         val itemGroup = ItemGroup()
 
@@ -113,12 +116,29 @@ class DeviceInfoActivity : BaseSetupWizardActivity() {
         return identifiers
     }
 
+    private fun launchFactoryReset() {
+        Intent(Intent.ACTION_FACTORY_RESET)
+            .apply {
+                setPackage("android")
+                addFlags(Intent.FLAG_RECEIVER_FOREGROUND)
+                putExtra(Intent.EXTRA_REASON, "SetupWizard")
+                putExtra(Intent.EXTRA_WIPE_ESIMS, false)
+                putExtra("shutdown", true)
+            }
+            .also { sendBroadcast(it) }
+    }
+
     override fun onNextPressed() {
         finish()
     }
 
     override fun onSkipPressed() {
-        finish()
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.factory_reset_title)
+            .setMessage(R.string.factory_reset_desc)
+            .setPositiveButton(R.string.ok) { _, _ -> launchFactoryReset() }
+            .setNegativeButton(R.string.cancel, null)
+            .show()
     }
 
     override val layoutResId = R.layout.device_info_activity
@@ -126,6 +146,8 @@ class DeviceInfoActivity : BaseSetupWizardActivity() {
     override val titleResId = R.string.device_information
 
     override val iconResId = R.drawable.ic_info
+
+    override val showSkipButton = SetupWizardUtils.isOwner()
 
     companion object {
         private const val TAG = "DeviceInfoActivity"
