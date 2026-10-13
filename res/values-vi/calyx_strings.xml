@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="microg_title">Dịch vụ Google</string>
-    <string name="microg_description2">microG là mã nguồn mở thay thế cho &lt;b&gt;Google Play Services&lt;/b&gt; (và phần mềm liên quan), nhưng nó chỉ chứa phần hữu ích. Không giống như Play Services, microG không có tính năng ví dụ như quảng cáo hay theo dõi vị trí.</string>
+    <string name="microg_description2">microG là mã nguồn mở thay thế cho <b>Google Play Services</b> (và phần mềm liên quan), nhưng nó chỉ chứa phần hữu ích. Không giống như Play Services, microG không có tính năng ví dụ như quảng cáo hay theo dõi vị trí.</string>
     <string name="microg_switch_label2">Tương thích với Google Services</string>
     <string name="microg_defaults_switch_label">Hỗ trợ thông báo đẩy</string>
     <string name="setup_euicc">Thiết lập eSIM</string>

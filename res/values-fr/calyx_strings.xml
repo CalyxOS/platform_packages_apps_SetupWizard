@@ -17,7 +17,7 @@
     <string name="microg_online_source_positon_summary">positon.xyz - voir le site pour les conditions d\'utilisation</string>
     <string name="microg_online_source_none_title">Aucune</string>
     <string name="microg_online_source_none_summary">Ne pas utiliser les réseaux Wi-Fi et cellulaires à proximité pour effectuer des recherches de localisation en ligne.</string>
-    <string name="microg_online_source_select_summary">Choisir une source en ligne :</string>
+    <string name="microg_online_source_select_summary">Choisir une source en ligne :</string>
     <string name="microg_online_source_required_error">Choisir une source en ligne, ou sélectionner \"Aucune\".</string>
     <string name="personal_profile">profil personnel</string>
     <string name="managed_profile">profil profesionnel</string>

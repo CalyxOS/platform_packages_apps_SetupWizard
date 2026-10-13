@@ -3,7 +3,7 @@
     <string name="microg_title">Servizi Google</string>
     <string name="bootloader_warning_summary">Il bootloader di questo dispositivo è sbloccato al momento. Per favore blocca il bootloader da un computer. Visita <a href="https://calyxos.org/lock">calyxos.org/lock</a> per più informazioni.</string>
     <string name="reboot">Riavvia</string>
-    <string name="microg_description2">microG è un sostituto open source per i &lt;b&gt;Google Play Services&lt;/b&gt; (e software correlati), ma include solo le parti utili. A differenza dei Play Services, microG non ha alcuna pubblicità o monitoraggio della posizione, per esempio.</string>
+    <string name="microg_description2">microG è un sostituto open source per i <b>Google Play Services</b> (e software correlati), ma include solo le parti utili. A differenza dei Play Services, microG non ha alcuna pubblicità o monitoraggio della posizione, per esempio.</string>
     <string name="microg_switch_label2">Compatibilità servizi di Google</string>
     <string name="microg_defaults_switch_label">Supporto notifiche push</string>
     <string name="microg_defaults_summary">Consenti alle app di registrarsi per le notifiche push con Google. Questo registra il dispositivo ai servizi Google, senza alcun identificatore univoco specifico del dispositivo. Questo può essere abilitato in seguito dalle impostazioni di microG, tuttavia qualsiasi setup di applicazione eseguito in precedenza dovrà essere reinstallato per funzionare correttamente.</string>

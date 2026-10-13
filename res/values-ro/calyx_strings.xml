@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="microg_title">Servicii Google</string>
-    <string name="microg_description2">microG este un înlocuitor cu sursă deschisă pentru &lt;b&gt;Serviciile Google Play&lt;/b&gt; (și software-ul asociat), dar include doar părțile utile. Spre deosebire de Play Services, microG nu are nicio publicitate sau urmărire a locației, de exemplu.</string>
+    <string name="microg_description2">microG este un înlocuitor cu sursă deschisă pentru <b>Serviciile Google Play</b> (și software-ul asociat), dar include doar părțile utile. Spre deosebire de Play Services, microG nu are nicio publicitate sau urmărire a locației, de exemplu.</string>
     <string name="microg_switch_label2">Compatibilitate cu serviciile Google</string>
     <string name="microg_defaults_switch_label">Suport pentru notificări push</string>
     <string name="setup_euicc">Configurare eSIM</string>

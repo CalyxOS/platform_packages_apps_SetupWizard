@@ -7,7 +7,7 @@
     <string name="bootloader_warning_title">Önyükleyici kilidi uyarısı</string>
     <string name="bootloader_warning_summary">Bu aygıtın önyükleyicisinin kilidi şu anda açık. Lütfen önyükleyiciyi bir bilgisayardan kilitleyin. Daha fazla bilgi için <a href="https://calyxos.org/lock">calyxos.org/lock</a> adresini ziyaret edin.</string>
     <string name="microg_switch_label2">Google Hizmetleri Uyumluluğu</string>
-    <string name="microg_description2">microG, &lt;b&gt;Google Play hizmetleri&lt;/b&gt; (ve ilgili yazılımlar) için açık kaynaklı bir alternatiftir, ancak yalnızca yararlı kısımları içerir. Play hizmetlerinin aksine, microG\'de örneğin herhangi bir reklam veya konum takibi yoktur.</string>
+    <string name="microg_description2">microG, <b>Google Play hizmetleri</b> (ve ilgili yazılımlar) için açık kaynaklı bir alternatiftir, ancak yalnızca yararlı kısımları içerir. Play hizmetlerinin aksine, microG\'de örneğin herhangi bir reklam veya konum takibi yoktur.</string>
     <string name="microg_defaults_switch_label">Anlık bildirim desteği</string>
     <string name="microg_defaults_summary">Uygulamaların Google\'a anlık bildirimler için kaydolmasına izin ver. Bu, aygıta özgü benzersiz tanımlayıcılar olmadan aygıtınızı Google hizmetlerine kaydeder. Bu özellik daha sonra microG ayarlarından etkinleştirilebilir, ancak daha önce kurulan bir uygulamanın düzgün çalışması için yeniden kurulması gerekecektir.</string>
     <string name="microg_location_switch_label">Ağ konumu</string>

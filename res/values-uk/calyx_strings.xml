@@ -7,7 +7,7 @@
     <string name="microg_defaults_switch_label">Підтримка push-повідомлень</string>
     <string name="bootloader_warning_title">Попередження про блокування завантажувача</string>
     <string name="bootloader_warning_summary">Завантажувач цього пристрою в даний час розблокований. Будь ласка, заблокуйте завантажувач з комп\'ютера. Відвідати <a href="https://calyxos.org/lock">calyxos.org/lock</a> для отримання додаткової інформації.</string>
-    <string name="microg_description2">microG є заміною з відкритим кодом для &lt;b&gt;Google Play Services&lt;/b&gt; (та пов’язане програмне забезпечення), але він включає лише корисні частини. На відміну від Play Services, microG не має жодної реклами чи відстеження місцезнаходження.</string>
+    <string name="microg_description2">microG є заміною з відкритим кодом для <b>Google Play Services</b> (та пов’язане програмне забезпечення), але він включає лише корисні частини. На відміну від Play Services, microG не має жодної реклами чи відстеження місцезнаходження.</string>
     <string name="microg_defaults_summary">Дозволити програмам реєструватися для отримання push-сповіщень у Google. Це реєструє Ваш пристрій у службах Google, без будь-яких унікальних ідентифікаторів пристрою. Це можна увімкнути пізніше в налаштуваннях microG, але для належної роботи будь-які програми, налаштовані раніше, потрібно перевстановити.</string>
     <string name="reboot">Перезавантаження</string>
     <string name="microg_location_switch_label">Розташування мережі</string>
