@@ -79,12 +79,6 @@
     <WizardAction
         id="microg"
         wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_MICROG;end">
-        <result wizard:action="install_apps" />
-    </WizardAction>
-
-    <WizardAction
-        id="install_apps"
-        wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_INSTALL_APPS;end">
         <result wizard:action="theme_settings" />
     </WizardAction>
 
@@ -97,6 +91,12 @@
     <WizardAction
         id="navigation_settings"
         wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.NAVIGATION_SETTINGS;end">
+        <result wizard:action="install_apps" />
+    </WizardAction>
+
+    <WizardAction
+        id="install_apps"
+        wizard:uri="intent:#Intent;action=org.lineageos.setupwizard.LINEAGE_INSTALL_APPS;end">
         <result wizard:action="restore" />
     </WizardAction>
 
