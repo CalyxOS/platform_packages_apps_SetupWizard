@@ -49,6 +49,7 @@ import org.lineageos.setupwizard.NAVIGATION_OPTION_KEY
 import org.lineageos.setupwizard.SetupWizardActivity
 import org.lineageos.setupwizard.SetupWizardApp
 import org.lineageos.setupwizard.base.BaseSetupWizardActivity
+import org.lineageos.setupwizard.privacy.LocationProvider
 import org.lineageos.setupwizard.util.ManagedProvisioningUtils.ProvisioningState
 import org.lineageos.setupwizard.util.ManagedProvisioningUtils.finalizeProvisioning
 import org.lineageos.setupwizard.util.ManagedProvisioningUtils.getProvisioningState
@@ -64,7 +65,8 @@ object SetupWizardUtils {
     private const val COLOR_SOURCE_PRESET = "preset"
     private const val COLOR_SOURCE_HOME = "home_wallpaper"
 
-    const val GMS_PACKAGE = "com.google.android.gms"
+    private const val GMS_PACKAGE = "com.google.android.gms"
+    private const val GMS_FW_PACKAGE = "com.google.android.gsf"
     private const val GMS_SUW_PACKAGE = "com.google.android.setupwizard"
     private const val GMS_TV_SUW_PACKAGE = "com.google.android.tungsten.setupwraith"
     private const val UPDATER_PACKAGE = "org.lineageos.updater"
@@ -73,13 +75,17 @@ object SetupWizardUtils {
 
     private const val AURORA_STORE_PACKAGE = "com.aurora.store"
     private const val FDROID_BASIC_PACKAGE = "org.fdroid.basic"
+    private const val PLAY_STORE_PACKAGE = "com.android.vending"
 
     private val PACKAGE_INSTALLERS = listOf(FDROID_BASIC_PACKAGE, AURORA_STORE_PACKAGE)
 
     private const val TALKBACK_PACKAGE = "org.calyxos.talkback"
     private const val TALKBACK_SERVICE_CLASS = "com.google.android.marvin.talkback.TalkBackService"
 
+    private const val MICROG_PROVISION_SERVICE = "org.microg.gms.provision.ProvisionService"
+    const val MICROG_SERVICE_ENABLED = "microg_service_enabled"
     const val MICROG_NETWORK_LOCATION = "microg_network_location"
+    const val MICROG_PUSH_NOTIFCATIONS = "microg_push_notifcations"
     const val MICROG_LOCATION_PROVIDER = "microg_location_provider"
 
     fun getPrefs(context: Context): SharedPreferences =
@@ -198,6 +204,10 @@ object SetupWizardUtils {
     fun finishSetupWizard(context: BaseSetupWizardActivity) {
         if (LOGV) {
             Log.v(TAG, "finishSetupWizard")
+        }
+
+        if (hasMicroG(context)) {
+            startMicroGProvisioning(context)
         }
 
         val provisioningState = getProvisioningState(context)
@@ -445,5 +455,46 @@ object SetupWizardUtils {
             ComponentName(TALKBACK_PACKAGE, TALKBACK_SERVICE_CLASS),
             !enabled,
         )
+    }
+
+    private fun startMicroGProvisioning(context: Context) {
+        val enabled = SetupWizardApp.settingsBundle.getBoolean(MICROG_SERVICE_ENABLED)
+        arrayOf(GMS_PACKAGE, GMS_FW_PACKAGE, PLAY_STORE_PACKAGE).let { packageList ->
+            for (packageId in packageList) {
+                context.packageManager.setApplicationEnabledSetting(
+                    packageId,
+                    if (enabled) {
+                        COMPONENT_ENABLED_STATE_ENABLED
+                    } else {
+                        COMPONENT_ENABLED_STATE_DISABLED
+                    },
+                    0,
+                )
+            }
+        }
+
+        if (!enabled) {
+            return
+        }
+
+        Intent().apply {
+            setClassName(GMS_PACKAGE, MICROG_PROVISION_SERVICE)
+            val notifications = SetupWizardApp.settingsBundle.getBoolean(MICROG_PUSH_NOTIFCATIONS)
+            putExtra("checkin_enabled", notifications)
+            putExtra("gcm_enabled", notifications)
+            val location = SetupWizardApp.settingsBundle.getBoolean(MICROG_NETWORK_LOCATION)
+            putExtra("wifi_learning", location)
+            putExtra("cell_learning", location)
+            putExtra("nominatim_enabled", location)
+            val provider = LocationProvider.fromValue(
+                SetupWizardApp.settingsBundle.getString(MICROG_LOCATION_PROVIDER)
+            )
+            val useOnlineSource =
+                location && provider != LocationProvider.NONE
+            putExtra("wifi_ichnaea", useOnlineSource)
+            putExtra("cell_ichnaea", useOnlineSource)
+            putExtra("online_source_id", provider.value)
+        }
+        .also { context.startService(it) }
     }
 }

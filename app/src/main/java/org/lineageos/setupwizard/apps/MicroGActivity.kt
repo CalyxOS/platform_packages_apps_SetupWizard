@@ -14,11 +14,9 @@ import com.google.android.setupdesign.items.SwitchItem
 import org.lineageos.setupwizard.R
 import org.lineageos.setupwizard.SetupWizardApp
 import org.lineageos.setupwizard.base.BaseSetupWizardActivity
-import org.lineageos.setupwizard.privacy.LocationProvider
 import org.lineageos.setupwizard.util.SetupWizardUtils
-import org.lineageos.setupwizard.util.SetupWizardUtils.GMS_PACKAGE
-import org.lineageos.setupwizard.util.SetupWizardUtils.MICROG_LOCATION_PROVIDER
-import org.lineageos.setupwizard.util.SetupWizardUtils.MICROG_NETWORK_LOCATION
+import org.lineageos.setupwizard.util.SetupWizardUtils.MICROG_SERVICE_ENABLED
+import org.lineageos.setupwizard.util.SetupWizardUtils.MICROG_PUSH_NOTIFCATIONS
 
 class MicroGActivity : BaseSetupWizardActivity() {
 
@@ -27,12 +25,6 @@ class MicroGActivity : BaseSetupWizardActivity() {
     }
     private val notificationSwitch by lazy {
         itemAdapter.findItemById(R.id.push_notifications) as SwitchItem
-    }
-
-    private val locationProvider by lazy {
-        LocationProvider.fromValue(
-            SetupWizardApp.settingsBundle.getString(MICROG_LOCATION_PROVIDER)
-        )
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,40 +53,10 @@ class MicroGActivity : BaseSetupWizardActivity() {
     }
 
     override fun onNextPressed() {
-        arrayOf(GMS_PACKAGE, GMS_FW_PACKAGE, PLAY_STORE_PACKAGE).let { packageList ->
-            for (packageId in packageList) {
-                packageManager.setApplicationEnabledSetting(
-                    packageId,
-                    if (enableSwitch.isChecked) {
-                        COMPONENT_ENABLED_STATE_ENABLED
-                    } else {
-                        COMPONENT_ENABLED_STATE_DISABLED
-                    },
-                    0,
-                )
-            }
+        SetupWizardApp.settingsBundle.apply {
+            putBoolean(MICROG_SERVICE_ENABLED, enableSwitch.isChecked)
+            putBoolean(MICROG_PUSH_NOTIFCATIONS, notificationSwitch.isChecked)
         }
-
-        if (enableSwitch.isChecked) {
-            Intent()
-                .apply {
-                    setClassName(GMS_PACKAGE, GMS_PROVISION_PACKAGE)
-                    putExtra("checkin_enabled", notificationSwitch.isChecked)
-                    putExtra("gcm_enabled", notificationSwitch.isChecked)
-                    val locationSwitch =
-                        SetupWizardApp.settingsBundle.getBoolean(MICROG_NETWORK_LOCATION)
-                    putExtra("wifi_learning", locationSwitch)
-                    putExtra("cell_learning", locationSwitch)
-                    putExtra("nominatim_enabled", locationSwitch)
-                    val useOnlineSource =
-                        locationSwitch && locationProvider != LocationProvider.NONE
-                    putExtra("wifi_ichnaea", useOnlineSource)
-                    putExtra("cell_ichnaea", useOnlineSource)
-                    putExtra("online_source_id", locationProvider.value)
-                }
-                .also { startService(it) }
-        }
-
         super.onNextPressed()
     }
 
@@ -107,11 +69,5 @@ class MicroGActivity : BaseSetupWizardActivity() {
     private fun setInstallPreferences(enable: Boolean) {
         notificationSwitch.isEnabled = enable
         notificationSwitch.isChecked = enable
-    }
-
-    companion object {
-        private const val GMS_FW_PACKAGE = "com.google.android.gsf"
-        private const val PLAY_STORE_PACKAGE = "com.android.vending"
-        private const val GMS_PROVISION_PACKAGE = "org.microg.gms.provision.ProvisionService"
     }
 }
