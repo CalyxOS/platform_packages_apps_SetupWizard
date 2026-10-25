@@ -37,10 +37,7 @@ class MicroGActivity : BaseSetupWizardActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (
-            !SetupWizardUtils.isPackageInstalled(this, GMS_PACKAGE) &&
-                !SetupWizardUtils.isPackageInstalled(this, GMS_FW_PACKAGE)
-        ) {
+        if (!SetupWizardUtils.hasMicroG(this)) {
             finishAction(RESULT_SKIP)
             return
         }

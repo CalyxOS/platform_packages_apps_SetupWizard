@@ -135,6 +135,16 @@ object SetupWizardUtils {
         return false
     }
 
+    fun hasMicroG(context: Context): Boolean {
+        val provisionPackage = context.packageManager.resolveService(
+            Intent().apply {
+                setComponent(ComponentName(GMS_PACKAGE, MICROG_PROVISION_SERVICE))
+            },
+            0
+        )
+        return !hasGMS(context) && provisionPackage != null
+    }
+
     fun isPackageInstalled(context: Context, packageName: String): Boolean =
         runCatching { context.packageManager.getPackageInfo(packageName, GET_ACTIVITIES) }.isSuccess
 
