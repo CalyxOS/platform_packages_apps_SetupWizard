@@ -5,9 +5,6 @@
 
 package org.lineageos.setupwizard.apps
 
-import android.content.Intent
-import android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_DISABLED
-import android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_ENABLED
 import android.os.Bundle
 import com.google.android.setupcompat.util.ResultCodes.RESULT_SKIP
 import com.google.android.setupdesign.items.RadioButtonItem
@@ -16,7 +13,10 @@ import org.lineageos.setupwizard.R
 import org.lineageos.setupwizard.SetupWizardApp
 import org.lineageos.setupwizard.base.BaseSetupWizardActivity
 import org.lineageos.setupwizard.util.SetupWizardUtils
-import org.lineageos.setupwizard.util.SetupWizardUtils.GMS_PACKAGE
+import org.lineageos.setupwizard.util.SetupWizardUtils.MICROG_LOCATION_PROVIDER
+import org.lineageos.setupwizard.util.SetupWizardUtils.MICROG_NETWORK_LOCATION
+import org.lineageos.setupwizard.util.SetupWizardUtils.MICROG_PUSH_NOTIFCATIONS
+import org.lineageos.setupwizard.util.SetupWizardUtils.MICROG_SERVICE_ENABLED
 
 class MicroGActivity : BaseSetupWizardActivity() {
 
@@ -58,10 +58,7 @@ class MicroGActivity : BaseSetupWizardActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (
-            !SetupWizardUtils.isPackageInstalled(this, GMS_PACKAGE) &&
-                !SetupWizardUtils.isPackageInstalled(this, GMS_FW_PACKAGE)
-        ) {
+        if (!hasMicroG(this)) {
             finishAction(RESULT_SKIP)
             return
         }
@@ -94,38 +91,12 @@ class MicroGActivity : BaseSetupWizardActivity() {
     }
 
     override fun onNextPressed() {
-        arrayOf(GMS_PACKAGE, GMS_FW_PACKAGE, PLAY_STORE_PACKAGE).let { packageList ->
-            for (packageId in packageList) {
-                packageManager.setApplicationEnabledSetting(
-                    packageId,
-                    if (enableSwitch.isChecked) {
-                        COMPONENT_ENABLED_STATE_ENABLED
-                    } else {
-                        COMPONENT_ENABLED_STATE_DISABLED
-                    },
-                    0,
-                )
-            }
+        SetupWizardApp.settingsBundle.apply {
+            putBoolean(MICROG_SERVICE_ENABLED, enableSwitch.isChecked)
+            putBoolean(MICROG_PUSH_NOTIFCATIONS, notificationSwitch.isChecked)
+            putBoolean(MICROG_NETWORK_LOCATION, notificationSwitch.isChecked)
+            putString(MICROG_LOCATION_PROVIDER, locationProvider.value)
         }
-
-        if (enableSwitch.isChecked) {
-            Intent()
-                .apply {
-                    setClassName(GMS_PACKAGE, GMS_PROVISION_PACKAGE)
-                    putExtra("checkin_enabled", notificationSwitch.isChecked)
-                    putExtra("gcm_enabled", notificationSwitch.isChecked)
-                    putExtra("wifi_learning", locationSwitch.isChecked)
-                    putExtra("cell_learning", locationSwitch.isChecked)
-                    putExtra("nominatim_enabled", locationSwitch.isChecked)
-                    val useOnlineSource =
-                        locationSwitch.isChecked && locationProvider != LocationProvider.NONE
-                    putExtra("wifi_ichnaea", useOnlineSource)
-                    putExtra("cell_ichnaea", useOnlineSource)
-                    putExtra("online_source_id", locationProvider.value)
-                }
-                .also { startService(it) }
-        }
-
         super.onNextPressed()
     }
 
@@ -162,11 +133,5 @@ class MicroGActivity : BaseSetupWizardActivity() {
         }
 
         isUpdatingProviders = false
-    }
-
-    companion object {
-        private const val GMS_FW_PACKAGE = "com.google.android.gsf"
-        private const val PLAY_STORE_PACKAGE = "com.android.vending"
-        private const val GMS_PROVISION_PACKAGE = "org.microg.gms.provision.ProvisionService"
     }
 }
